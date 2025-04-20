@@ -1,0 +1,124 @@
+
+state={
+	id=28
+	name="STATE_28" # Alsace-Lorraine
+	manpower = 1915600
+	
+	state_category = city
+	resources={
+		steel=100 # was: 236
+	}
+
+	history={
+		set_variable = { culture = 28 }
+		owner = FRA
+		#victory_points = { 6529 1 }
+		#victory_points = { 549 1 }
+		victory_points = { 678 5 }
+		victory_points = { 9503 10 }
+		victory_points = { 9559 5 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+			549 = {
+				bunker = 10
+
+			}
+			678 = {
+				bunker = 10
+
+			}
+			3629 = {
+				bunker = 10
+
+			}
+			6529 = {
+				bunker = 10
+
+			}
+			9503 = {
+				bunker = 10
+
+			}
+			9559 = {
+				bunker = 10
+
+			}
+			11502 = {
+				bunker = 10
+
+			}
+			anti_air_building = 5
+			air_base = 5
+
+		}
+		add_core_of = ALS
+		add_core_of = FRA
+		1871.1.18 = {
+			owner = LTD
+			add_core_of = LTD
+			add_core_of = GER
+			set_state_name = STATE_28_GER
+            set_province_name = {
+                id = 9559
+                name = VICTORY_POINTS_9559_GER
+            }
+            set_province_name = {
+                id = 9503
+                name = VICTORY_POINTS_9503_GER
+            }
+            set_province_name = {
+                id = 678
+                name = VICTORY_POINTS_678_GER
+            }
+		}
+		1919.1.1 = {
+			owner = ALS
+			remove_core_of = LTD
+			remove_core_of = GER
+			reset_state_name = yes
+            reset_province_name = 9559
+            reset_province_name = 9503
+            reset_province_name = 678
+			set_demilitarized_zone = yes
+		}
+		1936.3.7 = {
+			set_demilitarized_zone = no
+		}
+		1939.1.1 = {
+			owner = LTD
+			add_core_of = LTD
+			set_state_name = STATE_28_GER
+            set_province_name = {
+                id = 9559
+                name = VICTORY_POINTS_9559_GER
+            }
+            set_province_name = {
+                id = 9503
+                name = VICTORY_POINTS_9503_GER
+            }
+            set_province_name = {
+                id = 678
+                name = VICTORY_POINTS_678_GER
+            }
+			buildings = {
+				industrial_complex = 4
+			}
+		}
+		1945.5.8 = {
+			owner = FRA
+			remove_core_of = LTD
+			remove_core_of = GER
+			reset_state_name = yes
+            reset_province_name = 9559
+            reset_province_name = 9503
+            reset_province_name = 678
+		}
+	}
+
+	provinces={
+		549 678 1346 3629 6529 9503 9559 11502 
+	}
+
+	local_supplies=14.0 
+}

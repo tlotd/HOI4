@@ -1,0 +1,534 @@
+defined_text = {
+	name = GUIHOSNAME
+	text = {
+		localization_key = GUIHOSNAME
+	}
+	text = {
+		localization_key = GUILEADERNAMETRAIT
+	}
+}
+
+defined_text = {
+	name = GetLeaderTrait
+	text = {
+		trigger = {
+			tag = LTD
+			has_government = nublar_monarchism
+		}
+		localization_key = ideological_crusader
+	}
+}
+
+defined_text = {
+	name = GetHOGTitle
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = { has_country_flag = EU_COUNCIL_VISIBLE }
+		}
+		localization_key = KZ_OR_LEADER
+	}
+	text = {
+		trigger = {
+			tag = LTD
+			has_country_flag = EU_COUNCIL_VISIBLE
+		}
+		localization_key = KZ_OR_COUNCIL_OR_LEADER
+	}
+}
+
+defined_text = {
+	name = GetLeaderDescription
+	text = {
+		trigger = {
+			tag = LTD
+		}
+		localization_key = POLITICS_WILHELM_II_DESC
+	}
+}
+
+defined_text = {
+	name = GetHeadDescription
+	text = {
+		trigger = {
+			tag = LTD
+		}
+		localization_key = POLITICS_VASCONCELOS_DESC
+	}
+}
+
+defined_text = {
+	name = GetOtherPrimeMinister
+	text = {
+		trigger = {
+			has_country_flag = EU_COUNCIL_VISIBLE
+		}
+		localization_key = "Council of Europe"
+	}
+}
+
+### Names ################################################################################################################################################################################################################################################################################################
+
+defined_text = {
+	name = GetPrimeMinister
+
+	###LANDS OF THE DRAGON Chancellors###
+
+	text = {
+		trigger = {
+			tag = LTD
+			is_subject_of = LON
+		}
+		localization_key = generic_league_of_nations
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = {
+				OR = {
+					is_subject_of = LON
+					has_country_flag = SakuraEmpire
+					AND = {
+						owns_state = 378
+						has_country_flag = Transatlantic
+						378 = {
+							has_state_flag = submod_coc
+						}
+					}
+					has_country_flag = German
+					has_country_flag = GermanEmpire
+					has_country_flag = GermanUnified
+					has_country_flag = FrancoGermanEmpire
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}
+			OR = {
+				# When empty, crisis?
+			}
+		}
+		localization_key = generic_empty_national_parliament
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = {
+				OR = {
+					is_subject_of = LON
+					has_country_flag = SakuraEmpire
+					AND = {
+						owns_state = 378
+						has_country_flag = Transatlantic
+						378 = {
+							has_state_flag = submod_coc
+						}
+					}
+					has_country_flag = German
+					has_country_flag = GermanEmpire
+					has_country_flag = GermanUnified
+					has_country_flag = FrancoGermanEmpire
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		localization_key = generic_national_parliament
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			has_country_flag = SakuraEmpire
+		}
+		localization_key = NIS_korosensei
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			AND = {
+				owns_state = 378
+				has_country_flag = Transatlantic
+				378 = {
+					has_state_flag = submod_coc
+				}
+			}
+		}
+		localization_key = CAL_lucy_connor_empress
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = {
+				OR = {
+					is_subject_of = LON
+					has_country_flag = SakuraEmpire
+					AND = {
+						owns_state = 378
+						has_country_flag = Transatlantic
+						378 = {
+							has_state_flag = submod_coc
+						}
+					}
+				}
+			}
+			OR = {
+				has_country_flag = German
+				has_country_flag = GermanEmpire
+				has_country_flag = GermanUnified
+			}
+		}
+		localization_key = LTD_rudolf_von_preussen
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			AND = {
+				has_country_flag = HOG_view
+				tag = LTD
+				NOT = {
+					OR = {
+						is_subject_of = LON
+						has_country_flag = SakuraEmpire
+						AND = {
+							owns_state = 378
+							has_country_flag = Transatlantic
+							378 = {
+								has_state_flag = submod_coc
+							}
+						}
+					}
+				}
+				has_country_flag = FrancoGermanEmpire
+			}
+		}
+		localization_key = LTD_jean_allemand_empereur
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			has_country_leader = {
+				character = LTD_sauron
+				ruling_only = yes
+			}
+		}
+		localization_key = LTD_mouth_of_sauron
+	}
+
+	#so on and so forth
+}
+
+### Diplo View Portraits ###
+
+defined_text = {
+	name = GetOtherPMPortrait
+	text = {
+		trigger = {
+			has_country_flag = EU_COUNCIL_VISIBLE
+		}
+		localization_key = GFX_Portrait_Germany_Pan_Euro_Council
+	}
+}
+
+### Portraits ################################################################################################################################################################################################################################################################################################
+
+defined_text = {
+	name = GetPMPortrait
+	
+	###LANDS OF THE DRAGON Chancellors###
+
+	text = {
+		trigger = {
+			tag = LTD
+			is_subject_of = LON
+		}
+		localization_key = [GetLeagueOfNationsPortrait]
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = {
+				OR = {
+					AND = {
+						owns_state = 378
+						has_country_flag = Transatlantic
+						has_country_flag = SakuraEmpire
+						378 = {
+							has_state_flag = submod_coc
+						}
+					}
+					has_country_flag = German
+					has_country_flag = GermanEmpire
+					has_country_flag = GermanUnified
+					has_country_flag = FrancoGermanEmpire
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}
+			OR = {
+				# When empty, crisis?
+			}
+		}
+		localization_key = [GetEmptyNationalParliamentPortrait]
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = {
+				OR = {
+					AND = {
+						owns_state = 378
+						378 = {
+							has_state_flag = submod_coc
+						}
+					}
+					has_country_flag = German
+					has_country_flag = GermanEmpire
+					has_country_flag = GermanUnified
+					has_country_flag = FrancoGermanEmpire
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		localization_key = [GetNationalParliamentPortrait]
+	}
+	
+	text = {
+		trigger = {
+			tag = LTD
+			has_country_flag = SakuraEmpire
+		}
+		localization_key = [GetKorosenseiPortrait]
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			AND = {
+				owns_state = 378
+				has_country_flag = Transatlantic
+				378 = {
+					has_state_flag = submod_coc
+				}
+			}
+		}
+		localization_key = [GetLucyConnorPortrait]
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			NOT = {
+				AND = {
+					owns_state = 378
+					has_country_flag = Transatlantic
+					has_country_flag = SakuraEmpire
+					378 = {
+						has_state_flag = submod_coc
+					}
+				}
+			}
+			OR = {
+				has_country_flag = German
+				has_country_flag = GermanEmpire
+				has_country_flag = GermanUnified
+			}
+		}
+		localization_key = [GetRudolfVonPreussenPortrait]
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			AND = {
+				has_country_flag = HOG_view
+				tag = LTD
+				NOT = {
+					OR = {
+						is_subject_of = LON
+						has_country_flag = SakuraEmpire
+						AND = {
+							owns_state = 378
+							has_country_flag = Transatlantic
+							378 = {
+								has_state_flag = submod_coc
+							}
+						}
+					}
+				}
+				has_country_flag = FrancoGermanEmpire
+			}
+		}
+		localization_key = [GetJeanAllemandPortrait]
+	}
+
+	text = {
+		trigger = {
+			tag = LTD
+			has_country_leader = {
+				character = LTD_sauron
+				ruling_only = yes
+			}
+		}
+		localization_key = [GetMouthOfSauronPortrait]
+	}
+
+	#so on and so forth
+}
+
+### Portraits ###
+
+defined_text = {
+	name = GetLeagueOfNationsPortrait
+	text = {
+		localization_key = "GFX_portrait_league_of_nations"
+	}
+}
+
+defined_text = {
+	name = GetEmptyNationalParliamentPortrait
+	text = {
+		localization_key = "GFX_portrait_empty_national_parliament"
+	}
+}
+
+defined_text = {
+	name = GetNationalParliamentPortrait
+	text = {
+		localization_key = "GFX_portrait_national_parliament"
+	}
+}
+
+defined_text = {
+	name = GetKorosenseiPortrait
+	text = {
+		localization_key = "GFX_nis_portrait_korosensei"
+	}
+}
+
+defined_text = {
+	name = GetLucyConnorPortrait
+	text = {
+		localization_key = "GFX_cal_portrait_lucy_connor"
+	}
+}
+
+defined_text = {
+	name = GetRudolfVonPreussenPortrait
+	text = {
+		localization_key = "GFX_ltd_portrait_rudolf_von_preussen"
+	}
+}
+
+defined_text = {
+	name = GetJeanAllemandPortrait
+	text = {
+		localization_key = "GFX_ltd_portrait_jean_allemand"
+	}
+}
+
+defined_text = {
+	name = GetMouthOfSauronPortrait
+	text = {
+		localization_key = "GFX_lotr_portrait_mouth_of_sauron"
+	}
+}
+
+### Leader Titles ###
+
+defined_text = {
+	name = MEXGetLeaderTitle
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					name = "Moctezuma III"
+					ruling_only = yes
+				}
+			
+				has_country_leader = {
+					name = "Porfirio I"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "Emperor"
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "María I"
+				ruling_only = yes
+			}
+		}
+		localization_key = "Empress"
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Frida Kahlo"
+				ruling_only = yes
+			}
+		}
+		localization_key = "Toltecatl"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					name = "Luis María Martínez"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Miguel Dario"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "José de Jesús"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "Archbishop"
+	}
+}
+
+defined_text = {
+	name = MEXGetHoGTitle
+	text = {
+		trigger = {
+			has_country_leader = {
+				name = "Frida Kahlo"
+				ruling_only = yes
+			}
+		}
+		localization_key = "Cihuacoatl"
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_country_leader = {
+					name = "Frida Kahlo"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = "Prime Minister"
+	}
+}

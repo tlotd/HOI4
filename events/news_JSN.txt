@@ -1,0 +1,64 @@
+﻿###########################
+# Jason Events
+###########################
+
+add_namespace = news_JSN
+
+country_event = {
+	id = news_JSN.911
+	title = news_JSN.911.t
+	desc = news_JSN.911.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_JSN.911.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LTD_subject
+		LTD = {
+			set_country_flag = LTD_subject
+			set_autonomy = {
+				target = JSN
+				autonomy_state = autonomy_ltd_subject
+			}
+		}
+		if = {
+			limit = {
+				LTD = {
+					has_cosmetic_tag = LTD_Transatlantic
+				}
+			}
+			set_cosmetic_tag = JSN_LTD_Transatlantic_subject
+		} else_if = {
+			limit = {
+				LTD = {
+					OR = {
+						has_cosmetic_tag = LTD_GER
+						has_cosmetic_tag = LTD_GEREmpire
+						has_cosmetic_tag = LTD_GERUnified
+					}
+				}
+			}
+			set_cosmetic_tag = JSN_LTD_GER_subject
+		} else = {
+			set_cosmetic_tag = JSN_LTD_subject
+		}
+	}
+	option = {
+		name = news_JSN.911.b
+		ai_chance = { factor = 100 }
+		LTD = {
+			create_wargoal = {
+				type = take_state_focus
+				target = JSN
+				expire = 0
+				generator = { 517 }
+			}
+		}
+		add_war_support = 0.1
+	}
+}

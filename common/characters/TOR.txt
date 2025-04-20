@@ -1,0 +1,245 @@
+characters={
+
+###################################
+#########TEMPCHARACTERS############
+###################################
+
+	TOR_bard={
+		name="Bard"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_bard"
+				small="GFX_ltd_portrait_bard_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ltd_bard
+			cost = 100
+			allowed = {
+				original_tag = TOR
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	TOR_eagles={
+		name="Eagles"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_eagles"
+				small="GFX_ltd_portrait_eagles_small"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ltd_eagles
+			cost = 100
+			allowed = {
+				original_tag = TOR
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	TOR_elrond={
+		name="Elrond"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_elrond"
+				small="GFX_ltd_portrait_elrond_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = ltd_elrond
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = TOR
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	TOR_gimli={
+		name="Gimli"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_gimli"
+				small="GFX_ltd_portrait_gimli_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_gimli
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = TOR
+			}
+			traits = {
+				army_armored_3
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+###################################
+###################################
+###################################
+
+	TOR_glamin_leader={
+		name="Glamin"
+		portraits={
+			civilian={
+				large="GFX_tor_portrait_glamin"
+				small="GFX_advisor_peter_schafer"
+			}
+			army={
+				large="GFX_tor_portrait_glamin"
+				small="GFX_advisor_peter_schafer"
+			}
+		}
+		country_leader={
+			ideology=furry
+			traits= { furry_overlord flames_of_inspiration }
+			id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = TOR_glamin_leader
+			allowed = {
+					original_tag = TOR
+				}
+				traits = {
+					army_chief_offensive_2
+				}
+				cost = 100
+				ai_will_do = {
+					factor = 1.000
+				}
+		}
+	}
+	TOR_glamin_leader_monarchist={
+		name="Glamin"
+		portraits={
+			civilian={
+				large="GFX_tor_portrait_glamin"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits= { furry_overlord flames_of_inspiration }
+			id=-1
+		}
+	}
+	TOR_yellow_figure={
+		name="Yellow Figure"
+		portraits={
+			civilian={
+				large="GFX_portrait_yellow_figure"
+			}
+		}
+		country_leader={
+			ideology=the_beyond
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+	TOR_Leon={
+		name=TOR_leon
+		portraits={
+			army={
+				small="GFX_advisor_peter_schafer"
+			}
+			army={
+				large="GFX_tor_portrait_glamin"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = tor_leon
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = TOR
+			}
+			traits = { 
+				military_theorist
+			}			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		corps_commander = {
+			traits = { infantry_officer charismatic trickster war_hero }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 5
+			planning_skill = 3
+			logistics_skill = 2
+		}
+	}
+	TOR_the_thing={
+		name=TOR_the_thing
+		portraits={
+			army={
+				small="GFX_advisor_peter_schafer"
+			}
+			army={
+				large="GFX_tor_portrait_glamin"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = tor_the_thing
+			ledger = army
+			allowed = {
+				original_tag = TOR
+			}
+			traits = {
+				military_theorist 
+				blitzkrieg_theorist
+			}
+		}	
+		corps_commander = {
+			traits = { trait_reckless career_officer armor_officer media_personality }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+	TOR_steven_ha={
+		name=TOR_steven_ha
+		portraits={
+
+		}
+		corps_commander = {
+			traits = { trait_cautious infantry_officer trait_engineer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+}

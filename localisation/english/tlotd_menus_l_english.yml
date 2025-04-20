@@ -1,0 +1,29 @@
+﻿l_english:
+ MENU_TLOTD:0 "TLOTD Website"
+ MENU_STEAM:0 "Mod Steampage"
+
+ government_ideas:0 "Government"
+ advisors_and_alliances_ideas:0 "Advisors and Alliances"
+ national_motto:0 "National Motto"
+ state_of_economy:0 "State Of Economy"
+ state_of_economy_upgrade:0 "Changes via §HDecision§!, §HEvent§! or §HNational Focus§!"
+ literacy_rate:0 "Literacy Rate"
+ economic_alliance:0 "Economic Alliance"
+ military_alliance:0 "Military Alliance"
+
+ economic_boom:0 "Economic Boom"
+ economic_expansion:0 "Economic Expansion"
+ economic_stagnation:0 "Economic Stagnation"
+ low_inflation:0 "Low Inflation"
+ moderate_inflation:0 "Moderate Inflation"
+ heavy_inflation:0 "Heavy Inflation"
+ hyperinflation:0 "Hyperinflation"
+ economic_collapse:0 "Economic Collapse"
+
+ excellent_literacy_rate:0 "Excellent Literacy Rate"
+ high_literacy_rate:0 "High Literacy Rate"
+ low_literacy_rate:0 "Low Literacy Rate"
+ high_illiteracy_rate:0 "High Illiteracy Rate"
+
+ generic_economic_alliance:0 "Economic Alliance"
+ generic_military_alliance:0 "Military Alliance"

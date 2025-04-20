@@ -1,0 +1,397 @@
+technologies = {
+	
+	@early = 0
+	@1833 = 3
+	@1886 = 6
+	@1894 = 9
+	@1904 = 12
+	@1918 = 15
+
+	tech_carriage = {
+
+		folder = {
+			name = civilian_folder
+			position = { x = 0 y = @early }
+		}
+
+		enable_equipments = {
+			carriage_equipment_0
+			motorized_equipment
+		}
+
+		path = {
+			leads_to_tech = tech_motorwagon
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+			infantry_tech
+		}
+		
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_motorwagon = {
+
+		folder = {
+			name = civilian_folder
+			position = { x = 0 y = @1886 }
+		}
+
+		enable_equipments = {
+			motorwagon_equipment_0
+			motorized_equipment
+		}
+
+		path = {
+			leads_to_tech = tech_motorcar
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1886
+		
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+			infantry_tech
+		}
+		
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_motorcar = {
+
+		folder = {
+			name = civilian_folder
+			position = { x = 0 y = @1894 }
+		}
+
+		enable_equipments = {
+			motorcar_equipment_0
+			motorized_equipment
+		}
+
+		path = {
+			leads_to_tech = tech_car
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1894
+		
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+			infantry_tech
+		}
+		
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_car = {
+
+		folder = {
+			name = civilian_folder
+			position = { x = 0 y = @1904 }
+		}
+
+		enable_equipments = {
+			car_equipment_0
+			motorized_equipment
+		}
+
+		research_cost = 1
+
+		start_year = 1904
+		
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 0 }
+		}
+
+		categories = {
+			motorized_equipment
+			mio_cat_tech_all_motorized_mechanized
+			infantry_tech
+		}
+		
+		special_project_specialization = { specialization_land }
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	carrier_pidgeons = {
+
+		force_use_small_tech_layout = yes
+
+		army_org_factor = 0.05
+
+		folder = {
+			name = civilian_folder
+			position = { x = 3 y = @early }
+		}
+
+		path = {
+			leads_to_tech = telegraph
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	telegraph = {
+
+		army_org_factor = 0.05
+
+		folder = {
+			name = civilian_folder
+			position = { x = 3 y = @1833 }
+		}
+
+		enable_equipments = {
+
+		}
+
+		path = {
+			leads_to_tech = wireless_telegraph
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1833
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	wireless_telegraph = {
+
+		army_org_factor = 0.05
+
+		folder = {
+			name = civilian_folder
+			position = { x = 3 y = @1894 }
+		}
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 0 }
+		}
+
+		enable_equipments = {
+
+		}
+
+		research_cost = 1
+
+		start_year = 1894
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_food = {
+
+		political_power_factor = 0.1
+
+		folder = {
+			name = civilian_folder
+			position = { x = 6 y = @early }
+		}
+
+		enable_equipments = {
+
+		}
+
+		path = {
+			leads_to_tech = canned_food
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = tech_alcohol
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	canned_food = {
+
+		surrender_limit = 0.1
+
+		folder = {
+			name = civilian_folder
+			position = { x = 6 y = @1833 }
+		}
+
+		enable_equipments = {
+
+		}
+
+		path = {
+			leads_to_tech = army_rations
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1833
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_alcohol = {
+
+		acclimatization_cold_climate_gain_factor = 0.1
+
+		folder = {
+			name = civilian_folder
+			position = { x = 8 y = @early }
+		}
+
+		enable_equipments = {
+
+		}
+
+		path = {
+			leads_to_tech = tech_medicine
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	tech_medicine = {
+
+		army_morale_factor = 0.1
+
+		folder = {
+			name = civilian_folder
+			position = { x = 8 y = @1886 }
+		}
+
+		enable_equipments = {
+
+		}
+
+		path = {
+			leads_to_tech = army_rations
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+
+		start_year = 1886
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	army_rations = {
+
+		dependencies = {
+			canned_food = 1
+			tech_alcohol = 1
+			tech_medicine = 1
+		}
+
+		army_org_factor = 0.1
+
+		folder = {
+			name = civilian_folder
+			position = { x = 6 y = @1904 }
+		}
+
+		enable_equipments = {
+
+		}
+
+		research_cost = 1
+
+		start_year = 1904
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

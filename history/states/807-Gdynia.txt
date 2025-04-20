@@ -1,0 +1,69 @@
+
+state={
+	id=807
+	name="STATE_807"
+	manpower = 713370
+	
+	state_category = city
+	history={
+		set_variable = { culture = 10 }
+		owner = PRE
+		set_state_name = STATE_807_GER
+        set_province_name = {
+            id = 279
+            name = VICTORY_POINTS_279_GER
+        }
+        set_province_name = {
+            id = 3295
+            name = VICTORY_POINTS_3295_GER
+        }
+        set_province_name = {
+            id = 9263
+            name = VICTORY_POINTS_9263_GER
+        }
+		victory_points = {
+			9263 5
+		}
+		victory_points = {
+			3295 5
+		}
+		victory_points = {
+			279 1
+		}
+		buildings = {
+			infrastructure = 3 #was: 6
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 2
+			9263 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = PRE
+		1871.1.18 = {
+			owner = GER
+			add_core_of = GER
+		}
+		1919.6.28 = {
+			owner = POL
+			add_core_of = POL
+			reset_state_name = yes
+            reset_province_name = 279
+            reset_province_name = 3295
+            reset_province_name = 9263
+		}
+		1938.3.12 = {
+			add_claim_by = GER
+		}
+		1945.5.8 = {
+			remove_core_of = GER
+			remove_claim_by = GER
+		}
+	}
+
+	provinces={
+		243 279 334 389 3295 3324 6347 9263
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,4871 @@
+﻿focus_tree = {
+	id = LEO_communistan_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LEO
+		}
+	}
+
+	shared_focus = DRACHENPAKT_alliance
+
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = LEO_rejoin_the_railways
+	}
+
+	continuous_focus_position = { x = 4390 y = 700 }
+
+	inlay_window = {
+		id = drachenpakt_alliance_inlay_window
+		position = { x = 520 y = 720 }
+	}
+
+	shortcut = {
+		name = LEO_political_tree_shortcut
+		target = LEO_future_of_our_nation
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = LEO_alliance_shortcut
+		target = DRACHENPAKT_alliance
+		scroll_wheel_factor = 1.0
+	}
+
+	focus = {
+		id = LEO_path_to_freedom
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = LEO_demand_self_governance
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = LEO_path_to_freedom }
+		x = 0
+		y = 2
+		relative_position_id = LEO_path_to_freedom
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+			OVERLORD = {
+				end_puppet = ROOT
+			}
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	focus = {
+		id = LEO_demand_core_territories
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = LEO_demand_self_governance }
+		x = 0
+		y = 2
+		relative_position_id = LEO_demand_self_governance
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			transfer_state = 784
+			transfer_state = 95
+			transfer_state = 96
+		}
+	}
+
+	focus = {
+		id = LEO_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 40
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LEO_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = LEO_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LEO_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = LEO_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LEO_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = LEO_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = LEO_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = LEO_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = LEO_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = LEO_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LEO_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = LEO_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = LEO_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = LEO_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LEO_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = LEO_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = LEO_equipment_effort_3 }
+		prerequisite = { focus = LEO_doctrine_effort_2 }
+		prerequisite = { focus = LEO_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = LEO_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 44
+		y = 0
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = LEO_aviation_effort }
+		mutually_exclusive = { focus = LEO_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = LEO_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = LEO_aviation_effort }
+		mutually_exclusive = { focus = LEO_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = LEO_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = LEO_bomber_focus focus = LEO_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = LEO_bomber_focus
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = LEO_aviation_effort_2 }
+		prerequisite = { focus = LEO_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = LEO_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = LEO_aviation_effort_2 }
+		prerequisite = { focus = LEO_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = LEO_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = LEO_aviation_effort_2 }
+		prerequisite = { focus = LEO_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = LEO_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 48
+		y = 0
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = LEO_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = LEO_naval_effort }
+		mutually_exclusive = { focus = LEO_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = LEO_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = LEO_naval_effort }
+		mutually_exclusive = { focus = LEO_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = LEO_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = fleet_in_being_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = LEO_flexible_navy focus = large_navy }
+		x = 0
+		y = 1
+		relative_position_id = LEO_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = LEO_large_navy focus = flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = LEO_large_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = LEO_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = LEO_submarine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LEO_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = LEO_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_future_of_our_nation
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 29
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = LEO_nationalism_focus
+		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = LEO_future_of_our_nation }
+		mutually_exclusive = { focus = LEO_liberty_ethos }
+		mutually_exclusive = { focus = LEO_will_of_the_king }
+		mutually_exclusive = { focus = LEO_internationalism_focus }
+		mutually_exclusive = { focus = LEO_divine_path }
+		available = {
+			fascism > 0.20
+			is_subject = no
+		}
+		x = 0
+		y = 1
+		relative_position_id = LEO_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = fascism }
+				}
+			}
+			modifier = {
+				factor = 10
+				has_idea = SOV_russian_political_influence
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = LEO_internationalism_focus
+		icon = GFX_goal_support_communism #icon = GFX_goal_tripartite_pact
+		prerequisite = { focus = LEO_future_of_our_nation }
+		mutually_exclusive = { focus = LEO_nationalism_focus }
+		mutually_exclusive = { focus = LEO_liberty_ethos }
+		mutually_exclusive = { focus = LEO_will_of_the_king }
+		mutually_exclusive = { focus = LEO_divine_path }
+		available = {
+			communism > 0.20
+			is_subject = no
+		}
+		x = -8
+		y = 1
+		relative_position_id = LEO_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}			
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}	
+
+	focus = {
+		id = LEO_liberty_ethos
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = LEO_future_of_our_nation }
+		mutually_exclusive = { focus = LEO_nationalism_focus }
+		mutually_exclusive = { focus = LEO_will_of_the_king }
+		mutually_exclusive = { focus = LEO_internationalism_focus }
+		mutually_exclusive = { focus = LEO_divine_path }
+		available = {
+			democratic > 0.20
+			is_subject = no
+		}
+		x = 4
+		y = 1
+		relative_position_id = LEO_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+
+	focus = {
+		id = LEO_militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = LEO_nationalism_focus }
+		x = 0
+		y = 3
+		relative_position_id = LEO_nationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = LEO_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = LEO_internationalism_focus }
+		x = -1
+		y = 1
+		relative_position_id = LEO_internationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = LEO_neutrality_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = LEO_liberty_ethos }
+		mutually_exclusive = { focus = LEO_interventionism_focus }
+		x = -1
+		y = 1
+		relative_position_id = LEO_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = AUS
+			}
+			modifier = {
+				factor = 0
+				tag = SAU
+				is_in_faction_with = SOV
+				SOV = { has_government = communism }
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LEO_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = LEO_liberty_ethos }
+		mutually_exclusive = { focus = LEO_neutrality_focus }
+		x = 1
+		y = 1
+		relative_position_id = LEO_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = neutrality_idea
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LEO_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LEO_militarism }
+		x = 0
+		y = 2
+		relative_position_id = LEO_militarism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = LEO_neutrality_focus }
+		x = 0
+		y = 1
+		relative_position_id = LEO_neutrality_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = LEO_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = LEO_interventionism_focus }
+		x = 0
+		y = 1
+		relative_position_id = LEO_interventionism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = LEO_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LEO_military_youth }
+		x = 0
+		y = 2
+		relative_position_id = LEO_military_youth
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+
+	focus = {
+		id = LEO_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LEO_political_correctness }
+		x = 0
+		y = 3
+		relative_position_id = LEO_political_correctness
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LEO_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LEO_volunteer_corps }
+		x = -1
+		y = 3
+		relative_position_id = LEO_volunteer_corps
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = LEO_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LEO_foreign_expeditions focus = LEO_deterrence }
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		x = 0
+		y = 5
+		relative_position_id = LEO_deterrence
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = LEO_indoctrination_focus }
+		available = {
+		}
+		x = 0
+		y = 3
+		relative_position_id = LEO_indoctrination_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			add_political_power = 200
+		}
+	}
+	
+	focus = {
+		id = LEO_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = LEO_political_commissars focus = LEO_why_we_fight focus = LEO_civil_war_2 focus = LEO_paramilitarism focus = LEO_reclaim_the_holy_land }
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}		
+		x = 0
+		y = 1
+		relative_position_id = LEO_paramilitarism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_research_slots > 3
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}
+
+	focus = {
+		id = LEO_will_of_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = LEO_future_of_our_nation }
+		mutually_exclusive = { focus = LEO_internationalism_focus }
+		mutually_exclusive = { focus = LEO_liberty_ethos }
+		mutually_exclusive = { focus = LEO_nationalism_focus }
+		mutually_exclusive = { focus = LEO_divine_path }
+		relative_position_id = LEO_future_of_our_nation
+		x = -4
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available = {
+			monarchism > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			set_politics = {
+				ruling_party = monarchism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_fight_for_the_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = LEO_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 1
+		y = 1
+		relative_position_id = LEO_will_of_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = fight_for_the_king
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_create_trust_in_the_crown
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = LEO_fight_for_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LEO_fight_for_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = enthusiasm_for_the_crown
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_royal_high_command
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = LEO_create_trust_in_the_crown }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LEO_create_trust_in_the_crown
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = royal_high_command
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_destabilize_moldova
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = LEO_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+		relative_position_id = LEO_will_of_the_king
+
+		available = {
+			ROM = { 
+				monarchism > 0.025
+			}
+			NOT = { is_in_faction_with = ROM }
+		}
+		bypass = {
+			OR = {
+				MOL = { 
+					owns_state = 78
+					owns_state = 766
+				}
+				is_in_faction_with = MOL
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.31 }
+			hidden_effect = {
+				MOL = {
+					transfer_state = 78
+					transfer_state = 766
+					set_popularities = {
+						monarchism = 65
+						fascism = 20
+						communism = 10
+						democratic = 5
+					}
+					set_politics = {
+						ruling_party = monarchism
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+				create_wargoal = {
+					type = take_state_focus
+					target = MOL
+					expire = 0
+					generator = { 78 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_wirtschaftswunder
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LEO_destabilize_moldova }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LEO_destabilize_moldova
+
+		available = {
+			date < 1914.1.1
+		}
+		bypass = {
+		}
+
+		cost = 1
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			91 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 8
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			89 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 8
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+			80 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}	
+
+	focus = {
+		id = LEO_lithuanian_civil_war
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = LEO_internationalism_focus }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = LEO_internationalism_focus
+
+		available = {
+			is_subject = no
+			LIT = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+			814 = { is_core_of = LEO }
+			11 = { is_core_of = LEO }
+			815 = { is_core_of = LEO }
+			188 = { is_core_of = LEO }
+			189 = { is_core_of = LEO }
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.1 }
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = LEO_unite_the_communist_spirit
+		icon = GFX_focus_chi_cooperation_with_the_communists
+		prerequisite = { focus = LEO_lithuanian_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = LEO_lithuanian_civil_war
+
+		available = {
+			has_government = communism
+			is_subject = no
+			owns_state = 814
+			SSS = {
+				has_government = communism
+				is_subject = no
+			}
+		}
+		bypass = {
+			5 = { is_core_of = LEO }
+			763 = { is_core_of = LEO }
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.2 }
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = LEO_war_with_latvia
+		icon = GFX_focus_LAT_threat_on_our_border
+		prerequisite = { focus = LEO_unite_the_communist_spirit }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = LEO_unite_the_communist_spirit
+
+		available = {
+			is_subject = no
+			LAT = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+			190 = { is_core_of = LEO }
+			809 = { is_core_of = LEO }
+			808 = { is_core_of = LEO }
+			12 = { is_core_of = LEO }
+			810 = { is_core_of = LEO }
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.3 }
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LEO_war_with_estonia
+		icon = GFX_focus_EST_estonia_is_scandinavia
+		prerequisite = { focus = LEO_unite_the_communist_spirit }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = LEO_unite_the_communist_spirit
+
+		available = {
+			is_subject = no
+			EST = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+			811 = { is_core_of = LEO }
+			13 = { is_core_of = LEO }
+			812 = { is_core_of = LEO }
+			191 = { is_core_of = LEO }
+			813 = { is_core_of = LEO }
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.4 }
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LEO_civil_war
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LEO_war_with_estonia focus = LEO_war_with_latvia }
+		mutually_exclusive = { focus = LEO_civil_war_2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 4
+		relative_position_id = LEO_war_with_latvia
+
+		available = {
+			has_government = communism
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.5 }
+			add_war_support = 0.1
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LEO_war_with_romania
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = LEO_destabilize_moldova focus = LEO_royal_high_command focus = LEO_war_with_estonia focus = LEO_militarism }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 3
+		relative_position_id = LEO_destabilize_moldova
+
+		available = {
+			is_subject = no
+			ROM = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				expire = 0
+				generator = { 79 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = LEO_war_with_bulgaria
+		icon = GFX_focus_generic_attack_bulgaria
+		prerequisite = { focus = LEO_war_with_romania }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = LEO_war_with_romania
+
+		available = {
+			is_subject = no
+			BUL = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BUL
+				expire = 0
+				generator = { 48 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = LEO_war_with_greece
+		icon = GFX_focus_generic_attack_greece
+		prerequisite = { focus = LEO_war_with_bulgaria }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = LEO_war_with_bulgaria
+
+		available = {
+			is_subject = no
+			GRE = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GRE
+				expire = 0
+				generator = { 184 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = LEO_war_with_turkey
+		icon = GFX_focus_generic_attack_turkey
+		prerequisite = { focus = LEO_war_with_bulgaria }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = LEO_war_with_bulgaria
+
+		available = {
+			is_subject = no
+			TUR = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = TUR
+				expire = 0
+				generator = { 797 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = LEO_civil_war_2
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LEO_war_with_greece focus =  LEO_war_with_turkey }
+		mutually_exclusive = { focus = LEO_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = LEO_war_with_turkey
+
+		available = {
+			has_government = monarchism
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LEO.32 }
+			add_war_support = 0.1
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LEO_divine_path
+		icon = GFX_focus_generic_pope
+		prerequisite = { focus = LEO_future_of_our_nation }
+		mutually_exclusive = { focus = LEO_internationalism_focus }
+		mutually_exclusive = { focus = LEO_liberty_ethos }
+		mutually_exclusive = { focus = LEO_will_of_the_king }
+		mutually_exclusive = { focus = LEO_nationalism_focus }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 8
+		y = 1
+		relative_position_id = LEO_future_of_our_nation
+
+		available = {
+			theocracy > 0.20
+			is_subject = no
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_strength_through_faith
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = LEO_divine_path }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LEO_divine_path
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = strength_through_faith
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_trust_in_your_belief
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = LEO_strength_through_faith }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LEO_strength_through_faith
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = trust_in_your_belief
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_deus_vult
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = LEO_trust_in_your_belief }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LEO_trust_in_your_belief
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = deus_vult
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LEO_reclaim_the_holy_land
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = LEO_deus_vult }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 4
+		relative_position_id = LEO_deus_vult
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				expire = 0
+				generator = { 454 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = PAL
+				expire = 0
+				generator = { 454 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ISR
+				expire = 0
+				generator = { 454 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+###############################################################################
+
+	focus = {
+		id = LEO_rejoin_the_railways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 10
+		y = 0
+		offset = {
+			x = -6
+			y = 0
+			trigger = {
+				
+			}
+		}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					is_capital = no 
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Axis investments
+	focus = {
+		id = LEO_axis_investments
+		icon = GFX_focus_chi_mission_to_germany
+		dynamic = yes
+		prerequisite = { focus = LEO_rejoin_the_railways }
+		mutually_exclusive = { focus = LEO_renew_allied_trade }
+		x = -7
+		y = 1
+		relative_position_id = LEO_rejoin_the_railways
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = Baltic_axis_investments_idea
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				GER = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = {
+				limit = { 
+					suitable_fascist_major_in_europe = yes 
+				}
+				random_other_country = {
+					limit = { 
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					JAP = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				JAP = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = {
+				limit = {suitable_fascist_major_in_europe = yes }
+				random_other_country = {
+					limit = { 
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_other_country = {
+						is_faction_leader = yes
+						has_government = fascism
+					}
+				}
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_other_country ={
+						is_major = yes
+						has_government = fascism
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_major = yes 
+						has_government = fascism 
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_german_war_economics
+		icon = GFX_goal_generic_production
+		dynamic = yes
+		prerequisite = { focus = LEO_axis_investments }
+		x = -1
+		y = 1
+		relative_position_id = LEO_axis_investments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			upgrade_economy_law = yes
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_autobahn
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = LEO_german_war_economics }
+		prerequisite = { focus = LEO_german_tank_licences }
+		x = 0
+		y = 1
+		relative_position_id = LEO_german_war_economics
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = no
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_eastwall
+		icon = GFX_goal_fortify_the_westwall
+		prerequisite = { focus = LEO_german_war_economics }
+		prerequisite = { focus = LEO_german_tank_licences }
+		x = -2
+		y = 1
+		relative_position_id = LEO_german_war_economics
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { tag = LIT }
+				814 = {
+					add_building_construction = { type = bunker province = 6281 level = 1 instant_build = yes }
+				}
+				815 = {
+					add_building_construction = { type = bunker province = 9246 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 11226 level = 2 instant_build = yes }
+				}
+				if = {
+					limit = { NOT = { owns_state = 784 } }
+					11 = {
+						add_building_construction = { type = bunker province = 327 level = 2 instant_build = yes }
+						add_building_construction = { type = bunker province = 9404 level = 1 instant_build = yes }
+					}
+					815 = {
+						add_building_construction = { type = bunker province = 11498 level = 2 instant_build = yes }
+					}
+				}
+				else = {
+					784 = {
+						add_building_construction = { type = bunker province = 11342 level = 1 instant_build = yes }
+						add_building_construction = { type = bunker province = 9295 level = 2 instant_build = yes }
+						add_building_construction = { type = bunker province = 3320 level = 1 instant_build = yes }
+						add_building_construction = { type = bunker province = 9274 level = 2 instant_build = yes }
+					}
+				}
+			}
+			if = {
+				limit = { tag = LAT }
+				if = {
+					limit = { controls_state = 809 }
+					809 = {
+						add_building_construction = {
+							type = bunker
+							province = 11358
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = { controls_state = 810 }
+					810 = {
+						add_building_construction = {
+							type = bunker
+							province = 310
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 6459
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 9275
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 222
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 319
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = { tag = LEO }
+				95 = {
+					add_building_construction = { type = bunker province = 11341 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 9304 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 9236 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 11341 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 11341 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 11341 level = 1 instant_build = yes }
+				}
+				96 = {
+					add_building_construction = { type = bunker province = 227 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 406 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 9341 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 358 level = 1 instant_build = yes }
+					add_building_construction = { type = bunker province = 233 level = 1 instant_build = yes }
+				}
+				
+			}
+			if = {
+				limit = { tag = EST }
+				if = {
+					limit = { controls_state = 191 }
+					191 = {
+						add_building_construction = {
+							type = bunker
+							province = 592
+							level = 2
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							province = 9221
+							level = 2
+							instant_build = yes
+						}
+					}
+				}
+				if = {
+					limit = { controls_state = 813 }
+					813 = {
+						add_building_construction = {
+							type = bunker
+							province = 4640
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_balticwall
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = LEO_eastwall }
+		x = 0
+		y = 1
+		relative_position_id = LEO_eastwall
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { tag = LIT }
+				if = {
+					limit = { controls_state = 189 }
+					189 = {
+						add_building_construction = { type = coastal_bunker province = 6314 level = 6 instant_build = yes }
+					}
+				}
+				if = {
+					limit = { controls_state = 188 }
+					188 = {
+						add_building_construction = { type = coastal_bunker province = 3288 level = 6 instant_build = yes }
+					}
+				}
+			}
+			if = {
+				limit = { tag = LEO }
+				if = {
+					limit = { controls_state = 189 }
+					189 = {
+						add_building_construction = { type = coastal_bunker province = 6314 level = 6 instant_build = yes }
+					}
+				}
+				if = {
+					limit = { controls_state = 188 }
+					188 = {
+						add_building_construction = { type = coastal_bunker province = 3288 level = 6 instant_build = yes }
+					}
+				}
+			}
+			if = {
+				limit = { tag = EST }
+				every_owned_state = {
+					limit = {
+						controller = { tag = ROOT }
+						OR = {
+							state = 811
+							state = 13
+							state = 812
+							state = 813
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { tag = LAT }
+				every_owned_state = {
+					limit = {
+						controller = { tag = ROOT }
+						OR = {
+							state = 190
+							state = 809
+							state = 808
+							state = 12
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_german_tank_licences
+		icon = GFX_goal_generic_army_tanks
+		dynamic = yes
+		prerequisite = { focus = LEO_axis_investments }
+		x = 1
+		y = 1
+		relative_position_id = LEO_axis_investments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				GER = { 
+					give_fascist_tank_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = light_tank_chassis
+						seller_tags  = { GER }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					suitable_fascist_major_in_europe = yes
+				}
+				random_other_country = {
+					limit ={
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+					give_fascist_tank_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = light_tank_chassis
+						seller_trigger = is_fascist_seller_trigger
+					}
+				}
+			}
+			else_if = { 
+				limit = {
+					JAP = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				JAP = {
+					give_fascist_tank_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = light_tank_chassis
+						seller_tags  = { JAP }
+					}
+				}
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					give_fascist_tank_licences = yes
+				}
+			} 	
+		}
+	}
+
+	focus = {
+		id = LEO_german_baltic_industry
+		icon = GFX_goal_generic_production2
+		prerequisite = { focus = LEO_german_tank_licences }
+		prerequisite = { focus = LEO_german_war_economics }
+		x = 0
+		y = 1
+		relative_position_id = LEO_german_tank_licences
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = baltic_axis_investments_idea
+				add_idea = baltic_axis_investments_idea_1
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_request_german_support
+		dynamic = yes
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = LEO_german_baltic_industry }
+		x = 0
+		y = 1
+		relative_position_id = LEO_german_baltic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = fascism
+				is_faction_leader = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					GER = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				GER = { 
+					country_event = {
+						id = BALTIC_events.1
+						days = 10
+					}			
+				}
+			}
+			else_if = {
+				limit = {
+					suitable_fascist_major_in_europe = yes
+				}
+				random_other_country = {
+					limit ={
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+					country_event = {
+						id = BALTIC_events.1
+						days = 10
+					}			
+				}
+			}
+			else_if = { 
+				limit = {
+					JAP = {
+						exists = yes
+						has_capitulated = no
+						has_government = fascism
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				JAP = {
+					country_event = {
+						id = BALTIC_events.1
+						days = 10
+					}
+				}
+			}
+			else = {
+				get_best_alliance_match_fascism_effect = yes
+				var:best_leader = {
+					country_event = {
+						id = BALTIC_events.1
+						days = 10
+					}			
+				}
+			}
+		}
+	}
+
+	#Allied investments
+	focus = {
+		id = LEO_renew_allied_trade
+		icon = GFX_focus_chi_british_cooperation
+		dynamic = yes
+		prerequisite = { focus = LEO_rejoin_the_railways }
+		mutually_exclusive = { focus = LEO_axis_investments }
+		x = -3
+		y = 1
+		relative_position_id = LEO_rejoin_the_railways
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = BALTIC_allied_investments_idea
+			## Checking for valid Democractic Countries to increase opinion
+			if = { #Checking for UK 
+				limit = {
+					ENG = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				ENG = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = { # (Allied) Fallback to France 
+				limit = {
+					FRA = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				FRA = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = { # (American) Fallback to USA
+				limit = {
+					USA = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				USA = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = { # (European) Fallback to another European Democracy
+				limit = { suitable_democratic_major_in_europe = yes	}
+				random_other_country = {
+					limit = { 
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			else_if = { # (International) Fallback to any democratic faction leader. 
+				limit = {
+					any_other_country = {
+						is_faction_leader = yes
+						has_government = fascism
+					}
+				}
+				get_best_alliance_match_democratic_effect = yes
+				var:best_leader = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+					reverse_add_opinion_modifier = {
+						target = PREV
+						modifier = BALTIC_investments
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_idea = export_focus
+				}
+				swap_ideas = {
+					remove_idea = export_focus
+					add_idea = free_trade
+				}
+			}
+			if = {
+				limit = {
+					has_idea = limited_exports
+				}
+				swap_ideas = {
+					remove_idea = limited_exports
+					add_idea = free_trade
+				}
+			}
+			if = {
+				limit = {
+					has_idea = closed_economy
+				}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = free_trade
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_ford_motors
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LEO_renew_allied_trade }
+		x = -1
+		y = 1
+		relative_position_id = LEO_renew_allied_trade
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 1 }
+			if = {
+				limit = {
+					NOT = {
+						has_tech = motorised_infantry
+					}
+				}
+				add_tech_bonus = {
+					name = BALTIC_ford
+					bonus = 0.5
+					uses = 1
+					category = motorized_equipment
+				}
+			}
+			else = { #separate tech bonus to ensure trucks get the bonus, due to the way ahead of time reduction works
+				add_tech_bonus = {
+					name = BALTIC_ford
+					ahead_reduction = 2
+					bonus = 0.5
+					uses = 1
+					category = motorized_equipment
+				}
+			}
+			IF = {
+				limit = {
+						has_dlc = "Arms Against Tyranny"
+				}	
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = USA_ford_motor_company_organization
+			}
+			ELSE = {
+				show_ideas_tooltip = BALTIC_ford
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_crossley_motors
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LEO_ford_motors focus = LEO_british_aircraft }
+		x = 0
+		y = 1
+		relative_position_id = LEO_ford_motors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_offsite_building = { type = arms_factory level = 3 }
+		}
+	}
+
+	focus = {
+		id = LEO_british_designers
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = LEO_crossley_motors }
+		x = 0
+		y = 1
+		relative_position_id = LEO_crossley_motors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			ENG = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+			add_offsite_building = { type = arms_factory level = 1 }
+
+			IF = {
+				limit = {
+						has_dlc = "Arms Against Tyranny"
+				}	
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = BALTIC_RAF_organization
+				show_mio_tooltip = ENG_royal_arsenal_organization
+				show_mio_tooltip = ENG_rsaf_enfield_organization
+
+				mio:BALTIC_RAF_organization = {
+					add_mio_size = 1
+				}
+				mio:ENG_royal_arsenal_organization = {
+					add_mio_size = 1
+				}
+				mio:ENG_rsaf_enfield_organization = {
+					add_mio_size = 1
+				}
+			}
+			ELSE = {
+				show_ideas_tooltip = BALTIC_RAF
+				show_ideas_tooltip = BALTIC_RSAF_enfield
+				show_ideas_tooltip = BALTIC_royal_arsenal
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_british_aircraft
+		icon = GFX_goal_generic_air_fighter
+		dynamic = yes
+		prerequisite = { focus = LEO_renew_allied_trade }
+		x = 1
+		y = 1
+		relative_position_id = LEO_renew_allied_trade
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			air_experience = 40
+			## Checking for valid Democractic Countries to get aircraft from
+			if = { #Checking for UK 
+				limit = {
+					ENG = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				ENG = {
+					give_aircraft_and_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = small_plane_airframe
+						seller_tags  = { ENG }
+					}
+				}
+			}
+			else_if = { # (Allied) Fallback to France 
+				limit = {
+					FRA = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				FRA = {
+					give_aircraft_and_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = small_plane_airframe
+						seller_tags  = { FRA }
+					}
+				}
+			}
+			else_if = { # (American) Fallback to USA
+				limit = {
+					USA = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				USA = {
+					give_aircraft_and_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = small_plane_airframe
+						seller_tags  = { USA }
+					}
+				}
+			}
+			else_if = { # (European) Fallback to another European Democracy
+				limit = { suitable_democratic_major_in_europe = yes	}
+				random_other_country = {
+					limit = { 
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+					}
+					give_aircraft_and_licences = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 500
+						equipment_type = small_plane_airframe
+						seller_trigger = is_democracy_seller_trigger
+					}
+				}
+			}
+			else = { # (International) Fallback to any democratic faction leader. 
+				get_best_alliance_match_democratic_effect = yes
+				var:best_leader = {
+					give_aircraft_and_licences = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_allied_shipments
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LEO_british_aircraft focus = LEO_ford_motors }
+		x = 0
+		y = 1
+		relative_position_id = LEO_british_aircraft
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = { #Checking for UK 
+				limit = {
+					ENG = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				ENG = {
+					baltic_give_allied_equipment = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 250
+						equipment_type = infantry_equipment
+						seller_tags  = { ENG }
+					}
+				}
+			}
+			else_if = { # (Allied) Fallback to France 
+				limit = {
+					FRA = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						is_faction_leader = yes
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				FRA = {
+					baltic_give_allied_equipment = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 250
+						equipment_type = infantry_equipment
+						seller_tags  = { FRA }
+					}
+				}
+			}
+			else_if = { # (American) Fallback to USA
+				limit = {
+					USA = { 
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+					}
+				}
+				USA = {
+					baltic_give_allied_equipment = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 250
+						equipment_type = infantry_equipment
+						seller_tags  = { USA }
+					}
+				}
+			}
+			else_if = { # (European) Fallback to another European Democracy
+				limit = { suitable_democratic_major_in_europe = yes	}
+				random_other_country = {
+					limit = { 
+						is_major = yes
+						capital_scope = { is_on_continent = europe }
+						exists = yes
+						has_capitulated = no
+						has_government = democratic
+						NOT = { has_war_with = ROOT }
+					}
+					baltic_give_allied_equipment = yes
+				}
+				if = {
+					limit = {
+						has_dlc = "Arms Against Tyranny"
+					}
+					add_equipment_subsidy = {
+						cic = 250
+						equipment_type = infantry_equipment
+						seller_trigger = is_democracy_seller_trigger
+					}
+				}
+			}
+			else = { # (International) Fallback to any democratic faction leader. 
+				get_best_alliance_match_democratic_effect = yes
+				var:best_leader = {
+					baltic_give_allied_equipment = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_baltic_fleet
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = LEO_allied_shipments }
+		x = 0
+		y = 1
+		relative_position_id = LEO_allied_shipments
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+			any_other_country = {
+				exists = yes
+				has_capitulated = no
+				has_government = democratic
+				is_major = yes
+				NOT = { has_war_with = ROOT }
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			navy_experience = 30
+			random_owned_controlled_state = {
+				limit = { is_coastal = yes }
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = { tag = LIT }
+				if = {
+					limit = { controls_state = 189 }
+					189 = {
+						add_building_construction = { type = coastal_bunker province = 6314 level = 4 instant_build = yes }
+					}
+				}
+				if = {
+					limit = { controls_state = 188 }
+					188 = {
+						add_building_construction = { type = coastal_bunker province = 3288 level = 4 instant_build = yes }
+					}
+				}
+			}
+			if = {
+				limit = { tag = EST }
+				every_owned_state = {
+					limit = {
+						controller = { tag = ROOT }
+						OR = {
+							state = 811
+							state = 13
+							state = 812
+							state = 813
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { tag = LAT }
+				every_owned_state = {
+					limit = {
+						controller = { tag = ROOT }
+						OR = {
+							state = 190
+							state = 809
+							state = 808
+							state = 12
+						}
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						province = {
+							all_provinces = yes
+							limit_to_coastal = yes
+						}
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	#Attract workers
+	focus = {
+		id = LEO_attract_workers_to_capital
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = LEO_rejoin_the_railways }
+		x = 0
+		y = 1
+		relative_position_id = LEO_rejoin_the_railways
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_rebuild_forts
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = LEO_attract_workers_to_capital }
+		x = 0
+		y = 1
+		relative_position_id = LEO_attract_workers_to_capital
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				AND = {
+					original_tag = LIT
+					controls_state = 11
+				}
+
+				AND = {
+					original_tag = LIT
+					controls_state = 11
+				} 
+				AND = {
+					original_tag = LAT
+					controls_state = 12
+				}
+				AND = {
+					original_tag = EST
+					controls_state = 13
+				}
+				AND = {
+					original_tag = LEO
+					controls_state = 784
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = { original_tag = LIT }
+				11 = {
+					add_building_construction = { type = bunker province = 6296 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 327 level = 2 instant_build = yes }
+				}
+				814 = {
+					add_building_construction = { type = bunker province = 3272 level = 3 instant_build = yes }
+				}
+			}
+			if = {
+				limit = { original_tag = LAT }
+				808 = {
+					add_building_construction = { type = bunker province = 9340 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 9240 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 10323 level = 2 instant_build = yes }
+				}
+				809 = {
+					add_building_construction = { type = bunker province = 6222 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 265 level = 2 instant_build = yes }
+				}
+			}
+			if = {
+				limit = { original_tag = EST }
+				812 = {
+					add_building_construction = { type = bunker province = 3152 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 567 level = 2 instant_build = yes }
+					add_building_construction = { type = bunker province = 496 level = 3 instant_build = yes }
+					add_building_construction = { type = bunker province = 11426 level = 2 instant_build = yes }
+				}
+			}
+			if = {
+				limit = { original_tag = LEO }
+				784 = {
+					add_building_construction = { type = bunker province = 3320 level = 5 instant_build = yes }
+					add_building_construction = { type = bunker province = 9295 level = 2 instant_build = yes }
+				}
+				
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_arm_the_nation
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LEO_rebuild_forts }
+		x = 0
+		y = 1
+		relative_position_id = LEO_rebuild_forts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		} 
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 11 12 13 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 814 808 811 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 188 810 813 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_unchain_education
+		icon = GFX_focus_research
+		prerequisite = { focus = LEO_rebuild_forts }
+		x = 2
+		y = 1
+		relative_position_id = LEO_rebuild_forts
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			industrial_complex > 15
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = LEO_technology_sharing
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = LEO_unchain_education }
+		x = 0
+		y = 1
+		relative_position_id = LEO_unchain_education
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_in_faction = yes
+			is_subject = no
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = LEO_defence_of_our_nation
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = LEO_arm_the_nation }
+		x = 0
+		y = 1
+		relative_position_id = LEO_arm_the_nation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = BALTIC_defending_the_nation
+		}
+	}
+
+	#Modernized industry
+	focus = {
+		id = LEO_modernize_industry
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = LEO_rejoin_the_railways }
+		x = 4
+		y = 1
+		relative_position_id = LEO_rejoin_the_railways
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { original_tag = LIT }
+				swap_ideas = {
+					remove_idea = LIT_agrarian_society
+					add_idea = LIT_invested_in_farms
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 11 12 13 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 189 190 191 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 814 808 811 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 815 809 812 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_domestic_motors
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LEO_modernize_industry }
+		x = -1
+		y = 1
+		relative_position_id = LEO_modernize_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_school_of_aviation
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = LEO_modernize_industry }
+		x = 1
+		y = 1
+		relative_position_id = LEO_modernize_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = BALTIC_school_of_aviation_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_original_designs
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LEO_domestic_motors focus = LEO_school_of_aviation }
+		x = 1
+		y = 1
+		relative_position_id = LEO_domestic_motors
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			add_tech_bonus = {
+				name = BALTIC_original_designs
+				bonus = 0.75
+				uses = 1
+				category = infantry_weapons
+			}
+			add_tech_bonus = {
+				name = BALTIC_original_designs
+				bonus = 0.75
+				uses = 1
+				category = artillery
+			}
+			add_tech_bonus = {
+				name = BALTIC_original_designs
+				bonus = 0.75
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_arms_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LEO_original_designs }
+		prerequisite = { focus = LEO_defence_of_our_nation }
+		x = 0
+		y = 2
+		relative_position_id = LEO_original_designs
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 814 808 811 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				prioritize = { 815 809 812 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_natural_resources
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = LEO_modernize_industry }
+		x = 3
+		y = 1
+		relative_position_id = LEO_modernize_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { original_tag = LIT }
+				swap_ideas = {
+					remove_idea = LIT_invested_in_farms
+					add_idea = LIT_invested_in_farms_1
+				}
+			}
+			else_if = {
+				limit = { original_tag = LAT }
+				190 = {
+					add_resource = {
+						type = steel
+						amount = 16
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = EST }
+				13 = {
+					add_resource = {
+						type = oil
+						amount = 8
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = Leo }
+				784 = {
+					add_resource = {
+						type = steel
+						amount = 16
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_trade_with_neighbors
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LEO_natural_resources }
+		mutually_exclusive = { focus = LEO_invest_in_baltic_trade }
+		x = -1
+		y = 1
+		relative_position_id = LEO_natural_resources
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					OR = {
+						original_tag = EST
+						original_tag = LAT
+						original_tag = LIT
+					}
+					NOT = { original_tag = ROOT }
+				}
+				add_opinion_modifier = {
+					target = PREV
+					modifier = BALTIC_trade
+				}
+			}
+			if = {
+				limit = { original_tag = LIT }
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = LAT }
+				190 = {
+					add_resource = {
+						type = steel
+						amount = 8
+					}
+				}
+			}
+			else_if = {
+				limit = { original_tag = EST }
+				13 = {
+					add_resource = {
+						type = oil
+						amount = 4
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LEO_invest_in_baltic_trade
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = LEO_natural_resources }
+		mutually_exclusive = { focus = LEO_trade_with_neighbors }
+		x = 1
+		y = 1
+		relative_position_id = LEO_natural_resources
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 150
+			}
+			if = {
+				limit = {
+					tag = EST
+				}
+				812 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 3152
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = LAT
+				}
+				808 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 9340
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = LIT
+				}
+				189 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						instant_build = yes
+						province = 6314
+					}
+				}
+			}
+		}
+	}
+}

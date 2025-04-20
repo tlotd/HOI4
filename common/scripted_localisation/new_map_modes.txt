@@ -1,0 +1,647 @@
+defined_text = {
+    name = get_culture_data
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 0 }
+		}
+        localization_key = no_culture
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 7 }
+		}
+        localization_key = culture_german
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 8 }
+		}
+        localization_key = culture_southern_german
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 9 }
+		}
+        localization_key = culture_northern_german
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 10 }
+		}
+        localization_key = culture_prussian
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 11 }
+		}
+        localization_key = culture_swabian
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 12 }
+		}
+        localization_key = culture_alemannic
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 13 }
+		}
+        localization_key = culture_bavarian
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 14 }
+		}
+        localization_key = culture_franconian
+    }
+
+    text = { 
+		trigger = {
+            check_variable = { culture = 15 }
+		}
+        localization_key = culture_pfaelzish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 16 }
+		}
+        localization_key = culture_hessian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 17 }
+		}
+        localization_key = culture_ripuarian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 18 }
+		}
+        localization_key = culture_westphalian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 19 }
+		}
+        localization_key = culture_eastphalian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 20 }
+		}
+        localization_key = culture_thuringian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 21 }
+		}
+        localization_key = culture_saxon
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 22 }
+		}
+        localization_key = culture_frisian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 23 }
+		}
+        localization_key = culture_elbish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 24 }
+		}
+        localization_key = culture_holsteinish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 25 }
+		}
+        localization_key = culture_shleswigish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 26 }
+		}
+        localization_key = culture_margravian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 27 }
+		}
+        localization_key = culture_mecklenburgish_vorpommersh
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 28 }
+		}
+        localization_key = culture_alsatian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 29 }
+		}
+        localization_key = culture_swiss_german
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 30 }
+		}
+        localization_key = culture_austrian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 31 }
+		}
+        localization_key = culture_sudeten_german
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 32 }
+		}
+        localization_key = culture_czech
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 33 }
+		}
+        localization_key = culture_silisian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 34 }
+		}
+        localization_key = culture_pommeranian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 35 }
+		}
+        localization_key = culture_danish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 36 }
+		}
+        localization_key = culture_dutch
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 37 }
+		}
+        localization_key = culture_flemish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 38 }
+		}
+        localization_key = culture_walloons
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 39 }
+		}
+        localization_key = culture_luxemburgish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 40 }
+		}
+        localization_key = culture_slovenian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 41 }
+		}
+        localization_key = culture_roman
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 42 }
+		}
+        localization_key = culture_italian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 43 }
+		}
+        localization_key = culture_venetian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 44 }
+		}
+        localization_key = culture_lombardian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 45 }
+		}
+        localization_key = culture_piedmontese
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 46 }
+		}
+        localization_key = culture_corsican
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 47 }
+		}
+        localization_key = culture_sardinian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 48 }
+		}
+        localization_key = culture_sicilian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 49 }
+		}
+        localization_key = culture_maltese
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 50 }
+		}
+        localization_key = culture_british
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 51 }
+		}
+        localization_key = culture_english
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 52 }
+		}
+        localization_key = culture_scottish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 53 }
+		}
+        localization_key = culture_welsh
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 54 }
+		}
+        localization_key = culture_irish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 55 }
+		}
+        localization_key = culture_french
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 56 }
+		}
+        localization_key = culture_breton
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 57 }
+		}
+        localization_key = culture_basque
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 58 }
+		}
+        localization_key = culture_catalonian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 59 }
+		}
+        localization_key = culture_galician
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 60 }
+		}
+        localization_key = culture_spanish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 61 }
+		}
+        localization_key = culture_portugese
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 62 }
+		}
+        localization_key = culture_lithuanian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 63 }
+		}
+        localization_key = culture_latvian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 64 }
+		}
+        localization_key = culture_estonian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 65 }
+		}
+        localization_key = culture_polish
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 66 }
+		}
+        localization_key = culture_slovak
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 67 }
+		}
+        localization_key = culture_hungarian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 68 }
+		}
+        localization_key = culture_croatian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 69 }
+		}
+        localization_key = culture_bosnian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 70 }
+		}
+        localization_key = culture_montenegrins
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 71 }
+		}
+        localization_key = culture_albanian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 72 }
+		}
+        localization_key = culture_serbian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 73 }
+		}
+        localization_key = culture_kosovars
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 74 }
+		}
+        localization_key = culture_macedonian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 75 }
+		}
+        localization_key = culture_greek
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 76 }
+		}
+        localization_key = culture_bulgarian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 77 }
+		}
+        localization_key = culture_romanian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 78 }
+		}
+        localization_key = culture_transylvanian
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 79 }
+		}
+        localization_key = culture_moldovan
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 201 }
+		}
+        localization_key = culture_japanese
+    }
+
+    text = { 
+		trigger = {
+			check_variable = { culture = 401 }
+		}
+        localization_key = culture_canadian
+
+		trigger = {
+			check_variable = { culture = 402 }
+		}
+        localization_key = culture_american
+
+		trigger = {
+			check_variable = { culture = 403 }
+		}
+        localization_key = culture_mexican
+    }
+}
+
+defined_text = { #
+    name = get_content_data
+    
+    text = { 
+		trigger = {
+			has_country_flag = full_content_country
+		}
+        localization_key = full_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = partial_content_country
+		}
+        localization_key = partial_content_country_tooltip
+    }
+
+    text = {
+		trigger = {
+			has_country_flag = discontinued_content_country
+		}
+        localization_key = discontinued_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = future_content_country
+		}
+        localization_key = future_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = tlotd_owgawftv_more_content_country
+		}
+        localization_key = tlotd_owgawftv_more_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = tlotd_owgawftv_only_content_country
+		}
+        localization_key = tlotd_owgawftv_only_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = tlotd_expanded_more_content_country
+		}
+        localization_key = tlotd_expanded_more_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = tlotd_expanded_only_content_country
+		}
+        localization_key = tlotd_expanded_only_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = tlotd_coc_more_content_country
+		}
+        localization_key = tlotd_coc_more_content_country_tooltip
+    }
+
+    text = { 
+		trigger = {
+			has_country_flag = tlotd_coc_only_content_country
+		}
+        localization_key = tlotd_coc_only_content_country_tooltip
+    }
+}
+
+defined_text = {
+    name = get_literacy_rate
+    text = { 
+		trigger = {
+			has_idea = excellent_literacy_rate
+		}
+        localization_key = excellent_literacy_rate_tooltip
+    }
+    text = { 
+		trigger = {
+			has_idea = high_literacy_rate
+		}
+        localization_key = high_literacy_rate_tooltip
+    }
+    text = { 
+		trigger = {
+			has_idea = low_literacy_rate
+		}
+        localization_key = low_literacy_rate_tooltip
+    }
+    text = { 
+		trigger = {
+			has_idea = high_illiteracy_rate
+		}
+        localization_key = high_illiteracy_rate_tooltip
+    }
+}

@@ -1,0 +1,36 @@
+music = {
+	name = "lotr_main_theme"
+	file = "lotr_main_theme.ogg"
+}
+music = {
+	name = "lotr_rohirrim_theme"
+	file = "lotr_rohirrim_theme.ogg"
+}
+music = {
+	name = "european_union_anthem"
+	file = "european_union_anthem.ogg"
+}
+music = {
+	name = "german_empire_anthem"
+	file = "german_empire_anthem.ogg"
+}
+music = {
+	name = "german_reich_anthem"
+	file = "german_reich_anthem.ogg"
+}
+music = {
+	name = "german_democratic_republic_anthem"
+	file = "german_democratic_republic_anthem.ogg"
+}
+music = {
+	name = "german_federal_republic_anthem"
+	file = "german_federal_republic_anthem.ogg"
+}
+music = {
+	name = "teufelslied_acoustic"
+	file = "teufelslied_acoustic.ogg"
+}
+music = {
+	name = "imperial_march"
+	file = "imperial_march.ogg"
+}

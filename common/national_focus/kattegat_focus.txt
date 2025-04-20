@@ -1,0 +1,5477 @@
+﻿focus_tree = {
+	id = KTG_kattegat_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KTG
+		}
+	}
+	
+	shared_focus = DRACHENPAKT_alliance
+
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = KTG_industrial_effort
+	}
+
+	focus = {
+		id = KTG_path_to_freedom
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = KTG_demand_self_governance
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = KTG_path_to_freedom }
+		x = 0
+		y = 2
+		relative_position_id = KTG_path_to_freedom
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			OVERLORD = {
+				end_puppet = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_demand_core_territories
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = KTG_demand_self_governance }
+		x = 0
+		y = 2
+		relative_position_id = KTG_demand_self_governance
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			transfer_state = 160
+			transfer_state = 850
+			transfer_state = 39
+			transfer_state = 736
+			transfer_state = 599
+		}
+	}
+
+	focus = {
+		id = KTG_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = KTG_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = KTG_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = KTG_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = KTG_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KTG_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = KTG_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = KTG_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = KTG_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = KTG_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = KTG_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KTG_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = KTG_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = KTG_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = KTG_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = KTG_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = KTG_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KTG_equipment_effort_3 }
+		prerequisite = { focus = KTG_doctrine_effort_2 }
+		prerequisite = { focus = KTG_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = KTG_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 5
+		y = 0
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = KTG_aviation_effort }
+		mutually_exclusive = { focus = KTG_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = KTG_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = KTG_aviation_effort }
+		mutually_exclusive = { focus = KTG_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = KTG_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = KTG_bomber_focus focus = KTG_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = KTG_bomber_focus
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = KTG_aviation_effort_2 }
+		prerequisite = { focus = KTG_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = KTG_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = KTG_aviation_effort_2 }
+		prerequisite = { focus = KTG_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = KTG_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = KTG_aviation_effort_2 }
+		prerequisite = { focus = KTG_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = KTG_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = KTG_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = KTG_naval_effort }
+		mutually_exclusive = { focus = KTG_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = KTG_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = KTG_naval_effort }
+		mutually_exclusive = { focus = KTG_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = KTG_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = fleet_in_being_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = KTG_flexible_navy focus = large_navy }
+		x = 0
+		y = 1
+		relative_position_id = KTG_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = KTG_large_navy focus = flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = KTG_large_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = KTG_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = KTG_submarine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = KTG_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = KTG_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_industrial_effort
+		icon = GFX_goal_generic_production
+		x = 13
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KTG_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = KTG_industrial_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KTG_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = KTG_industrial_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KTG_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = KTG_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KTG_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = KTG_production_effort
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = KTG_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = KTG_construction_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KTG_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = KTG_production_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = KTG_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = KTG_infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KTG_infrastructure_effort }
+		x = 2
+		y = 1
+		relative_position_id = KTG_infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = KTG_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = KTG_infrastructure_effort_2
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = KTG_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = KTG_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = KTG_extra_tech_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = KTG_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = KTG_extra_tech_slot
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = KTG_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = KTG_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = KTG_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_future_of_our_nation
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 24
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = KTG_will_of_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = KTG_future_of_our_nation }
+		mutually_exclusive = { focus = KTG_internationalism_focus }
+		mutually_exclusive = { focus = KTG_liberty_ethos }
+		mutually_exclusive = { focus = KTG_nationalism_focus }
+		mutually_exclusive = { focus = KTG_divine_path }
+		relative_position_id = KTG_future_of_our_nation
+		available = {
+			monarchism > 0.20
+			is_subject = no
+		}
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	
+	focus = {
+		id = KTG_fight_for_the_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = KTG_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_will_of_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = fight_for_the_king
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_create_trust_in_the_crown
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = KTG_fight_for_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 3
+		y = 1
+		relative_position_id = KTG_fight_for_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = enthusiasm_for_the_crown
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_the_word_of_the_king
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = KTG_create_trust_in_the_crown }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_create_trust_in_the_crown
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = centralized_high_command
+			ENG = {
+				add_ideas = monarchist_support
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
+	focus = {
+		id = KTG_swedish_civil_war
+		icon = GFX_focus_generic_attack_sweden
+		prerequisite = { focus = KTG_fight_for_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_fight_for_the_king
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SWE
+				expire = 0
+				generator = { 666 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+ 
+	
+
+	focus = {
+		id = KTG_fjords_of_norway
+		icon = GFX_focus_generic_attack_norway
+		prerequisite = { focus = KTG_swedish_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+		relative_position_id = KTG_swedish_civil_war
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = NOR
+				expire = 0
+				generator = { 142 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
+	focus = {
+		id = KTG_block_off_the_baltic_sea
+		icon = GFX_focus_generic_attack_denmark
+		prerequisite = { focus = KTG_swedish_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -3
+		y = 1
+		relative_position_id = KTG_swedish_civil_war
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = DEN
+				expire = 0
+				generator = { 99 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_baltic_navy_research_expansion
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = KTG_block_off_the_baltic_sea }
+		x = 0
+		y = 1
+		relative_position_id = KTG_block_off_the_baltic_sea
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+		
+	}
+
+	focus = {
+		id = KTG_off_shore_oil_drilling
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = KTG_baltic_navy_research_expansion }
+
+		x = o
+		y = 1
+		relative_position_id = KTG_baltic_navy_research_expansion
+		cost = 10
+		available = {
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			custom_effect_tooltip = "Unlocks offshore drillind decisions for Kattegat"
+			915 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = KTG_pride_of_our_fleet
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 1
+
+		cost = 5
+		prerequisite = { focus = KTG_fjords_of_norway }
+		relative_position_id = KTG_fjords_of_norway
+		
+
+		ai_will_do = {
+			factor = 10		
+		}
+
+		available = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				has_tech = improved_ship_hull_heavy
+			}
+			else = {
+				has_tech = basic_battlecruiser
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {  }
+
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				
+					create_equipment_variant = {
+						name = "Mjolnir"
+						type = ship_hull_heavy_3
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_heavy_battery_3
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+							fixed_ship_radar_slot = ship_radar_2
+							fixed_ship_engine_slot = heavy_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_3
+							fixed_ship_armor_slot = ship_armor_bc_3
+							front_1_custom_slot = ship_heavy_battery_2
+							mid_1_custom_slot = ship_anti_air_3
+							mid_2_custom_slot = dp_ship_secondaries_2
+							rear_1_custom_slot = ship_heavy_battery_2
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_heavy_3
+							creator = KTG
+							version_name = "Mjolnir"
+						}
+						requested_factories = 5
+						progress = 0.60
+					}
+				}
+			
+			else = { #NON MTG
+				
+					create_equipment_variant = {
+						name = "Mjolnir"
+						type = battle_cruiser_2
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_heavy_battery_3
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+							fixed_ship_radar_slot = ship_radar_2
+							fixed_ship_engine_slot = heavy_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_3
+							fixed_ship_armor_slot = ship_armor_bc_3
+							front_1_custom_slot = ship_heavy_battery_2
+							mid_1_custom_slot = ship_anti_air_3
+							mid_2_custom_slot = dp_ship_secondaries_2
+							rear_1_custom_slot = ship_heavy_battery_2
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = battle_cruiser_2
+							creator = KTG
+							version_name = "Mjolnir"
+						}
+						requested_factories = 5
+						progress = 0.60
+					}
+				}
+				
+			custom_effect_tooltip = SWE_nordljus_tt_2
+			add_ideas = SWE_pride_of_the_baltic
+		}
+	}
+	
+
+	focus = {
+		id = KTG_winters_of_finland
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = { focus = KTG_pride_of_our_fleet }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_pride_of_our_fleet
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FIN
+				expire = 0
+				generator = { 111 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_attack_soviets
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = KTG_winters_of_finland }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_winters_of_finland
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				expire = 0
+				generator = { 195 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_destabilize_british_isles
+		icon = GFX_focus_eng_decolonization
+		prerequisite = { focus = KTG_swedish_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 1
+		y = 1
+		relative_position_id = KTG_swedish_civil_war
+
+		available = {
+			has_government = monarchism
+			ENG = { 
+				monarchism > 0.25
+			}
+			NOT = { is_in_faction_with = ENG }
+		}
+		bypass = {
+			OR = {
+				SCO = { 
+					owns_state = 121
+					owns_state = 133
+					owns_state = 136
+					owns_state = 120
+				}
+				owns_state = 121
+				owns_state = 133
+				owns_state = 136
+				owns_state = 120
+				is_in_faction_with = ENG
+				is_in_faction_with = SCO
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				SCO = {
+					transfer_state = 121
+					transfer_state = 133
+					transfer_state = 136
+					transfer_state = 120
+					set_popularities = {
+						monarchism = 65
+						fascism = 20
+						communism = 10
+						democratic = 5
+					}
+					set_politics = {
+						ruling_party = monarchism
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_demand_something_in_return
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = KTG_destabilize_british_isles }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_destabilize_british_isles
+
+		available = {
+			has_army_manpower = { size > 79999 }
+			check_variable = { num_equipment_in_armies_k@infantry_equipment > 8 }
+			custom_trigger_tooltip = {
+			 	tooltip = GER_anschluss_eq_trigger_tt
+			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 8 }
+			}
+			is_subject = no
+			SCO = {
+				is_subject = no
+				owns_state = 121
+				owns_state = 133
+				owns_state = 136
+				owns_state = 120
+			}
+		}
+		bypass = {
+			121 = {
+				owner = {
+					tag = KTG
+				}
+			}
+			133 = {
+				owner = {
+					tag = KTG
+				}
+			}
+			136 = {
+				owner = {
+					tag = KTG
+				}
+			}
+			120 = {
+				owner = {
+					tag = KTG
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			puppet = SCO
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_marry_scotland
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = KTG_demand_something_in_return }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = KTG_demand_something_in_return
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			SCO = {
+				has_government = monarchism
+				is_subject = yes
+				owns_state = 121
+				owns_state = 133
+				owns_state = 136
+				owns_state = 120
+			}
+		}
+		bypass = {
+			121 = {
+				owner = {
+					tag = KTG
+				}
+			}
+			133 = {
+				owner = {
+					tag = KTG
+				}
+			}
+			136 = {
+				owner = {
+					tag = KTG
+				}
+			}
+			120 = {
+				owner = {
+					tag = KTG
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			annex_country = { target = SCO transfer_troops = yes }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_the_viking_spirit
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = KTG_marry_scotland}
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_marry_scotland
+		cost = 10
+		available = {  
+		}
+
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+
+		completion_reward = {
+			add_ideas = ICE_viking_spirit 
+			custom_effect_tooltip = ICE_viking_spirit_tt
+		}
+	}
+
+	focus = {
+		id = KTG_nationalism_focus
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = KTG_future_of_our_nation }
+		mutually_exclusive = { focus = KTG_internationalism_focus }
+		mutually_exclusive = { focus = KTG_liberty_ethos }
+		mutually_exclusive = { focus = KTG_will_of_the_king }
+		mutually_exclusive = { focus = KTG_divine_path }
+		available = {
+			fascism > 0.20
+			is_subject = no
+		}
+		x = 5
+		y = 1
+		relative_position_id = KTG_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = fascism }
+				}
+			}
+			modifier = {
+				factor = 10
+				has_idea = SOV_russian_political_influence
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = KTG_internationalism_focus
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = KTG_future_of_our_nation }
+		mutually_exclusive = { focus = KTG_liberty_ethos }
+		mutually_exclusive = { focus = KTG_will_of_the_king }
+		mutually_exclusive = { focus = KTG_nationalism_focus }
+		mutually_exclusive = { focus = KTG_divine_path }
+		available = {
+			communism > 0.20
+			is_subject = no
+		}
+		x = -8
+		y = 1
+		relative_position_id = KTG_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}			
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}	
+
+	focus = {
+		id = KTG_liberty_ethos
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = KTG_future_of_our_nation }
+		mutually_exclusive = { focus = KTG_internationalism_focus }
+		mutually_exclusive = { focus = KTG_will_of_the_king }
+		mutually_exclusive = { focus = KTG_nationalism_focus }
+		mutually_exclusive = { focus = KTG_divine_path }
+		available = {
+			democratic > 0.20
+			is_subject = no
+		}
+		x = -5
+		y = 1
+		relative_position_id = KTG_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+
+	focus = {
+		id = KTG_militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = KTG_nationalism_focus }
+		x = 0
+		y = 2
+		relative_position_id = KTG_nationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = KTG_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = KTG_internationalism_focus }
+		x = 0
+		y = 2
+		relative_position_id = KTG_internationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = KTG_neutrality_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = KTG_liberty_ethos }
+		mutually_exclusive = { focus = KTG_interventionism_focus }
+		x = -1
+		y = 1
+		relative_position_id = KTG_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = AUS
+			}
+			modifier = {
+				factor = 0
+				tag = SAU
+				is_in_faction_with = SOV
+				SOV = { has_government = communism }
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = KTG_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = KTG_liberty_ethos }
+		mutually_exclusive = { focus = KTG_neutrality_focus }
+		x = 1
+		y = 1
+		relative_position_id = KTG_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = neutrality_idea
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = KTG_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = KTG_militarism }
+		x = 0
+		y = 2
+		relative_position_id = KTG_militarism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = KTG_neutrality_focus }
+		x = 0
+		y = 1
+		relative_position_id = KTG_neutrality_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = KTG_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = KTG_interventionism_focus }
+		x = 0
+		y = 1
+		relative_position_id = KTG_interventionism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = KTG_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = KTG_military_youth }
+		x = 0
+		y = 3
+		relative_position_id = KTG_military_youth
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+
+	focus = {
+		id = KTG_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = KTG_political_correctness }
+		x = 0
+		y = 2
+		relative_position_id = KTG_political_correctness
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = KTG_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = KTG_volunteer_corps }
+		x = -1
+		y = 1
+		relative_position_id = KTG_volunteer_corps
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = KTG_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = KTG_foreign_expeditions focus = KTG_deterrence }
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		x = -1
+		y = 4
+		relative_position_id = KTG_foreign_expeditions
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = KTG_indoctrination_focus }
+		available = {
+		}
+		x = 0
+		y = 3
+		relative_position_id = KTG_indoctrination_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			add_political_power = 200
+		}
+	}
+	
+	focus = {
+		id = KTG_divine_path
+		icon = GFX_focus_generic_pope
+		prerequisite = { focus = KTG_future_of_our_nation }
+		mutually_exclusive = { focus = KTG_internationalism_focus }
+		mutually_exclusive = { focus = KTG_liberty_ethos }
+		mutually_exclusive = { focus = KTG_will_of_the_king }
+		mutually_exclusive = { focus = KTG_nationalism_focus }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 8
+		y = 1
+		relative_position_id = KTG_future_of_our_nation
+
+		available = {
+			theocracy > 0.20
+			is_subject = no
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_strength_through_faith
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = KTG_divine_path }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 2
+		relative_position_id = KTG_divine_path
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = strength_through_faith
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_trust_in_your_belief
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = KTG_strength_through_faith }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 2
+		relative_position_id = KTG_strength_through_faith
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = trust_in_your_belief
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_deus_vult
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = KTG_trust_in_your_belief }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 2
+		relative_position_id = KTG_trust_in_your_belief
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = deus_vult
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_reclaim_the_holy_land
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = KTG_deus_vult }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = KTG_deus_vult
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				expire = 0
+				generator = { 454 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = PAL
+				expire = 0
+				generator = { 454 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ISR
+				expire = 0
+				generator = { 454 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = KTG_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = KTG_political_commissars focus = KTG_why_we_fight focus = KTG_winters_of_finland focus = KTG_marry_scotland focus = KTG_paramilitarism focus = KTG_reclaim_the_holy_land }
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}		
+		x = -1
+		y = 4
+		relative_position_id = KTG_marry_scotland
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_research_slots > 3
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}
+	####################################################
+	focus = {
+		id = KTG_form_joint_alliance
+	
+		dynamic = yes 
+	
+		icon =  GFX_focus_NORDIC_mon_form_alliance
+	
+
+		x = 48
+		y = 0
+	
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes 
+			any_allied_country = {
+			NORDIC_is_nordic = yes 
+			}	
+			is_subject = no 	
+			#NORDIC_alliance_created_already = no 
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes 
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			if = {
+				limit = {	
+					NORDIC_alliance_created_already = no
+				}
+				hidden_effect = {
+					every_other_country = {
+						limit = {
+							is_in_faction_with = ROOT
+							NORDIC_is_nordic = yes
+						}
+						set_country_flag = NORDIC_already_member_flag
+					}
+				}
+				NORDIC_create_nordic_alliance = yes 
+			}
+		}
+	}
+	
+	focus = {
+		id = KTG_northern_command
+	
+		icon = GFX_goal_generic_army_doctrines
+	
+		prerequisite = { focus = KTG_form_joint_alliance }
+	
+		x = -6
+		y = 1
+		relative_position_id = KTG_form_joint_alliance
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_stability > 0.5
+			has_war_support > 0.25
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_AIR_XP }
+
+	
+
+		completion_reward = {
+			air_experience = 25
+			navy_experience = 25
+			army_experience = 25
+			add_command_power = 25		
+			add_ideas = { NORDIC_command_ns }
+		}
+	}
+
+	focus = {
+		id = KTG_political_cooperation
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = KTG_form_joint_alliance }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_form_joint_alliance
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+	
+		}
+
+		
+		completion_reward_joint_member = {
+			add_political_power = 50
+			add_stability = 0.1
+		
+		}
+	}
+
+	focus = {
+		id = KTG_economic_union
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = KTG_political_cooperation }
+
+		x = 1
+		y = 1
+		relative_position_id = KTG_political_cooperation
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_stability > 0.55
+			num_of_civilian_factories > 15	
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			add_ideas = { NORDIC_economic_union_ns }
+		}
+	}
+
+	focus = {
+		id = KTG_shared_intelligence
+	
+		icon = GFX_goal_generic_intelligence_exchange
+	
+		prerequisite = { focus = KTG_political_cooperation }
+
+		x = -1
+		y = 1
+		relative_position_id = KTG_political_cooperation
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
+
+		
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_dlc = "La Resistance" }
+				
+				}
+				add_stability = 0.1
+				add_war_support = 0.05
+				add_political_power = 50
+			}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+		}
+	}
+	
+
+	focus = {
+		id = KTG_first_joint_institution
+
+		dynamic = yes
+
+		icon =  GFX_focus_NORDIC_mon_institution_1
+		prerequisite = { focus = KTG_shared_intelligence }
+		prerequisite = { focus = KTG_economic_union }
+
+		x = 1
+		y = 1
+		relative_position_id = KTG_shared_intelligence
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {	
+			is_faction_leader = yes 
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		
+
+
+		completion_reward = {
+			add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 2
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}
+		}
+	}
+
+	focus = {
+		id = KTG_procurement_fund
+	
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+
+		prerequisite = { focus = KTG_first_joint_institution }
+		#prerequisite = { focus = KTG_civilian_contributions }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_first_joint_institution
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_stability > 0.55
+			num_of_civilian_factories > 17	
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		
+
+
+		completion_reward = {
+			add_cic = 800
+		}
+
+	}
+
+	focus = {
+		id = KTG_second_institution
+
+		icon = GFX_focus_NORDIC_mon_institution_2
+	
+		prerequisite = { focus = KTG_procurement_fund  }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_procurement_fund
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes 
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			
+		}
+	}
+
+	focus = {
+		id = KTG_nordic_army
+		icon = GFX_focus_NORDIC_mon_army 
+	
+		prerequisite = { focus = KTG_northern_command }
+
+		x = 3
+		y = 1
+		relative_position_id = KTG_northern_command
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_army_manpower = { size > 84999 } 
+			num_divisions > 18
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_MANPOWER }
+
+	
+
+
+		completion_reward = {
+			army_experience = 60
+			add_manpower = 8000
+			add_ideas = { NORDIC_joint_army_originator_ns_1 }
+		}
+
+	}
+
+	############################	
+	focus = {
+			id = KTG_joint_military_exercises
+	
+		icon = GFX_focus_generic_military_mission
+	
+		prerequisite = { focus = KTG_nordic_army }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_nordic_army
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_army_manpower = { size > 99999 } 
+			num_divisions > 20
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		
+
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = NORDIC_joint_military_exercises
+				cost_reduction = 0.25
+				uses = 2
+				category = land_doctrine 
+			}
+		}
+	}	
+
+	focus = {
+		id = KTG_unified_recruitment
+	
+		icon = GFX_focus_chi_army_reform
+	
+		prerequisite = { focus = KTG_joint_military_exercises }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_joint_military_exercises
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_army_manpower = { size > 149999 } 
+			num_divisions > 36
+			is_faction_leader = yes
+		}
+
+		search_filters = { FOCUS_FILTER_MANPOWER }
+
+		
+
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = NORDIC_joint_army_originator_ns_1
+				}
+				swap_ideas = {
+					remove_idea = NORDIC_joint_army_originator_ns_1
+					add_idea = NORDIC_joint_army_originator_ns_2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = NORDIC_joint_army_member_ns_1 
+				}
+				swap_ideas = {
+					remove_idea = NORDIC_joint_army_member_ns_1
+					add_idea = NORDIC_joint_army_originator_ns_2
+				}
+			}
+			else = {
+				add_ideas = { NORDIC_joint_army_originator_ns_2 } 
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_mechanized_army
+	
+		icon = GFX_goal_generic_army_tanks
+	
+		prerequisite = { focus = KTG_unified_recruitment }
+		mutually_exclusive = { focus = KTG_infantry_first }
+		x = -1
+		y = 1
+		relative_position_id = KTG_unified_recruitment
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			has_tech = motorised_infantry
+			has_army_size = {
+				size > 7
+				type = motorized
+			}
+
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		
+
+
+
+		completion_reward = {
+			army_experience = 40
+			add_tech_bonus = {
+				name = NORDIC_mechanized_army
+				bonus = 0.25
+				uses = 2
+				category = cat_mechanized_equipment
+			}
+			add_tech_bonus = {
+				name = NORDIC_mechanized_army
+				bonus = 0.20
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_infantry_first
+
+		icon = GFX_goal_generic_allies_build_infantry
+	
+		prerequisite = { focus = KTG_unified_recruitment }
+		mutually_exclusive = { focus = KTG_mechanized_army }
+		x = 1
+		y = 1
+		relative_position_id = KTG_unified_recruitment
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_army_size = {
+				size > 47
+				type = infantry
+			}
+			has_army_manpower = { size > 199999 } 
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_RESEARCH }
+
+		
+
+
+	
+		completion_reward = {
+			army_experience = 40
+			add_tech_bonus = {
+				name = NORDIC_infantry_first
+				bonus = 0.25
+				uses = 2
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_nordic_navy
+
+		icon = GFX_focus_NORDIC_mon_navy
+	
+		prerequisite = { focus = KTG_northern_command }
+
+		x = -2
+		y = 1
+		relative_position_id = KTG_northern_command
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes
+			has_navy_size = {
+				size > 39
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP }
+
+	
+
+		completion_reward = {
+			add_dynamic_modifier = { modifier = NORDIC_navy_originator_dmod }
+			add_command_power = 60
+		}
+
+	}
+
+	focus = {
+		id = KTG_naval_exercises
+	
+		icon = GFX_focus_generic_naval_discipline
+	
+		prerequisite = { focus = KTG_nordic_navy }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_nordic_navy
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_navy_size = {
+				size > 44
+			}
+			num_of_naval_factories > 17
+		}
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			hidden_effect = {
+				set_variable = {
+					var = NORDIC_navy_originator_dmod_naval_doctrine_cost_factor
+					value = -0.1
+				}
+				set_variable = {
+					var = NORDIC_navy_member_dmod_naval_doctrine_cost_factor
+					value = -0.075
+				}
+			}
+		NORDIC_navy_member_to_originator = yes
+		custom_effect_tooltip = NORDIC_modify_nordic_navy_dmod
+		effect_tooltip = {
+			set_variable = {
+				var = NORDIC_navy_originator_dmod_naval_doctrine_cost_factor
+				value = -0.1
+				tooltip = naval_doctrine_cost_factor_tt
+			}
+			}
+		add_doctrine_cost_reduction = {
+			name = NORDIC_naval_exercises
+			cost_reduction = 0.2
+			uses = 3
+			category = naval_doctrine 
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_naval_officer_academy
+	
+		icon = GFX_focus_generic_military_academy
+	
+		prerequisite = { focus = KTG_nordic_navy }
+
+		x = 3
+		y = 1
+		relative_position_id = KTG_nordic_navy
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes
+			has_navy_size = {
+				size > 19
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_NAVY_XP }
+
+	
+
+		completion_reward = {
+			navy_experience = 50 
+		}
+	}
+
+	focus = {
+		id = KTG_defend_the_danish_belt
+	
+		icon = GFX_focus_generic_develop_denmark_silhouette
+
+		prerequisite = { focus = KTG_naval_exercises }
+		mutually_exclusive = { focus = KTG_control_the_northern_sea focus = KTG_baltic_sea_dominance }
+		x = -2
+		y = 1
+		relative_position_id = KTG_naval_exercises
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			any_owned_state = {
+				is_controlled_by = PREV 
+				custom_trigger_tooltip = {
+					tooltip = NORDIC_is_danish_belt_state
+					is_danish_belt_state = yes 
+				}
+			}
+			has_navy_size = {
+				size > 59
+			}
+			num_of_naval_factories > 20	
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					any_owned_state = {
+						is_controlled_by = ROOT 
+						is_danish_belt_state = yes 
+					}
+				}
+				random_owned_state = {
+					limit = {	
+						is_controlled_by = ROOT 
+						is_danish_belt_state = yes
+						free_building_slots = {
+						 	building = dockyard
+						 	size > 1 
+						 	include_locked = yes 
+						} 
+					}
+					add_extra_state_shared_building_slots = 2 
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+ 						is_danish_belt_state = yes
+						naval_base > 0
+						naval_base < 8
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes
+						province = {
+  							all_provinces = yes
+  							limit_to_coastal = yes
+  							limit_to_naval_base = yes 
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_danish_belt_state = yes 
+					}
+					add_building_construction = {
+						type = coastal_bunker 
+						level = 3 
+						province = {
+  							all_provinces = yes
+  							limit_to_victory_point > 0
+  							limit_to_coastal = yes
+  						}
+					}
+				}
+			}
+		}
+
+	}
+
+	focus = {
+		id = KTG_control_the_northern_sea
+	
+		icon = GFX_focus_generic_north_atlantic_fleet
+	
+		prerequisite = { focus = KTG_naval_exercises }
+		mutually_exclusive = { focus = KTG_defend_the_danish_belt focus = KTG_baltic_sea_dominance }
+		x = 0
+		y = 1
+		relative_position_id = KTG_naval_exercises
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes 
+			any_owned_state = {
+				is_controlled_by = PREV 
+				custom_trigger_tooltip = {
+					tooltip = NORDIC_is_northern_sea_state
+					is_scandinavian_northern_sea_state = yes
+				}
+			}
+			has_navy_size = {
+				size > 59
+			}
+			num_of_naval_factories > 20
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					any_owned_state = {
+						is_controlled_by = ROOT 
+						is_scandinavian_northern_sea_state = yes 
+					}
+				}
+				random_owned_state = {
+					limit = {	
+						is_controlled_by = ROOT 
+						is_scandinavian_northern_sea_state = yes
+						free_building_slots = {
+						 	building = dockyard
+						 	size > 1 
+						 	include_locked = yes 
+						} 
+					}
+					add_extra_state_shared_building_slots = 2 
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+ 						is_scandinavian_northern_sea_state = yes
+						naval_base > 0
+						naval_base < 8
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						instant_build = yes
+						province = {
+  							all_provinces = yes
+  							limit_to_coastal = yes
+  							limit_to_naval_base = yes 
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						is_scandinavian_northern_sea_state = yes 
+					}
+					add_building_construction = {
+						type = coastal_bunker 
+						level = 2
+						province = {
+  							all_provinces = yes
+  							limit_to_victory_point > 0
+  							limit_to_coastal = yes
+  						}
+					}
+				}	
+			}
+		}	
+	}	
+
+	focus = {
+		id = KTG_baltic_sea_dominance
+	
+		icon = GFX_focus_generic_baltic_sea_fleet
+	
+		prerequisite = { focus = KTG_naval_exercises }
+		mutually_exclusive = { focus = KTG_defend_the_danish_belt focus = KTG_control_the_northern_sea }
+		x = 2
+		y = 1
+		relative_position_id = KTG_naval_exercises
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			any_owned_state = {
+				is_controlled_by = PREV 
+				custom_trigger_tooltip = {
+					tooltip = NORDIC_is_baltic_state
+					state_is_in_the_baltic_sea = yes
+				}
+			}
+			has_navy_size = {
+				size > 59
+			}
+			num_of_naval_factories > 20
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					any_owned_state = {
+						is_controlled_by = ROOT 
+						state_is_in_the_baltic_sea = yes 
+					}
+				}
+				random_owned_state = {
+					limit = {	
+						is_controlled_by = ROOT 
+						state_is_in_the_baltic_sea = yes
+						free_building_slots = {
+						 	building = dockyard
+						 	size > 1 
+						 	include_locked = yes 
+						} 
+					}
+					add_extra_state_shared_building_slots = 2 
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+ 						state_is_in_the_baltic_sea = yes
+						naval_base > 0
+						naval_base < 8
+					}
+					add_building_construction = {
+						type = naval_base
+						level = 4
+						instant_build = yes
+						province = {
+  							all_provinces = yes
+  							limit_to_coastal = yes
+  							limit_to_naval_base = yes 
+						}
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						state_is_in_the_baltic_sea = yes 
+					}
+					add_building_construction = {
+						type = coastal_bunker 
+						level = 3 
+						province = {
+  							all_provinces = yes
+  							limit_to_victory_point > 0
+  							limit_to_coastal = yes
+  						}
+					}
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_naval_research_institute
+	
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	
+		prerequisite = { focus = KTG_defend_the_danish_belt focus = KTG_control_the_northern_sea focus = KTG_baltic_sea_dominance }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_control_the_northern_sea
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader
+			num_of_naval_factories > 20
+			num_researched_technologies > 25
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+	
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = NORDIC_naval_research_institute
+				bonus = 0.3
+				uses = 4
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_submarine_cooperation
+	
+		icon = GFX_goal_generic_navy_submarine
+	
+		prerequisite = { focus = KTG_naval_research_institute }
+		mutually_exclusive = { focus = KTG_ground_operations focus = KTG_carrier_effort focus = KTG_amphibious_forces focus = KTG_mountaineers }
+		x = 0
+		y = 1
+		relative_position_id = KTG_naval_research_institute
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_navy_size = {
+				size > 69
+			}
+			num_of_naval_factories > 25
+		}
+
+		search_filters = { FOCUS_FILTER_NAVY_XP FOCUS_FILTER_INDUSTRY }
+
+	
+
+		completion_reward = {
+			add_ideas = NORDIC_joint_submarines_effort
+			navy_experience = 50
+			add_tech_bonus = {
+				name = NORDIC_submarine_cooperation
+				bonus = 0.3 
+				uses = 1
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = NORDIC_submarine_cooperation 
+				ahead_reduction = 1
+				uses = 1
+				category = naval_equipment
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes 
+					}
+				}	
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_mountaineers
+	
+		icon = GFX_goal_generic_special_forces
+	
+		prerequisite = { focus = KTG_mechanized_army focus = KTG_infantry_first }
+		mutually_exclusive = { focus = KTG_ground_operations focus = KTG_carrier_effort focus = KTG_submarine_cooperation focus = KTG_amphibious_forces }
+
+		x = 1
+		y = 1
+		relative_position_id = KTG_mechanized_army
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes	
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+	
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = special_forces_doctrine
+			}
+			add_ideas = NORDIC_joint_mountaineers_effort
+		}
+	}
+
+	focus = {
+		id = KTG_amphibious_forces
+	
+		icon = GFX_goal_generic_amphibious_assault
+	
+		prerequisite = { focus = KTG_naval_officer_academy }
+		prerequisite = { focus = KTG_joint_military_exercises }
+		prerequisite = { focus = KTG_naval_research_institute }
+		mutually_exclusive = { focus = KTG_ground_operations focus = KTG_carrier_effort focus = KTG_submarine_cooperation focus = KTG_mountaineers }
+
+		x = 0
+		y = 3
+		relative_position_id = KTG_naval_officer_academy
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes	
+			has_navy_size = {
+				size > 60
+			}
+			num_of_naval_factories > 20
+			num_of_military_factories > 10
+		}
+
+		search_filters = { FOCUS_FILTER_ARMY_XP FOCUS_FILTER_NAVY_XP FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			navy_experience = 25
+			army_experience = 25
+			add_ideas = NORDIC_joint_amphibious_effort
+			add_tech_bonus = {
+				name = NORDIC_amphibious_forces 
+				bonus = 0.25
+				uses = 1 
+				category = tp_tech
+			}
+			add_tech_bonus = {
+				name = NORDIC_amphibious_forces
+				bonus = 0.3 
+				uses = 1
+				category = marine_tech
+			}
+			add_tech_bonus = {
+				name = NORDIC_amphibious_forces
+				bonus = 0.25
+				uses = 1
+				technology = amphibious_mechanized_infantry
+			}
+		
+		}
+	}
+
+	focus = {
+	 	id = KTG_nordic_airforce
+	
+		icon = GFX_focus_NORDIC_mon_airforce
+
+		dynamic = yes 
+	
+		prerequisite = { focus = KTG_northern_command }
+
+		x = -5
+		y = 0
+		relative_position_id = KTG_nordic_navy
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_faction_leader = yes
+			has_deployed_air_force_size = {
+				size > 499
+			}
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			hidden_effect = {
+				set_variable = { NORDIC_airforces_originator_dmod_cas_factor = 0 }
+				set_variable = { NORDIC_airforces_originator_dmod_strat_bombing_factor = 0 }
+				set_variable = { NORDIC_airforces_originator_dmod_intercept_efficiency = 0 }
+				set_variable = { NORDIC_airforces_originator_dmod_superiority_efficiency = 0 }
+				set_variable = { NORDIC_airforces_originator_dmod_range_factor = 0 }
+				set_variable = { NORDIC_airforces_originator_dmod_air_base_production = 0 }
+				set_variable = { NORDIC_airforces_member_dmod_cas_factor = 0 }
+				set_variable = { NORDIC_airforces_member_dmod_strat_bombing_factor = 0 }
+				set_variable = { NORDIC_airforces_member_dmod_intercept_efficiency = 0 }
+				set_variable = { NORDIC_airforces_member_dmod_superiority_efficiency = 0 }
+				set_variable = { NORDIC_airforces_member_dmod_range_factor = 0 }
+				set_variable = { NORDIC_airforces_member_dmod_air_base_production = 0 }	
+			}
+
+			add_dynamic_modifier = {
+				modifier = NORDIC_airforces_originator_dmod
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_air_exercises
+		icon = GFX_focus_SOV_flying_clubs
+		prerequisite = { focus = KTG_nordic_airforce }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_nordic_airforce
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_deployed_air_force_size = {
+				size > 649
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_AIR_XP FOCUS_FILTER_RESEARCH }
+
+
+		completion_reward = {
+			air_experience = 100
+			add_doctrine_cost_reduction = {
+				name = NORDIC_air_exercises
+				cost_reduction = 0.25
+				uses = 2
+				category = air_doctrine 
+			}	
+		}
+	}
+
+	focus = {
+		id = KTG_air_production
+	
+		icon = GFX_focus_generic_aircraft_production
+	
+		prerequisite = { focus = KTG_air_exercises }
+
+		x = 0
+		y = 1
+		relative_position_id = KTG_air_exercises
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_deployed_air_force_size = {
+				size > 499
+			}
+			num_of_military_factories > 20
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = NORDIC_airforces_member_dmod }
+				}
+				remove_dynamic_modifier = {
+				 	modifier = NORDIC_airforces_member_dmod
+				}
+				add_dynamic_modifier = {
+					modifier = NORDIC_airforces_originator_dmod
+				}
+			}
+			custom_effect_tooltip = NORDIC_modify_nordic_airforce_dmod
+			custom_effect_tooltip = NORDIC_airforces_dmod_production_cost_originator_TT
+			hidden_effect = {
+				add_ideas = {
+					NORDIC_hidden_airforces_originator_dmod
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_naval_aircraft
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = KTG_nordic_airforce }
+		prerequisite = { focus = KTG_nordic_navy }
+
+		x = 2
+		y = 1
+		relative_position_id = KTG_nordic_airforce
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_navy_size = {
+				size > 29
+			}
+			has_deployed_air_force_size = {
+				size > 399
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	
+
+		completion_reward = {
+			custom_effect_tooltip = NORDIC_modify_nordic_airforce_dmod
+			custom_effect_tooltip = NORDIC_airforces_dmod_naval_originator_TT
+			hidden_effect ={
+				add_ideas = {
+					NORDIC_hidden_airforces_naval_originator_dmod
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_bomber_command
+	
+		icon = GFX_goal_generic_air_bomber
+	
+		prerequisite = { focus = KTG_air_production }
+
+		mutually_exclusive = { focus = KTG_fighter_command }
+
+		x = -1
+		y = 1
+		relative_position_id = KTG_air_production
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			OR = {
+				has_deployed_air_force_size = {
+					size > 549
+					type = cas
+				}
+				has_deployed_air_force_size = {
+					size > 349
+					type = tactical_bomber
+				}
+				has_deployed_air_force_size = {
+					size > 349
+					type = strategic_bomber
+				}
+			}
+		}
+
+		search_filters = {} 
+
+	
+
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_cas_factor
+					value = 0.15
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_strat_bombing_factor
+					value = 0.15
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_member_dmod_cas_factor
+					value = 0.10
+					tooltip = air_cas_present_factor_tt
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_member_dmod_strat_bombing_factor
+					value = 0.10
+					tooltip = air_strategic_bomber_bombing_factor_tt
+				}
+			}
+			NORDIC_airforce_member_to_originator = yes 
+			custom_effect_tooltip = NORDIC_modify_nordic_airforce_dmod		
+			effect_tooltip = {
+				add_to_variable= {
+					var = NORDIC_airforces_originator_dmod_cas_factor
+					value = 0.15
+					tooltip = air_cas_present_factor_tt
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_strat_bombing_factor
+					value = 0.15
+					tooltip = air_strategic_bomber_bombing_factor_tt
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = KTG_fighter_command
+		icon = GFX_goal_generic_air_fighter2
+		prerequisite = { focus = KTG_air_production }
+
+		mutually_exclusive = { focus = KTG_bomber_command }
+
+		x = 1
+		y = 1
+		relative_position_id = KTG_air_production
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_factionr = yes
+			OR = {
+				has_deployed_air_force_size = {
+					size > 349
+					type = heavy_fighter
+					}
+				has_deployed_air_force_size = {
+				size > 549
+				type = fighter
+					}
+				}
+			}	
+
+		search_filters = {}
+
+	
+
+		completion_reward = {
+			hidden_effect = {
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_intercept_efficiency
+					value = 0.15
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_superiority_efficiency
+					value = 0.15
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_member_dmod_intercept_efficiency
+					value = 0.10
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_member_dmod_superiority_efficiency
+					value = 0.10
+				}
+			}
+
+			NORDIC_airforce_member_to_originator = yes 
+			custom_effect_tooltip = NORDIC_modify_nordic_airforce_dmod		
+			effect_tooltip = {
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_intercept_efficiency
+					value = 0.15
+					tooltip = air_intercept_efficiency_tt
+				}
+				add_to_variable = {
+					var = NORDIC_airforces_originator_dmod_superiority_efficiency
+					value = 0.15
+					tooltip = air_superiority_efficiency_tt
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = KTG_ground_operations
+	
+		icon = GFX_focus_generic_air_bases
+	
+		prerequisite = { focus = KTG_fighter_command focus = KTG_bomber_command }
+		mutually_exclusive = { focus = KTG_carrier_effort focus = KTG_submarine_cooperation focus = KTG_amphibious_forces focus = KTG_mountaineers }
+
+		x = 1
+		y = 1
+		relative_position_id = KTG_bomber_command
+		cost = 5
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			air_base > 12
+			any_owned_state = {
+				air_base > 4 
+			}
+		}	
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+		completion_reward = {
+	 		every_owned_state = {
+	 			limit = {
+	 				is_controlled_by = ROOT
+	 				free_building_slots = {
+	 					building = radar_station
+	 					size > 1 
+	 					include_locked = no 
+	 				}
+	 			}
+	 			random_select_amount = 3
+	 			add_building_construction = {
+	 				type = radar_station
+	 				level = 1
+	 				instant_build = yes
+	 			}
+	 		}
+	 		every_owned_state = {
+	 			limit = {
+	 				is_controlled_by = ROOT
+	 				air_base > 3 
+	 				free_building_slots = {
+	 					building = air_base
+	 					size > 2 
+	 					include_locked = no 
+	 				}
+	 			}
+	 			random_select_amount = 3
+	 			add_building_construction = {
+	 				type = air_base
+	 				level = 2
+	 				instant_build = yes
+	 			}
+	 		}
+	 		every_owned_state = {
+	 			limit = {
+	 				is_controlled_by = ROOT
+	 				free_building_slots = {
+	 					building = anti_air_building
+	 					size > 0
+	 					include_locked = no 
+	 				}
+	 			}
+	 			random_select_amount = 3
+	 			add_building_construction = {
+	 				type = anti_air_building
+	 				level = 1
+	 				instant_build = yes
+	 			}
+	 		}
+		}
+	}
+
+	focus = {
+		id = KTG_carrier_effort
+
+		icon = GFX_goal_generic_navy_carrier
+	
+		prerequisite = { focus = KTG_naval_aircraft }
+		prerequisite = { focus = KTG_naval_research_institute }
+		mutually_exclusive = { focus = KTG_ground_operations focus = KTG_submarine_cooperation focus = KTG_amphibious_forces focus = KTG_mountaineers }
+
+		x = 0
+		y = 3
+		relative_position_id = KTG_naval_aircraft
+		cost = 10
+
+		text_icon = NORDIC_focus_style
+
+		available = {
+			is_in_faction = yes
+			has_navy_size = {
+				size > 2
+				type = carrier
+			}
+			has_deployed_air_force_size = {
+				size > 499
+			}
+		} 
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			navy_experience = 50
+			add_ideas = NORDIC_joint_carrier_effort
+			every_owned_state = {
+	 			limit = {
+	 				is_controlled_by = ROOT
+	 				free_building_slots = {
+	 					building = dockyard
+	 					size > 0
+	 					include_locked = yes 
+	 				}
+	 			}
+	 			random_select_amount = 2
+	 			add_extra_state_shared_building_slots = 1 
+	 			add_building_construction = {
+	 				type = dockyard
+	 				level = 1
+	 				instant_build = yes
+		 		}
+		 	}
+		 	add_tech_bonus = {
+	 			name = NORDIC_carrier_effort
+	 			bonus = 0.25
+	 			uses = 1 
+	 			category = cv_tech
+	 		}
+		}
+	}
+
+focus = {
+	id = KTG_nordic_research
+
+	icon = GFX_focus_NORDIC_mon_research
+	dynamic = yes 
+	
+	prerequisite = { focus = KTG_form_joint_alliance }
+
+	x = 7
+	y = 1
+	relative_position_id = KTG_form_joint_alliance
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_researched_technologies > 25
+
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+	
+
+	completion_reward = { 
+		
+	}
+}
+
+focus = {
+	id = KTG_materiel_design
+	
+	icon = GFX_focus_generic_reorient_production
+	
+	prerequisite = { focus = KTG_nordic_research }
+
+	x = 1
+	y = 1
+	relative_position_id = KTG_nordic_research
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_researched_technologies > 50
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_materiel_design
+			bonus = 1
+			uses = 2 
+			category = infantry_weapons
+		}
+	}
+}
+
+focus = {
+	id = KTG_nordic_construction_developments
+	
+	icon = GFX_goal_generic_construction
+	
+	prerequisite = { focus = KTG_nordic_research }
+
+	x = -1
+	y = 1
+	relative_position_id = KTG_nordic_research
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_researched_technologies > 30
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+	
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_nordic_construction_developments
+			bonus = 1 
+			uses = 2 
+			category = construction_tech
+		}
+	}
+}
+
+focus = {
+	id = KTG_nordic_industry
+
+	icon = GFX_focus_NORDIC_mon_civilian
+	dynamic = yes 
+	
+	prerequisite = { focus = KTG_nordic_construction_developments }
+
+	x = -2
+	y = 1
+	relative_position_id = KTG_nordic_construction_developments
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		num_of_civilian_factories > 15	
+		is_faction_leader = yes
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	
+
+
+	completion_reward = {
+	
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes 
+				}
+				NOT = { state = 914 } # Not even here, Jan Mayen 
+			}
+			add_extra_state_shared_building_slots = 1
+			random_select_amount = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+}
+
+focus = {
+	id = KTG_civilian_contributions
+	
+	icon = GFX_focus_SWI_issue_war_bonds
+	
+	prerequisite = { focus = KTG_nordic_industry }
+
+	x = 0
+	y = 1
+
+	relative_position_id = KTG_nordic_industry
+
+	cost = 5
+
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_civilian_factories > 20
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = NORDIC_development_fund_originator_ns
+			days = 365
+		}
+	}
+}
+
+focus = {
+	id = KTG_fill_the_infrastructure_gaps
+	
+	icon = GFX_goal_generic_construct_infrastructure
+	
+	prerequisite = { focus = KTG_civilian_contributions }
+	mutually_exclusive = { focus = KTG_develop_resources }
+
+	x = -1
+	y = 1
+	relative_position_id = KTG_civilian_contributions
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_civilian_factories > 20
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				infrastructure < 3 
+				NOT = { state = 914 } # Not Jan Mayen 
+			}
+			random_select_amount = 2
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = KTG_develop_resources
+	
+	icon = GFX_focus_generic_mining_industry
+	
+	prerequisite = { focus = KTG_civilian_contributions }
+	mutually_exclusive = { focus = KTG_fill_the_infrastructure_gaps }
+
+	x = 1
+	y = 1
+	relative_position_id = KTG_civilian_contributions
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_civilian_factories > 25
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+	completion_reward = {
+		if = {
+			limit = {
+				any_owned_state = {
+					is_controlled_by = ROOT
+					has_resources_amount = {
+						resource = oil
+						amount > 0  
+					}
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					has_resources_amount = {
+						resource = oil
+						amount > 0  
+					}
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+		else = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = ROOT
+					state_has_any_resource = no
+				}
+				add_resource = {
+					type = oil
+					amount = 4
+				}
+			}
+		}
+		every_owned_state = {
+			limit = { 
+				is_controlled_by = ROOT 
+				state_has_any_resource = yes 
+			}
+			add_dynamic_modifier = {
+				modifier = NORDIC_efficient_resource_extraction
+			}
+		}
+		
+	}
+}
+
+focus = {
+	id = KTG_naval_construction
+	
+	icon = GFX_goal_generic_construct_naval_dockyard
+	
+	prerequisite = { focus = KTG_fill_the_infrastructure_gaps focus = KTG_develop_resources }
+	mutually_exclusive = { focus = KTG_railway_expansion focus = KTG_nuclear_production }
+	x = 1
+	y = 1
+	relative_position_id = KTG_fill_the_infrastructure_gaps
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_naval_factories > 15
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+	completion_reward = {
+		every_owned_state = {
+	 		limit = {
+	 			is_controlled_by = ROOT
+	 			is_coastal = yes 
+	 			free_building_slots = {
+	 				building = dockyard
+	 				size > 1
+	 				include_locked = yes 
+	 			}
+	 		}
+	 		random_select_amount = 3
+	 		add_extra_state_shared_building_slots = 1
+	 		add_building_construction = {
+	 			type = dockyard
+	 			level = 1
+	 			instant_build = yes
+	 		}
+	 	}		
+	}
+
+}
+
+focus = {
+	id = KTG_railway_expansion
+	
+	icon = GFX_focus_generic_railroad
+	
+	prerequisite = { focus = KTG_develop_resources focus = KTG_fill_the_infrastructure_gaps }
+	mutually_exclusive = { focus = KTG_naval_construction focus = KTG_nuclear_production }
+	x = -1
+	y = 1
+	relative_position_id = KTG_fill_the_infrastructure_gaps
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_civilian_factories > 25
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+	completion_reward = {
+		add_timed_idea = {
+			idea = NORDIC_railway_expansion_originator_ns
+			days = 365
+		}
+	}
+}
+
+
+focus = {
+	id = KTG_nordic_electronics
+	
+	icon = GFX_focus_SWE_radiotjanst
+	
+	prerequisite = { focus = KTG_nordic_construction_developments }
+
+	x = 0
+	y = 1
+	relative_position_id = KTG_nordic_construction_developments
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_researched_technologies > 30
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_nordic_electronics
+			bonus = 0.5
+			uses = 1 
+			category = electronics
+		}
+	}
+}
+
+focus = {
+	id = KTG_research_investments 
+	
+	icon = GFX_focus_research2
+	
+	prerequisite = { focus = KTG_materiel_design }
+
+	x = 0
+	y = 1
+	relative_position_id = KTG_materiel_design
+	cost = 1
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+	
+
+	completion_reward = {
+		
+	}
+}
+
+focus = {
+	id = KTG_nuclear_research
+	
+	icon = GFX_focus_wonderweapons
+	
+	prerequisite = { focus = KTG_nordic_electronics }
+	prerequisite = { focus = KTG_nordic_industry }
+	mutually_exclusive = { focus = KTG_nordic_rocketry }
+
+	x = 0
+	y = 1
+	relative_position_id = KTG_nordic_electronics
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_researched_technologies > 50
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_nuclear_research
+			bonus = 1.5
+			uses = 1
+			category = nuclear
+		}
+	}
+}
+
+focus = {
+	id = KTG_nuclear_production
+	
+	icon = GFX_goal_generic_secret_weapon
+	
+	#prerequisite = { focus = KTG_develop_resources }
+	prerequisite = { focus = KTG_fill_the_infrastructure_gaps focus = KTG_develop_resources }
+	prerequisite = { focus = KTG_nuclear_research }
+	mutually_exclusive = { focus = KTG_naval_construction focus = KTG_railway_expansion }
+	x = 0
+	y = 2
+	relative_position_id = KTG_nuclear_research
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		has_tech = nuclear_reactor
+		num_researched_technologies > 55
+		num_of_civilian_factories > 25
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	
+	completion_reward = {
+		every_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+	 				building = arms_factory
+	 				size > 0
+	 				include_locked = yes 
+	 			}
+			}
+			random_select_amount = 2
+	 		add_extra_state_shared_building_slots = 1 
+	 		add_building_construction = {
+	 			type = nuclear_reactor
+	 			level = 1
+	 			instant_build = yes
+	 		}			
+		}
+	}
+}
+
+
+
+focus = {
+	id = KTG_nordic_rocketry
+	
+	icon = GFX_focus_rocketry
+	
+	prerequisite = { focus = KTG_research_investments }
+	prerequisite = { focus = KTG_nordic_military_industry }
+	mutually_exclusive = { focus = KTG_nuclear_research }
+	x = 0
+	y = 1
+	relative_position_id = KTG_research_investments
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_researched_technologies > 55
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_nordic_rocketry
+			bonus = 0.25
+			uses = 2 
+			category = rocketry
+		}
+	}
+}
+
+focus = {
+	id = KTG_jet_engines
+	
+	icon = GFX_focus_generic_jet_planes
+
+	dynamic = yes 
+	prerequisite = { focus = KTG_nordic_rocketry }
+	prerequisite = { focus = KTG_military_industry_hub focus = KTG_ad_hoc_military_industry }
+	mutually_exclusive = { focus = KTG_machine_tools_research focus = KTG_equipment_conversion_focus }
+	x = 0
+	y = 2
+	relative_position_id = KTG_nordic_rocketry
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		has_deployed_air_force_size = {
+			size > 999
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+	
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_jet_engines
+			bonus = 2
+			ahead_reduction = 2
+			uses = 2
+			category = jet_technology 
+		}
+	}
+}
+
+focus = {
+	id = KTG_nordic_military_industry
+
+	icon = GFX_focus_NORDIC_mon_materiel
+	dynamic = yes
+	
+	prerequisite = { focus = KTG_materiel_design }
+
+	x = 2
+	y = 1 
+	relative_position_id = KTG_materiel_design
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_military_factories > 10
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+
+	completion_reward = {
+		set_variable = { NORDIC_mil_industry_originator_production_speed_arms_factory_factor = 0 }
+		set_variable = { NORDIC_mil_industry_originator_dmod_efficiency_gain_factor = 0 }
+		set_variable = { NORDIC_mil_industry_originator_dmod_equipment_conversion_speed = 0 }
+		set_variable = { NORDIC_mil_industry_originator_dmod_start_efficiency_factor = 0 }
+		set_variable = { NORDIC_mil_industry_member_dmod_start_efficiency_factor = 0 }
+	
+		add_dynamic_modifier = {
+			modifier = NORDIC_mil_industry_originator_dmod
+		}
+		random_owned_state = {
+			limit = {
+				is_controlled_by = ROOT 
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes  
+				}
+			}
+			add_extra_state_shared_building_slots = 2 
+			add_building_construction = {
+				type = arms_factory
+				level = 2 
+				instant_build = yes 
+			}
+		}
+	}
+}
+
+focus = {
+	id = KTG_standarized_parts
+	
+	icon = GFX_focus_SWE_let_fly_all_guns
+	
+	prerequisite = { focus = KTG_nordic_military_industry }
+
+	x = 0
+	y = 1
+	relative_position_id = KTG_nordic_military_industry
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_military_factories > 20
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				var = NORDIC_mil_industry_originator_dmod_efficiency_gain_factor
+				value = 0.2
+			}
+			add_to_variable = {
+				var = NORDIC_mil_industry_member_dmod_efficiency_gain_factor
+				value = 0.1
+			}
+		}
+	
+		NORDIC_mil_industry_member_to_originator = yes 
+		custom_effect_tooltip = NORDIC_modify_nordic_military_industry_dmod
+		effect_tooltip = {
+			add_to_variable = {
+				var = NORDIC_mil_industry_originator_dmod_efficiency_gain_factor
+				value = 0.2
+				tooltip = production_factory_efficiency_gain_factor_tt
+			}
+		}
+	}
+
+	
+}
+
+focus = {
+	id = KTG_military_industry_hub
+	
+	icon = GFX_goal_generic_construct_mil_factory
+	
+	prerequisite = { focus = KTG_standarized_parts }
+	mutually_exclusive = { focus = KTG_ad_hoc_military_industry }
+	x = -1
+	y = 1
+	relative_position_id = KTG_standarized_parts
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_military_factories > 15
+		any_owned_state = {
+			arms_factory > 3
+		}
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+	completion_reward = {
+	
+		if = {
+			limit = {
+				NOT = {
+					any_owned_state = {
+						arms_factory > 3
+					}		
+				}
+			}
+			effect_tooltip = {
+				capital_scope = {
+					add_extra_state_shared_building_slots = 3
+					add_dynamic_modifier = {
+						modifier = NORDIC_military_industry_hub_leader_dmod
+						scope = ROOT
+					}
+				}
+			}
+		}
+		random_owned_state = {
+			limit = {
+				is_controlled_by = ROOT
+				arms_factory > 3
+			}
+			add_extra_state_shared_building_slots = 3
+			add_dynamic_modifier = {
+				modifier = NORDIC_military_industry_hub_leader_dmod
+				scope = ROOT
+			}
+		}
+	}
+
+	
+}
+
+focus = {
+	id = KTG_ad_hoc_military_industry
+	
+	icon = GFX_goal_generic_production
+	
+	prerequisite = { focus = KTG_standarized_parts }
+	mutually_exclusive = { focus = KTG_military_industry_hub }
+	x = 1
+	y = 1
+	relative_position_id = KTG_standarized_parts
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_military_factories > 15
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+	
+
+	completion_reward = {
+		hidden_effect = {
+			set_variable = { NORDIC_mil_industry_originator_production_speed_arms_factory_factor = 0.10 }
+			set_variable = { NORDIC_mil_industry_member_production_speed_arms_factory_factor = 0.05 }
+		}
+	
+		custom_effect_tooltip = NORDIC_modify_nordic_military_industry_dmod		
+		effect_tooltip = {
+			add_to_variable = {
+				var = NORDIC_mil_industry_originator_production_speed_arms_factory_factor
+				value = 0.10
+				tooltip = production_speed_arms_factory_factor_tt
+			}
+		}
+	}
+
+}
+
+focus = {
+	id = KTG_equipment_conversion_focus
+	
+	icon = GFX_focus_generic_license_production
+	
+	prerequisite = { focus = KTG_military_industry_hub focus = KTG_ad_hoc_military_industry }
+	mutually_exclusive = { focus = KTG_jet_engines focus = KTG_machine_tools_research }
+	x = 1
+	y = 1
+	relative_position_id = KTG_ad_hoc_military_industry
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_military_factories > 25
+	}
+
+	search_filters = { FOCUS_FILTER_INDUSTRY }
+
+
+	completion_reward = {
+		hidden_effect = {
+			add_to_variable = {
+				var = NORDIC_mil_industry_originator_dmod_equipment_conversion_speed
+				value = 0.15
+			}
+			add_to_variable = {
+				var = NORDIC_mil_industry_member_dmod_equipment_conversion_speed
+				value = 0.15
+			}
+		}
+	
+		NORDIC_mil_industry_member_to_originator = yes 
+		custom_effect_tooltip = NORDIC_modify_nordic_military_industry_dmod
+		effect_tooltip = {
+			add_to_variable = {
+				var = NORDIC_mil_industry_originator_dmod_equipment_conversion_speed
+				value = 0.15
+				tooltip = equipment_conversion_speed_tt
+			}
+		}
+	}
+
+}
+
+focus = {
+	id = KTG_machine_tools_research
+	
+	icon = GFX_focus_generic_modernize_industry
+	
+	prerequisite = { focus = KTG_military_industry_hub focus = KTG_ad_hoc_military_industry }
+	mutually_exclusive = { focus = KTG_jet_engines focus = KTG_equipment_conversion_focus }
+
+	x = 1
+	y = 1
+	relative_position_id = KTG_military_industry_hub
+	cost = 10
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_faction_leader = yes
+		num_of_military_factories > 20
+		num_researched_technologies > 45
+	}
+
+	search_filters = { FOCUS_FILTER_RESEARCH }
+
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = NORDIC_machine_tools_research
+			bonus = 0.3 
+			uses = 2 
+			category = cat_production
+		}
+	}
+
+}
+
+}

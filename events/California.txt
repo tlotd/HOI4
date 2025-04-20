@@ -1,0 +1,54 @@
+﻿###########################
+# California Events
+###########################
+
+add_namespace = california
+
+country_event = { #californian split
+	id = california.101
+	title = california.101.t
+	desc = california.101.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+		set_province_name = {
+			id = 3840
+			name = VICTORY_POINTS_3840_NCT
+		}
+ 	}
+	option = { #NorCal
+		name = california.101.a
+		ai_chance = { factor = 0 }
+		set_cosmetic_tag = CAL_NCA
+		SCA = {
+			transfer_state = 938
+		}
+		NCT = {
+			transfer_state = 939
+		}
+	}
+	option = { #SoCal
+		name = california.101.b
+		ai_chance = { factor = 1 }
+		set_cosmetic_tag = CAL_SCA
+		NCA = {
+			transfer_state = 378
+		}
+		NCT = {
+			transfer_state = 939
+		}
+	}
+	option = { #NightCity
+		name = california.101.c
+		ai_chance = { factor = 0 }
+		set_cosmetic_tag = CAL_NCT
+		NCA = {
+			transfer_state = 378
+		}
+		SCA = {
+			transfer_state = 938
+		}
+	}
+}

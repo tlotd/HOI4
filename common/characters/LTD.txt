@@ -1,0 +1,829 @@
+characters={
+	LTD_no_leader={
+		name=no_leader
+		portraits={
+			civilian={
+				large="GFX_portrait_no_leader"
+			}
+		}
+		country_leader={
+			ideology=ungoverned
+			traits= { }
+			id=-1
+		}
+	}
+	LTD_league_of_nations={
+		name=generic_league_of_nations
+		portraits={
+			civilian={
+				large="GFX_portrait_league_of_nations"
+			}
+		}
+	}
+	LTD_democratic_revolutionaries={
+		name=LTD_democratic_revolutionaries
+		portraits={
+			civilian={
+				large="GFX_portrait_democratic_revolutionaries"
+			}
+		}
+	}
+	LTD_angelina_rosenthaler={
+		name=LTD_angelina_rosenthaler
+		gender = female
+		portraits={
+			civilian={
+				large="GFX_ltd_angelina_rosenthaler"
+			}
+		}
+		country_leader={
+			ideology=liberalism
+			traits= { }
+			id=-1
+		}
+	}
+	LTD_theodor_zu_liechtenstein={
+		name=LTD_theodor_zu_liechtenstein
+		portraits={
+			civilian={
+				large="GFX_ltd_theodor_zu_liechtenstein"
+			}
+		}
+	}
+	LTD_ralf_kramer={
+		name=LTD_ralf_kramer
+		portraits={
+			civilian={
+				large="GFX_ltd_ralf_kramer"
+			}
+		}
+	}
+	LTD_wilhelm_brant={
+		name=LTD_wilhelm_brant
+		portraits={
+			civilian={
+				large="GFX_ltd_wilhelm_brant"
+			}
+		}
+	}
+	LTD_aragorn_strider={
+		name=LTD_aragorn_strider
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_aragorn_strider"
+			}
+		}
+	}
+	LTD_aragorn={
+		name=LTD_aragorn
+		portraits={
+			civilian={
+				large="GFX_lotr_animated_portrait_aragorn"
+			}
+		}
+	}
+	LTD_prince_isla_nublar={
+		name=LTD_prince_isla_nublar
+		portraits={
+			civilian={
+				large="GFX_ltd_animated_portrait_isla_nublar"
+			}
+		}
+		country_leader={
+			ideology=nublar_monarchism
+			traits = { prince_of_the_black_forest }
+			id=-1
+		}
+	}
+	LTD_fascist_revolutionaries={
+		name=LTD_fascist_revolutionaries
+		portraits={
+			civilian={
+				large="GFX_portrait_fascist_revolutionaries"
+			}
+		}
+	}
+	LTD_erich_koch={
+		name=LTD_erich_koch
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_erich_koch"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits= { }
+			id=-1
+		}
+	}
+	LTD_sauron={
+		name=LTD_sauron
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_sauron"
+			}
+		}
+	}
+	LTD_claus_von_stauffenberg={
+		name=LTD_claus_von_stauffenberg
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_claus_von_stauffenberg"
+			}
+		}
+	}
+	LTD_herr_heiler={
+		name=LTD_herr_heiler
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_herr_heiler"
+			}
+		}
+	}
+	LTD_karl_ruprecht_kroenen={
+		name=LTD_karl_ruprecht_kroenen
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_karl_ruprecht_kroenen"
+			}
+		}
+	}
+	LTD_herr_mann={
+		name=LTD_herr_mann
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_herr_mann"
+			}
+		}
+	}
+	LTD_jean_allemand={
+		name=LTD_jean_allemand
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_jean_allemand"
+			}
+		}
+	}
+	LTD_gandalf_leader={
+		name=LTD_gandalf
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_gandalf"
+			}
+		}
+		country_leader={
+			ideology=maiar_blessing
+			traits= {}
+			id=-1
+		}
+	}
+	LTD_military_government_elven={
+		name=military_government_elven
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_military_government_elven"
+			}
+		}
+		country_leader={
+			ideology=military_government_elven
+			traits= {}
+			id=-1
+		}
+	}
+	LTD_communist_revolutionaries={
+		name=LTD_communist_revolutionaries
+		portraits={
+			civilian={
+				large="GFX_portrait_communist_revolutionaries"
+			}
+		}
+	}
+	LTD_onkel_pjodric={
+		name="Onkel Pjodrič"
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_pjodric"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits= { triumphant_revolutionary }
+			id=-1
+		}
+	}
+
+	LTD_anarchists={
+		name=anarchists
+		portraits={
+			civilian={
+				large="GFX_portrait_anarchists"
+			}
+		}
+	}
+
+###########################################################################################################
+
+	LTD_yellow_figure={
+		name="Yellow Figure"
+		portraits={
+			civilian={
+				large="GFX_portrait_yellow_figure"
+			}
+		}
+		country_leader={
+			ideology=the_beyond
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+	LTD_islam={
+		name=LTD_islam
+		portraits={
+			civilian={
+				large="GFX_ltd_portrait_islam"
+			}
+		}
+		country_leader={
+			ideology=islamic_caliphate
+			traits= {}
+			id=-1
+		}
+	}
+
+###########################################################################################################
+
+	### Military Leader
+
+	LTD_franz_von_falke={
+		name=LTD_franz_von_falke
+		portraits={
+			army={
+				small="GFX_ltd_portrait_franz_von_falke_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = LTD_franz_von_falke
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LTD
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_andreas_front={
+		name=LTD_andreas_front
+		portraits={
+			army={
+				small="GFX_ltd_portrait_andreas_front_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = LTD_andreas_front
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LTD
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				blitzkrieg_theorist
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_mikhael_von_kerch={
+		name=LTD_mikhael_von_kerch
+		portraits={
+			army={
+				small="GFX_ltd_portrait_mikhael_von_kerch_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = LTD_mikhael_von_kerch
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LTD
+			}
+			available = {
+				has_government = communism
+			}
+			traits = {
+				mass_assault_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_josef_burgfried={
+		name=LTD_josef_burgfried
+		portraits={
+			army={
+				small="GFX_ltd_portrait_josef_burgfried_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = LTD_josef_burgfried
+			cost = 100
+			traits = {
+				army_chief_maneuver_2
+			}
+			allowed = {
+				original_tag = LTD
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_fridolin_freibier={
+		name=LTD_fridolin_freibier
+		portraits={
+			army={
+				small="GFX_ltd_portrait_fridolin_freibier_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = LTD_fridolin_freibier
+			cost = 100
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			allowed = {
+				original_tag = LTD
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_erwin_adler={
+		name=LTD_erwin_adler
+		portraits={
+			army={
+				small="GFX_ltd_portrait_erwin_adler_small"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = LTD_erwin_adler
+			cost = 100
+			traits = {
+				air_chief_reform_2
+			}
+			allowed = {
+				original_tag = LTD
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_viktor_von_schmaus={
+		name=LTD_viktor_von_schmaus
+		portraits={
+			army={
+				small="GFX_ltd_portrait_viktor_von_schmaus_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LTD_viktor_von_schmaus
+			ledger = army
+			cost = 150
+			traits = {
+				army_logistics_2
+			}
+			allowed = {
+				original_tag = LTD
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_ernst_brenner={
+		name=LTD_ernst_brenner
+		portraits={
+			army={
+				small="GFX_ltd_portrait_ernst_brenner_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LTD_ernst_brenner
+			ledger = army
+			cost = 150
+			traits = {
+				army_armored_3
+			}
+			allowed = {
+				original_tag = LTD
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LTD_joseph_leopold={
+		name=LTD_joseph_leopold
+		portraits={
+			army={
+				small="GFX_ltd_portrait_joseph_leopold_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = LTD_joseph_leopold
+			ledger = army
+			cost = 150
+			traits = {
+				army_infantry_2
+			}
+			allowed = {
+				original_tag = LTD
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+###### SS #################################################################################################
+
+
+	LTD_wilhelm_murr={
+		name=LTD_wilhelm_murr
+		portraits={
+			army={
+				large="GFX_ltd_portrait_wilhelm_murr"
+				small="GFX_ltd_portrait_wilhelm_murr_small"
+			}
+		}
+	}
+
+	LTD_gerhard_eichmann={
+		name=LTD_gerhard_eichmann
+		portraits={
+			army={
+				large="GFX_ltd_portrait_gerhard_eichmann"
+				small="GFX_ltd_portrait_gerhard_eichmann_small"
+			}
+		}
+	}
+
+	LTD_walter_schlechtnach={
+		name=LTD_walter_schlechtnach
+		portraits={
+			army={
+				large="GFX_ltd_portrait_walter_schlechtnach"
+				small="GFX_ltd_portrait_walter_schlechtnach_small"
+			}
+		}
+	}
+
+	LTD_egon_hetzer={
+		name=LTD_egon_hetzer
+		portraits={
+			army={
+				large="GFX_ltd_portrait_egon_hetzer"
+				small="GFX_ltd_portrait_egon_hetzer_small"
+			}
+		}
+	}
+
+	LTD_alois_pfeifer={
+		name=LTD_alois_pfeifer
+		portraits={
+			army={
+				large="GFX_ltd_portrait_alois_pfeifer"
+				small="GFX_ltd_portrait_alois_pfeifer_small"
+			}
+		}
+	}
+
+	LTD_gottfried_ziegler={
+		name=LTD_gottfried_ziegler
+		portraits={
+			army={
+				large="GFX_ltd_portrait_gottfried_ziegler"
+				small="GFX_ltd_portrait_gottfried_ziegler_small"
+			}
+		}
+	}
+
+###########################################################################################################
+
+	LTD_bernhard_rhein={
+		name=LTD_bernhard_rhein
+		portraits={
+			army={
+				large="GFX_ltd_portrait_bernhard_rhein"
+			}
+		}
+		field_marshal={
+			traits={ loyalist_ltd }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+
+	LTD_boris_jaeger={
+		name=LTD_boris_jaeger
+		portraits={
+			army={
+				large="GFX_ltd_portrait_boris_jaeger"
+			}
+		}
+		corps_commander={
+			traits={ loyalist_ltd }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+
+	LTD_joachim_meister={
+		name=LTD_joachim_meister
+		portraits={
+			army={
+				large="GFX_ltd_portrait_joachim_meister"
+			}
+		}
+		corps_commander={
+			traits={ loyalist_ltd }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+
+##### LOTR ################################################################################################
+
+	LTD_theoden={
+		name=LTD_theoden
+		portraits={
+			army={
+				large="GFX_ltd_portrait_theoden"
+				small="GFX_ltd_portrait_theoden_small"
+			}
+		}
+	}
+
+	LTD_eomer={
+		name=LTD_eomer
+		portraits={
+			army={
+				large="GFX_ltd_portrait_eomer"
+				small="GFX_ltd_portrait_eomer_small"
+			}
+		}
+	}
+
+	LTD_boromir={
+		name=LTD_boromir
+		portraits={
+			army={
+				large="GFX_ltd_portrait_boromir"
+				small="GFX_ltd_portrait_boromir_small"
+			}
+		}
+	}
+
+	LTD_faramir={
+		name=LTD_faramir
+		portraits={
+			army={
+				large="GFX_ltd_portrait_faramir"
+				small="GFX_ltd_portrait_faramir_small"
+			}
+		}
+	}
+
+	LTD_bard={
+		name=LTD_bard
+		portraits={
+			army={
+				large="GFX_ltd_portrait_bard"
+				small="GFX_ltd_portrait_bard_small"
+			}
+		}
+	}
+
+	LTD_eagles={
+		name=LTD_eagles
+		portraits={
+			army={
+				large="GFX_ltd_portrait_eagles"
+				small="GFX_ltd_portrait_eagles_small"
+			}
+		}
+	}
+
+	LTD_elrond={
+		name=LTD_elrond
+		portraits={
+			army={
+				large="GFX_ltd_portrait_elrond"
+				small="GFX_ltd_portrait_elrond_small"
+			}
+		}
+	}
+
+	LTD_legolas={
+		name=LTD_legolas
+		portraits={
+			army={
+				large="GFX_ltd_portrait_legolas"
+				small="GFX_ltd_portrait_legolas_small"
+			}
+		}
+	}
+
+	LTD_gimli={
+		name=LTD_gimli
+		portraits={
+			army={
+				large="GFX_ltd_portrait_gimli"
+				small="GFX_ltd_portrait_gimli_small"
+			}
+		}
+	}
+
+	LTD_samwise={
+		name=LTD_samwise
+		portraits={
+			army={
+				large="GFX_ltd_portrait_samwise"
+				small="GFX_ltd_portrait_samwise_small"
+			}
+		}
+	}
+
+###########################################################################################################
+
+	LTD_rainer_winkler={
+		name=LTD_rainer_winkler
+		portraits={
+			army={
+				large="GFX_ltd_portrait_rainer_winkler"
+				small="GFX_ltd_portrait_rainer_winkler_small"
+			}
+		}
+	}
+
+###########################################################################################################
+
+ ######   ######  #### ######## ##    ## ######## ####  ######  ########  ######  
+##    ## ##    ##  ##  ##       ###   ##    ##     ##  ##    ##    ##    ##    ## 
+##       ##        ##  ##       ####  ##    ##     ##  ##          ##    ##       
+ ######  ##        ##  ######   ## ## ##    ##     ##   ######     ##     ######  
+      ## ##        ##  ##       ##  ####    ##     ##        ##    ##          ## 
+##    ## ##    ##  ##  ##       ##   ###    ##     ##  ##    ##    ##    ##    ## 
+ ######   ######  #### ######## ##    ##    ##    ####  ######     ##     ######  
+
+
+
+ #     #                                                 
+ ##    #  #    #   ####   #       ######    ##    #####  
+ # #   #  #    #  #    #  #       #        #  #   #    # 
+ #  #  #  #    #  #       #       #####   #    #  #    # 
+ #   # #  #    #  #       #       #       ######  #####  
+ #    ##  #    #  #    #  #       #       #    #  #   #  
+ #     #   ####    ####   ######  ######  #    #  #    # 
+                                                         
+
+	LTD_gandalf = {
+		name = LTD_gandalf
+		portraits = {
+			army = {
+				large="GFX_ltd_portrait_gandalf"
+				small="GFX_ltd_portrait_gandalf_small"
+			}
+		}
+	}
+
+	################################################################################
+
+	## Nazgull
+	LTD_witch_king_of_angmar = {
+		name=lotr_witch_king_of_angmar
+		portraits={
+			army={
+				large="GFX_lotr_portrait_witch_king_of_angmar"
+				small="GFX_lotr_advisor_portrait_witch_king_of_angmar"
+			}
+		}
+	}
+
+	LTD_khamul = {
+		name=lotr_khamul
+		portraits={
+			army={
+				large="GFX_lotr_portrait_khamul"
+				small="GFX_lotr_advisor_portrait_khamul"
+			}
+		}
+	}
+
+	LTD_uvantha = {
+		name=lotr_uvantha
+		portraits={
+			army = {
+				large="GFX_lotr_portrait_uvantha"
+				small="GFX_lotr_advisor_portrait_uvantha"
+			}
+		}
+	}
+
+	LTD_hoarmurath = {
+		name=lotr_hoarmurath
+		portraits={
+			army = {
+				large="GFX_lotr_portrait_hoarmurath"
+				small="GFX_lotr_advisor_portrait_hoarmurath"
+			}
+		}
+	}
+
+	LTD_dwar = {
+		name=lotr_dwar
+		portraits={
+			army={
+				large="GFX_lotr_portrait_dwar"
+				small="GFX_lotr_advisor_portrait_dwar"
+			}
+		}
+	}
+
+	LTD_adunaphel = {
+		name=lotr_adunaphel
+		portraits={
+			army={
+				large="GFX_lotr_portrait_adunaphel"
+				small="GFX_lotr_advisor_portrait_adunaphel"
+			}
+		}
+	}
+
+	LTD_akhorahil = {
+		name=lotr_akhorahil
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_akhorahil"
+				small="GFX_lotr_advisor_portrait_akhorahil"
+			}
+		}
+	}
+
+	LTD_ji_indur = {
+		name=lotr_ji_indur
+		portraits={
+			army={
+				large="GFX_lotr_portrait_indur"
+				small="GFX_lotr_advisor_portrait_indur"
+			}
+		}
+	}
+
+	LTD_ren = {
+		name=lotr_ren
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_ren"
+				small="GFX_lotr_advisor_portrait_ren"
+			}
+		}
+	}
+}

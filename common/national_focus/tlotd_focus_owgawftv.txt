@@ -1,0 +1,32 @@
+### search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+joint_focus = {
+	id = OWGAWFTV_tlotd
+	icon = GFX_submod_otherworldly
+	prerequisite = { focus = LTD_kingdom_of_the_southwest focus = LTD_southern_identity focus = LTD_declaration_of_a_new_state focus = LTD_anschluss_referendum }
+	relative_position_id = LTD_form_transitional_government
+	x = -18
+	y = 1
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_T_OTHERWORLDLY }
+	mutually_exclusive = { focus = LTD_scarlet_revolution }
+	mutually_exclusive = { focus = LTD_beacon_of_european_freedom }
+	mutually_exclusive = { focus = LTD_ultra_nationalist_coup }
+	mutually_exclusive = { focus = LTD_divine_path }
+	mutually_exclusive = { focus = LTD_return_of_the_king }
+	mutually_exclusive = { focus = LTD_military_takeover }
+
+	cost = 95.15
+
+	allow_branch = { always = no }
+
+	available = {
+		always = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+	}
+}

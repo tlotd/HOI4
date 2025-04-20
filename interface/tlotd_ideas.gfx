@@ -1,0 +1,154 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_traits_strip"
+		texturefile = "gfx/interface/ideas/idea_traits_strip.dds"
+		noOfFrames = 19
+	}
+
+	SpriteType = {
+		name = "GFX_idea_isolationism"
+		texturefile = "gfx/interface/ideas/isolationism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_deus_vult"
+		texturefile = "gfx/interface/ideas/deus_vult.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_strength_through_faith"
+		texturefile = "gfx/interface/ideas/strength_through_faith.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ger"
+		texturefile = "gfx/interface/ideas/national_motto/ger.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_fra"
+		texturefile = "gfx/interface/ideas/national_motto/fra.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_eu"
+		texturefile = "gfx/interface/ideas/national_motto/eu.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_anarchist_spirit"
+		texturefile = "gfx/interface/ideas/anarchist_spirit.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_constitution"
+		texturefile = "gfx/interface/ideas/constitution.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_church_tax"
+		texturefile = "gfx/interface/ideas/church_tax.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_established_monarchy"
+		texturefile = "gfx/interface/ideas/established_monarchy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_fight_for_the_king"
+		texturefile = "gfx/interface/ideas/fight_for_the_king.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_enthusiasm_for_the_crown"
+		texturefile = "gfx/interface/ideas/enthusiasm_for_the_crown.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_royal_high_command"
+		texturefile = "gfx/interface/ideas/royal_high_command.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_trust_in_your_belief"
+		texturefile = "gfx/interface/ideas/trust_in_your_belief.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_industrial_powerhouse"
+		texturefile = "gfx/interface/ideas/industrial_powerhouse.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_fighting_spirit"
+		texturefile = "gfx/interface/ideas/fighting_spirit.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_navy_mobility"
+		texturefile = "gfx/interface/ideas/navy_mobility.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_powerful_navy"
+		texturefile = "gfx/interface/ideas/powerful_navy.dds"
+	}
+
+	### DUN ###
+
+	SpriteType = {
+		name = "GFX_idea_dun_space_faring_civilization"
+		texturefile = "gfx/interface/ideas/dun_space_faring_civilization.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_dun_ethnic_tensions"
+		texturefile = "gfx/interface/ideas/dun_ethnic_tensions.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_dun_mare_nostrum"
+		texturefile = "gfx/interface/ideas/dun_mare_nostrum.dds"
+	}
+
+	### NIS ###
+
+	SpriteType = {
+		name = "GFX_idea_nis_bound_to_the_rising_sun"
+		texturefile = "gfx/interface/ideas/nis_bound_to_the_rising_sun.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_nis_sakura_spirit"
+		texturefile = "gfx/interface/ideas/nis_sakura_spirit.dds"
+	}
+
+	###########
+
+	SpriteType = {
+		name = "GFX_idea_secret_police"
+		texturefile = "gfx/interface/ideas/secret_police.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_socialist_characteristics"
+		texturefile = "gfx/interface/ideas/socialist_characteristics.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_soviet_production"
+		texturefile = "gfx/interface/ideas/soviet_production.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_established_dictator"
+		texturefile = "gfx/interface/ideas/established_dictator.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_ss_terror"
+		texturefile = "gfx/interface/ideas/ss_terror.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_otherworldly_influence"
+		texturefile = "gfx/interface/ideas/otherworldly_influence.dds"
+	}
+}

@@ -1,0 +1,39 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_strange_signal"
+		texturefile = "gfx/event_pictures/report_event_strange_signal.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_arctic_exploration"
+		texturefile = "gfx/event_pictures/report_event_arctic_exploration.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_arctic_exploration"
+		texturefile = "gfx/event_pictures/news_event_arctic_exploration.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_drachenschanze"
+		texturefile = "gfx/event_pictures/report_event_drachenschanze.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_barad_dur"
+		texturefile = "gfx/event_pictures/report_event_barad_dur.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_barad_dur"
+		texturefile = "gfx/event_pictures/news_event_barad_dur.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_gondor"
+		texturefile = "gfx/event_pictures/news_event_gondor.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_darth_vader"
+		texturefile = "gfx/event_pictures/report_event_darth_vader.dds"
+	}
+		spriteType = {
+		name = "GFX_news_event_darth_vader"
+		texturefile = "gfx/event_pictures/news_event_darth_vader.dds"
+	}
+}

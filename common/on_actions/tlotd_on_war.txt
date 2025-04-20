@@ -1,0 +1,81 @@
+on_actions = {
+    on_war = {
+		effect = {
+			if = {
+		        limit = {
+					ROOT = {
+						has_war_with = LTD
+					}
+    	    	}
+				ROOT = {
+                    every_unit_leader = {
+                        limit = {
+                            OR = {
+                                has_trait = loyalist_ksw
+                                has_trait = loyalist_ltd
+								has_trait = loyalist_ltd_transatlantic
+                            }
+                        }
+                        set_nationality = LTD
+                    }
+                }
+    		}
+			if = {
+		        limit = { ROOT = { has_war_with = DUN }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_dun } set_nationality = DUN } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = LEO }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_leo } set_nationality = LEO } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = NIS }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_nis } set_nationality = NIS } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = KRM }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_krm } set_nationality = KRM } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = LKR }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_lkr } set_nationality = LKR } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = JAP }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_jap } set_nationality = JAP } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = GER }}
+				ROOT = { every_unit_leader = { limit = { OR = { has_trait = loyalist_ger has_trait = loyalist_ger_empire } } set_nationality = GER } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = AUS }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_aus } set_nationality = AUS } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = SWI }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_swi } set_nationality = SWI } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = LIE }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_lie } set_nationality = LIE } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = FRA }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_fra } set_nationality = FRA } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = ENG }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_eng } set_nationality = ENG } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = USA }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_usa } set_nationality = USA } }
+    		}
+            if = {
+		        limit = { ROOT = { has_war_with = SOV }}
+				ROOT = { every_unit_leader = { limit = { has_trait = loyalist_sov } set_nationality = SOV } }
+    		}
+        }
+    }
+}

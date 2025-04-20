@@ -1,0 +1,112 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_trait_SS_member"
+		texturefile = "gfx/interface/traits/personal/trait_SS_member.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_aragorn"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_aragorn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_ksw"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_ksw.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_ltd"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_ltd.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_ltd_transatlantic"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_ltd_transatlantic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_dun"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_dun.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_leo"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_leo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_nis"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_nis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_krm"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_krm.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_jsn"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_jsn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_lkr"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_lkr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_jap"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_jap.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_ger"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_ger.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_ger_empire"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_ger_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_aus"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_aus.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_aus_hun"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_aus_hun.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_swi"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_swi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_lie"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_lie.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_fra"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_fra.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_eng"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_eng.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_usa"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_usa.dds"
+	}
+
+	spriteType = {
+		name = "GFX_trait_loyalist_sov"
+		texturefile = "gfx/interface/traits/personal/trait_loyalist_sov.dds"
+	}
+}

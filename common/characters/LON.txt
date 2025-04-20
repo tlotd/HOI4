@@ -1,0 +1,16 @@
+characters={
+	LON_league_of_nations={
+		name=generic_league_of_nations
+		portraits={
+			civilian={
+				large="GFX_portrait_league_of_nations"
+			}
+		}
+		country_leader={
+			ideology=league_of_nations
+			traits= {
+			}
+			id=-1
+		}
+	}
+}

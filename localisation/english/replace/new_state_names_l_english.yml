@@ -1,0 +1,108 @@
+﻿l_english:
+ STATE_240:0 "Saarland"
+ STATE_240_FRA:0 "Sarre"
+ STATE_852:0 "Vatican City"
+ STATE_55:0 "Nordhessen"
+ STATE_739:0 "Südhessen"
+ STATE_833:0 "Liechtenstein"
+ STATE_233:0 "Oldenburg"
+ STATE_828:0 "The Island"
+ STATE_875:0 "The Arctic"
+ STATE_792:0 "País Vasco y Navarra"
+ STATE_172:0 "Las Cinco Muertes"
+ STATE_153:0 "Tirol"
+
+ STATE_797:0 "Constantinople"
+
+### German Names for conquered States ###
+#france
+ STATE_28_GER:0 "Elsass-Lothringen"
+#luxemburg
+ STATE_8_GER:0 "Luxemburg"
+#belguim
+ STATE_34_GER:0 "Wallonien"
+ STATE_980_GER:0 "Ardennen"
+ STATE_6_GER:0 "Flandern"
+ STATE_977_GER:0 "Antwerpen"
+#netherlands
+ STATE_35_GER:0 "Brabant"
+ STATE_7_GER:0 "Holland"
+ STATE_36_GER:0 "Friesland"
+#denmark
+ STATE_912_GER:0 "Südjütland"
+ STATE_99_GER:0 "Jütland"
+ STATE_911_GER:0 "Fünen"
+ STATE_37_GER:0 "Seeland"
+#polger
+ STATE_67_GER: "Oberschlesien"
+ STATE_66_GER: "Niederschlesien"
+ STATE_68_GER: "Ostmark"
+ STATE_63_GER: "Hinterpommern"
+ STATE_85_GER:0 "Danzig"
+#poland
+ STATE_762_GER:0 "Kattowitz"
+ STATE_86_GER:0 "Posen"
+ STATE_807_GER:0 "Westpreußen"
+ STATE_5_GER:0 "Ostpreußen"
+ STATE_763_GER:0 "Königsberg"
+ STATE_88_GER:0 "Krakau"
+ STATE_87_GER:0 "Lodz"
+ STATE_98_GER:0 "Plock"
+ STATE_10_GER:0 "Warschau"
+#czechia
+ STATE_69_GER:0 "Nördliches Sudetenland"
+ STATE_972_GER:0 "Südliches Sudetenland"
+ STATE_9_GER:0 "Böhmen"
+ STATE_74_GER:0 "Östliches Sudetenland"
+ STATE_75_GER:0 "Mähren"
+#slovakia
+ STATE_70_GER:0 "Westslovakai"
+ STATE_71_GER:0 "Ostslovakai"
+ STATE_664_GER:0 "Südslovakai"
+#italy
+ STATE_39_GER:0 "Südtirol"
+ STATE_850_GER:0 "Trient"
+ STATE_160_GER:0 "Venezien"
+ STATE_736_GER:0 "Küstenland"
+#slovenia
+ STATE_102_GER:0 "Oberkrain"
+ STATE_853_GER:0 "Unterkrain"
+#hungary
+ STATE_155_GER: "Nördliches Transdanubien"
+ STATE_974_GER: "Südliches Transdanubien"
+#arctic
+ STATE_875_GER:0 "Die Arktis"
+ STATE_875_GER_otherworldly:0 "Hyperborea"
+
+#Colonies
+ STATE_743_GER:0 "Kiautschou"
+ STATE_745_GER:0 "Lüda"
+
+#USA
+ STATE_378_GER:0 "Kalifornien"
+ STATE_371_GER:0 "Louisiana"
+ STATE_361_GER:0 "Marialand"
+ STATE_358_GER:0 "Neu Konstanz"
+
+#Polish Names
+ STATE_67_POL:0 "Opole"
+ STATE_66_POL:0 "Dolnośląskie"
+ STATE_68_POL:0 "Lubuskie"
+ STATE_63_POL:0 "Pomorskie"
+ STATE_85_POL:0 "Gdańsk"
+ STATE_762_POL:0 "Katowice"
+# LKR #
+ STATE_58_LKR:0 "Holstein"
+# LEO #
+ STATE_91_LEO:0 "Lwów"
+ STATE_784_LEO:0 "Wilno"
+# DUN #
+ STATE_103_DUN:0 "Csilla"
+ STATE_103_DUN_edoras:0 "Edoras"
+ STATE_103_DUN_minas_morgul:0 "Minas Morgul"
+ STATE_797_DUN:0 "Coruscant"
+# NIS #
+ STATE_21_NIS:0 "Bouches-du-Rhône"
+ STATE_21_NIS_isengard:0 "Isengard"
+# TOR #
+ STATE_71_TOR:0 "Eastern Slovakia"

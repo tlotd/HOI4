@@ -1,0 +1,76 @@
+spriteTypes = {	
+
+### DUN ###
+
+	SpriteType = {
+		name = "GFX_bop_DUN_united_chiss_side"
+		texturefile = "gfx/interface/bop/DUN_united_chiss_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_DUN_united_chiss_improved_side"
+		texturefile = "gfx/interface/bop/DUN_united_chiss_improved_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_DUN_fracturing_nation_side"
+		texturefile = "gfx/interface/bop/DUN_fracturing_nation_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_DUN_fracturing_nation_side"
+		texturefile = "gfx/interface/bop/DUN_fracturing_nation_side.dds"
+	}
+
+### LTD_parliament ###
+
+	SpriteType = {
+		name = "GFX_bop_LTD_parliament"
+		texturefile = "gfx/interface/bop/LTD_parliament.dds"
+	}
+
+### LTD_legitimacy ###
+
+	SpriteType = {
+		name = "GFX_bop_LTD_legitimacy_side"
+		texturefile = "gfx/interface/bop/LTD_legitimacy_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_LTD_legitimacy_improved_side"
+		texturefile = "gfx/interface/bop/LTD_legitimacy_improved_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_LTD_annexation_side"
+		texturefile = "gfx/interface/bop/LTD_annexation_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_LTD_annexation_improved_side"
+		texturefile = "gfx/interface/bop/LTD_annexation_improved_side.dds"
+	}
+
+### LTD_fascist_terrors ###
+
+	SpriteType = {
+		name = "GFX_bop_LTD_party_control_side"
+		texturefile = "gfx/interface/bop/LTD_party_control_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_LTD_party_control_improved_side"
+		texturefile = "gfx/interface/bop/LTD_party_control_improved_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_LTD_ss_control_side"
+		texturefile = "gfx/interface/bop/LTD_ss_control_side.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_bop_LTD_ss_control_improved_side"
+		texturefile = "gfx/interface/bop/LTD_ss_control_improved_side.dds"
+	}
+
+}

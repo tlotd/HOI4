@@ -1,0 +1,36 @@
+#########################################
+########### DUN BOP MODIFIERS ###########
+#########################################
+
+#DEBUG
+
+DUN_bop_modifier_debug_positive = {
+	power_balance_weekly = 0.1
+}
+
+DUN_bop_modifier_debug_negative = {
+	power_balance_weekly = -0.1
+}
+
+#GOOD
+
+DUN_bop_modifier_supress_revolts = {
+	power_balance_weekly = 0.005
+}
+
+DUN_bop_modifier_invest_in_infrastructure = {
+	power_balance_weekly = 0.005
+}
+
+DUN_bop_modifier_rally_the_people = {
+	power_balance_weekly = 0.005
+}
+
+DUN_bop_modifier_open_talks = {
+	power_balance_weekly = 0.005
+}
+
+#BAD
+DUN_bop_modifier_sinking_into_choas = {
+	power_balance_weekly = -0.01
+}

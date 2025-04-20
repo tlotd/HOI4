@@ -1,0 +1,23 @@
+style = {
+	name = empty_focus_style
+	unavailable = GFX_empty_focus_unavailable
+	completed = GFX_empty_focus_completed
+	available = GFX_empty_focus_can_start
+	current = GFX_empty_focus_current
+}
+
+style = {
+	name = TLOTD_focus_style
+	unavailable = GFX_tlotd_focus_unavailable
+	completed = GFX_tlotd_focus_completed
+	available = GFX_tlotd_focus_can_start
+	current = GFX_tlotd_focus_current
+}
+
+style = {
+	name = expandable_focus_style
+	unavailable = GFX_expandable_focus_unavailable
+	completed = GFX_expandable_focus_completed
+	available = GFX_expandable_focus_can_start
+	current = GFX_expandable_focus_current
+}

@@ -1,0 +1,37 @@
+state = {
+	id = 163
+	name = "STATE_163"
+	manpower = 118000
+	
+	state_category = enclave
+	
+	history = {
+		set_variable = { culture = 68 }
+		victory_points = { #Zara/Zadar
+			3943 5 
+		}
+		buildings = {
+			infrastructure = 4 #was: 5
+			dockyard = 1
+			industrial_complex = 2
+			arms_factory = 2
+			3943 = {
+				naval_base = 1
+			}
+		}
+		owner = DUN
+		add_core_of = DUN
+		add_core_of = AUS
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = LBV
+		1919.1.1 = {
+			remove_core_of = AUS
+		}
+	}
+	provinces = {	
+		3943 
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,1711 @@
+on_actions = {
+    on_state_control_changed = {
+        effect = {
+            if = {
+                limit = {
+                    FROM.FROM = { state = 54 }
+                }
+                if =  {
+                    limit = {
+                        AND = {
+                            tag = LTD
+                            has_dlc = "Arms Against Tyranny"
+                            NOT = { has_country_flag = drachenschanze_found }
+                        }
+                    }
+                    LTD = {
+                        country_event = tlotd_generic.1008
+                        set_country_flag = drachenschanze_found
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 240 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = FRA
+                            OVERLORD = {
+                                tag = FRA
+                            }
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_240_FRA
+                        set_province_name = {
+                            id = 11531
+                            name = VICTORY_POINTS_11531_FRA
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11531
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 28 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_28_GER
+                        set_province_name = {
+                            id = 9559
+                            name = VICTORY_POINTS_9559_GER
+                        }
+                        set_province_name = {
+                            id = 9503
+                            name = VICTORY_POINTS_9503_GER
+                        }
+                        set_province_name = {
+                            id = 678
+                            name = VICTORY_POINTS_678_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9559
+                        reset_province_name = 9503
+                        reset_province_name = 678
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 762 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_762_GER
+                        set_province_name = {
+                            id = 6464
+                            name = VICTORY_POINTS_6464_GER
+                        }
+                    }
+                }
+                else_if =  {
+                    limit = {
+                        tag = POL
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_762_POL
+                        set_province_name = {
+                            id = 6464
+                            name = VICTORY_POINTS_6464_POL
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6464
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 66 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_66_GER
+                        set_province_name = {
+                            id = 9570
+                            name = VICTORY_POINTS_9570_GER
+                        }
+                    }
+                }
+                else_if =  {
+                    limit = {
+                        tag = POL
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_66_POL
+                        set_province_name = {
+                            id = 9570
+                            name = VICTORY_POINTS_9570_POL
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9570
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 68 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_68_GER
+                        set_province_name = {
+                            id = 3473
+                            name = VICTORY_POINTS_3473_GER
+                        }
+                    }
+                }
+                else_if =  {
+                    limit = {
+                        tag = POL
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_68_POL
+                        set_province_name = {
+                            id = 3473
+                            name = VICTORY_POINTS_3473_POL
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3473
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 63 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_63_GER
+                        set_province_name = {
+                            id = 6282
+                            name = VICTORY_POINTS_6282_GER
+                        }
+                        set_province_name = {
+                            id = 11372
+                            name = VICTORY_POINTS_11372_GER
+                        }
+                    }
+                }
+                else_if =  {
+                    limit = {
+                        tag = POL
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_63_POL
+                        set_province_name = {
+                            id = 6282
+                            name = VICTORY_POINTS_6282_POL
+                        }
+                        set_province_name = {
+                            id = 11372
+                            name = VICTORY_POINTS_11372_POL
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11372
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 86 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_86_GER
+                        set_province_name = {
+                            id = 6558
+                            name = VICTORY_POINTS_6558_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6558
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 807 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_807_GER
+                        set_province_name = {
+                            id = 279
+                            name = VICTORY_POINTS_279_GER
+                        }
+                        set_province_name = {
+                            id = 3295
+                            name = VICTORY_POINTS_3295_GER
+                        }
+                        set_province_name = {
+                            id = 9263
+                            name = VICTORY_POINTS_9263_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 279
+                        reset_province_name = 3295
+                        reset_province_name = 9263
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 85 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_85_GER
+                        set_province_name = {
+                            id = 362
+                            name = VICTORY_POINTS_362_GER
+                        }
+                    }
+                }
+                else_if =  {
+                    limit = {
+                        tag = POL
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_85_POL
+                        set_province_name = {
+                            id = 362
+                            name = VICTORY_POINTS_362_POL
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 362
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 5 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_5_GER
+                        set_province_name = {
+                            id = 6375
+                            name = VICTORY_POINTS_6375_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6375
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 763 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_763_GER
+                        set_province_name = {
+                            id = 6332
+                            name = VICTORY_POINTS_6332_GER
+                        }
+                        set_province_name = {
+                            id = 11386
+                            name = VICTORY_POINTS_11386_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6332
+                        reset_province_name = 11386
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 88 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_88_GER
+                        set_province_name = {
+                            id = 9427
+                            name = VICTORY_POINTS_9427_GER
+                        }
+                        set_province_name = {
+                            id = 442
+                            name = VICTORY_POINTS_442_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9427
+                        reset_province_name = 442
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 87 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_87_GER
+                        set_province_name = {
+                            id = 9508
+                            name = VICTORY_POINTS_9508_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9508
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 98 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_98_GER
+                        set_province_name = {
+                            id = 3230
+                            name = VICTORY_POINTS_3230_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3230
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 10 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_10_GER
+                        set_province_name = {
+                            id = 3544
+                            name = VICTORY_POINTS_3544_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3544
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 69 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_69_GER
+                        set_province_name = {
+                            id = 3585
+                            name = VICTORY_POINTS_3585_GER
+                        }
+                        set_province_name = {
+                            id = 11401
+                            name = VICTORY_POINTS_11401_GER
+                        }
+                        set_province_name = {
+                            id = 11432
+                            name = VICTORY_POINTS_11432_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3585
+                        reset_province_name = 11401
+                        reset_province_name = 11432
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 972 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_972_GER
+                        set_province_name = {
+                            id = 557
+                            name = VICTORY_POINTS_557_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 557
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 9 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_9_GER
+                        set_province_name = {
+                            id = 11542
+                            name = VICTORY_POINTS_11542_GER
+                        }
+                        set_province_name = {
+                            id = 9569
+                            name = VICTORY_POINTS_9569_GER
+                        }
+                        set_province_name = {
+                            id = 6418
+                            name = VICTORY_POINTS_6418_GER
+                        }
+                        set_province_name = {
+                            id = 9541
+                            name = VICTORY_POINTS_9541_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11542
+                        reset_province_name = 9569
+                        reset_province_name = 6418
+                        reset_province_name = 9541
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 74 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_74_GER
+                        set_province_name = {
+                            id = 3583
+                            name = VICTORY_POINTS_3583_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3583
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 75 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_75_GER
+                        set_province_name = {
+                            id = 6562
+                            name = VICTORY_POINTS_6562_GER
+                        }
+                        set_province_name = {
+                            id = 3569
+                            name = VICTORY_POINTS_3569_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6562
+                        reset_province_name = 3569
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 70 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_70_GER
+                        set_province_name = {
+                            id = 9692
+                            name = VICTORY_POINTS_9692_GER
+                        }
+                        set_province_name = {
+                            id = 11539
+                            name = VICTORY_POINTS_11539_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9692
+                        reset_province_name = 11539
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 71 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_71_GER
+                        set_province_name = {
+                            id = 3581
+                            name = VICTORY_POINTS_3581_GER
+                        }
+                    }
+                }
+                else_if =  {
+                    limit = {
+                        OR = {
+                            tag = TOR
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_71_TOR
+                        set_province_name = {
+                            id = 3581
+                            name = VICTORY_POINTS_3581_TOR
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3581
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 664 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_664_GER
+                        set_province_name = {
+                            id = 6573
+                            name = VICTORY_POINTS_6573_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6573
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 39 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_39_GER
+                        set_province_name = {
+                            id = 11598
+                            name = VICTORY_POINTS_11598_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11598
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 850 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_850_GER
+                        set_province_name = {
+                            id = 9598
+                            name = VICTORY_POINTS_9598_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9598
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 160 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_160_GER
+                        set_province_name = {
+                            id = 3604
+                            name = VICTORY_POINTS_3604_GER
+                        }
+                        set_province_name = {
+                            id = 11584
+                            name = VICTORY_POINTS_11584_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3604
+                        reset_province_name = 11584
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 736 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_736_GER
+                        set_province_name = {
+                            id = 6626
+                            name = VICTORY_POINTS_6626_GER
+                        }
+                        set_province_name = {
+                            id = 11564
+                            name = VICTORY_POINTS_11564_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6626
+                        reset_province_name = 11564
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 102 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_102_GER
+                        set_province_name = {
+                            id = 665
+                            name = VICTORY_POINTS_655_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 665
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 853 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_853_GER
+                        set_province_name = {
+                            id = 9627
+                            name = VICTORY_POINTS_9627_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9627
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 155 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_155_GER
+                        set_province_name = {
+                            id = 6720
+                            name = VICTORY_POINTS_6720_GER
+                        }
+                        set_province_name = {
+                            id = 686
+                            name = VICTORY_POINTS_686_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6720
+                        reset_province_name = 686
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 974 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_974_GER
+                        set_province_name = {
+                            id = 11610
+                            name = VICTORY_POINTS_11610_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11610
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 8 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_8_GER
+                        set_province_name = {
+                            id = 6583
+                            name = VICTORY_POINTS_6583_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6583
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 34 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_34_GER
+                        set_province_name = {
+                            id = 9536
+                            name = VICTORY_POINTS_9536_GER
+                        }
+                        set_province_name = {
+                            id = 3516
+                            name = VICTORY_POINTS_3516_GER
+                        }
+                        set_province_name = {
+                            id = 11519
+                            name = VICTORY_POINTS_11519_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9536
+                        reset_province_name = 3516
+                        reset_province_name = 11519
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 980 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_980_GER
+                        set_province_name = {
+                            id = 9418
+                            name = VICTORY_POINTS_9418_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9418
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 6 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_6_GER
+                        set_province_name = {
+                            id = 3576
+                            name = VICTORY_POINTS_3576_GER
+                        }
+                        set_province_name = {
+                            id = 516
+                            name = VICTORY_POINTS_516_GER
+                        }
+                        set_province_name = {
+                            id = 6560
+                            name = VICTORY_POINTS_6560_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3576
+                        reset_province_name = 516
+                        reset_province_name = 6560
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 977 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_977_GER
+                        set_province_name = {
+                            id = 13068
+                            name = VICTORY_POINTS_13068_GER
+                        }
+                        set_province_name = {
+                            id = 6598
+                            name = VICTORY_POINTS_6598_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 13068
+                        reset_province_name = 6598
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 35 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_35_GER
+                        set_province_name = {
+                            id = 11562
+                            name = VICTORY_POINTS_11562_GER
+                        }
+                        set_province_name = {
+                            id = 3262
+                            name = VICTORY_POINTS_3262_GER
+                        }
+                        set_province_name = {
+                            id = 6496
+                            name = VICTORY_POINTS_6496_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11562
+                        reset_province_name = 3262
+                        reset_province_name = 6496
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 7 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_7_GER
+                        set_province_name = {
+                            id = 9498
+                            name = VICTORY_POINTS_9498_GER
+                        }
+                        set_province_name = {
+                            id = 3211
+                            name = VICTORY_POINTS_3211_GER
+                        }
+                        set_province_name = {
+                            id = 391
+                            name = VICTORY_POINTS_391_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9498
+                        reset_province_name = 3211
+                        reset_province_name = 391
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 36 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_36_GER
+                        set_province_name = {
+                            id = 6241
+                            name = VICTORY_POINTS_6241_GER
+                        }
+                        set_province_name = {
+                            id = 9363
+                            name = VICTORY_POINTS_9363_GER
+                        }
+                        set_province_name = {
+                            id = 6336
+                            name = VICTORY_POINTS_6336_GER
+                        }
+                        set_province_name = {
+                            id = 9335
+                            name = VICTORY_POINTS_9335_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6241
+                        reset_province_name = 9363
+                        reset_province_name = 6336
+                        reset_province_name = 9335
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 912 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_912_GER
+                        set_province_name = {
+                            id = 13258
+                            name = VICTORY_POINTS_13258_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 13258
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 99 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_99_GER
+                        set_province_name = {
+                            id = 6364
+                            name = VICTORY_POINTS_6364_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6364
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 911 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_911_GER
+                        set_province_name = {
+                            id = 3325
+                            name = VICTORY_POINTS_3325_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3325
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 37 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_37_GER
+                        set_province_name = {
+                            id = 6393
+                            name = VICTORY_POINTS_6393_GER
+                        }
+                        set_province_name = {
+                            id = 6287
+                            name = VICTORY_POINTS_6287_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 6393
+                        reset_province_name = 6287
+                    }
+                }
+            }
+
+            #Colonies
+
+            if = { #Tsingtau
+                limit = {
+                    FROM.FROM = { state = 743 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_743_GER
+                        set_province_name = {
+                            id = 10000
+                            name = VICTORY_POINTS_10000_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 10000
+                    }
+                }
+            }
+            if = { #Lüda
+                limit = {
+                    FROM.FROM = { state = 745 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_745_GER
+                        set_province_name = {
+                            id = 1150
+                            name = VICTORY_POINTS_1150_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 1150
+                    }
+                }
+            }
+            if = { #Cali
+                limit = {
+                    FROM.FROM = { state = 378 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_378_GER
+                        set_province_name = {
+                            id = 9713
+                            name = VICTORY_POINTS_9713_GER
+                        }
+                        set_province_name = {
+                            id = 9671
+                            name = VICTORY_POINTS_9671_GER
+                        }
+                        set_province_name = {
+                            id = 9814
+                            name = VICTORY_POINTS_9814_GER
+                        }
+                        set_province_name = {
+                            id = 1562
+                            name = VICTORY_POINTS_1562_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9713
+                        reset_province_name = 9671
+                        reset_province_name = 9814
+                        reset_province_name = 1562
+                    }
+                }
+            }
+            if = { #Louisiana
+                limit = {
+                    FROM.FROM = { state = 371 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_371_GER
+                        set_province_name = {
+                            id = 7552
+                            name = VICTORY_POINTS_7552_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 7552
+                    }
+                }
+            }
+            if = { #Maryland
+                limit = {
+                    FROM.FROM = { state = 361 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_361_GER
+                        set_province_name = {
+                            id = 3957
+                            name = VICTORY_POINTS_3957_GER
+                        }
+                        set_province_name = {
+                            id = 6984
+                            name = VICTORY_POINTS_6984_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3957
+                        reset_province_name = 6984
+                    }
+                }
+            }
+            if = { #New York
+                limit = {
+                    FROM.FROM = { state = 358 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_358_GER
+                        set_province_name = {
+                            id = 3878
+                            name = VICTORY_POINTS_3878_GER
+                        }
+                        set_province_name = {
+                            id = 11654
+                            name = VICTORY_POINTS_11654_GER
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3878
+                        reset_province_name = 11654
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 875 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                            ARC = {
+                                OVERLORD = {
+                                    OR = {
+                                        tag = GER tag = DKR tag = WGR tag = DDR tag = AUS tag = SWI tag = LIE tag = LTD tag = LCO tag = LKR tag = WDZ tag = PRE tag = BAY tag = BAD tag = WUR tag = OLD tag = SHL
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if = {
+                        limit = {
+                            OR = {
+                                has_government = otherworldly
+                                ARC = {
+                                    OR = {
+                                        has_government = otherworldly
+                                        OVERLORD = {
+                                            has_government = otherworldly
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        FROM.FROM = {
+                            set_state_name = STATE_875_GER_otherworldly
+                            set_province_name = {
+                                id = 3691
+                                name = VICTORY_POINTS_3691_GER_otherworldly
+                            }
+                        }
+                    }
+                    else = {
+                        FROM.FROM = {
+                            set_state_name = STATE_875_GER
+                            set_province_name = {
+                                id = 3691
+                                name = VICTORY_POINTS_3691_GER
+                            }
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3691
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 58 }
+                }
+                if =  {
+                    limit = {
+                        tag = LKR
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_58_LKR
+                        set_province_name = {
+                            id = 9347
+                            name = VICTORY_POINTS_9347_LKR
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9347
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 91 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = LEO
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_91_LEO
+                        set_province_name = {
+                            id = 11479
+                            name = VICTORY_POINTS_11479_LEO
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11479
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 784 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = LEO
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_784_LEO
+                        set_province_name = {
+                            id = 3320
+                            name = VICTORY_POINTS_3320_LEO
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3320
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 103 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = DUN
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_103_DUN
+                        set_province_name = {
+                            id = 3924
+                            name = VICTORY_POINTS_3924_DUN
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 3924
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 797 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = DUN
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_797_DUN
+                        set_province_name = {
+                            id = 9833
+                            name = VICTORY_POINTS_9833_DUN
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 9833
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    FROM.FROM = { state = 21 }
+                }
+                if =  {
+                    limit = {
+                        OR = {
+                            tag = NIS
+                        }
+                    }
+                    FROM.FROM = {
+                        set_state_name = STATE_21_NIS
+                        set_province_name = {
+                            id = 11834
+                            name = VICTORY_POINTS_11834_NIS
+                        }
+                    }
+                }
+                else = {
+                    FROM.FROM = {
+                        reset_state_name = yes
+                        reset_province_name = 11834
+                    }
+                }
+            }
+        }
+    }
+}

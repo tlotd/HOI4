@@ -1,0 +1,465 @@
+leader_traits = {
+
+##################################
+# Common Traits
+##################################
+
+	SS_member = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			date > 1930.1.1
+			date < 1946.1.1
+			FROM = {
+				OR = {
+					original_tag = LTD
+					original_tag = GER
+					original_tag = WDZ
+					original_tag = WGR
+					original_tag = DDR
+					original_tag = AUS
+				}
+				has_government = fascism
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0.4
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+			army_attack_against_minor_factor = 0.05
+			wounded_chance_factor = 0.1
+			max_commander_army_size = -6
+			max_army_group_size  = -2
+		}
+	}
+
+	loyalist_aragorn = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				OR = {
+					original_tag = LTD
+				}
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_ksw = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = LTD
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_ltd = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = LTD
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_ltd_transatlantic = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = LTD
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_dun = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = DUN
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_leo = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = LEO
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_nis = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = NIS
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_krm = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = KRM
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_lkr = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = LKR
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_jsn = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = JSN
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_jap = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = JAP
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_ger = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = GER
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_ger_empire = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = GER
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_aus = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = AUS
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_aus_hun = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				OR = {
+					original_tag = AUS
+					original_tag = HUN
+				}
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_swi = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = SWI
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_lie = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = LIE
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_fra = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = FRA
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_eng = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = ENG
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_usa = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = USA
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+
+	loyalist_sov = {
+
+		type = land
+		trait_type = personality_trait
+
+		allowed = {
+			FROM = {
+				original_tag = SOV
+			}
+		}
+		
+		new_commander_weight = {
+			base = 0
+		}
+
+		non_shared_modifier = {
+			army_core_attack_factor = 0.05
+		}
+	}
+}

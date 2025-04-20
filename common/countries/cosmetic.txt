@@ -1,0 +1,319 @@
+LTD_Revolution = {
+ color = rgb { 10 10 10 }
+ color_ui = rgb { 10 10 10 }
+}
+
+LTD_WUR = {
+	color = rgb { 255 204 153 }
+	color_ui = rgb { 255 204 153 }
+}
+
+LTD_Southwest = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LTD_Empire = {
+	color = rgb { 0 112 67 }
+	color_ui = rgb { 0 112 67 }
+}
+
+LTD_LOTR = {
+	color = rgb { 30 30 30 }
+	color_ui = rgb { 30 30 30 }
+}
+
+LTD_GER = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LTD_GEREmpire = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LTD_GERUnified = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LTD_FRA = {
+	color = rgb { 40 40 255 }
+	color_ui = rgb { 40 40 255 }
+}
+
+LTD_FRAEmpire = {
+	color = rgb { 40 40 255 }
+	color_ui = rgb { 40 40 255 }
+}
+
+LTD_FRA_GER = {
+	color = rgb { 51 51 84 }
+	color_ui = rgb { 51 51 84 }
+}
+
+LTD_SouthernGER = {
+	color = rgb { 137 57 0 }
+	color_ui = rgb { 137 57 0 }
+}
+
+LTD_WesternGER = {
+	color = rgb { 30 30 30 }
+	color_ui = rgb { 30 30 30 }
+}
+
+LTD_SSState = {
+	color = rgb { 15 15 15 }
+	color_ui = rgb { 15 15 15 }
+}
+
+LTD_HRE = {
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 193 171 8 }
+}
+
+LTD_Transatlantic = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+LTD_European = {
+ color = rgb { 0 51 153 }
+ color_ui = rgb { 0 51 153 }
+}
+
+LTD_EU = {
+	color = rgb { 0 51 153 }
+	color_ui = rgb { 0 51 153 }
+}
+
+LTD_EuropeanFederation = {
+	color = rgb { 0 51 153 }
+	color_ui = rgb { 0 51 153 }
+}
+
+LTD_otherworldly = {
+ color = rgb { 0 0 0 }
+ color_ui = rgb { 0 0 0 }
+}
+
+LTD_GER_subject = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LTD_FRA_subject = {
+	color = rgb { 40 40 255 }
+	color_ui = rgb { 40 40 255 }
+}
+
+LTD_anarchism = {
+	color = rgb { 20 0 0 }
+	color_ui = rgb { 20 0 0 }
+}
+
+LTD_Empire = {
+	color = rgb { 0 112 67 }
+	color_ui = rgb { 0 112 67 }
+}
+
+LTD_NIS = {
+	color = rgb { 102  0  204 }
+	color_ui = rgb { 102  0  204 }
+}
+
+LAM_LTD_Empire_subject = {
+	color = rgb { 0 112 67 }
+	color_ui = rgb { 0 112 67 }
+}
+
+LAF_LTD_Empire_subject = {
+	color = rgb { 0 112 67 }
+	color_ui = rgb { 0 112 67 }
+}
+
+LAS_LTD_Empire_subject = {
+	color = rgb { 0 112 67 }
+	color_ui = rgb { 0 112 67 }
+}
+
+LAM_LTD_GER_subject = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LAD_LTD_GER_subject = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LAS_LTD_GER_subject = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LAM_LTD_HRE_subject = {
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 193 171 8 }
+}
+
+LAD_LTD_HRE_subject = {
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 193 171 8 }
+}
+
+LAS_LTD_HRE_subject = {
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 193 171 8 }
+}
+
+LAM_LTD_Transatlantic_subject = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+LAF_LTD_Transatlantic_subject = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+LAS_LTD_Transatlantic_subject = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+FRA_LOF = {
+ color = { 57  113  228 }
+ color_ui = { 57  113  228 }
+}
+
+LKR_GER = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LKR_GermanEmpire = {
+	color = HSV { 0.1 0.15 0.4 }
+	color_ui = rgb { 138 155 116 }
+}
+
+LKR_HRE = {
+	color = rgb { 193 171 8  }
+	color_ui = rgb { 193 171 8 }
+}
+
+DUN_AustriaHungary = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
+DUN_AUS_subject = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
+DUN_TheEmpire = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+
+DUN_GalacticEmpire = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+
+DUN_EternalGalacticEmpire = {
+	color = rgb { 0 0 0 }
+	color_ui = rgb { 0 0 0 }
+}
+
+LEO_AUS_subject = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
+TOR_AUS_subject = {
+	color = rgb { 194 198 215 }
+	color_ui = rgb { 255 255 255 }
+}
+
+NIS_Rome = {
+ color = rgb { 128 0 0 }
+ color_ui = rgb { 128 0 0 }
+}
+
+NIS_WestFranks = {
+	color = rgb { 60 0 0 }
+	color_ui = rgb { 60 0 0  }
+}
+
+NIS_FRA = {
+	color = rgb { 40 40 255 }
+	color_ui = rgb { 40 40 255 }
+}
+
+NIS_LOTR = {
+	color = rgb { 60 30 30 }
+	color_ui = rgb { 60 30 30 }
+}
+
+DUN_Rome = {
+ color = rgb { 128 0 0 }
+ color_ui = rgb { 128 0 0 }
+}
+
+DUN_Byzantine = {
+	color = rgb { 128 0 0 }
+	color_ui = rgb { 128 0 0 }
+   }
+
+DUN_communism = {
+	color = rgb { 180 0 0 }
+	color_ui = rgb { 180 0 0 }
+}
+
+DUN_LOTR = {
+	color = rgb { 60 30 30 }
+	color_ui = rgb { 60 30 30 }
+}
+
+CAL_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+TEX_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+ALA_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+HAW_state = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+ALA_territory = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+HAW_territory = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+ARC_LTD = {
+ color = rgb { 255 255 255 }
+ color_ui = rgb { 255 255 255 }
+}
+
+ARC_otherworldly = {
+ color = rgb { 0 0 0 }
+ color_ui = rgb { 0 0 0 }
+}

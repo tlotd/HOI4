@@ -1,0 +1,7 @@
+ ###########################
+# Drachenpakt Events
+###########################
+
+
+add_namespace = news_drachenpakt
+

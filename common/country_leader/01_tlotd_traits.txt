@@ -1,0 +1,259 @@
+leader_traits = {
+
+	### Generic ###
+
+	revolutionary_unrest = {
+		random = no
+		stability_factor = -1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	### LTD ###
+
+	industrial_caesar = {
+		sprite = 19
+		random = no
+		consumer_goods_factor = -0.15
+		production_speed_industrial_complex_factor = 0.1
+		production_speed_infrastructure_factor = 0.1
+		production_speed_rail_way_factor = 0.1
+		production_speed_synthetic_refinery_factor = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	prince_of_the_black_forest = {
+		random = no
+		army_core_attack_factor = 0.125
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	king_of_the_germans = {
+		random = no
+		monarchism_drift = 0.05
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	alpine_emperor = {
+		random = no
+		monarchism_drift = 0.1
+		stability_factor = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	lead_by_foreigners = {
+		random = no
+		stability_factor = -0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ranger_of_the_north = {
+		random = no
+		subversive_activites_upkeep = -0.25
+		civilian_intel_factor = 0.25
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	bearer_of_the_shards_of_narsil = {
+		random = no
+		offence = 0.0625
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	weilder_of_anduril_flame_of_the_west = {
+		random = no
+		offence = 0.125
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	high_king_of_the_men_of_the_west = {
+		random = no
+		monarchism_drift = 0.1
+		stability_factor = 0.1
+		army_core_attack_factor = 0.125
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	all_seeing_eye = {
+		random = no
+		intel_network_gain_factor = 1
+		decryption_factor = 1
+		army_intel_factor = 1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	#LKR
+
+	the_blonde_crusader = {
+		random = no
+		offence = 0.05
+		stability_factor = 0.05
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	#DUN
+
+	diabolically_brilliant_admiral = {
+		random = no
+		naval_damage_factor = 0.1
+		naval_speed_factor = 0.1
+		navy_org_factor = 0.1
+		navy_max_range_factor = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	feared_by_his_subjects = {
+		random = no
+		subjects_autonomy_gain = -0.5
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	omen_of_death = {
+		random = no
+		offence = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	#advisors
+
+	local_punk = {
+		random = no
+		# Boosts Anarchism
+		sprite = 13
+		no_government_drift = 0.1
+	}
+
+	flames_of_inspiration = {
+		random = no
+		sprite = 12
+		research_speed_factor = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	population_grower = {
+		random = no
+		sprite = 18
+		monthly_population = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	mad_mass_warfare_master = {
+		random = no
+		sprite = 18
+		supply_consumption_factor = -0.035
+        conscription = 0.005
+        consumer_goods_factor = -0.035
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	iron_fister = {
+		random = no
+		sprite = 7
+		breakthrough_factor = 0.1
+		army_org_regain = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	staffelleiter = {
+		random = no
+		sprite = 18
+		non_core_manpower = 0.08
+		stability_factor = 0.02
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	professional_yapper = {
+		random = no
+		sprite = 18
+		compliance_gain = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	drachenlord = {
+		random = no
+		sprite = 13
+		army_speed_factor = -0.01
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	furry_overlord = {
+		random = no
+		sprite = 13
+		equipment_bonus = {
+			support_equipment = {
+				build_cost_ic = -0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+
+	monarchist_traditionalist = {
+		random = no
+		# Boosts Monarchism
+		sprite = 13
+		monarchism_drift = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	confessor_of_god = {
+		random = no
+		# Boosts Theocracy
+		sprite = 13
+		theocracy_drift = 0.1
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	vice_president = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

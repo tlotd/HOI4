@@ -1,0 +1,157 @@
+﻿###########################
+# news_TOR Events
+###########################
+
+add_namespace = news_TOR
+
+country_event = { #invite
+	id = news_TOR.103
+	title = news_TOR.103.t
+	desc = news_TOR.103.d
+	picture = GFX_report_event_arctic_exploration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_TOR.103.a
+		ai_chance = { factor = 50 }
+		875 = {
+			add_core_of = TOR
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = invite_recieved
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	option = {
+		name = news_TOR.103.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = news_TOR.104
+	title = news_TOR.104.t
+	desc = news_TOR.104.d
+	picture = GFX_report_event_worried_french
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_TOR.104.a
+		ai_chance = { factor = 90 }
+		TOR = {
+			country_event = news_TOR.105
+			add_to_faction = ROOT
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "TOR"
+			value = 200
+		}
+	}
+
+	option = {
+		name = news_TOR.104.b
+		ai_chance = { factor = 10 }
+		TOR = { country_event = news_TOR.106 }
+	}
+}
+
+# [Country] Accepts
+country_event = {
+	id = news_TOR.105
+	title = news_TOR.105.t
+	desc = news_TOR.105.d
+	picture = GFX_report_event_soldiers_in_france
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_TOR.105.a
+		effect_tooltip = {
+			add_to_faction = FROM
+		}
+	}
+}
+
+# [Country] Refuses
+country_event = {
+	id = news_TOR.106
+	title = news_TOR.106.t
+	desc = news_TOR.106.d
+	picture = GFX_report_event_finnish_letter
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news_TOR.106.a
+	}
+}
+country_event = {
+	id = news_TOR.911
+	title = news_TOR.911.t
+	desc = news_TOR.911.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_TOR.911.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LTD_subject
+		LTD = {
+			set_country_flag = LTD_subject
+			set_autonomy = {
+				target = TOR
+				autonomy_state = autonomy_ltd_subject
+			}
+		}
+		if = {
+			limit = {
+				LTD = {
+					has_cosmetic_tag = LTD_Transatlantic
+				}
+			}
+			set_cosmetic_tag = TOR_LTD_Transatlantic_subject
+		} else_if = {
+			limit = {
+				LTD = {
+					OR = {
+						has_cosmetic_tag = LTD_GER
+						has_cosmetic_tag = LTD_GEREmpire
+						has_cosmetic_tag = LTD_GERUnified
+					}
+				}
+			}
+			set_cosmetic_tag = TOR_LTD_GER_subject
+		} else = {
+			set_cosmetic_tag = TOR_LTD_subject
+		}
+	}
+	option = {
+		name = news_TOR.911.b
+		ai_chance = { factor = 100 }
+		LTD = {
+			create_wargoal = {
+				type = take_state_focus
+				target = TOR
+				expire = 0
+				generator = { 71 }
+			}
+		}
+		add_war_support = 0.1
+	}
+}

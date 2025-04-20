@@ -1,0 +1,20 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = global_news_NIS_lotr
+
+news_event = { #isengard
+	id = global_news_NIS_lotr.100
+	title = global_news_NIS_lotr.100.t
+	desc = global_news_NIS_lotr.100.d
+	picture = GFX_news_event_barad_dur
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_NIS_lotr.100.a
+	}
+}

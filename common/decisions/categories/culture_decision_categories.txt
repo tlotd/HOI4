@@ -1,0 +1,15 @@
+state_culture = {
+	icon = GFX_decision_category_border_war
+	priority = 5
+
+		allowed = {
+
+		}
+
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+}

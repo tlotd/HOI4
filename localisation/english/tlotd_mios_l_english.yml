@@ -1,0 +1,22 @@
+﻿l_english:
+ #LTD
+ LTD_porsche_organization:0 "Porsche"
+ LTD_drachenschanzwerke_organization:0 "Drachenschanz-Werke"
+ LTD_mercedes_benz_organization:0 "Mercedes-Benz"
+
+ LTD_luftschiffwerke_lilienthal_organization:0 "Luftschiffwerke Lilienthal"
+ LTD_silberstahl_ruestungswerke_organization:0 "Silberstahl Rüstungswerke"
+ LTD_einsatzmanufaktur_edelweiss_organization:0 "Einsatzmanufaktur Edelweiss"
+ LTD_schwerindustriegenossenschaft_dicke_rohre_organization:0 "Schwerindustriegenossenschaft Dicke Rohre"
+
+ LTD_schaffe_schaffe_heisle_baua:0 "Schaffe, Schaffe, Heisle Baua"
+
+ #DUN
+ DUN_blas_tech_industries_organization:0 "BlasTech Industries"
+ DUN_kuat_drive_yards_organization:0 "Kuat Drive Yards"
+
+ #NIS
+ NIS_sakura_arms_conglomerate_organization:0 "Sakura Arms Conglomerate"
+
+ #KRM
+ KRM_cartel_arms_syndicate_organization:0 "Cartel Arms Syndicate"

@@ -1,0 +1,475 @@
+﻿l_english:
+
+ league_of_nations:0 "League of Nations"
+ league_of_nations_desc:0 "Founded January 10th 1920 as a result of the Paris Peace Conference the League of Nations, the first worldwide intergovernmental organisation whose principal mission is to maintain world peace."
+ wdz_mandate:0 "[WDZ.GetName] Mandate"
+ ltd_mandate:0 "[LTD.GetName] Mandate"
+ dnz_mandate:0 "[DNZ.GetName] Mandate"
+ end_ltd_mandate:0 "Start talks on ending [LTD.GetNameDef] Mandate"
+ end_ltd_mandate_1:0 "Advance talks on ending [LTD.GetNameDef] Mandate"
+ end_ltd_mandate_2:0 "Finalize talks on ending [LTD.GetNameDef] Mandate"
+ end_ltd_mandate_3:0 "End [LTD.GetNameDef] Mandate"
+ 909_dmz:0 "[909.GetName] Demilitarized Zone"
+ 797_dmz:0 "[797.GetName] Demilitarized Zone"
+ leave_LON:0 "Leave [LON.GetNameDef]"
+
+ decision_cost_PP_50_IE_500_MP_500:0 "£pol_power  §Y50§! £infantry_equipment_text_icon  §Y500§! £manpower_texticon  §Y500§!"
+ decision_cost_PP_50_IE_500_MP_500_blocked:0 "£pol_power  §R50§! £infantry_equipment_text_icon  §R500§! £manpower_texticon  §R500§!"
+ decision_cost_PP_50_IE_500_MP_500_tooltip:1 "It costs £pol_power  §Y50§! £infantry_equipment_text_icon  §Y500§! £manpower_texticon  §Y500§! to take the decision"
+
+ decision_cost_PP_10_MP_10:0 "£pol_power  §Y10§! £manpower_texticon  §Y10§!"
+ decision_cost_PP_10_MP_10_blocked:0 "£pol_power  §R10§! £manpower_texticon  §R10§!"
+ decision_cost_PP_10_MP_10_tooltip:1 "It costs £pol_power  §Y10§! £manpower_texticon  §Y10§! to take the decision"
+
+ anti_monarchist_raids:0 "Anti-Monarchist Raids"
+ anti_monarchist_raids_desc:0 "We must crack down on monarchist elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+ anti_theocratic_raids:0 "Anti-Theocratic Raids"
+ anti_theocratic_raids_desc:0 "We must crack down on theocratic elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+ anti_corporatocratic_raids:0 "Anti-Corporatocratic Raids"
+ anti_corporatocratic_raids_desc:0 "We must crack down on corporatocratic elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+ anti_otherworldly_raids:0 "Anti-Otherworldly Raids"
+ anti_otherworldly_raids_desc:0 "We must crack down on otherworldly elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+
+ ban_monarchist_party:0 "Ban Monarchism"
+ ban_monarchist_party_tt:0 "Change in popularity of Monarchism: §G-[?party_popularity@monarchism|%0]§W."
+ ban_theocratic_party:0 "Ban Theocratic Circles"
+ ban_theocratic_party_tt:0 "Change in popularity of Theocracy: §G-[?party_popularity@theocracy|%0]§W."
+ ban_corporatocratic_party:0 "Ban Megacorps"
+ ban_corporatocratic_party_tt:0 "Change in popularity of Corporatocracy: §G-[?party_popularity@corporatocratic|%0]§W."
+ ban_otherworldly_party:0 "Banish the Voices of the Void"
+ ban_otherworldly_party_tt:0 "Change in popularity of Otherworldly: §G-[?party_popularity@otherworldly|%0]§W."
+
+ institute_press_censorship_monarchist_state:0 "Institute Press Censorship"
+ institute_press_censorship_monarchist_state_desc:0 "These are dangerous times and we can't allow dissenting voices to tear our country apart. Restricting the freedome of the press is necessary to ensure that the truth is heard loud and clear."
+ institute_press_censorship_theocratic_state:0 "Institute Press Censorship"
+ institute_press_censorship_theocratic_state_desc:0 "These are dangerous times and we can't allow dissenting voices to tear our country apart. Restricting the freedome of the press is necessary to ensure that the truth is heard loud and clear."
+
+ monarchist_support_on_the_rise:0 "Monarchist Support on the Rise"
+ monarchist_support_on_the_rise_desc:0 "The sheer incompetence of the current goverment to lead our precous nation has left a sour taste in the mouths of our people. The rumors of a descendent of an old royal bloodline resurfacing grow louder day by day."
+ turn_monarchist:0 "Turn Monarchist"
+
+ followers_of_the_faith_rise_up:0 "Followers of the Faith Rise Up"
+ followers_of_the_faith_rise_up_desc:0 "No longer shall the ones closest to god live under a system that does not follow him. Rise up, brothers of the faith."
+ turn_theocratic:0 "Turn Theocratic"
+
+######
+
+ establish_mithril_mines_wurttemberg:0 "Create the Würtemberg Mithril Refinery"
+ improve_the_wurttemberg_mithril_company:0 "Improve the Würtemberg Mithril Refinery"
+ establish_mithril_mines_east_swiss_alpes:0 "Establish Mithril Mines in the East Swiss Alpes"
+ establish_mithril_mines_voralberg:0 "Dig in the Voralberg for Mithril"
+ establish_mithril_mines_tyrol:0 "Establish the Tyrol Mithril Mining Company"
+
+ establish_fossil_mines_jura_mountains:0 "Establish the Jura Mountains Archaeology Site"
+
+ establish_stahlinum_plant_wilno:0 "Create the Wilno Stahlinum Plant"
+
+#######
+
+ LTD_debug:0 "Debug"
+ LTD_enable_debug_decisions:0 "Enable Decisions"
+ LTD_enable_debug_decisions_desc:0 "Enables Debug Decisions intended for Development and Softlocks."
+
+#######
+
+ LTD_reforge_the_sword_that_was_broken:0 "Reforge the Sword that was Broken"
+ LTD_reforge_the_sword_that_was_broken_desc:0 "Out of the shards of Narsil, a new Weapon shall be forged. Repaird with Mithril in the Moonlight, shall it grant the power to unite the Men of the West in battle!"
+ LTD_decision_reforge_sword:0 "Reforge the Sword"
+ LTD_decision_reforge_sword_desc:0 "Very bright was that sword when it was made whole again; the light of the sun shone redly in it, and the light of the moon shone cold, and its edge was hard and keen."
+
+ LTD_unstable_state:0 "Unstable New State"
+ LTD_unstable_state_desc:0 "With tensions rising in the world, some call for drastic action in a new political direction."
+ LTD_decision_revolutionary_unrest_240:0 "Spark Revolutionary Unrest"
+ LTD_decision_revolutionary_unrest_240_desc:0 ""
+ LTD_decision_revolutionary_unrest_42:0 "Spark Revolutionary Unrest"
+ LTD_decision_revolutionary_unrest_42_desc:0 ""
+ LTD_decision_revolutionary_unrest_978:0 "Spark Revolutionary Unrest"
+ LTD_decision_revolutionary_unrest_978_desc:0 ""
+
+ LTD_cosmetic:0 "Cosmetic Menu"
+ LTD_cosmetic_desc:0 "Change the appearance of certain aspects of the mod."
+ LTD_decision_change_leader_portrait_aragorn:0 "Change Leader Portrait"
+ LTD_decision_change_leader_portrait_aragorn_desc:0 ""
+ LTD_decision_change_leader_portrait_aragorn_emperor:0 "Change Leader Portrait 2"
+ LTD_decision_change_leader_portrait_aragorn_emperor_desc:0 ""
+
+ LTD_colonial_ambitions:0 "Colonial Ambitions"
+ LTD_colonial_ambitions_desc:0 "Our new found Empire has conquered lands beyond our home Continent, we now have the ability to create Colony States as a way to manage those regions."
+ LTD_establish_LAM:0 "Establish our American Colony"
+ LTD_establish_LAM_desc:0 ""
+ LTD_expand_LAM:0 "Expand [LAM.GetNameDef]"
+ LTD_expand_LAM_desc:0 ""
+ LTD_america_requirement:0 "Has full control of §YAny State§! in §YAmerica§!"
+ LTD_establish_LAF:0 "Establish our African Colony"
+ LTD_establish_LAF_desc:0 ""
+ LTD_expand_LAF:0 "Expand [LAF.GetNameDef]"
+ LTD_expand_LAF_desc:0 ""
+ LTD_africa_requirement:0 "Has full control of §YAny State§! in §YAfrica§!"
+ LTD_establish_LAS:0 "Establish our Asian Colony"
+ LTD_establish_LAS_desc:0 ""
+ LTD_expand_LAS:0 "Expand [LAS.GetNameDef]"
+ LTD_expand_LAS_desc:0 ""
+ LTD_asia_requirement:0 "Has full control of §YAny State§! in §YAsia§!"
+
+ LTD_path_to_glory:0 "Path To Glory"
+ LTD_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+
+ LTD_decision_unite_the_men_of_the_west:0 "Unite the Men of the West"
+ LTD_decision_unite_the_men_of_the_west_desc:0 "A day may come when the courage of men fails, when we forsake our friends and break all bonds of fellowship, but it is not this day. An hour of wolves and shattered shields, when the age of men comes crashing down, but it is not this day! This day we fight! By all that you hold dear on this good Earth, I bid you stand, Men of the West! -Aragorn"
+
+ LTD_decision_rename_capital_monarchist_lotr:0 "Rename the Capital to Minas Tirith"
+ LTD_decision_rename_capital_monarchist_lotr_desc:0 ""
+ LTD_decision_build_imperial_castle:0 "Construction of the Imperial Castle"
+ LTD_decision_build_imperial_castle_desc:0 ""
+ LTD_build_imperial_palace_landmark_tt:0 "Replaces the §HNew Palace§! with the §HImperial Palace§!."
+ LTD_capital_improvement_already_built:0 "Has not already build a §HCapital Improvement§!."
+ LTD_decision_unite_the_alpes:0 "Unite the Alpes"
+ LTD_decision_unite_the_alpes_desc:0 ""
+ LTD_decision_form_kingdom_of_germany:0 "Form Kingdom of Germany"
+ LTD_decision_form_kingdom_of_germany_desc:0 ""
+ LTD_decision_unite_the_empire:0 "Unite the Empire"
+ LTD_decision_unite_the_empire_desc:0 ""
+ LTD_decision_form_german_empire:0 "Form the German Empire"
+ LTD_decision_form_german_empire_desc:0 ""
+ LTD_decision_unite_the_kingdoms_of_germany:0 "Unite the Kingdoms of Germany"
+ LTD_decision_unite_the_kingdoms_of_germany_desc:0 ""
+ LTD_decision_request_imperial_lands:0 "Request Imperial Lands"
+ LTD_decision_request_imperial_lands_desc:0 ""
+ LTD_decision_form_holy_roman_empire:0 "Form the Holy Roman Empire"
+ LTD_decision_form_holy_roman_empire_desc:0 ""
+
+ LTD_decision_restore_the_french_empire:0 "Restore the French Empire"
+ LTD_decision_restore_the_french_empire_desc:0 ""
+ LTD_is_french_requirement:0 "Is §HFrench§!.
+ LTD_is_french_requirement_NOT:0 "Is not §HFrench§!.
+
+ LTD_decision_form_franco_german_empire:0 "Form the Franco-German Empire"
+ LTD_decision_form_franco_german_empire_desc:0 ""
+
+ LTD_decision_form_the_transatlantic_empire:0 "Form the Transatlantic Empire"
+ LTD_decision_form_the_transatlantic_empire_desc:0 ""
+ LTD_decision_transatlantic_expansion:0 "Expand the Transatlantic Empire"
+ LTD_decision_transatlantic_expansion_desc:0 ""
+ LTD_transatlantic_expansion_requirement:0 "Has completed the decision §HForm the Transatlantic Empire§!."
+
+ LTD_decision_move_capital_ottawa:0 "Move Capital to Ottawa"
+ LTD_decision_move_capital_ottawa_desc:0 ""
+ LTD_decision_move_capital_vancover:0 "Move Capital to Vancover"
+ LTD_decision_move_capital_vancover_desc:0 ""
+ LTD_decision_move_capital_new_york_city:0 "Move Capital to New York City"
+ LTD_decision_move_capital_new_york_city_desc:0 ""
+ LTD_decision_move_capital_washington_dc:0 "Move Capital to Washington D.C."
+ LTD_decision_move_capital_washington_dc_desc:0 ""
+ LTD_decision_move_capital_dallas:0 "Move Capital to Dallas"
+ LTD_decision_move_capital_dallas_desc:0 ""
+ LTD_decision_move_capital_los_angeles:0 "Move Capital to Los Angeles"
+ LTD_decision_move_capital_los_angeles_desc:0 ""
+
+ LTD_divine_right:0 "Divine Right"
+ LTD_divine_right_desc:0 "Our holy nation is on a path to a divine Empire, uniting Europe under a strong and stable theocracy."
+
+ LTD_decision_rename_capital_theocratic:0 "Rename the Capital"
+ LTD_decision_rename_capital_theocratic_desc:0 ""
+ LTD_decision_form_the_holy_state:0 "Form the Holy State"
+ LTD_decision_form_the_holy_state_desc:0 ""
+
+ LTD_weltreich:0 "Weltreich"
+ LTD_weltreich_desc:0 "Our glorious nation is on a path to glory, uniting the world under one Reich."
+
+ LTD_decision_rename_capital_fascism:0 "Rename the Capital"
+ LTD_decision_rename_capital_fascism_desc:0 ""
+ LTD_decision_bergreich:0 "Form the Bergreich"
+ LTD_decision_bergreich_desc:0 ""
+ LTD_decision_westreich:0 "Form the Westreich"
+ LTD_decision_westreich_desc:0 ""
+ LTD_decision_ss_ordensstaat:0 "Found the SS-Ordensstaat"
+ LTD_decision_ss_ordensstaat_desc:0 ""
+ LTD_decision_german_reich:0 "Form the German Reich"
+ LTD_decision_german_reich_desc:0 ""
+ LTD_decision_form_the_transatlantic_reich:0 "Form the Transatlantic Reich"
+ LTD_decision_form_the_transatlantic_reich_desc:0 ""
+
+ LTD_decision_sauron_ruler_of_the_earth:0 "Sauron, Ruler of the Earth"
+ LTD_decision_sauron_ruler_of_the_earth_desc:0 ""
+
+ LTD_worker_state:0 "Worker State"
+ LTD_worker_state_desc:0 "Our glorious nation is on a path to glory, uniting the world in a communist utopia."
+
+ LTD_decision_rename_capital_communist:0 "Rename the Capital"
+ LTD_decision_rename_capital_communist_desc:0 ""
+ LTD_decision_unite_the_southern_workers:0 "Unite the southern Workers"
+ LTD_decision_unite_the_southern_workers_desc:0 ""
+
+ LTD_decision_form_german_democratic_republic:0 "Form German Democratic Republic"
+ LTD_decision_form_german_democratic_republic_desc:0 ""
+ LTD_decision_form_communist_roman_republic:0 "Form Communist Roman Republic"
+ LTD_decision_form_communist_roman_republic_desc:0 "" 
+
+ LTD_anarchism_knows_no_borders:0 "Anarchism Knows No Borders"
+ LTD_anarchism_knows_no_borders_desc:0 "Bowing to no master, we fight for the complete liberation of every human on this earth!"
+
+ LTD_decision_category_accession_talks:0 "Accession Talks"
+ LTD_decision_category_accession_talks_desc:0 ""
+
+ LTD_decision_accession_talks:0 "Open Accession Talks"
+
+ LTD_decision_category_federation_talks:0 "Federation Talks"
+ LTD_decision_category_federation_talks_desc:0 ""
+
+ LTD_decision_federation_talks:0 "Open Federation Talks"
+
+ LTD_puppet_management:0 "Puppet Management"
+
+ LTD_decision_puppet_LKR:0 "Offer to puppet [LKR.GetNameDef]"
+ LTD_decision_puppet_LKR_desc:0 ""
+ LTD_decision_puppet_LEO:0 "Offer to puppet [LEO.GetNameDef]"
+ LTD_decision_puppet_LEO_desc:0 ""
+ LTD_decision_puppet_DUN:0 "Offer to puppet [DUN.GetNameDef]"
+ LTD_decision_puppet_DUN_desc:0 ""
+ LTD_decision_puppet_NIS:0 "Offer to puppet [NIS.GetNameDef]"
+ LTD_decision_puppet_NIS_desc:0 ""
+ LTD_decision_puppet_KRM:0 "Offer to puppet [KRM.GetNameDef]"
+ LTD_decision_puppet_KRM_desc:0 ""
+ LTD_decision_puppet_JSN:0 "Offer to puppet [JSN.GetNameDef]"
+ LTD_decision_puppet_JSN_desc:0 ""
+ LTD_decision_occupy_france_desc:0 ""
+ LTD_brand_american_puppet:0 "Brand American Puppet"
+ LTD_brand_american_puppet_desc:0 ""
+ LTD_decision_occupy_france:0 "Occupy France"
+ LTD_decision_occupy_france_desc:0 ""
+ LTD_decision_annex_german_puppet:0 "Annex German Puppet"
+ LTD_decision_annex_german_puppet_desc:0 ""
+ LTD_decision_annex_french_puppet:0 "Annex French Puppet"
+ LTD_decision_annex_french_puppet_desc:0 ""
+ LTD_decision_annex_italian_puppet:0 "Annex Italian Puppet"
+ LTD_decision_annex_italian_puppet_desc:0 ""
+ LTD_decision_annex_spanish_puppet:0 "Annex Spanish Puppet"
+ LTD_decision_annex_spanish_puppet_desc:0 ""
+
+ LTD_beacon_of_hope:0 "Beacon of Hope"
+ LTD_beacon_of_hope_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable democracy."
+
+ LTD_call_forth_the_nazgul:0 "Call forth the Nazgûl"
+ LTD_call_forth_the_nazgul_desc:0 ""
+ LTD_call_for_the_white_wizard:0 "Call for the White Wizard"
+ LTD_call_for_the_white_wizard_desc:0 ""
+
+ LTD_decision_restore_the_roman_empire:0 "Restore the Roman Empire"
+ LTD_decision_restore_the_roman_empire_desc:0 ""
+ LTD_decision_form_the_mare_nostrum:0 "Form the Mare Nostrum"
+ LTD_decision_form_the_mare_nostrum_desc:0 ""
+
+ LTD_decision_expand_africa:0 "Expand into Africa"
+ LTD_decision_expand_africa_desc:0 "Expand our Emprie into africa and core any state there."
+
+ LKR_path_to_glory:0 "Path To Glory"
+ LKR_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+
+ LKR_decision_form_hanseatic_league:0 "Form the Hanseatic League"
+ LKR_decision_form_hanseatic_league_desc:0 ""
+ LKR_decision_unite_the_north:0 "Unite the North"
+ LKR_decision_unite_the_north_desc:0 ""
+
+ LKR_decision_form_german_empire:0 "Form the German Empire"
+ LKR_decision_form_german_empire_desc:0 ""
+ LKR_decision_form_holy_roman_empire:0 "Form the Holy Roman Empire"
+ LKR_decision_form_holy_roman_empire_desc:0 ""
+
+ LKR_weltreich:0 "Weltreich"
+ LKR_weltreich_desc:0 "Our glorious nation is on a path to glory, uniting the world under one Reich."
+
+ LKR_decision_nordseereich:0 "Form the Nordseereich"
+ LKR_decision_nordseereich_desc:0 ""
+
+ LKR_worker_state:0 "Worker State"
+ LKR_worker_state_desc:0 "Our glorious nation is on a path to glory, uniting the world in a communist utopia."
+
+ LKR_decision_larry_peoples_republic:0 "Form the Larry Peoples Republic"
+ LKR_decision_larry_peoples_republic_desc:0 ""
+
+
+ DUN_path_to_glory:0 "Path To Glory"
+ DUN_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+
+ DUN_decision_form_adriatic_empire:0 "Form the Fick-Dich Empire"
+ DUN_decision_form_adriatic_empire_desc:0 ""
+ DUN_decision_form_chiss_empire:0 "Form the Chiss Empire"
+ DUN_decision_form_chiss_empire_desc:0 ""
+
+ DUN_decision_form_austria_hungary:0 "Unite Austria-Hungary"
+ DUN_decision_form_austria_hungary_desc:0 ""
+
+ DUN_decision_restore_the_roman_empire:0 "Restore the Roman Empire"
+ DUN_decision_restore_the_roman_empire_desc:0 ""
+ DUN_decision_restore_the_byzantine_empire:0 "Restore the Byzantine Empire"
+ DUN_decision_restore_the_byzantine_empire_desc:0 ""
+ DUN_decision_form_the_mare_nostrum:0 "Form the Mare Nostrum"
+ DUN_decision_form_the_mare_nostrum_desc:0 ""
+ DUN_mare_nostrum_requirement:0 "Has full control of §YEvery State§! around the §YMediterranean Sea§!"
+
+ DUN_decision_expand_africa:0 "Expand into Africa"
+ DUN_decision_expand_africa_desc:0 "Expand our Emprie into africa and core any state there."
+ DUN_africa_requirement:0 "Has full control of §YAny Non-Core State§! in §YAfrica§!"
+
+ DUN_expansionist_defense:0 "Expansionist Defense"
+ DUN_expansionist_defense_desc:0 "Our glorious nation is on a path to glory, uniting the world under one Reich."
+
+ DUN_decision_unite_the_empire:0 "Unite The Empire"
+ DUN_decision_unite_the_empire_desc:0 ""
+ DUN_decision_expand_the_empire:0 "Expand The Empire"
+ DUN_decision_expand_the_empire_desc:0 ""
+ DUN_decision_form_the_first_galactic_empire:0 "Form the First Galactic Empire"
+ DUN_decision_form_the_first_galactic_empire_desc:0 ""
+ DUN_decision_form_the_eternal_galactic_empire:0 "Form the Eternal Galactic Empire"
+ DUN_decision_form_the_eternal_galactic_empire_desc:0 ""
+
+ DUN_decision_expand_the_empire_2:0 "Expand The Empire (Alternative)"
+ DUN_decision_expand_the_empire_2_desc:0 ""
+ DUN_decision_form_the_first_galactic_empire_2:0 "Form the First Galactic Empire (Alternative)"
+ DUN_decision_form_the_first_galactic_empire_2_desc:0 ""
+ DUN_decision_form_the_eternal_galactic_empire_2:0 "Form the Eternal Galactic Empire (Alternative)"
+ DUN_decision_form_the_eternal_galactic_empire_2_desc:0 ""
+
+ DUN_decision_sauron_ruler_of_the_earth:0 "Sauron, Ruler of the Earth"
+ DUN_decision_sauron_ruler_of_the_earth_desc:0 ""
+
+ DUN_worker_state:0 "Worker State"
+ DUN_worker_state_desc:0 "Our glorious nation is on a path to glory, uniting the world in a communist utopia."
+
+ DUN_decision_form_adriatic_commune:0 "Form the Fick-Dich Union"
+ DUN_decision_form_adriatic_commune_desc:0 ""
+ DUN_decision_form_socialist_roman_republic:0 "Socialist Roman Republic"
+ DUN_decision_form_socialist_roman_republic_desc:0 ""
+
+ LEO_path_to_soviet_glory:0 "Path To Soviet Glory"
+ LEO_path_to_soviet_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable communist gouvernment."
+ LEO_decision_unite_communist:0 "Unite the Communist World"
+ LEO_decision_unite_communist_desc:0 ""
+
+ LEO_path_to_glory:0 "Path To Glory"
+ LEO_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+ LEO_decision_unite:0 "Form the Wachsmalstift Empire"
+ LEO_decision_unite_desc:0 ""
+ LEO_decision_communistan_empire:0 "Form the Communistan Empire"
+ LEO_decision_communistan_empire_desc:0 ""
+
+ NIS_path_to_glory:0 "Path To Glory"
+ NIS_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+
+ NIS_from_kuril_to_okinawa:0 "From Kuril to Okinawa"
+ NIS_from_kuril_to_okinawa_desc:0 ""
+
+ NIS_decision_unite_the_mediterranean:0 "Unite the Mediterranean"
+ NIS_decision_unite_the_mediterranean_desc:0 ""
+
+ NIS_decision_restore_the_kingdom_of_the_west_franks:0 "Restore the Kingdom of the West Franks"
+ NIS_decision_restore_the_kingdom_of_the_west_franks_desc:0 ""
+ NIS_decision_restore_the_french_empire:0 "Restore the French Empire"
+ NIS_decision_restore_the_french_empire_desc:0 ""
+
+ NIS_decision_restore_the_roman_empire:0 "Restore the Roman Empire"
+ NIS_decision_restore_the_roman_empire_desc:0 ""
+ NIS_decision_form_the_mare_nostrum:0 "Form the Mare Nostrum"
+ NIS_decision_form_the_mare_nostrum_desc:0 ""
+
+ NIS_decision_expand_africa:0 "Expand into Africa"
+ NIS_decision_expand_africa_desc:0 "Expand our Emprie into africa and core any state there."
+ NIS_africa_requirement:0 "Has full control of §YAny Non-Core State§! in §YAfrica§!"
+
+ NIS_expansionist_defense:0 "Expansionist Defense"
+ NIS_expansionist_defense_desc:0 "Our glorious nation is on a path to glory, uniting the world under one Reich."
+
+ NIS_decision_sauron_ruler_of_the_earth:0 "Sauron, Ruler of the Earth"
+ NIS_decision_sauron_ruler_of_the_earth_desc:0 ""
+
+ KRM_path_to_glory:0 "Path To Glory"
+ KRM_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting South America under a strong and stable monarchy."
+
+ KRM_decision_claim_mesopotamica:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_desc:0 ""
+ KRM_decision_claim_mesopotamica_1:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_1_desc:0 ""
+ KRM_decision_claim_mesopotamica_2:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_2_desc:0 ""
+ KRM_decision_claim_mesopotamica_3:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_3_desc:0 ""
+ KRM_decision_unify_the_puerdian_kingdom:0 "Unify the Pueridian Kingdom"
+ KRM_decision_unify_the_puerdian_kingdom_desc:0 ""
+ KRM_decision_form_the_puerdian_empire:0 "Form the Pueridian Empire"
+ KRM_decision_form_the_puerdian_empire_desc:0 ""
+ KRM_decision_expand_the_puerdian_empire:0 "Expand the Pueridian Empire"
+ KRM_decision_expand_the_puerdian_empire_desc:0 ""
+ KRM_decision_conquer_south_america:0 "Conquer South America"
+ KRM_decision_conquer_south_america_desc:0 ""
+
+ KRM_expand_the_reich:0 "Expand the Reich"
+ KRM_expand_the_reich_desc:0 "Our glorious nation is on a path to glory, uniting South America under a strong and stable dictatorship."
+
+ KRM_decision_claim_mesopotamica_f:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_f_desc:0 ""
+ KRM_decision_claim_mesopotamica_1_f:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_1_f_desc:0 ""
+ KRM_decision_claim_mesopotamica_2_f:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_2_f_desc:0 ""
+ KRM_decision_claim_mesopotamica_3_f:0 "Claim Mesopotámica"
+ KRM_decision_claim_mesopotamica_3_f_desc:0 ""
+ KRM_decision_puerdian_expansion:0 "Pueridian Expansion"
+ KRM_decision_puerdian_expansion_desc:0 ""
+ KRM_decision_form_the_puerdian_reich:0 "Form the Pueridian Reich"
+ KRM_decision_form_the_puerdian_reich_desc:0 ""
+ KRM_decision_expand_the_puerdian_reich:0 "Expand the Pueridian Reich"
+ KRM_decision_expand_the_puerdian_reich_desc:0 ""
+ KRM_decision_conquer_south_america_fascism:0 "Conquer South America"
+ KRM_decision_conquer_south_america_fascism_desc:0 ""
+ KRM_decision_conquer_middle_america_fascism:0 "Conquer Middle America"
+ KRM_decision_conquer_middle_america_fascism_desc:0 ""
+
+ JSN_path_to_glory:0 "Path To Glory"
+ JSN_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Eurasia under a strong and stable monarchy."
+ JSN_decision_southern_australian_coast:0 "Integrate the South Australian Coast"
+ JSN_decision_southern_australian_coast_desc:0 ""
+ JSN_decision_southern_australian_coast_1:0 "Integrate the South Australian Coast"
+ JSN_decision_southern_australian_coast_1_desc:0 ""
+ JSN_decision_southern_australian_coast_2:0 "Integrate the South Australian Coast"
+ JSN_decision_southern_australian_coast_2_desc:0 ""
+ JSN_decision_southern_australian_coast_3:0 "Integrate the South Australian Coast"
+ JSN_decision_southern_australian_coast_3_desc:0 ""
+ JSN_decision_unite_australia:0 "Unite Australia"
+ JSN_decision_unite_australia_desc:0 ""
+ JSN_decision_unite_oceania:0 "Unite Oceania"
+ JSN_decision_unite_oceania_desc:0 ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ TOR_path_to_glory:0 "Path To Glory"
+ TOR_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+
+ TOR_decision_unite_fluffy_kingdom:0 "Unite the Fluffy Kingdom"
+ TOR_decision_unite_fluffy_kingdom_desc:0 ""
+ TOR_decision_unite_fluffy_empire:0 "Unite the Fluffy Empire"
+ TOR_decision_unite_fluffy_empire_desc:0 ""
+ TOR_decision_form_austria_hungary:0 "Unite Austria-Hungary"
+ TOR_decision_form_austria_hungary_desc:0 ""
+
+ KTG_path_to_glory:0 "Path To Glory"
+ KTG_path_to_glory_desc:0 "Our glorious nation is on a path to glory, uniting Europe under a strong and stable monarchy."
+
+ KTG_decision_conquest_from_malmo_to_stockholm:0 "Conquest from Malmö to Stockholm"
+ KTG_decision_conquest_from_malmo_to_stockholm_desc:0 ""
+ KTG_decision_swedish_conquest:0 "Swedish Conquest"
+ KTG_decision_swedish_conquest_desc:0 ""
+ KTG_decision_nordic_peninsula:0 "Nordic Peninsula"
+ KTG_decision_nordic_peninsula_desc:0 ""
+ KTG_decision_conquest_north_sea_empire:0 "Conquest of the North Sea Empire"
+ KTG_decision_conquest_north_sea_empire_desc:0 ""

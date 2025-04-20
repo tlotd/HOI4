@@ -1,0 +1,1683 @@
+KRM_path_to_glory = {
+	KRM_decision_claim_mesopotamica = {
+		icon = GFX_decision_KRM_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 510
+		}}
+		available = {
+			is_subject = no
+			has_completed_focus = KRM_claim_mesopotamica
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				NOT = { has_state_flag = puerdia_annex }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			510 = {
+				set_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_claim_mesopotamica_1 = {
+		icon = GFX_decision_KRM_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 510 }}
+		available = {
+			is_subject = no
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				has_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			510 = {
+				add_claim_by = KRM
+				modify_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_claim_mesopotamica_2 = {
+		icon = GFX_decision_KRM_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 510 }}
+		available = {
+			is_subject = no
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				has_state_flag = {
+					flag = puerdia_annex
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			510 = {
+				add_core_of = KRM
+				modify_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_claim_mesopotamica_3 = {
+		icon = GFX_decision_KRM_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 510 }}
+		available = {
+			is_subject = no
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				has_state_flag = {
+					flag = puerdia_annex
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			transfer_state = 510
+			510 = {
+				modify_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_unify_the_puerdian_kingdom = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 510
+		}}
+
+		available = {
+			has_government = monarchism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 510
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_form_the_puerdian_empire = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 688
+			state = 510
+			state = 957
+			state = 509
+			state = 956
+			state = 959
+			state = 508
+			state = 960
+			state = 958
+			state = 511
+			state = 278
+			state = 512
+			state = 955
+			state = 954
+			state = 953
+			state = 506
+			state = 952
+			state = 279
+			state = 950
+			state = 949
+			state = 507
+		}}
+
+		available = {
+			has_completed_focus = KRM_unite_the_puerdian_empire
+			has_government = monarchism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 688
+			owns_state = 510
+			owns_state = 957
+			owns_state = 509
+			owns_state = 956
+			owns_state = 959
+			owns_state = 508
+			owns_state = 960
+			owns_state = 958
+			owns_state = 511
+			owns_state = 278
+			owns_state = 512
+			owns_state = 955
+			owns_state = 954
+			owns_state = 953
+			owns_state = 506
+			owns_state = 952
+			owns_state = 279
+			owns_state = 950
+			owns_state = 949
+			owns_state = 507
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_Empire
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				688 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+				957 = { add_core_of = KRM }
+				509 = { add_core_of = KRM }
+				956 = { add_core_of = KRM }
+				959 = { add_core_of = KRM }
+				508 = { add_core_of = KRM }
+				960 = { add_core_of = KRM }
+				958 = { add_core_of = KRM }
+				511 = { add_core_of = KRM }
+				278 = { add_core_of = KRM }
+				512 = { add_core_of = KRM }
+				955 = { add_core_of = KRM }
+				954 = { add_core_of = KRM }
+				953 = { add_core_of = KRM }
+				506 = { add_core_of = KRM }
+				952 = { add_core_of = KRM }
+				279 = { add_core_of = KRM }
+				950 = { add_core_of = KRM }
+				949 = { add_core_of = KRM }
+				507 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_expand_the_puerdian_empire = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 688
+			state = 510
+			state = 957
+			state = 509
+			state = 956
+			state = 959
+			state = 508
+			state = 960
+			state = 958
+			state = 511
+			state = 278
+			state = 512
+			state = 955
+			state = 954
+			state = 953
+			state = 951
+			state = 506
+			state = 952
+			state = 279
+			state = 950
+			state = 949
+			state = 507
+			state = 302
+			state = 487
+			state = 947
+			state = 492
+			state = 494
+			state = 303
+			state = 491
+			state = 490
+			state = 305
+		}}
+
+		available = {
+			has_completed_focus = KRM_the_puerdian_expansion
+			has_government = monarchism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 688
+			owns_state = 510
+			owns_state = 957
+			owns_state = 509
+			owns_state = 956
+			owns_state = 959
+			owns_state = 508
+			owns_state = 960
+			owns_state = 958
+			owns_state = 511
+			owns_state = 278
+			owns_state = 512
+			owns_state = 955
+			owns_state = 954
+			owns_state = 953
+			owns_state = 951
+			owns_state = 506
+			owns_state = 952
+			owns_state = 279
+			owns_state = 950
+			owns_state = 949
+			owns_state = 507
+			owns_state = 302
+			owns_state = 487
+			owns_state = 947
+			owns_state = 492
+			owns_state = 494
+			owns_state = 303
+			owns_state = 491
+			owns_state = 490
+			owns_state = 305
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_Empire
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				688 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+				957 = { add_core_of = KRM }
+				509 = { add_core_of = KRM }
+				956 = { add_core_of = KRM }
+				959 = { add_core_of = KRM }
+				508 = { add_core_of = KRM }
+				960 = { add_core_of = KRM }
+				958 = { add_core_of = KRM }
+				511 = { add_core_of = KRM }
+				278 = { add_core_of = KRM }
+				512 = { add_core_of = KRM }
+				955 = { add_core_of = KRM }
+				954 = { add_core_of = KRM }
+				953 = { add_core_of = KRM }
+				951 = { add_core_of = KRM }
+				506 = { add_core_of = KRM }
+				952 = { add_core_of = KRM }
+				279 = { add_core_of = KRM }
+				950 = { add_core_of = KRM }
+				949 = { add_core_of = KRM }
+				507 = { add_core_of = KRM }
+				302 = { add_core_of = KRM }
+				487 = { add_core_of = KRM }
+				947 = { add_core_of = KRM }
+				492 = { add_core_of = KRM }
+				494 = { add_core_of = KRM }
+				303 = { add_core_of = KRM }
+				491 = { add_core_of = KRM }
+				490 = { add_core_of = KRM }
+				305 = { add_core_of = KRM }
+				486 = { add_core_of = KRM }
+				306 = { add_core_of = KRM }
+				493 = { add_core_of = KRM }
+				489 = { add_core_of = KRM }
+				307 = { add_core_of = KRM }
+				488 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_conquer_south_america = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 688
+			state = 510
+			state = 957
+			state = 509
+			state = 956
+			state = 959
+			state = 508
+			state = 960
+			state = 958
+			state = 511
+			state = 278
+			state = 512
+			state = 955
+			state = 954
+			state = 953
+			state = 951
+			state = 506
+			state = 952
+			state = 279
+			state = 950
+			state = 949
+			state = 507
+			state = 302
+			state = 487
+			state = 947
+			state = 492
+			state = 494
+			state = 303
+			state = 491
+			state = 490
+			state = 305
+			state = 486
+			state = 306
+			state = 493
+			state = 489
+			state = 307
+			state = 488
+			state = 687
+			state = 309
+			state = 310
+			state = 939
+			state = 938
+			state = 968
+			state = 495
+			state = 969
+			state = 967
+			state = 961
+			state = 964
+			state = 940
+			state = 963
+			state = 962
+			state = 965
+			state = 966
+			state = 942
+			state = 497
+			state = 937
+			state = 935
+			state = 498
+			state = 936
+			state = 499
+			state = 941
+			state = 280
+			state = 505
+			state = 504
+			state = 496
+			state = 943
+			state = 500
+			state = 501
+		}}
+
+		available = {
+			has_completed_focus = KRM_south_american_hegemon
+			has_government = monarchism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 688
+			owns_state = 510
+			owns_state = 957
+			owns_state = 509
+			owns_state = 956
+			owns_state = 959
+			owns_state = 508
+			owns_state = 960
+			owns_state = 958
+			owns_state = 511
+			owns_state = 278
+			owns_state = 512
+			owns_state = 955
+			owns_state = 954
+			owns_state = 953
+			owns_state = 951
+			owns_state = 506
+			owns_state = 952
+			owns_state = 279
+			owns_state = 950
+			owns_state = 949
+			owns_state = 507
+			owns_state = 302
+			owns_state = 487
+			owns_state = 947
+			owns_state = 492
+			owns_state = 494
+			owns_state = 303
+			owns_state = 491
+			owns_state = 490
+			owns_state = 305
+			owns_state = 486
+			owns_state = 306
+			owns_state = 493
+			owns_state = 489
+			owns_state = 307
+			owns_state = 488
+			owns_state = 687
+			owns_state = 309
+			owns_state = 310
+			owns_state = 939
+			owns_state = 938
+			owns_state = 968
+			owns_state = 495
+			owns_state = 969
+			owns_state = 967
+			owns_state = 961
+			owns_state = 964
+			owns_state = 940
+			owns_state = 963
+			owns_state = 962
+			owns_state = 965
+			owns_state = 966
+			owns_state = 942
+			owns_state = 497
+			owns_state = 937
+			owns_state = 935
+			owns_state = 498
+			owns_state = 936
+			owns_state = 499
+			owns_state = 941
+			owns_state = 280
+			owns_state = 505
+			owns_state = 504
+			owns_state = 496
+			owns_state = 943
+			owns_state = 500
+			owns_state = 501
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_SouthAmericanEmpire
+			set_country_flag = SouthAmericanEmpire
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				688 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+				957 = { add_core_of = KRM }
+				509 = { add_core_of = KRM }
+				956 = { add_core_of = KRM }
+				959 = { add_core_of = KRM }
+				508 = { add_core_of = KRM }
+				960 = { add_core_of = KRM }
+				958 = { add_core_of = KRM }
+				511 = { add_core_of = KRM }
+				278 = { add_core_of = KRM }
+				512 = { add_core_of = KRM }
+				955 = { add_core_of = KRM }
+				954 = { add_core_of = KRM }
+				953 = { add_core_of = KRM }
+				951 = { add_core_of = KRM }
+				506 = { add_core_of = KRM }
+				952 = { add_core_of = KRM }
+				279 = { add_core_of = KRM }
+				950 = { add_core_of = KRM }
+				949 = { add_core_of = KRM }
+				507 = { add_core_of = KRM }
+				302 = { add_core_of = KRM }
+				487 = { add_core_of = KRM }
+				947 = { add_core_of = KRM }
+				492 = { add_core_of = KRM }
+				494 = { add_core_of = KRM }
+				303 = { add_core_of = KRM }
+				491 = { add_core_of = KRM }
+				490 = { add_core_of = KRM }
+				305 = { add_core_of = KRM }
+				486 = { add_core_of = KRM }
+				306 = { add_core_of = KRM }
+				493 = { add_core_of = KRM }
+				489 = { add_core_of = KRM }
+				307 = { add_core_of = KRM }
+				488 = { add_core_of = KRM }
+				687 = { add_core_of = KRM }
+				309 = { add_core_of = KRM }
+				310 = { add_core_of = KRM }
+				939 = { add_core_of = KRM }
+				938 = { add_core_of = KRM }
+				968 = { add_core_of = KRM }
+				495 = { add_core_of = KRM }
+				969 = { add_core_of = KRM }
+				967 = { add_core_of = KRM }
+				961 = { add_core_of = KRM }
+				964 = { add_core_of = KRM }
+				940 = { add_core_of = KRM }
+				963 = { add_core_of = KRM }
+				962 = { add_core_of = KRM }
+				965 = { add_core_of = KRM }
+				966 = { add_core_of = KRM }
+				942 = { add_core_of = KRM }
+				497 = { add_core_of = KRM }
+				937 = { add_core_of = KRM }
+				935 = { add_core_of = KRM }
+				498 = { add_core_of = KRM }
+				936 = { add_core_of = KRM }
+				499 = { add_core_of = KRM }
+				941 = { add_core_of = KRM }
+				280 = { add_core_of = KRM }
+				505 = { add_core_of = KRM }
+				504 = { add_core_of = KRM }
+				496 = { add_core_of = KRM }
+				943 = { add_core_of = KRM }
+				500 = { add_core_of = KRM }
+				501 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+
+KRM_expand_the_reich = {
+	KRM_decision_claim_mesopotamica_f = {
+		icon = GFX_decision_KRM_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 510
+		}}
+		available = {
+			is_subject = no
+			has_completed_focus = KRM_claim_mesopotamica
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				NOT = { has_state_flag = puerdia_annex }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			510 = {
+				set_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_claim_mesopotamica_1_f = {
+		icon = GFX_decision_KRM_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 510 }}
+		available = {
+			is_subject = no
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				has_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			510 = {
+				add_claim_by = KRM
+				modify_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_claim_mesopotamica_2_f = {
+		icon = GFX_decision_KRM_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 510 }}
+		available = {
+			is_subject = no
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				has_state_flag = {
+					flag = puerdia_annex
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			510 = {
+				add_core_of = KRM
+				modify_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_claim_mesopotamica_3_f = {
+		icon = GFX_decision_KRM_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 510 }}
+		available = {
+			is_subject = no
+			ARG = {
+				owns_state = 510
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			510 = {
+				has_state_flag = {
+					flag = puerdia_annex
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			transfer_state = 510
+			510 = {
+				modify_state_flag = {
+					flag = puerdia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_puerdian_expansion = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 510
+		}}
+
+		available = {
+			has_government = fascism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 510
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_form_the_puerdian_reich = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 688
+			state = 510
+			state = 957
+			state = 509
+			state = 956
+			state = 959
+			state = 508
+			state = 960
+			state = 958
+			state = 511
+			state = 278
+			state = 512
+			state = 955
+			state = 954
+			state = 953
+			state = 506
+			state = 952
+			state = 279
+			state = 950
+			state = 949
+			state = 507
+			state = 501
+			state = 496
+			state = 500
+			state = 943
+		}}
+
+		available = {
+			has_completed_focus = KRM_ambition_of_the_puerdian_reich
+			has_government = fascism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 688
+			owns_state = 510
+			owns_state = 957
+			owns_state = 509
+			owns_state = 956
+			owns_state = 959
+			owns_state = 508
+			owns_state = 960
+			owns_state = 958
+			owns_state = 511
+			owns_state = 278
+			owns_state = 512
+			owns_state = 955
+			owns_state = 954
+			owns_state = 953
+			owns_state = 506
+			owns_state = 952
+			owns_state = 279
+			owns_state = 950
+			owns_state = 949
+			owns_state = 507
+			owns_state = 501
+			owns_state = 496
+			owns_state = 500
+			owns_state = 943
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_Empire
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				688 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+				957 = { add_core_of = KRM }
+				509 = { add_core_of = KRM }
+				956 = { add_core_of = KRM }
+				959 = { add_core_of = KRM }
+				508 = { add_core_of = KRM }
+				960 = { add_core_of = KRM }
+				958 = { add_core_of = KRM }
+				511 = { add_core_of = KRM }
+				278 = { add_core_of = KRM }
+				512 = { add_core_of = KRM }
+				955 = { add_core_of = KRM }
+				954 = { add_core_of = KRM }
+				953 = { add_core_of = KRM }
+				506 = { add_core_of = KRM }
+				952 = { add_core_of = KRM }
+				279 = { add_core_of = KRM }
+				950 = { add_core_of = KRM }
+				949 = { add_core_of = KRM }
+				507 = { add_core_of = KRM }
+				501 = { add_core_of = KRM }
+				496 = { add_core_of = KRM }
+				500 = { add_core_of = KRM }
+				943 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_expand_the_puerdian_reich = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 688
+			state = 510
+			state = 957
+			state = 509
+			state = 956
+			state = 959
+			state = 508
+			state = 960
+			state = 958
+			state = 511
+			state = 278
+			state = 512
+			state = 955
+			state = 954
+			state = 953
+			state = 951
+			state = 506
+			state = 952
+			state = 279
+			state = 950
+			state = 949
+			state = 507
+			state = 302
+			state = 487
+			state = 947
+			state = 492
+			state = 494
+			state = 303
+			state = 491
+			state = 490
+			state = 305
+		}}
+
+		available = {
+			has_completed_focus = KRM_the_puerdian_expansion
+			has_government = fascism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 688
+			owns_state = 510
+			owns_state = 957
+			owns_state = 509
+			owns_state = 956
+			owns_state = 959
+			owns_state = 508
+			owns_state = 960
+			owns_state = 958
+			owns_state = 511
+			owns_state = 278
+			owns_state = 512
+			owns_state = 955
+			owns_state = 954
+			owns_state = 953
+			owns_state = 951
+			owns_state = 506
+			owns_state = 952
+			owns_state = 279
+			owns_state = 950
+			owns_state = 949
+			owns_state = 507
+			owns_state = 302
+			owns_state = 487
+			owns_state = 947
+			owns_state = 492
+			owns_state = 494
+			owns_state = 303
+			owns_state = 491
+			owns_state = 490
+			owns_state = 305
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_Empire
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				688 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+				957 = { add_core_of = KRM }
+				509 = { add_core_of = KRM }
+				956 = { add_core_of = KRM }
+				959 = { add_core_of = KRM }
+				508 = { add_core_of = KRM }
+				960 = { add_core_of = KRM }
+				958 = { add_core_of = KRM }
+				511 = { add_core_of = KRM }
+				278 = { add_core_of = KRM }
+				512 = { add_core_of = KRM }
+				955 = { add_core_of = KRM }
+				954 = { add_core_of = KRM }
+				953 = { add_core_of = KRM }
+				951 = { add_core_of = KRM }
+				506 = { add_core_of = KRM }
+				952 = { add_core_of = KRM }
+				279 = { add_core_of = KRM }
+				950 = { add_core_of = KRM }
+				949 = { add_core_of = KRM }
+				507 = { add_core_of = KRM }
+				302 = { add_core_of = KRM }
+				487 = { add_core_of = KRM }
+				947 = { add_core_of = KRM }
+				492 = { add_core_of = KRM }
+				494 = { add_core_of = KRM }
+				303 = { add_core_of = KRM }
+				491 = { add_core_of = KRM }
+				490 = { add_core_of = KRM }
+				305 = { add_core_of = KRM }
+				486 = { add_core_of = KRM }
+				306 = { add_core_of = KRM }
+				493 = { add_core_of = KRM }
+				489 = { add_core_of = KRM }
+				307 = { add_core_of = KRM }
+				488 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	KRM_decision_conquer_south_america_fascism = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 944
+			state = 503
+			state = 502
+			state = 946
+			state = 945
+			state = 300
+			state = 301
+			state = 688
+			state = 510
+			state = 957
+			state = 509
+			state = 956
+			state = 959
+			state = 508
+			state = 960
+			state = 958
+			state = 511
+			state = 278
+			state = 512
+			state = 955
+			state = 954
+			state = 953
+			state = 951
+			state = 506
+			state = 952
+			state = 279
+			state = 950
+			state = 949
+			state = 507
+			state = 302
+			state = 487
+			state = 947
+			state = 492
+			state = 494
+			state = 303
+			state = 491
+			state = 490
+			state = 305
+			state = 486
+			state = 306
+			state = 493
+			state = 489
+			state = 307
+			state = 488
+			state = 687
+			state = 309
+			state = 310
+			state = 939
+			state = 938
+			state = 968
+			state = 495
+			state = 969
+			state = 967
+			state = 961
+			state = 964
+			state = 940
+			state = 963
+			state = 962
+			state = 965
+			state = 966
+			state = 942
+			state = 497
+			state = 937
+			state = 935
+			state = 498
+			state = 936
+			state = 499
+			state = 941
+			state = 280
+			state = 505
+			state = 504
+			state = 496
+			state = 943
+			state = 500
+			state = 501
+		}}
+
+		available = {
+			has_completed_focus = KRM_south_american_hegemon
+			has_government = fascism
+			is_subject = no
+			owns_state = 944
+			owns_state = 503
+			owns_state = 502
+			owns_state = 946
+			owns_state = 945
+			owns_state = 300
+			owns_state = 301
+			owns_state = 688
+			owns_state = 510
+			owns_state = 957
+			owns_state = 509
+			owns_state = 956
+			owns_state = 959
+			owns_state = 508
+			owns_state = 960
+			owns_state = 958
+			owns_state = 511
+			owns_state = 278
+			owns_state = 512
+			owns_state = 955
+			owns_state = 954
+			owns_state = 953
+			owns_state = 951
+			owns_state = 506
+			owns_state = 952
+			owns_state = 279
+			owns_state = 950
+			owns_state = 949
+			owns_state = 507
+			owns_state = 302
+			owns_state = 487
+			owns_state = 947
+			owns_state = 492
+			owns_state = 494
+			owns_state = 303
+			owns_state = 491
+			owns_state = 490
+			owns_state = 305
+			owns_state = 486
+			owns_state = 306
+			owns_state = 493
+			owns_state = 489
+			owns_state = 307
+			owns_state = 488
+			owns_state = 687
+			owns_state = 309
+			owns_state = 310
+			owns_state = 939
+			owns_state = 938
+			owns_state = 968
+			owns_state = 495
+			owns_state = 969
+			owns_state = 967
+			owns_state = 961
+			owns_state = 964
+			owns_state = 940
+			owns_state = 963
+			owns_state = 962
+			owns_state = 965
+			owns_state = 966
+			owns_state = 942
+			owns_state = 497
+			owns_state = 937
+			owns_state = 935
+			owns_state = 498
+			owns_state = 936
+			owns_state = 499
+			owns_state = 941
+			owns_state = 280
+			owns_state = 505
+			owns_state = 504
+			owns_state = 496
+			owns_state = 943
+			owns_state = 500
+			owns_state = 501
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_SouthAmericanEmpire
+			set_country_flag = SouthAmericanEmpire
+			hidden_effect = {
+				944 = { add_core_of = KRM }
+				503 = { add_core_of = KRM }
+				502 = { add_core_of = KRM }
+				946 = { add_core_of = KRM }
+				945 = { add_core_of = KRM }
+				300 = { add_core_of = KRM }
+				301 = { add_core_of = KRM }
+				688 = { add_core_of = KRM }
+				510 = { add_core_of = KRM }
+				957 = { add_core_of = KRM }
+				509 = { add_core_of = KRM }
+				956 = { add_core_of = KRM }
+				959 = { add_core_of = KRM }
+				508 = { add_core_of = KRM }
+				960 = { add_core_of = KRM }
+				958 = { add_core_of = KRM }
+				511 = { add_core_of = KRM }
+				278 = { add_core_of = KRM }
+				512 = { add_core_of = KRM }
+				955 = { add_core_of = KRM }
+				954 = { add_core_of = KRM }
+				953 = { add_core_of = KRM }
+				951 = { add_core_of = KRM }
+				506 = { add_core_of = KRM }
+				952 = { add_core_of = KRM }
+				279 = { add_core_of = KRM }
+				950 = { add_core_of = KRM }
+				949 = { add_core_of = KRM }
+				507 = { add_core_of = KRM }
+				302 = { add_core_of = KRM }
+				487 = { add_core_of = KRM }
+				947 = { add_core_of = KRM }
+				492 = { add_core_of = KRM }
+				494 = { add_core_of = KRM }
+				303 = { add_core_of = KRM }
+				491 = { add_core_of = KRM }
+				490 = { add_core_of = KRM }
+				305 = { add_core_of = KRM }
+				486 = { add_core_of = KRM }
+				306 = { add_core_of = KRM }
+				493 = { add_core_of = KRM }
+				489 = { add_core_of = KRM }
+				307 = { add_core_of = KRM }
+				488 = { add_core_of = KRM }
+				687 = { add_core_of = KRM }
+				309 = { add_core_of = KRM }
+				310 = { add_core_of = KRM }
+				939 = { add_core_of = KRM }
+				938 = { add_core_of = KRM }
+				968 = { add_core_of = KRM }
+				495 = { add_core_of = KRM }
+				969 = { add_core_of = KRM }
+				967 = { add_core_of = KRM }
+				961 = { add_core_of = KRM }
+				964 = { add_core_of = KRM }
+				940 = { add_core_of = KRM }
+				963 = { add_core_of = KRM }
+				962 = { add_core_of = KRM }
+				965 = { add_core_of = KRM }
+				966 = { add_core_of = KRM }
+				942 = { add_core_of = KRM }
+				497 = { add_core_of = KRM }
+				937 = { add_core_of = KRM }
+				935 = { add_core_of = KRM }
+				498 = { add_core_of = KRM }
+				936 = { add_core_of = KRM }
+				499 = { add_core_of = KRM }
+				941 = { add_core_of = KRM }
+				280 = { add_core_of = KRM }
+				505 = { add_core_of = KRM }
+				504 = { add_core_of = KRM }
+				496 = { add_core_of = KRM }
+				943 = { add_core_of = KRM }
+				500 = { add_core_of = KRM }
+				501 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	KRM_decision_conquer_middle_america_fascism = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 304
+			state = 316
+			state = 172
+			state = 317
+			state = 312
+			state = 314
+			state = 313
+			state = 311
+			state = 474
+			state = 475
+			state = 476
+			state = 477
+			state = 277
+			state = 485
+			state = 478
+			state = 479
+			state = 481
+			state = 480
+			state = 482
+			state = 483
+			state = 484
+			
+		}}
+
+		available = {
+			has_completed_focus = KRM_south_american_hegemon
+			has_government = fascism
+			is_subject = no
+			owns_state = 304
+			owns_state = 316
+			owns_state = 172
+			owns_state = 317
+			owns_state = 312
+			owns_state = 314
+			owns_state = 313
+			owns_state = 311
+			owns_state = 474
+			owns_state = 475
+			owns_state = 476
+			owns_state = 477
+			owns_state = 277
+			owns_state = 485
+			owns_state = 478
+			owns_state = 479
+			owns_state = 481
+			owns_state = 480
+			owns_state = 482
+			owns_state = 483
+			owns_state = 484
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = KRM_Empire
+			hidden_effect = {
+				304 = { add_core_of = KRM }
+				316 = { add_core_of = KRM }
+				172 = { add_core_of = KRM }
+				317 = { add_core_of = KRM }
+				312 = { add_core_of = KRM }
+				314 = { add_core_of = KRM }
+				313 = { add_core_of = KRM }
+				474 = { add_core_of = KRM }
+				475 = { add_core_of = KRM }
+				476 = { add_core_of = KRM }
+				477 = { add_core_of = KRM }
+				277 = { add_core_of = KRM }
+				485 = { add_core_of = KRM }
+				478 = { add_core_of = KRM }
+				479 = { add_core_of = KRM }
+				481 = { add_core_of = KRM }
+				480 = { add_core_of = KRM }
+				482 = { add_core_of = KRM }
+				483 = { add_core_of = KRM }
+				484 = { add_core_of = KRM }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

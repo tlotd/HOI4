@@ -1,0 +1,288 @@
+DUN_ethnic_tensions_balance = {
+	initial_value = -0.45
+	left_side = DUN_fracturing_nation_side
+	right_side = DUN_united_chiss_side
+	decision_category = DUN_bop_ethnic_tensions_category
+#### Fracturing ####
+	side = {
+		id = DUN_fracturing_nation_side	
+		icon = GFX_bop_DUN_fracturing_nation_side
+
+		range = {
+			id = DUN_fracturing_nation_low_range
+			min = -0.3
+			max = -0
+			modifier = {
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = DUN_fracturing_nation_medium_range
+			min = -0.6
+			max = -0.3
+			modifier = {
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = DUN_fracturing_nation_high_range
+			min = -0.9
+			max = -0.6
+			modifier = {
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = DUN_fracturing_nation_max_range
+			min = -1
+			max = -0.9
+			modifier = {
+			}
+			on_activate = {
+				if = {
+					limit = {
+						DUN = { owns_state = 102 }
+					}
+					SLO = {
+						transfer_state = 102
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 853 }
+					}
+					SLO = {
+						transfer_state = 853
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 103 }
+					}
+					CRO = {
+						transfer_state = 103
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 163 }
+					}
+					CRO = {
+						transfer_state = 163
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 109 }
+					}
+					CRO = {
+						transfer_state = 109
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 104 }
+					}
+					BOS = {
+						transfer_state = 104
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 804 }
+					}
+					BOS = {
+						transfer_state = 804
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 105 }
+					}
+					MNT = {
+						transfer_state = 105
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 934 }
+					}
+					ALB = {
+						transfer_state = 934
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 44 }
+					}
+					ALB = {
+						transfer_state = 44
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 805 }
+					}
+					ALB = {
+						transfer_state = 805
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 106 }
+					}
+					MAC = {
+						transfer_state = 106
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 802 }
+					}
+					KOS = {
+						transfer_state = 802
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 803 }
+					}
+					SER = {
+						transfer_state = 803
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 108 }
+					}
+					SER = {
+						transfer_state = 108
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 107 }
+					}
+					SER = {
+						transfer_state = 107
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 764 }
+					}
+					SER = {
+						transfer_state = 764
+					}
+				}
+				if = {
+					limit = {
+						DUN = { owns_state = 45 }
+					}
+					SER = {
+						transfer_state = 45
+					}
+				}
+				set_power_balance_gfx = {
+					id = DUN_ethnic_tensions_balance
+					side = DUN_fracturing_nation_side
+					gfx = GFX_bop_DUN_fracturing_nation_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = DUN_ethnic_tensions_balance
+					side = DUN_fracturing_nation_side
+					gfx = GFX_bop_DUN_fracturing_nation_side
+				}
+			}
+		}
+	}
+#### Uniting ####
+	side = {
+		id = DUN_united_chiss_side	
+		icon = GFX_bop_DUN_united_chiss_side
+
+		range = {
+			id = DUN_united_chiss_low_range
+			min = 0
+			max = 0.3
+			modifier = {
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = DUN_united_chiss_medium_range
+			min = 0.3
+			max = 0.6
+			modifier = {
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = DUN_united_chiss_high_range
+			min = 0.6
+			max = 0.9
+			modifier = {
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+		}
+		range = {
+			id = DUN_united_chiss_max_range
+			min = 0.9
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = DUN_ethnic_tensions_balance
+					side = DUN_united_chiss_side
+					gfx = GFX_bop_DUN_united_chiss_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = DUN_ethnic_tensions_balance
+					side = DUN_united_chiss_side
+					gfx = GFX_bop_DUN_united_chiss_side
+				}
+			}
+		}
+	}
+}
+

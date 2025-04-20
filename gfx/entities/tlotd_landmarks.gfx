@@ -1,0 +1,195 @@
+objectTypes = {
+
+#################################
+######	Stuttgart Palace   ######
+#################################
+
+	pdxmesh = {
+		name = "landmark_stuttgart_palace_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_stuttgart_palace.mesh"
+
+		meshsettings = {
+			name = "landmark_hofburg_palaceShape"
+			index = 0
+			texture_diffuse = "landmark_stuttgart_palace_diffuse.dds"
+			texture_normal = "landmark_stuttgart_palace_normal.dds"
+			texture_specular = "landmark_stuttgart_palace_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+#DESTROYED
+	pdxmesh = {
+		name = "landmark_stuttgart_palace_destroyed_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_stuttgart_palace_destroyed.mesh"
+
+		animation = { id = "destroy"	type = "landmark_stuttgart_palace_destroyed_destroy.animation" }
+
+		meshsettings = {
+			name = "landmark_hofburg_palace_destroyedShape"
+			index = 0
+			texture_diffuse = "landmark_stuttgart_palace_diffuse.dds"
+			texture_normal = "landmark_stuttgart_palace_normal.dds"
+			texture_specular = "landmark_stuttgart_palace_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+#######################################
+######	    Imperial Palace      ######
+#######################################
+
+	pdxmesh = {
+		name = "landmark_imperial_palace_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_imperial_palace.mesh"
+
+		meshsettings = {
+			name = "landmark_kremlinShape"
+			index = 0
+			texture_diffuse = "landmark_imperial_palace_diffuse.dds"
+			texture_normal = "landmark_imperial_palace_normal.dds"
+			texture_specular = "landmark_imperial_palace_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+#DESTROYED
+	pdxmesh = {
+		name = "landmark_imperial_palace_destroyed_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_imperial_palace_destroyed.mesh"
+
+		animation = { id = "destroy"			type = "landmark_imperial_palace_destroyed_destroy_animation" }
+
+		meshsettings = {
+			name = "landmark_kremlin_destroyedShape"
+			index = 0
+			texture_diffuse = "landmark_imperial_palace_diffuse.dds"
+			texture_normal = "landmark_imperial_palace_normal.dds"
+			texture_specular = "landmark_imperial_palace_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+#######################################
+######	  Palace of Fine Arts    ######
+#######################################
+
+	pdxmesh = {
+		name = "landmark_palace_of_fine_arts_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_palace_of_fine_arts.mesh"
+
+		meshsettings = {
+			name = "landmark_hofburg_palaceShape"
+			index = 0
+			texture_diffuse = "landmark_palace_of_fine_arts_diffuse.dds"
+			texture_normal = "landmark_palace_of_fine_arts_normal.dds"
+			texture_specular = "landmark_palace_of_fine_arts_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+#DESTROYED
+	pdxmesh = {
+		name = "landmark_palace_of_fine_arts_destroyed_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_palace_of_fine_arts_destroyed.mesh"
+
+		animation = { id = "destroy"			type = "landmark_palace_of_fine_arts_destroyed_destroy_animation" }
+
+		meshsettings = {
+			name = "landmark_hofburg_palace_destroyedShape"
+			index = 0
+			texture_diffuse = "landmark_palace_of_fine_arts_diffuse.dds"
+			texture_normal = "landmark_palace_of_fine_arts_normal.dds"
+			texture_specular = "landmark_palace_of_fine_arts_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+########################
+######	Venator   ######
+########################
+	pdxmesh = {
+		name = "landmark_venator_star_destroyer_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_venator_star_destroyer.mesh"
+
+		animation = { id = "idle"			type = "generic_carrier_idle_animation" }
+
+		meshsettings = {
+			name = "VenatorShape"
+			index = 0
+			texture_diffuse = "venator_diffuse.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+#DESTROYED
+	pdxmesh = {
+		name = "landmark_venator_star_destroyer_destroyed_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_venator_star_destroyer.mesh"
+
+		animation = { id = "death"		type = "generic_carrier_death_animation" }
+
+		meshsettings = {
+			name = "VenatorShape"
+			index = 0
+			texture_diffuse = "venator_diffuse.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+
+##########################
+######	Barad-dur   ######
+##########################
+	pdxmesh = {
+		name = "landmark_baradur_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_baradur.mesh"
+		meshsettings = {
+			name = "baradurShape"
+			index = 0
+			texture_diffuse = "landmark_baradur_diffuse.dds"
+			texture_normal = "landmark_baradur_normal.dds"
+			texture_specular = "landmark_baradur_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+#DESTROYED
+	pdxmesh = {
+		name = "landmark_baradur_destroyed_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_baradur.mesh"
+		meshsettings = {
+			name = "baradurShape"
+			index = 0
+			texture_diffuse = "landmark_baradur_diffuse.dds"
+			texture_normal = "landmark_baradur_normal.dds"
+			texture_specular = "landmark_baradur_specular.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+########################
+######	Orthanc   ######
+########################
+	pdxmesh = {
+		name = "landmark_orthanc_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_orthanc.mesh"
+		meshsettings = {
+			name = "orthancShape"
+			index = 0
+			texture_diffuse = "orthanc_diffuse.dds"
+			texture_normal = "orthanc_normal.dds"
+			texture_specular = "orthanc_spec.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+#DESTROYED
+	pdxmesh = {
+		name = "landmark_orthanc_destroyed_mesh"
+		file = "gfx/models/buildings/landmarks/landmark_orthanc.mesh"
+		meshsettings = {
+			name = "orthancShape"
+			index = 0
+			texture_diffuse = "orthanc_diffuse.dds"
+			texture_normal = "orthanc_normal.dds"
+			texture_specular = "orthanc_spec.dds"
+			shader = "PdxMeshAdvancedSnow"
+		}
+	}
+}

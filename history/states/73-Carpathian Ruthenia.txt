@@ -1,0 +1,31 @@
+state={
+	id=73
+	name="STATE_73"
+	manpower = 854300
+	
+	state_category = rural
+	
+	history={
+		set_variable = { culture = 66 }
+		victory_points = {
+			3548 1 
+		}
+		owner = AUS
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SLO
+		add_core_of = AUS
+		1919.1.1 = {
+			remove_core_of = AUS
+			owner = HUN
+			add_core_of = HUN
+		}
+	}
+
+	provinces={
+		3548 6571 9563 11536 11691 
+	}
+
+	local_supplies=0.0 
+}

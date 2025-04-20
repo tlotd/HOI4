@@ -1,0 +1,415 @@
+characters={
+
+	### Military Leader
+
+	DUN_bakif={
+		name=DUN_bakif
+		portraits={
+			army={
+				large="GFX_dun_portrait_bakif"
+				small="GFX_dun_portrait_bakif_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = dun_bakif
+			allowed = {
+				original_tag = DUN
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ loyalist_dun war_hero }
+			skill=4
+			attack_skill=4
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
+
+	DUN_aralani={
+		name=DUN_aralani
+		portraits={
+			army={
+				large="GFX_dun_portrait_aralani"
+				small="GFX_dun_portrait_aralani_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = dun_aralani
+			cost = 100
+			allowed = {
+				original_tag = DUN
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+		corps_commander={
+			traits={ loyalist_dun career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	DUN_eprill={
+		name=DUN_eprill
+		portraits={
+			army={
+				small="GFX_dun_portrait_eprill_small"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = dun_eprill
+			cost = 100
+			traits = {
+				air_chief_reform_2
+			}
+			allowed = {
+				original_tag = DUN
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+	DUN_mitthrawnuruodo={
+		name=DUN_mitthrawnuruodo
+		portraits={
+			army={
+				large="GFX_dun_portrait_mitthrawnuruodo"
+				small="GFX_dun_portrait_mitthrawnuruodo_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = dun_mitthrawnuruodo
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = DUN
+			}
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+		corps_commander={
+			traits={ loyalist_dun politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=1
+		}
+	}
+
+	DUN_ufsamakro={
+		name=DUN_ufsamakro
+		portraits={
+			army={
+				large="GFX_dun_portrait_ufsamakro"
+				small="GFX_dun_portrait_ufsamakro_small"
+			}
+		}
+		corps_commander={
+			traits={ loyalist_dun politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+
+	DUN_mitthrassafis={
+		name=DUN_mitthrassafis
+		portraits={
+			army={
+				large="GFX_dun_portrait_mitthrassafis"
+				small="GFX_dun_portrait_mitthrassafis_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = dun_mitthrassafis
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = DUN
+			}
+			traits = {
+				mass_assault_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	DUN_field_marshal_gen_1={
+		name="General Koniglicha'fussa"
+		portraits={
+			army={
+				large="GFX_dun_portrait_generic_5"
+				small="GFX_dun_portrait_ufsamakro_small"
+			}
+		}
+		field_marshal={
+			traits={ loyalist_dun }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=2
+		}
+	}
+
+	DUN_general_gen_1={
+		name="Captain Cockra'deznutz"
+		portraits={
+			army={
+				large="GFX_dun_portrait_generic_7"
+				small="GFX_dun_portrait_ufsamakro_small"
+			}
+		}
+		corps_commander={
+			traits={ loyalist_dun }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+
+	DUN_general_gen_2={
+		name="Captain Ara'mif"
+		portraits={
+			army={
+				large="GFX_dun_portrait_generic_2"
+				small="GFX_dun_portrait_ufsamakro_small"
+			}
+		}
+		corps_commander={
+			traits={ loyalist_dun }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=1
+		}
+	}
+
+	DUN_general_gen_3={
+		name="Captain Boah'ris"
+		portraits={
+			army={
+				large="GFX_dun_portrait_generic_3"
+				small="GFX_dun_portrait_ufsamakro_small"
+			}
+		}
+		corps_commander={
+			traits={ loyalist_dun }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+		}
+	}
+
+	DUN_thrawn={
+		name=DUN_thrawn
+		portraits={
+			civilian={
+				large="GFX_dun_portrait_thrawn"
+			}
+		}
+		country_leader={
+			ideology=chiss_syndicure
+			traits= { diabolically_brilliant_admiral ideological_crusader }
+			id=-1
+		}
+	}
+	DUN_king_theoden={
+		name=DUN_king_theoden
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_king_theoden"
+			}
+		}
+	}
+	DUN_communist_revolutionaries={
+		name=LTD_communist_revolutionaries
+		portraits={
+			civilian={
+				large="GFX_portrait_communist_revolutionaries"
+			}
+		}
+	}
+	DUN_comrade_thrawn={
+		name=DUN_comrade_thrawn
+		portraits={
+			civilian={
+				large="GFX_dun_portrait_comrade_thrawn"
+			}
+		}
+		country_leader={
+			ideology=stalinism
+			traits= { }
+			id=-1
+		}
+	}
+	DUN_fascist_revolutionaries={
+		name=LTD_fascist_revolutionaries
+		portraits={
+			civilian={
+				large="GFX_portrait_fascist_revolutionaries"
+			}
+		}
+	}
+	DUN_adolf_chissler={
+		name=DUN_adolf_chissler
+		portraits={
+			civilian={
+				large="GFX_dun_portrait_adolf_chissler"
+			}
+		}
+		country_leader={
+			ideology=galactic_imperialism
+			traits= { }
+			id=-1
+		}
+	}
+	DUN_darth_vader={
+		name=DUN_darth_vader
+		portraits={
+			civilian={
+				large="GFX_dun_portrait_darth_vader"
+			}
+		}
+	}
+	DUN_yellow_figure={
+		name="Yellow Figure"
+		portraits={
+			civilian={
+				large="GFX_portrait_yellow_figure"
+			}
+		}
+		country_leader={
+			ideology=the_beyond
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+
+	################################################################################
+
+	## Nazgull
+	DUN_witch_king_of_angmar = {
+		name=lotr_witch_king_of_angmar
+		portraits={
+			army={
+				large="GFX_lotr_portrait_witch_king_of_angmar"
+				small="GFX_lotr_advisor_portrait_witch_king_of_angmar"
+			}
+		}
+	}
+
+	DUN_khamul = {
+		name=lotr_khamul
+		portraits={
+			army={
+				large="GFX_lotr_portrait_khamul"
+				small="GFX_lotr_advisor_portrait_khamul"
+			}
+		}
+	}
+
+	DUN_uvantha = {
+		name=lotr_uvantha
+		portraits={
+			army = {
+				large="GFX_lotr_portrait_uvantha"
+				small="GFX_lotr_advisor_portrait_uvantha"
+			}
+		}
+	}
+
+	DUN_hoarmurath = {
+		name=lotr_hoarmurath
+		portraits={
+			army = {
+				large="GFX_lotr_portrait_hoarmurath"
+				small="GFX_lotr_advisor_portrait_hoarmurath"
+			}
+		}
+	}
+
+	DUN_dwar = {
+		name=lotr_dwar
+		portraits={
+			army={
+				large="GFX_lotr_portrait_dwar"
+				small="GFX_lotr_advisor_portrait_dwar"
+			}
+		}
+	}
+
+	DUN_adunaphel = {
+		name=lotr_adunaphel
+		portraits={
+			army={
+				large="GFX_lotr_portrait_adunaphel"
+				small="GFX_lotr_advisor_portrait_adunaphel"
+			}
+		}
+	}
+
+	DUN_akhorahil = {
+		name=lotr_akhorahil
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_akhorahil"
+				small="GFX_lotr_advisor_portrait_akhorahil"
+			}
+		}
+	}
+
+	DUN_ji_indur = {
+		name=lotr_ji_indur
+		portraits={
+			army={
+				large="GFX_lotr_portrait_indur"
+				small="GFX_lotr_advisor_portrait_indur"
+			}
+		}
+	}
+
+	DUN_ren = {
+		name=lotr_ren
+		portraits={
+			civilian={
+				large="GFX_lotr_portrait_ren"
+				small="GFX_lotr_advisor_portrait_ren"
+			}
+		}
+	}
+}

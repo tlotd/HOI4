@@ -1,0 +1,67 @@
+defined_text = {
+    name = DrachenpaktMemberGetNameWithFlag
+    text = {
+        trigger = {
+            exists = yes
+        }
+        localization_key = [This.GetNameWithFlag]
+    }
+    text = {
+        trigger = {
+            exists = no
+        }
+        localization_key = DRACHENPAKT_MEMBER_NONEXISTANT
+    }
+}
+defined_text = {
+    name = DrachenpaktMemberInFaction
+    text = {
+        trigger = {
+            is_in_faction_with = ROOT
+            exists = yes
+        }
+        localization_key = TRIGGER_FULLFILLED_PREFIX
+    }
+    text = {
+        trigger = {
+            NOT = {
+                is_in_faction_with = ROOT
+            }
+            exists = yes
+        }
+        localization_key = TRIGGER_UNFULLFILLED_PREFIX
+    }
+    text = {
+        trigger = {
+            exists = no
+        }
+        localization_key = DRACHENPAKT_MEMBER_NONEXISTANT
+    }
+}
+defined_text = {
+    name = DrachenpaktMemberRole
+    text = {
+        trigger = {
+            is_faction_leader = yes
+        }
+        localization_key = DRACHENPAKT_LEADER_ROLE
+    }
+    text = {
+        trigger = {
+            is_in_faction_with = ROOT
+        }
+        localization_key = DRACHENPAKT_MEMBER_ROLE
+    }
+    text = {
+        trigger = {
+            exists = yes
+        }
+        localization_key = DRACHENPAKT_MEMBER_ROLE_UNFULFILLED
+    }
+        text = {
+        trigger = {
+            exists = no
+        }
+        localization_key = DRACHENPAKT_MEMBER_NONEXISTANT
+    }
+}

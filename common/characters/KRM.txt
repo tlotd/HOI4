@@ -1,0 +1,242 @@
+characters={
+
+###################################
+#########TEMPCHARACTERS############
+###################################
+
+	### Military Leader
+
+	KRM_theoden={
+		name="Théoden"
+		portraits={
+			army={
+				large="GFX_krm_portrait_theoden"
+				small="GFX_krm_portrait_theoden_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = krm_theoden
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ cavalry_officer war_hero }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+		}
+	}
+
+	KRM_boromir={
+		name="Boromir"
+		portraits={
+			army={
+				large="GFX_krm_portrait_boromir"
+				small="GFX_krm_portrait_boromir_small"
+			}
+		}
+		corps_commander={
+			traits={ career_officer politically_connected }
+			skill=4
+			attack_skill=4
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+
+	KRM_faramir={
+		name="Faramir"
+		portraits={
+			army={
+				large="GFX_krm_portrait_faramir"
+				small="GFX_krm_portrait_faramir_small"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=1
+		}
+	}
+
+	KRM_bard={
+		name="Bard"
+		portraits={
+			army={
+				large="GFX_krm_portrait_bard"
+				small="GFX_krm_portrait_bard_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = krm_bard
+			cost = 100
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	KRM_eagles={
+		name="Eagles"
+		portraits={
+			army={
+				large="GFX_krm_portrait_eagles"
+				small="GFX_krm_portrait_eagles_small"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = krm_eagles
+			cost = 100
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	KRM_elrond={
+		name="Elrond"
+		portraits={
+			army={
+				large="GFX_krm_portrait_elrond"
+				small="GFX_krm_portrait_elrond_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = krm_elrond
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	KRM_legolas={
+		name="Legolas"
+		portraits={
+			army={
+				large="GFX_krm_portrait_legolas"
+				small="GFX_krm_portrait_legolas_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = krm_legolas
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	KRM_gimli={
+		name="Gimli"
+		portraits={
+			army={
+				large="GFX_krm_portrait_gimli"
+				small="GFX_krm_portrait_gimli_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = krm_gimli
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				army_armored_3
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	KRM_samwise={
+		name="Samwise"
+		portraits={
+			army={
+				large="GFX_krm_portrait_samwise"
+				small="GFX_krm_portrait_samwise_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = krm_samwise
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = KRM
+			}
+			traits = {
+				army_logistics_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+###################################
+###################################
+###################################
+
+	KRM_rafael_puerida={
+		name="Rafael Puerdia"
+		portraits={
+			civilian={
+				large="GFX_krm_portrait_rafael_puerida"
+			}
+		}
+		country_leader={
+			ideology=cartel
+			traits= { }
+			id=-1
+		}
+	}
+}

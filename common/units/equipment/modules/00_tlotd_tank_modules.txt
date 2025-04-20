@@ -1,0 +1,26 @@
+equipment_modules = {
+	limit = {
+		has_dlc = "No Step Back" 
+	}
+
+	mithril_tank_armor = {
+		abbreviation = "mit"
+		category = tank_armor_type
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			defense = 12
+			breakthrough = 8
+			hardness = 0.1
+		}
+		dismantle_cost_ic = 4
+		xp_cost = 8
+		multiply_stats = {
+			armor_value = 0.5
+		}
+
+		build_cost_resources = {
+			mithril = 1
+		}
+	}
+}

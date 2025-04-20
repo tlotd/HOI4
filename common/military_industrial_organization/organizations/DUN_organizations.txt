@@ -1,0 +1,70 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+DUN_kuat_drive_yards_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_mio_company_kuat_drive_yards
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = DUN
+	}
+	
+    available = {
+	}
+}
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+DUN_blas_tech_industries_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_mio_company_blas_tech_industries
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = DUN
+	}
+	
+    available = {
+	}
+}

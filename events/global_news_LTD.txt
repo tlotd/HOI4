@@ -1,0 +1,275 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = global_news_LTD
+
+news_event = { #declaration of nation
+	id = global_news_LTD.0
+	title = global_news_LTD.0.t
+	desc = global_news_LTD.0.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.0.a
+	}
+}
+
+#Alsace-Lorraine
+news_event = {
+	id = global_news_LTD.1
+	title = global_news_LTD.1.t
+	desc = global_news_LTD.1.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.1.a
+	}
+}
+
+#Gurkistan
+news_event = {
+	id = global_news_LTD.2
+	title = global_news_LTD.2.t
+	desc = global_news_LTD.2.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.2.a
+	}
+}
+
+#Southern Revolution
+news_event = {
+	id = global_news_LTD.3
+	title = global_news_LTD.3.t
+	desc = global_news_LTD.3.d
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.3.a
+	}
+}
+
+#Bavaria Unification
+news_event = {
+	id = global_news_LTD.4
+	title = global_news_LTD.4.t
+	desc = global_news_LTD.4.d
+	picture = GFX_news_event_banovina_croatia
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.4.a
+	}
+}
+
+#Buy Liechtensetin
+news_event = {
+	id = global_news_LTD.5
+	title = global_news_LTD.5.t
+	desc = global_news_LTD.5.d
+	picture = GFX_news_event_generic_sign_treaty1
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.5.a
+	}
+}
+
+#Swiss Partition
+news_event = {
+	id = global_news_LTD.6
+	title = global_news_LTD.6.t
+	desc = global_news_LTD.6.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.6.a
+	}
+}
+
+#austrian independence
+news_event = {
+	id = global_news_LTD.7
+	title = global_news_LTD.7.t
+	desc = global_news_LTD.7.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.7.a
+	}
+}
+
+#austria annexed
+news_event = {
+	id = global_news_LTD.8
+	title = global_news_LTD.8.t
+	desc = global_news_LTD.8.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.8.a
+	}
+}
+
+#german civil war
+news_event = {
+	id = global_news_LTD.9
+	title = global_news_LTD.9.t
+	desc = global_news_LTD.9.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.9.a
+		declare_war_on = {
+			target = GER
+			type = civil_war
+		}
+	}
+}
+
+#split wdz
+news_event = {
+	id = global_news_LTD.10
+	title = global_news_LTD.10.t
+	desc = global_news_LTD.10.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.10.a
+	}
+}
+
+#Bavaria Unification
+news_event = {
+	id = global_news_LTD.21
+	title = global_news_LTD.21.t
+	desc = global_news_LTD.21.d
+	picture = GFX_news_event_banovina_croatia
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.21.a
+	}
+}
+
+news_event = { #join germany
+	id = global_news_LTD.29
+	title = global_news_LTD.29.t
+	desc = global_news_LTD.29.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.29.a
+	}
+}
+
+news_event = { #own nation
+	id = global_news_LTD.30
+	title = global_news_LTD.30.t
+	desc = global_news_LTD.30.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.30.a
+	}
+}
+
+news_event = { #need for a king
+	id = global_news_LTD.31
+	title = global_news_LTD.31.t
+	desc = global_news_LTD.31.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.31.a
+	}
+}
+
+news_event = { #occupy france
+	id = global_news_LTD.51
+	title = global_news_LTD.51.t
+	desc = global_news_LTD.51.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.51.a
+	}
+}
+
+news_event = { #transatlantic
+	id = global_news_LTD.203
+	title = global_news_LTD.203.t
+	desc = global_news_LTD.203.d
+	picture = GFX_news_event_french_parade
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LTD.203.a
+	}
+}

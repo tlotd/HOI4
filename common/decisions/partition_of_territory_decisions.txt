@@ -1,0 +1,7682 @@
+partition_of_territory = {
+
+#######################################################################
+##### WDZ #############################################################
+#######################################################################
+
+	treaty_of_bonn = {
+		priority = 100
+		activation = {
+			always = no
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+		}
+		icon = mission_icon
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			news_event = { id = news_p_o_t.2 }
+		}
+	}
+
+	##### LTD #########################################################
+
+	LTD_decision_51 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 51
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LTD_decision_51_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 51 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	LTD_decision_51_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 51 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	LTD_decision_51_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 51 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	LTD_decision_42 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_42_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	LTD_decision_42_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	LTD_decision_42_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	LTD_decision_240 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_240_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	LTD_decision_240_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	LTD_decision_240_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ger_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			WDZ = {
+				any_neighbor_country = { tag = LTD }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	##### GER #########################################################
+
+	GER_decision_51 = {
+		icon = GFX_decision_GER_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 51
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				NOT = { has_state_flag = ger_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				set_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	GER_decision_51_1 = {
+		icon = GFX_decision_GER_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 51 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	GER_decision_51_2 = {
+		icon = GFX_decision_GER_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 51 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				add_claim_by = GER
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	GER_decision_51_3 = {
+		icon = GFX_decision_GER_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 51 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 51
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			51 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			51 = {
+				add_core_of = GER
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	GER_decision_42 = {
+		icon = GFX_decision_GER_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				NOT = { has_state_flag = ger_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				set_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	GER_decision_42_1 = {
+		icon = GFX_decision_GER_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GER_decision_42_2 = {
+		icon = GFX_decision_GER_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				add_claim_by = GER
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	GER_decision_42_3 = {
+		icon = GFX_decision_GER_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 42 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 42
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			42 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			42 = {
+				add_core_of = GER
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	GER_decision_240 = {
+		icon = GFX_decision_GER_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				NOT = { has_state_flag = ger_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				set_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	GER_decision_240_1 = {
+		icon = GFX_decision_GER_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	GER_decision_240_2 = {
+		icon = GFX_decision_GER_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				add_claim_by = GER
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	GER_decision_240_3 = {
+		icon = GFX_decision_GER_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 240 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = GER
+			is_subject = no
+			WDZ = {
+				owns_state = 240
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = GER
+			WDZ = {
+				any_neighbor_country = { tag = GER }
+			}
+			240 = {
+				has_state_flag = treaty_of_bonn
+				has_state_flag = {
+					flag = ger_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			240 = {
+				add_core_of = GER
+				modify_state_flag = {
+					flag = ger_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+#######################################################################
+##### SWI #############################################################
+#######################################################################
+
+	partition_of_switzerland = {
+		priority = 100
+		activation = {
+			always = no
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+		}
+		icon = mission_icon
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			news_event = { id = news_p_o_t.4 }
+		}
+	}
+	##### LTD #########################################################
+	LTD_decision_845 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 845
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LTD_decision_845_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 845 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	LTD_decision_845_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 845 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	LTD_decision_845_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 845 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	LTD_decision_3 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 3
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_3_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 3 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	LTD_decision_3_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 3 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	LTD_decision_3_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 3 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	LTD_decision_847 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 847
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LTD_decision_847_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 847 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	LTD_decision_847_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 847 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	LTD_decision_847_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 847 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	LTD_decision_846 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 846
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	LTD_decision_846_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 846 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	LTD_decision_846_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 846 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	LTD_decision_846_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 846 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	LTD_decision_151 = {
+		icon = GFX_decision_LTD_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 151
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = ltd_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				set_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_151_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 151 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	LTD_decision_151_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 151 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				add_claim_by = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	LTD_decision_151_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 151 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = LTD
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = LTD
+			SWI = {
+				any_neighbor_country = { tag = LTD }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = ltd_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				add_core_of = LTD
+				modify_state_flag = {
+					flag = ltd_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	##### NIS #########################################################
+	NIS_decision_845 = {
+		icon = GFX_decision_NIS_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 845
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = nis_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				set_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	NIS_decision_845_1 = {
+		icon = GFX_decision_NIS_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 845 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	NIS_decision_845_2 = {
+		icon = GFX_decision_NIS_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 845 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				add_claim_by = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	NIS_decision_845_3 = {
+		icon = GFX_decision_NIS_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 845 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 845
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			845 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			845 = {
+				add_core_of = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	NIS_decision_3 = {
+		icon = GFX_decision_NIS_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 3
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = nis_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				set_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	NIS_decision_3_1 = {
+		icon = GFX_decision_NIS_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 3 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	NIS_decision_3_2 = {
+		icon = GFX_decision_NIS_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 3 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				add_claim_by = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	NIS_decision_3_3 = {
+		icon = GFX_decision_NIS_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 3 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 3
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			3 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			3 = {
+				add_core_of = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	NIS_decision_847 = {
+		icon = GFX_decision_NIS_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 847
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = nis_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				set_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	NIS_decision_847_1 = {
+		icon = GFX_decision_NIS_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 847 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	NIS_decision_847_2 = {
+		icon = GFX_decision_NIS_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 847 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				add_claim_by = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	NIS_decision_847_3 = {
+		icon = GFX_decision_NIS_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 847 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 847
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			847 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			847 = {
+				add_core_of = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	NIS_decision_846 = {
+		icon = GFX_decision_NIS_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 846
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = nis_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				set_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	NIS_decision_846_1 = {
+		icon = GFX_decision_NIS_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 846 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	NIS_decision_846_2 = {
+		icon = GFX_decision_NIS_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 846 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				add_claim_by = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	NIS_decision_846_3 = {
+		icon = GFX_decision_NIS_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 846 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 846
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			846 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			846 = {
+				add_core_of = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	NIS_decision_151 = {
+		icon = GFX_decision_NIS_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 151
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				NOT = { has_state_flag = nis_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				set_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	NIS_decision_151_1 = {
+		icon = GFX_decision_NIS_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 151 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	NIS_decision_151_2 = {
+		icon = GFX_decision_NIS_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 151 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				add_claim_by = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	NIS_decision_151_3 = {
+		icon = GFX_decision_NIS_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 151 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = NIS
+			is_subject = no
+			SWI = {
+				owns_state = 151
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						OR = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = fra_claim
+								value = 4
+							}
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = NIS
+			SWI = {
+				any_neighbor_country = { tag = NIS }
+			}
+			151 = {
+				has_state_flag = partition_of_switzerland
+				has_state_flag = {
+					flag = nis_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			151 = {
+				add_core_of = NIS
+				modify_state_flag = {
+					flag = nis_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+
+#######################################################################
+##### YUG #############################################################
+#######################################################################
+
+	treaty_of_zagreb = {
+		priority = 100
+		activation = {
+			always = no
+		}
+		cancel_if_not_visible = yes
+		available = {
+			always = no
+		}
+		cancel_trigger = {
+		}
+		icon = mission_icon
+		is_good = yes
+		days_mission_timeout = 90
+		timeout_effect = {
+			news_event = { id = news_p_o_t.6 }
+		}
+	}
+
+	##### DUN #########################################################
+
+	DUN_decision_102 = {
+		icon = GFX_decision_DUN_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 102
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = dun_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				set_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	DUN_decision_102_1 = {
+		icon = GFX_decision_DUN_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 102 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	DUN_decision_102_2 = {
+		icon = GFX_decision_DUN_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 102 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				add_claim_by = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	DUN_decision_102_3 = {
+		icon = GFX_decision_DUN_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 102 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				add_core_of = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	DUN_decision_853 = {
+		icon = GFX_decision_DUN_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = dun_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				set_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_853_1 = {
+		icon = GFX_decision_DUN_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	DUN_decision_853_2 = {
+		icon = GFX_decision_DUN_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				add_claim_by = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	DUN_decision_853_3 = {
+		icon = GFX_decision_DUN_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				add_core_of = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	DUN_decision_109 = {
+		icon = GFX_decision_DUN_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = dun_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				set_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_109_1 = {
+		icon = GFX_decision_DUN_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	DUN_decision_109_2 = {
+		icon = GFX_decision_DUN_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				add_claim_by = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	DUN_decision_109_3 = {
+		icon = GFX_decision_DUN_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				add_core_of = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	DUN_decision_45 = {
+		icon = GFX_decision_DUN_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = dun_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				set_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_45_1 = {
+		icon = GFX_decision_DUN_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	DUN_decision_45_2 = {
+		icon = GFX_decision_DUN_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				add_claim_by = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	DUN_decision_45_3 = {
+		icon = GFX_decision_DUN_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				add_core_of = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	DUN_decision_764 = {
+		icon = GFX_decision_DUN_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = dun_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				set_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_764_1 = {
+		icon = GFX_decision_DUN_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	DUN_decision_764_2 = {
+		icon = GFX_decision_DUN_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				add_claim_by = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	DUN_decision_764_3 = {
+		icon = GFX_decision_DUN_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = DUN
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ita_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = DUN
+			YUG = {
+				any_neighbor_country = { tag = DUN }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = dun_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				add_core_of = DUN
+				modify_state_flag = {
+					flag = dun_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+
+	##### ITA #########################################################
+
+	ITA_decision_102 = {
+		icon = GFX_decision_ITA_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 102
+		}}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = ita_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				set_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	ITA_decision_102_1 = {
+		icon = GFX_decision_ITA_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 102 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 4
+		}
+	}
+	ITA_decision_102_2 = {
+		icon = GFX_decision_ITA_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 102 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				add_claim_by = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 8
+		}
+	}
+	ITA_decision_102_3 = {
+		icon = GFX_decision_ITA_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 102 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 102
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			102 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			102 = {
+				add_core_of = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 16
+		}
+	}
+	###################################################################
+	ITA_decision_853 = {
+		icon = GFX_decision_ITA_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = ita_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				set_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	ITA_decision_853_1 = {
+		icon = GFX_decision_ITA_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	ITA_decision_853_2 = {
+		icon = GFX_decision_ITA_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				add_claim_by = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	ITA_decision_853_3 = {
+		icon = GFX_decision_ITA_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 853 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 853
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			853 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			853 = {
+				add_core_of = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	ITA_decision_109 = {
+		icon = GFX_decision_ITA_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = ita_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				set_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	ITA_decision_109_1 = {
+		icon = GFX_decision_ITA_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	ITA_decision_109_2 = {
+		icon = GFX_decision_ITA_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				add_claim_by = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	ITA_decision_109_3 = {
+		icon = GFX_decision_ITA_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 109 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 109
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			109 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			109 = {
+				add_core_of = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	ITA_decision_45 = {
+		icon = GFX_decision_ITA_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = ita_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				set_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	ITA_decision_45_1 = {
+		icon = GFX_decision_ITA_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	ITA_decision_45_2 = {
+		icon = GFX_decision_ITA_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				add_claim_by = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	ITA_decision_45_3 = {
+		icon = GFX_decision_ITA_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 45 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 45
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			45 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			45 = {
+				add_core_of = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	###################################################################
+	ITA_decision_764 = {
+		icon = GFX_decision_ITA_claim_state_1
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				NOT = { has_state_flag = ita_claim }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				set_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	ITA_decision_764_1 = {
+		icon = GFX_decision_ITA_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	ITA_decision_764_2 = {
+		icon = GFX_decision_ITA_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				add_claim_by = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 30
+		}
+	}
+	ITA_decision_764_3 = {
+		icon = GFX_decision_ITA_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 764 }}
+		cancel_if_not_visible = yes
+		available = {
+			tag = ITA
+			is_subject = no
+			YUG = {
+				owns_state = 764
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				custom_trigger_tooltip = {
+					tooltip = partition_of_territory_not_claimed_by_others
+					NOT = {
+						has_state_flag = {
+							flag = ltd_claim
+							value = 4
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			tag = ITA
+			YUG = {
+				any_neighbor_country = { tag = ITA }
+			}
+			764 = {
+				has_state_flag = treaty_of_zagreb
+				has_state_flag = {
+					flag = ita_claim
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+		}
+		remove_effect = {
+			764 = {
+				add_core_of = ITA
+				modify_state_flag = {
+					flag = ita_claim
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+}

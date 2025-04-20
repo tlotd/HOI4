@@ -1,0 +1,2743 @@
+DUN_bop_ethnic_tensions_category = {
+
+	### NORMAL ###
+
+	DUN_bop_supress_revolts = {
+		icon = GFX_decision_oppression
+		cost = 50
+		fire_only_once = yes
+		priority = 100
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			power_balance_value = {
+				id = DUN_ethnic_tensions_balance
+				value < 0.0
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = DUN_ethnic_tensions_balance
+				modifier = DUN_bop_modifier_supress_revolts
+			}
+		}
+	}
+	DUN_bop_rally_the_people = {
+		icon = GFX_decision_generic_speech
+		cost = 50
+		fire_only_once = yes
+		priority = 90
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = DUN_ethnic_tensions_balance
+				modifier = DUN_bop_modifier_rally_the_people
+			}
+		}
+	}
+	DUN_bop_invest_in_infrastructure = {
+		icon = GFX_decision_generic_merge_plant_materiel
+		cost = 50
+		fire_only_once = yes
+		priority = 80
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = DUN_ethnic_tensions_balance
+				modifier = DUN_bop_modifier_invest_in_infrastructure
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = DUN
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	DUN_bop_open_talks = {
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		cost = 50
+		fire_only_once = yes
+		priority = 70
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = DUN_ethnic_tensions_balance
+				modifier = DUN_bop_modifier_open_talks
+			}
+		}
+	}
+	DUN_bop_sinking_into_chaos = {
+		icon = GFX_decision_revolt
+		cost = 50
+		fire_only_once = yes
+		priority = 50
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			has_idea = dun_ethnic_tentions
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = DUN_ethnic_tensions_balance
+				modifier = DUN_bop_modifier_sinking_into_choas
+			}
+		}
+	}
+}
+
+DUN_path_to_glory = {
+#	DUN_decision_move_capital = {
+#
+#		icon = GFX_decision_eng_install_government
+#
+#		available = {
+#			is_subject = no
+#		}
+#
+#		cost = 10
+#
+#		complete_effect = {
+#			set_capital = {
+#				state = 104
+#				remember_old_capital = no
+#			}
+#		}
+#	}
+	DUN_decision_form_adriatic_empire = {
+
+		icon = GFX_decision_SWI_consolidate_council_power
+		
+		highlight_states = { highlight_state_targets = {
+			state = 103
+			state = 163
+			state = 804
+			state = 104
+			state = 109
+			state = 45
+			state = 764
+			state = 107
+			state = 108
+			state = 105
+			state = 802
+			state = 803
+			state = 106
+			state = 970
+			state = 934
+			state = 44
+			state = 805
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 43
+		}}
+
+		available = {
+			has_completed_focus = DUN_unite_the_adriatic_empire
+			has_government = monarchism
+			is_subject = no
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 804
+			has_full_control_of_state = 104
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 105
+			has_full_control_of_state = 802
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 43
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = DUN_GreaterChiss
+			}
+			hidden_effect = {
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				107 = { add_core_of = DUN }
+				108 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				802 = { add_core_of = DUN }
+				803 = { add_core_of = DUN }
+				106 = { add_core_of = DUN }
+				970 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+				155 = { add_core_of = DUN }
+				974 = { add_core_of = DUN }
+				973 = { add_core_of = DUN }
+				154 = { add_core_of = DUN }
+				43 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_austria_hungary = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 664
+			state = 43
+			state = 39
+			state = 69
+			state = 972
+			state = 9
+			state = 74
+			state = 75
+			state = 70
+			state = 72
+			state = 88
+			state = 71
+			state = 91
+			state = 89
+			state = 73
+			state = 80
+			state = 76
+			state = 84
+			state = 83
+			state = 82
+			state = 736
+			state = 102
+			state = 853
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+		}}
+
+		available = {
+			has_completed_focus = DUN_unite_austria_hungary
+			has_government = monarchism
+			is_subject = no
+			has_full_control_of_state = 848
+			has_full_control_of_state = 153
+			has_full_control_of_state = 152
+			has_full_control_of_state = 4
+			has_full_control_of_state = 976
+			has_full_control_of_state = 975
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 664
+			has_full_control_of_state = 43
+			has_full_control_of_state = 39
+			has_full_control_of_state = 69
+			has_full_control_of_state = 972
+			has_full_control_of_state = 9
+			has_full_control_of_state = 74
+			has_full_control_of_state = 75
+			has_full_control_of_state = 70
+			has_full_control_of_state = 72
+			has_full_control_of_state = 88
+			has_full_control_of_state = 71
+			has_full_control_of_state = 91
+			has_full_control_of_state = 89
+			has_full_control_of_state = 73
+			has_full_control_of_state = 80
+			has_full_control_of_state = 76
+			has_full_control_of_state = 84
+			has_full_control_of_state = 83
+			has_full_control_of_state = 82
+			has_full_control_of_state = 736
+			has_full_control_of_state = 102
+			has_full_control_of_state = 853
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = DUN_AustriaHungary
+			}
+			hidden_effect = {
+				103 = { add_core_of = DUN }
+				848 = { add_core_of = DUN }
+				153 = { add_core_of = DUN }
+				152 = { add_core_of = DUN }
+				4 = { add_core_of = DUN }
+				976 = { add_core_of = DUN }
+				975 = { add_core_of = DUN }
+				155 = { add_core_of = DUN }
+				974 = { add_core_of = DUN }
+				973 = { add_core_of = DUN }
+				154 = { add_core_of = DUN }
+				664 = { add_core_of = DUN }
+				43 = { add_core_of = DUN }
+				39 = { add_core_of = DUN }
+				69 = { add_core_of = DUN }
+				972 = { add_core_of = DUN }
+				9 = { add_core_of = DUN }
+				74 = { add_core_of = DUN }
+				75 = { add_core_of = DUN }
+				70 = { add_core_of = DUN }
+				72 = { add_core_of = DUN }
+				88 = { add_core_of = DUN }
+				71 = { add_core_of = DUN }
+				91 = { add_core_of = DUN }
+				89 = { add_core_of = DUN }
+				73 = { add_core_of = DUN }
+				80 = { add_core_of = DUN }
+				76 = { add_core_of = DUN }
+				84 = { add_core_of = DUN }
+				83 = { add_core_of = DUN }
+				82 = { add_core_of = DUN }
+				736 = { add_core_of = DUN }
+				102 = { add_core_of = DUN }
+				853 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_chiss_empire = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 103
+			state = 163
+			state = 804
+			state = 104
+			state = 109
+			state = 45
+			state = 764
+			state = 107
+			state = 108
+			state = 105
+			state = 802
+			state = 803
+			state = 106
+			state = 970
+			state = 934
+			state = 44
+			state = 805
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 43
+
+			state = 82
+			state = 83
+			state = 76
+			state = 84
+			state = 81
+			state = 46
+			state = 79
+			state = 80
+			state = 78
+			state = 766
+			state = 77
+			state = 971
+			state = 48
+			state = 801
+			state = 212
+			state = 211
+		}}
+
+		available = {
+			has_completed_focus = DUN_form_the_chiss_empire
+			has_government = monarchism
+			is_subject = no
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 804
+			has_full_control_of_state = 104
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 105
+			has_full_control_of_state = 802
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 43
+
+			has_full_control_of_state = 82
+			has_full_control_of_state = 83
+			has_full_control_of_state = 76
+			has_full_control_of_state = 84
+			has_full_control_of_state = 81
+			has_full_control_of_state = 46
+			has_full_control_of_state = 79
+			has_full_control_of_state = 80
+			has_full_control_of_state = 78
+			has_full_control_of_state = 766
+			has_full_control_of_state = 77
+			has_full_control_of_state = 971
+			has_full_control_of_state = 48
+			has_full_control_of_state = 801
+			has_full_control_of_state = 212
+			has_full_control_of_state = 211
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = DUN_ChissEmpire
+			}
+			hidden_effect = {
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				107 = { add_core_of = DUN }
+				108 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				802 = { add_core_of = DUN }
+				803 = { add_core_of = DUN }
+				106 = { add_core_of = DUN }
+				970 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+				155 = { add_core_of = DUN }
+				974 = { add_core_of = DUN }
+				973 = { add_core_of = DUN }
+				154 = { add_core_of = DUN }
+				43 = { add_core_of = DUN }
+
+				82 = { add_core_of = DUN }
+				83 = { add_core_of = DUN }
+				76 = { add_core_of = DUN }
+				84 = { add_core_of = DUN }
+				81 = { add_core_of = DUN }
+				46 = { add_core_of = DUN }
+				79 = { add_core_of = DUN }
+				80 = { add_core_of = DUN }
+				78 = { add_core_of = DUN }
+				766 = { add_core_of = DUN }
+				77 = { add_core_of = DUN }
+				971 = { add_core_of = DUN }
+				48 = { add_core_of = DUN }
+				801 = { add_core_of = DUN }
+				212 = { add_core_of = DUN }
+				211 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_restore_the_byzantine_empire = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 107
+			state = 108
+			state = 105
+			state = 802
+			state = 934
+			state = 803
+			state = 106
+			state = 970
+			state = 44
+			state = 805
+			state = 82
+			state = 81
+			state = 46
+			state = 77
+			state = 971
+			state = 766
+			state = 48
+			state = 801
+			state = 211
+			state = 212
+			state = 185
+			state = 731
+			state = 184
+			state = 47
+			state = 186
+			state = 187
+			state = 182
+			state = 164
+			state = 341
+			state = 797
+			state = 340
+			state = 347
+			state = 339
+			state = 343
+			state = 49
+			state = 342
+			state = 346
+			state = 345
+			state = 183
+			state = 356
+			state = 355
+			state = 798
+			state = 349
+			state = 348
+			state = 344
+			state = 345
+			state = 343
+			state = 799
+			state = 677
+			state = 553
+			state = 554
+			state = 454
+			state = 453
+			state = 446
+			state = 907
+			state = 447
+			state = 452
+			state = 457
+			state = 456
+		}}
+
+		available = {
+			has_completed_focus = DUN_restore_the_byzantine_empire
+			has_government = monarchism
+			is_subject = no
+			
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 105
+			has_full_control_of_state = 802
+			has_full_control_of_state = 934
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 82
+			has_full_control_of_state = 81
+			has_full_control_of_state = 46
+			has_full_control_of_state = 77
+			has_full_control_of_state = 971
+			has_full_control_of_state = 766
+			has_full_control_of_state = 48
+			has_full_control_of_state = 801
+			has_full_control_of_state = 211
+			has_full_control_of_state = 212
+			has_full_control_of_state = 185
+			has_full_control_of_state = 731
+			has_full_control_of_state = 184
+			has_full_control_of_state = 47
+			has_full_control_of_state = 186
+			has_full_control_of_state = 187
+			has_full_control_of_state = 182
+			has_full_control_of_state = 164
+			has_full_control_of_state = 341
+			has_full_control_of_state = 797
+			has_full_control_of_state = 340
+			has_full_control_of_state = 347
+			has_full_control_of_state = 339
+			has_full_control_of_state = 343
+			has_full_control_of_state = 49
+			has_full_control_of_state = 342
+			has_full_control_of_state = 346
+			has_full_control_of_state = 345
+			has_full_control_of_state = 183
+			has_full_control_of_state = 356
+			has_full_control_of_state = 355
+			has_full_control_of_state = 798
+			has_full_control_of_state = 349
+			has_full_control_of_state = 348
+			has_full_control_of_state = 344
+			has_full_control_of_state = 345
+			has_full_control_of_state = 343
+			has_full_control_of_state = 799
+			has_full_control_of_state = 677
+			has_full_control_of_state = 553
+			has_full_control_of_state = 554
+			has_full_control_of_state = 454
+			has_full_control_of_state = 453
+			has_full_control_of_state = 446
+			has_full_control_of_state = 907
+			has_full_control_of_state = 447
+			has_full_control_of_state = 452
+			has_full_control_of_state = 457
+			has_full_control_of_state = 456
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = DUN_Byzantine
+			}
+			set_capital = {
+				state = 797
+				remember_old_capital = no
+			}
+			hidden_effect = {
+				107 = { add_core_of = DUN }
+				108 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				802 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				106 = { add_core_of = DUN }
+				970 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+				82 = { add_core_of = DUN }
+				81 = { add_core_of = DUN }
+				46 = { add_core_of = DUN }
+				77 = { add_core_of = DUN }
+				971 = { add_core_of = DUN }
+				766 = { add_core_of = DUN }
+				48 = { add_core_of = DUN }
+				801 = { add_core_of = DUN }
+				211 = { add_core_of = DUN }
+				212 = { add_core_of = DUN }
+				185 = { add_core_of = DUN }
+				731 = { add_core_of = DUN }
+				184 = { add_core_of = DUN }
+				47 = { add_core_of = DUN }
+				186 = { add_core_of = DUN }
+				187 = { add_core_of = DUN }
+				182 = { add_core_of = DUN }
+				164 = { add_core_of = DUN }
+				341 = { add_core_of = DUN }
+				797 = { add_core_of = DUN }
+				340 = { add_core_of = DUN }
+				347 = { add_core_of = DUN }
+				339 = { add_core_of = DUN }
+				343 = { add_core_of = DUN }
+				49 = { add_core_of = DUN }
+				342 = { add_core_of = DUN }
+				346 = { add_core_of = DUN }
+				345 = { add_core_of = DUN }
+				183 = { add_core_of = DUN }
+				356 = { add_core_of = DUN }
+				355 = { add_core_of = DUN }
+				798 = { add_core_of = DUN }
+				349 = { add_core_of = DUN }
+				348 = { add_core_of = DUN }
+				344 = { add_core_of = DUN }
+				345 = { add_core_of = DUN }
+				343 = { add_core_of = DUN }
+				799 = { add_core_of = DUN }
+				677 = { add_core_of = DUN }
+				553 = { add_core_of = DUN }
+				554 = { add_core_of = DUN }
+				454 = { add_core_of = DUN }
+				453 = { add_core_of = DUN }
+				446 = { add_core_of = DUN }
+				907 = { add_core_of = DUN }
+				447 = { add_core_of = DUN }
+				452 = { add_core_of = DUN }
+				457 = { add_core_of = DUN }
+				456 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_restore_the_roman_empire = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 163
+			state = 103
+			state = 158
+			state = 159
+			state = 850
+			state = 160
+			state = 736
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 117
+			state = 849
+			state = 156
+			state = 115
+			state = 114
+		}}
+
+		available = {
+			has_completed_focus = DUN_restore_the_roman_empire
+			has_government = monarchism
+			is_subject = no
+			
+			has_full_control_of_state = 163
+			has_full_control_of_state = 103
+			has_full_control_of_state = 158
+			has_full_control_of_state = 159
+			has_full_control_of_state = 850
+			has_full_control_of_state = 160
+			has_full_control_of_state = 736
+			has_full_control_of_state = 161
+			has_full_control_of_state = 162
+			has_full_control_of_state = 157
+			has_full_control_of_state = 2
+			has_full_control_of_state = 117
+			has_full_control_of_state = 849
+			has_full_control_of_state = 156
+			has_full_control_of_state = 115
+			has_full_control_of_state = 114
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = DUN_Rome
+			}
+			set_country_flag = RomanEmpire
+			set_capital = {
+				state = 2
+				remember_old_capital = no
+			}
+			hidden_effect = {
+				163 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				158 = { add_core_of = DUN }
+				159 = { add_core_of = DUN }
+				850 = { add_core_of = DUN }
+				39 = { add_core_of = DUN }
+				160 = { add_core_of = DUN }
+				736 = { add_core_of = DUN }
+				161 = { add_core_of = DUN }
+				162 = { add_core_of = DUN }
+				157 = { add_core_of = DUN }
+				2 = { add_core_of = DUN }
+				117 = { add_core_of = DUN }
+				849 = { add_core_of = DUN }
+				156 = { add_core_of = DUN }
+				115 = { add_core_of = DUN }
+				114 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_the_mare_nostrum = {
+
+		icon = GFX_decision_generic_coastal_fortification
+		
+		highlight_states = { highlight_state_targets = {
+			state = 118
+			state = 173
+			state = 168
+			state = 167
+			state = 165
+			state = 177
+			state = 31
+			state = 22
+			state = 21
+			state = 851
+			state = 735
+			state = 158
+			state = 1
+			state = 114
+			state = 159
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 117
+			state = 849
+			state = 156
+			state = 115
+			state = 116
+			state = 850
+			state = 160
+			state = 736
+			state = 103
+			state = 163
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 185
+			state = 186
+			state = 187
+			state = 182
+			state = 164
+			state = 47
+			state = 731
+			state = 184
+			state = 341
+			state = 340
+			state = 339
+			state = 342
+			state = 345
+			state = 344
+			state = 183
+			state = 799
+			state = 677
+			state = 553
+			state = 454
+			state = 453
+			state = 446
+			state = 907
+			state = 447
+			state = 452
+			state = 451
+			state = 450
+			state = 663
+			state = 449
+			state = 662
+			state = 448
+			state = 661
+			state = 665
+			state = 458
+			state = 460
+			state = 459
+			state = 513
+			state = 461
+			state = 462
+			state = 290
+		}}
+
+
+		available = {
+			has_completed_focus = DUN_proclaim_the_mare_nostrum
+			has_government = monarchism
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = DUN_mare_nostrum_requirement
+				has_full_control_of_state = 118
+				has_full_control_of_state = 173
+				has_full_control_of_state = 168
+				has_full_control_of_state = 167
+				has_full_control_of_state = 165
+				has_full_control_of_state = 177
+				has_full_control_of_state = 31
+				has_full_control_of_state = 22
+				has_full_control_of_state = 21
+				has_full_control_of_state = 851
+				has_full_control_of_state = 735
+				has_full_control_of_state = 158
+				has_full_control_of_state = 1
+				has_full_control_of_state = 114
+				has_full_control_of_state = 159
+				has_full_control_of_state = 161
+				has_full_control_of_state = 162
+				has_full_control_of_state = 157
+				has_full_control_of_state = 2
+				has_full_control_of_state = 117
+				has_full_control_of_state = 849
+				has_full_control_of_state = 156
+				has_full_control_of_state = 115
+				has_full_control_of_state = 116
+				has_full_control_of_state = 850
+				has_full_control_of_state = 160
+				has_full_control_of_state = 736
+				has_full_control_of_state = 103
+				has_full_control_of_state = 163
+				has_full_control_of_state = 105
+				has_full_control_of_state = 934
+				has_full_control_of_state = 44
+				has_full_control_of_state = 805
+				has_full_control_of_state = 185
+				has_full_control_of_state = 186
+				has_full_control_of_state = 187
+				has_full_control_of_state = 182
+				has_full_control_of_state = 164
+				has_full_control_of_state = 47
+				has_full_control_of_state = 731
+				has_full_control_of_state = 184
+				has_full_control_of_state = 341
+				has_full_control_of_state = 340
+				has_full_control_of_state = 339
+				has_full_control_of_state = 342
+				has_full_control_of_state = 345
+				has_full_control_of_state = 344
+				has_full_control_of_state = 183
+				has_full_control_of_state = 799
+				has_full_control_of_state = 677
+				has_full_control_of_state = 553
+				has_full_control_of_state = 454
+				has_full_control_of_state = 453
+				has_full_control_of_state = 446
+				has_full_control_of_state = 907
+				has_full_control_of_state = 447
+				has_full_control_of_state = 452
+				has_full_control_of_state = 451
+				has_full_control_of_state = 450
+				has_full_control_of_state = 663
+				has_full_control_of_state = 449
+				has_full_control_of_state = 662
+				has_full_control_of_state = 448
+				has_full_control_of_state = 661
+				has_full_control_of_state = 665
+				has_full_control_of_state = 458
+				has_full_control_of_state = 460
+				has_full_control_of_state = 459
+				has_full_control_of_state = 513
+				has_full_control_of_state = 461
+				has_full_control_of_state = 462
+				has_full_control_of_state = 290
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			add_ideas = dun_mare_nostrum
+			hidden_effect = {
+				118 = { add_core_of = DUN }
+				173 = { add_core_of = DUN }
+				168 = { add_core_of = DUN }
+				167 = { add_core_of = DUN }
+				165 = { add_core_of = DUN }
+				177 = { add_core_of = DUN }
+				31 = { add_core_of = DUN }
+				22 = { add_core_of = DUN }
+				21 = { add_core_of = DUN }
+				851 = { add_core_of = DUN }
+				735 = { add_core_of = DUN }
+				158 = { add_core_of = DUN }
+				1 = { add_core_of = DUN }
+				114 = { add_core_of = DUN }
+				159 = { add_core_of = DUN }
+				161 = { add_core_of = DUN }
+				162 = { add_core_of = DUN }
+				157 = { add_core_of = DUN }
+				2 = { add_core_of = DUN }
+				117 = { add_core_of = DUN }
+				849 = { add_core_of = DUN }
+				156 = { add_core_of = DUN }
+				115 = { add_core_of = DUN }
+				116 = { add_core_of = DUN }
+				850 = { add_core_of = DUN }
+				160 = { add_core_of = DUN }
+				736 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+				185 = { add_core_of = DUN }
+				186 = { add_core_of = DUN }
+				187 = { add_core_of = DUN }
+				182 = { add_core_of = DUN }
+				164 = { add_core_of = DUN }
+				47 = { add_core_of = DUN }
+				731 = { add_core_of = DUN }
+				184 = { add_core_of = DUN }
+				341 = { add_core_of = DUN }
+				340 = { add_core_of = DUN }
+				339 = { add_core_of = DUN }
+				342 = { add_core_of = DUN }
+				345 = { add_core_of = DUN }
+				344 = { add_core_of = DUN }
+				183 = { add_core_of = DUN }
+				799 = { add_core_of = DUN }
+				677 = { add_core_of = DUN }
+				553 = { add_core_of = DUN }
+				454 = { add_core_of = DUN }
+				453 = { add_core_of = DUN }
+				446 = { add_core_of = DUN }
+				907 = { add_core_of = DUN }
+				447 = { add_core_of = DUN }
+				452 = { add_core_of = DUN }
+				451 = { add_core_of = DUN }
+				450 = { add_core_of = DUN }
+				663 = { add_core_of = DUN }
+				449 = { add_core_of = DUN }
+				662 = { add_core_of = DUN }
+				448 = { add_core_of = DUN }
+				661 = { add_core_of = DUN }
+				665 = { add_core_of = DUN }
+				458 = { add_core_of = DUN }
+				460 = { add_core_of = DUN }
+				459 = { add_core_of = DUN }
+				513 = { add_core_of = DUN }
+				461 = { add_core_of = DUN }
+				462 = { add_core_of = DUN }
+				290 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_expand_africa = {
+		icon = GFX_decision_generic_form_nation
+
+		available = {
+			has_completed_focus =  DUN_expand_into_africa
+			has_government = monarchism
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = DUN_africa_requirement
+				any_controlled_state = {
+					is_on_continent = africa
+					not = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = { is_on_continent = africa }
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+DUN_worker_state = {
+	DUN_decision_form_adriatic_commune = {
+
+		icon = GFX_decision_SWI_consolidate_council_power
+		
+		highlight_states = { highlight_state_targets = {
+			state = 103
+			state = 163
+			state = 104
+			state = 109
+			state = 102
+			state = 853
+			state = 736
+			state = 160
+			state = 850
+		}}
+
+		available = {
+			has_completed_focus = DUN_unite_the_adriatic_empire
+			has_government = communism
+			is_subject = no
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 104
+			has_full_control_of_state = 109
+			has_full_control_of_state = 102
+			has_full_control_of_state = 853
+			has_full_control_of_state = 736
+			has_full_control_of_state = 160
+			has_full_control_of_state = 850
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_GreaterChiss
+			hidden_effect = {
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				102 = { add_core_of = DUN }
+				853 = { add_core_of = DUN }
+				736 = { add_core_of = DUN }
+				160 = { add_core_of = DUN }
+				850 = { add_core_of = DUN }
+				39 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_socialist_roman_republic = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 103
+			state = 163
+			state = 104
+			state = 109
+			state = 102
+			state = 853
+			state = 736
+			state = 160
+			state = 850
+			state = 159
+			state = 158
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+		}}
+
+		available = {
+			has_completed_focus = DUN_unite_the_adriatic_empire
+			has_government = communism
+			is_subject = no
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 104
+			has_full_control_of_state = 109
+			has_full_control_of_state = 102
+			has_full_control_of_state = 853
+			has_full_control_of_state = 736
+			has_full_control_of_state = 160
+			has_full_control_of_state = 850
+			has_full_control_of_state = 159
+			has_full_control_of_state = 158
+			has_full_control_of_state = 161
+			has_full_control_of_state = 162
+			has_full_control_of_state = 157
+			has_full_control_of_state = 2
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_Rome
+			hidden_effect = {
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				102 = { add_core_of = DUN }
+				853 = { add_core_of = DUN }
+				736 = { add_core_of = DUN }
+				160 = { add_core_of = DUN }
+				850 = { add_core_of = DUN }
+				39 = { add_core_of = DUN }
+				159 = { add_core_of = DUN }
+				158 = { add_core_of = DUN }
+				161 = { add_core_of = DUN }
+				162 = { add_core_of = DUN }
+				157 = { add_core_of = DUN }
+				2 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+DUN_expansionist_defense = {
+	DUN_decision_unite_the_empire = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+		}}
+
+		available = {
+			has_completed_focus = DUN_form_the_empire
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_TheEmpire
+			hidden_effect = {
+				102 = { add_core_of = DUN }
+				853 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				107 = { add_core_of = DUN }
+				108 = { add_core_of = DUN }
+				803 = { add_core_of = DUN }
+				106 = { add_core_of = DUN }
+				970 = { add_core_of = DUN }
+				802 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_expand_the_empire = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 48
+			state = 801
+			state = 212
+			state = 211
+			state = 185
+			state = 731
+			state = 184
+			state = 47
+			state = 186
+			state = 187
+			state = 182
+		}}
+		
+		available = {
+			has_completed_focus = DUN_expand_the_empire
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 48
+			has_full_control_of_state = 801
+			has_full_control_of_state = 212
+			has_full_control_of_state = 211
+			has_full_control_of_state = 185
+			has_full_control_of_state = 731
+			has_full_control_of_state = 184
+			has_full_control_of_state = 47
+			has_full_control_of_state = 186
+			has_full_control_of_state = 187
+			has_full_control_of_state = 182
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_TheEmpire
+			hidden_effect = {
+			109 = { add_core_of = DUN }
+			45 = { add_core_of = DUN }
+			764 = { add_core_of = DUN }
+			104 = { add_core_of = DUN }
+			804 = { add_core_of = DUN }
+			103 = { add_core_of = DUN }
+			163 = { add_core_of = DUN }
+			107 = { add_core_of = DUN }
+			108 = { add_core_of = DUN }
+			803 = { add_core_of = DUN }
+			106 = { add_core_of = DUN }
+			970 = { add_core_of = DUN }
+			802 = { add_core_of = DUN }
+			105 = { add_core_of = DUN }
+			934 = { add_core_of = DUN }
+			44 = { add_core_of = DUN }
+			805 = { add_core_of = DUN }
+			48 = { add_core_of = DUN }
+			801 = { add_core_of = DUN }
+			212 = { add_core_of = DUN }
+			211 = { add_core_of = DUN }
+			185 = { add_core_of = DUN }
+			731 = { add_core_of = DUN }
+			184 = { add_core_of = DUN }
+			47 = { add_core_of = DUN }
+			186 = { add_core_of = DUN }
+			187 = { add_core_of = DUN }
+			182 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_expand_the_empire_2 = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 43
+			state = 664
+			state = 70
+			state = 72
+			state = 71
+			state = 73
+		}}
+		
+		available = {
+			has_completed_focus = DUN_expand_the_empire_2
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 43
+			has_full_control_of_state = 664
+			has_full_control_of_state = 70
+			has_full_control_of_state = 72
+			has_full_control_of_state = 71
+			has_full_control_of_state = 73
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_TheEmpire
+			hidden_effect = {
+			109 = { add_core_of = DUN }
+			45 = { add_core_of = DUN }
+			764 = { add_core_of = DUN }
+			104 = { add_core_of = DUN }
+			804 = { add_core_of = DUN }
+			103 = { add_core_of = DUN }
+			163 = { add_core_of = DUN }
+			107 = { add_core_of = DUN }
+			108 = { add_core_of = DUN }
+			803 = { add_core_of = DUN }
+			106 = { add_core_of = DUN }
+			970 = { add_core_of = DUN }
+			802 = { add_core_of = DUN }
+			105 = { add_core_of = DUN }
+			934 = { add_core_of = DUN }
+			44 = { add_core_of = DUN }
+			805 = { add_core_of = DUN }
+			155 = { add_core_of = DUN }
+			154 = { add_core_of = DUN }
+			43 = { add_core_of = DUN }
+			664 = { add_core_of = DUN }
+			70 = { add_core_of = DUN }
+			72 = { add_core_of = DUN }
+			71 = { add_core_of = DUN }
+			73 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_the_first_galactic_empire = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 48
+			state = 801
+			state = 212
+			state = 211
+			state = 185
+			state = 731
+			state = 184
+			state = 47
+			state = 186
+			state = 187
+			state = 182
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 43
+			state = 664
+			state = 341
+			state = 797
+			state = 340
+			state = 339
+			state = 343
+			state = 342
+			state = 347
+			state = 49
+			state = 346
+			state = 345
+			state = 356
+			state = 798
+			state = 348
+			state = 344
+			state = 355
+			state = 349
+			state = 354
+			state = 353
+			state = 800
+			state = 350
+			state = 352
+		}}
+		
+		available = {
+			has_completed_focus = DUN_form_the_first_galactic_empire
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 48
+			has_full_control_of_state = 801
+			has_full_control_of_state = 212
+			has_full_control_of_state = 211
+			has_full_control_of_state = 185
+			has_full_control_of_state = 731
+			has_full_control_of_state = 184
+			has_full_control_of_state = 47
+			has_full_control_of_state = 186
+			has_full_control_of_state = 187
+			has_full_control_of_state = 182
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 43
+			has_full_control_of_state = 664
+			has_full_control_of_state = 341
+			has_full_control_of_state = 797
+			has_full_control_of_state = 340
+			has_full_control_of_state = 339
+			has_full_control_of_state = 343
+			has_full_control_of_state = 342
+			has_full_control_of_state = 347
+			has_full_control_of_state = 49
+			has_full_control_of_state = 346
+			has_full_control_of_state = 345
+			has_full_control_of_state = 356
+			has_full_control_of_state = 798
+			has_full_control_of_state = 348
+			has_full_control_of_state = 344
+			has_full_control_of_state = 355
+			has_full_control_of_state = 349
+			has_full_control_of_state = 354
+			has_full_control_of_state = 353
+			has_full_control_of_state = 800
+			has_full_control_of_state = 350
+			has_full_control_of_state = 352
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_GalacticEmpire
+			set_capital = {
+				state = 797
+				remember_old_capital = no
+			}
+			hidden_effect = {
+			109 = { add_core_of = DUN }
+			45 = { add_core_of = DUN }
+			764 = { add_core_of = DUN }
+			104 = { add_core_of = DUN }
+			804 = { add_core_of = DUN }
+			103 = { add_core_of = DUN }
+			163 = { add_core_of = DUN }
+			107 = { add_core_of = DUN }
+			108 = { add_core_of = DUN }
+			803 = { add_core_of = DUN }
+			106 = { add_core_of = DUN }
+			970 = { add_core_of = DUN }
+			802 = { add_core_of = DUN }
+			105 = { add_core_of = DUN }
+			934 = { add_core_of = DUN }
+			44 = { add_core_of = DUN }
+			805 = { add_core_of = DUN }
+			48 = { add_core_of = DUN }
+			801 = { add_core_of = DUN }
+			212 = { add_core_of = DUN }
+			211 = { add_core_of = DUN }
+			185 = { add_core_of = DUN }
+			731 = { add_core_of = DUN }
+			184 = { add_core_of = DUN }
+			47 = { add_core_of = DUN }
+			186 = { add_core_of = DUN }
+			187 = { add_core_of = DUN }
+			182 = { add_core_of = DUN }
+			155 = { add_core_of = DUN }
+			43 = { add_core_of = DUN }
+			154 = { add_core_of = DUN }
+			664 = { add_core_of = DUN }
+			341 = { add_core_of = DUN }
+			797 = { add_core_of = DUN }
+			340 = { add_core_of = DUN }
+			339 = { add_core_of = DUN }
+			343 = { add_core_of = DUN }
+			342 = { add_core_of = DUN }
+			347 = { add_core_of = DUN }
+			49 = { add_core_of = DUN }
+			346 = { add_core_of = DUN }
+			345 = { add_core_of = DUN }
+			356 = { add_core_of = DUN }
+			798 = { add_core_of = DUN }
+			348 = { add_core_of = DUN }
+			344 = { add_core_of = DUN }
+			355 = { add_core_of = DUN }
+			349 = { add_core_of = DUN }
+			354 = { add_core_of = DUN }
+			353 = { add_core_of = DUN }
+			800 = { add_core_of = DUN }
+			350 = { add_core_of = DUN }
+			352 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_the_first_galactic_empire_2 = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 43
+			state = 664
+			state = 70
+			state = 72
+			state = 71
+			state = 73
+			state = 82
+			state = 83
+			state = 81
+			state = 46
+			state = 77
+			state = 971
+			state = 84
+			state = 76
+			state = 80
+			state = 79
+			state = 78
+			state = 766
+			state = 88
+			state = 89
+			state = 91
+			state = 90
+			state = 87
+			state = 10
+			state = 98
+			state = 92
+			state = 97
+			state = 93
+			state = 94
+		}}
+		
+		available = {
+			has_completed_focus = DUN_form_the_first_galactic_empire_2
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 43
+			has_full_control_of_state = 664
+			has_full_control_of_state = 70
+			has_full_control_of_state = 72
+			has_full_control_of_state = 71
+			has_full_control_of_state = 73
+			has_full_control_of_state = 82
+			has_full_control_of_state = 83
+			has_full_control_of_state = 81
+			has_full_control_of_state = 46
+			has_full_control_of_state = 77
+			has_full_control_of_state = 971
+			has_full_control_of_state = 84
+			has_full_control_of_state = 76
+			has_full_control_of_state = 80
+			has_full_control_of_state = 79
+			has_full_control_of_state = 88
+			has_full_control_of_state = 89
+			has_full_control_of_state = 91
+			has_full_control_of_state = 90
+			has_full_control_of_state = 87
+			has_full_control_of_state = 10
+			has_full_control_of_state = 98
+			has_full_control_of_state = 92
+			has_full_control_of_state = 97
+			has_full_control_of_state = 93
+			has_full_control_of_state = 94
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_GalacticEmpire
+			hidden_effect = {
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				107 = { add_core_of = DUN }
+				108 = { add_core_of = DUN }
+				803 = { add_core_of = DUN }
+				106 = { add_core_of = DUN }
+				970 = { add_core_of = DUN }
+				802 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+				155 = { add_core_of = DUN }
+				974 = { add_core_of = DUN }
+				973 = { add_core_of = DUN }
+				154 = { add_core_of = DUN }
+				43 = { add_core_of = DUN }
+				664 = { add_core_of = DUN }
+				70 = { add_core_of = DUN }
+				72 = { add_core_of = DUN }
+				71 = { add_core_of = DUN }
+				73 = { add_core_of = DUN }
+				82 = { add_core_of = DUN }
+				83 = { add_core_of = DUN }
+				81 = { add_core_of = DUN }
+				46 = { add_core_of = DUN }
+				77 = { add_core_of = DUN }
+				971 = { add_core_of = DUN }
+				84 = { add_core_of = DUN }
+				76 = { add_core_of = DUN }
+				80 = { add_core_of = DUN }
+				79 = { add_core_of = DUN }
+				78 = { add_core_of = DUN }
+				766 = { add_core_of = DUN }
+				88 = { add_core_of = DUN }
+				89 = { add_core_of = DUN }
+				91 = { add_core_of = DUN }
+				90 = { add_core_of = DUN }
+				87 = { add_core_of = DUN }
+				10 = { add_core_of = DUN }
+				98 = { add_core_of = DUN }
+				92 = { add_core_of = DUN }
+				97 = { add_core_of = DUN }
+				93 = { add_core_of = DUN }
+				94 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_the_eternal_galactic_empire = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 48
+			state = 801
+			state = 212
+			state = 211
+			state = 185
+			state = 731
+			state = 184
+			state = 47
+			state = 186
+			state = 187
+			state = 182
+			state = 341
+			state = 797
+			state = 340
+			state = 339
+			state = 343
+			state = 342
+			state = 347
+			state = 49
+			state = 346
+			state = 345
+			state = 356
+			state = 798
+			state = 348
+			state = 344
+			state = 355
+			state = 349
+			state = 354
+			state = 353
+			state = 800
+			state = 350
+			state = 352
+			state = 799
+			state = 677
+			state = 553
+			state = 554
+			state = 680
+			state = 676
+			state = 675
+			state = 291
+			state = 419
+			state = 421
+			state = 420
+			state = 417
+			state = 413
+			state = 266
+			state = 418
+			state = 416
+			state = 411
+			state = 412
+			state = 414
+			state = 410
+			state = 656
+			state = 455
+			state = 854
+			state = 855
+			state = 679
+			state = 856
+			state = 857
+			state = 859
+			state = 292
+			state = 858
+			state = 678
+			state = 765
+			state = 658
+			state = 294
+			state = 659
+			state = 293
+			state = 454
+		}}
+		
+		available = {
+			has_completed_focus = DUN_form_the_eternal_galactic_empire
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 48
+			has_full_control_of_state = 801
+			has_full_control_of_state = 212
+			has_full_control_of_state = 211
+			has_full_control_of_state = 185
+			has_full_control_of_state = 731
+			has_full_control_of_state = 184
+			has_full_control_of_state = 47
+			has_full_control_of_state = 186
+			has_full_control_of_state = 187
+			has_full_control_of_state = 182
+			has_full_control_of_state = 341
+			has_full_control_of_state = 797
+			has_full_control_of_state = 340
+			has_full_control_of_state = 339
+			has_full_control_of_state = 343
+			has_full_control_of_state = 342
+			has_full_control_of_state = 347
+			has_full_control_of_state = 49
+			has_full_control_of_state = 346
+			has_full_control_of_state = 345
+			has_full_control_of_state = 356
+			has_full_control_of_state = 798
+			has_full_control_of_state = 348
+			has_full_control_of_state = 344
+			has_full_control_of_state = 355
+			has_full_control_of_state = 349
+			has_full_control_of_state = 354
+			has_full_control_of_state = 353
+			has_full_control_of_state = 800
+			has_full_control_of_state = 350
+			has_full_control_of_state = 352
+			has_full_control_of_state = 799
+			has_full_control_of_state = 677
+			has_full_control_of_state = 553
+			has_full_control_of_state = 554
+			has_full_control_of_state = 680
+			has_full_control_of_state = 676
+			has_full_control_of_state = 675
+			has_full_control_of_state = 291
+			has_full_control_of_state = 419
+			has_full_control_of_state = 421
+			has_full_control_of_state = 420
+			has_full_control_of_state = 417
+			has_full_control_of_state = 413
+			has_full_control_of_state = 266
+			has_full_control_of_state = 418
+			has_full_control_of_state = 416
+			has_full_control_of_state = 411
+			has_full_control_of_state = 412
+			has_full_control_of_state = 414
+			has_full_control_of_state = 410
+			has_full_control_of_state = 656
+			has_full_control_of_state = 455
+			has_full_control_of_state = 854
+			has_full_control_of_state = 855
+			has_full_control_of_state = 679
+			has_full_control_of_state = 856
+			has_full_control_of_state = 857
+			has_full_control_of_state = 859
+			has_full_control_of_state = 292
+			has_full_control_of_state = 858
+			has_full_control_of_state = 678
+			has_full_control_of_state = 765
+			has_full_control_of_state = 658
+			has_full_control_of_state = 294
+			has_full_control_of_state = 659
+			has_full_control_of_state = 293
+			has_full_control_of_state = 454
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_EternalGalacticEmpire
+			set_capital = {
+				state = 797
+				remember_old_capital = no
+			}
+			hidden_effect = {
+			109 = { add_core_of = DUN }
+			45 = { add_core_of = DUN }
+			764 = { add_core_of = DUN }
+			104 = { add_core_of = DUN }
+			804 = { add_core_of = DUN }
+			103 = { add_core_of = DUN }
+			163 = { add_core_of = DUN }
+			107 = { add_core_of = DUN }
+			108 = { add_core_of = DUN }
+			803 = { add_core_of = DUN }
+			106 = { add_core_of = DUN }
+			802 = { add_core_of = DUN }
+			105 = { add_core_of = DUN }
+			934 = { add_core_of = DUN }
+			44 = { add_core_of = DUN }
+			805 = { add_core_of = DUN }
+			48 = { add_core_of = DUN }
+			801 = { add_core_of = DUN }
+			212 = { add_core_of = DUN }
+			211 = { add_core_of = DUN }
+			185 = { add_core_of = DUN }
+			731 = { add_core_of = DUN }
+			184 = { add_core_of = DUN }
+			47 = { add_core_of = DUN }
+			186 = { add_core_of = DUN }
+			187 = { add_core_of = DUN }
+			182 = { add_core_of = DUN }
+			341 = { add_core_of = DUN }
+			797 = { add_core_of = DUN }
+			340 = { add_core_of = DUN }
+			339 = { add_core_of = DUN }
+			343 = { add_core_of = DUN }
+			342 = { add_core_of = DUN }
+			347 = { add_core_of = DUN }
+			49 = { add_core_of = DUN }
+			346 = { add_core_of = DUN }
+			345 = { add_core_of = DUN }
+			356 = { add_core_of = DUN }
+			798 = { add_core_of = DUN }
+			348 = { add_core_of = DUN }
+			344 = { add_core_of = DUN }
+			355 = { add_core_of = DUN }
+			349 = { add_core_of = DUN }
+			354 = { add_core_of = DUN }
+			353 = { add_core_of = DUN }
+			800 = { add_core_of = DUN }
+			350 = { add_core_of = DUN }
+			352 = { add_core_of = DUN }
+			799 = { add_core_of = DUN }
+			677 = { add_core_of = DUN }
+			553 = { add_core_of = DUN }
+			554 = { add_core_of = DUN }
+			680 = { add_core_of = DUN }
+			676 = { add_core_of = DUN }
+			675 = { add_core_of = DUN }
+			291 = { add_core_of = DUN }
+			419 = { add_core_of = DUN }
+			421 = { add_core_of = DUN }
+			420 = { add_core_of = DUN }
+			417 = { add_core_of = DUN }
+			413 = { add_core_of = DUN }
+			266 = { add_core_of = DUN }
+			418 = { add_core_of = DUN }
+			416 = { add_core_of = DUN }
+			411 = { add_core_of = DUN }
+			412 = { add_core_of = DUN }
+			414 = { add_core_of = DUN }
+			410 = { add_core_of = DUN }
+			656 = { add_core_of = DUN }
+			455 = { add_core_of = DUN }
+			854 = { add_core_of = DUN }
+			855 = { add_core_of = DUN }
+			679 = { add_core_of = DUN }
+			856 = { add_core_of = DUN }
+			857 = { add_core_of = DUN }
+			859 = { add_core_of = DUN }
+			292 = { add_core_of = DUN }
+			858 = { add_core_of = DUN }
+			678 = { add_core_of = DUN }
+			765 = { add_core_of = DUN }
+			658 = { add_core_of = DUN }
+			294 = { add_core_of = DUN }
+			659 = { add_core_of = DUN }
+			293 = { add_core_of = DUN }
+			454 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_form_the_eternal_galactic_empire_2 = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 109
+			state = 45
+			state = 764
+			state = 104
+			state = 804
+			state = 103
+			state = 163
+			state = 107
+			state = 108
+			state = 803
+			state = 106
+			state = 970
+			state = 802
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 155
+			state = 974
+			state = 973
+			state = 154
+			state = 43
+			state = 664
+			state = 70
+			state = 72
+			state = 71
+			state = 73
+			state = 82
+			state = 83
+			state = 81
+			state = 46
+			state = 77
+			state = 971
+			state = 84
+			state = 76
+			state = 80
+			state = 79
+			state = 78
+			state = 766
+			state = 88
+			state = 89
+			state = 91
+			state = 90
+			state = 87
+			state = 10
+			state = 98
+			state = 92
+			state = 97
+			state = 93
+			state = 94
+			state = 95
+			state = 96
+			state = 784
+			state = 814
+			state = 11
+			state = 815
+			state = 189
+			state = 190
+			state = 809
+			state = 808
+			state = 12
+			state = 810
+			state = 191
+			state = 13
+			state = 811
+			state = 813
+			state = 812
+			state = 784
+			state = 95
+			state = 96
+			state = 208
+			state = 195
+			state = 244
+			state = 264
+			state = 209
+			state = 263
+			state = 210
+			state = 246
+			state = 247
+			state = 207
+			state = 242
+			state = 219
+			state = 206
+			state = 204
+			state = 241
+			state = 243
+			state = 224
+			state = 205
+			state = 223
+			state = 222
+			state = 94
+			state = 194
+			state = 193
+			state = 225
+			state = 220
+			state = 93
+			state = 91
+			state = 89
+			state = 199
+			state = 201
+			state = 202
+			state = 198
+			state = 834
+			state = 192
+			state = 203
+			state = 197
+			state = 259
+			state = 221
+			state = 226
+			state = 196
+			state = 200
+			state = 227
+			state = 228
+			state = 137
+		}}
+		
+		available = {
+			has_completed_focus = DUN_form_the_eternal_galactic_empire_2
+			has_government = fascism
+			is_subject = no
+			has_full_control_of_state = 109
+			has_full_control_of_state = 45
+			has_full_control_of_state = 764
+			has_full_control_of_state = 104
+			has_full_control_of_state = 804
+			has_full_control_of_state = 103
+			has_full_control_of_state = 163
+			has_full_control_of_state = 107
+			has_full_control_of_state = 108
+			has_full_control_of_state = 803
+			has_full_control_of_state = 106
+			has_full_control_of_state = 970
+			has_full_control_of_state = 802
+			has_full_control_of_state = 105
+			has_full_control_of_state = 934
+			has_full_control_of_state = 44
+			has_full_control_of_state = 805
+			has_full_control_of_state = 155
+			has_full_control_of_state = 974
+			has_full_control_of_state = 973
+			has_full_control_of_state = 154
+			has_full_control_of_state = 43
+			has_full_control_of_state = 664
+			has_full_control_of_state = 70
+			has_full_control_of_state = 72
+			has_full_control_of_state = 71
+			has_full_control_of_state = 73
+			has_full_control_of_state = 82
+			has_full_control_of_state = 83
+			has_full_control_of_state = 81
+			has_full_control_of_state = 46
+			has_full_control_of_state = 77
+			has_full_control_of_state = 971
+			has_full_control_of_state = 84
+			has_full_control_of_state = 76
+			has_full_control_of_state = 80
+			has_full_control_of_state = 79
+			has_full_control_of_state = 78
+			has_full_control_of_state = 766
+			has_full_control_of_state = 88
+			has_full_control_of_state = 89
+			has_full_control_of_state = 91
+			has_full_control_of_state = 90
+			has_full_control_of_state = 87
+			has_full_control_of_state = 10
+			has_full_control_of_state = 98
+			has_full_control_of_state = 92
+			has_full_control_of_state = 97
+			has_full_control_of_state = 93
+			has_full_control_of_state = 94
+			has_full_control_of_state = 95
+			has_full_control_of_state = 96
+			has_full_control_of_state = 784
+			has_full_control_of_state = 814
+			has_full_control_of_state = 11
+			has_full_control_of_state = 815
+			has_full_control_of_state = 189
+			has_full_control_of_state = 190
+			has_full_control_of_state = 809
+			has_full_control_of_state = 808
+			has_full_control_of_state = 12
+			has_full_control_of_state = 810
+			has_full_control_of_state = 191
+			has_full_control_of_state = 13
+			has_full_control_of_state = 811
+			has_full_control_of_state = 813
+			has_full_control_of_state = 812
+			has_full_control_of_state = 784
+			has_full_control_of_state = 95
+			has_full_control_of_state = 96
+			has_full_control_of_state = 208
+			has_full_control_of_state = 195
+			has_full_control_of_state = 244
+			has_full_control_of_state = 264
+			has_full_control_of_state = 209
+			has_full_control_of_state = 263
+			has_full_control_of_state = 210
+			has_full_control_of_state = 246
+			has_full_control_of_state = 247
+			has_full_control_of_state = 207
+			has_full_control_of_state = 242
+			has_full_control_of_state = 219
+			has_full_control_of_state = 206
+			has_full_control_of_state = 204
+			has_full_control_of_state = 241
+			has_full_control_of_state = 243
+			has_full_control_of_state = 224
+			has_full_control_of_state = 205
+			has_full_control_of_state = 223
+			has_full_control_of_state = 222
+			has_full_control_of_state = 94
+			has_full_control_of_state = 194
+			has_full_control_of_state = 193
+			has_full_control_of_state = 225
+			has_full_control_of_state = 220
+			has_full_control_of_state = 93
+			has_full_control_of_state = 91
+			has_full_control_of_state = 89
+			has_full_control_of_state = 199
+			has_full_control_of_state = 201
+			has_full_control_of_state = 202
+			has_full_control_of_state = 198
+			has_full_control_of_state = 834
+			has_full_control_of_state = 192
+			has_full_control_of_state = 203
+			has_full_control_of_state = 197
+			has_full_control_of_state = 259
+			has_full_control_of_state = 221
+			has_full_control_of_state = 226
+			has_full_control_of_state = 196
+			has_full_control_of_state = 200
+			has_full_control_of_state = 227
+			has_full_control_of_state = 228
+			has_full_control_of_state = 137
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = DUN_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = DUN_EternalGalacticEmpire
+			hidden_effect = {
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+				107 = { add_core_of = DUN }
+				108 = { add_core_of = DUN }
+				803 = { add_core_of = DUN }
+				106 = { add_core_of = DUN }
+				970 = { add_core_of = DUN }
+				802 = { add_core_of = DUN }
+				105 = { add_core_of = DUN }
+				934 = { add_core_of = DUN }
+				44 = { add_core_of = DUN }
+				805 = { add_core_of = DUN }
+				155 = { add_core_of = DUN }
+				974 = { add_core_of = DUN }
+				973 = { add_core_of = DUN }
+				154 = { add_core_of = DUN }
+				43 = { add_core_of = DUN }
+				664 = { add_core_of = DUN }
+				70 = { add_core_of = DUN }
+				72 = { add_core_of = DUN }
+				71 = { add_core_of = DUN }
+				73 = { add_core_of = DUN }
+				82 = { add_core_of = DUN }
+				83 = { add_core_of = DUN }
+				81 = { add_core_of = DUN }
+				46 = { add_core_of = DUN }
+				77 = { add_core_of = DUN }
+				971 = { add_core_of = DUN }
+				84 = { add_core_of = DUN }
+				76 = { add_core_of = DUN }
+				80 = { add_core_of = DUN }
+				79 = { add_core_of = DUN }
+				78 = { add_core_of = DUN }
+				766 = { add_core_of = DUN }
+				88 = { add_core_of = DUN }
+				89 = { add_core_of = DUN }
+				91 = { add_core_of = DUN }
+				90 = { add_core_of = DUN }
+				87 = { add_core_of = DUN }
+				10 = { add_core_of = DUN }
+				98 = { add_core_of = DUN }
+				92 = { add_core_of = DUN }
+				97 = { add_core_of = DUN }
+				93 = { add_core_of = DUN }
+				94 = { add_core_of = DUN }
+				95 = { add_core_of = DUN }
+				96 = { add_core_of = DUN }
+				784 = { add_core_of = DUN }
+				814 = { add_core_of = DUN }
+				11 = { add_core_of = DUN }
+				815 = { add_core_of = DUN }
+				189 = { add_core_of = DUN }
+				190 = { add_core_of = DUN }
+				809 = { add_core_of = DUN }
+				808 = { add_core_of = DUN }
+				12 = { add_core_of = DUN }
+				810 = { add_core_of = DUN }
+				191 = { add_core_of = DUN }
+				13 = { add_core_of = DUN }
+				811 = { add_core_of = DUN }
+				813 = { add_core_of = DUN }
+				812 = { add_core_of = DUN }
+				784 = { add_core_of = DUN }
+				95 = { add_core_of = DUN }
+				96 = { add_core_of = DUN }
+				208 = { add_core_of = DUN }
+				195 = { add_core_of = DUN }
+				244 = { add_core_of = DUN }
+				264 = { add_core_of = DUN }
+				209 = { add_core_of = DUN }
+				263 = { add_core_of = DUN }
+				210 = { add_core_of = DUN }
+				246 = { add_core_of = DUN }
+				247 = { add_core_of = DUN }
+				207 = { add_core_of = DUN }
+				242 = { add_core_of = DUN }
+				219 = { add_core_of = DUN }
+				206 = { add_core_of = DUN }
+				204 = { add_core_of = DUN }
+				241 = { add_core_of = DUN }
+				243 = { add_core_of = DUN }
+				224 = { add_core_of = DUN }
+				205 = { add_core_of = DUN }
+				223 = { add_core_of = DUN }
+				222 = { add_core_of = DUN }
+				94 = { add_core_of = DUN }
+				194 = { add_core_of = DUN }
+				193 = { add_core_of = DUN }
+				225 = { add_core_of = DUN }
+				220 = { add_core_of = DUN }
+				93 = { add_core_of = DUN }
+				91 = { add_core_of = DUN }
+				89 = { add_core_of = DUN }
+				199 = { add_core_of = DUN }
+				201 = { add_core_of = DUN }
+				202 = { add_core_of = DUN }
+				198 = { add_core_of = DUN }
+				834 = { add_core_of = DUN }
+				192 = { add_core_of = DUN }
+				203 = { add_core_of = DUN }
+				197 = { add_core_of = DUN }
+				259 = { add_core_of = DUN }
+				221 = { add_core_of = DUN }
+				226 = { add_core_of = DUN }
+				196 = { add_core_of = DUN }
+				200 = { add_core_of = DUN }
+				227 = { add_core_of = DUN }
+				228 = { add_core_of = DUN }
+				137 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	DUN_decision_sauron_ruler_of_the_earth = {
+		icon = GFX_decision_generic_form_nation
+
+		available = {
+			OR = {
+				LTD = {
+					has_completed_focus = LTD_sauron_ruler_of_the_earth
+				}
+				DUN = {
+					has_completed_focus = DUN_towards_arabia
+				}
+			}
+			has_country_leader = {
+				character = DUN_witch_king_of_angmar
+				ruling_only = yes
+			}
+			has_government = fascism
+			is_subject = no
+			any_controlled_state = {
+				not = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+			has_country_leader = {
+				character = DUN_witch_king_of_angmar
+				ruling_only = yes
+			}
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

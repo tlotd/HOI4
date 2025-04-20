@@ -1,0 +1,272 @@
+ideas = {
+	state_of_economy = { 
+		use_list_view = yes
+		law = yes
+		economic_boom = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.20
+				industrial_capacity_factory = 0.10
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		economic_expansion = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.05
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		economic_stagnation = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		low_inflation = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.05
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		moderate_inflation = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.10
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		heavy_inflation = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.30
+				industrial_capacity_factory = -0.15
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		hyperinflation = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.40
+				industrial_capacity_factory = -0.20
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		economic_collapse = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				consumer_goods_factor = 0.50
+				industrial_capacity_factory = -0.25
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+	}
+
+	literacy_rate = { 
+		use_list_view = yes
+		law = yes
+		excellent_literacy_rate = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				army_leader_start_level = 1
+				research_speed_factor = 0.03
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		high_literacy_rate = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				army_leader_start_level = 1
+				research_speed_factor = 0.01
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		low_literacy_rate = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				research_speed_factor = -0.01
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		high_illiteracy_rate = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			modifier = {
+				research_speed_factor = -0.03
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+	}
+
+	economic_alliance = { 
+		use_list_view = yes
+		law = yes
+		generic_economic_alliance = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			cancel = {
+			}
+			modifier = {
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+	}
+
+	military_alliance = { 
+		use_list_view = yes
+		law = yes
+		generic_military_alliance = {
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = state_of_economy_upgrade
+					always = no
+				}
+			}
+			cancel = {
+			}
+			modifier = {
+			}
+			cost = 0
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+	}
+}

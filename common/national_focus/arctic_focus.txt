@@ -1,0 +1,129 @@
+﻿focus_tree = {
+	id = ARC_arctic_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ARC
+		}
+	}
+
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = ARC_polar_diplomacy
+	}
+
+	focus = {
+		id = ARC_polar_diplomacy
+		icon = GFX_focus_generic_polar_diplomacy
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		x = 3
+		y = 2
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARC_polar_express
+		icon = GFX_focus_generic_polar_express
+		prerequisite = { focus = ARC_polar_diplomacy }
+		relative_position_id = ARC_polar_diplomacy
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARC_santa_claus
+		icon = GFX_focus_generic_santa_claus
+		prerequisite = { focus = ARC_polar_diplomacy }
+		relative_position_id = ARC_polar_diplomacy
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARC_elves
+		icon = GFX_focus_generic_elves
+		prerequisite = { focus = ARC_santa_claus }
+		relative_position_id = ARC_santa_claus
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARC_reindeers
+		icon = GFX_focus_generic_reindeers
+		prerequisite = { focus = ARC_santa_claus }
+		relative_position_id = ARC_santa_claus
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+	}
+
+}

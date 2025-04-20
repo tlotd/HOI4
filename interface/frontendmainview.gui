@@ -1,0 +1,1144 @@
+guiTypes = {
+
+	containerWindowType = {
+		name ="frontend_background"
+		position = { x=0 y =0 }	
+		size = { 
+			width = 1920 
+			height = 1440 
+			min = { width = 100% height = 100% }
+			max = { width = 100% height = 10000 }
+			preserve_aspect_ratio = yes
+		}
+		Orientation = center
+		Origo = center
+		clipping = no 
+		
+		background = {
+			name = "Background"		
+			spriteType ="GFX_frontend_bg"
+			alwaystransparent = yes
+		}
+		
+	}
+
+	containerWindowType = {
+		name = "owned_dlc_item"
+		size = { width = 50 height = 50 }
+		
+		buttonType =
+		{
+			position = { x = -230 y = 0 }
+			name ="dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		
+		iconType = {
+			name = "glowup"
+			position = { x = -50 y = -21 }
+			spriteType = "GFX_spirit_glow"
+			scale = 0.8
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { x = -6 y = 1 }
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+			#hide = yes
+		}
+		
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { x = 28 y = 24 }
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+		
+	}
+	
+	containerWindowType = {
+		name = "unowned_dlc_item"
+		size = { width = 50 height = 50 }
+		
+		buttonType =
+		{
+			position = { x = -230 y = 0 }
+			name ="dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { x = -6 y = 1 }
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+			#enabled = no
+		}
+		
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { x = 28 y = 24 }
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+		
+	}
+	
+	### MAIN MENU PANEL (DLC Ownership) 
+	containerWindowType = {
+		name  ="mainmenu_dlc_ownership"
+		position = { x=5 y =0 }
+		size = { width = 370 height = 528}
+		Orientation = lower_left
+		origo = lower_left
+		
+		gridBoxType = {
+			name = "potential_dlc_list"
+			position = { x = 0 y = 0}
+			size = { width = 50 height = 300 }
+			#Orientation = upper_left
+			slotsize = {width=50 height=51 }
+			max_slots_vertical = 1
+			format = "RIGHT"
+		}
+		
+	}
+	
+	### MAIN MENU PANEL (upperleft)
+	containerWindowType = {
+		name  ="mainmenu_panel_upperleft"
+		position = { x=0 y =-200 }
+		show_position = { x=0 y =-1 }
+		animation_type = decelerated
+		animation_time = 1000
+		size = { width = 256 height = 768}
+		
+		iconType =
+		{
+			name ="frontend_game_logo"
+			spriteType = "GFX_frontend_game_logo"
+			position = { x= 20 y = 20 }
+			scale = 1
+		}
+		
+	}
+
+	#containerWindowType = {
+	#	name  ="frontend_alpha_stamp"
+	#	position = { x=100 y =-100  }
+	#	size = { width = 131 height = 132}
+	#	orientation = lower_left
+	#	origo = lower_left
+	#	
+	#	iconType =
+	#	{
+	#		name ="frontend_alpha_stamp"
+	#		spriteType = "GFX_alpha_stamp"
+	#		position = { x= 0 y = 20 }
+	#	}		
+	#	
+	#}	
+	
+	### MAIN MENU PANEL (upperright)
+	containerWindowType = {
+		name ="mainmenu_panel_upperright"
+		position = { x=0 y =-1 }
+		show_position = { x=-256 y =-1 }
+		animation_type = decelerated
+		animation_time = 1000					
+		size = { width = 256 height = 768}
+		Orientation = upper_right
+
+		ButtonType = {
+			name = "achievements_button"
+			position = { x = -50 y = 25 }
+			quadTextureSprite ="achievements"
+			pdx_tooltip = "MENU_ACHIEVEMENTS"
+		}
+
+		ButtonType = {
+			name ="tlotd_logo"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_tlotd_logo"
+			#pdx_tooltip = "logo_TLOTD"
+			web_link = "https://tlotd.net"
+			scale = 1
+		}
+
+		ButtonType = {
+			name ="frontend_dev_logo"
+			spriteType = "GFX_frontend_dev_logo"
+			position = { x = 125 y = 0 }
+			web_link = "https://www.paradoxinteractive.com/"
+			scale = 1
+		}		
+		
+	}		
+
+	### SINGLE PLAYER MENU
+	containerWindowType = {
+		name = "mainmenu_single_player"
+		position = { x=0 y =0}
+		size = { width = 320 height = 395}
+		Orientation = CENTER
+		Origo = center	
+				
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window"
+		}
+		
+		ButtonType = {
+			name = "sp_continue_button"
+			position = { x = 16 y = 18 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "FE_CONTINUE"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_left"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x= 35 y = 22 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_left_overlay"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x= 35 y = 22 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_right"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x= 245 y = 22 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "sp_continue_flag_right_overlay"
+			quadTextureSprite ="GFX_flag_small2_not_masked"
+			position = { x= 245 y = 22 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+		
+		ButtonType = {
+			name = "sp_new_button"
+			position = { x = 16 y = 58 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "FE_NEW"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		ButtonType = {
+			name = "sp_load_button"
+			position = {  x = 16 y = 98 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "MENU_BAR_LOAD"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		ButtonType = {
+			name = "sp_tutorial_button"
+			position = { x = 16 y = 138}
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "FE_TUTORIAL"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		ButtonType = {
+			name = "sp_back_button"
+			position = { x = 16 y = 218 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "BACK"
+			buttonFont = "hoi_24header"
+			clicksound = click_close
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+	}
+
+	### MAIN MENU PANEL (bottom)
+
+	containerWindowType = {
+		name ="mainmenu_panel_bottom"
+		position = { x=0 y =0}
+		size = { width = 320 height = 435 }
+		Orientation = CENTER
+		Origo = center		
+
+		#positionType = {
+		#	name = "subscription_size"
+		#	position = { x = 320 y = 563 }
+		#}
+				
+		background = {
+			name = "Background"
+			position = { x = -380 y = -350 }	
+			quadTextureSprite ="GFX_menu_logo_background"
+		}
+			
+		ButtonType = {
+			name = "single_player_button"
+			position = { x = 16 y = 18 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			font = "hoi_24header"			
+			text = "FE_SINGLE_PLAYER"				
+			clicksound = click_default			
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "multi_player_button"
+			position = { x = 16 y = 58}
+			quadTextureSprite ="GFX_main_lobby_button"
+			font = "hoi_24header"			
+			text = "FE_MULTI_PLAYER"			
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		@warn_icon_x = 280
+		iconType = {
+			name = "single_player_button_warn"
+			position = { x = @warn_icon_x y = 22 }
+			spriteType = "GFX_missing_dlc_warning_sign"
+		}
+
+		instantTextBoxType = {
+
+			name ="version_label"
+			position = { x = 10 y = 340 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "ALPHA"
+			format = centre
+			maxWidth = 300
+			maxHeight = 20
+		}
+
+		#positionType = {
+		#	name = "version_label_subscription_position"
+		#	position = { x = 35 y = 524 }
+		#}
+		
+		
+		ButtonType = {
+			name = "settings_button"
+			position = { x = 16 y = 98 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "OPTIONS"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		buttonType = {
+			name = "career_profile_button"
+			position = { x = 16 y = 138 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_CAREER_PROFILE"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		iconType = {
+			name = "career_profile_button_star"
+			position = { x = -37 y = 155 }
+			spriteType = "GFX_icon_best_in_career"
+			centerposition = yes
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+		
+		buttonType = {
+			name = "friends_button"
+			position = { x = 16 y = 178 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			buttonText = "MENU_BAR_FRIENDS"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+
+		ButtonType = {
+			name = "credits_button"
+			position = {  x = 16 y = 218 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "FE_CREDITS"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+		}
+		
+		ButtonType = {
+			name = "nudge_button"
+			position = { x = 16 y = 258 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "Nudge!"
+			buttonFont = "hoi_24header"
+		}
+
+		ButtonType = {
+			name = "exit_button"
+			position = { x = 16 y = 300 }
+			quadTextureSprite ="GFX_main_lobby_button"
+			font = "hoi_24header"			
+			text = "FE_EXIT"			
+			clicksound = click_default
+			oversound = ui_menu_over
+			
+		}
+
+		#iconType = {
+		#	name = "subscription_divider"
+		#	position = { x = 4 y = 336 }
+		#	spriteType = "GFX_main_lobby_divider"
+		#}
+
+		#containerWindowType = {
+		#	name = "subscription_widget"
+		#	position = { x = 16 y = 352 }
+		#	size = { width = 288 height = 108 }
+		#
+		#	ButtonType = {
+		#		name = "show_subscription"
+		#		position = { x = 0 y = 0 }
+		#		quadTextureSprite ="GFX_subscription_widget"
+		#		buttonText = "SUBSCRIPTION_WIDGET"
+		#		buttonFont = "hoi_24header"
+		#		multiline = yes
+		#	}
+		#}
+
+		#containerWindowType = {
+		#	name = "subscription_widget_subscribed"
+		#	position = { x = 16 y = 352 }
+		#	size = { width = 288 height = 108 }
+		#
+		#	ButtonType = {
+		#		name = "show_subscription"
+		#		position = { x = 0 y = 0 }
+		#		quadTextureSprite ="GFX_subscription_widget_active"
+		#		frame = 1
+		#		buttonText = "SUBSCRIPTION_WIDGET_SUBSCRIBED"
+		#		buttonFont = "hoi_24header"
+		#		multiline = yes
+		#	}
+		#}
+	}
+	
+	containerWindowType = {
+		name = "mainmenu_social_buttons"
+		position = { x=-50 y=25 }	
+		size = { width = 240 height = 90 }
+		Orientation = center	
+		origo = center
+		
+		positionType = {
+			name = "position_without_social_gui"
+			position = { x = 0 y = 175 }
+		}
+
+		#positionType = {
+		#	name = "subscription_position"
+		#	position = { x = -50 y = 109 }
+		#}
+
+		#positionType = {
+		#	name = "subscription_position_without_social_gui"
+		#	position = { x = 0 y = 239 }
+		#}
+		
+		containerWindowType = {
+			name = "social_view_interface_window"
+			position = { x = 250 y = 0  }
+			size = { width = 60 height = 40 }
+			
+			buttonType = {
+				name = "toggle_button"
+				quadTextureSprite = "GFX_sort_button_83x29" ## Orig: 60x29
+				position = { x=0 y=0  }
+				buttonFont = "hoi_16mbs"
+			}
+				
+			iconType = {
+				name = "button_toggle_socialview_icon"
+				spriteType = "GFX_socialview_icon"
+				position = { x=0 y=0 }
+				alwaystransparent = yes
+			}
+				
+			instantTextBoxType={
+				name = "friends_online"
+				font = "cg_16b"
+				position = { x=20 y=15 }
+				text = "0"
+				maxWidth = 30
+				maxHeight = 16
+				alwaysTransparent = yes
+				format = center
+			}
+				
+			iconType = {
+				name = "new_message"
+				position = { x=42 y =5 }
+				spriteType = "GFX_new_message_icon"
+				pdx_tooltip = "SOCIAL_NEW_MESSAGE"
+			}
+				
+			iconType = {
+				name = "new_friend"
+				position = { x=42 y=17 }
+				spriteType = "GFX_new_friend_icon"
+				pdx_tooltip = "SOCIAL_NEW_FRIEND"
+			}
+		}
+
+		iconType = { #Mod Logo
+			name = "mod_title"
+			spriteType = "GFX_mod_title"
+			position = { x=-205 y=-630 }
+			scale = 0.8
+			alwaystransparent = yes
+		}
+
+		iconType = { #Version Subtitle
+			name = "version_subtitle"
+			spriteType = "GFX_version_subtitle"
+			position = { x=-240 y=-400 }
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = { #Submods
+			name ="submod_list"
+			position = { x=-5 y=20 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "Active Submods:"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "submod_uncensored"
+			position = { x=-215 y=65 }
+			spriteType = "GFX_submod_uncensored"
+			#pdx_tooltip = "MENU_UNCENSORED"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3344476952"
+			scale = 0.8
+		}
+
+		ButtonType = {
+			name = "submod_uncensored_dev"
+			position = { x=-140 y=96 }
+			spriteType = "GFX_mod_dev_tlotd_uncensored"
+			web_link = "https://tlotd.net/u/tlotd"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name ="submod1"
+			position = { x=-290 y=173 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Uncensored"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "submod_otherworldly"
+			position = { x=-90 y=64 }
+			spriteType = "GFX_submod_otherworldly"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3257844074"
+			scale = 1.2
+		}
+
+		ButtonType = {
+			name = "submod_otherworldly_dev"
+			position = { x=-20 y=96 }
+			spriteType = "GFX_mod_dev_tlotd_owgawftv"
+			web_link = "https://tlotd.net/u/tlotd"
+			scale = 0.8
+		}
+
+		#ButtonType = {
+		#	name = "submod_otherworldly_dev_2"
+		#	position = { x=17 y=96 }
+		#	spriteType = "GFX_mod_dev_isla_nublar_owgawftv"
+		#	web_link = "https://tlotd.net/u/isla_nublar"
+		#	scale = 0.9
+		#}
+
+		instantTextBoxType = {
+			name ="submod2"
+			position = { x=-160 y=165 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Old World Gods and"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="submod3"
+			position = { x=-160 y=180 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Whispers from the Void"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "submod_namefix"
+			position = { x=30 y=65 }
+			spriteType = "GFX_submod_namefix"
+			#pdx_tooltip = "MENU_COMMUNISTAN_EXPANDED"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3170753735"
+			scale = 1.0
+		}
+
+		ButtonType = {
+			name = "submod_namefix_dev"
+			position = { x=95 y=96 }
+			spriteType = "GFX_mod_dev_isla_nublar_namefix"
+			web_link = "https://tlotd.net/u/isla_nublar"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name ="submod4"
+			position = { x=-45 y=173 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Namefix"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "submod_communistan_expanded"
+			position = { x=130 y=65 }
+			spriteType = "GFX_submod_communistan_expanded"
+			#pdx_tooltip = "MENU_COMMUNISTAN_EXPANDED"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3251597676"
+			scale = 1.0
+		}
+
+		ButtonType = {
+			name = "submod_communistan_expanded_dev"
+			position = { x=190 y=96 }
+			spriteType = "GFX_mod_dev_akashic_system_communistan"
+			web_link = "https://tlotd.net/u/akashic_system"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name ="submod5"
+			position = { x=55 y=165 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Expansion"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="submod6"
+			position = { x=55 y=180 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "of the Dudes"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+
+		ButtonType = {
+			name = "submod_furries_unleashed"
+			position = { x=240 y=60 }
+			spriteType = "GFX_submod_toradyr_expanded"
+			#pdx_tooltip = "MENU_COMMUNISTAN_EXPANDED"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3251600431"
+			scale = 1.0
+		}
+
+		ButtonType = {
+			name = "submod_furries_unleashed_dev"
+			position = { x=305 y=96 }
+			spriteType = "GFX_mod_dev_glamin_furry"
+			web_link = "https://tlotd.net/u/glamin"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name ="submod7"
+			position = { x=165 y=165 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Furries"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="submod8"
+			position = { x=165 y=180 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Unleashed"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "submod_crown_of_california"
+			position = { x=350 y=60 }
+			spriteType = "GFX_submod_crown_of_california"
+			#pdx_tooltip = "MENU_COMMUNISTAN_EXPANDED"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3361839242"
+			scale = 1.0
+		}
+
+		ButtonType = {
+			name = "submod_crown_of_california_dev"
+			position = { x=415 y=96 }
+			spriteType = "GFX_mod_dev_salsafox_crown_of_california"
+			web_link = "https://tlotd.net/u/salsafox"
+			scale = 0.8
+		}
+
+		instantTextBoxType = {
+			name ="submod9"
+			position = { x=275 y=165 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Crown of"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="submod10"
+			position = { x=275 y=180 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "California"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="socials_title"
+			position = { x=-190 y=210 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "Our Socials:"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "tlotd_button"
+			position = { x=-220 y=240 }
+			spriteType = "GFX_menu_tlotd_button"
+			#pdx_tooltip = "MENU_TLOTD"
+			web_link = "https://tlotd.net"
+			scale = 0.6
+		}
+
+		instantTextBoxType = {
+			name ="tlotd_title"
+			position = { x=-310 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Website"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "steam_button"
+			position = { x=-140 y=240 }
+			spriteType = "GFX_menu_steam_button"
+			#pdx_tooltip = "MENU_STEAM"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3170707894"
+			scale = 0.6
+		}
+
+		instantTextBoxType = {
+			name ="steam_title"
+			position = { x=-232 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Steam"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "discord_button"
+			position = { x=-60 y=240 }
+			spriteType = "GFX_menu_discord_button"
+			#pdx_tooltip = "MENU_DISCORD"
+			web_link = "https://discord.gg/qrdQReN"
+			scale = 0.6
+		}
+
+		instantTextBoxType = {
+			name ="discord_title"
+			position = { x=-150 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Discord"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "youtube_button"
+			position = { x=20 y=240 }
+			spriteType = "GFX_menu_youtube_button"
+			#pdx_tooltip = "MENU_YOUTUBE"
+			web_link = "https://www.youtube.com/@tlotd"
+			scale = 0.6
+		}
+
+		instantTextBoxType = {
+			name ="youtube_title"
+			position = { x=-70 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "YouTube"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="developers_title"
+			position = { x=155 y=210 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "Mod Developers:"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "dev_1"
+			position = { x=100 y=210 }
+			spriteType = "GFX_dev_tlotd"
+			web_link = "https://tlotd.net/u/tlotd"
+			scale = 1.7
+		}
+
+		instantTextBoxType = {
+			name ="dev_1_title"
+			position = { x=15 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "TLOTD"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "dev_2"
+			position = { x=190 y=210 }
+			spriteType = "GFX_dev_isla_nublar"
+			web_link = "https://tlotd.net/u/isla_nublar"
+			scale = 1.7
+		}
+
+		instantTextBoxType = {
+			name ="dev_2_title"
+			position = { x=106 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Isla_Nublar"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "dev_3"
+			position = { x=280 y=210 }
+			spriteType = "GFX_dev_akashic_system"
+			web_link = "https://tlotd.net/u/akashic_system"
+			scale = 1.7
+		}
+
+		instantTextBoxType = {
+			name ="dev_3_title"
+			position = { x=142 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "AkashicSystem"
+			format = centre
+			maxWidth = 360
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "dev_4"
+			position = { x=370 y=210 }
+			spriteType = "GFX_dev_glamin"
+			web_link = "https://tlotd.net/u/glamin"
+			scale = 1.7
+		}
+
+		instantTextBoxType = {
+			name ="dev_4_title"
+			position = { x=284 y=326 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "Glamin"
+			format = centre
+			maxWidth = 250
+			maxHeight = 20
+		}
+
+		iconType = {
+			name = "mod_update_news"
+			position = { x = 600 y = -120 }
+			spriteType = "GFX_mod_update_news"
+			centerposition = yes
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+
+		iconType = {
+			name = "mod_update_news_content"
+			position = { x = 600 y = -120 }
+			spriteType = "GFX_mod_update_news_content"
+			centerposition = yes
+			orientation = upper_right
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name ="update_news_title"
+			position = { x=633 y=-160 }
+			textureFile = ""
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_title"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_1"
+			position = { x=633 y=-130 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_1"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_2"
+			position = { x=633 y=-110 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_2"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_3"
+			position = { x=633 y=-90 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_3"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_4"
+			position = { x=633 y=-70 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_4"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_5"
+			position = { x=633 y=-50 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_5"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_6"
+			position = { x=633 y=-30 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_6"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_7"
+			position = { x=633 y=-10 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_7"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_8"
+			position = { x=633 y=10 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_8"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_9"
+			position = { x=633 y=30 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_9"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		instantTextBoxType = {
+			name ="update_news_content_10"
+			position = { x=633 y=50 }
+			textureFile = ""
+			font = "hoi_24b"
+			borderSize = {x = 0 y = 0}
+			text = "update_news_content_10"
+			format = centre
+			maxWidth = 400
+			maxHeight = 20
+		}
+
+		ButtonType = {
+			name = "update_news_button"
+			position = { x = 690 y = 90 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "update_news_button"
+			buttonFont = "hoi_24header"
+			clicksound = click_default
+			oversound = ui_menu_over
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=3005941454"
+		}
+	}
+
+	## This position needs updated
+	containerWindowType = {
+		name = "mainmenu_achievement_button"
+		position = { x = -500 y = 20 }	
+		size = { width = 100 height = 100 }
+		Orientation = upper_right
+		clipping = no
+		
+		ButtonType = {
+			name = "achievements_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite ="achievements"
+			pdx_tooltip = "MENU_ACHIEVEMENTS"
+		}		
+	}
+}

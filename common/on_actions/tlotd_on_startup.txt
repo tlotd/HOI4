@@ -1,0 +1,1247 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            if = {
+		        limit = { #LKR Enable
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_germany_fractured option = tlotd_canon }
+                        has_game_rule = { rule = tlotd_germany_fractured option = ltd_lkr_wdz }
+                        has_game_rule = { rule = tlotd_germany_fractured option = ltd_lkr }
+                        has_game_rule = { rule = tlotd_germany_fractured option = lkr_wdz }
+                        has_game_rule = { rule = tlotd_germany_fractured option = lkr }
+                    }
+    	    	}
+                58 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 9
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 4
+                        instant_build = yes
+                    }
+                    set_state_name = STATE_58_LKR
+                    set_province_name = {
+                        id = 9347
+                        name = VICTORY_POINTS_9347_LKR
+                    }
+                }
+                909 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 7
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+    		}
+            if = {
+		        limit = { #LKR Disable
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_germany_fractured option = ltd_wdz }
+                        has_game_rule = { rule = tlotd_germany_fractured option = ltd }
+                        has_game_rule = { rule = tlotd_germany_fractured option = wdz }
+                        has_game_rule = { rule = tlotd_germany_fractured option = no }
+                        has_game_rule = { rule = tlotd_germany_fractured option = empire }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        LKR = {
+                            owns_state = 58
+                        }
+                    }
+                    GER = {
+                        transfer_state = 58
+                    }
+                    58 = {
+                        remove_core_of = LKR
+                    }
+                }
+                if = {
+                    limit = {
+                        LKR = {
+                            owns_state = 909
+                        }
+                    }
+                    GER = {
+                        transfer_state = 909
+                    }
+                    909 = {
+                        remove_core_of = LKR
+                        set_demilitarized_zone = no
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	OR = { #LTD Disable
+                        has_game_rule = { rule = tlotd_germany_fractured option = lkr_wdz }
+                        has_game_rule = { rule = tlotd_germany_fractured option = lkr }
+                        has_game_rule = { rule = tlotd_germany_fractured option = wdz }
+                        has_game_rule = { rule = tlotd_germany_fractured option = no }
+                        has_game_rule = { rule = tlotd_germany_fractured option = empire }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        LTD = {
+                            owns_state = 50
+                        }
+                    }
+                    GER = {
+                        transfer_state = 50
+                    }
+                    50 = {
+                        remove_core_of = LTD
+                    }
+                }
+                if = {
+                    limit = {
+                        LTD = {
+                            owns_state = 240
+                        }
+                    }
+                    GER = {
+                        transfer_state = 240
+                    }
+                    240 = {
+                        remove_core_of = LTD
+                        set_demilitarized_zone = no
+                    }
+                }
+                if = {
+                    limit = {
+                        LTD = {
+                            owns_state = 28
+                        }
+                    }
+                    GER = {
+                        transfer_state = 28
+                    }
+                    28 = {
+                        remove_core_of = LTD
+                    }
+                }
+    		}
+            if = {
+		        limit = { # WDZ Disabled
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_germany_fractured option = ltd_lkr }
+                        has_game_rule = { rule = tlotd_germany_fractured option = ltd }
+                        has_game_rule = { rule = tlotd_germany_fractured option = lkr }
+                        has_game_rule = { rule = tlotd_germany_fractured option = no }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        WDZ = {
+                            owns_state = 42
+                        }
+                    }
+                    GER = {
+                        transfer_state = 42
+                    }
+                    42 = {
+                        remove_core_of = WDZ
+                    }
+                }
+                if = {
+                    limit = {
+                        WDZ = {
+                            owns_state = 51
+                        }
+                    }
+                    GER = {
+                        transfer_state = 51
+                    }
+                    51 = {
+                        remove_core_of = WDZ
+                    }
+                }
+                if = {
+                    limit = {
+                        ALS = {
+                            owns_state = 28
+                        }
+                    }
+                    FRA = {
+                        transfer_state = 28
+                    }
+                    28 = {
+                        remove_core_of = ALS
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+                    OR = {
+                        has_game_rule = { rule = tlotd_germany_fractured option = tlotd_canon }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        AND = {
+                            date > 1919.1.1
+                            GER = {
+                                owns_state = 5
+                            }
+                        }
+                    }
+                    SSS = {
+                        transfer_state = 5
+                        add_state_core = 5
+                    }
+                }
+                if = {
+                    limit = {
+                        AND = {
+                            date > 1919.1.1
+                            GER = {
+                                owns_state = 763
+                            }
+                        }
+                    }
+                    SSS = {
+                        transfer_state = 763
+                        add_state_core = 763
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_germany_fractured option = empire }
+    	    	}
+                GER = {
+                    drop_cosmetic_tag = yes
+                    set_politics = {
+                        ruling_party = monarchism
+                        last_election = "1888.6.15"
+                        election_frequency = 48
+                        elections_allowed = no
+                    }
+                    set_popularities = {
+                        monarchism = 65
+                        democratic = 15
+                        fascism = 10
+                        neutrality = 5
+                        communism = 5
+                    }
+                    add_ideas = {
+                        established_monarchy
+                        industrial_powerhouse
+                        spirit_of_the_crusaders
+                    }
+                    transfer_state = 28
+                    transfer_state = 42
+                    transfer_state = 912
+                    transfer_state = 240
+                    transfer_state = 50
+                    transfer_state = 54
+                    transfer_state = 53
+                    transfer_state = 52
+                    transfer_state = 51
+                    transfer_state = 55
+                    transfer_state = 57
+                    transfer_state = 56
+                    transfer_state = 60
+                    transfer_state = 65
+                    transfer_state = 59
+                    transfer_state = 233
+                    transfer_state = 64
+                    transfer_state = 61
+                    transfer_state = 62
+                    transfer_state = 58
+                    transfer_state = 909
+                    transfer_state = 66
+                    transfer_state = 67
+                    transfer_state = 762
+                    transfer_state = 68
+                    transfer_state = 86
+                    transfer_state = 63
+                    transfer_state = 807
+                    transfer_state = 85
+                    transfer_state = 5
+                    transfer_state = 763
+                    transfer_state = 188
+                    add_state_core = 28
+                    add_state_core = 42
+                    add_state_core = 912
+                    add_state_core = 240
+                    add_state_core = 50
+                    add_state_core = 54
+                    add_state_core = 53
+                    add_state_core = 52
+                    add_state_core = 51
+                    add_state_core = 55
+                    add_state_core = 57
+                    add_state_core = 56
+                    add_state_core = 60
+                    add_state_core = 65
+                    add_state_core = 59
+                    add_state_core = 233
+                    add_state_core = 64
+                    add_state_core = 61
+                    add_state_core = 62
+                    add_state_core = 58
+                    add_state_core = 909
+                    add_state_core = 66
+                    add_state_core = 67
+                    add_state_core = 762
+                    add_state_core = 68
+                    add_state_core = 86
+                    add_state_core = 63
+                    add_state_core = 807
+                    add_state_core = 85
+                    add_state_core = 5
+                    add_state_core = 763
+                    add_state_core = 188
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_germany_fractured option = fully }
+    	    	}
+                ALS = {
+                    transfer_state = 28
+                    add_state_core = 28
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                WUR = {
+                    transfer_state = 50
+                    add_state_core = 50
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                
+                BAY = {
+                    transfer_state = 52
+                    add_state_core = 52
+                    transfer_state = 53
+                    add_state_core = 53
+                    transfer_state = 54
+                    add_state_core = 54
+                    transfer_state = 42
+                    add_state_core = 42
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                SAR = {
+                    transfer_state = 240
+                    add_state_core = 240
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                HES = {
+                    transfer_state = 912
+                    add_state_core = 912
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                OLD = {
+                    transfer_state = 56
+                    add_state_core = 56
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                SAX = {
+                    transfer_state = 65
+                    add_state_core = 65
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                MEK = {
+                    transfer_state = 61
+                    add_state_core = 61
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                SHL = {
+                    transfer_state = 58
+                    add_state_core = 58
+                    transfer_state = 909
+                    add_state_core = 909
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+                PRE = {
+                    transfer_state = 51
+                    add_state_core = 51
+                    transfer_state = 55
+                    add_state_core = 55
+                    transfer_state = 57
+                    add_state_core = 57
+                    transfer_state = 60
+                    add_state_core = 60
+                    transfer_state = 59
+                    add_state_core = 59
+                    transfer_state = 233
+                    add_state_core = 233
+                    transfer_state = 64
+                    add_state_core = 64
+                    transfer_state = 62
+                    add_state_core = 62
+                    transfer_state = 233
+                    add_state_core = 233
+                    transfer_state = 66
+                    add_state_core = 66
+                    transfer_state = 67
+                    add_state_core = 67
+                    transfer_state = 762
+                    add_state_core = 762
+                    transfer_state = 68
+                    add_state_core = 68
+                    transfer_state = 86
+                    add_state_core = 86
+                    transfer_state = 63
+                    add_state_core = 63
+                    transfer_state = 807
+                    add_state_core = 807
+                    transfer_state = 85
+                    add_state_core = 85
+                    transfer_state = 5
+                    add_state_core = 5
+                    transfer_state = 763
+                    add_state_core = 763
+                    transfer_state = 188
+                    add_state_core = 188
+                    OVERLORD = {
+                        end_puppet = ROOT
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_north_america_fractured option = tlotd_canon }
+                        has_game_rule = { rule = tlotd_north_america_fractured option = tex }
+                        has_game_rule = { rule = tlotd_north_america_fractured option = no }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        CAL = {
+                            owns_state = 378
+                        }
+                    }
+                    USA = {
+                        transfer_state = 378
+                    }
+                    378 = {
+                        remove_core_of = CAL
+                        add_core_of = USA
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_north_america_fractured option = tlotd_canon }
+                        has_game_rule = { rule = tlotd_north_america_fractured option = cal }
+                        has_game_rule = { rule = tlotd_north_america_fractured option = no }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        TEX = {
+                            owns_state = 375
+                        }
+                    }
+                    USA = {
+                        transfer_state = 375
+                    }
+                    375 = {
+                        remove_core_of = TEX
+                        add_core_of = USA
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_north_america_fractured option = tlotd_canon }
+                        has_game_rule = { rule = tlotd_north_america_fractured option = no }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        ALA = {
+                            owns_state = 463
+                        }
+                    }
+                    USA = {
+                        transfer_state = 463
+                    }
+                    463 = {
+                        remove_core_of = ALA
+                        add_core_of = USA
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	OR = {
+                        has_game_rule = { rule = tlotd_north_america_fractured option = tlotd_canon }
+                        has_game_rule = { rule = tlotd_north_america_fractured option = no }
+                    }
+    	    	}
+                if = {
+                    limit = {
+                        HAW = {
+                            owns_state = 629
+                        }
+                    }
+                    USA = {
+                        transfer_state = 629
+                    }
+                    629 = {
+                        remove_core_of = HAW
+                        add_core_of = USA
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_czechoslovakia_fractured option = cze_tor }
+    	    	}
+                CZE = {
+		            set_cosmetic_tag = CZE_ONLY
+                }
+                71 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 8
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 5
+                        instant_build = yes
+                    }
+                }
+                72 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 1
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 1
+                        instant_build = yes
+                    }   
+                }
+                88 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 5
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 4
+                        instant_build = yes
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_czechoslovakia_fractured option = cze_slo }
+    	    	}
+                if = {
+                    limit = {
+                        CZE = {
+                            owns_state = 70
+                        }
+                    }
+                    SLO = {
+                        transfer_state = 70
+                    }
+                    70 = {
+                        add_core_of = SLO
+                        remove_core_of = CZE
+                    }
+                }
+                if = {
+                    limit = {
+                        TOR = {
+                            owns_state = 71
+                        }
+                    }
+                    SLO = {
+                        transfer_state = 71
+                    }
+                    71 = {
+                        add_core_of = SLO
+                        remove_core_of = TOR
+                    }
+                }
+                if = {
+                    limit = {
+                        TOR = {
+                            owns_state = 72
+                        }
+                    }
+                    CZE = {
+                        transfer_state = 72
+                    }
+                    72 = {
+                        add_core_of = CZE
+                        remove_core_of = TOR
+                    }
+                }
+                if = {
+                    limit = {
+                        TOR = {
+                            owns_state = 88
+                        }
+                    }
+                    POL = {
+                        transfer_state = 88
+                    }
+                    88 = {
+                        add_core_of = POL
+                        remove_core_of = TOR
+                    }
+                }
+                if = {
+                    limit = {
+                        HUN = {
+                            owns_state = 73
+                        }
+                    }
+                    SLO = {
+                        transfer_state = 73
+                    }
+                    73 = {
+                        add_core_of = SLO
+                        remove_core_of = HUN
+                    }
+                }
+                if = {
+                    limit = {
+                        HUN = {
+                            owns_state = 664
+                        }
+                    }
+                    SLO = {
+                        transfer_state = 664
+                    }
+                    664 = {
+                        add_core_of = SLO
+                        remove_core_of = HUN
+                    }
+                }
+                CZE = {
+		            set_cosmetic_tag = CZE_ONLY
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_czechoslovakia_fractured option = no }
+    	    	}
+                if = {
+                    limit = {
+                        TOR = {
+                            owns_state = 71
+                        }
+                    }
+                    CZE = {
+                        transfer_state = 71
+                    }
+                    71 = {
+                        add_core_of = CZE
+                        remove_core_of = TOR
+                    }
+                }
+                if = {
+                    limit = {
+                        TOR = {
+                            owns_state = 72
+                        }
+                    }
+                    CZE = {
+                        transfer_state = 72
+                    }
+                    72 = {
+                        add_core_of = CZE
+                        remove_core_of = TOR
+                    }
+                }
+                if = {
+                    limit = {
+                        TOR = {
+                            owns_state = 88
+                        }
+                    }
+                    POL = {
+                        transfer_state = 88
+                    }
+                    88 = {
+                        add_core_of = POL
+                        remove_core_of = TOR
+                    }
+                }
+                if = {
+                    limit = {
+                        HUN = {
+                            owns_state = 73
+                        }
+                    }
+                    CZE = {
+                        transfer_state = 73
+                    }
+                    73 = {
+                        add_core_of = CZE
+                        remove_core_of = HUN
+                    }
+                }
+                if = {
+                    limit = {
+                        HUN = {
+                            owns_state = 664
+                        }
+                    }
+                    CZE = {
+                        transfer_state = 664
+                    }
+                    664 = {
+                        add_core_of = CZE
+                        remove_core_of = HUN
+                    }
+                }
+                CZE = {
+		            drop_cosmetic_tag = yes
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_eastern_europe_fractured option = leo }
+    	    	}
+                784 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 2
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+                95 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 3
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 4
+                        instant_build = yes
+                    }
+                }
+                96 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 3
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 4
+                        instant_build = yes
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_eastern_europe_fractured option = no }
+    	    	}
+                if = {
+                    limit = {
+                        LEO = {
+                            owns_state = 784
+                        }
+                    }
+                    POL = {
+                        transfer_state = 784
+                    }
+                    784 = {
+                        add_core_of = POL
+                        remove_core_of = LEO
+                    }
+                }
+                if = {
+                    limit = {
+                        LEO = {
+                            owns_state = 95
+                        }
+                    }
+                    POL = {
+                        transfer_state = 95
+                    }
+                    95 = {
+                        add_core_of = POL
+                        remove_core_of = LEO
+                    }
+                }
+                if = {
+                    limit = {
+                        LEO = {
+                            owns_state = 96
+                        }
+                    }
+                    POL = {
+                        transfer_state = 96
+                    }
+                    96 = {
+                        add_core_of = POL
+                        remove_core_of = LEO
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_sweden_fractured option = no }
+    	    	}
+                if = {
+                    limit = {
+                        KTG = {
+                            owns_state = 915
+                        }
+                    }
+                    SWE = {
+                        transfer_state = 915
+                    }
+                    915 = {
+                        add_core_of = SWE
+                        remove_core_of = KTG
+                    }
+                }
+                if = {
+                    limit = {
+                        KTG = {
+                            owns_state = 140
+                        }
+                    }
+                    SWE = {
+                        transfer_state = 140
+                    }
+                    140 = {
+                        add_core_of = SWE
+                        remove_core_of = KTG
+                    }
+                }
+                if = {
+                    limit = {
+                        KTG = {
+                            owns_state = 919
+                        }
+                    }
+                    SWE = {
+                        transfer_state = 919
+                    }
+                    919 = {
+                        add_core_of = SWE
+                        remove_core_of = KTG
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+    	        	has_game_rule = { rule = tlotd_sweden_fractured option = kat }
+    	    	}
+                915 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 6
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+                140 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 6
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 3
+                        instant_build = yes
+                    }
+                }
+                919 = {
+                    add_building_construction = {
+                        type = industrial_complex
+                        level = 6
+                        instant_build = yes
+                    }
+                    add_building_construction = {
+                        type = arms_factory
+                        level = 4
+                        instant_build = yes
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+                    has_game_rule = { rule = tlotd_australia_fractured option = yes }
+    	    	}
+                if = {
+                    limit = {
+                        JSN = {
+                            owns_state = 517
+                        }
+                    }
+                    517 = {
+                        add_building_construction = {
+                            type = industrial_complex
+                            level = 6
+                            instant_build = yes
+                        }
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 4
+                            instant_build = yes
+                        }
+                    }
+                }
+                if = {
+                    limit = {
+                        JSN = {
+                            owns_state = 518
+                        }
+                    }
+                    518 = {
+                        add_building_construction = {
+                            type = industrial_complex
+                            level = 2
+                            instant_build = yes
+                        }
+                        add_building_construction = {
+                            type = arms_factory
+                            level = 1
+                            instant_build = yes
+                        }
+                    }
+                }
+    		}
+            if = {
+		        limit = {
+                    has_game_rule = { rule = tlotd_australia_fractured option = no }
+    	    	}
+                if = {
+                    limit = {
+                        JSN = {
+                            owns_state = 517
+                        }
+                    }
+                    AST = {
+                        transfer_state = 517
+                        add_state_core = 517
+                    }
+                }
+                if = {
+                    limit = {
+                        JSN = {
+                            owns_state = 518
+                        }
+                    }
+                    AST = {
+                        transfer_state = 518
+                        add_state_core = 518
+                    }
+                }
+                if = {
+                    limit = {
+                        FPA = {
+                            owns_state = 521
+                        }
+                    }
+                    AST = {
+                        transfer_state = 521
+                        add_state_core = 521
+                    }
+                }
+                if = {
+                    limit = {
+                        FPA = {
+                            owns_state = 872
+                        }
+                    }
+                    AST = {
+                        transfer_state = 872
+                        add_state_core = 872
+                    }
+                }
+                if = {
+                    limit = {
+                        FPA = {
+                            owns_state = 523
+                        }
+                    }
+                    AST = {
+                        transfer_state = 523
+                        add_state_core = 523
+                    }
+                }
+                if = {
+                    limit = {
+                        FPA = {
+                            owns_state = 732
+                        }
+                    }
+                    AST = {
+                        transfer_state = 732
+                        add_state_core = 732
+                    }
+                }
+                if = {
+                    limit = {
+                        FPA = {
+                            owns_state = 634
+                        }
+                    }
+                    AST = {
+                        transfer_state = 634
+                        add_state_core = 634
+                    }
+                }
+                if = {
+                    limit = {
+                        ITE = {
+                            owns_state = 519
+                        }
+                    }
+                    AST = {
+                        transfer_state = 519
+                        add_state_core = 519
+                    }
+                }
+                if = {
+                    limit = {
+                        ITE = {
+                            owns_state = 520
+                        }
+                    }
+                    AST = {
+                        transfer_state = 520
+                        add_state_core = 520
+                    }
+                }
+                if = {
+                    limit = {
+                        ITE = {
+                            owns_state = 522
+                        }
+                    }
+                    AST = {
+                        transfer_state = 522
+                        add_state_core = 522
+                    }
+                }
+                if = {
+                    limit = {
+                        ITE = {
+                            owns_state = 674
+                        }
+                    }
+                    AST = {
+                        transfer_state = 674
+                        add_state_core = 674
+                    }
+                }
+                if = {
+                    limit = {
+                        NHO = {
+                            owns_state = 870
+                        }
+                    }
+                    AST = {
+                        transfer_state = 870
+                        add_state_core = 870
+                    }
+                }
+                if = {
+                    limit = {
+                        NHO = {
+                            owns_state = 871
+                        }
+                    }
+                    AST = {
+                        transfer_state = 871
+                        add_state_core = 871
+                    }
+                }
+    		}
+            every_possible_country = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            tag = ALI
+                            tag = CMB
+                            tag = HEL
+                        }
+                    }
+                }
+                add_ideas = {
+                    high_illiteracy_rate
+                }
+                set_country_flag = LON_member
+            }
+            every_possible_country = {
+                limit = {
+                    OR = {
+                        original_tag = NIS
+                        original_tag = LEO
+                        original_tag = JSN
+
+                        original_tag = FIN
+                        original_tag = LIT
+                        original_tag = LAT
+                        original_tag = EST
+
+                        original_tag = ICE
+                        original_tag = JAP
+                        original_tag = MEX
+                        original_tag = POR
+                        original_tag = HUN
+                        original_tag = YUG
+                        original_tag = SLV
+                        original_tag = CRO
+                        original_tag = BOS
+                        original_tag = SRB
+                        original_tag = MNT
+                        original_tag = MAC
+                        original_tag = ALB
+                        original_tag = BUL
+                        original_tag = ROM
+
+                        original_tag = HAW
+                    }
+                }
+                add_ideas = {
+                    low_literacy_rate
+                }
+            }
+            every_possible_country = {
+                limit = {
+                    OR = {
+                        original_tag = LTD
+                        original_tag = LKR
+                        original_tag = DUN
+
+                        original_tag = GUR
+                        original_tag = WDZ
+                        original_tag = ALS
+                        original_tag = COR
+                        original_tag = ALX
+
+
+                        original_tag = DEN
+                        original_tag = SWE
+                        original_tag = NOR
+
+                        original_tag = SPR
+                        original_tag = IRE
+                        original_tag = POL
+                        original_tag = CZE
+                        original_tag = SLO
+                        original_tag = SSS
+                        original_tag = SLO
+                        original_tag = GRE
+
+                        original_tag = AST
+                        original_tag = NZL
+
+                        original_tag = NHO
+                        original_tag = FPA
+
+                        original_tag = MEK
+                        original_tag = OLD
+                        original_tag = SAX
+                        original_tag = HES
+                        original_tag = BAD
+                        original_tag = WUR
+                        original_tag = BAY
+
+                        original_tag = ALA
+                    }
+                }
+                add_ideas = {
+                    high_literacy_rate
+                }
+            }
+            every_possible_country = {
+                limit = {
+                    OR = {
+                        original_tag = USA
+                        original_tag = TEX
+                        original_tag = CAL
+                        original_tag = CAN
+                        original_tag = ENG
+                        original_tag = FRA
+                        original_tag = GER
+                        original_tag = ITA
+                        original_tag = SWI
+                        original_tag = AUS
+                        original_tag = LIE
+                        original_tag = LUX
+                        original_tag = BEL
+                        original_tag = HOL
+
+                        original_tag = WGR
+                        original_tag = DDR
+                        original_tag = PRE
+                    }
+                }
+                add_ideas = {
+                    excellent_literacy_rate
+                }
+            }
+            every_possible_country = {
+                limit = {
+                    NOT = {
+                        OR = {
+                            has_idea = economic_boom
+                            has_idea = economic_expansion
+                            has_idea = low_inflation
+                            has_idea = moderate_inflation
+                            has_idea = heavy_inflation
+                            has_idea = hyperinflation
+                            has_idea = economic_collapse
+
+                            has_government = otherworldly
+                        }
+                    }
+                }
+                add_ideas = {
+                    economic_stagnation
+                }
+            }
+        }
+    }
+}

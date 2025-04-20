@@ -1,0 +1,112 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_stuttgart_palace_icon"
+		textureFile = "gfx/interface/buildings/historical_buildings/large/stuttgart_palace_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_stuttgart_palace_icon_small"
+		textureFile = "gfx/interface/buildings/historical_buildings/small/stuttgart_palace_icon_small.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_imperial_palace_icon"
+		textureFile = "gfx/interface/buildings/historical_buildings/large/imperial_palace_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_imperial_palace_icon_small"
+		textureFile = "gfx/interface/buildings/historical_buildings/small/imperial_palace_icon_small.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_palace_of_fine_arts_icon"
+		textureFile = "gfx/interface/buildings/historical_buildings/large/palace_of_fine_arts_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_palace_of_fine_arts_icon_small"
+		textureFile = "gfx/interface/buildings/historical_buildings/small/palace_of_fine_arts_icon_small.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_venator_star_destroyer_icon"
+		textureFile = "gfx/interface/buildings/historical_buildings/large/venator_star_destroyer_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_venator_star_destroyer_icon_small"
+		textureFile = "gfx/interface/buildings/historical_buildings/small/venator_star_destroyer_icon_small.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_baradur_icon"
+		textureFile = "gfx/interface/buildings/historical_buildings/large/baradur_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_baradur_icon_small"
+		textureFile = "gfx/interface/buildings/historical_buildings/small/baradur_icon_small.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_orthanc_icon"
+		textureFile = "gfx/interface/buildings/historical_buildings/large/orthanc_icon.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_orthanc_icon_small"
+		textureFile = "gfx/interface/buildings/historical_buildings/small/orthanc_icon_small.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_modifiers_tlotd_revolutionary_unrest"
+		textureFile = "gfx/interface/state_modifiers/modifiers_tlotd_revolutionary_unrest.dds"
+	}
+
+	spriteType = {
+		name = "GFX_terrain_stuttgart"
+		textureFile = "gfx/interface/terrains/terrain_stuttgart.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_stuttgart_winter"
+		textureFile = "gfx/interface/terrains/terrain_stuttgart_winter.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_black_forest"
+		textureFile = "gfx/interface/terrains/terrain_black_forest.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_black_forest_winter"
+		textureFile = "gfx/interface/terrains/terrain_black_forest_winter.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_the_island"
+		textureFile = "gfx/interface/terrains/terrain_the_island.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_the_island_winter"
+		textureFile = "gfx/interface/terrains/terrain_the_island_winter.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_hells_gate"
+		textureFile = "gfx/interface/terrains/terrain_hells_gate.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_flesh_pit"
+		textureFile = "gfx/interface/terrains/terrain_flesh_pit.dds"
+	}
+}

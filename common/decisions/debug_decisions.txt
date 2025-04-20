@@ -1,0 +1,1695 @@
+LTD_cosmetic_debug = {
+
+	LTD_decision_superior_firepower = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			LTD = {
+				has_country_flag = enable_debug
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			add_timed_idea = {
+				idea = superior_fighting_spirit
+				days = 10
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LTD_decision_switch_country = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			LTD = {
+				has_country_flag = enable_debug
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		targets = {
+			USA ENG FRA GER ITA JAP SOV LTD LKR DUN NIS LEO TOR VTC HEL ALI CMB
+		}
+		complete_effect = {
+			FROM = { change_tag_from = ROOT }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_state_building_test_DUN = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				103 = {
+					add_building_construction = {
+						type = landmark_venator_star_destroyer
+						level = 1
+						instant_build = yes
+						province = 3924
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_state_building_test_3 = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				50 = {
+					remove_building = {
+						type = landmark_stuttgart_palace
+						level = 1
+						province = 9517
+					}
+					add_building_construction = {
+						type = landmark_baradur
+						level = 1
+						instant_build = yes
+						province = 9517
+					}
+				}
+				103 = {
+					add_building_construction = {
+						type = landmark_orthanc
+						level = 1
+						instant_build = yes
+						province = 3924
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_state_building_test_2 = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				50 = {
+					remove_building = {
+						type = landmark_stuttgart_palace
+						level = 1
+						province = 9517
+					}
+					add_building_construction = {
+						type = landmark_orthanc
+						level = 1
+						instant_build = yes
+						province = 9517
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_state_building_test = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				custom_effect_tooltip = LTD_build_imperial_palace_landmark_tt
+				hidden_effect = {
+					50 = {
+						remove_building = {
+							type = landmark_stuttgart_palace
+							level = 1
+							province = 9517
+						}
+						add_building_construction = {
+							type = landmark_imperial_palace
+							level = 1
+							instant_build = yes
+							province = 9517
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_state_mod_test = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			240 = {
+				add_dynamic_modifier = {
+					modifier = modifiers_tlotd_revolutionary_unrest
+				}
+			}
+			42 = {
+				add_dynamic_modifier = {
+					modifier = modifiers_tlotd_revolutionary_unrest
+				}
+			}
+			978 = {
+				add_dynamic_modifier = {
+					modifier = modifiers_tlotd_revolutionary_unrest
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_bop_fascist_terror = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			remove_power_balance = {
+				id = LTD_legitimacy_balance
+			}
+			set_power_balance = {
+				id = LTD_fascist_terror_balance
+				set_default = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_Empire = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_Empire
+			set_country_flag = UnifiedEmpire
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_LOTR = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_LOTR
+			set_country_flag = LOTR
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_Southwest = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_Southwest
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_SouthernGER = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_SouthernGER
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_WesternGER = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_WesternGER
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_HRE = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_HRE
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_Transatlantic = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_Transatlantic
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_FRA = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_FRA
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_FRAEmpire = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_FRAEmpire
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_FRA_GER = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_FRA_GER
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_GER = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_GER
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_GEREmpire = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_GEREmpire
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_GERUnified = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_GERUnified
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_LTD_DUN_subject = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			DUN = {
+				puppet = LTD
+			}
+			set_cosmetic_tag = LTD_DUN_subject
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_puppet_LAF = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_autonomy = {
+				target = LAF
+				autonomy_state = autonomy_imperial_colony
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_puppet_LAM = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_autonomy = {
+				target = LAM
+				autonomy_state = autonomy_imperial_colony
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_puppet_LAS = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_autonomy = {
+				target = LAS
+				autonomy_state = autonomy_imperial_colony
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_enable_puppet_stuff = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			complete_national_focus = LTD_puppeteer
+			complete_national_focus = LTD_the_paris_accords
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_monarchist = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = monarchism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_democratic = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = democratic
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_communism = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = communism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_fascism = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			remove_country_leader_role = {
+				character = LTD_fuhrer
+				ideology = nazism
+			}
+			LTD_sauron = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = reign_of_sauron
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = LTD_fascism_party_long
+				name = LTD_fascism_party
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_nazi = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			remove_country_leader_role = {
+				character = LTD_sauron
+				ideology = reign_of_sauron
+			}
+			LTD_fuhrer = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = nazism
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = LTD_nazism_party_long
+				name = LTD_nazism_party
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_neutrality = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_theocracy = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = theocracy
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			remove_country_leader_role = {
+				character = LTD_islam
+				ideology = islamic_caliphate
+			}
+			LTD_gandalf = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = maiar_blessing
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = theocracy
+				long_name = LTD_theocracy_party_long
+				name = LTD_theocracy_party
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_theocracy2 = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = theocracy
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			remove_country_leader_role = {
+				character = LTD_gandalf
+				ideology = maiar_blessing
+			}
+			set_cosmetic_tag = LTD_islamic_caliphate
+			LTD_islam = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = islamic_caliphate
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = theocracy
+				long_name = islamic_caliphate
+				name = islamic_caliphate
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_corporatocratic = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = corporatocratic
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_militarygovernment = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = militarygovernment
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_otherworldly = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_otherworldly
+			set_politics = {
+				ruling_party = otherworldly
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_set_gov_no_government = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_politics = {
+				ruling_party = no_government
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_update_national_spirit = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = spirit_of_the_southwest
+				add_idea = german_spirit
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_update_national_spirit_2 = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			swap_ideas = {
+				remove_idea = german_spirit
+				add_idea = european_spirit
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+LTD_debug = {
+	LTD_enable_debug_decisions = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			NOT = { has_country_flag = enable_debug }
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_country_flag = enable_debug
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_disable_debug_decisions = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			clr_country_flag = enable_debug
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_assume_faction_leadership = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_faction_leader = yes
+			set_faction_spymaster = yes
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_unlock_gondorian_guardsmen = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_technology = {
+				gondorian_guard = 1
+			}
+			load_oob = gondor
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_unlock_silvan_elf_soldier = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_technology = {
+				silvan_elf_soldiers = 1
+			}
+			load_oob = silvan_elves
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_unlock_orc_soldier = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_technology = {
+				orc_soldiers = 1
+			}
+			load_oob = orcs
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_unlock_stormtroopers = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_technology = {
+				stormtroopers = 1
+			}
+			load_oob = stormtroopers
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_unlock_theropods = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_technology = {
+				theropod_warmachine = 1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_unlock_infantry_weapons_futuristic = {
+		icon = GFX_decision_generic_research
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_technology = {
+				infantry_weapons_futuristic = 1
+				anti_gravity_drive = 1
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				set_technology = {
+					anti_gravity_small_airframe = 1
+				}
+			}
+			else = {
+				set_technology = {
+					anti_gravity_fighter = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LTD_decision_railway_gibraltar = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 118
+			}
+		}
+		complete_effect = {
+			build_railway = {
+				level = 3
+				build_only_on_allied = no
+				fallback = yes
+				start_province = 4135
+				path = { }
+				target_province = 9945
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	LTD_decision_nuke_wilno = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 784
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 3320 #Specific province ID to nuke
+				state = 784 #State ID to nuke - will nuke random province in the state (remove if province ID set)
+				controller = LTD #The TAG of the country firing the nuke
+				use_nuke = no #Not sure - but I assume it is to remove a nuke from stockpile
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_haeb_enw = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 71
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 3581
+				state = 71
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_paris = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 16
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 11506
+				state = 16
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_rome = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 2
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 9904
+				state = 2
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_london = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 126
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 6103
+				state = 126
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_moscow = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 219
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 6380
+				state = 219
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_point_north = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 828
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 1420 
+				state = 828
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_new_york = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 358
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 3878 
+				state = 358
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_washington = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 361
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 3957 
+				state = 361
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_nagasaki = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 528
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 9950 
+				state = 528
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_nuke_hiroshima = {
+		icon = GFX_decision_revolt
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 529
+			}
+		}
+		complete_effect = {
+			launch_nuke = {
+				province = 1092 
+				state = 529
+				controller = LTD
+				use_nuke = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_super_earth = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_SuperEarth
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_add_idea_otherworldly_influence_self = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		complete_effect = {
+			set_cosmetic_tag = LTD_otherworldly
+			add_ideas = otherworldly_influence
+			set_politics = {
+				ruling_party = otherworldly
+				last_election = "1647.4.1"
+				election_frequency = 1000
+				elections_allowed = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_add_idea_otherworldly_influence = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+		cost = 0
+		targets = {
+			LTD LKR LEO DUN NIS TOR GER
+		}
+		complete_effect = {
+			FROM = {
+				add_ideas = otherworldly_influence
+				drop_cosmetic_tag = yes
+				set_politics = {
+					ruling_party = otherworldly
+					last_election = "1647.4.1"
+					election_frequency = 1000
+					elections_allowed = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_disband_faction = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+		}
+		targets = {
+			FRA ENG USA SOV JAP ITA GER
+		}
+		visible = {
+			has_country_flag = enable_debug
+			FROM = { is_faction_leader = yes }
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			FROM = {
+				dismantle_faction = yes
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_whitepeace = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+		}
+		targets = {
+			FRA ENG USA CAN SOV JAP ITA GER DUN LEO LKR NIS KTG ALX
+		}
+		visible = {
+			has_country_flag = enable_debug
+			FROM = { has_war_with = ROOT }
+			ROOT = {
+				is_ai = no
+			}
+		}
+		cost = 0
+		complete_effect = {
+			white_peace = FROM
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_american_civil_war = {
+		icon = GFX_decision_generic_form_nation
+		available = {
+		}
+		fire_only_once = yes
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		targets = {
+			USA
+		}
+		cost = 0
+		complete_effect = {
+			USA = {
+				set_popularities = {
+					otherworldly = 0
+					monarchism = 80
+					democratic = 8
+					fascism = 5
+					communism = 7
+				}
+				start_civil_war = {
+					ruling_party = democratic
+					ideology = monarchism
+					size = 0.8
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_isolationism = {
+		icon = GFX_decision_generic_PLACEHOLDER
+		available = {
+		}
+		visible = {
+			has_country_flag = enable_debug
+			ROOT = {
+				is_ai = no
+			}
+		}
+		targets = {
+			USA ENG
+		}
+		cost = 0
+		complete_effect = {
+			FROM = {
+				remove_ideas = stiff_upper_lip
+				remove_ideas = home_of_the_free
+				add_ideas = tlotd_isolationism
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

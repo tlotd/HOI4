@@ -1,0 +1,430 @@
+technologies = {
+
+	gondorian_guard = {
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			gondorian_guardsmen
+		}
+		research_cost = 0
+		start_year = 0
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	silvan_elf_soldiers = {
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			silvan_elf_soldier
+		}
+		research_cost = 0
+		start_year = 0
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	orc_soldiers = {
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			orc_soldier
+		}
+		research_cost = 0
+		start_year = 0
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	stormtroopers = {
+		allow = {
+			always = no
+		}
+		enable_subunits = {
+			stormtrooper
+		}
+		research_cost = 0
+		start_year = 0
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_fossils = {
+
+		folder = {
+			name = special_folder
+			position = { x = 4 y = 0 }
+		}
+
+		allow = {
+			has_resources_in_country = {
+				resource = fossils
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		path = {
+			leads_to_tech = theropod_warmachine
+			research_cost_coeff = 1
+		}
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_amber = {
+
+		folder = {
+			name = special_folder
+			position = { x = 6 y = 0 }
+		}
+
+		allow = {
+			has_resources_in_country = {
+				resource = amber
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		path = {
+			leads_to_tech = theropod_warmachine
+			research_cost_coeff = 1
+		}
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	theropod_warmachine = {
+
+		folder = {
+			name = special_folder
+			position = { x = 5.5 y = 2 }
+		}
+
+		allow = {
+			has_resources_in_country = {
+				resource = fossils
+				amount > 0
+			}
+			has_resources_in_country = {
+				resource = amber
+				amount > 0
+			}
+		}
+
+		is_special_project_tech = yes
+
+		research_cost = 1
+
+		start_year = 0
+
+		path = {
+			leads_to_tech = theropod_armor_plating
+			research_cost_coeff = 1
+		}
+
+		categories = {
+
+		}
+
+		special_project_specialization = { specialization_land }
+
+		on_research_complete = {
+			custom_effect_tooltip = theropod_warmachine_tooltip
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_mithril = {
+
+		folder = {
+			name = special_folder
+			position = { x = 10 y = 0 }
+		}
+
+		allow = {
+			original_tag = LTD
+			has_resources_in_country = {
+				resource = mithril
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		path = {
+			leads_to_tech = mithril_tank_armor
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = mithril_plane_armor
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = mithril_forging
+			research_cost_coeff = 1
+		}
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mithril_tank_armor = {
+
+		folder = {
+			name = special_folder
+			position = { x = 9 y = 2 }
+		}
+
+		enable_equipment_modules = {
+			mithril_tank_armor
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		path = {
+			leads_to_tech = theropod_armor_plating
+			research_cost_coeff = 1
+		}
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mithril_plane_armor = {
+
+		folder = {
+			name = special_folder
+			position = { x = 11 y = 2 }
+		}
+
+		enable_equipment_modules = {
+			mithril_armor_plate_small
+			mithril_armor_plate_medium
+			mithril_armor_plate_large
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		categories = {
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	theropod_armor_plating = {
+
+		dependencies = {
+			theropod_warmachine = 1
+			mithril_tank_armor = 1
+		}
+
+		folder = {
+			name = special_folder
+			position = { x = 7 y = 4 }
+		}
+
+		enable_equipment_modules = {
+			mithril_tank_armor
+		}
+
+		research_cost = 1
+
+		start_year = 0
+		
+		allow = {
+			ROOT = {
+				is_special_project_completed = sp:sp_land_theropods
+			}
+		}
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	mithril_forging = {
+
+		folder = {
+			name = special_folder
+			position = { x = 10 y = 3 }
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_panzerschokolade = {
+
+		folder = {
+			name = special_folder
+			position = { x = 13 y = 0 }
+		}
+
+		allow = {
+			original_tag = LKR
+			has_resources_in_country = {
+				resource = panzerschokolade
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_tibanna_gas = {
+
+		folder = {
+			name = special_folder
+			position = { x = 16 y = 0 }
+		}
+
+		allow = {
+			original_tag = DUN
+			has_resources_in_country = {
+				resource = tibanna_gas
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_stahlinium = {
+
+		folder = {
+			name = special_folder
+			position = { x = 19 y = 0 }
+		}
+
+		allow = {
+			original_tag = LEO
+			has_resources_in_country = {
+				resource = stahlinium
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	tech_anti_matter = {
+
+		folder = {
+			name = special_folder
+			position = { x = 22 y = 0 }
+		}
+
+		allow = {
+			original_tag = NIS
+			has_resources_in_country = {
+				resource = anti_matter
+				amount > 0
+			}
+		}
+
+		research_cost = 1
+
+		start_year = 0
+
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

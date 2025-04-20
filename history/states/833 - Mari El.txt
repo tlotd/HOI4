@@ -1,0 +1,39 @@
+state={
+	id=833
+	name="STATE_833"
+	resources={
+		rubber=6
+	}
+
+	history={
+		set_variable = { culture = 29 }
+		owner = LIE
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			3514 3 
+		}
+		add_core_of = LIE
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+				arms_factory = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		3514 
+	}
+	manpower=38387
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=15.000
+}

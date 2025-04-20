@@ -1,0 +1,317 @@
+﻿###########################
+# news_NIS Events
+###########################
+
+add_namespace = news_NIS
+
+country_event = { #relocate to europe
+	id = news_NIS.0
+	title = news_NIS.0.t
+	desc = news_NIS.0.d
+	picture = GFX_report_event_peasant_revolt
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_NIS.0.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			transfer_state = 21
+			transfer_state = 851
+			transfer_state = 32
+			transfer_state = 735
+			set_capital = {
+				state = 21
+				remember_old_capital = no
+			}
+			JAP = {
+				transfer_state = 555
+				transfer_state = 537
+				transfer_state = 655
+			}
+			21 = {
+				add_core_of = NIS
+				set_variable = { culture = 201 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			851 = {
+				add_core_of = NIS
+				set_variable = { culture = 201 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 6
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			32 = {
+				add_core_of = NIS
+				set_variable = { culture = 201 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			735 = {
+				add_core_of = NIS
+				set_variable = { culture = 201 }
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			delete_unit = {
+				disband = yes
+			}
+			load_oob = "NIS_europe"
+		}
+	}
+}
+
+country_event = { #french_crisis
+	id = news_NIS.20
+	title = news_NIS.20.t
+	desc = news_NIS.20.d
+	picture = GFX_report_event_peasant_revolt
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_NIS.20.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			OCC = {
+				transfer_state = 20
+				transfer_state = 22
+				transfer_state = 31
+				set_popularities = {
+					monarchism = 65
+					fascism = 20
+					communism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = monarchism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { #NIS_catalan_independence
+	id = news_NIS.25
+	title = news_NIS.25.t
+	desc = news_NIS.25.d
+	picture = GFX_report_event_peasant_revolt
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_NIS.25.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			CAT = {
+				transfer_state = 165
+				set_popularities = {
+					monarchism = 65
+					fascism = 20
+					communism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = monarchism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { #italian_fragmentation
+	id = news_NIS.30
+	title = news_NIS.30.t
+	desc = news_NIS.30.d
+	picture = GFX_report_event_peasant_revolt
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_NIS.30.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			if = {
+		        limit = {
+					158 = { owner = { owns_state = 847 } }
+    	    	}
+				SPM = {
+					transfer_state = 847
+				}
+    		}
+			SPM = {
+				transfer_state = 158
+				set_popularities = {
+					monarchism = 65
+					fascism = 20
+					communism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = monarchism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+			if = {
+		        limit = {
+					159 = { owner = { owns_state = 846 } }
+    	    	}
+				LBV = {
+					transfer_state = 846
+				}
+    		}
+			LBV = {
+				transfer_state = 159
+				set_popularities = {
+					monarchism = 65
+					fascism = 20
+					communism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = monarchism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+	}
+}
+
+country_event = { #invite
+	id = news_NIS.103
+	title = news_NIS.103.t
+	desc = news_NIS.103.d
+	picture = GFX_report_event_arctic_exploration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_NIS.103.a
+		ai_chance = { factor = 50 }
+		875 = {
+			add_core_of = NIS
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = invite_recieved
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	option = {
+		name = news_NIS.103.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = news_NIS.911
+	title = news_NIS.911.t
+	desc = news_NIS.911.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_NIS.911.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LTD_subject
+		LTD = {
+			set_country_flag = LTD_subject
+			set_autonomy = {
+				target = NIS
+				autonomy_state = autonomy_ltd_subject
+			}
+		}
+		if = {
+			limit = {
+				LTD = {
+					has_cosmetic_tag = LTD_Transatlantic
+				}
+			}
+			set_cosmetic_tag = NIS_LTD_Transatlantic_subject
+		} else_if = {
+			limit = {
+				LTD = {
+					OR = {
+						has_cosmetic_tag = LTD_GER
+						has_cosmetic_tag = LTD_GEREmpire
+						has_cosmetic_tag = LTD_GERUnified
+					}
+				}
+			}
+			set_cosmetic_tag = NIS_LTD_GER_subject
+		} else = {
+			set_cosmetic_tag = NIS_LTD_subject
+		}
+	}
+	option = {
+		name = news_NIS.911.b
+		ai_chance = { factor = 100 }
+		LTD = {
+			create_wargoal = {
+				type = take_state_focus
+				target = NIS
+				expire = 0
+				generator = { 21 }
+			}
+		}
+		add_war_support = 0.1
+	}
+}

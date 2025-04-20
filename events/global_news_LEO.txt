@@ -1,0 +1,66 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = global_news_LEO
+
+#Lithuanian Civil War
+news_event = {
+	id = global_news_LEO.1
+	title = global_news_LEO.1.t
+	desc = global_news_LEO.1.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LEO.1.a
+	}
+}
+#Communist Unionstate
+news_event = {
+	id = global_news_LEO.2
+	title = global_news_LEO.2.t
+	desc = global_news_LEO.2.d
+	picture = GFX_news_event_banovina_croatia
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LEO.2.a
+	}
+}
+#Latvia
+news_event = {
+	id = global_news_LEO.3
+	title = global_news_LEO.3.t
+	desc = global_news_LEO.3.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LEO.3.a
+	}
+}
+#Estonia
+news_event = {
+	id = global_news_LEO.4
+	title = global_news_LEO.4.t
+	desc = global_news_LEO.4.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LEO.4.a
+	}
+}

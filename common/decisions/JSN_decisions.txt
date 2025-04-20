@@ -1,0 +1,416 @@
+JSN_path_to_glory = {
+	JSN_decision_southern_australian_coast = {
+		icon = GFX_decision_JSN_claim_state_1
+		highlight_states = { highlight_state_targets = {
+			state = 519
+		}}
+		available = {
+			is_subject = no
+			has_completed_focus = JSN_coastal_expansion
+			ITE = {
+				owns_state = 519
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			519 = {
+				NOT = { has_state_flag = terra_solisia_annex }
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_political_power > 49
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			519 = {
+				set_state_flag = {
+					flag = terra_solisia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	JSN_decision_southern_australian_coast_1 = {
+		icon = GFX_decision_JSN_claim_state_2
+		highlight_states = { highlight_state_targets = { state = 519 }}
+		available = {
+			is_subject = no
+			ITE = {
+				owns_state = 519
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			519 = {
+				has_state_flag = {
+					flag = terra_solisia_annex
+					value = 1
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			519 = {
+				add_claim_by = JSN
+				modify_state_flag = {
+					flag = terra_solisia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	JSN_decision_southern_australian_coast_2 = {
+		icon = GFX_decision_JSN_claim_state_3
+		highlight_states = { highlight_state_targets = { state = 519 }}
+		available = {
+			is_subject = no
+			ITE = {
+				owns_state = 519
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			519 = {
+				has_state_flag = {
+					flag = terra_solisia_annex
+					value = 2
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			519 = {
+				add_core_of = JSN
+				modify_state_flag = {
+					flag = terra_solisia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	JSN_decision_southern_australian_coast_3 = {
+		icon = GFX_decision_JSN_claim_state_4
+		highlight_states = { highlight_state_targets = { state = 519 }}
+		available = {
+			is_subject = no
+			ITE = {
+				owns_state = 519
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			519 = {
+				has_state_flag = {
+					flag = terra_solisia_annex
+					value = 3
+				}
+			}
+			ROOT = {
+				is_ai = no
+			}		
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_manpower > 999
+		}
+		custom_cost_text = decision_cost_PP_50_IE_500_MP_500
+		days_remove = 31
+		complete_effect = {
+			add_political_power = -50
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -500
+			}
+			add_manpower = -500
+		}
+		remove_effect = {
+			transfer_state = 519
+			519 = {
+				modify_state_flag = {
+					flag = terra_solisia_annex
+					value = 1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	JSN_decision_unite_australia = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 518
+			state = 517
+			state = 519
+			state = 871
+			state = 522
+			state = 674
+			state = 870
+			state = 520
+			state = 872
+			state = 521
+			state = 873
+			state = 285
+		}}
+
+		available = {
+			has_completed_focus = JSN_australian_unification
+			has_government = monarchism
+			is_subject = no
+			owns_state = 518
+			owns_state = 517
+			owns_state = 519
+			owns_state = 871
+			owns_state = 522
+			owns_state = 674
+			owns_state = 870
+			owns_state = 520
+			owns_state = 872
+			owns_state = 521
+			owns_state = 873
+			owns_state = 285
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = JSN_Australia
+			hidden_effect = {
+				518 = { add_core_of = JSN }
+				517 = { add_core_of = JSN }
+				519 = { add_core_of = JSN }
+				871 = { add_core_of = JSN }
+				522 = { add_core_of = JSN }
+				674 = { add_core_of = JSN }
+				870 = { add_core_of = JSN }
+				520 = { add_core_of = JSN }
+				872 = { add_core_of = JSN }
+				521 = { add_core_of = JSN }
+				873 = { add_core_of = JSN }
+				285 = { add_core_of = JSN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	JSN_decision_unite_oceania = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 518
+			state = 517
+			state = 519
+			state = 871
+			state = 522
+			state = 674
+			state = 870
+			state = 520
+			state = 872
+			state = 521
+			state = 873
+			state = 285
+			state = 723
+			state = 284
+			state = 635
+			state = 734
+			state = 634
+			state = 737
+			state = 523
+			state = 669
+			state = 738
+			state = 668
+			state = 721
+			state = 667
+			state = 673
+			state = 335
+			state = 672
+			state = 334
+			state = 333
+			state = 627
+			state = 626
+			state = 628
+			state = 625
+			state = 624
+			state = 327
+			state = 623
+			state = 711
+			state = 712
+		}}
+
+		available = {
+			has_completed_focus = JSN_australian_unification
+			has_government = monarchism
+			is_subject = no
+			owns_state = 518
+			owns_state = 517
+			owns_state = 519
+			owns_state = 871
+			owns_state = 522
+			owns_state = 674
+			owns_state = 870
+			owns_state = 520
+			owns_state = 872
+			owns_state = 521
+			owns_state = 873
+			owns_state = 285
+			owns_state = 723
+			owns_state = 284
+			owns_state = 635
+			owns_state = 734
+			owns_state = 634
+			owns_state = 737
+			owns_state = 523
+			owns_state = 669
+			owns_state = 738
+			owns_state = 668
+			owns_state = 721
+			owns_state = 667
+			owns_state = 673
+			owns_state = 335
+			owns_state = 672
+			owns_state = 334
+			owns_state = 333
+			owns_state = 627
+			owns_state = 626
+			owns_state = 628
+			owns_state = 625
+			owns_state = 624
+			owns_state = 327
+			owns_state = 623
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = JSN_Oceania
+			hidden_effect = {
+				518 = { add_core_of = JSN }
+				517 = { add_core_of = JSN }
+				519 = { add_core_of = JSN }
+				871 = { add_core_of = JSN }
+				522 = { add_core_of = JSN }
+				674 = { add_core_of = JSN }
+				870 = { add_core_of = JSN }
+				520 = { add_core_of = JSN }
+				872 = { add_core_of = JSN }
+				521 = { add_core_of = JSN }
+				873 = { add_core_of = JSN }
+				285 = { add_core_of = JSN }
+				723 = { add_core_of = JSN }
+				284 = { add_core_of = JSN }
+				635 = { add_core_of = JSN }
+				734 = { add_core_of = JSN }
+				634 = { add_core_of = JSN }
+				737 = { add_core_of = JSN }
+				523 = { add_core_of = JSN }
+				669 = { add_core_of = JSN }
+				738 = { add_core_of = JSN }
+				668 = { add_core_of = JSN }
+				721 = { add_core_of = JSN }
+				667 = { add_core_of = JSN }
+				673 = { add_core_of = JSN }
+				335 = { add_core_of = JSN }
+				672 = { add_core_of = JSN }
+				334 = { add_core_of = JSN }
+				333 = { add_core_of = JSN }
+				627 = { add_core_of = JSN }
+				626 = { add_core_of = JSN }
+				628 = { add_core_of = JSN }
+				625 = { add_core_of = JSN }
+				624 = { add_core_of = JSN }
+				327 = { add_core_of = JSN }
+				623 = { add_core_of = JSN }
+				711 = { add_core_of = JSN }
+				712 = { add_core_of = JSN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

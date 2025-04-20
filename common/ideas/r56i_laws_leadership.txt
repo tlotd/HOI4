@@ -1,0 +1,196 @@
+#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
+
+ideas = {
+
+	r56i_laws_leadership = { 
+	
+		law = yes
+
+		use_list_view = yes
+		
+		#Personality Cult
+		r56i_laws_leadership_cult = {
+
+			available = {
+				OR = {
+					is_subject = no
+					OVERLORD = {
+						has_government = fascism
+					}
+					OVERLORD = {
+						has_government = monarchism
+					}
+					OVERLORD = {
+						has_government = theocracy
+					}
+				}
+				NOT = {
+					hidden_trigger = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+
+			modifier = {
+				democratic_drift = -0.05		#present also in communist countries, surely won't contribute to liberalization of society 
+				justify_war_goal_time = -0.25
+				political_power_cost = 0.05
+			}
+
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		#Divine Inspiration
+		r56i_laws_leadership_divine = {
+		
+			available = {
+				OR = {
+					has_government = monarchism
+					has_government = theocracy
+				}
+				OR = {
+					is_subject = no
+					OVERLORD = {
+						OR = {
+							has_government = monarchism
+							has_government = theocracy
+						}
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				communism_drift = -0.05			#stalinists and trotskyist and their stance on religion
+				war_support_factor = 0.10
+				political_power_cost = 0.05
+			}
+
+			cost = 150
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		#Secular Institutions
+		r56i_laws_leadership_secular = {
+
+			available = {
+				NOT = {
+					has_government = theocracy
+				}
+				OR = {
+					is_subject = no
+					OVERLORD = {
+						NOT = {
+							has_government = theocracy
+						}
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				theocracy_drift = -0.05		#to represent an absolute power + theocratic states VS civilian authorities
+				research_speed_factor = 0.05
+				political_power_cost = 0.05
+			}
+
+			cost = 150
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0			
+   			}
+		}
+		
+		#Will of the People
+		r56i_laws_leadership_people = {
+
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+				OR = {
+					is_subject = no
+					OVERLORD = {
+						NOT = {
+							has_government = fascism
+						}
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				fascism_drift = -0.05				#Sounds very pro-communist, historically some people might've applied to it too though
+				supply_consumption_factor = -0.05
+				political_power_cost = 0.05
+			}
+
+			cost = 150
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		#Communal Decision Making
+		r56i_laws_leadership_communal_decision_making = {
+			picture = SPR_collectivized_society
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = has_government_anarchism_tt
+						OR = {
+							has_country_leader_ideology = anarchism
+							has_country_leader_ideology = anarchist_communism
+						}
+					}
+					has_idea = SPR_collectivized_society
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				democratic_drift = -0.02		#more communes, a bit more communism too on top
+				fascism_drift = -0.02
+				conscription_factor = 0.05
+				research_speed_factor = 0.05
+				political_power_cost = 0.05	
+			}
+
+			cost = 150
+
+			ai_will_do = {
+				factor = 0 
+			}
+		}		
+	}
+}
+
+#####---------------------------------------------------------------------> End

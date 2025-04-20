@@ -1,0 +1,2005 @@
+﻿ ###########################
+# TLOTD Events
+###########################
+
+# 1 - 31 monarchist
+# 32 -70 fascist
+# 71 - 100 communist
+# 101 - 130 democratic
+# 131 - 170 theocratic
+# 171 - 200 military government
+
+# 200 generic
+
+# 300 civil war
+
+
+
+add_namespace = news_LTD
+
+country_event = { #new_state
+	id = news_LTD.0
+	title = news_LTD.0.t
+	desc = news_LTD.0.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.0.a
+		ai_chance = { base = 100 }
+		add_political_power = 120
+		drop_cosmetic_tag = yes
+		OVERLORD = {
+			end_puppet = ROOT
+		}
+		hidden_effect = {
+			remove_power_balance = {
+				id = LTD_legitimacy_balance
+			}
+			news_event = { hours = 6 id = global_news_LTD.0 }
+		}
+	}
+}
+
+country_event = { #alsace
+	id = news_LTD.1
+	title = news_LTD.1.t
+	desc = news_LTD.1.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.1.a
+		ai_chance = { base = 100 }
+		annex_country = { target = ALS transfer_troops = yes }
+		set_province_name = {
+			id = 9559
+			name = VICTORY_POINTS_9559_GER
+		}
+		set_province_name = {
+			id = 9503
+			name = VICTORY_POINTS_9503_GER
+		}
+		set_province_name = {
+			id = 678
+			name = VICTORY_POINTS_678_GER
+		}
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.1 }
+		}
+	}
+}
+
+country_event = { #luxemburg
+	id = news_LTD.2
+	title = news_LTD.2.t
+	desc = news_LTD.2.d
+	picture = GFX_report_event_soldiers_marching
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.2.a
+		ai_chance = { base = 100 }
+		annex_country = { target = LUX transfer_troops = yes }
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.2 }
+		}
+	}
+}
+
+country_event = { #bavarian_revolt
+	id = news_LTD.3
+	title = news_LTD.3.t
+	desc = news_LTD.3.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.3.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			BAY = {
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				set_popularities = {
+					monarchism = 65
+					fascism = 20
+					communism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = monarchism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+			news_event = { hours = 6 id = global_news_LTD.3 }
+		}
+	}
+}
+
+country_event = { #unify_south
+	id = news_LTD.4
+	title = news_LTD.4.t
+	desc = news_LTD.4.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.4.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			annex_country = { target = BAY transfer_troops = yes }
+			transfer_state = 739
+			news_event = { hours = 6 id = global_news_LTD.4 }
+		}
+	}
+}
+
+country_event = { #liechtensein
+	id = news_LTD.5
+	title = news_LTD.5.t
+	desc = news_LTD.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.5.a
+		ai_chance = { base = 100 }
+		puppet = LIE
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.5 }
+		}
+	}
+}
+
+country_event = { #swiss_partition
+	id = news_LTD.6
+	title = news_LTD.6.t
+	desc = news_LTD.6.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.6.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.6 }
+			50 = { owner = { transfer_state = 3 transfer_state = 151 } }
+			158 = { owner = { transfer_state = 847 } }
+			159 = { owner = { transfer_state = 846 } }
+			if = {
+		        limit = {
+    	        	NIS = {
+   		         		is_ai = no
+    	    		}
+    	    	}
+				NIS = {
+					845 = { add_core_of = NIS }
+					transfer_state = 845
+				}
+    		}
+    		else = {
+				FRA = {
+					845 = { add_core_of = FRA }
+					transfer_state = 845
+				}
+			}
+		}
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+	}
+}
+
+country_event = { #austria independence
+	id = news_LTD.7
+	title = news_LTD.7.t
+	desc = news_LTD.7.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.7.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.7 }
+			AUS = {
+				transfer_state = 4
+				transfer_state = 152
+				transfer_state = 153
+				transfer_state = 848
+				set_popularities = {
+					monarchism = 65
+					fascism = 20
+					communism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = monarchism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+	}
+}
+
+country_event = { #austria anschluss
+	id = news_LTD.8
+	title = news_LTD.8.t
+	desc = news_LTD.8.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.8.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.8 }
+		}
+		annex_country = { target = AUS transfer_troops = yes }
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+	}
+}
+
+country_event = { #bruderkrieg
+	id = news_LTD.9
+	title = news_LTD.9.t
+	desc = news_LTD.9.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.9.a
+		ai_chance = { base = 100 }
+		if = {
+			limit = { is_in_faction_with = GER }
+			faction_leader = { remove_from_faction = GER }
+		}
+		declare_war_on = {
+            target = GER
+            type = annex_everything
+        }
+		add_war_support = 0.1
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.9 }
+		}
+	}
+}
+
+country_event = { #split wdz
+	id = news_LTD.10
+	title = news_LTD.10.t
+	desc = news_LTD.10.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.10.a
+		ai_chance = { base = 100 }
+		240 = {
+			OWNER = {
+				transfer_state = 42
+			}
+		}
+		57 = {
+			OWNER = {
+				transfer_state = 51
+			}
+		}
+		42 = {
+			remove_core_of = WDZ
+		}
+		51 = {
+			remove_core_of = WDZ
+		}
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.10 }
+			42 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #build castle
+	id = news_LTD.11
+	title = news_LTD.11.t
+	desc = news_LTD.11.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+ 	immediate = {
+		hidden_effect = {
+			capital_scope = { 
+				add_building_construction = {
+					type = bunker
+					level = 10
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_victory_point > 10
+					}
+				}
+				set_state_flag = capital_improvement_build
+			}
+			if = {
+		        limit = {
+					50 = { is_capital = yes }
+    	    	}
+				50 = {
+					remove_building = {
+						type = landmark_stuttgart_palace
+						level = 1
+						province = 9517
+					}
+					add_building_construction = {
+						type = landmark_imperial_palace
+						level = 1
+						instant_build = yes
+						province = 9517
+					}
+				}
+				if = {
+					limit = {
+						50 = { has_state_flag = lotr_name }
+					}
+					set_province_name = {
+						id = 9517
+						name = VICTORY_POINTS_9517_LTD_lotr_monarchist_castle
+					}
+				}
+				else = {
+					set_province_name = {
+						id = 9517
+						name = VICTORY_POINTS_9517_LTD_castle
+					}
+				}
+    		}
+			else_if = {
+				limit = {
+					64 = { is_capital = yes }
+    	    	}
+				64 = {
+					remove_building = {
+						type = landmark_berlin_reichstag
+						level = 1
+						province = 6521
+					}
+					remove_building = {
+						type = landmark_berlin_volkshalle
+						level = 1
+						province = 6521
+					}
+					add_building_construction = {
+						type = landmark_imperial_palace
+						level = 1
+						instant_build = yes
+						province = 6521
+					}
+				}
+				if = {
+					limit = {
+						64 = { has_state_flag = lotr_name }
+					}
+					set_province_name = {
+						id = 6521
+						name = VICTORY_POINTS_6521_LTD_monarchist_castle
+					}
+				}
+				else = {
+					set_province_name = {
+						id = 6521
+						name = VICTORY_POINTS_6521_LTD_castle
+					}
+				}
+    		}
+			else_if = {
+		        limit = {
+					276 = { is_capital = yes }
+    	    	}
+				set_province_name = {
+					id = 3778
+					name = VICTORY_POINTS_3778_LTD_castle
+				}
+    		}
+			else_if = {
+		        limit = {
+					473 = { is_capital = yes }
+    	    	}
+				set_province_name = {
+					id = 1408
+					name = VICTORY_POINTS_1408_LTD_castle
+				}
+    		}
+			else_if = {
+		        limit = {
+					358 = { is_capital = yes }
+    	    	}
+				set_province_name = {
+					id = 3878
+					name = VICTORY_POINTS_3878_LTD_castle
+				}
+    		}
+			else_if = {
+		        limit = {
+					361 = { is_capital = yes }
+    	    	}
+				set_province_name = {
+					id = 3951
+					name = VICTORY_POINTS_3951_LTD_castle
+				}
+    		}
+			else_if = {
+		        limit = {
+					375 = { is_capital = yes }
+    	    	}
+				set_province_name = {
+					id = 3960
+					name = VICTORY_POINTS_3960_LTD_castle
+				}
+    		}
+			else_if = {
+		        limit = {
+					378 = { is_capital = yes }
+    	    	}
+				set_province_name = {
+					id = 9814
+					name = VICTORY_POINTS_9814_LTD_castle
+				}
+    		}
+		}
+ 	}
+
+	option = {
+		name = news_LTD.11.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = { #ltd asks for territorries
+	id = news_LTD.28
+	title = news_LTD.28.t
+	desc = news_LTD.28.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.28.a
+		ai_chance = { base = 80 }
+		country_event = { id = news_LTD.29 }
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 762
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 762
+			}
+    	}
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 86
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 86
+			}
+    	}
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 807
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 807
+			}
+    	}
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 85
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 85
+			}
+    	}
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 5
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 5
+			}
+    	}
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 763
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 763
+			}
+    	}
+		if = {
+		    limit = {
+    	        ROOT = {
+   		         	owns_state = 188
+    	    	}
+    	    }
+			LTD = {
+				transfer_state = 188
+			}
+    	}
+	}
+	option = {
+		name = news_LTD.28.b
+		ai_chance = { base = 20 }
+		LTD = {
+			country_event = { id = news_LTD.30 }
+			create_wargoal = {
+				type = take_state_focus
+				target = ROOT
+				expire = 0
+				generator = { 5 763 85 807 86 762 188 }
+			}
+		}
+	}
+}
+
+country_event = { #country_accepts
+	id = news_LTD.29
+	title = news_LTD.29.t
+	desc = news_LTD.29.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.29.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = { #country_rejects
+	id = news_LTD.30
+	title = news_LTD.30.t
+	desc = news_LTD.30.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.30.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = { #need for a king
+	id = news_LTD.31
+	title = news_LTD.31.t
+	desc = news_LTD.31.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.31.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = leader_gui_enabled
+		set_country_flag = LEADER_GUI_VISIBLE
+		set_politics = {
+			ruling_party = monarchism
+			last_election = "1933.1.1"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		hidden_effect = {
+			set_popularities = {
+				neutrality = 15
+				monarchism = 65
+				democratic = 10
+				fascism = 5
+				communism = 5
+			}
+			news_event = { hours = 6 id = global_news_LTD.31 }
+		}
+	}
+	option = {
+		name = news_LTD.31.b
+		ai_chance = { base = 0 }
+		custom_effect_tooltip = leader_gui_disabled
+		clr_country_flag = LEADER_GUI_VISIBLE
+		set_politics = {
+			ruling_party = monarchism
+			last_election = "1933.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_popularities = {
+				neutrality = 15
+				monarchism = 65
+				democratic = 10
+				fascism = 5
+				communism = 5
+			}
+			news_event = { hours = 6 id = global_news_LTD.31 }
+		}
+	}
+}
+
+country_event = { #facist revolution
+	id = news_LTD.32
+	title = news_LTD.32.t
+	desc = news_LTD.32.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.32.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			GER = {
+				transfer_state = 51
+			}
+			51 = {
+				set_demilitarized_zone = no
+			}
+			transfer_state = 42
+			add_state_core = 240
+			transfer_state = 240
+			add_state_core = 42
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = ROOT
+				size = 0.3
+				capital = 50
+				states = all
+				states_filter = {
+					owner = ROOT
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = modifiers_tlotd_revolutionary_unrest
+						}
+					}
+				}
+    			keep_all_characters = yes
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = LTD
+				add_ideas = civil_war_debuff
+			}
+			LTD = {
+				set_cosmetic_tag = LTD_Revolution
+				set_politics = {
+					ruling_party = fascism
+					last_election = "1933.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+				set_popularities = {
+					monarchism = 15
+					fascism = 65
+					neutrality = 10
+					democratic = 5
+					communism = 5
+				}
+			}
+			LTD_fascist_revolutionaries = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = fascist_revolutionaries
+						traits = { revolutionary_unrest }
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = LTD_fascist_revolutionary_party_long
+				name = LTD_fascist_revolutionary_party
+			}
+			if = {
+				limit = { 240 = { has_dynamic_modifier = { modifier = modifiers_tlotd_revolutionary_unrest }}}
+				240 = {
+					remove_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			if = {
+				limit = { 42 = { has_dynamic_modifier = { modifier = modifiers_tlotd_revolutionary_unrest }}}
+				42 = {
+					remove_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			if = {
+				limit = { 978 = { has_dynamic_modifier = { modifier = modifiers_tlotd_revolutionary_unrest }}}
+				978 = {
+					remove_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			news_event = { hours = 6 id = global_news_LTD.32 }
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}
+
+country_event = { #choose fascism
+	id = news_LTD.33
+	title = news_LTD.33.t
+	desc = news_LTD.33.d
+	picture = GFX_report_event_barad_dur
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.33.a
+		drop_cosmetic_tag = yes
+		remove_country_leader_role = {
+			character = LTD_fascist_revolutionaries
+			ideology = fascist_revolutionaries
+		}
+		remove_country_leader_role = {
+			character = LTD_claus_von_stauffenberg
+			ideology = nazism
+		}
+		LTD_erich_koch = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = fascism_ideology
+				}
+				promote_leader = yes
+			}
+		}
+	}
+}
+
+country_event = { #choose national socialism
+	id = news_LTD.34
+	title = news_LTD.34.t
+	desc = news_LTD.34.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.34.a
+		set_cosmetic_tag = LTD_Empire
+		remove_country_leader_role = {
+			character = LTD_fascist_revolutionaries
+			ideology = fascist_revolutionaries
+		}
+		remove_country_leader_role = {
+			character = LTD_erich_koch
+			ideology = fascism_ideology
+		}
+		LTD_claus_von_stauffenberg = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = nazism
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = LTD_nazism_party_long
+			name = LTD_nazism_party
+		}
+	}
+}
+
+country_event = { #ss putsch
+	id = news_LTD.35
+	title = news_LTD.35.t
+	desc = news_LTD.35.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.35.a
+		set_cosmetic_tag = LTD_Empire
+		remove_country_leader_role = {
+			character = LTD_claus_von_stauffenberg
+			ideology = nazism
+		}
+		remove_country_leader_role = {
+			character = LTD_erich_koch
+			ideology = fascism_ideology
+		}
+		remove_country_leader_role = {
+			character = LTD_sauron
+			ideology = reign_of_sauron
+		}
+		LTD_alois_pfeifer = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = nazism_ss
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = LTD_ss_party_long
+			name = LTD_ss_party
+		}
+		add_ideas = {
+			ss_motto
+		}
+	}
+}
+country_event = { #southwest_referendum
+	id = news_LTD.36
+	title = news_LTD.36.t
+	desc = news_LTD.36.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.36.a
+		ai_chance = { base = 100 }
+		add_political_power = 120
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.30 }
+		}
+	}
+	option = {
+		name = news_LTD.36.b
+		ai_chance = { base = 0 }
+		GER = { annex_country = { target = LTD transfer_troops = yes }}
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.29 }
+		}
+	}
+}
+country_event = { #weser_line
+	id = news_LTD.41
+	title = news_LTD.41.t
+	desc = news_LTD.41.d
+	picture = GFX_report_event_generic_sign_treaty3
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.41.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			transfer_state = 739
+			transfer_state = 55
+			transfer_state = 51
+			transfer_state = 42
+			transfer_state = 57
+			transfer_state = 56
+		}
+	}
+}
+
+country_event = { #occupy_france
+	id = news_LTD.51
+	title = news_LTD.51.t
+	desc = news_LTD.51.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+		news_event = { hours = 6 id = global_news_LTD.51 }
+ 	}
+
+
+	option = {
+		name = news_LTD.51.a
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			17 = { add_core_of = LTD }
+			18 = { add_core_of = LTD }
+			29 = { add_core_of = LTD }
+			785 = { add_core_of = LTD }
+			15 = { add_core_of = LTD }
+			16 = { add_core_of = LTD }
+			27 = { add_core_of = LTD }
+			24 = { add_core_of = LTD }
+			30 = { add_core_of = LTD }
+			14 = { add_core_of = LTD }
+			23 = { add_core_of = LTD }
+			19 = { add_core_of = LTD }
+			806 = { add_core_of = LTD }
+			20 = { add_core_of = LTD }
+			26 = { add_core_of = LTD }
+			33 = { add_core_of = LTD }
+			25 = { add_core_of = LTD }
+			31 = { add_core_of = LTD }
+			22 = { add_core_of = LTD }
+			32 = { add_core_of = LTD }
+			21 = { add_core_of = LTD }
+			851 = { add_core_of = LTD }
+			735 = { add_core_of = LTD }
+		}
+	}
+	option = {
+		name = news_LTD.51.b
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			17 = { add_core_of = LTD }
+			18 = { add_core_of = LTD }
+			29 = { add_core_of = LTD }
+			785 = { add_core_of = LTD }
+			15 = { add_core_of = LTD }
+			16 = { add_core_of = LTD }
+			27 = { add_core_of = LTD }
+			24 = { add_core_of = LTD }
+			30 = { add_core_of = LTD }
+			14 = { add_core_of = LTD }
+			23 = { add_core_of = LTD }
+			19 = { add_core_of = LTD }
+			806 = { add_core_of = LTD }
+
+			FRA = {
+				set_cosmetic_tag = FRA_LOF
+				transfer_state = 20
+				transfer_state = 26
+				transfer_state = 33
+				transfer_state = 25
+				transfer_state = 31
+				transfer_state = 22
+			}
+
+			if = {
+		        limit = {
+    	        	NIS = {
+						NOT = {
+							owns_state = 21
+							owns_state = 32
+							owns_state = 851
+							owns_state = 735
+						}
+    	    		}
+    	    	}
+				FRA = {
+					transfer_state = 21
+					transfer_state = 32
+					transfer_state = 851
+					transfer_state = 735
+				}
+    		}
+			puppet = FRA
+		}
+	}
+	option = {
+		name = news_LTD.51.c
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			17 = { add_core_of = LTD }
+			18 = { add_core_of = LTD }
+			29 = { add_core_of = LTD }
+			785 = { add_core_of = LTD }
+			15 = { add_core_of = LTD }
+			16 = { add_core_of = LTD }
+			27 = { add_core_of = LTD }
+			24 = { add_core_of = LTD }
+			30 = { add_core_of = LTD }
+			14 = { add_core_of = LTD }
+			23 = { add_core_of = LTD }
+			19 = { add_core_of = LTD }
+			806 = { add_core_of = LTD }
+
+			NIS = {
+				transfer_state = 20
+				transfer_state = 26
+				transfer_state = 33
+				transfer_state = 25
+				transfer_state = 31
+				transfer_state = 22
+
+				transfer_state = 21
+				transfer_state = 32
+				transfer_state = 851
+				transfer_state = 735
+			}
+			20 = { add_core_of = NIS }
+			26 = { add_core_of = NIS }
+			33 = { add_core_of = NIS }
+			25 = { add_core_of = NIS }
+			31 = { add_core_of = NIS }
+			22 = { add_core_of = NIS }
+		}
+	}
+}
+
+country_event = { #choose communism
+	id = news_LTD.70
+	title = news_LTD.70.t
+	desc = news_LTD.70.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.70.a
+		drop_cosmetic_tag = yes
+		remove_country_leader_role = {
+			character = LTD_communist_revolutionaries
+			ideology = communist_revolutionaries
+		}
+		LTD_onkel_pjodric = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = stalinism
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = LTD_communism_party_long
+			name = LTD_communism_party
+		}
+	}
+}
+
+country_event = { #red revolution
+	id = news_LTD.71
+	title = news_LTD.71.t
+	desc = news_LTD.71.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+	option = {
+		name = news_LTD.71.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			set_politics = {
+				ruling_party = communism
+				last_election = "1933.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				monarchism = 15
+				communism = 65
+				neutrality = 10
+				democratic = 5
+				fascism = 5
+			}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = neutrality
+				size = 0.3
+				capital = 50
+				states = all
+				states_filter = {
+					owner = ROOT
+					NOT = {
+						has_dynamic_modifier = {
+							modifier = modifiers_tlotd_revolutionary_unrest
+						}
+					}
+				}
+    			keep_all_characters = yes
+			}
+			every_country_with_original_tag = {
+				original_tag_to_check = LTD
+				add_ideas = civil_war_debuff
+			}
+			LTD = {
+				set_cosmetic_tag = LTD_Revolution
+			}
+			LTD_communist_revolutionaries = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = communist_revolutionaries
+						traits = { revolutionary_unrest }
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = LTD_communist_revolutionary_party_long
+				name = LTD_communist_revolutionary_party
+			}
+			if = {
+				limit = { 240 = { has_dynamic_modifier = { modifier = modifiers_tlotd_revolutionary_unrest }}}
+				240 = {
+					remove_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			if = {
+				limit = { 42 = { has_dynamic_modifier = { modifier = modifiers_tlotd_revolutionary_unrest }}}
+				42 = {
+					remove_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			if = {
+				limit = { 978 = { has_dynamic_modifier = { modifier = modifiers_tlotd_revolutionary_unrest }}}
+				978 = {
+					remove_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			news_event = { hours = 6 id = global_news_LTD.32 }
+		}
+	}
+}
+
+country_event = { #bavarian_revolt_commie
+	id = news_LTD.72
+	title = news_LTD.72.t
+	desc = news_LTD.72.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.72.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			BAY = {
+				transfer_state = 52
+				transfer_state = 53
+				transfer_state = 54
+				set_popularities = {
+					communism = 65
+					fascism = 20
+					monarchism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+			news_event = { hours = 6 id = global_news_LTD.3 }
+		}
+	}
+}
+
+country_event = { #unify_south
+	id = news_LTD.73
+	title = news_LTD.73.t
+	desc = news_LTD.73.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.73.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			annex_country = { target = BAY transfer_troops = yes }
+			transfer_state = 739
+			news_event = { hours = 6 id = global_news_LTD.21 }
+		}
+	}
+}
+
+country_event = { #split czechoslovakia
+	id = news_LTD.74
+	title = news_LTD.74.t
+	desc = news_LTD.74.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.74.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			SLO = {
+				70 = { add_core_of = SLO }
+				71 = { add_core_of = SLO }
+				73 = { add_core_of = SLO }
+				664 = { add_core_of = SLO }
+				annex_country = { target = CZE transfer_troops = yes }
+				set_popularities = {
+					communism = 65
+					fascism = 20
+					monarchism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+			CZE = {
+				transfer_state = 69
+				transfer_state = 9
+				transfer_state = 72
+				transfer_state = 74
+				transfer_state = 75
+			}
+            declare_war_on = {
+                target = CZE
+                type = annex_everything
+            }
+			SLO = {
+				declare_war_on = {
+                target = CZE
+                type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = { #austria independence
+	id = news_LTD.75
+	title = news_LTD.75.t
+	desc = news_LTD.75.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.75.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_LTD.75 }
+			AUS = {
+				transfer_state = 4
+				transfer_state = 152
+				transfer_state = 153
+				transfer_state = 848
+				set_popularities = {
+					communism = 65
+					fascism = 20
+					monarchism = 10
+					democratic = 5
+				}
+				set_politics = {
+					ruling_party = communism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+		add_political_power = 75
+		add_war_support = 0.1
+		add_stability = 0.05
+	}
+}
+
+country_event = { #anarchist takeover
+	id = news_LTD.90
+	title = news_LTD.90.t
+	desc = news_LTD.90.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.90.a
+		ai_chance = { base = 100 }
+		set_cosmetic_tag = LTD_anarchism
+		hidden_effect = {
+			set_popularities = {
+				no_government = 65
+				communism = 20
+				monarchism = 10
+				fascism = 5
+			}
+			set_politics = {
+				ruling_party = no_government
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = LTD_communism_party_long
+				name = LTD_communism_party
+			}
+			set_party_name = {
+				ideology = no_government
+				long_name = LTD_anarchist_party_long
+				name = LTD_anarchist_party
+			}
+		}
+		LTD_anarchists = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = anarchism
+					traits = { }
+				}
+				promote_leader = yes
+			}
+		}
+		if = {
+			limit = { has_idea = industrial_powerhouse }
+			remove_ideas = industrial_powerhouse
+		}
+		if = {
+			limit = { has_idea = spirit_of_the_crusaders }
+			remove_ideas = spirit_of_the_crusaders
+		}
+		if = {
+			limit = { has_idea = tlotd_mutiny }
+			remove_ideas = tlotd_mutiny
+		}
+	}
+}
+
+country_event = { #european state
+	id = news_LTD.101
+	title = news_LTD.101.t
+	desc = news_LTD.101.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.101.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = { #european union faction
+	id = news_LTD.102
+	title = news_LTD.102.t
+	desc = news_LTD.102.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.102.a
+		ai_chance = { base = 100 }
+	}
+}
+
+country_event = { #european union opened accession talks
+	id = news_LTD.103
+	title = news_LTD.103.t
+	desc = news_LTD.103.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.103.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = { #european union opened federation talks
+	id = news_LTD.104
+	title = news_LTD.104.t
+	desc = news_LTD.104.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.104.a
+		ai_chance = { base = 100 }
+		set_cosmetic_tag = LTD_EU
+		hidden_effect = {
+		}
+	}
+}
+
+country_event = { #characters
+	id = news_LTD.200
+	title = news_LTD.200.t
+	desc = news_LTD.200.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.200.a
+		ai_chance = { base = 33 }
+		remove_country_leader_role = {
+			character = LTD_league_of_nations
+			ideology = centrism
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = LTD_neutrality_party_long
+			name = LTD_neutrality_party
+		}
+		LTD_theodor_zu_liechtenstein = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology=centrism
+				}
+				promote_leader = yes
+			}
+		}
+		custom_effect_tooltip = leader_gui_enabled
+		set_country_flag = LEADER_GUI_VISIBLE
+	}
+
+	option = {
+		name = news_LTD.200.b
+		ai_chance = { base = 33 }
+		remove_country_leader_role = {
+			character = LTD_league_of_nations
+			ideology = centrism
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = LTD_neutrality_party_long
+			name = LTD_neutrality_party
+		}
+		LTD_ralf_kramer = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology=centrism
+				}
+				promote_leader = yes
+			}
+		}
+		custom_effect_tooltip = leader_gui_enabled
+		set_country_flag = LEADER_GUI_VISIBLE
+	}
+
+	option = {
+		name = news_LTD.200.c
+		ai_chance = { base = 33 }
+		remove_country_leader_role = {
+			character = LTD_league_of_nations
+			ideology = centrism
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = LTD_neutrality_party_long
+			name = LTD_neutrality_party
+		}
+		LTD_wilhelm_brant = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology=centrism
+				}
+				promote_leader = yes
+			}
+		}
+		custom_effect_tooltip = leader_gui_enabled
+		set_country_flag = LEADER_GUI_VISIBLE
+	}
+
+	option = {
+		name = news_LTD.200.e
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			country_event = { days = 7 id = news_LTD.201 }
+		}
+	}
+}
+
+country_event = { #aragorn
+	id = news_LTD.201
+	title = news_LTD.201.t
+	desc = news_LTD.201.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.201.a
+		ai_chance = { base = 100 }
+		remove_country_leader_role = {
+			character = LTD_league_of_nations
+			ideology = centrism
+		}
+		hidden_effect = {
+			LTD_aragorn = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology=high_king_of_the_dunedain
+						traits = {
+							bearer_of_the_shards_of_narsil
+							ideological_crusader
+						}
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = monarchism
+				long_name = LTD_dunedain_party_long
+				name = LTD_dunedain_party
+			}
+			mark_focus_tree_layout_dirty = yes
+		}
+		set_party_name = {
+			ideology = neutrality
+			long_name = LTD_fellowship_party_long
+			name = LTD_fellowship_party
+		}
+		LTD_aragorn_strider = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology=fellowship
+					traits= {
+						ranger_of_the_north
+						bearer_of_the_shards_of_narsil
+					}
+				}
+				promote_leader = yes
+			}
+		}
+		custom_effect_tooltip = leader_gui_enabled
+		set_country_flag = LEADER_GUI_VISIBLE
+	}
+}
+
+country_event = { #bad and wur
+	id = news_LTD.202
+	title = news_LTD.202.t
+	desc = news_LTD.202.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.202.a
+		ai_chance = { base = 100 }
+		50 = {
+			add_core_of = LTD
+		}
+		240 = {
+			add_core_of = LTD
+		}
+		hidden_effect = {
+			LTD = {
+				transfer_state = 50
+				transfer_state = 240
+				change_tag_from = ROOT
+			}
+		}
+	}
+}
+
+country_event = { #transatlantic_empire
+	id = news_LTD.203
+	title = news_LTD.203.t
+	desc = news_LTD.203.d
+	picture = GFX_report_event_NOR_storting
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD.203.a
+		ai_chance = { base = 100 }
+		set_cosmetic_tag = LTD_Transatlantic
+		set_country_flag = Transatlantic
+		if = {
+			limit = {
+				has_government = fascism
+			}
+			set_country_leader_ideology = transatlantic_nazism
+		} else = {
+			set_country_leader_ideology = transatlantic_imperialism
+		}
+		set_party_name = {
+			ideology = monarchism
+			long_name = LTD_transatlantic_imperialism_party_long
+			name = LTD_transatlantic_imperialism_party
+		}
+		every_unit_leader = {
+			limit = {
+				has_trait = loyalist_ksw
+			}
+			remove_unit_leader_trait = loyalist_ksw
+			add_unit_leader_trait = loyalist_ltd_transatlantic
+		}
+		every_unit_leader = {
+			limit = {
+				has_trait = loyalist_ltd
+			}
+			remove_unit_leader_trait = loyalist_ltd
+			add_unit_leader_trait = loyalist_ltd_transatlantic
+		}
+		every_unit_leader = {
+			limit = {
+				has_trait = loyalist_can
+			}
+			remove_unit_leader_trait = loyalist_can
+			add_unit_leader_trait = loyalist_ltd_transatlantic
+		}
+		every_unit_leader = {
+			limit = {
+				has_trait = loyalist_usa
+			}
+			remove_unit_leader_trait = loyalist_usa
+			add_unit_leader_trait = loyalist_ltd_transatlantic
+		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = democratic
+				long_name = LTD_transatlantic_democratic_party_long
+				name = LTD_transatlantic_democratic_party
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = LTD_transatlantic_communism_party_long
+				name = LTD_transatlantic_communism_party
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = LTD_transatlantic_fascism_party_long
+				name = LTD_transatlantic_fascism_party
+			}
+			set_party_name = {
+				ideology = theocracy
+				long_name = LTD_transatlantic_theocracy_party_long
+				name = LTD_transatlantic_theocracy_party
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = LTD_transatlantic_neutrality_party_long
+				name = LTD_transatlantic_neutrality_party
+			}
+			set_party_name = {
+				ideology = corporatocratic
+				long_name = LTD_transatlantic_corporatocratic_party_long
+				name = LTD_transatlantic_corporatocratic_party
+			}
+			set_party_name = {
+				ideology = militarygovernment
+				long_name = LTD_transatlantic_militarygovernment_party_long
+				name = LTD_transatlantic_militarygovernment_party
+			}
+			set_party_name = {
+				ideology = otherworldly
+				long_name = LTD_transatlantic_otherworldly_party_long
+				name = LTD_transatlantic_otherworldly_party
+			}
+			set_party_name = {
+				ideology = no_government
+				long_name = LTD_transatlantic_no_government_party_long
+				name = LTD_transatlantic_no_government_party
+			}
+			if = {
+		        limit = {
+    	        	LKR = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = LKR
+					autonomy_state = autonomy_ltd_subject
+				}
+				LKR = {
+					set_cosmetic_tag = LKR_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	LEO = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = LEO
+					autonomy_state = autonomy_ltd_subject
+				}
+				LEO = {
+					set_cosmetic_tag = LEO_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	DUN = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = DUN
+					autonomy_state = autonomy_ltd_subject
+				}
+				DUN = {
+					set_cosmetic_tag = DUN_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	NIS = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = NIS
+					autonomy_state = autonomy_ltd_subject
+				}
+				NIS = {
+					set_cosmetic_tag = NIS_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	KRM = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = KRM
+					autonomy_state = autonomy_ltd_subject
+				}
+				KRM = {
+					set_cosmetic_tag = KRM_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	JSN = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = JSN
+					autonomy_state = autonomy_ltd_subject
+				}
+				JSN = {
+					set_cosmetic_tag = JSN_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	TOR = {
+   		         		has_country_flag = LTD_subject
+    	    		}
+    	    	}
+				set_autonomy = {
+					target = TOR
+					autonomy_state = autonomy_ltd_subject
+				}
+				TOR = {
+					set_cosmetic_tag = TOR_LTD_Transatlantic_subject
+				}
+			}
+			if = {
+		        limit = {
+    	        	has_idea = spirit_of_the_southwest
+    	    	}
+				swap_ideas = {
+				remove_idea = spirit_of_the_southwest
+				add_idea = transatlantic_spirit
+				}
+			}
+			if = {
+		        limit = {
+    	        	has_idea = german_spirit
+    	    	}
+				swap_ideas = {
+				remove_idea = german_spirit
+				add_idea = transatlantic_spirit
+				}
+			}
+			news_event = { hours = 6 id = global_news_LTD.203 }
+			463 = { add_core_of = LTD }
+			740 = { add_core_of = LTD }
+			864 = { add_core_of = LTD }
+			472 = { add_core_of = LTD }
+			683 = { add_core_of = LTD }
+			828 = { add_core_of = LTD }
+			466 = { add_core_of = LTD }
+			332 = { add_core_of = LTD }
+			471 = { add_core_of = LTD }
+			473 = { add_core_of = LTD }
+			470 = { add_core_of = LTD }
+			865 = { add_core_of = LTD }
+			469 = { add_core_of = LTD }
+			867 = { add_core_of = LTD }
+			467 = { add_core_of = LTD }
+			866 = { add_core_of = LTD }
+			682 = { add_core_of = LTD }
+			861 = { add_core_of = LTD }
+			860 = { add_core_of = LTD }
+			862 = { add_core_of = LTD }
+			863 = { add_core_of = LTD }
+			468 = { add_core_of = LTD }
+			276 = { add_core_of = LTD }
+			465 = { add_core_of = LTD }
+			464 = { add_core_of = LTD }
+			331 = { add_core_of = LTD }
+			875 = { add_core_of = LTD }
+		}
+	}
+}
+
+#country_event = { #occupation civil war
+#	id = news_LTD.300
+#	title = news_LTD.300.t
+#	desc = news_LTD.300.d
+#	picture = GFX_report_event_peasant_revolt
+#
+#	is_triggered_only = yes
+#
+# 	immediate = {
+#
+# 	}
+#
+#	option = {
+#		name = news_LTD.300.a
+#		ai_chance = { base = 100 }
+#
+#		every_enemy_country = {
+#			white_peace = ROOT
+#			declare_war_on = ROOT
+#		}
+#
+#		start_civil_war = {
+#			ruling_party = neutrality
+#			ideology = ROOT
+#			size = 0.2
+#    		keep_all_characters = yes
+#		}
+#
+#		set_cosmetic_tag = "LTD_Territorry"
+#	
+#	}
+#}

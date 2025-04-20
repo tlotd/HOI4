@@ -1,0 +1,864 @@
+LKR_path_to_glory = {
+	LKR_decision_form_hanseatic_league = {
+
+		icon = GFX_decision_eng_ally_imperialist_coup
+
+		highlight_states = { highlight_state_targets = {
+			state = 58
+			state = 909
+			state = 99
+			state = 911
+			state = 37
+			state = 233
+			state = 56
+			state = 36
+			state = 7
+			state = 35
+		}}
+
+		available = {
+			has_completed_focus = LKR_form_the_hanseatic_league
+			has_government = monarchism
+			is_subject = no
+			owns_state = 58
+			owns_state = 909
+			owns_state = 99
+			owns_state = 911
+			owns_state = 37
+			owns_state = 233
+			owns_state = 56
+			owns_state = 36
+			owns_state = 7
+			owns_state = 35
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LKR_HanseaticLeague
+			# hidden_effect = {
+				58 = { add_core_of = LKR }
+				909 = { add_core_of = LKR }
+				99 = { add_core_of = LKR }
+				911 = { add_core_of = LKR }
+				37 = { add_core_of = LKR }
+				233 = { add_core_of = LKR }
+				56 = { add_core_of = LKR }
+				36 = { add_core_of = LKR }
+				7 = { add_core_of = LKR }
+				35 = { add_core_of = LKR }
+
+				61 = { add_core_of = LKR }
+				62 = { add_core_of = LKR }
+				63 = { add_core_of = LKR }
+				807 = { add_core_of = LKR }
+				85 = { add_core_of = LKR }
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LKR_decision_unite_the_north = {
+
+		icon = GFX_decision_generic_monarchy
+		
+		highlight_states = { highlight_state_targets = {
+			state = 58
+			state = 909
+			state = 99
+			state = 911
+			state = 37
+
+			state = 138
+			state = 139
+			state = 913
+			state = 140
+			state = 915
+			state = 141
+			state = 919
+			state = 38
+			state = 916
+			state = 917
+			state = 918
+			state = 666
+
+			state = 142
+			state = 922
+			state = 921
+			state = 920
+			state = 110
+			state = 143
+			state = 923
+			state = 144
+			state = 924
+			state = 925
+		}}
+
+		available = {
+			has_completed_focus = LKR_unite_the_north
+			has_government = monarchism
+			is_subject = no
+			
+			owns_state = 58
+			owns_state = 909
+			owns_state = 99
+			owns_state = 911
+			owns_state = 37
+
+			owns_state = 138
+			owns_state = 139
+			owns_state = 913
+			owns_state = 140
+			owns_state = 915
+			owns_state = 141
+			owns_state = 919
+			owns_state = 38
+			owns_state = 916
+			owns_state = 917
+			owns_state = 918
+			owns_state = 666
+
+			owns_state = 142
+			owns_state = 922
+			owns_state = 921
+			owns_state = 920
+			owns_state = 110
+			owns_state = 143
+			owns_state = 923
+			owns_state = 144
+			owns_state = 924
+			owns_state = 925
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LKR_UnitedNorth
+			# hidden_effect = {
+				58 = { add_core_of = LKR }
+				909 = { add_core_of = LKR }
+				99 = { add_core_of = LKR }
+				911 = { add_core_of = LKR }
+				37 = { add_core_of = LKR }
+
+				910 = { add_core_of = LKR }
+				337 = { add_core_of = LKR }
+
+				138 = { add_core_of = LKR }
+				139 = { add_core_of = LKR }
+				913 = { add_core_of = LKR }
+				140 = { add_core_of = LKR }
+				915 = { add_core_of = LKR }
+				141 = { add_core_of = LKR }
+				919 = { add_core_of = LKR }
+				38 = { add_core_of = LKR }
+				916 = { add_core_of = LKR }
+				917 = { add_core_of = LKR }
+				918 = { add_core_of = LKR }
+				666 = { add_core_of = LKR }
+
+				124 = { add_core_of = LKR }
+
+				142 = { add_core_of = LKR }
+				922 = { add_core_of = LKR }
+				921 = { add_core_of = LKR }
+				920 = { add_core_of = LKR }
+				110 = { add_core_of = LKR }
+				143 = { add_core_of = LKR }
+				923 = { add_core_of = LKR }
+				144 = { add_core_of = LKR }
+				924 = { add_core_of = LKR }
+				924 = { add_core_of = LKR }
+				925 = { add_core_of = LKR }
+
+				914 = { add_core_of = LKR }
+
+				100 = { add_core_of = LKR }
+				101 = { add_core_of = LKR }
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LKR_decision_form_german_empire = {
+
+		icon = GFX_decision_generic_pickelhaube
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 909
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 86
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 763
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LKR_legacy_of_the_german_empire
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 909
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 86
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 763
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LKR_GEREmpire
+			set_country_flag = GermanEmpire
+			set_country_leader_ideology = germanic_monarchism
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.1 }
+			}
+			set_party_name = {
+				ideology = monarchism
+				long_name = GER_monarchism_party_long
+				name = GER_monarchism_party
+			}
+			set_province_name = {
+				id = 6464
+				name = VICTORY_POINTS_6464_GER
+			}
+			set_province_name = {
+				id = 6558
+				name = VICTORY_POINTS_6558_GER
+			}
+			set_province_name = {
+				id = 279
+				name = VICTORY_POINTS_279_GER
+			}
+			set_province_name = {
+				id = 3295
+				name = VICTORY_POINTS_3295_GER
+			}
+			set_province_name = {
+				id = 9263
+				name = VICTORY_POINTS_9263_GER
+			}
+			set_province_name = {
+				id = 6332
+				name = VICTORY_POINTS_6332_GER
+			}
+			hidden_effect = {
+				50 = { add_core_of = LKR }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LKR }
+				240 = { add_core_of = LKR }
+				28 = { add_core_of = LKR }
+				739 = { add_core_of = LKR }
+				54 = { add_core_of = LKR }
+				53 = { add_core_of = LKR }
+				52 = { add_core_of = LKR }
+				51 = { add_core_of = LKR }
+				57 = { add_core_of = LKR }
+				55 = { add_core_of = LKR }
+				56 = { add_core_of = LKR }
+				60 = { add_core_of = LKR }
+				59 = { add_core_of = LKR }
+				233 = { add_core_of = LKR }
+				65 = { add_core_of = LKR }
+				64 = { add_core_of = LKR }
+				61 = { add_core_of = LKR }
+				62 = { add_core_of = LKR }
+				58 = { add_core_of = LKR }
+				909 = { add_core_of = LKR }
+				63 = { add_core_of = LKR }
+				68 = { add_core_of = LKR }
+				66 = { add_core_of = LKR }
+				67 = { add_core_of = LKR }
+				762 = { add_core_of = LKR }
+				86 = { add_core_of = LKR }
+				807 = { add_core_of = LKR }
+				85 = { add_core_of = LKR }
+				5 = { add_core_of = LKR }
+				763 = { add_core_of = LKR }
+				188 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LKR_decision_form_holy_roman_empire = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 36
+			state = 7
+			state = 35
+			state = 6
+			state = 977
+			state = 34
+			state = 980
+			state = 8
+			state = 17
+			state = 845
+			state = 3
+			state = 847
+			state = 846
+			state = 151
+			state = 833
+			state = 32
+			state = 21
+			state = 735
+			state = 851
+			state = 158
+			state = 159
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 1
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+			state = 69
+			state = 972
+			state = 9
+			state = 74
+			state = 75
+			state = 39
+			state = 850
+			state = 160
+			state = 736
+			state = 233
+			state = 102
+			state = 853
+		}}
+
+		available = {
+			is_subject = no
+			OR = {
+				has_government = monarchism
+				has_government = theocracy
+			}
+			has_completed_focus = LKR_holy_roman_empire
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 36
+			owns_state = 7
+			owns_state = 35
+			owns_state = 6
+			owns_state = 977
+			owns_state = 34
+			owns_state = 980
+			owns_state = 8
+			owns_state = 17
+			owns_state = 845
+			owns_state = 3
+			owns_state = 847
+			owns_state = 846
+			owns_state = 151
+			owns_state = 833
+			owns_state = 32
+			owns_state = 21
+			owns_state = 735
+			owns_state = 851
+			owns_state = 158
+			owns_state = 159
+			owns_state = 161
+			owns_state = 162
+			owns_state = 157
+			owns_state = 2
+			owns_state = 1
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+			owns_state = 39
+			owns_state = 850
+			owns_state = 160
+			owns_state = 736
+			owns_state = 233
+			owns_state = 102
+			owns_state = 853
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LKR_HRE
+			set_country_flag = HolyRomanEmpire
+			set_country_leader_ideology = germanic_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = GER_monarchism_party_long
+				name = GER_monarchism_party
+			}
+			set_province_name = {
+				id = 6464
+				name = VICTORY_POINTS_6464_GER
+			}
+			set_province_name = {
+				id = 279
+				name = VICTORY_POINTS_279_GER
+			}
+			set_province_name = {
+				id = 3295
+				name = VICTORY_POINTS_3295_GER
+			}
+			set_province_name = {
+				id = 9263
+				name = VICTORY_POINTS_9263_GER
+			}
+			set_province_name = {
+				id = 6332
+				name = VICTORY_POINTS_6332_GER
+			}
+			hidden_effect = {
+				50 = { add_core_of = LKR }
+				978 = { add_core_of = LKR }
+				42 = { add_core_of = LKR }
+				240 = { add_core_of = LKR }
+				28 = { add_core_of = LKR }
+				739 = { add_core_of = LKR }
+				54 = { add_core_of = LKR }
+				53 = { add_core_of = LKR }
+				52 = { add_core_of = LKR }
+				51 = { add_core_of = LKR }
+				57 = { add_core_of = LKR }
+				55 = { add_core_of = LKR }
+				56 = { add_core_of = LKR }
+				60 = { add_core_of = LKR }
+				59 = { add_core_of = LKR }
+				233 = { add_core_of = LKR }
+				65 = { add_core_of = LKR }
+				64 = { add_core_of = LKR }
+				61 = { add_core_of = LKR }
+				62 = { add_core_of = LKR }
+				58 = { add_core_of = LKR }
+				63 = { add_core_of = LKR }
+				68 = { add_core_of = LKR }
+				66 = { add_core_of = LKR }
+				67 = { add_core_of = LKR }
+				762 = { add_core_of = LKR }
+				807 = { add_core_of = LKR }
+				85 = { add_core_of = LKR }
+				5 = { add_core_of = LKR }
+				763 = { add_core_of = LKR }
+				36 = { add_core_of = LKR }
+				7 = { add_core_of = LKR }
+				35 = { add_core_of = LKR }
+				6 = { add_core_of = LKR }
+				977 = { add_core_of = LKR }
+				34 = { add_core_of = LKR }
+				980 = { add_core_of = LKR }
+				8 = { add_core_of = LKR }
+				17 = { add_core_of = LKR }
+				845 = { add_core_of = LKR }
+				3 = { add_core_of = LKR }
+				847 = { add_core_of = LKR }
+				846 = { add_core_of = LKR }
+				151 = { add_core_of = LKR }
+				833 = { add_core_of = LKR }
+				32 = { add_core_of = LKR }
+				21 = { add_core_of = LKR }
+				735 = { add_core_of = LKR }
+				851 = { add_core_of = LKR }
+				158 = { add_core_of = LKR }
+				159 = { add_core_of = LKR }
+				161 = { add_core_of = LKR }
+				162 = { add_core_of = LKR }
+				157 = { add_core_of = LKR }
+				2 = { add_core_of = LKR }
+				1 = { add_core_of = LKR }
+				848 = { add_core_of = LKR }
+				153 = { add_core_of = LKR }
+				152 = { add_core_of = LKR }
+				4 = { add_core_of = LKR }
+				976 = { add_core_of = LKR }
+				975 = { add_core_of = LKR }
+				69 = { add_core_of = LKR }
+				972 = { add_core_of = LKR }
+				9 = { add_core_of = LKR }
+				74 = { add_core_of = LKR }
+				75 = { add_core_of = LKR }
+				39 = { add_core_of = LKR }
+				850 = { add_core_of = LKR }
+				160 = { add_core_of = LKR }
+				736 = { add_core_of = LKR }
+				233 = { add_core_of = LKR }
+				102 = { add_core_of = LKR }
+				853 = { add_core_of = LKR }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LKR_weltreich = {
+	LKR_decision_nordseereich = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		
+		highlight_states = { highlight_state_targets = {
+			state = 58
+			state = 909
+			state = 61
+			state = 62
+			state = 63
+			state = 807
+			state = 85
+			state = 99
+			state = 911
+			state = 37
+			state = 138
+			state = 139
+			state = 913
+			state = 141
+			state = 124
+			state = 145
+			state = 38
+			state = 918
+			state = 666
+			state = 148
+			state = 929
+			state = 149
+			state = 926
+			state = 111
+			state = 928
+			state = 146
+		}}
+
+		available = {
+			is_subject = no
+			has_government = fascism
+			owns_state = 58
+			owns_state = 909
+			owns_state = 61
+			owns_state = 62
+			owns_state = 63
+			owns_state = 807
+			owns_state = 85
+			owns_state = 99
+			owns_state = 911
+			owns_state = 37
+			owns_state = 138
+			owns_state = 139
+			owns_state = 913
+			owns_state = 141
+			owns_state = 124
+			owns_state = 145
+			owns_state = 38
+			owns_state = 918
+			owns_state = 666
+			owns_state = 148
+			owns_state = 929
+			owns_state = 149
+			owns_state = 926
+			owns_state = 111
+			owns_state = 928
+			owns_state = 146
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LKR_Nordseereich
+			# hidden_effect = {
+				58 = { add_core_of = LKR }
+				909 = { add_core_of = LKR }
+				61 = { add_core_of = LKR }
+				62 = { add_core_of = LKR }
+				63 = { add_core_of = LKR }
+				807 = { add_core_of = LKR }
+				85 = { add_core_of = LKR }
+				99 = { add_core_of = LKR }
+				911 = { add_core_of = LKR }
+				37 = { add_core_of = LKR }
+				138 = { add_core_of = LKR }
+				139 = { add_core_of = LKR }
+				913 = { add_core_of = LKR }
+				141 = { add_core_of = LKR }
+				124 = { add_core_of = LKR }
+				145 = { add_core_of = LKR }
+				38 = { add_core_of = LKR }
+				918 = { add_core_of = LKR }
+				666 = { add_core_of = LKR }
+				148 = { add_core_of = LKR }
+				929 = { add_core_of = LKR }
+				149 = { add_core_of = LKR }
+				926 = { add_core_of = LKR }
+				111 = { add_core_of = LKR }
+				928 = { add_core_of = LKR }
+				146 = { add_core_of = LKR }
+				5 = { add_core_of = LKR }
+				763 = { add_core_of = LKR }
+				188 = { add_core_of = LKR }
+				189 = { add_core_of = LKR }
+				190 = { add_core_of = LKR }
+				809 = { add_core_of = LKR }
+				808 = { add_core_of = LKR }
+				12 = { add_core_of = LKR }
+				13 = { add_core_of = LKR }
+				811 = { add_core_of = LKR }
+				812 = { add_core_of = LKR }
+				813 = { add_core_of = LKR }
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LKR_worker_state = {
+	LKR_decision_larry_peoples_republic = {
+
+		icon = GFX_decision_SOV_the_stalin_constitution
+		
+		highlight_states = { highlight_state_targets = {
+			state = 58
+			state = 909
+			state = 233
+			state = 59
+			state = 60
+			state = 61
+			state = 64
+			state = 65
+			state = 62
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 99
+			state = 911
+			state = 37
+		}}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			owns_state = 58
+			owns_state = 909
+			owns_state = 233
+			owns_state = 59
+			owns_state = 60
+			owns_state = 61
+			owns_state = 64
+			owns_state = 65
+			owns_state = 62
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 99
+			owns_state = 911
+			owns_state = 37
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LKR_LarryPeoplesRepublic
+			# hidden_effect = {
+			58 = { add_core_of = LKR }
+			909 = { add_core_of = LKR }
+			233 = { add_core_of = LKR }
+			59 = { add_core_of = LKR }
+			60 = { add_core_of = LKR }
+			61 = { add_core_of = LKR }
+			64 = { add_core_of = LKR }
+			65 = { add_core_of = LKR }
+			62 = { add_core_of = LKR }
+			63 = { add_core_of = LKR }
+			68 = { add_core_of = LKR }
+			66 = { add_core_of = LKR }
+			67 = { add_core_of = LKR }
+			99 = { add_core_of = LKR }
+			911 = { add_core_of = LKR }
+			37 = { add_core_of = LKR }
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

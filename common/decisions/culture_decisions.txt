@@ -1,0 +1,144 @@
+state_culture = {
+	establish_a_common_southern_culture = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		}
+
+		visible = {
+			has_cosmetic_tag = LTD_SouthernGER
+			any_state = {
+				is_owned_by = ROOT
+				is_core_of = ROOT
+				NOT = {
+					check_variable = {
+						culture = 8
+					}
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			random_state = {
+				limit = {
+					is_owned_by = ROOT
+					is_core_of = ROOT
+					NOT = {
+						check_variable = {
+							culture = 8
+						}
+					}
+				}
+				set_variable = { culture = 8 }
+				add_core_of = ROOT
+				add_manpower = 100000
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+
+
+	assimilate_state = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		}
+
+		visible = {
+			any_state = {
+				is_capital = no
+				is_owned_by = ROOT
+				NOT = {
+					check_variable = {
+						culture = 50.culture
+					}
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			random_state = {
+				limit = {
+					is_capital = no
+					is_owned_by = ROOT
+					check_variable = {
+						var = culture
+						value = 50:culture
+						compare = not_equals
+					}
+				}
+				set_variable = { culture = 50:culture }
+				add_core_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	german_states = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		}
+
+		visible = {
+			any_state = {
+				is_owned_by = ROOT
+				AND = {
+					check_variable = {
+						culture > 7
+					}
+					check_variable = {
+						culture < 35
+					}
+					NOT = {
+						check_variable = {
+							culture = 32
+						}
+					}
+				}
+			}
+		}
+		
+		fire_only_once = no
+		
+		cost = 0
+		
+		complete_effect = {
+			random_state = {
+				limit = {
+					is_owned_by = ROOT
+					check_variable = {
+						culture > 9
+					}
+					check_variable = {
+						culture < 30
+					}
+				}
+				set_variable = { culture = 7 }
+				add_core_of = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

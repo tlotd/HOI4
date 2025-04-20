@@ -1,0 +1,69 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = global_news_LKR
+
+#Jutland
+news_event = {
+	id = global_news_LKR.1
+	title = global_news_LKR.1.t
+	desc = global_news_LKR.1.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LKR.1.a
+	}
+}
+
+#Northern Revolution
+news_event = {
+	id = global_news_LKR.2
+	title = global_news_LKR.2.t
+	desc = global_news_LKR.2.d
+	picture = GFX_news_event_ger_civil_war
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LKR.2.a
+	}
+}
+
+#Oldenburg
+news_event = {
+	id = global_news_LKR.3
+	title = global_news_LKR.3.t
+	desc = global_news_LKR.3.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LKR.3.a
+	}
+}
+
+#Friesland
+news_event = {
+	id = global_news_LKR.4
+	title = global_news_LKR.4.t
+	desc = global_news_LKR.4.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_LKR.4.a
+	}
+}

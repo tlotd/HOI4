@@ -1,0 +1,130 @@
+DUN = {
+	political = {
+		communism = {
+			male = { 
+				"GFX_dun_portrait_generic_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_dun_portrait_generic_2"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_dun_portrait_generic_6"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_dun_portrait_generic_3"
+			}
+		}
+		monarchism = {
+			male = { 
+				"GFX_dun_portrait_generic_3"
+			}
+		}
+		theocracy = {
+			male = { 
+				"GFX_dun_portrait_generic_5"
+			}
+		}
+		corporatocratic = {
+			male = { 
+				"GFX_dun_portrait_generic_4"
+			}
+		}
+		militarygovernment = {
+			male = { 
+				"GFX_dun_portrait_generic_land_2"
+			}
+		}
+		otherworldly = {
+			male = { 
+				"GFX_dun_portrait_generic_6"
+			}
+		}
+	}
+
+	army = {
+		male = {
+			"GFX_dun_portrait_generic_land_1"
+			"GFX_dun_portrait_generic_land_2"
+			"GFX_dun_portrait_generic_land_3"
+			"GFX_dun_portrait_generic_land_4"
+			"GFX_dun_portrait_generic_land_5"
+			"GFX_dun_portrait_generic_land_6"
+			"GFX_dun_portrait_generic_land_7"
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_dun_portrait_generic_navy_1"
+			"GFX_dun_portrait_generic_navy_2"
+			"GFX_dun_portrait_generic_navy_3"
+		}
+	}
+}
+TOR = {
+	political = {
+		communism = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		democratic = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		fascism = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		neutrality = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		monarchism = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		theocracy = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		corporatocratic = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+		militarygovernment = {
+			male = { 
+				"GFX_tor_portrait_generic_land_1"
+			}
+		}
+		otherworldly = {
+			male = { 
+				"GFX_tor_portrait_generic_1"
+			}
+		}
+	}
+
+	army = {
+		male = {
+			"GFX_tor_portrait_generic_land_1"
+		}
+	}
+	
+	navy = {
+		male = {
+			"GFX_tor_portrait_generic_navy_1"
+		}
+	}
+}

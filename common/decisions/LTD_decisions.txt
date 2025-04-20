@@ -1,0 +1,6239 @@
+###########################################################################################
+
+LTD_bop_legitimacy_category = {
+
+	### DEBUG ###
+
+	LTD_bop_legitimacy_debug_positive = {
+		icon = GFX_decision_SWI_expand_covert_operations
+		cost = 0
+		fire_only_once = yes
+		priority = 1000
+		visible = {
+			has_country_flag = enable_debug
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_debug_positive
+			}
+		}
+	}
+
+	LTD_bop_legitimacy_debug_negative = {
+		icon = GFX_decision_SWI_expand_covert_operations
+		cost = 0
+		fire_only_once = yes
+		priority = 999
+		visible = {
+			has_country_flag = enable_debug
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_debug_negative
+			}
+		}
+	}
+
+	### NORMAL ###
+
+	LTD_bop_seek_international_ties = {
+		icon = GFX_decision_eng_trade_unions_support
+		cost = 50
+		fire_only_once = yes
+		priority = 100
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = LTD_league_of_nations
+					ruling_only = yes
+				}
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_seek_international_ties
+			}
+		}
+	}
+	LTD_bop_invest_in_infrastructure = {
+		icon = GFX_decision_generic_merge_plant_materiel
+		cost = 50
+		fire_only_once = yes
+		priority = 90
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = LTD_league_of_nations
+					ruling_only = yes
+				}
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_invest_in_infrastructure
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = LTD
+					infrastructure < 5
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	LTD_bop_rally_the_people = {
+		icon = GFX_decision_generic_speech
+		cost = 50
+		fire_only_once = yes
+		priority = 80
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = LTD_league_of_nations
+					ruling_only = yes
+				}
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_rally_the_people
+			}
+		}
+	}
+	LTD_bop_stable_nation = {
+		icon = GFX_decision_generic_nationalism
+		cost = 50
+		fire_only_once = yes
+		priority = 70
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = LTD_league_of_nations
+					ruling_only = yes
+				}
+			}
+			NOT = {
+				OR = {
+					has_idea = tlotd_mutiny
+					has_civil_war = yes
+					has_stability < 0.5
+				}
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_stable_nation
+			}
+		}
+	}
+	LTD_bop_stable_economy = {
+		icon = GFX_decision_gre_paying_ifc_debt
+		cost = 50
+		fire_only_once = yes
+		priority = 60
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			NOT = {
+				has_country_leader = {
+					character = LTD_league_of_nations
+					ruling_only = yes
+				}
+			}
+			NOT = {
+				OR = {
+					has_idea = low_inflation
+					has_idea = moderate_inflation
+					has_idea = heavy_inflation
+					has_idea = hyperinflation
+					has_idea = economic_collapse
+				}
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_stable_economy
+			}
+		}
+	}
+	LTD_bop_sinking_into_chaos = {
+		icon = GFX_decision_revolt
+		cost = 50
+		fire_only_once = yes
+		priority = 50
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			OR = {
+				has_idea = tlotd_mutiny
+				has_idea = low_inflation
+				has_idea = moderate_inflation
+				has_idea = heavy_inflation
+				has_idea = hyperinflation
+				has_idea = economic_collapse
+			}
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_legitimacy_balance
+				modifier = LTD_bop_modifier_sinking_into_choas
+			}
+		}
+	}
+}
+
+LTD_bop_fascist_terror_category = {
+
+	### DEBUG ###
+
+	LTD_bop_fascist_terror_debug_positive = {
+		icon = GFX_decision_SWI_expand_covert_operations
+		cost = 0
+		fire_only_once = yes
+		priority = 1000
+		visible = {
+			has_country_flag = enable_debug
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_fascist_terror_balance
+				modifier = LTD_bop_modifier_debug_positive
+			}
+		}
+	}
+
+	LTD_bop_fascist_terror_debug_negative = {
+		icon = GFX_decision_SWI_expand_covert_operations
+		cost = 0
+		fire_only_once = yes
+		priority = 999
+		visible = {
+			has_country_flag = enable_debug
+		}
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_fascist_terror_balance
+				modifier = LTD_bop_modifier_debug_negative
+			}
+		}
+	}
+
+	LTD_bop_racial_superiority = {
+		icon = GFX_decision_eng_trade_unions_demand
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_fascist_terror_balance
+				modifier = LTD_bop_modifier_racial_superiority
+			}
+		}
+	}
+
+	LTD_bop_the_cleansing = {
+		icon = GFX_decision_generic_speech
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_fascist_terror_balance
+				modifier = LTD_bop_modifier_the_cleansing
+			}
+		}
+	}
+
+	LTD_bop_kristallnacht = {
+		icon = GFX_decision_generic_scorched_earth
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_fascist_terror_balance
+				modifier = LTD_bop_modifier_kristallnacht
+			}
+		}
+	}
+
+	###
+
+	LTD_bop_clamp_down_on_extremist_paramilitary_groups = {
+		icon = GFX_decision_generic_police_action
+		cost = 50
+		fire_only_once = yes
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = LTD_fascist_terror_balance
+				modifier = LTD_bop_modifier_clamp_down_on_extremist_paramilitary_groups
+			}
+		}
+	}
+
+}
+
+LTD_reforge_the_sword_that_was_broken = {
+	LTD_decision_reforge_sword = {
+		available = {
+			has_completed_focus = LTD_reforge_the_broken_sword
+			is_subject = no
+			has_country_leader_with_trait = bearer_of_the_shards_of_narsil
+			has_tech = mithril_forging
+			has_resources_in_country = {
+				resource = mithril
+				amount > 0
+			}
+		}
+
+		visible = {
+		}
+
+		icon = GFX_decision_generic_merge_plant_materiel
+
+		cost = 10
+
+		fire_only_once = yes
+
+		complete_effect = {
+			LTD_aragorn = {
+				swap_country_leader_traits = {
+					remove = bearer_of_the_shards_of_narsil
+					add = weilder_of_anduril_flame_of_the_west
+					ideology = high_king_of_the_dunedain
+				}
+			}
+			hidden_effect = {
+				LTD_aragorn_strider = {
+					swap_country_leader_traits = {
+						remove = bearer_of_the_shards_of_narsil
+						add = weilder_of_anduril_flame_of_the_west
+						ideology = fellowship
+					}
+				}
+			}
+		}
+	}
+}
+
+LTD_unstable_state = {
+	LTD_decision_revolutionary_unrest_240 = {
+		icon = generic_prepare_civil_war
+		highlight_states = { highlight_state_targets = {
+			state = 240
+		}}
+		available = {
+			NOT = {
+				240 = {
+					has_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 240
+				}
+				WDZ = {
+					owns_state = 240
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		fire_only_once = yes
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+			240 = {
+				add_dynamic_modifier = {
+					modifier = modifiers_tlotd_revolutionary_unrest
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_revolutionary_unrest_42 = {
+		icon = generic_prepare_civil_war
+		highlight_states = { highlight_state_targets = {
+			state = 42
+		}}
+		available = {
+			NOT = {
+				42 = {
+					has_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			OR = {
+				ROOT = {
+					owns_state = 42
+				}
+				WDZ = {
+					owns_state = 42
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		fire_only_once = yes
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+			42 = {
+				add_dynamic_modifier = {
+					modifier = modifiers_tlotd_revolutionary_unrest
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_revolutionary_unrest_978 = {
+		icon = generic_prepare_civil_war
+		highlight_states = { highlight_state_targets = {
+			state = 978
+		}}
+		available = {
+			NOT = {
+				978 = {
+					has_dynamic_modifier = {
+						modifier = modifiers_tlotd_revolutionary_unrest
+					}
+				}
+			}
+			owns_state = 978
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_equipment = {
+				infantry_equipment > 99
+			}
+			has_manpower > 99
+		}
+		custom_cost_text = decision_cost_PP_10_IE_100_MP_100
+		fire_only_once = yes
+		complete_effect = {
+			add_political_power = -10
+			add_equipment_to_stockpile = { 
+				type = infantry_equipment
+				amount = -100
+			}
+			add_manpower = -100
+			978 = {
+				add_dynamic_modifier = {
+					modifier = modifiers_tlotd_revolutionary_unrest
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+
+LTD_cosmetic = {
+	LTD_decision_change_leader_portrait_aragorn = {
+		available = {
+		}
+		visible = {
+			has_country_leader = {
+				character = LTD_aragorn
+				ruling_only = yes
+			}
+			NOT = {
+				OR = {
+					has_country_flag = UnifiedEmpire
+					has_country_flag = LotrEmpire
+				}
+			}
+		}
+		icon = GFX_decision_generic_merge_plant_materiel
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			country_event = { id = cosmetic_LTD.1 }
+		}
+	}
+	LTD_decision_change_leader_portrait_aragorn_emperor = {
+		available = {
+		}
+		visible = {
+			has_country_leader = {
+				character = LTD_aragorn
+				ruling_only = yes
+			}
+			OR = {
+				has_country_flag = UnifiedEmpire
+				has_country_flag = LotrEmpire
+			}
+		}
+		icon = GFX_decision_generic_merge_plant_materiel
+		cost = 0
+		fire_only_once = no
+		complete_effect = {
+			country_event = { id = cosmetic_LTD.2 }
+		}
+	}
+}
+LTD_worker_state = {
+	LTD_decision_unite_the_southern_workers = {
+
+		icon = GFX_decision_SOV_the_workers_dictatorship
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 833
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+			state = 69
+			state = 972
+			state = 9
+			state = 74
+			state = 75
+		}}
+		
+		available = {
+			is_subject = no
+			has_government = communism
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 833
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_SouthernGER
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+				69 = { add_core_of = LTD }
+				972 = { add_core_of = LTD }
+				9 = { add_core_of = LTD }
+				74 = { add_core_of = LTD }
+				75 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_form_german_democratic_republic = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 909
+		}}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			has_completed_focus = LTD_german_democratic_republic
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 909
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_GER
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.3 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LKR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LKR
+						autonomy_state = autonomy_ltd_subject
+					}
+					LKR = {
+						set_cosmetic_tag = LKR_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						LEO = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LEO
+						autonomy_state = autonomy_ltd_subject
+					}
+					LEO = {
+						set_cosmetic_tag = LEO_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						DUN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = DUN
+						autonomy_state = autonomy_ltd_subject
+					}
+					DUN = {
+						set_cosmetic_tag = DUN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						NIS = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = NIS
+						autonomy_state = autonomy_ltd_subject
+					}
+					NIS = {
+						set_cosmetic_tag = NIS_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						KRM = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = KRM
+						autonomy_state = autonomy_ltd_subject
+					}
+					KRM = {
+						set_cosmetic_tag = KRM_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						JSN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = JSN
+						autonomy_state = autonomy_ltd_subject
+					}
+					JSN = {
+						set_cosmetic_tag = JSN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						TOR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = TOR
+						autonomy_state = autonomy_ltd_subject
+					}
+					TOR = {
+						set_cosmetic_tag = TOR_LTD_GER_subject
+					}
+				}
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				909 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_form_communist_roman_republic = {
+
+		icon = GFX_decision_SOV_the_stalin_constitution
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 36
+			state = 7
+			state = 35
+			state = 6
+			state = 977
+			state = 34
+			state = 980
+			state = 8
+			state = 17
+			state = 845
+			state = 3
+			state = 847
+			state = 846
+			state = 151
+			state = 833
+			state = 32
+			state = 21
+			state = 735
+			state = 851
+			state = 158
+			state = 159
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 1
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+			state = 69
+			state = 972
+			state = 9
+			state = 74
+			state = 75
+			state = 39
+			state = 850
+			state = 160
+			state = 736
+			state = 233
+			state = 102
+			state = 853
+		}}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			has_completed_focus = LTD_german_democratic_republic
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 36
+			owns_state = 7
+			owns_state = 35
+			owns_state = 6
+			owns_state = 977
+			owns_state = 34
+			owns_state = 980
+			owns_state = 8
+			owns_state = 17
+			owns_state = 845
+			owns_state = 3
+			owns_state = 847
+			owns_state = 846
+			owns_state = 151
+			owns_state = 833
+			owns_state = 32
+			owns_state = 21
+			owns_state = 735
+			owns_state = 851
+			owns_state = 158
+			owns_state = 159
+			owns_state = 161
+			owns_state = 162
+			owns_state = 157
+			owns_state = 2
+			owns_state = 1
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+			owns_state = 39
+			owns_state = 850
+			owns_state = 160
+			owns_state = 736
+			owns_state = 233
+			owns_state = 102
+			owns_state = 853
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_HRE
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				63 = { add_core_of = LTD }
+				68 = { add_core_of = LTD }
+				66 = { add_core_of = LTD }
+				67 = { add_core_of = LTD }
+				762 = { add_core_of = LTD }
+				807 = { add_core_of = LTD }
+				85 = { add_core_of = LTD }
+				5 = { add_core_of = LTD }
+				763 = { add_core_of = LTD }
+				36 = { add_core_of = LTD }
+				7 = { add_core_of = LTD }
+				35 = { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980= { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				17 = { add_core_of = LTD }
+				845 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				847 = { add_core_of = LTD }
+				846 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				32 = { add_core_of = LTD }
+				21 = { add_core_of = LTD }
+				735 = { add_core_of = LTD }
+				851 = { add_core_of = LTD }
+				158 = { add_core_of = LTD }
+				159 = { add_core_of = LTD }
+				161 = { add_core_of = LTD }
+				162 = { add_core_of = LTD }
+				157 = { add_core_of = LTD }
+				2 = { add_core_of = LTD }
+				1 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+				69 = { add_core_of = LTD }
+				972 = { add_core_of = LTD }
+				9 = { add_core_of = LTD }
+				74 = { add_core_of = LTD }
+				75 = { add_core_of = LTD }
+				39 = { add_core_of = LTD }
+				850 = { add_core_of = LTD }
+				160 = { add_core_of = LTD }
+				736 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				102 = { add_core_of = LTD }
+				853 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LTD_anarchism_knows_no_borders = {
+	LTD_decision_form_anarchist_defense_council = {
+
+		icon = GFX_decision_SOV_the_stalin_constitution
+		
+		available = {
+			is_subject = no
+			has_government = no_government
+			#has_completed_focus = LTD_german_democratic_republic
+			owns_state = 50
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LTD_beacon_of_hope = {
+
+}
+LTD_path_to_glory = {
+	LTD_decision_rename_capital_monarchist_lotr = {
+
+		icon = GFX_decision_SOV_academy_of_sciences
+
+		available = {
+			has_country_leader = {
+				character = LTD_aragorn
+				ruling_only = yes
+			}
+			has_government = monarchism
+			is_subject = no
+			OR = {
+				AND = {
+					owns_state = 50
+					50 = { is_capital = yes }
+				}
+				AND = {
+					owns_state = 64
+					64 = { is_capital = yes }
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		complete_effect = {
+			if = {
+		        limit = {
+					50 = { is_capital = yes }
+    	    	}
+				50 = {
+					set_state_flag = lotr_name
+				}
+				if = {
+					limit = {
+						50 = {
+							has_state_flag = capital_improvement_build
+						}
+					}
+					set_province_name = {
+						id = 9517
+						name = VICTORY_POINTS_9517_LTD_lotr_monarchist_castle
+					}
+				}
+				else = {
+					set_province_name = {
+						id = 9517
+						name = VICTORY_POINTS_9517_LTD_lotr_monarchist
+					}
+				}
+    		}
+			else_if = {
+		        limit = {
+					64 = { is_capital = yes }
+    	    	}
+				64 = {
+					set_state_flag = lotr_name
+				}
+				if = {
+					limit = {
+						64 = {
+							has_state_flag = capital_improvement_build
+						}
+					}
+					set_province_name = {
+						id = 6521
+						name = VICTORY_POINTS_6521_lotr_LTD_monarchist_castle
+					}
+				}
+				else = {
+					set_province_name = {
+						id = 6521
+						name = VICTORY_POINTS_6521_lotr_LTD_monarchist
+					}
+				}
+    		}
+		}
+	}
+	LTD_decision_build_imperial_castle = {
+
+		icon = GFX_decision_eng_install_government
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = capital
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_build_imperial_castle
+			custom_trigger_tooltip = {
+				tooltip = LTD_capital_improvement_already_built
+				capital_scope = { NOT = { has_state_flag = capital_improvement_build }}
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 10
+
+		days_remove = 31
+
+		remove_effect = {
+			country_event = { id = news_LTD.11 }
+		}
+	}
+	LTD_decision_move_capital_ottawa = {
+		icon = GFX_decision_eng_install_government
+		visible = {
+			has_country_flag = Transatlantic
+			NOT = {
+				has_country_flag = NA_Capital
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_embrace_the_new_world
+			276 = { is_core_of = ROOT }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			set_capital = {
+				state = 276
+				remember_old_capital = yes
+			}
+			set_country_flag = NA_Capital
+		}
+	}
+	LTD_decision_move_capital_vancover = {
+		icon = GFX_decision_eng_install_government
+		visible = {
+			has_country_flag = Transatlantic
+			NOT = {
+				has_country_flag = NA_Capital
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_embrace_the_new_world
+			473 = { is_core_of = ROOT }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			set_capital = {
+				state = 473
+				remember_old_capital = yes
+			}
+			set_country_flag = NA_Capital
+		}
+	}
+	LTD_decision_move_capital_new_york_city = {
+		icon = GFX_decision_eng_install_government
+		visible = {
+			has_country_flag = Transatlantic
+			NOT = {
+				has_country_flag = NA_Capital
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_embrace_the_new_world
+			358 = { is_core_of = ROOT }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			set_capital = {
+				state = 358
+				remember_old_capital = yes
+			}
+			set_country_flag = NA_Capital
+		}
+	}
+	LTD_decision_move_capital_washington_dc = {
+		icon = GFX_decision_eng_install_government
+		visible = {
+			has_country_flag = Transatlantic
+			NOT = {
+				has_country_flag = NA_Capital
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_embrace_the_new_world
+			361 = { is_core_of = ROOT }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			set_capital = {
+				state = 361
+				remember_old_capital = yes
+			}
+			set_country_flag = NA_Capital
+		}
+	}
+	LTD_decision_move_capital_dallas = {
+		icon = GFX_decision_eng_install_government
+		visible = {
+			has_country_flag = Transatlantic
+			NOT = {
+				has_country_flag = NA_Capital
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_embrace_the_new_world
+			375 = { is_core_of = ROOT }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			set_capital = {
+				state = 375
+				remember_old_capital = yes
+			}
+			set_country_flag = NA_Capital
+		}
+	}
+	LTD_decision_move_capital_los_angeles = {
+		icon = GFX_decision_eng_install_government
+		visible = {
+			has_country_flag = Transatlantic
+			NOT = {
+				has_country_flag = NA_Capital
+			}
+			ROOT = {
+				is_ai = no
+			}
+		}
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_embrace_the_new_world
+			378 = { is_core_of = ROOT }
+		}
+		fire_only_once = yes
+		cost = 10
+		complete_effect = {
+			set_capital = {
+				state = 378
+				remember_old_capital = yes
+			}
+			set_country_flag = NA_Capital
+		}
+	}
+	LTD_decision_unite_the_alpes = {
+
+		icon = GFX_decision_eng_ally_imperialist_coup
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 3
+			state = 151
+			state = 833
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_kingdom_of_the_alpes
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 3
+			owns_state = 151
+			owns_state = 833
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_SouthernGER
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_unite_the_empire = {
+
+		icon = GFX_decision_eng_support_imperialist_coup
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 3
+			state = 151
+			state = 833
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+
+			state = 28
+			state = 8
+			state = 34
+			state = 980
+			state = 6
+			state = 977
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_unite_the_empire
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 3
+			owns_state = 151
+			owns_state = 833
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+
+			owns_state = 28
+			owns_state = 8
+			owns_state = 34
+			owns_state = 980
+			owns_state = 6
+			owns_state = 977
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+			NOT = {
+				has_completed_focus = LTD_unite_the_men_of_the_west
+			}
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_Empire
+			set_country_flag = UnifiedEmpire
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_aragorn
+						ruling_only = yes
+					}
+				}
+				set_country_leader_portrait = {
+					ideology = monarchism
+					portrait = GFX_lotr_portrait_aragorn_emperor
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_aragorn_high_king
+				}
+				add_country_leader_trait = high_king_of_the_men_of_the_west
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_emperor
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			add_ideas = {
+				established_monarchy
+			}
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+
+				28 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980= { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_unite_the_men_of_the_west = {
+
+		icon = GFX_decision_generic_monarchy
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 3
+			state = 151
+			state = 833
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+
+			state = 28
+			state = 8
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_completed_focus = LTD_unite_the_men_of_the_west
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 3
+			owns_state = 151
+			owns_state = 833
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+
+			owns_state = 28
+			owns_state = 8
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+			has_completed_focus = LTD_unite_the_men_of_the_west
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_LOTR
+			set_country_flag = LotrEmpire
+			set_country_leader_portrait = {
+				ideology = monarchism
+				portrait = GFX_ltd_portrait_aragorn_emperor
+			}
+			set_country_leader_name = {
+				ideology = monarchism
+				name = LTD_aragorn_high_king
+			}
+			add_country_leader_trait = high_king_of_the_men_of_the_west
+			add_ideas = {
+				established_monarchy
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.100 }
+			}
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+
+				28 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980= { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+
+				#New Zealand
+				284 = { add_core_of = LTD }
+				723 = { add_core_of = LTD }
+
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_form_kingdom_of_germany = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 909
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_idea = german_spirit
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 909
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_GER
+			set_country_flag = German
+			set_country_leader_ideology = germanic_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = GER_monarchism_party_long
+				name = GER_monarchism_party
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_king
+				}
+				add_country_leader_trait = king_of_the_germans
+			}
+			add_ideas = {
+				established_monarchy
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.1 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LKR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LKR
+						autonomy_state = autonomy_ltd_subject
+					}
+					LKR = {
+						set_cosmetic_tag = LKR_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						LEO = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LEO
+						autonomy_state = autonomy_ltd_subject
+					}
+					LEO = {
+						set_cosmetic_tag = LEO_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						DUN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = DUN
+						autonomy_state = autonomy_ltd_subject
+					}
+					DUN = {
+						set_cosmetic_tag = DUN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						NIS = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = NIS
+						autonomy_state = autonomy_ltd_subject
+					}
+					NIS = {
+						set_cosmetic_tag = NIS_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						KRM = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = KRM
+						autonomy_state = autonomy_ltd_subject
+					}
+					KRM = {
+						set_cosmetic_tag = KRM_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						JSN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = JSN
+						autonomy_state = autonomy_ltd_subject
+					}
+					JSN = {
+						set_cosmetic_tag = JSN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						TOR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = TOR
+						autonomy_state = autonomy_ltd_subject
+					}
+					TOR = {
+						set_cosmetic_tag = TOR_LTD_GER_subject
+					}
+				}
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				909 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_request_imperial_lands = {
+		icon = GFX_decision_eng_trade_unions_support
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_idea = german_spirit
+			has_completed_focus = LTD_legacy_of_the_german_empire
+			FROM = {
+				OR = {
+					owns_state = 5
+					owns_state = 763
+					owns_state = 85
+					owns_state = 807
+					owns_state = 86
+					owns_state = 762
+					owns_state = 188
+				}
+			}
+		}
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+			FROM = {
+				OR = {
+					owns_state = 5
+					owns_state = 763
+					owns_state = 85
+					owns_state = 807
+					owns_state = 86
+					owns_state = 762
+					owns_state = 188
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		targets = {
+			POL SSS TOR LEO LIT SOV
+		}
+		targets_dynamic = yes
+		cost = 10
+		complete_effect = {
+			FROM = {
+				country_event = { id = news_LTD.28 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_form_german_empire = {
+
+		icon = GFX_decision_generic_pickelhaube
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 909
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 86
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 188
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_idea = german_spirit
+			has_completed_focus = LTD_form_the_german_empire
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 909
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 86
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 188
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_GEREmpire
+			set_country_flag = GermanEmpire
+			set_country_leader_ideology = germanic_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = GER_monarchism_party_long
+				name = GER_monarchism_party
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_kaiser
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			add_ideas = {
+				established_monarchy
+			}
+			set_capital = {
+				state = 64
+				remember_old_capital = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.1 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LKR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LKR
+						autonomy_state = autonomy_ltd_subject
+					}
+					LKR = {
+						set_cosmetic_tag = LKR_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						LEO = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LEO
+						autonomy_state = autonomy_ltd_subject
+					}
+					LEO = {
+						set_cosmetic_tag = LEO_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						DUN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = DUN
+						autonomy_state = autonomy_ltd_subject
+					}
+					DUN = {
+						set_cosmetic_tag = DUN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						NIS = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = NIS
+						autonomy_state = autonomy_ltd_subject
+					}
+					NIS = {
+						set_cosmetic_tag = NIS_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						KRM = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = KRM
+						autonomy_state = autonomy_ltd_subject
+					}
+					KRM = {
+						set_cosmetic_tag = KRM_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						JSN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = JSN
+						autonomy_state = autonomy_ltd_subject
+					}
+					JSN = {
+						set_cosmetic_tag = JSN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						TOR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = TOR
+						autonomy_state = autonomy_ltd_subject
+					}
+					TOR = {
+						set_cosmetic_tag = TOR_LTD_GER_subject
+					}
+				}
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				909 = { add_core_of = LTD }
+				63 = { add_core_of = LTD }
+				68 = { add_core_of = LTD }
+				66 = { add_core_of = LTD }
+				67 = { add_core_of = LTD }
+				762 = { add_core_of = LTD }
+				86 = { add_core_of = LTD }
+				807 = { add_core_of = LTD }
+				85 = { add_core_of = LTD }
+				5 = { add_core_of = LTD }
+				763 = { add_core_of = LTD }
+				188 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_unite_the_kingdoms_of_germany = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 909
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 86
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 188
+			state = 69
+			state = 972
+			state = 9
+			state = 74
+			state = 75
+			state = 8
+			state = 3
+			state = 151
+			state = 833
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+			state = 39
+			state = 850
+			state = 160
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_idea = german_spirit
+			has_completed_focus = LTD_form_the_german_empire
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 909
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 86
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 188
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+			owns_state = 8
+			owns_state = 3
+			owns_state = 151
+			owns_state = 833
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+			owns_state = 39
+			owns_state = 850
+			owns_state = 160
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_GERUnified
+			set_country_flag = GermanUnified
+			set_country_leader_ideology = germanic_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = GER_monarchism_party_long
+				name = GER_monarchism_party
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_kaiser
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			add_ideas = {
+				established_monarchy
+			}
+			set_capital = {
+				state = 64
+				remember_old_capital = yes
+			}
+			39 = {
+				set_state_name = STATE_39_GER
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.1 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LKR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LKR
+						autonomy_state = autonomy_ltd_subject
+					}
+					LKR = {
+						set_cosmetic_tag = LKR_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						LEO = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LEO
+						autonomy_state = autonomy_ltd_subject
+					}
+					LEO = {
+						set_cosmetic_tag = LEO_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						DUN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = DUN
+						autonomy_state = autonomy_ltd_subject
+					}
+					DUN = {
+						set_cosmetic_tag = DUN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						NIS = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = NIS
+						autonomy_state = autonomy_ltd_subject
+					}
+					NIS = {
+						set_cosmetic_tag = NIS_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						KRM = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = KRM
+						autonomy_state = autonomy_ltd_subject
+					}
+					KRM = {
+						set_cosmetic_tag = KRM_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						JSN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = JSN
+						autonomy_state = autonomy_ltd_subject
+					}
+					JSN = {
+						set_cosmetic_tag = JSN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						TOR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = TOR
+						autonomy_state = autonomy_ltd_subject
+					}
+					TOR = {
+						set_cosmetic_tag = TOR_LTD_GER_subject
+					}
+				}
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				909 = { add_core_of = LTD }
+				63 = { add_core_of = LTD }
+				68 = { add_core_of = LTD }
+				66 = { add_core_of = LTD }
+				67 = { add_core_of = LTD }
+				762 = { add_core_of = LTD }
+				86 = { add_core_of = LTD }
+				807 = { add_core_of = LTD }
+				85 = { add_core_of = LTD }
+				5 = { add_core_of = LTD }
+				763 = { add_core_of = LTD }
+				188 = { add_core_of = LTD }
+				69 = { add_core_of = LTD }
+				972 = { add_core_of = LTD }
+				9 = { add_core_of = LTD }
+				74 = { add_core_of = LTD }
+				75 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+				39 = { add_core_of = LTD }
+				850 = { add_core_of = LTD }
+				160 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_restore_the_french_empire = {
+
+		icon = GFX_decision_generic_monarchy
+		
+		highlight_states = { highlight_state_targets = {
+			state = 16
+			state = 233
+			state = 56
+			state = 36
+			state = 7
+			state = 35
+			state = 6
+			state = 977
+			state = 34
+			state = 980
+			state = 51
+			state = 8
+			state = 42
+			state = 240
+			state = 29
+			state = 15
+			state = 785
+			state = 18
+			state = 28
+			state = 17
+			state = 14
+			state = 30
+			state = 24
+			state = 27
+			state = 23
+			state = 33
+			state = 25
+			state = 26
+			state = 20
+			state = 19
+			state = 806
+			state = 31
+			state = 22
+			state = 32
+			state = 21
+			state = 851
+			state = 735
+			state = 165
+			state = 158
+			state = 847
+			state = 845
+		}}
+
+		available = {
+			has_completed_focus = LTD_form_the_french_empire
+			is_subject = no
+			has_government = monarchism
+			owns_state = 16
+			owns_state = 233
+			owns_state = 56
+			owns_state = 36
+			owns_state = 7
+			owns_state = 35
+			owns_state = 6
+			owns_state = 977
+			owns_state = 34
+			owns_state = 980
+			owns_state = 51
+			owns_state = 8
+			owns_state = 42
+			owns_state = 240
+			owns_state = 29
+			owns_state = 15
+			owns_state = 785
+			owns_state = 18
+			owns_state = 28
+			owns_state = 17
+			owns_state = 14
+			owns_state = 30
+			owns_state = 24
+			owns_state = 27
+			owns_state = 23
+			owns_state = 33
+			owns_state = 25
+			owns_state = 26
+			owns_state = 20
+			owns_state = 19
+			owns_state = 806
+			owns_state = 31
+			owns_state = 22
+			owns_state = 32
+			owns_state = 21
+			owns_state = 851
+			owns_state = 735
+			owns_state = 165
+			owns_state = 158
+			owns_state = 847
+			owns_state = 845
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}
+		}
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_FRAEmpire
+			set_country_flag = FrenchEmpire
+			set_country_leader_ideology = french_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = FRA_monarchism_party_long
+				name = FRA_monarchism_party
+			}
+			set_capital = {
+				state = 16
+				remember_old_capital = yes
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_empereur
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			hidden_effect = {
+				16 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				36 = { add_core_of = LTD }
+				7 = { add_core_of = LTD }
+				35 = { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				29 = { add_core_of = LTD }
+				15 = { add_core_of = LTD }
+				785 = { add_core_of = LTD }
+				18 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				17 = { add_core_of = LTD }
+				14 = { add_core_of = LTD }
+				30 = { add_core_of = LTD }
+				24 = { add_core_of = LTD }
+				27 = { add_core_of = LTD }
+				23 = { add_core_of = LTD }
+				33 = { add_core_of = LTD }
+				25 = { add_core_of = LTD }
+				26 = { add_core_of = LTD }
+				20 = { add_core_of = LTD }
+				19 = { add_core_of = LTD }
+				806 = { add_core_of = LTD }
+				31 = { add_core_of = LTD }
+				22 = { add_core_of = LTD }
+				32 = { add_core_of = LTD }
+				21 = { add_core_of = LTD }
+				851 = { add_core_of = LTD }
+				735 = { add_core_of = LTD }
+				165 = { add_core_of = LTD }
+				158 = { add_core_of = LTD }
+				847 = { add_core_of = LTD }
+				845 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	LTD_decision_restore_the_roman_empire = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 21
+			state = 851
+			state = 735
+			state = 32
+			state = 20
+			state = 22
+			state = 31
+			state = 165
+			state = 158
+			state = 159
+			state = 847
+			state = 846
+			state = 1
+			state = 850
+			state = 160
+			state = 736
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 117
+			state = 849
+			state = 156
+			state = 115
+			state = 114
+		}}
+
+		available = {
+			has_completed_focus = LTD_restore_the_roman_empire
+			has_government = monarchism
+			is_subject = no
+			
+			owns_state = 21
+			owns_state = 851
+			owns_state = 735
+			owns_state = 32
+			owns_state = 20
+			owns_state = 22
+			owns_state = 31
+			owns_state = 165
+			owns_state = 158
+			owns_state = 159
+			owns_state = 847
+			owns_state = 846
+			owns_state = 1
+			owns_state = 850
+			owns_state = 160
+			owns_state = 736
+			owns_state = 161
+			owns_state = 162
+			owns_state = 157
+			owns_state = 2
+			owns_state = 117
+			owns_state = 849
+			owns_state = 156
+			owns_state = 115
+			owns_state = 114
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_country_flag = SakuraEmpire
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = NIS_Rome
+			}
+			set_country_flag = RomanEmpire
+			set_capital = {
+				state = 2
+				remember_old_capital = no
+			}
+			hidden_effect = {
+				21 = { add_core_of = LTD }
+				851 = { add_core_of = LTD }
+				735 = { add_core_of = LTD }
+				32 = { add_core_of = LTD }
+				20 = { add_core_of = LTD }
+				22 = { add_core_of = LTD }
+				31 = { add_core_of = LTD }
+				165 = { add_core_of = LTD }
+				158 = { add_core_of = LTD }
+				159 = { add_core_of = LTD }
+				847 = { add_core_of = LTD }
+				864 = { add_core_of = LTD }
+				1 = { add_core_of = LTD }
+				850 = { add_core_of = LTD }
+				39 = { add_core_of = LTD }
+				160 = { add_core_of = LTD }
+				736 = { add_core_of = LTD }
+				161 = { add_core_of = LTD }
+				162 = { add_core_of = LTD }
+				157 = { add_core_of = LTD }
+				2 = { add_core_of = LTD }
+				117 = { add_core_of = LTD }
+				849 = { add_core_of = LTD }
+				156 = { add_core_of = LTD }
+				115 = { add_core_of = LTD }
+				114 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_form_the_mare_nostrum = {
+
+		icon = GFX_decision_generic_coastal_fortification
+		
+		highlight_states = { highlight_state_targets = {
+			state = 118
+			state = 173
+			state = 168
+			state = 167
+			state = 165
+			state = 177
+			state = 31
+			state = 22
+			state = 21
+			state = 851
+			state = 735
+			state = 158
+			state = 1
+			state = 114
+			state = 159
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 117
+			state = 849
+			state = 156
+			state = 115
+			state = 116
+			state = 850
+			state = 160
+			state = 736
+			state = 103
+			state = 163
+			state = 105
+			state = 934
+			state = 44
+			state = 805
+			state = 185
+			state = 186
+			state = 187
+			state = 182
+			state = 164
+			state = 47
+			state = 731
+			state = 184
+			state = 341
+			state = 340
+			state = 339
+			state = 342
+			state = 345
+			state = 344
+			state = 183
+			state = 799
+			state = 677
+			state = 553
+			state = 454
+			state = 453
+			state = 446
+			state = 907
+			state = 447
+			state = 452
+			state = 451
+			state = 450
+			state = 663
+			state = 449
+			state = 662
+			state = 448
+			state = 661
+			state = 665
+			state = 458
+			state = 460
+			state = 459
+			state = 513
+			state = 461
+			state = 462
+			state = 290
+		}}
+
+		available = {
+			has_completed_focus = LTD_proclaim_the_mare_nostrum
+			has_government = monarchism
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = DUN_mare_nostrum_requirement
+				has_full_control_of_state = 118
+				has_full_control_of_state = 173
+				has_full_control_of_state = 168
+				has_full_control_of_state = 167
+				has_full_control_of_state = 165
+				has_full_control_of_state = 177
+				has_full_control_of_state = 31
+				has_full_control_of_state = 22
+				has_full_control_of_state = 21
+				has_full_control_of_state = 851
+				has_full_control_of_state = 735
+				has_full_control_of_state = 158
+				has_full_control_of_state = 1
+				has_full_control_of_state = 114
+				has_full_control_of_state = 159
+				has_full_control_of_state = 161
+				has_full_control_of_state = 162
+				has_full_control_of_state = 157
+				has_full_control_of_state = 2
+				has_full_control_of_state = 117
+				has_full_control_of_state = 849
+				has_full_control_of_state = 156
+				has_full_control_of_state = 115
+				has_full_control_of_state = 116
+				has_full_control_of_state = 850
+				has_full_control_of_state = 160
+				has_full_control_of_state = 736
+				has_full_control_of_state = 103
+				has_full_control_of_state = 163
+				has_full_control_of_state = 105
+				has_full_control_of_state = 934
+				has_full_control_of_state = 44
+				has_full_control_of_state = 805
+				has_full_control_of_state = 185
+				has_full_control_of_state = 186
+				has_full_control_of_state = 187
+				has_full_control_of_state = 182
+				has_full_control_of_state = 164
+				has_full_control_of_state = 47
+				has_full_control_of_state = 731
+				has_full_control_of_state = 184
+				has_full_control_of_state = 341
+				has_full_control_of_state = 340
+				has_full_control_of_state = 339
+				has_full_control_of_state = 342
+				has_full_control_of_state = 345
+				has_full_control_of_state = 344
+				has_full_control_of_state = 183
+				has_full_control_of_state = 799
+				has_full_control_of_state = 677
+				has_full_control_of_state = 553
+				has_full_control_of_state = 454
+				has_full_control_of_state = 453
+				has_full_control_of_state = 446
+				has_full_control_of_state = 907
+				has_full_control_of_state = 447
+				has_full_control_of_state = 452
+				has_full_control_of_state = 451
+				has_full_control_of_state = 450
+				has_full_control_of_state = 663
+				has_full_control_of_state = 449
+				has_full_control_of_state = 662
+				has_full_control_of_state = 448
+				has_full_control_of_state = 661
+				has_full_control_of_state = 665
+				has_full_control_of_state = 458
+				has_full_control_of_state = 460
+				has_full_control_of_state = 459
+				has_full_control_of_state = 513
+				has_full_control_of_state = 461
+				has_full_control_of_state = 462
+				has_full_control_of_state = 290
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_country_flag = SakuraEmpire
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			add_ideas = dun_mare_nostrum
+			if = {
+				limit = {
+					NOT = { has_country_flag = LotrEmpire }
+				}
+				set_cosmetic_tag = NIS_Rome
+			}
+			set_capital = {
+				state = 2
+				remember_old_capital = no
+			}
+			hidden_effect = {
+				118 = { add_core_of = LTD }
+				173 = { add_core_of = LTD }
+				168 = { add_core_of = LTD }
+				167 = { add_core_of = LTD }
+				165 = { add_core_of = LTD }
+				177 = { add_core_of = LTD }
+				31 = { add_core_of = LTD }
+				22 = { add_core_of = LTD }
+				21 = { add_core_of = LTD }
+				851 = { add_core_of = LTD }
+				735 = { add_core_of = LTD }
+				158 = { add_core_of = LTD }
+				1 = { add_core_of = LTD }
+				114 = { add_core_of = LTD }
+				159 = { add_core_of = LTD }
+				161 = { add_core_of = LTD }
+				162 = { add_core_of = LTD }
+				157 = { add_core_of = LTD }
+				2 = { add_core_of = LTD }
+				117 = { add_core_of = LTD }
+				849 = { add_core_of = LTD }
+				156 = { add_core_of = LTD }
+				115 = { add_core_of = LTD }
+				116 = { add_core_of = LTD }
+				850 = { add_core_of = LTD }
+				160 = { add_core_of = LTD }
+				736 = { add_core_of = LTD }
+				103 = { add_core_of = LTD }
+				163 = { add_core_of = LTD }
+				105 = { add_core_of = LTD }
+				934 = { add_core_of = LTD }
+				44 = { add_core_of = LTD }
+				805 = { add_core_of = LTD }
+				185 = { add_core_of = LTD }
+				186 = { add_core_of = LTD }
+				187 = { add_core_of = LTD }
+				182 = { add_core_of = LTD }
+				164 = { add_core_of = LTD }
+				47 = { add_core_of = LTD }
+				731 = { add_core_of = LTD }
+				184 = { add_core_of = LTD }
+				341 = { add_core_of = LTD }
+				340 = { add_core_of = LTD }
+				339 = { add_core_of = LTD }
+				342 = { add_core_of = LTD }
+				345 = { add_core_of = LTD }
+				344 = { add_core_of = LTD }
+				183 = { add_core_of = LTD }
+				799 = { add_core_of = LTD }
+				677 = { add_core_of = LTD }
+				553 = { add_core_of = LTD }
+				454 = { add_core_of = LTD }
+				453 = { add_core_of = LTD }
+				446 = { add_core_of = LTD }
+				907 = { add_core_of = LTD }
+				447 = { add_core_of = LTD }
+				452 = { add_core_of = LTD }
+				451 = { add_core_of = LTD }
+				450 = { add_core_of = LTD }
+				663 = { add_core_of = LTD }
+				449 = { add_core_of = LTD }
+				662 = { add_core_of = LTD }
+				448 = { add_core_of = LTD }
+				661 = { add_core_of = LTD }
+				665 = { add_core_of = LTD }
+				458 = { add_core_of = LTD }
+				460 = { add_core_of = LTD }
+				459 = { add_core_of = LTD }
+				513 = { add_core_of = LTD }
+				461 = { add_core_of = LTD }
+				462 = { add_core_of = LTD }
+				290 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_expand_africa = {
+		icon = GFX_decision_generic_form_nation
+
+		available = {
+			has_completed_focus = LTD_expand_into_africa
+			has_government = monarchism
+			is_subject = no
+			custom_trigger_tooltip = {
+				tooltip = NIS_africa_requirement
+				any_controlled_state = {
+					is_on_continent = africa
+					not = {
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+			is_ai = no
+			has_country_flag = SakuraEmpire
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = { is_on_continent = africa }
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	LTD_decision_form_franco_german_empire = {
+
+		icon = GFX_decision_generic_scorched_earth
+		
+		highlight_states = { highlight_state_targets = {
+			state = 909
+			state = 58
+			state = 61
+			state = 62
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 86
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 188
+			state = 7
+			state = 36
+			state = 56
+			state = 233
+			state = 35
+			state = 51
+			state = 57
+			state = 55
+			state = 59
+			state = 60
+			state = 64
+			state = 65
+			state = 977
+			state = 6
+			state = 29
+			state = 34
+			state = 980
+			state = 8
+			state = 42
+			state = 240
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 50
+			state = 978
+			state = 28
+			state = 17
+			state = 18
+			state = 27
+			state = 785
+			state = 16
+			state = 15
+			state = 24
+			state = 30
+			state = 14
+			state = 23
+			state = 33
+			state = 25
+			state = 26
+			state = 20
+			state = 32
+			state = 735
+			state = 851
+			state = 21
+			state = 22
+			state = 31
+			state = 806
+			state = 19
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			has_idea = german_spirit
+			has_idea = french_spirit
+			has_completed_focus = LTD_the_dual_monarchy
+			owns_state = 50
+			owns_state = 909
+			owns_state = 58
+			owns_state = 61
+			owns_state = 62
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 86
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 188
+			owns_state = 7
+			owns_state = 36
+			owns_state = 56
+			owns_state = 233
+			owns_state = 35
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 59
+			owns_state = 60
+			owns_state = 64
+			owns_state = 65
+			owns_state = 977
+			owns_state = 6
+			owns_state = 29
+			owns_state = 34
+			owns_state = 980
+			owns_state = 8
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 50
+			owns_state = 978
+			owns_state = 28
+			owns_state = 17
+			owns_state = 18
+			owns_state = 27
+			owns_state = 785
+			owns_state = 16
+			owns_state = 15
+			owns_state = 24
+			owns_state = 30
+			owns_state = 14
+			owns_state = 23
+			owns_state = 33
+			owns_state = 25
+			owns_state = 26
+			owns_state = 20
+			owns_state = 32
+			owns_state = 735
+			owns_state = 851
+			owns_state = 21
+			owns_state = 22
+			owns_state = 31
+			owns_state = 806
+			owns_state = 19
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			custom_effect_tooltip = leader_gui_enabled
+			set_country_flag = LEADER_GUI_VISIBLE
+			set_cosmetic_tag = LTD_FRA_GER
+			set_country_flag = FrancoGermanEmpire
+			set_country_leader_ideology = franco_german_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = LTD_FRA_GER_monarchism_party_long
+				name = LTD_FRA_GER_monarchism_party
+			}
+			set_capital = {
+				state = 28
+				remember_old_capital = yes
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_kaiser
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			add_ideas = {
+				established_monarchy
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LKR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LKR
+						autonomy_state = autonomy_ltd_subject
+					}
+					LKR = {
+						set_cosmetic_tag = LKR_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						LEO = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LEO
+						autonomy_state = autonomy_ltd_subject
+					}
+					LEO = {
+						set_cosmetic_tag = LEO_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						DUN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = DUN
+						autonomy_state = autonomy_ltd_subject
+					}
+					DUN = {
+						set_cosmetic_tag = DUN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						NIS = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = NIS
+						autonomy_state = autonomy_ltd_subject
+					}
+					NIS = {
+						set_cosmetic_tag = NIS_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						KRM = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = KRM
+						autonomy_state = autonomy_ltd_subject
+					}
+					KRM = {
+						set_cosmetic_tag = KRM_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						JSN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = JSN
+						autonomy_state = autonomy_ltd_subject
+					}
+					JSN = {
+						set_cosmetic_tag = JSN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						TOR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = TOR
+						autonomy_state = autonomy_ltd_subject
+					}
+					TOR = {
+						set_cosmetic_tag = TOR_LTD_GER_subject
+					}
+				}
+				50 = { add_core_of = LTD }
+				909 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				63 = { add_core_of = LTD }
+				68 = { add_core_of = LTD }
+				66 = { add_core_of = LTD }
+				67 = { add_core_of = LTD }
+				762 = { add_core_of = LTD }
+				86 = { add_core_of = LTD }
+				807 = { add_core_of = LTD }
+				85 = { add_core_of = LTD }
+				5 = { add_core_of = LTD }
+				763 = { add_core_of = LTD }
+				188 = { add_core_of = LTD }
+				7 = { add_core_of = LTD }
+				36 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				35 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				29 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				17 = { add_core_of = LTD }
+				18 = { add_core_of = LTD }
+				27 = { add_core_of = LTD }
+				785 = { add_core_of = LTD }
+				16 = { add_core_of = LTD }
+				15 = { add_core_of = LTD }
+				24 = { add_core_of = LTD }
+				30 = { add_core_of = LTD }
+				14 = { add_core_of = LTD }
+				23 = { add_core_of = LTD }
+				33 = { add_core_of = LTD }
+				25 = { add_core_of = LTD }
+				26 = { add_core_of = LTD }
+				20 = { add_core_of = LTD }
+				32 = { add_core_of = LTD }
+				735 = { add_core_of = LTD }
+				851 = { add_core_of = LTD }
+				21 = { add_core_of = LTD }
+				22 = { add_core_of = LTD }
+				31 = { add_core_of = LTD }
+				806 = { add_core_of = LTD }
+				19 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_form_the_transatlantic_empire = {
+
+		icon = GFX_decision_generic_coastal_fortification
+
+		highlight_states = { highlight_state_targets = {
+			state = 463
+			state = 740
+			state = 864
+			state = 472
+			state = 683
+			state = 828
+			state = 466
+			state = 332
+			state = 471
+			state = 473
+			state = 470
+			state = 865
+			state = 469
+			state = 867
+			state = 467
+			state = 866
+			state = 682
+			state = 861
+			state = 860
+			state = 862
+			state = 863
+			state = 468
+			state = 276
+			state = 465
+			state = 464
+			state = 331
+			state = 875
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			custom_trigger_tooltip = {
+				tooltip = LTD_imperial_matters_requirement
+				OR = {
+					has_country_flag = UnifiedEmpire
+					has_country_flag = GermanEmpire
+					has_country_flag = FrenchEmpire
+					has_country_flag = LotrEmpire
+				}
+			}
+			has_completed_focus = LTD_transatlantic_dream
+			owns_state = 463
+			owns_state = 740
+			owns_state = 864
+			owns_state = 472
+			owns_state = 683
+			owns_state = 828
+			owns_state = 466
+			owns_state = 332
+			owns_state = 471
+			owns_state = 473
+			owns_state = 470
+			owns_state = 865
+			owns_state = 469
+			owns_state = 867
+			owns_state = 467
+			owns_state = 866
+			owns_state = 682
+			owns_state = 861
+			owns_state = 860
+			owns_state = 862
+			owns_state = 863
+			owns_state = 468
+			owns_state = 276
+			owns_state = 465
+			owns_state = 464
+			owns_state = 331
+			owns_state = 875
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			country_event = { id = news_LTD.203 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_transatlantic_expansion = {
+
+		icon = GFX_decision_generic_coastal_fortification
+
+		highlight_states = { highlight_state_targets = {
+			state = 463
+			state = 740
+			state = 864
+			state = 472
+			state = 683
+			state = 828
+			state = 466
+			state = 332
+			state = 471
+			state = 473
+			state = 470
+			state = 865
+			state = 469
+			state = 867
+			state = 467
+			state = 866
+			state = 682
+			state = 861
+			state = 860
+			state = 862
+			state = 863
+			state = 468
+			state = 276
+			state = 465
+			state = 464
+			state = 331
+			state = 875
+			state = 386
+			state = 385
+			state = 387
+			state = 388
+			state = 381
+			state = 389
+			state = 390
+			state = 384
+			state = 385
+			state = 378
+			state = 379
+			state = 380
+			state = 377
+			state = 382
+			state = 376
+			state = 383
+			state = 374
+			state = 375
+			state = 391
+			state = 392
+			state = 373
+			state = 372
+			state = 371
+			state = 394
+			state = 393
+			state = 395
+			state = 396
+			state = 261
+			state = 369
+			state = 368
+			state = 370
+			state = 367
+			state = 365
+			state = 366
+			state = 364
+			state = 363
+			state = 362
+			state = 816
+			state = 361
+			state = 360
+			state = 359
+			state = 358
+			state = 357
+		}}
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			custom_trigger_tooltip = {
+				tooltip = LTD_transatlantic_expansion_requirement
+				has_country_flag = Transatlantic
+			}
+			has_completed_focus = LTD_transatlantic_dream
+			owns_state = 463
+			owns_state = 740
+			owns_state = 864
+			owns_state = 472
+			owns_state = 683
+			owns_state = 828
+			owns_state = 466
+			owns_state = 332
+			owns_state = 471
+			owns_state = 473
+			owns_state = 470
+			owns_state = 865
+			owns_state = 469
+			owns_state = 867
+			owns_state = 467
+			owns_state = 866
+			owns_state = 682
+			owns_state = 861
+			owns_state = 860
+			owns_state = 862
+			owns_state = 863
+			owns_state = 468
+			owns_state = 276
+			owns_state = 465
+			owns_state = 464
+			owns_state = 331
+			owns_state = 875
+			owns_state = 386
+			owns_state = 385
+			owns_state = 387
+			owns_state = 388
+			owns_state = 381
+			owns_state = 389
+			owns_state = 390
+			owns_state = 384
+			owns_state = 385
+			owns_state = 378
+			owns_state = 379
+			owns_state = 380
+			owns_state = 377
+			owns_state = 382
+			owns_state = 376
+			owns_state = 383
+			owns_state = 374
+			owns_state = 375
+			owns_state = 391
+			owns_state = 392
+			owns_state = 373
+			owns_state = 372
+			owns_state = 371
+			owns_state = 394
+			owns_state = 393
+			owns_state = 395
+			owns_state = 396
+			owns_state = 261
+			owns_state = 369
+			owns_state = 368
+			owns_state = 370
+			owns_state = 367
+			owns_state = 365
+			owns_state = 366
+			owns_state = 364
+			owns_state = 363
+			owns_state = 362
+			owns_state = 816
+			owns_state = 361
+			owns_state = 360
+			owns_state = 359
+			owns_state = 358
+			owns_state = 357
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			has_country_flag = Transatlantic
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_Transatlantic
+			set_country_leader_ideology = transatlantic_imperialism
+			set_party_name = {
+				ideology = monarchism
+				long_name = LTD_transatlantic_imperialism_party_long
+				name = LTD_transatlantic_imperialism_party
+			}
+			hidden_effect = {
+				463 = { add_core_of = LTD }
+				740 = { add_core_of = LTD }
+				864 = { add_core_of = LTD }
+				472 = { add_core_of = LTD }
+				683 = { add_core_of = LTD }
+				828 = { add_core_of = LTD }
+				466 = { add_core_of = LTD }
+				332 = { add_core_of = LTD }
+				471 = { add_core_of = LTD }
+				473 = { add_core_of = LTD }
+				470 = { add_core_of = LTD }
+				865 = { add_core_of = LTD }
+				469 = { add_core_of = LTD }
+				867 = { add_core_of = LTD }
+				467 = { add_core_of = LTD }
+				866 = { add_core_of = LTD }
+				682 = { add_core_of = LTD }
+				861 = { add_core_of = LTD }
+				860 = { add_core_of = LTD }
+				862 = { add_core_of = LTD }
+				863 = { add_core_of = LTD }
+				468 = { add_core_of = LTD }
+				276 = { add_core_of = LTD }
+				465 = { add_core_of = LTD }
+				464 = { add_core_of = LTD }
+				331 = { add_core_of = LTD }
+				875 = { add_core_of = LTD }
+				386 = { add_core_of = LTD }
+				385 = { add_core_of = LTD }
+				387 = { add_core_of = LTD }
+				388 = { add_core_of = LTD }
+				381 = { add_core_of = LTD }
+				389 = { add_core_of = LTD }
+				390 = { add_core_of = LTD }
+				384 = { add_core_of = LTD }
+				385 = { add_core_of = LTD }
+				378 = { add_core_of = LTD }
+				379 = { add_core_of = LTD }
+				380 = { add_core_of = LTD }
+				377 = { add_core_of = LTD }
+				382 = { add_core_of = LTD }
+				376 = { add_core_of = LTD }
+				383 = { add_core_of = LTD }
+				374 = { add_core_of = LTD }
+				375 = { add_core_of = LTD }
+				391 = { add_core_of = LTD }
+				392 = { add_core_of = LTD }
+				373 = { add_core_of = LTD }
+				372 = { add_core_of = LTD }
+				371 = { add_core_of = LTD }
+				394 = { add_core_of = LTD }
+				393 = { add_core_of = LTD }
+				395 = { add_core_of = LTD }
+				396 = { add_core_of = LTD }
+				261 = { add_core_of = LTD }
+				369 = { add_core_of = LTD }
+				368 = { add_core_of = LTD }
+				370 = { add_core_of = LTD }
+				367 = { add_core_of = LTD }
+				365 = { add_core_of = LTD }
+				366 = { add_core_of = LTD }
+				364 = { add_core_of = LTD }
+				363 = { add_core_of = LTD }
+				362 = { add_core_of = LTD }
+				816 = { add_core_of = LTD }
+				361 = { add_core_of = LTD }
+				360 = { add_core_of = LTD }
+				359 = { add_core_of = LTD }
+				358 = { add_core_of = LTD }
+				357 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+LTD_divine_right = {
+	LTD_decision_form_the_holy_state = {
+
+		icon = GFX_decision_CHL_mapuche_liberate_isthmo_amerindia
+
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 3
+			state = 151
+			state = 833
+			state = 848
+		}}
+
+		available = {
+			is_subject = no
+			has_government = theocracy
+			has_completed_focus = LTD_form_the_holy_state
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 3
+			owns_state = 151
+			owns_state = 833
+			owns_state = 848
+		}
+
+		visible = {
+		}
+
+		cost = 100
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = HolyState
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+			}
+		}
+	}
+	LTD_decision_form_holy_roman_empire = {
+
+		icon = GFX_decision_eagle
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 739
+			state = 54
+			state = 53
+			state = 52
+			state = 51
+			state = 57
+			state = 55
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 58
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 762
+			state = 807
+			state = 85
+			state = 5
+			state = 763
+			state = 36
+			state = 7
+			state = 35
+			state = 6
+			state = 977
+			state = 34
+			state = 980
+			state = 8
+			state = 17
+			state = 845
+			state = 3
+			state = 847
+			state = 846
+			state = 151
+			state = 833
+			state = 32
+			state = 21
+			state = 735
+			state = 851
+			state = 158
+			state = 159
+			state = 161
+			state = 162
+			state = 157
+			state = 2
+			state = 1
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+			state = 69
+			state = 972
+			state = 9
+			state = 74
+			state = 75
+			state = 39
+			state = 850
+			state = 160
+			state = 736
+			state = 233
+			state = 102
+			state = 853
+		}}
+
+		available = {
+			is_subject = no
+			OR = {
+				has_government = monarchism
+				has_government = theocracy
+			}
+			has_completed_focus = LTD_holy_roman_empire
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 739
+			owns_state = 54
+			owns_state = 53
+			owns_state = 52
+			owns_state = 51
+			owns_state = 57
+			owns_state = 55
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 58
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 762
+			owns_state = 807
+			owns_state = 85
+			owns_state = 5
+			owns_state = 763
+			owns_state = 36
+			owns_state = 7
+			owns_state = 35
+			owns_state = 6
+			owns_state = 977
+			owns_state = 34
+			owns_state = 980
+			owns_state = 8
+			owns_state = 17
+			owns_state = 845
+			owns_state = 3
+			owns_state = 847
+			owns_state = 846
+			owns_state = 151
+			owns_state = 833
+			owns_state = 32
+			owns_state = 21
+			owns_state = 735
+			owns_state = 851
+			owns_state = 158
+			owns_state = 159
+			owns_state = 161
+			owns_state = 162
+			owns_state = 157
+			owns_state = 2
+			owns_state = 1
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+			owns_state = 69
+			owns_state = 972
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+			owns_state = 39
+			owns_state = 850
+			owns_state = 160
+			owns_state = 736
+			owns_state = 233
+			owns_state = 102
+			owns_state = 853
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_HRE
+			set_country_flag = HolyRomanEmpire
+			set_country_leader_ideology = germanic_monarchism
+			set_party_name = {
+				ideology = monarchism
+				long_name = GER_monarchism_party_long
+				name = GER_monarchism_party
+			}
+			39 = {
+				set_state_name = STATE_39_GER
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_hre
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				63 = { add_core_of = LTD }
+				68 = { add_core_of = LTD }
+				66 = { add_core_of = LTD }
+				67 = { add_core_of = LTD }
+				762 = { add_core_of = LTD }
+				807 = { add_core_of = LTD }
+				85 = { add_core_of = LTD }
+				5 = { add_core_of = LTD }
+				763 = { add_core_of = LTD }
+				36 = { add_core_of = LTD }
+				7 = { add_core_of = LTD }
+				35 = { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980= { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				17 = { add_core_of = LTD }
+				845 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				847 = { add_core_of = LTD }
+				846 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				833 = { add_core_of = LTD }
+				32 = { add_core_of = LTD }
+				21 = { add_core_of = LTD }
+				735 = { add_core_of = LTD }
+				851 = { add_core_of = LTD }
+				158 = { add_core_of = LTD }
+				159 = { add_core_of = LTD }
+				161 = { add_core_of = LTD }
+				162 = { add_core_of = LTD }
+				157 = { add_core_of = LTD }
+				2 = { add_core_of = LTD }
+				1 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+				69 = { add_core_of = LTD }
+				972 = { add_core_of = LTD }
+				9 = { add_core_of = LTD }
+				74 = { add_core_of = LTD }
+				75 = { add_core_of = LTD }
+				39 = { add_core_of = LTD }
+				850 = { add_core_of = LTD }
+				160 = { add_core_of = LTD }
+				736 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				102 = { add_core_of = LTD }
+				853 = { add_core_of = LTD }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LTD_decision_category_accession_talks = {
+	LTD_decision_accession_talks = {
+		visible = {
+			OR = {
+				AND = {
+					has_government = democratic
+					FROM = { has_government = democratic }
+				}
+				has_country_flag = enable_debug
+			}
+		}
+		available = {
+			has_completed_focus = LTD_accession_talks
+			FROM = { has_government = democratic }
+		}
+
+		fire_only_once = yes
+
+		targets = {
+			POR SPR FRA LUX BEL HOL ENG IRE ITA SWI AUS GER LKR DEN ICE NOR SWE FIN CZE HUN TOR SLO ROM DUN YUG ALB BUL GRE POL SSS LEO LIT LAT EST
+		}
+		targets_dynamic = yes
+		icon = decision_generic_monarchy
+		cost = 20
+		complete_effect = {
+			add_to_faction = FROM
+		}
+	}
+}
+LTD_decision_category_federation_talks = {
+	LTD_decision_federation_talks = {
+		visible = {
+			OR = {
+				AND = {
+					has_government = democratic
+					FROM = { has_government = democratic }
+				}
+				has_country_flag = enable_debug
+			}
+		}
+		available = {
+			has_completed_focus = LTD_the_european_federation
+			FROM = { is_in_faction_with = LTD }
+		}
+
+		fire_only_once = yes
+
+		targets = {
+			POR SPR FRA LUX BEL HOL ENG IRE ITA SWI AUS GER LKR DEN ICE NOR SWE FIN CZE HUN TOR SLO ROM DUN YUG ALB BUL GRE POL SSS LEO LIT LAT EST
+		}
+		targets_dynamic = yes
+		icon = decision_generic_monarchy
+		cost = 20
+		complete_effect = {
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+		}
+	}
+}
+LTD_weltreich = {
+	LTD_call_forth_the_nazgul = {
+		icon = GFX_decision_onmap_recruit_operative
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_country_leader = {
+					character = LTD_sauron
+					ruling_only = yes
+				}
+			}
+		}
+		cost = 100
+		complete_effect = {
+			LTD = {
+				LTD_witch_king_of_angmar = {
+					add_field_marshal_role = {
+						traits={ offensive_doctrine }
+						skill=4
+						attack_skill=4
+						defense_skill=4
+						planning_skill=3
+						logistics_skill=4
+					}
+				}
+				LTD_khamul = {
+					add_corps_commander_role = {
+						traits = { desert_fox swamp_fox }
+						skill=4
+						attack_skill = 3
+						defense_skill = 4
+						planning_skill = 2
+						logistics_skill = 3
+					}
+				}
+				LTD_uvantha = {
+					add_corps_commander_role = {
+						traits = { hill_fighter }
+						skill = 3
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 4
+						logistics_skill = 3
+					}
+				}
+				LTD_hoarmurath = {
+					add_corps_commander_role = {
+						traits = { ranger panzer_leader }
+						skill = 3
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 1
+						logistics_skill = 3
+					}
+				}
+				LTD_dwar = {
+					add_corps_commander_role = {
+						traits = { trait_engineer }
+						skill = 3
+						attack_skill = 1
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 2
+					}
+				}
+				LTD_adunaphel = {
+					add_corps_commander_role = {
+						traits = { winter_specialist }
+						skill = 2
+						attack_skill = 1
+						defense_skill = 3
+						planning_skill = 3
+						logistics_skill = 2
+					}
+				}
+				LTD_akhorahil = {
+					add_corps_commander_role = {
+						traits = { naval_invader }
+						skill = 2
+						attack_skill = 1
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 3
+					}
+				}
+				LTD_ji_indur = {
+					add_corps_commander_role = {
+						traits = { jungle_rat }
+						skill = 2
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 2
+						logistics_skill = 4
+					}
+				}
+				LTD_ren = {
+					add_corps_commander_role = {
+						traits = { bearer_of_artillery }
+						skill = 2
+						attack_skill = 1
+						defense_skill = 2
+						planning_skill = 4
+						logistics_skill = 2
+					}
+				}
+			}
+			DUN = {
+				country_event = { id = news_DUN_lotr.100 }
+			}
+
+		}
+	}
+	LTD_call_for_the_white_wizard = {
+		icon = GFX_decision_onmap_recruit_operative
+		visible = {
+			ROOT = {
+				is_ai = no
+				has_country_leader = {
+					character = LTD_sauron
+					ruling_only = yes
+				}
+			}
+		}
+		available = {
+			NIS = {
+				owns_state = 21
+			}
+		}
+		cost = 100
+		complete_effect = {
+			NIS = {
+				country_event = { id = news_NIS_lotr.100 }
+			}
+		}
+	}
+	LTD_decision_bergreich = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 28
+			state = 8
+			state = 52
+			state = 3
+			state = 151
+			state = 848
+			state = 153
+			state = 846
+			state = 159
+			state = 39
+			state = 850
+			state = 160
+			state = 736
+		}}
+
+		available = {
+			has_completed_focus = LTD_bergreich
+			has_government = fascism
+			is_subject = no
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 28
+			owns_state = 8
+			owns_state = 52
+			owns_state = 3
+			owns_state = 151
+			owns_state = 848
+			owns_state = 153
+			owns_state = 846
+			owns_state = 159
+			owns_state = 39
+			owns_state = 850
+			owns_state = 160
+			owns_state = 736
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_SouthernGER
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				3 = { add_core_of = LTD }
+				151 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				846 = { add_core_of = LTD }
+				159 = { add_core_of = LTD }
+				39 = { add_core_of = LTD }
+				850 = { add_core_of = LTD }
+				160 = { add_core_of = LTD }
+				736 = { add_core_of = LTD }
+			}
+			add_ideas = {
+				established_dictatorship
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_westreich = {
+
+		icon = GFX_decision_generic_police_action
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 55
+			state = 51
+			state = 57
+			state = 56
+			state = 34
+			state = 980
+			state = 6
+			state = 977
+			state = 35
+			state = 7
+			state = 36
+			state = 8
+			state = 28
+		}}
+
+		available = {
+			has_completed_focus = LTD_westreich
+			has_government = fascism
+			OR = {
+				is_subject = no
+				overlord = {
+					tag = GER
+					has_government = fascism
+				}
+			}
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 739
+			owns_state = 55
+			owns_state = 51
+			owns_state = 57
+			owns_state = 56
+			owns_state = 34
+			owns_state = 980
+			owns_state = 6
+			owns_state = 977
+			owns_state = 35
+			owns_state = 7
+			owns_state = 36
+			owns_state = 8
+			owns_state = 28
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_WesternGER
+			if = {
+				limit = {
+					overlord = {
+						tag = GER
+						has_government = fascism
+					}
+				}
+				GER = {
+					end_puppet = ROOT
+				}
+			}
+			set_country_flag = Westreich
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980= { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+				35 = { add_core_of = LTD }
+				7 = { add_core_of = LTD }
+				36 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+			}
+			add_ideas = {
+				established_dictatorship
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_ss_ordensstaat = {
+
+		icon = GFX_decision_icon_black_sun
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 739
+			state = 55
+			state = 51
+			state = 57
+			state = 56
+			state = 34
+			state = 980
+			state = 6
+			state = 977
+			state = 35
+			state = 7
+			state = 36
+			state = 8
+			state = 28
+			state = 29
+			state = 785
+			state = 18
+			state = 17
+		}}
+
+		available = {
+			has_completed_focus = LTD_form_the_ss_state
+			has_government = fascism
+			OR = {
+				is_subject = no
+				overlord = {
+					tag = GER
+					has_government = fascism
+				}
+			}
+			has_full_control_of_state = 50
+			has_full_control_of_state = 978
+			has_full_control_of_state = 42
+			has_full_control_of_state = 240
+			has_full_control_of_state = 739
+			has_full_control_of_state = 55
+			has_full_control_of_state = 51
+			has_full_control_of_state = 57
+			has_full_control_of_state = 56
+			has_full_control_of_state = 34
+			has_full_control_of_state = 980
+			has_full_control_of_state = 6
+			has_full_control_of_state = 977
+			has_full_control_of_state = 35
+			has_full_control_of_state = 7
+			has_full_control_of_state = 36
+			has_full_control_of_state = 8
+			has_full_control_of_state = 28
+			has_full_control_of_state = 29
+			has_full_control_of_state = 785
+			has_full_control_of_state = 18
+			has_full_control_of_state = 17
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_SSState
+
+			set_country_leader_ideology = nazism_ss
+			set_party_name = {
+				ideology = fascism
+				long_name = LTD_ss_party_long
+				name = LTD_ss_party
+			}
+
+			if = {
+				limit = {
+					overlord = {
+						tag = GER
+						has_government = fascism
+					}
+				}
+				GER = {
+					end_puppet = ROOT
+				}
+			}
+
+			set_country_flag = SS-State
+
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.88 }
+			}
+
+			hidden_effect = {
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				34 = { add_core_of = LTD }
+				980= { add_core_of = LTD }
+				6 = { add_core_of = LTD }
+				977 = { add_core_of = LTD }
+				35 = { add_core_of = LTD }
+				7 = { add_core_of = LTD }
+				36 = { add_core_of = LTD }
+				8 = { add_core_of = LTD }
+				28 = { add_core_of = LTD }
+				29 = { add_core_of = LTD }
+				785 = { add_core_of = LTD }
+				18 = { add_core_of = LTD }
+				17 = { add_core_of = LTD }
+			}
+			add_ideas = {
+				established_dictatorship
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_german_reich = {
+
+		icon = GFX_decision_ger_reichskommissariats
+		
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+			state = 42
+			state = 240
+			state = 52
+			state = 53
+			state = 54
+			state = 739
+			state = 55
+			state = 51
+			state = 57
+			state = 56
+			state = 60
+			state = 59
+			state = 233
+			state = 58
+			state = 909
+			state = 65
+			state = 64
+			state = 61
+			state = 62
+			state = 63
+			state = 68
+			state = 66
+			state = 67
+			state = 69
+			state = 972
+			state = 848
+			state = 153
+			state = 152
+			state = 4
+			state = 976
+			state = 975
+		}}
+
+		available = {
+			has_completed_focus = LTD_one_reich
+			has_government = fascism
+			is_subject = no
+			owns_state = 50
+			owns_state = 978
+			owns_state = 42
+			owns_state = 240
+			owns_state = 52
+			owns_state = 53
+			owns_state = 54
+			owns_state = 739
+			owns_state = 55
+			owns_state = 51
+			owns_state = 57
+			owns_state = 56
+			owns_state = 60
+			owns_state = 59
+			owns_state = 233
+			owns_state = 58
+			owns_state = 909
+			owns_state = 65
+			owns_state = 64
+			owns_state = 61
+			owns_state = 62
+			owns_state = 63
+			owns_state = 68
+			owns_state = 66
+			owns_state = 67
+			owns_state = 69
+			owns_state = 972
+			owns_state = 848
+			owns_state = 153
+			owns_state = 152
+			owns_state = 4
+			owns_state = 976
+			owns_state = 975
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LTD_GER
+			set_country_flag = GermanReich
+			set_country_leader_ideology = nazism
+			set_party_name = {
+				ideology = fascism
+				long_name = GER_fascism_party_long
+				name = GER_fascism_party
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = nation_declared
+					}
+				}
+				set_country_flag = nation_declared
+				news_event = { hours = 6 id = global_news_nation_declared.2 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						LKR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LKR
+						autonomy_state = autonomy_ltd_subject
+					}
+					LKR = {
+						set_cosmetic_tag = LKR_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						LEO = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = LEO
+						autonomy_state = autonomy_ltd_subject
+					}
+					LEO = {
+						set_cosmetic_tag = LEO_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						DUN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = DUN
+						autonomy_state = autonomy_ltd_subject
+					}
+					DUN = {
+						set_cosmetic_tag = DUN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						NIS = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = NIS
+						autonomy_state = autonomy_ltd_subject
+					}
+					NIS = {
+						set_cosmetic_tag = NIS_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						KRM = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = KRM
+						autonomy_state = autonomy_ltd_subject
+					}
+					KRM = {
+						set_cosmetic_tag = KRM_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						JSN = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = JSN
+						autonomy_state = autonomy_ltd_subject
+					}
+					JSN = {
+						set_cosmetic_tag = JSN_LTD_GER_subject
+					}
+				}
+				if = {
+					limit = {
+						TOR = {
+							has_country_flag = LTD_subject
+						}
+					}
+					set_autonomy = {
+						target = TOR
+						autonomy_state = autonomy_ltd_subject
+					}
+					TOR = {
+						set_cosmetic_tag = TOR_LTD_GER_subject
+					}
+				}
+				50 = { add_core_of = LTD }
+				978 = { add_core_of = LTD }
+				42 = { add_core_of = LTD }
+				240 = { add_core_of = LTD }
+				52 = { add_core_of = LTD }
+				53 = { add_core_of = LTD }
+				54 = { add_core_of = LTD }
+				739 = { add_core_of = LTD }
+				55 = { add_core_of = LTD }
+				51 = { add_core_of = LTD }
+				57 = { add_core_of = LTD }
+				56 = { add_core_of = LTD }
+				60 = { add_core_of = LTD }
+				59 = { add_core_of = LTD }
+				233 = { add_core_of = LTD }
+				58 = { add_core_of = LTD }
+				909 = { add_core_of = LTD }
+				65 = { add_core_of = LTD }
+				64 = { add_core_of = LTD }
+				61 = { add_core_of = LTD }
+				62 = { add_core_of = LTD }
+				63 = { add_core_of = LTD }
+				68 = { add_core_of = LTD }
+				66 = { add_core_of = LTD }
+				67 = { add_core_of = LTD }
+				69 = { add_core_of = LTD }
+				972 = { add_core_of = LTD }
+				848 = { add_core_of = LTD }
+				153 = { add_core_of = LTD }
+				152 = { add_core_of = LTD }
+				4 = { add_core_of = LTD }
+				976 = { add_core_of = LTD }
+				975 = { add_core_of = LTD }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_form_the_transatlantic_reich = {
+
+		icon = GFX_decision_generic_coastal_fortification
+
+		highlight_states = { highlight_state_targets = {
+			state = 463
+			state = 739
+			state = 740
+			state = 864
+			state = 472
+			state = 683
+			state = 828
+			state = 466
+			state = 332
+			state = 471
+			state = 473
+			state = 470
+			state = 865
+			state = 469
+			state = 867
+			state = 467
+			state = 866
+			state = 682
+			state = 861
+			state = 860
+			state = 862
+			state = 863
+			state = 468
+			state = 276
+			state = 465
+			state = 464
+			state = 331
+			state = 875
+		}}
+
+		available = {
+			is_subject = no
+			has_government = fascism
+			has_completed_focus = LTD_transatlantic_reich
+			owns_state = 463
+			owns_state = 739
+			owns_state = 740
+			owns_state = 864
+			owns_state = 472
+			owns_state = 683
+			owns_state = 828
+			owns_state = 466
+			owns_state = 332
+			owns_state = 471
+			owns_state = 473
+			owns_state = 470
+			owns_state = 865
+			owns_state = 469
+			owns_state = 867
+			owns_state = 467
+			owns_state = 866
+			owns_state = 682
+			owns_state = 861
+			owns_state = 860
+			owns_state = 862
+			owns_state = 863
+			owns_state = 468
+			owns_state = 276
+			owns_state = 465
+			owns_state = 464
+			owns_state = 331
+			owns_state = 875
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+				NOT = {
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			country_event = { id = news_LTD.203 }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	LTD_decision_sauron_ruler_of_the_earth = {
+		icon = GFX_decision_generic_form_nation
+
+		available = {
+			has_completed_focus =  LTD_sauron_ruler_of_the_earth
+			has_country_leader = {
+				character = LTD_sauron
+				ruling_only = yes
+			}
+			has_government = fascism
+			is_subject = no
+			any_controlled_state = {
+				not = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+			has_country_leader = {
+				character = LTD_sauron
+				ruling_only = yes
+			}
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				add_core_of = ROOT
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LTD_colonial_ambitions = {
+	LTD_establish_LAM = {
+		icon = GFX_decision_generic_colonial_administration
+
+		available = {
+			has_completed_focus = LTD_american_colony
+			is_subject = no
+			NOT = { country_exists = LAM }
+			custom_trigger_tooltip = {
+				tooltip = LTD_america_requirement
+				any_controlled_state = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+				transfer_state_to = LAM
+				add_core_of = LAM
+			}
+			set_autonomy = {
+				target = LAM
+				autonomy_state = autonomy_imperial_colony
+			}
+			LAM = {
+				if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_GER
+								has_cosmetic_tag = LTD_GEREmpire
+								has_cosmetic_tag = LTD_GERUnified
+							}
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_FRA
+								has_cosmetic_tag = LTD_FRAEmpire
+							}
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_FRA_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_FRA_GER
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_FRA_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_SouthernGER
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_SouthernGER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_HRE
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_HRE_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_Transatlantic
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_Transatlantic_subject
+				}
+				else = {
+					set_cosmetic_tag = LAM_LTD_Empire_subject
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_expand_LAM = {
+		icon = GFX_decision_generic_belgian_colonial_helmet
+
+		available = {
+			has_completed_focus = LTD_american_colony
+			is_subject = no
+			country_exists = LAM
+			custom_trigger_tooltip = {
+				tooltip = LTD_america_requirement
+				any_controlled_state = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+			country_exists = LAM
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+					}
+				}
+				transfer_state_to = LAM
+				add_core_of = LAM
+			}
+			set_autonomy = {
+				target = LAM
+				autonomy_state = autonomy_imperial_colony
+			}
+			LAM = {
+				if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_GER
+								has_cosmetic_tag = LTD_GEREmpire
+								has_cosmetic_tag = LTD_GERUnified
+							}
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_FRA
+								has_cosmetic_tag = LTD_FRAEmpire
+							}
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_FRA_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_FRA_GER
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_FRA_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_SouthernGER
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_SouthernGER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_HRE
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_HRE_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_Transatlantic
+						}
+					}
+					set_cosmetic_tag = LAM_LTD_Transatlantic_subject
+				}
+				else = {
+					set_cosmetic_tag = LAM_LTD_Empire_subject
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_establish_LAF = {
+		icon = GFX_decision_generic_colonial_administration
+
+		available = {
+			has_completed_focus = LTD_african_colony
+			is_subject = no
+			NOT = { country_exists = LAF }
+			custom_trigger_tooltip = {
+				tooltip = LTD_africa_requirement
+				any_controlled_state = {
+					is_on_continent = africa
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = { is_on_continent = africa }
+				transfer_state_to = LAF
+				add_core_of = LAF
+			}
+			set_autonomy = {
+				target = LAF
+				autonomy_state = autonomy_imperial_colony
+			}
+			LAF = {
+				if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_GER
+								has_cosmetic_tag = LTD_GEREmpire
+								has_cosmetic_tag = LTD_GERUnified
+							}
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_FRA
+								has_cosmetic_tag = LTD_FRAEmpire
+							}
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_FRA_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_FRA_GER
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_FRA_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_SouthernGER
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_SouthernGER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_HRE
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_HRE_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_Transatlantic
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_Transatlantic_subject
+				}
+				else = {
+					set_cosmetic_tag = LAF_LTD_Empire_subject
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_expand_LAF = {
+		icon = GFX_decision_generic_belgian_colonial_helmet
+
+		available = {
+			has_completed_focus = LTD_african_colony
+			is_subject = no
+			country_exists = LAF
+			custom_trigger_tooltip = {
+				tooltip = LTD_africa_requirement
+				any_controlled_state = {
+					is_on_continent = africa
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+			country_exists = LAF
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = { is_on_continent = africa }
+				transfer_state_to = LAF
+				add_core_of = LAF
+			}
+			set_autonomy = {
+				target = LAF
+				autonomy_state = autonomy_imperial_colony
+			}
+			LAF = {
+				if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_GER
+								has_cosmetic_tag = LTD_GEREmpire
+								has_cosmetic_tag = LTD_GERUnified
+							}
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_FRA
+								has_cosmetic_tag = LTD_FRAEmpire
+							}
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_FRA_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_FRA_GER
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_FRA_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_SouthernGER
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_SouthernGER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_HRE
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_HRE_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_Transatlantic
+						}
+					}
+					set_cosmetic_tag = LAF_LTD_Transatlantic_subject
+				}
+				else = {
+					set_cosmetic_tag = LAF_LTD_Empire_subject
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_establish_LAS = {
+		icon = GFX_decision_generic_colonial_administration
+
+		available = {
+			has_completed_focus = LTD_asian_colony
+			is_subject = no
+			NOT = { country_exists = LAS }
+			custom_trigger_tooltip = {
+				tooltip = LTD_asia_requirement
+				any_controlled_state = {
+					is_on_continent = asia
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = { is_on_continent = asia }
+				transfer_state_to = LAS
+				add_core_of = LAS
+			}
+			set_autonomy = {
+				target = LAS
+				autonomy_state = autonomy_imperial_colony
+			}
+			LAS = {
+				if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_GER
+								has_cosmetic_tag = LTD_GEREmpire
+								has_cosmetic_tag = LTD_GERUnified
+							}
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_FRA
+								has_cosmetic_tag = LTD_FRAEmpire
+							}
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_FRA_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_FRA_GER
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_FRA_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_SouthernGER
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_SouthernGER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_HRE
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_HRE_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_Transatlantic
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_Transatlantic_subject
+				}
+				else = {
+					set_cosmetic_tag = LAS_LTD_Empire_subject
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_expand_LAS = {
+		icon = GFX_decision_generic_belgian_colonial_helmet
+
+		available = {
+			has_completed_focus = LTD_asian_colony
+			is_subject = no
+			country_exists = LAS
+			custom_trigger_tooltip = {
+				tooltip = LTD_asia_requirement
+				any_controlled_state = {
+					is_on_continent = asia
+				}
+			}
+		}
+		
+		fire_only_once = no
+
+		visible = {
+			country_exists = LAS
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			every_controlled_state = {
+				limit = { is_on_continent = asia }
+				transfer_state_to = LAS
+				add_core_of = LAS
+			}
+			set_autonomy = {
+				target = LAS
+				autonomy_state = autonomy_imperial_colony
+			}
+			LAS = {
+				if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_GER
+								has_cosmetic_tag = LTD_GEREmpire
+								has_cosmetic_tag = LTD_GERUnified
+							}
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							OR = {
+								has_cosmetic_tag = LTD_FRA
+								has_cosmetic_tag = LTD_FRAEmpire
+							}
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_FRA_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_FRA_GER
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_FRA_GER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_SouthernGER
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_SouthernGER_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_HRE
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_HRE_subject
+				}
+				else_if = {
+					limit = {
+						LTD = {
+							has_cosmetic_tag = LTD_Transatlantic
+						}
+					}
+					set_cosmetic_tag = LAS_LTD_Transatlantic_subject
+				}
+				else = {
+					set_cosmetic_tag = LAS_LTD_Empire_subject
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+LTD_puppet_management = {
+	LTD_decision_occupy_france = {
+
+		icon = GFX_decision_generic_form_nation
+
+		highlight_states = { highlight_state_targets = {
+			state = 17
+			state = 18
+			state = 29
+			state = 785
+			state = 15
+			state = 16
+			state = 27
+			state = 24
+			state = 30
+			state = 14
+			state = 23
+			state = 19
+			state = 26
+			state = 33
+			state = 25
+			state = 806
+			state = 31
+			state = 22
+			state = 20
+			state = 32
+			state = 21
+			state = 851
+			state = 735
+			state = 28
+		}}
+
+		available = {
+			has_completed_focus = LTD_the_paris_accords
+			NOT = {
+				OR = {
+					has_completed_focus = LTD_form_the_french_empire
+					custom_trigger_tooltip = {
+						tooltip = LTD_is_french_requirement
+						OR = {
+							has_country_flag = FrenchEmpire
+							tag = FRA
+						}
+					}
+				}
+			}
+			is_subject = no
+			OR = {
+				has_subject = FRA
+				AND = {
+					17 = { is_controlled_by_ROOT_or_ally = yes }
+					18 = { is_controlled_by_ROOT_or_ally = yes }
+					29 = { is_controlled_by_ROOT_or_ally = yes }
+					785 = { is_controlled_by_ROOT_or_ally = yes }
+					15 = { is_controlled_by_ROOT_or_ally = yes }
+					16 = { is_controlled_by_ROOT_or_ally = yes }
+					27 = { is_controlled_by_ROOT_or_ally = yes }
+					24 = { is_controlled_by_ROOT_or_ally = yes }
+					30 = { is_controlled_by_ROOT_or_ally = yes }
+					14 = { is_controlled_by_ROOT_or_ally = yes }
+					23 = { is_controlled_by_ROOT_or_ally = yes }
+					19 = { is_controlled_by_ROOT_or_ally = yes }
+					26 = { is_controlled_by_ROOT_or_ally = yes }
+					33 = { is_controlled_by_ROOT_or_ally = yes }
+					25 = { is_controlled_by_ROOT_or_ally = yes }
+					806 = { is_controlled_by_ROOT_or_ally = yes }
+					31 = { is_controlled_by_ROOT_or_ally = yes }
+					22 = { is_controlled_by_ROOT_or_ally = yes }
+					20 = { is_controlled_by_ROOT_or_ally = yes }
+					32 = { is_controlled_by_ROOT_or_ally = yes }
+					21 = { is_controlled_by_ROOT_or_ally = yes }
+					851 = { is_controlled_by_ROOT_or_ally = yes }
+					735 = { is_controlled_by_ROOT_or_ally = yes }
+					28 = { is_controlled_by_ROOT_or_ally = yes }
+				}
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 10
+
+		complete_effect = {
+			country_event = { id = news_LTD.51 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_puppet_LKR = {
+		icon = GFX_decision_eng_trade_unions_support
+		targets = { LKR }
+		available = { has_completed_focus = LTD_puppeteer is_subject = no }
+		fire_only_once = yes
+		visible = { ROOT = { is_ai = no }}		
+		cost = 10
+		complete_effect = { LKR = { country_event = { id = news_LKR.911 }}}
+		ai_will_do = { factor = 0 }
+	}
+	LTD_decision_puppet_LEO = {
+		icon = GFX_decision_eng_trade_unions_support
+		targets = { LEO }
+		available = { has_completed_focus = LTD_puppeteer is_subject = no }
+		fire_only_once = yes
+		visible = { ROOT = { is_ai = no }}		
+		cost = 10
+		complete_effect = { LEO = { country_event = { id = news_LEO.911 }}}
+		ai_will_do = { factor = 0 }
+	}
+	LTD_decision_puppet_NIS = {
+		icon = GFX_decision_eng_trade_unions_support
+		targets = { NIS }
+		available = { has_completed_focus = LTD_puppeteer is_subject = no }
+		fire_only_once = yes
+		visible = { ROOT = { is_ai = no }}		
+		cost = 10
+		complete_effect = { NIS = { country_event = { id = news_NIS.911 }}}
+		ai_will_do = { factor = 0 }
+	}
+	LTD_decision_puppet_DUN = {
+		icon = GFX_decision_eng_trade_unions_support
+		targets = { DUN }
+		available = { has_completed_focus = LTD_puppeteer is_subject = no }
+		fire_only_once = yes
+		visible = { ROOT = { is_ai = no }}		
+		cost = 10
+		complete_effect = { DUN = { country_event = { id = news_DUN.911 }}}
+		ai_will_do = { factor = 0 }
+	}
+	LTD_decision_puppet_KRM = {
+		icon = GFX_decision_eng_trade_unions_support
+		targets = { KRM }
+		available = { has_completed_focus = LTD_puppeteer is_subject = no }
+		fire_only_once = yes
+		visible = { ROOT = { is_ai = no }}		
+		cost = 10
+		complete_effect = { KRM = { country_event = { id = news_KRM.911 }}}
+		ai_will_do = { factor = 0 }
+	}
+	LTD_decision_puppet_JSN = {
+		icon = GFX_decision_eng_trade_unions_support
+		targets = { JSN }
+		available = { has_completed_focus = LTD_puppeteer is_subject = no }
+		fire_only_once = yes
+		visible = { ROOT = { is_ai = no }}		
+		cost = 10
+		complete_effect = { JSN = { country_event = { id = news_JSN.911 }}}
+		ai_will_do = { factor = 0 }
+	}
+	LTD_brand_american_puppet = {
+
+		icon = GFX_decision_eng_trade_unions_support
+		
+		targets = {
+			USA
+		}
+
+		available = {
+			has_completed_focus = LTD_puppeteer
+			is_subject = no
+			OR = {
+				has_subject = USA
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 10
+
+		complete_effect = {
+			USA = {
+				set_cosmetic_tag = USA_LTD				
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_annex_german_puppet = {
+
+		icon = generic_civil_support
+		
+		targets = {
+			GER
+		}
+
+		available = {
+			has_completed_focus = LTD_puppeteer
+			is_subject = no
+			OR = {
+				has_subject = GER
+				has_subject = WGR
+				has_subject = DDR
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 10
+
+		complete_effect = {
+			# hidden_effect = {
+				annex_country = {
+					target = GER
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = WGR
+					transfer_troops = yes
+				}
+				annex_country = {
+					target = DDR
+					transfer_troops = yes
+				}
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_annex_french_puppet = {
+
+		icon = generic_civil_support
+		
+		targets = {
+			FRA
+		}
+
+		available = {
+			has_completed_focus = LTD_puppeteer
+			is_subject = no
+			OR = {
+				has_subject = FRA
+			}
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 10
+
+		complete_effect = {
+			# hidden_effect = {
+				annex_country = {
+					target = FRA
+					transfer_troops = yes
+				}
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_annex_spanish_puppet = {
+
+		icon = generic_civil_support
+		
+		targets = {
+			SPR
+		}
+
+		available = {
+			has_completed_focus = LTD_puppeteer
+			is_subject = no
+			has_subject = SPR
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 10
+
+		complete_effect = {
+			# hidden_effect = {
+				annex_country = {
+					target = SPR
+					transfer_troops = yes
+				}
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LTD_decision_annex_italian_puppet = {
+
+		icon = generic_civil_support
+		
+		targets = {
+			ITA
+		}
+
+		available = {
+			has_completed_focus = LTD_puppeteer
+			is_subject = no
+			has_subject = ITA
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 10
+
+		complete_effect = {
+			# hidden_effect = {
+				annex_country = {
+					target = ITA
+					transfer_troops = yes
+				}
+			# }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

@@ -1,0 +1,4969 @@
+﻿focus_tree = {
+	id = DUN_chiss_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = DUN
+		}
+	}
+	
+	shared_focus = DRACHENPAKT_alliance
+
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = DUN_industrial_effort
+	}
+
+	inlay_window = {
+		id = drachenpakt_alliance_inlay_window
+		position = { x = 4150 y = 50 }
+	}
+
+alternate_icon_set = DUN_FOCUS_FILTER_HISTORICAL
+
+	shortcut = {
+		name = DUN_political_tree_shortcut
+		target = DUN_emergency_landing_on_terra
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = DUN_alliance_shortcut
+		target = DRACHENPAKT_alliance
+		scroll_wheel_factor = 1.0
+	}
+
+	focus = {
+		id = DUN_path_to_freedom
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DUN_demand_self_governance
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = DUN_path_to_freedom }
+		x = 0
+		y = 2
+		relative_position_id = DUN_path_to_freedom
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+			OVERLORD = {
+				end_puppet = ROOT
+			}
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	focus = {
+		id = DUN_demand_core_territories
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = DUN_demand_self_governance }
+		x = 0
+		y = 2
+		relative_position_id = DUN_demand_self_governance
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			transfer_state = 103
+			transfer_state = 163
+			transfer_state = 804
+			transfer_state = 104
+		}
+	}
+
+	focus = {
+		id = DUN_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = DUN_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = DUN_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = DUN_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = DUN_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = DUN_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = DUN_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = DUN_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = DUN_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = DUN_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = DUN_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = DUN_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = DUN_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = DUN_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = DUN_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = DUN_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = DUN_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = DUN_equipment_effort_3 }
+		prerequisite = { focus = DUN_doctrine_effort_2 }
+		prerequisite = { focus = DUN_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = DUN_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 5
+		y = 0
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = DUN_aviation_effort }
+		mutually_exclusive = { focus = DUN_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = DUN_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = DUN_aviation_effort }
+		mutually_exclusive = { focus = DUN_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = DUN_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = DUN_bomber_focus focus = DUN_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = DUN_bomber_focus
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = DUN_aviation_effort_2 }
+		prerequisite = { focus = DUN_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = DUN_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = DUN_aviation_effort_2 }
+		prerequisite = { focus = DUN_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = DUN_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = DUN_aviation_effort_2 }
+		prerequisite = { focus = DUN_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = DUN_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = DUN_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = DUN_naval_effort }
+		mutually_exclusive = { focus = DUN_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = DUN_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = DUN_naval_effort }
+		mutually_exclusive = { focus = DUN_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = DUN_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = fleet_in_being_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = DUN_flexible_navy focus = large_navy }
+		x = 0
+		y = 1
+		relative_position_id = DUN_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = DUN_large_navy focus = flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = DUN_large_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = DUN_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = DUN_submarine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = DUN_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = DUN_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_pride_of_our_fleet
+		icon = GFX_focus_DUN_executor
+		x = -1
+		y = 1
+
+		cost = 8.58
+		prerequisite = { focus = DUN_capital_ships_effort }
+		relative_position_id = DUN_capital_ships_effort
+		
+
+		ai_will_do = {
+			factor = 10		
+		}
+
+		available = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				has_tech = improved_ship_hull_heavy
+			}
+			else = {
+				has_tech = basic_battlecruiser
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {  }
+
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				
+					create_equipment_variant = {
+						name = "Imperial I-class Star Destroyer"
+						type = ship_hull_heavy_3
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_heavy_battery_4
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+							fixed_ship_radar_slot = ship_radar_2
+							fixed_ship_engine_slot = heavy_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_3
+							fixed_ship_armor_slot = ship_armor_bc_3
+							front_1_custom_slot = ship_heavy_battery_4
+							mid_1_custom_slot = ship_anti_air_3
+							mid_2_custom_slot = dp_ship_secondaries_4
+							mid_3_custom_slot = ship_heavy_battery_4
+							rear_1_custom_slot = ship_heavy_battery_4
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_heavy_3
+							creator = DUN
+							version_name = "Imperial I-class Star Destroyer"
+						}
+						requested_factories = 5
+						progress = 0.99
+					}
+				}
+			
+			else = { #NON MTG
+				
+					create_equipment_variant = {
+						name = "Imperial I-class Star Destroyer"
+						type = battle_cruiser_2
+						parent_version = 0
+						modules = {
+							fixed_ship_battery_slot = ship_heavy_battery_4
+							fixed_ship_anti_air_slot = ship_anti_air_3
+							fixed_ship_fire_control_system_slot = ship_fire_control_system_3
+							fixed_ship_radar_slot = ship_radar_2
+							fixed_ship_engine_slot = heavy_ship_engine_4
+							fixed_ship_secondaries_slot = dp_ship_secondaries_3
+							fixed_ship_armor_slot = ship_armor_bc_3
+							front_1_custom_slot = ship_heavy_battery_4
+							mid_1_custom_slot = ship_anti_air_3
+							mid_2_custom_slot = dp_ship_secondaries_4
+							mid_3_custom_slot = ship_heavy_battery_4
+							rear_1_custom_slot = ship_heavy_battery_4
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = battle_cruiser_2
+							creator  DUN
+							version_name = "Imperial I-class Star Destroyer"
+						}
+						requested_factories = 5
+						progress = 0.99
+					}
+				}
+				
+			custom_effect_tooltip = SWE_nordljus_tt_2
+			add_ideas = SWE_pride_of_the_baltic
+		}
+	}
+
+	focus = {
+		id = DUN_industrial_effort
+		icon = GFX_goal_generic_production
+		x = 13
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = DUN_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = DUN_industrial_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DUN_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = DUN_industrial_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = DUN_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = DUN_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DUN_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = DUN_production_effort
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = DUN_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DUN_construction_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_experimental_shipyard
+		icon = GFX_focus_GER_wunderwaffe
+		prerequisite = { focus = DUN_infrastructure_effort }
+		x = -1
+		y = 1
+		relative_position_id = DUN_infrastructure_effort
+		cost = 8.58
+		available_if_capitulated = no
+		available = {
+			is_subject = no
+			owns_state = 163
+			163 = { is_demilitarized_zone = no }
+		}
+ 
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 0.25
+			}
+			163 = {
+				add_building_construction = {
+					type = naval_facility
+					level = 1
+					instant_build = yes
+					province = 3943
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DUN_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DUN_production_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = DUN_infrastructure_effort }
+		x = 1
+		y = 1
+		relative_position_id = DUN_infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = DUN_infrastructure_effort }
+		x = 3
+		y = 1
+		relative_position_id = DUN_infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = DUN_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = DUN_infrastructure_effort_2
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = DUN_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DUN_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = DUN_extra_tech_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = DUN_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = DUN_extra_tech_slot
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = DUN_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = DUN_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = DUN_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_economic_reforms
+		icon = GFX_focus_generic_economic_reforms
+		x = 10
+		y = 8
+		cost = 8.58
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INFLATION }
+		
+		available_if_capitulated = yes
+
+		available = {
+			has_idea = moderate_inflation
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = moderate_inflation
+				add_idea = low_inflation
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = DUN_devalue_the_dinar
+		icon = GFX_focus_KRM_devalue_the_peso
+		prerequisite = { focus = DUN_economic_reforms }
+		relative_position_id = DUN_economic_reforms
+		x = 0
+		y = 1
+		cost = 8.58
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INFLATION }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = low_inflation
+				add_idea = economic_stagnation
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = DUN_fund_universities
+		icon = GFX_focus_generic_literacy_university
+		x = 12
+		y = 8
+		cost = 8.58
+		search_filters = { FOCUS_FILTER_LITERACY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = moderate_inflation
+					has_idea = heavy_inflation
+					has_idea = hyperinflation
+					has_idea = economic_collapse
+				}
+			}
+			has_stability > 0.8
+			num_of_factories > 50
+		}
+
+		ai_will_do = {
+			factor = 50
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = high_literacy_rate
+				add_idea = excellent_literacy_rate
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_emergency_landing_on_terra
+		icon = GFX_big_focus_chiss
+		text_icon = TLOTD_focus_style
+		x = 25
+		y = 0
+		cost = 1
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = DUN_will_of_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = DUN_emergency_landing_on_terra }
+		mutually_exclusive = { focus = DUN_rose_revolution }
+		mutually_exclusive = { focus = DUN_liberty_ethos }
+		mutually_exclusive = { focus = DUN_fascist_rise_up }
+		mutually_exclusive = { focus = DUN_divine_path }
+		relative_position_id = DUN_emergency_landing_on_terra
+		available = {
+			monarchism > 0.20
+			is_subject = no
+		}
+		x = 0
+		y = 1
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = DUN_fight_for_the_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = DUN_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM }
+		x = -1
+		y = 1
+		relative_position_id = DUN_will_of_the_king
+
+		available = {
+		}
+
+		cost = 4.29
+
+		completion_reward = {
+			add_ideas = fight_for_the_king
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_create_trust_in_the_crown
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = DUN_fight_for_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM }
+		x = 0
+		y = 1
+		relative_position_id = DUN_fight_for_the_king
+
+		available = {
+		}
+
+		cost = 4.29
+
+		completion_reward = {
+			add_ideas = enthusiasm_for_the_crown
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_royal_high_command
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = DUN_create_trust_in_the_crown }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM }
+		x = 0
+		y = 1
+		relative_position_id = DUN_create_trust_in_the_crown
+
+		available = {
+		}
+
+		cost = 4.29
+
+		completion_reward = {
+			add_ideas = royal_high_command
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_fascist_rise_up
+		icon = GFX_focus_generic_fascist_uprising
+		prerequisite = { focus = DUN_emergency_landing_on_terra }
+		mutually_exclusive = { focus = DUN_rose_revolution }
+		mutually_exclusive = { focus = DUN_liberty_ethos }
+		mutually_exclusive = { focus = DUN_will_of_the_king }
+		mutually_exclusive = { focus = DUN_divine_path }
+		available = {
+			fascism > 0.20
+			is_subject = no
+		}
+		x = 5
+		y = 1
+		relative_position_id = DUN_emergency_landing_on_terra
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = fascism }
+				}
+			}
+			modifier = {
+				factor = 10
+				has_idea = SOV_russian_political_influence
+			}
+		}
+
+		completion_reward = {
+			country_event = { id = news_DUN.31 }
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = DUN_adolf_chissler_focus
+		icon = GFX_focus_generic_nazism
+		prerequisite = { focus = DUN_fascist_rise_up }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM }
+		x = -1
+		y = 1
+		relative_position_id = DUN_fascist_rise_up
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN.32 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = DUN_croatian_anschluss
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = DUN_fascist_rise_up }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_fascist_rise_up
+
+		available = {
+			is_subject = no
+			OR = {
+				YUG = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+				AUS = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+			}
+		}
+		bypass = {
+			109 = {
+				owner = {
+					tag = DUN
+				}
+			}
+			45 = {
+				owner = {
+					tag = DUN
+				}
+			}
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					109 = {
+						owner = {
+							tag = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							109 = {
+								has_state_flag = treaty_of_zagreb_completed
+							}
+						}
+					}
+					country_event = { id = news_p_o_t.5 }
+					ITA = { country_event = { id = news_p_o_t.5 } }
+					736 = {
+						OWNER = {
+							country_event = { id = news_p_o_t.5 }
+							155 = {
+								OWNER = {
+									if = {
+										limit = {
+											NOT = {
+												tag = PREV.PREV
+											}
+										}
+										country_event = { id = news_p_o_t.5 }
+										82 = {
+											OWNER = {
+												if = {
+													limit = {
+														NOT = {
+															tag = PREV.PREV
+														}
+													}
+													country_event = { id = news_p_o_t.5 }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			} else = {
+				country_event = { id = news_DUN.1 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_yugoslavian_civil_war_fascist
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = DUN_croatian_anschluss }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 2
+		relative_position_id = DUN_croatian_anschluss
+
+		available = {
+			is_subject = no
+			YUG = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN.2 }
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_war_with_remaining_yugoslavia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = DUN_yugoslavian_civil_war_fascist }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_yugoslavian_civil_war_fascist
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+				expire = 0
+				generator = { 106 }
+			}
+			YUG = {
+				leave_faction = yes
+			}
+			ITA = {
+				end_puppet = YUG
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_crush_albania
+		icon = GFX_focus_hol_war_on_pacifism
+		prerequisite = { focus = DUN_yugoslavian_civil_war_fascist }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_yugoslavian_civil_war_fascist
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ALB
+				expire = 0
+				generator = { 44 }
+			}
+			ALB = {
+				leave_faction = yes
+			}
+			ITA = {
+				end_puppet = ALB
+				diplomatic_relation = {
+					country = ALB
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ALB
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = ALB
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_attack_on_bulgaria
+		icon = GFX_focus_generic_attack_bulgaria
+		prerequisite = { focus = DUN_towards_arabia }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_towards_arabia
+
+		available = {
+			is_subject = no
+			BUL = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BUL
+				expire = 0
+				generator = { 48 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_attack_greece
+		icon = GFX_focus_generic_attack_greece
+		prerequisite = { focus = DUN_towards_arabia }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_towards_arabia
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GRE
+				expire = 0
+				generator = { 185 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_expand_the_empire
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_attack_greece }
+		prerequisite = { focus = DUN_attack_on_bulgaria }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 1
+		relative_position_id = DUN_attack_greece
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_expand_the_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_attack_hungary
+		icon = GFX_focus_generic_attack_hungary
+		prerequisite = { focus = DUN_expand_the_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_expand_the_empire
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = HUN
+				expire = 0
+				generator = { 43 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_attack_turkey
+		icon = GFX_focus_generic_attack_turkey
+		prerequisite = { focus = DUN_expand_the_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_expand_the_empire
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = TUR
+				expire = 0
+				generator = { 797 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = TUR
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_form_the_first_galactic_empire
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_attack_hungary }
+		prerequisite = { focus = DUN_attack_turkey }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 1
+		relative_position_id = DUN_attack_hungary
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_the_first_galactic_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_syrian_incursion
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = DUN_form_the_first_galactic_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_form_the_first_galactic_empire
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			FRA = {
+				release = SYR
+				release = LEB
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_middle_eastern_wargoals
+		icon = GFX_focus_attack_britain
+		prerequisite = { focus = DUN_form_the_first_galactic_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_form_the_first_galactic_empire
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			ENG = {
+				release = JOR
+				release = PAL
+				release = KUW
+				release = QAT
+				release = UAE
+				release = YEM
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_form_the_eternal_galactic_empire
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_syrian_incursion }
+		prerequisite = { focus = DUN_middle_eastern_wargoals }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 1
+		relative_position_id = DUN_syrian_incursion
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_the_eternal_galactic_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_rose_revolution
+		icon = GFX_focus_SOV_support_spanish_poum
+		prerequisite = { focus = DUN_emergency_landing_on_terra }
+		mutually_exclusive = { focus = DUN_liberty_ethos }
+		mutually_exclusive = { focus = DUN_will_of_the_king }
+		mutually_exclusive = { focus = DUN_fascist_rise_up }
+		mutually_exclusive = { focus = DUN_divine_path }
+		available = {
+			communism > 0.20
+			is_subject = no
+		}
+		x = -8
+		y = 1
+		relative_position_id = DUN_emergency_landing_on_terra
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}			
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		completion_reward = {
+			country_event = { id = news_DUN.61 }
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}	
+
+	focus = {
+		id = DUN_croatian_comrades
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = DUN_rose_revolution }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM }
+		x = 1
+		y = 1
+		relative_position_id = DUN_rose_revolution
+
+		available = {
+			is_subject = no
+			OR = {
+				YUG = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+				AUS = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+			}
+		}
+		bypass = {
+			OR = {
+				AND = {
+					109 = { is_core_of = DUN }
+					45 = { is_core_of = DUN }
+				}
+				AND = {
+					109 = {
+						owner = {
+							tag = DUN
+						}
+					}
+					45 = {
+						owner = {
+							tag = DUN
+						}
+					}
+				}
+			}
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			109 = { add_core_of = DUN }
+			45 = { add_core_of = DUN }
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_unify_croatia
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = DUN_croatian_comrades }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = DUN_croatian_comrades
+
+		available = {
+			is_subject = no
+			OR = {
+				YUG = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+				AUS = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+			}
+		}
+		bypass = {
+			109 = {
+				owner = {
+					tag = DUN
+				}
+			}
+			45 = {
+				owner = {
+					tag = DUN
+				}
+			}
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN.1 }
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_venice_war
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = DUN_unify_croatia }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = DUN_unify_croatia
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ALX
+				expire = 0
+				generator = { 160 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ALX
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = ALX
+					relation = guarantee
+					active = no
+				}
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = ALX
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_italian_ambitions
+		icon = GFX_focus_ITA_cavalry_charge
+		prerequisite = { focus = DUN_venice_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = DUN_venice_war
+
+		available = {
+			is_subject = no
+			owns_state = 160
+			owns_state = 850
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN.64 }
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_legitimize_government
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = DUN_rose_revolution }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM }
+		x = -1
+		y = 1
+		relative_position_id = DUN_rose_revolution
+
+		available = {
+			is_subject = no
+			has_civil_war = no
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN.62 }
+			add_timed_idea = { idea = collectivist_ethos_focus days = 1095 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_liberty_ethos
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = DUN_emergency_landing_on_terra }
+		mutually_exclusive = { focus = DUN_rose_revolution }
+		mutually_exclusive = { focus = DUN_will_of_the_king }
+		mutually_exclusive = { focus = DUN_fascist_rise_up }
+		mutually_exclusive = { focus = DUN_divine_path }
+		available = {
+			democratic > 0.20
+			is_subject = no
+		}
+		x = -4
+		y = 1
+		relative_position_id = DUN_emergency_landing_on_terra
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC }
+
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+
+	focus = {
+		id = DUN_militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = DUN_adolf_chissler_focus }
+		x = 0
+		y = 1
+		relative_position_id = DUN_adolf_chissler_focus
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = DUN_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = DUN_legitimize_government }
+		x = 0
+		y = 4
+		relative_position_id = DUN_legitimize_government
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = DUN_neutrality_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = DUN_liberty_ethos }
+		mutually_exclusive = { focus = DUN_interventionism_focus }
+		x = -1
+		y = 1
+		relative_position_id = DUN_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = AUS
+			}
+			modifier = {
+				factor = 0
+				tag = SAU
+				is_in_faction_with = SOV
+				SOV = { has_government = communism }
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = DUN_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = DUN_liberty_ethos }
+		mutually_exclusive = { focus = DUN_neutrality_focus }
+		x = 1
+		y = 1
+		relative_position_id = DUN_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = neutrality_idea
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = DUN_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = DUN_militarism }
+		x = -1
+		y = 1
+		relative_position_id = DUN_militarism
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_Y_FASCISM }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = DUN_neutrality_focus }
+		x = 0
+		y = 1
+		relative_position_id = DUN_neutrality_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = DUN_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = DUN_interventionism_focus }
+		x = 0
+		y = 1
+		relative_position_id = DUN_interventionism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = DUN_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = DUN_military_youth }
+		x = 0
+		y = 1
+		relative_position_id = DUN_military_youth
+		cost = 4.29
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+
+	focus = {
+		id = DUN_form_the_empire
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = DUN_war_with_remaining_yugoslavia }
+		prerequisite = { focus = DUN_crush_albania }
+		prerequisite = { focus = DUN_paramilitarism }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 0
+		y = 1
+		relative_position_id = DUN_war_with_remaining_yugoslavia
+
+		available = {
+			is_subject = no
+			is_power_balance_in_range = {
+				id = DUN_ethnic_tensions_balance
+				range = DUN_united_chiss_max_range
+			}
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_power_balance = {
+				id = DUN_ethnic_tensions_balance
+			}
+			unlock_decision_tooltip = DUN_decision_unite_the_empire
+			add_ideas = established_dictatorship
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_rise_of_the_witch_king
+		icon = GFX_focus_DUN_lotr_witch_king
+		prerequisite = { focus = DUN_form_the_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_LOTR }
+		mutually_exclusive = { focus = DUN_the_dark_lord_rises }
+		x = -1
+		y = 1
+		relative_position_id = DUN_form_the_empire
+
+		available = {
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader = {
+							character = DUN_witch_king_of_angmar
+							ruling_only = yes
+						}
+					}
+				}
+				country_event = { id = news_DUN_lotr.101 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_the_dark_lord_rises
+		icon = GFX_focus_DUN_executor
+		prerequisite = { focus = DUN_form_the_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_STAR_WARS }
+		mutually_exclusive = { focus = DUN_rise_of_the_witch_king }
+		x = 1
+		y = 1
+		relative_position_id = DUN_form_the_empire
+
+		available = {
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_country_leader = {
+							character = DUN_witch_king_of_angmar
+							ruling_only = yes
+						}
+					}
+				}
+				country_event = { id = news_DUN.33 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_towards_arabia
+		icon = GFX_focus_ETH_an_arabic_base
+		prerequisite = { focus = DUN_rise_of_the_witch_king focus = DUN_the_dark_lord_rises }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM }
+		mutually_exclusive = { focus = DUN_towards_the_urals }
+		x = -1
+		y = 1
+		relative_position_id = DUN_rise_of_the_witch_king
+
+		available = {
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_towards_the_urals
+		icon = GFX_focus_SOV_third_rome
+		prerequisite = { focus = DUN_rise_of_the_witch_king focus = DUN_the_dark_lord_rises }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM }
+		mutually_exclusive = { focus = DUN_towards_arabia }
+		x = 1
+		y = 1
+		relative_position_id = DUN_the_dark_lord_rises
+
+		available = {
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_attack_hungary_2
+		icon = GFX_focus_generic_attack_hungary
+		prerequisite = { focus = DUN_towards_the_urals }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_towards_the_urals
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = HUN
+				expire = 0
+				generator = { 43 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_attack_speedbump
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = DUN_towards_the_urals }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_towards_the_urals
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+                limit = {
+                    NOT = {
+                        owns_state = 71
+                    }
+                }
+                71 = {
+                    OWNER = {
+                        ROOT = {
+                            create_wargoal = {
+                                target = PREV
+                                expire = 0
+                                type = take_state_focus
+                                generator = { 71 }
+                            }
+                        }
+						ITA = {
+							diplomatic_relation = {
+								country = PREV
+								relation = guarantee
+								active = no
+							}
+						}
+						FRA = {
+							diplomatic_relation = {
+								country = PREV
+								relation = guarantee
+								active = no
+							}
+						}
+						ENG = {
+							diplomatic_relation = {
+								country = PREV
+								relation = guarantee
+								active = no
+							}
+						}
+                    }
+                }
+            }
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_expand_the_empire_2
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_attack_hungary_2 }
+		prerequisite = { focus = DUN_attack_speedbump }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 1
+		relative_position_id = DUN_attack_hungary_2
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_expand_the_empire_2
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_attack_poland
+		icon = GFX_focus_POL_prepare_for_the_inevitable
+		prerequisite = { focus = DUN_expand_the_empire_2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_expand_the_empire_2
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = POL
+				expire = 0
+				generator = { 10 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = POL
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = POL
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = POL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_attack_romania
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = DUN_expand_the_empire_2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_expand_the_empire_2
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = POL
+				expire = 0
+				generator = { 46 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_form_the_first_galactic_empire_2
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_attack_poland }
+		prerequisite = { focus = DUN_attack_romania }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 1
+		relative_position_id = DUN_attack_poland
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_the_first_galactic_empire_2
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = DUN_attack_baltics
+		icon = GFX_focus_SOV_baltic_security
+		prerequisite = { focus = DUN_form_the_first_galactic_empire_2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_form_the_first_galactic_empire_2
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = LIT
+				expire = 0
+				generator = { 11 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LAT
+				expire = 0
+				generator = { 808 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = EST
+				expire = 0
+				generator = { 812 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LEO
+				expire = 0
+				generator = { 784 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_attack_soviet_union
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = DUN_form_the_first_galactic_empire_2 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 1
+		relative_position_id = DUN_form_the_first_galactic_empire_2
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				expire = 0
+				generator = { 219 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_form_the_eternal_galactic_empire_2
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_attack_baltics }
+		prerequisite = { focus = DUN_attack_soviet_union }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_Y_FASCISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 1
+		relative_position_id = DUN_attack_baltics
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_the_eternal_galactic_empire_2
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	focus = {
+		id = DUN_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = DUN_political_correctness }
+		x = 0
+		y = 3
+		relative_position_id = DUN_political_correctness
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = DUN_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = DUN_volunteer_corps }
+		x = -1
+		y = 2
+		relative_position_id = DUN_volunteer_corps
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = DUN_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = DUN_foreign_expeditions focus = DUN_deterrence }
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		x = -1
+		y = 9
+		relative_position_id = DUN_foreign_expeditions
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_V_DEMOCRATIC }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = DUN_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = DUN_indoctrination_focus }
+		available = {
+		}
+		x = 0
+		y = 5
+		relative_position_id = DUN_indoctrination_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_U_COMMUNISM }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = DUN_croatian_ultimatum
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = DUN_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 3
+		relative_position_id = DUN_will_of_the_king
+
+		available = {
+			is_subject = no
+			OR = {
+				YUG = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+				AUS = { 
+					is_subject = no
+					owns_state = 109
+					owns_state = 45
+				}
+			}
+		}
+		bypass = {
+			109 = {
+				owner = {
+					tag = DUN
+				}
+			}
+			45 = {
+				owner = {
+					tag = DUN
+				}
+			}
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					109 = {
+						owner = {
+							tag = YUG
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							109 = {
+								has_state_flag = treaty_of_zagreb_completed
+							}
+						}
+					}
+					country_event = { id = news_p_o_t.5 }
+					ITA = { country_event = { id = news_p_o_t.5 } }
+					736 = {
+						OWNER = {
+							country_event = { id = news_p_o_t.5 }
+							155 = {
+								OWNER = {
+									if = {
+										limit = {
+											NOT = {
+												tag = PREV.PREV
+											}
+										}
+										country_event = { id = news_p_o_t.5 }
+										82 = {
+											OWNER = {
+												if = {
+													limit = {
+														NOT = {
+															tag = PREV.PREV
+														}
+													}
+													country_event = { id = news_p_o_t.5 }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			} else = {
+				country_event = { id = news_DUN.1 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_war_with_bulgaria
+		icon = GFX_focus_generic_attack_bulgaria
+		prerequisite = { focus = DUN_royal_high_command focus = DUN_croatian_ultimatum }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = DUN_croatian_ultimatum
+
+		available = {
+			is_subject = no
+			BUL = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BUL
+				expire = 0
+				generator = { 48 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = BUL
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_war_with_montenegro
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = DUN_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 2
+		y = 1
+		relative_position_id = DUN_will_of_the_king
+
+		available = {
+			is_subject = no
+			MNT = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = MNT
+				expire = 0
+				generator = { 105 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = MNT
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = MNT
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_yugoslavian_civil_war
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = DUN_royal_high_command focus = DUN_croatian_ultimatum }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 1
+		relative_position_id = DUN_royal_high_command
+
+		available = {
+			is_subject = no
+			YUG = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN.2 }
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_war_with_hungary
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = DUN_yugoslavian_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = -1
+		y = 2
+		relative_position_id = DUN_yugoslavian_civil_war
+
+		available = {
+			is_subject = no
+			HUN = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = HUN
+				expire = 0
+				generator = { 155 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = HUN
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+	focus = {
+		id = DUN_war_with_romania
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = DUN_royal_high_command focus = DUN_croatian_ultimatum }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 2
+		relative_position_id = DUN_croatian_ultimatum
+
+		available = {
+			is_subject = no
+			ROM = { 
+				is_subject = no
+			}
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				expire = 0
+				generator = { 82 }
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			CZE = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+			YUG = {
+				diplomatic_relation = {
+					country = ROM
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_war_with_yugoslavia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = DUN_yugoslavian_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = DUN_yugoslavian_civil_war
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = YUG
+				expire = 0
+				generator = { 106 }
+			}
+			YUG = {
+				leave_faction = yes
+			}
+			ITA = {
+				end_puppet = YUG
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = YUG
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_unite_the_adriatic_empire
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = DUN_war_with_albania }
+		prerequisite = { focus = DUN_war_with_yugoslavia }
+		prerequisite = { focus = DUN_war_with_hungary }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = 0
+		y = 2
+		relative_position_id = DUN_war_with_yugoslavia
+
+		available = {
+			is_subject = no
+			is_power_balance_in_range = {
+				id = DUN_ethnic_tensions_balance
+				range = DUN_united_chiss_max_range
+			}
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_power_balance = {
+				id = DUN_ethnic_tensions_balance
+			}
+			unlock_decision_tooltip = DUN_decision_form_adriatic_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_unite_austria_hungary
+		icon = GFX_focus_proclaim_the_restauration_of_Austria_Hungary
+		prerequisite = { focus = DUN_unite_the_adriatic_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = -1
+		y = 2
+		relative_position_id = DUN_unite_the_adriatic_empire
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_austria_hungary
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_unite_rohan
+		icon = GFX_focus_DUN_lotr_rohan
+		prerequisite = { focus = DUN_unite_the_adriatic_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = -2
+		y = 1
+		relative_position_id = DUN_unite_the_adriatic_empire
+
+		available = {
+		}
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_DUN_lotr.1 }
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_war_with_greece
+		icon = GFX_focus_generic_attack_greece
+		prerequisite = { focus = DUN_unite_the_adriatic_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 2
+		relative_position_id = DUN_unite_the_adriatic_empire
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GRE
+				expire = 0
+				generator = { 185 }
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = GRE
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_form_the_chiss_empire
+		icon = GFX_focus_generic_balkan_diplomacy
+		prerequisite = { focus = DUN_unite_the_adriatic_empire }
+		prerequisite = { focus = DUN_war_with_romania }
+		prerequisite = { focus = DUN_war_with_bulgaria }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = 3
+		y = 2
+		relative_position_id = DUN_unite_the_adriatic_empire
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_chiss_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_war_with_albania
+		icon = GFX_focus_hol_war_on_pacifism
+		prerequisite = { focus = DUN_yugoslavian_civil_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_ANNEXATION }
+		x = 1
+		y = 2
+		relative_position_id = DUN_yugoslavian_civil_war
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ALB
+				expire = 0
+				generator = { 44 }
+			}
+			ALB = {
+				leave_faction = yes
+			}
+			ITA = {
+				end_puppet = ALB
+				diplomatic_relation = {
+					country = ALB
+					relation = guarantee
+					active = no
+				}
+			}
+			FRA = {
+				diplomatic_relation = {
+					country = ALB
+					relation = guarantee
+					active = no
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = ALB
+					relation = guarantee
+					active = no
+				}
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = DUN_restore_the_roman_empire
+		icon = GFX_focus_ITA_mare_nostrum
+		prerequisite = { focus = DUN_unite_the_adriatic_empire }
+		mutually_exclusive = { focus = DUN_restore_the_byzantine_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = 0
+		y = 3
+		relative_position_id = DUN_unite_the_adriatic_empire
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_restore_the_roman_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_restore_the_byzantine_empire
+		icon = GFX_focus_GRE_byzantine_themata
+		prerequisite = { focus = DUN_form_the_chiss_empire }
+		prerequisite = { focus = DUN_war_with_greece }
+		mutually_exclusive = { focus = DUN_restore_the_roman_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = -1
+		y = 1
+		relative_position_id = DUN_form_the_chiss_empire
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_restore_the_byzantine_empire
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_proclaim_the_mare_nostrum
+		icon = GFX_big_focus_dun_mare_nostrum
+		text_icon = TLOTD_focus_style
+		prerequisite = { focus = DUN_restore_the_roman_empire focus = DUN_restore_the_byzantine_empire }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = 1
+		y = 3
+		relative_position_id = DUN_restore_the_roman_empire
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_form_the_mare_nostrum
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_expand_into_africa
+		icon = GFX_focus_generic_africa_liberation
+		prerequisite = { focus = DUN_proclaim_the_mare_nostrum }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_X_MONARCHISM FOCUS_FILTER_0_FORMABLES }
+		x = 0
+		y = 1
+		relative_position_id = DUN_proclaim_the_mare_nostrum
+
+		available = {
+			is_subject = no
+		}
+
+		cost = 8.58
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = DUN_decision_expand_africa
+			add_political_power = 50
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_divine_path
+		icon = GFX_focus_generic_pope
+		prerequisite = { focus = DUN_emergency_landing_on_terra }
+		mutually_exclusive = { focus = DUN_rose_revolution }
+		mutually_exclusive = { focus = DUN_liberty_ethos }
+		mutually_exclusive = { focus = DUN_will_of_the_king }
+		mutually_exclusive = { focus = DUN_fascist_rise_up }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_W_THEOCRATIC }
+		x = 10
+		y = 1
+		relative_position_id = DUN_emergency_landing_on_terra
+
+		available = {
+			theocracy > 0.20
+			is_subject = no
+		}
+
+		bypass = {
+		}
+
+		cost = 4.29
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_strength_through_faith
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = DUN_divine_path }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_W_THEOCRATIC }
+		x = 0
+		y = 3
+		relative_position_id = DUN_divine_path
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = strength_through_faith
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_trust_in_your_belief
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = DUN_strength_through_faith }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_W_THEOCRATIC }
+		x = 0
+		y = 3
+		relative_position_id = DUN_strength_through_faith
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = trust_in_your_belief
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_deus_vult
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = DUN_trust_in_your_belief }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_W_THEOCRATIC }
+		x = 0
+		y = 3
+		relative_position_id = DUN_trust_in_your_belief
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = deus_vult
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_reclaim_the_holy_land
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = DUN_deus_vult }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_W_THEOCRATIC }
+		x = 0
+		y = 4
+		relative_position_id = DUN_deus_vult
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			if = {
+                limit = {
+                    NOT = {
+                        owns_state = 454
+                    }
+                }
+                454 = {
+                    OWNER = {
+                        ROOT = {
+                            create_wargoal = {
+                                target = PREV
+                                expire = 0
+                                type = take_state_focus
+                                generator = { 454 }
+                            }
+                        }
+                    }
+                }
+            }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = DUN_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = DUN_political_commissars focus = DUN_why_we_fight focus = DUN_form_the_eternal_galactic_empire focus = DUN_form_the_eternal_galactic_empire_2 focus = DUN_reclaim_the_holy_land }
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}		
+		x = 2
+		y = 1
+		relative_position_id = DUN_proclaim_the_mare_nostrum
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_research_slots > 3
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}
+}

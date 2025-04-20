@@ -1,0 +1,15 @@
+characters={
+	DKR_exiled_kaiser_wilhelm={
+		name=DKR_exiled_kaiser_wilhelm
+		portraits={
+			civilian={
+				large="GFX_portrait_GER_wilhelm_ii"
+			}
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			traits= { }
+			id=-1
+		}
+	}
+}

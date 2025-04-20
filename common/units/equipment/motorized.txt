@@ -1,0 +1,133 @@
+equipments = {
+
+	motorized_equipment = {
+		year = 0
+		is_archetype = yes
+		picture = archetype_motorized_equipment		
+		is_buildable = no
+		type = {
+			motorized
+		}
+		group_by = archetype
+		
+		interface_category = interface_category_land
+	}
+
+	carriage_equipment_0 = {
+		year = 0
+		archetype = motorized_equipment
+		priority = 30
+		
+		maximum_speed = 8
+		reliability = 0.8
+		hardness = 0.1
+		breakthrough = 2
+		lend_lease_cost = 5
+		build_cost_ic = 1
+		resources = {
+		}
+		fuel_consumption = 0
+		supply_truck = yes
+	}
+
+	motorwagon_equipment_0 = {
+		year = 1886
+		archetype = motorized_equipment
+		parent = carriage_equipment_0
+		priority = 30
+
+		maximum_speed = 10
+		reliability = 0.6
+		hardness = 0.1
+		breakthrough = 1
+		lend_lease_cost = 5
+		build_cost_ic = 2.0
+		resources = {
+			steel = 1
+		}
+		fuel_consumption = 0.6
+		supply_truck = yes
+	}
+
+	motorcar_equipment_0 = {
+		year = 1894
+		archetype = motorized_equipment
+		parent = motorwagon_equipment_0
+		priority = 30
+
+		maximum_speed = 11
+		reliability = 0.65
+		hardness = 0.1
+		breakthrough = 2
+		lend_lease_cost = 5
+		build_cost_ic = 2.0
+		resources = {
+			steel = 1
+		}
+		fuel_consumption = 0.8
+		supply_truck = yes
+	}
+
+	car_equipment_0 = {
+		year = 1904
+		archetype = motorized_equipment
+		parent = motorcar_equipment_0
+		priority = 30
+
+		maximum_speed = 12
+		reliability = 0.7
+		hardness = 0.1
+		breakthrough = 3
+		lend_lease_cost = 5
+		build_cost_ic = 2.5
+		resources = {
+			rubber = 1
+			steel = 1
+		}
+		fuel_consumption = 1.0
+		supply_truck = yes
+	}
+
+	motorized_equipment_0 = { # Introducing WW1 style trucks
+		year = 1918
+
+		archetype = motorized_equipment
+		parent = car_equipment_0
+		priority = 30
+		
+		maximum_speed = 12
+		reliability = 0.75
+		hardness = 0.1
+		breakthrough = 4
+		lend_lease_cost = 5
+		build_cost_ic = 2.5
+		resources = {
+			rubber = 1
+			steel = 1
+		}
+		fuel_consumption = 1.0
+		supply_truck = yes
+	}
+
+	motorized_equipment_1 = {
+		year = 1936
+
+		archetype = motorized_equipment
+		parent = motorized_equipment_0
+		priority = 30
+
+		maximum_speed = 12
+		reliability = 0.8
+		hardness = 0.1
+		breakthrough = 5
+		lend_lease_cost = 5
+		build_cost_ic = 2.5
+		resources = {
+			rubber = 1
+			steel = 1
+		}
+		fuel_consumption = 1.2
+		supply_truck = yes
+	}
+
+}

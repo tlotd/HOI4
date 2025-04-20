@@ -1,0 +1,128 @@
+﻿l_english:
+
+  #Culture 1 European
+  #Culture 2 Asian
+  #Culture 3 African
+  #Culture 4 North American
+  #Culture 5 South American
+  #Culture 6 Ocianian
+
+  #Culture 7 German
+  #Culture 8 Southern German
+  #Culture 9 Northern German
+  #Culture 10 Prussian
+  #Culture 11 Swabian
+  #Culture 12 alemannic
+
+ MAPMODE_CULTURE_MAP_MODE_NAME:0 "Culture"
+ MAPMODE_CULTURE_MAP_MODE:0 "§YCulture§! Map Mode"
+ MAPMODE_CULTURE_MAP_MODE_DESCRIPTION:0 "Displays Each culture as their own color."
+ culture_map_mode_tooltip:0 "[From.GetName] currently has [From.get_culture_data] as its majority culture."
+ culture_map_mode_tooltip_delayed:0 ""
+
+ no_culture:0 "§Yno cluture§!"
+
+ culture_german:0 "§YGerman§!"
+ culture_southern_german:0 "§YSouthern German§!"
+ culture_northern_german:0 "§YNorthern German§!"
+
+ culture_prussian:0 "§YPrussian§!"
+ culture_swabian:0 "§YSwabian§!"
+ culture_alemannic:0 "§YAlemannic§!"
+ culture_bavarian:0 "§YBavarian§!"
+ culture_franconian:0 "§YFranconian§!"
+ culture_pfaelzish:0 "§YPfaelzish§!"
+ culture_hessian:0 "§YHessian§!"
+ culture_ripuarian:0 "§YRipuarian§!"
+ culture_westphalian:0 "§YWestphalian§!"
+ culture_eastphalian:0 "§YEastphalian§!"
+ culture_thuringian:0 "§YThuringian§!"
+ culture_saxon:0 "§YSaxon§!"
+ culture_frisian:0 "§YFrisian§!"
+ culture_elbish:0 "§YElbish§!"
+ culture_holsteinish:0 "§YHolsteinish§!"
+ culture_shleswigish:0 "§YShleswigish§!"
+ culture_margravian:0 "§YMargravian§!"
+ culture_mecklenburgish_vorpommersh:0 "§YMecklenburgish Vorpommersh§!"
+ culture_alsatian:0 "§YAlsatian§!"
+ culture_swiss_german:0 "§YSwiss German§!"
+ culture_austrian:0 "§YAustrian§!"
+ culture_sudeten_german:0 "§YSudeten German§!"
+ culture_czech:0 "§YCzech§!"
+ culture_silisian:0 "§YSilisian§!"
+ culture_pommeranian:0 "§YPommeranian§!"
+ culture_danish:0 "§YDanish§!"
+ culture_dutch:0 "§YDutch§!"
+ culture_flemish:0 "§YFlemish§!"
+ culture_walloons:0 "§YWalloons§!"
+ culture_luxemburgish:0 "§YLuxemburgish§!"
+ culture_slovenian:0 "§YSlovenian§!"
+ culture_roman:0 "§YRoman§!"
+ culture_italian:0 "§YItalian§!"
+ culture_venetian:0 "§YVenetian§!"
+ culture_lombardian:0 "§YLombardian§!"
+ culture_piedmontese:0 "§YPiedmontese§!"
+ culture_corsican:0 "§YCorsican§!"
+ culture_sardinian:0 "§YSardinian§!"
+ culture_sicilian:0 "§YSilician§!"
+ culture_maltese:0 "§YMaltese§!"
+ culture_british:0 "§YBritish§!"
+ culture_english:0 "§YEnglish§!"
+ culture_scottish:0 "§YScottish§!"
+ culture_welsh:0 "§YWelsh§!"
+ culture_irish:0 "§YIrish§!"
+ culture_french:0 "§YFrench§!"
+ culture_breton:0 "§YBreton§!"
+ culture_basque:0 "§YBasque§!"
+ culture_catalonian:0 "§YCatalonian§!"
+ culture_galician:0 "§YGalician§!"
+ culture_spanish:0 "§YSpanish§!"
+ culture_portugese:0 "§YPortugese§!"
+ culture_lithuanian:0 "§YLithuanian§!"
+ culture_latvian:0 "§YLatvian§!"
+ culture_estonian:0 "§YEstonian§!"
+ culture_polish:0 "§YPolish§!"
+ culture_slovak:0 "§YSlovak§!"
+ culture_hungarian:0 "§YHungarian§!"
+ culture_croatian:0 "§YCroatian§!"
+ culture_bosnian:0 "§YBosnian§!"
+ culture_montenegrins:0 "§YMontenegrins§!"
+ culture_albanian:0 "§YAlbanian§!"
+ culture_serbian:0 "§YSerbian§!"
+ culture_kosovars:0 "§YKosovars§!"
+ culture_macedonian:0 "§YMacedonian§!"
+ culture_greek:0 "§YGreek§!"
+ culture_bulgarian:0 "§YBulgarian§!"
+ culture_romanian:0 "§YRomanian§!"
+ culture_transylvanian:0 "§YTransylvanian§!"
+ culture_moldovan:0 "§YMoldovan§!"
+
+
+ culture_japanese:0 "§YJapanese§!"
+
+ MAPMODE_CONTENT_MAP_MODE_NAME:0 "Content"
+ MAPMODE_CONTENT_MAP_MODE:0 "§YContent§! Map Mode"
+ MAPMODE_CONTENT_MAP_MODE_DESCRIPTION:0 "Displays the new content available for each country."
+ content_map_mode_tooltip:0 "[From.Controller.get_content_data]"
+ content_map_mode_tooltip_delayed:0 ""
+ discontinued_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] currently has §Rdiscontinued§! content and will not recieve an update."
+ future_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] currently has §3planned§! content for a future release."
+ partial_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] currently has §7partially playable§! content."
+ full_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] currently has §Gfully playable§! content."
+ tlotd_expanded_more_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] has §Yadditional§! content in the submod §tTLOTD Expanded§!."
+ tlotd_expanded_only_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] has §Ronly§! content in the submod §tTLOTD Expanded§!."
+ tlotd_coc_more_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] has §Yadditional§! content in the submod §OTLOTD Crown of California§!."
+ tlotd_coc_only_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] has §Ronly§! content in the submod §OTLOTD Crown of California§!."
+ tlotd_owgawftv_more_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] has §Yadditional§! content in the submod §YTLOTD Old World Gods and Whispers from the Void§!."
+ tlotd_owgawftv_only_content_country_tooltip:0 "[From.Controller.GetNameWithFlag] has §Ronly§! content in the submod §YTLOTD Old World Gods and Whispers from the Void§!."
+
+ MAPMODE_LITERACY_MAP_MODE_NAME:0 "Literacy"
+ MAPMODE_LITERACY_MAP_MODE:0 "§YLiteracy§! Map Mode"
+ MAPMODE_LITERACY_MAP_MODE_DESCRIPTION:0 "Displays Literacy Rate of a country in a distinct color."
+ literacy_map_mode_tooltip:0 "[From.Controller.get_literacy_rate]"
+ literacy_map_mode_tooltip_delayed:0 ""
+
+ excellent_literacy_rate_tooltip:0 "[From.GetName] is currently almost fully literate."
+ high_literacy_rate_tooltip:0 "[From.GetName] is currently highly literate."
+ low_literacy_rate_tooltip:0 "[From.GetName] is currently slightly literate."
+ high_illiteracy_rate_tooltip:0 "[From.GetName] is currently highly illiterate."

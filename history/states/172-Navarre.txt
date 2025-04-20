@@ -1,0 +1,27 @@
+state={
+	id=172
+	name="STATE_172"
+	resources={
+		fossils=7
+		amber=3
+	}
+
+	history={
+		owner = COS
+
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		add_core_of = COS
+
+	}
+
+	provinces={
+		13233
+	}
+	manpower=2
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+
+	local_supplies=4.0 
+}

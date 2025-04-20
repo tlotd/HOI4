@@ -1,0 +1,44 @@
+
+state={
+	id=68
+	name="STATE_68"
+	manpower = 1250840
+	resources={
+		aluminium=15 # was: 24
+	}
+
+	state_category = city
+
+	history={
+		set_variable = { culture = 26 }
+		victory_points = {
+			3473 1
+		}
+		owner = PRE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = PRE
+		1871.1.18 = {
+			owner = GER
+			add_core_of = GER
+		}
+		1945.5.8 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GER
+			set_state_name = STATE_68_POL
+			set_province_name = {
+				id = 3473
+				name = VICTORY_POINTS_3473_POL
+			}
+		}
+	}
+
+	provinces={
+		444 537 3473 3572 6236 9387 11478 
+	}
+
+	local_supplies=0.0 
+}

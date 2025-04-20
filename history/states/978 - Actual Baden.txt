@@ -1,0 +1,65 @@
+
+state={
+	id=978
+	name="STATE_978"
+	resources={
+		steel=18
+		aluminium=9
+	}
+
+	state_category = city
+	history={
+		set_variable = { culture = 12 }
+		owner = BAD
+		add_core_of = BAD
+		victory_points = {
+			6568 1
+		}
+		victory_points = {
+			3530 10 #Karlsruhe
+		}
+		victory_points = {
+			6712 3 #Freiburg
+		}
+		victory_points = {
+			11640 1 #Müllheim
+		}
+		victory_points = {
+			6934 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 6
+			arms_factory = 2
+			air_base = 2
+		}
+		1871.1.18 = {
+			owner = LTD
+			add_core_of = LTD
+			add_core_of = GER
+		}
+		1919.1.1 = {
+			set_demilitarized_zone = yes
+		}
+		1936.3.7 = {
+			set_demilitarized_zone = no
+		}
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 4
+				industrial_complex = 8
+			}
+		}
+		1945.5.8 = {
+			owner = LTD
+			add_core_of = LTD
+		}
+	}
+
+	provinces={
+		3530 3679 3692 6542 6568 6581 6712 6934 11640 13126
+	}
+	manpower = 1892745
+	buildings_max_level_factor=1.0
+	local_supplies=15.0
+}

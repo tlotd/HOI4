@@ -1,0 +1,110 @@
+### search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+joint_focus = {
+	prerequisite = { focus = LTD_imperial_matters focus = NIS_catalan_independence }
+	mutually_exclusive = { focus = LTD_strike_south }
+	id = SAKURA_DRAGON_LTD_approach_NIS
+	icon = GFX_focus_generic_befriend_nis
+	offset = { x = 33 y = 17 trigger = { has_focus_tree = LTD_legendary_focus }}
+	offset = { x = 27 y = 11 trigger = { has_focus_tree = NIS_morokoro_focus }}
+	cost = 4.29
+	available = {
+		tag = LTD
+		any_neighbor_country = {
+			tag = NIS
+		}
+	}
+	ai_will_do = { factor = 0 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+	completion_reward_joint_originator = {}
+}
+
+joint_focus = {
+	prerequisite = { focus = LTD_imperial_matters focus = NIS_catalan_independence }
+	prerequisite = { focus = LTD_imperial_matters focus = NIS_partition_of_switzerland }
+	prerequisite = { focus = LTD_imperial_matters focus = NIS_reclaim_italy }
+	mutually_exclusive = { focus = NIS_northern_offensive }
+	id = SAKURA_DRAGON_NIS_approach_LTD
+	icon = GFX_focus_generic_befriend_ltd
+	offset = { x = 35 y = 17 trigger = { has_focus_tree = LTD_legendary_focus }}
+	offset = { x = 29 y = 11 trigger = { has_focus_tree = NIS_morokoro_focus }}
+	cost = 4.29
+	available = {
+		tag = NIS
+		any_neighbor_country = {
+			tag = LTD
+		}
+	}
+	ai_will_do = { factor = 0 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+	completion_reward_joint_originator = {}
+}
+
+joint_focus = {
+	prerequisite = { focus = SAKURA_DRAGON_LTD_approach_NIS }
+	prerequisite = { focus = SAKURA_DRAGON_NIS_approach_LTD }
+	id = SAKURA_DRAGON_unification
+	icon = GFX_focus_RAJ_kingmaker
+	relative_position_id = SAKURA_DRAGON_LTD_approach_NIS
+	x = 1
+	y = 1
+	cost = 8.58
+	available = {}
+	ai_will_do = { factor = 0 }
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+	completion_reward_joint_originator = {
+		NIS = {
+			set_cosmetic_tag = LTD_NIS
+			set_country_flag = SakuraEmpire
+		}
+		LTD = {
+			set_cosmetic_tag = LTD_NIS
+			set_country_flag = SakuraEmpire
+			set_country_leader_ideology = crescent_reign
+			set_party_name = {
+				ideology = monarchism
+				long_name = SAKURA_DRAGON_monarchism_party_long
+				name = SAKURA_DRAGON_monarchism_party
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_prince_isla_nublar
+						ruling_only = yes
+					}
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = LTD_prince_isla_nublar_kaiser
+				}
+				add_country_leader_trait = alpine_emperor
+			}
+			if = {
+				NIS = { has_idea = established_monarchy }
+				add_ideas = established_monarchy
+			}
+			if = {
+				NIS = { has_idea = nis_sakura_spirit }
+				add_ideas = nis_sakura_spirit
+			}
+			if = {
+				NIS = { has_idea = dun_mare_nostrum }
+				add_ideas = dun_mare_nostrum
+			}
+			every_state = {
+				limit = {
+					is_core_of = NIS
+				}
+				add_core_of = LTD
+				remove_core_of = NIS
+			}
+
+			annex_country = {
+				target = NIS
+				transfer_troops = yes
+			}
+
+			change_tag_from = NIS
+		}
+	}
+}

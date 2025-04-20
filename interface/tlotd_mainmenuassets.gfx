@@ -1,0 +1,148 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mod_update_news"
+		textureFile = "gfx/interface/mod_update_news.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_update_news_content"
+		textureFile = "gfx/interface/mod_update_news_content.dds"
+	}
+	spriteType = {
+		name = "GFX_tlotd_logo"
+		textureFile = "gfx/interface/tlotd_logo.dds"
+	}
+	spriteType = {
+		name = "GFX_main_menu_background"
+		textureFile = "gfx/interface/main_menu_background.dds"
+	}
+	spriteType = {
+		name = "GFX_menu_logo_background"
+		textureFile = "gfx/interface/menu_logo_background.dds"
+	}
+
+	spriteType = {
+		name = "GFX_mod_title"
+		textureFile = "gfx/interface/mod_title.dds"
+	}
+
+	spriteType = {
+		name = "GFX_version_subtitle"
+		textureFile = "gfx/interface/version_subtitle.dds"
+	}
+
+	spriteType = {
+		name = "GFX_submod_uncensored"
+		textureFile = "gfx/interface/submod_uncensored.dds"
+	}
+
+	spriteType = {
+		name = "GFX_submod_namefix"
+		textureFile = "gfx/interface/submod_namefix.dds"
+	}
+
+	spriteType = {
+		name = "GFX_submod_otherworldly"
+		textureFile = "gfx/interface/submod_otherworldly.dds"
+	}
+
+	spriteType = {
+		name = "GFX_submod_communistan_expanded"
+		textureFile = "gfx/interface/submod_communistan_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_submod_crown_of_california"
+		textureFile = "gfx/interface/submod_crown_of_california.dds"
+	}
+
+	spriteType = {
+		name = "GFX_submod_toradyr_expanded"
+		textureFile = "gfx/interface/submod_toradyr_expanded.dds"
+	}
+
+	spriteType = {
+		name = "GFX_menu_tlotd_button"
+		textureFile = "gfx/interface/menu_tlotd_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_menu_steam_button"
+		textureFile = "gfx/interface/menu_steam_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_menu_discord_button"
+		textureFile = "gfx/interface/menu_discord_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_menu_youtube_button"
+		textureFile = "gfx/interface/menu_youtube_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_new_ribbon"
+		textureFile = "gfx/interface/new_ribbon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dlc_ribbon"
+		textureFile = "gfx/interface/dlc_ribbon.dds"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_dev_tlotd"
+		textureFile = "gfx/interface/developers/dev_tlotd.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_tlotd_uncensored"
+		textureFile = "gfx/interface/developers/mod_dev_tlotd_uncensored.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_tlotd_owgawftv"
+		textureFile = "gfx/interface/developers/mod_dev_tlotd_owgawftv.dds"
+	}
+	spriteType = {
+		name = "GFX_dev_isla_nublar"
+		textureFile = "gfx/interface/developers/dev_isla_nublar.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_isla_nublar_owgawftv"
+		textureFile = "gfx/interface/developers/mod_dev_isla_nublar_owgawftv.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_isla_nublar_namefix"
+		textureFile = "gfx/interface/developers/mod_dev_isla_nublar_namefix.dds"
+	}
+	spriteType = {
+		name = "GFX_dev_akashic_system"
+		textureFile = "gfx/interface/developers/dev_akashic_system.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_akashic_system_communistan"
+		textureFile = "gfx/interface/developers/mod_dev_akashic_system_communistan.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_salsafox_crown_of_california"
+		textureFile = "gfx/interface/developers/mod_dev_salsafox_crown_of_california.dds"
+	}
+	spriteType = {
+		name = "GFX_dev_glamin"
+		textureFile = "gfx/interface/developers/dev_glamin.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_dev_glamin_furry"
+		textureFile = "gfx/interface/developers/mod_dev_glamin_furry.dds"
+	}
+	spriteType = {
+		name = "GFX_power_balance_button"
+		textureFile = "gfx/interface/power_balance_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_power_balance_icon"
+		textureFile = "gfx/interface/power_balance_icon.dds"
+	}
+}

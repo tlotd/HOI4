@@ -1,0 +1,236 @@
+characters={
+
+	LKR_larry_meister_leader={
+		name=LKR_larry_meister_leader
+		portraits={
+			civilian={
+				large="GFX_lkr_portrait_larry_meister"
+			}
+		}
+		country_leader={
+			ideology=larry_monarchism
+			traits = { the_blonde_crusader }
+			id=-1
+		}
+	}
+
+
+
+	### Military Leader
+
+	LKR_theoden={
+		name="Théoden"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_theoden"
+				small="GFX_ltd_portrait_theoden_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ltd_theoden
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ cavalry_officer war_hero }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+		}
+	}
+
+	LKR_boromir={
+		name="Boromir"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_boromir"
+				small="GFX_ltd_portrait_boromir_small"
+			}
+		}
+		corps_commander={
+			traits={ career_officer politically_connected }
+			skill=4
+			attack_skill=4
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+
+	LKR_faramir={
+		name="Faramir"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_faramir"
+				small="GFX_ltd_portrait_faramir_small"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=1
+		}
+	}
+
+	LKR_bard={
+		name="Bard"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_bard"
+				small="GFX_ltd_portrait_bard_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ltd_bard
+			cost = 100
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LKR_eagles={
+		name="Eagles"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_eagles"
+				small="GFX_ltd_portrait_eagles_small"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ltd_eagles
+			cost = 100
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LKR_elrond={
+		name="Elrond"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_elrond"
+				small="GFX_ltd_portrait_elrond_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = ltd_elrond
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LKR_legolas={
+		name="Legolas"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_legolas"
+				small="GFX_ltd_portrait_legolas_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_legolas
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LKR_gimli={
+		name="Gimli"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_gimli"
+				small="GFX_ltd_portrait_gimli_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_gimli
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				army_armored_3
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LKR_samwise={
+		name="Samwise"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_samwise"
+				small="GFX_ltd_portrait_samwise_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_samwise
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LKR
+			}
+			traits = {
+				army_logistics_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+}

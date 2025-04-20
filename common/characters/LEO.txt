@@ -1,0 +1,333 @@
+characters={
+
+###################################
+#########TEMPCHARACTERS############
+###################################
+
+	### Military Leader
+
+	LEO_theoden={
+		name="Théoden"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_theoden"
+				small="GFX_ltd_portrait_theoden_small"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ltd_theoden
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ cavalry_officer war_hero }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=3
+		}
+	}
+
+	LEO_boromir={
+		name="Boromir"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_boromir"
+				small="GFX_ltd_portrait_boromir_small"
+			}
+		}
+		corps_commander={
+			traits={ career_officer politically_connected }
+			skill=4
+			attack_skill=4
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+
+	LEO_faramir={
+		name="Faramir"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_faramir"
+				small="GFX_ltd_portrait_faramir_small"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=1
+		}
+	}
+
+	LEO_bard={
+		name="Bard"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_bard"
+				small="GFX_ltd_portrait_bard_small"
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ltd_bard
+			cost = 100
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LEO_eagles={
+		name="Eagles"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_eagles"
+				small="GFX_ltd_portrait_eagles_small"
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ltd_eagles
+			cost = 100
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LEO_elrond={
+		name="Elrond"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_elrond"
+				small="GFX_ltd_portrait_elrond_small"
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = ltd_elrond
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LEO_legolas={
+		name="Legolas"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_legolas"
+				small="GFX_ltd_portrait_legolas_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_legolas
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				army_infantry_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LEO_gimli={
+		name="Gimli"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_gimli"
+				small="GFX_ltd_portrait_gimli_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_gimli
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				army_armored_3
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+	LEO_samwise={
+		name="Samwise"
+		portraits={
+			army={
+				large="GFX_ltd_portrait_samwise"
+				small="GFX_ltd_portrait_samwise_small"
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ltd_samwise
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = LEO
+			}
+			traits = {
+				army_logistics_2
+			}
+			ai_will_do = {
+				factor = 1.0
+			}
+		}
+	}
+
+###################################
+###################################
+###################################
+
+	LEO_sylvester_stalin={
+		name="Sylvester Stalin"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_sylvester_stalin"
+			}
+		}
+		country_leader={
+			ideology=karl_marx
+			traits= { militant_socialist }
+			id=-1
+		}
+	}
+	LEO_karl_kommunist={
+		name="Karl Kommunistan"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_karl_kommunist"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy
+			traits= { hero_of_the_peasantry }
+			id=-1
+		}
+	}
+	LEO_voytek={
+		name="Comrade Voytek"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_voytek"
+			}
+		}
+		country_leader={
+			ideology=socialism
+			traits= { he_who_bears_the_throne }
+			id=-1
+		}
+	}
+	LEO_cardinal_godric_kommunistan={
+		name="Cardinal Godric Kommunistan"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_cardinal_godric_kommunistan"
+			}
+		}
+		country_leader={
+			ideology=absolute_theocracy
+			traits= { marxist_priest }
+			id=-1
+		}
+	}
+	LEO_grigori_yefimovich_rasputin={
+		name="Grigori Yefimovich Rasputin"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_grigori_yefimovich_rasputin"
+			}
+		}
+		country_leader={
+			ideology=fascism_ideology
+			traits= { the_director }
+			id=-1
+		}
+	}
+	LEO_the_council={
+		name="The Council"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_the_council"
+			}
+		}
+		country_leader={
+			ideology=military_control
+			traits= { permanent_revolutionary }
+			id=-1
+		}
+	}
+	LEO_carlos_castillo_armas={
+		name="Carlos Castillo Armas"
+		portraits={
+			civilian={
+				large="GFX_leo_portrait_carlos_castillo_armas"
+			}
+		}
+		country_leader={
+			ideology=absolute_corporatocracy
+			traits= { devoted_corporatist }
+			id=-1
+		}
+	}
+	LEO_yellow_figure={
+		name="Yellow Figure"
+		portraits={
+			civilian={
+				large="GFX_portrait_yellow_figure"
+			}
+		}
+		country_leader={
+			ideology=the_beyond
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+}

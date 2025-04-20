@@ -1,0 +1,17 @@
+uses_leader_gui = {
+	OR = {
+		has_idea_with_trait = vice_president
+		has_country_flag = LEADER_GUI_VISIBLE
+	}
+	NOT = {
+		has_country_flag = LEADER_GUI_NOT_VISIBLE
+	}
+}
+
+uses_double_leader_gui = {
+	has_country_flag = DOUBLE_LEADER_GUI_VISIBLE
+}
+
+LEADER_GUI_USES_CUSTOM_TITLE = {
+	has_country_flag = USES_CUSTOM_TITLE
+}

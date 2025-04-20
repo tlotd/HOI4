@@ -1,0 +1,64 @@
+#########################################
+########### LTD BOP MODIFIERS ###########
+#########################################
+
+#DEBUG
+
+LTD_bop_modifier_debug_positive = {
+	power_balance_weekly = 0.1
+}
+
+LTD_bop_modifier_debug_negative = {
+	power_balance_weekly = -0.1
+}
+
+#GOOD
+
+LTD_bop_modifier_seek_international_ties = {
+	power_balance_weekly = 0.01
+}
+
+LTD_bop_modifier_invest_in_infrastructure = {
+	power_balance_weekly = 0.01
+}
+
+LTD_bop_modifier_rally_the_people = {
+	power_balance_weekly = 0.01
+}
+
+LTD_bop_modifier_stable_economy = {
+	power_balance_weekly = 0.015
+}
+
+LTD_bop_modifier_stable_nation = {
+	power_balance_weekly = 0.015
+}
+
+#BAD
+LTD_bop_modifier_sinking_into_choas = {
+	power_balance_weekly = -0.01
+}
+
+##############################
+
+#fascism
+
+#ss
+
+LTD_bop_modifier_racial_superiority = {
+	power_balance_weekly = 0.01
+}
+
+LTD_bop_modifier_the_cleansing = {
+	power_balance_weekly = 0.01
+}
+
+LTD_bop_modifier_kristallnacht = {
+	power_balance_weekly = 0.01
+}
+
+#party
+
+LTD_bop_modifier_clamp_down_on_extremist_paramilitary_groups = {
+	power_balance_weekly = -0.01
+}

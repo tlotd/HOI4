@@ -1,0 +1,1370 @@
+### search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+joint_focus = {
+	id = DRACHENPAKT_alliance
+	
+	offset = {
+		x = 48
+		y = -5
+		trigger = {
+			has_focus_tree = LTD_legendary_focus
+		}
+	}
+
+	offset = {
+		x = 38
+		y = -5
+		trigger = {
+			has_focus_tree = LKR_larrys_kaiserreich_focus
+		}
+	}
+
+	offset = {
+		x = 38
+		y = -5
+		trigger = {
+			has_focus_tree = DUN_chiss_focus
+		}
+	}
+
+	offset = {
+		x = 41
+		y = -5
+		trigger = {
+			has_focus_tree = NIS_morokoro_focus
+		}
+	}
+
+	offset = {
+		x = 0
+		y = 0
+		trigger = {
+			has_focus_tree = LEO_communistan_focus
+		}
+	}
+
+	offset = {
+		x = 39
+		y = -5
+		trigger = {
+			has_focus_tree = KRM_puerida_focus
+		}
+	}
+
+	offset = {
+		x = 35
+		y = -5
+		trigger = {
+			has_focus_tree = JSN_terra_solisia_focus
+		}
+	}
+
+	dynamic = yes 
+	
+	icon = {
+		trigger = {
+			OR = {
+				AND = {
+					tag = LTD
+					is_in_faction = no
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = LTD_aragorn_strider
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = LTD_aragorn
+							ruling_only = yes
+						}
+					}
+				}
+				AND = {
+					LTD = {
+						is_faction_leader = yes
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = LTD_aragorn_strider
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = LTD_aragorn
+								ruling_only = yes
+							}
+						}
+					}
+					is_in_faction_with = LTD
+				}
+				AND = {
+					tag = DUN
+					is_in_faction = no
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = DUN_king_theoden
+							ruling_only = yes
+						}
+					}
+				}
+				AND = {
+					DUN = {
+						is_faction_leader = yes
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = DUN_king_theoden
+								ruling_only = yes
+							}
+						}
+					}
+					is_in_faction_with = LTD
+				}
+			}
+		}
+		value = GFX_focus_LTD_lotr_alliance
+	}
+	icon = {
+		trigger = {
+			OR = {
+				AND = {
+					tag = LTD
+					NOT = { OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = LTD_aragorn_strider
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = LTD_aragorn
+							ruling_only = yes
+						}
+						has_government = communism
+						has_government = fascism
+					} }
+					is_in_faction = no
+				}
+				AND = {
+					LTD = {
+						is_faction_leader = yes
+						NOT = { OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = LTD_aragorn_strider
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = LTD_aragorn
+								ruling_only = yes
+							}
+							has_government = communism
+							has_government = fascism
+						} }
+					}
+					is_in_faction_with = LTD
+				}
+			}
+		}
+		value = GFX_focus_generic_drachenpakt
+	}
+	icon = {
+		trigger = {
+			OR = {
+				AND = {
+					tag = LTD
+					has_government = communism
+					is_in_faction = no
+					NOT = {
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = LTD_aragorn_strider
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = LTD_aragorn
+								ruling_only = yes
+							}
+						}
+					}
+				}
+				AND = {
+					LTD = {
+						is_faction_leader = yes
+						has_government = communism
+						NOT = {
+							OR = {
+								has_country_flag = LotrEmpire
+								has_country_leader = {
+									character = LTD_aragorn_strider
+									ruling_only = yes
+								}
+								has_country_leader = {
+									character = LTD_aragorn
+									ruling_only = yes
+								}
+							}
+						}
+					}
+					is_in_faction_with = LTD
+				}
+				AND = {
+					tag = LEO
+					is_in_faction = no
+				}
+				AND = {
+					LEO = {
+						is_faction_leader = yes
+					}
+					is_in_faction_with = LEO
+				}
+			}
+		}
+		value = GFX_focus_generic_drachenpakt_communism
+	}
+	icon = {
+		trigger = {
+			OR = {
+				AND = {
+					tag = LTD
+					has_government = fascism
+					is_in_faction = no
+					NOT = {
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = LTD_sauron
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = LTD_aragorn_strider
+								ruling_only = yes
+							}
+							has_country_leader = {
+								character = LTD_aragorn
+								ruling_only = yes
+							}
+						}
+					}
+				}
+				AND = {
+					LTD = {
+						is_faction_leader = yes
+						has_government = fascism
+						NOT = {
+							OR = {
+								has_country_flag = LotrEmpire
+								has_country_leader = {
+									character = LTD_sauron
+									ruling_only = yes
+								}
+								has_country_leader = {
+									character = LTD_aragorn_strider
+									ruling_only = yes
+								}
+								has_country_leader = {
+									character = LTD_aragorn
+									ruling_only = yes
+								}
+							}
+						}
+					}
+					is_in_faction_with = LTD
+				}
+			}
+		}
+		value = GFX_focus_generic_drachenpakt_fascism
+	}
+	icon = {
+		trigger = {
+			OR = {
+				AND = {
+					tag = LTD
+					has_government = fascism
+					is_in_faction = no
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = LTD_sauron
+							ruling_only = yes
+						}
+					}
+				}
+				AND = {
+					LTD = {
+						is_faction_leader = yes
+						has_government = fascism
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = LTD_sauron
+								ruling_only = yes
+							}
+						}
+					}
+					is_in_faction_with = LTD
+				}
+				AND = {
+					tag = DUN
+					has_government = fascism
+					is_in_faction = no
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = DUN_witch_king_of_angmar
+							ruling_only = yes
+						}
+					}
+				}
+				AND = {
+					DUN = {
+						is_faction_leader = yes
+						has_government = fascism
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = DUN_witch_king_of_angmar
+								ruling_only = yes
+							}
+						}
+					}
+					is_in_faction_with = DUN
+				}
+			}
+		}
+		value = GFX_focus_LTD_lotr_alliance_fascism
+	}
+	icon = {
+		trigger = {
+			OR = {
+				AND = {
+					tag = DUN
+					is_in_faction = no
+				}
+				AND = {
+					DUN = {
+						is_faction_leader = yes
+					}
+					is_in_faction_with = DUN
+				}
+			}
+			NOT = {
+				OR = {
+					AND = {
+						tag = DUN
+						is_in_faction = no
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = DUN_king_theoden
+								ruling_only = yes
+							}
+						}
+					}
+					AND = {
+						DUN = {
+							is_faction_leader = yes
+							OR = {
+								has_country_flag = LotrEmpire
+								has_country_leader = {
+									character = DUN_king_theoden
+									ruling_only = yes
+								}
+							}
+						}
+						is_in_faction_with = LTD
+					}
+					AND = {
+					tag = DUN
+					has_government = fascism
+					is_in_faction = no
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = DUN_witch_king_of_angmar
+							ruling_only = yes
+						}
+					}
+				}
+				AND = {
+					DUN = {
+						is_faction_leader = yes
+						has_government = fascism
+						OR = {
+							has_country_flag = LotrEmpire
+							has_country_leader = {
+								character = DUN_witch_king_of_angmar
+								ruling_only = yes
+							}
+						}
+					}
+					is_in_faction_with = DUN
+				}
+				}
+			}
+		}
+		value = GFX_focus_generic_drachenpakt_dun
+	}
+	icon = {
+		trigger = {
+			NOT = {
+				OR = {
+					AND = { tag = LTD is_in_faction = no } AND = { LTD = { is_faction_leader = yes } is_in_faction_with = LTD }
+				}
+				OR = {
+					AND = { tag = DUN is_in_faction = no } AND = { DUN = { is_faction_leader = yes } is_in_faction_with = DUN }
+				}
+				OR = {
+					AND = { tag = LEO is_in_faction = no } AND = { LEO = { is_faction_leader = yes } is_in_faction_with = LEO }
+				}
+			}
+		}
+		value = GFX_goal_generic_alliance
+	}
+
+	x = 6
+	y = 11
+
+	#LTD
+	#offset = {
+	#	x = 40
+	#	y = -4
+	#	trigger = {
+	#		tag = LTD
+	#	}
+	#}
+
+	cost = 10
+
+	text_icon = TLOTD_focus_style
+
+	available = {
+		is_faction_leader = yes
+		any_allied_country = {
+			is_subject = no
+		}
+		is_subject = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		save_global_event_target_as = drachenpakt_leader
+		if = {
+			limit = {
+				tag = LTD
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = LTD_aragorn_strider
+							ruling_only = yes
+						}
+						has_country_leader = {
+							character = LTD_aragorn
+							ruling_only = yes
+						}
+					}
+				}
+				set_faction_name = FACTION_NAME_LTD_lotr
+			} else_if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+				set_faction_name = FACTION_NAME_LTD_lotr_fascism
+			} else_if = {
+				limit = {
+					has_government = communism
+				}
+				set_faction_name = FACTION_NAME_LTD_communist
+			} else_if = {
+				limit = {
+					has_government = fascism
+				}
+				set_faction_name = FACTION_NAME_LTD_fascism
+			} else = {
+				set_faction_name = FACTION_NAME_LTD
+			}
+		}
+		if = {
+			limit = {
+				tag = DUN
+			}
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = LotrEmpire
+						has_country_leader = {
+							character = LTD_witch_king_of_angmar
+							ruling_only = yes
+						}
+					}
+				}
+				set_faction_name = FACTION_NAME_LTD_lotr
+			} else_if = {
+				limit = {
+					has_country_leader = {
+						character = LTD_witch_king_of_angmar
+						ruling_only = yes
+					}
+				}
+				set_faction_name = FACTION_NAME_LTD_lotr_fascism
+			} else {
+				set_faction_name = FACTION_NAME_DUN
+			}
+		}
+		if = {
+			limit = {
+				tag = LEO
+			}
+			set_faction_name = FACTION_NAME_LEO
+		}
+		if = {
+			limit = {
+				tag = CAL
+			}
+			set_faction_name = FACTION_NAME_CAL
+		}
+		if = {
+			limit = {
+				NOT = {
+					OR = {
+						tag = LTD
+						tag = DUN
+						tag = LEO
+						tag = CAL
+					}
+				}
+			}
+			set_faction_name = FACTION_NAME_ALLIANCE_GENERIC
+		}
+	}
+}
+
+shared_focus = {
+	id = DRACHENPAKT_research_union
+	
+	icon = GFX_goal_tfv_generic_tech_sharing
+	
+	prerequisite = { focus = DRACHENPAKT_alliance }
+	
+	x = -5
+	y = 1
+	relative_position_id = DRACHENPAKT_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		OR = {
+			is_in_faction_with = event_target:drachenpakt_leader
+			is_puppet_of = event_target:drachenpakt_leader
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward = {
+		add_to_tech_sharing_group = drachenpakt_research
+	}
+}
+
+shared_focus = {
+	id = DRACHENPAKT_join_faction
+	
+	icon = GFX_focus_generic_treaty
+	prerequisite = { focus = DRACHENPAKT_alliance }
+	
+	x = -1
+	y = 1
+	relative_position_id = DRACHENPAKT_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = no
+		is_subject = no
+		event_target:drachenpakt_leader = {
+			has_government = ROOT
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward = {
+		event_target:drachenpakt_leader = {
+			add_to_faction = ROOT
+			set_autonomy = {
+				target = ROOT
+				autonomy_state = autonomy_drachenpakt_member
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = DRACHENPAKT_leave_faction
+	
+	icon = GFX_focus_BRA_repeale_national_security_law
+	
+	prerequisite = { focus = DRACHENPAKT_alliance }
+	
+	x = 1
+	y = 1
+	relative_position_id = DRACHENPAKT_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction_with = event_target:drachenpakt_leader
+		is_puppet_of = event_target:drachenpakt_leader
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward = {
+		event_target:drachenpakt_leader {
+			end_puppet  = ROOT
+		}
+		leave_faction = yes
+		uncomplete_national_focus = {
+			focus = DRACHENPAKT_join_faction
+		}
+		uncomplete_national_focus = {
+			focus = DRACHENPAKT_leave_faction
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_faction_war_goals
+	
+	icon = GFX_goal_generic_territory_or_war
+	
+	prerequisite = { focus = DRACHENPAKT_alliance }
+	
+	x = 3
+	y = 1
+	relative_position_id = DRACHENPAKT_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_the_usa
+	
+	icon = GFX_focus_generic_attack_usa
+	
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = -3
+	y = 2
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		USA = { exists = yes }
+	}
+	bypass = {
+		USA = { exists = no }
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		create_wargoal = {
+			type = take_state_focus
+			target = USA
+			expire = 0
+			generator = { 361 }
+		}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = USA
+				expire = 0
+				generator = { 361 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_britain
+	
+	icon = GFX_focus_attack_britain
+	
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = -2
+	y = 1
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		ENG = { exists = yes }
+	}
+	bypass = {
+		ENG = { exists = no }
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		create_wargoal = {
+			type = take_state_focus
+			target = ENG
+			expire = 0
+			generator = { 361 }
+		}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				expire = 0
+				generator = { 126 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_france
+	
+	icon = GFX_focus_attack_france
+	
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = -1
+	y = 2
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		FRA = { exists = yes }
+	}
+	bypass = {
+		FRA = { exists = no }
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		create_wargoal = {
+			type = take_state_focus
+			target = FRA
+			expire = 0
+			generator = { 16 }
+		}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = FRA
+				expire = 0
+				generator = { 16 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_germany
+	icon = {
+		trigger = {
+			GER = {
+				has_government = fascism
+			}
+		}
+		value = GFX_focus_attack_germany
+	}
+	icon = {
+		trigger = {
+			GER = {
+				NOT = { has_government = fascism }
+			}
+		}
+		value = GFX_focus_generic_attack_german_empire
+	}
+
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = 0
+	y = 1
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		GER = { exists = yes }
+	}
+	bypass = {
+		GER = { exists = no }
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		create_wargoal = {
+			type = take_state_focus
+			target = GER
+			expire = 0
+			generator = { 64 }
+		}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = GER
+				expire = 0
+				generator = { 64 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_soviet
+	
+	icon = GFX_focus_attack_soviet
+	
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = 1
+	y = 2
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		SOV = { exists = yes }
+	}
+	bypass = {
+		SOV = { exists = no }
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		create_wargoal = {
+			type = take_state_focus
+			target = SOV
+			expire = 0
+			generator = { 219 }
+		}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				expire = 0
+				generator = { 219 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_china
+	
+	icon = GFX_focus_attack_china
+	
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = 2
+	y = 1
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+			create_wargoal = {
+				type = take_state_focus
+				target = CHI
+				expire = 0
+				generator = { 613 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = PRC
+				expire = 0
+				generator = { 622 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SHX
+				expire = 0
+				generator = { 127 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = XSM
+				expire = 0
+				generator = { 754 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SIK
+				expire = 0
+				generator = { 617 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = GXC
+				expire = 0
+				generator = { 594 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = YUN
+				expire = 0
+				generator = { 112 }
+			}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = CHI
+				expire = 0
+				generator = { 613 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = PRC
+				expire = 0
+				generator = { 622 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SHX
+				expire = 0
+				generator = { 127 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = XSM
+				expire = 0
+				generator = { 754 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = SIK
+				expire = 0
+				generator = { 617 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = GXC
+				expire = 0
+				generator = { 594 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = YUN
+				expire = 0
+				generator = { 112 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_war_with_japan
+	
+	icon = GFX_focus_attack_japan
+	
+	prerequisite = { focus = DRACHENPAKT_faction_war_goals }
+	
+	x = 3
+	y = 2
+	relative_position_id = DRACHENPAKT_faction_war_goals
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		JAP = { exists = yes }
+	}
+	bypass = {
+		JAP = { exists = no }
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+		create_wargoal = {
+			type = take_state_focus
+			target = JAP
+			expire = 0
+			generator = { 282 }
+		}
+	}
+	completion_reward = {
+		every_other_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = JAP
+				expire = 0
+				generator = { 282 }
+			}
+		}
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_exploration
+	
+	icon = GFX_goal_generic_position_armies
+	
+	prerequisite = { focus = DRACHENPAKT_alliance }
+	
+	x = -3
+	y = 1
+	relative_position_id = DRACHENPAKT_alliance
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_reach_for_the_stars
+	
+	icon = GFX_focus_generic_space
+	
+	mutually_exclusive = { focus = DRACHENPAKT_research_expeditions }
+	mutually_exclusive = { focus = DRACHENPAKT_into_the_depths }
+	prerequisite = { focus = DRACHENPAKT_exploration }
+	
+	x = -2
+	y = 1
+	relative_position_id = DRACHENPAKT_exploration
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		has_tech = experimental_rockets
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_the_first_satellite
+	
+	icon = GFX_focus_generic_satellite
+	
+	prerequisite = { focus = DRACHENPAKT_reach_for_the_stars }
+	x = -1
+	y = 1
+	relative_position_id = DRACHENPAKT_reach_for_the_stars
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		has_tech = advanced_centimetric_radar
+		has_tech = advanced_computing_machine
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_to_the_moon
+	
+	icon = GFX_focus_generic_moon
+	
+	prerequisite = { focus = DRACHENPAKT_the_first_satellite }
+	x = 0
+	y = 1
+	relative_position_id = DRACHENPAKT_the_first_satellite
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_asteroid_mining
+	
+	icon = GFX_focus_generic_asteroid_mining
+	
+	prerequisite = { focus = DRACHENPAKT_to_the_moon }
+	x = 0
+	y = 1
+	relative_position_id = DRACHENPAKT_to_the_moon
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		has_tech = excavation5
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_research_expeditions
+	
+	icon = GFX_focus_POL_develop_polish_shipbuilding
+	
+	mutually_exclusive = { focus = DRACHENPAKT_reach_for_the_stars }
+	mutually_exclusive = { focus = DRACHENPAKT_into_the_depths }
+	prerequisite = { focus = DRACHENPAKT_exploration }
+	
+	x = 0
+	y = 1
+	relative_position_id = DRACHENPAKT_exploration
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		if = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			has_tech = mtg_transport
+			else = {
+				has_tech = transport
+			}
+		}
+		has_tech = radio
+		OR = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+			any_allied_country = {
+				any_owned_state  = {
+					is_coastal = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+	}
+
+	completion_reward = {
+	}
+}
+
+joint_focus = {
+	id = DRACHENPAKT_into_the_depths
+	
+	icon = GFX_goal_generic_construction2
+
+	mutually_exclusive = { focus = DRACHENPAKT_reach_for_the_stars }
+	mutually_exclusive = { focus = DRACHENPAKT_research_expeditions }
+	prerequisite = { focus = DRACHENPAKT_exploration }
+	
+	x = 2
+	y = 1
+	relative_position_id = DRACHENPAKT_exploration
+	cost = 5
+
+	text_icon = NORDIC_focus_style
+
+	available = {
+		is_in_faction = yes
+		is_subject = no
+		has_tech = excavation5
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+	completion_reward_joint_originator = {
+	}
+}

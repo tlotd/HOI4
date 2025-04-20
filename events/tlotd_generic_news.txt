@@ -1,0 +1,32 @@
+﻿ ###########################
+# TLOTD Events
+###########################
+
+add_namespace = tlotd_generic
+
+country_event = { #drachenschanze
+	id = tlotd_generic.1008
+	title = tlotd_generic.1008.t
+	desc = tlotd_generic.1008.d
+	picture = GFX_report_event_drachenschanze
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = tlotd_generic.1008.a
+		ai_chance = { base = 100 }
+		add_advisor_role = {
+            character = LTD_rainer_winkler
+            advisor = {
+                slot = political_advisor
+                idea_token = LTD_rainer_winkler
+                cost = 150
+                traits = {
+                    drachenlord
+                }
+            }
+        } 
+		custom_effect_tooltip = LTD_drachenschanze_unlocked
+	}
+}

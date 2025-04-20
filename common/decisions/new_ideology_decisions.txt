@@ -1,0 +1,55 @@
+monarchist_support_on_the_rise = {
+	turn_monarchist = {
+		available = {
+			monarchism > 0.5
+		}
+
+		visible = {
+		}
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		cost = 100
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = monarchism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
+
+followers_of_the_faith_rise_up = {
+	turn_theocratic = {
+		available = {
+			theocracy > 0.5
+		}
+
+		visible = {
+		}
+
+		icon = GFX_decision_eng_trade_unions_support
+
+		cost = 100
+
+		complete_effect = {
+			set_politics = {
+				ruling_party = theocracy
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

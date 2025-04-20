@@ -1,0 +1,274 @@
+guiTypes = {
+	containerWindowType = {
+		name = drachenpakt_alliance_ui_window
+		orientation = lower_left
+		size = { width = 800 height = 670 }
+		clipping = no # Never clip in focus inlay windows due to some legacy bugs
+		
+		background = {
+			name = background
+			quadTextureSprite = "GFX_tiled_window_1b_border"
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "faction_name"
+			orientation = upper_left
+			position = { x = 0 y = 20 }
+			font = "hoi_36header"
+			context_aware_text = [Country.GetFactionName]
+			format = center
+			maxWidth = 800
+		}
+		iconType = {
+			name = "LTD_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 40 y = 76 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "LTD_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 71 y = 106 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [LTD.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "LTD_text"
+			orientation = upper_left
+			position = { x = 150 y = 100 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [LTD.DrachenpaktMemberInFaction]
+				ROLE = [LTD.DrachenpaktMemberRole]
+				COUNTRY = [LTD.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+		iconType = {
+			name = "LKR_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 440 y = 76 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "LKR_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 471 y = 106 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [LKR.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "LKR_text"
+			orientation = upper_left
+			position = { x = 550 y = 100 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [LKR.DrachenpaktMemberInFaction]
+				ROLE = [LKR.DrachenpaktMemberRole]
+				COUNTRY = [LKR.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "DUN_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 40 y = 196 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "DUN_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 71 y = 226 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [DUN.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "DUN_text"
+			orientation = upper_left
+			position = { x = 150 y = 220 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [DUN.DrachenpaktMemberInFaction]
+				ROLE = [DUN.DrachenpaktMemberRole]
+				COUNTRY = [DUN.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "LEO_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 440 y = 196 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "LEO_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 471 y = 226 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [LEO.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "LEO_text"
+			orientation = upper_left
+			position = { x = 550 y = 220 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [LEO.DrachenpaktMemberInFaction]
+				ROLE = [LEO.DrachenpaktMemberRole]
+				COUNTRY = [LEO.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "NIS_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 40 y = 316 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "NIS_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 71 y = 346 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [NIS.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "NIS_text"
+			orientation = upper_left
+			position = { x = 150 y = 340 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [NIS.DrachenpaktMemberInFaction]
+				ROLE = [NIS.DrachenpaktMemberRole]
+				COUNTRY = [NIS.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "TOR_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 440 y = 316 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "TOR_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 471 y = 346 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [TOR.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "TOR_text"
+			orientation = upper_left
+			position = { x = 550 y = 340 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [TOR.DrachenpaktMemberInFaction]
+				ROLE = [TOR.DrachenpaktMemberRole]
+				COUNTRY = [TOR.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "KRM_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 40 y = 436 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "KRM_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 71 y = 466 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [KRM.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "KRM_text"
+			orientation = upper_left
+			position = { x = 150 y = 460 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [KRM.DrachenpaktMemberInFaction]
+				ROLE = [KRM.DrachenpaktMemberRole]
+				COUNTRY = [KRM.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "JSN_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 440 y = 436 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "JSN_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 471 y = 466 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [JSN.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "JSN_text"
+			orientation = upper_left
+			position = { x = 550 y = 460 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [JSN.DrachenpaktMemberInFaction]
+				ROLE = [JSN.DrachenpaktMemberRole]
+				COUNTRY = [JSN.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+
+		iconType = {
+			name = "CAL_leader_portrait"
+			spriteType = GFX_empty
+			orientation = upper_left
+			position = { x = 40 y = 556 }
+			scale = 0.4
+		}
+		iconType = {
+			name = "CAL_frame"
+			spriteType = GFX_focus_inlay_window_leader_frame
+			orientation = upper_left
+			position = { x = 71 y = 586 }
+			centerPosition = yes
+			scale = 0.8
+			context_aware_tooltip = [CAL.GetLeader]
+		}
+		instantTextBoxType = {
+			name = "CAL_text"
+			orientation = upper_left
+			position = { x = 150 y = 580 }
+			context_aware_text = {
+				localization_key = DRACHENPAKT_MEMBER
+				IN_FACTION = [CAL.DrachenpaktMemberInFaction]
+				ROLE = [CAL.DrachenpaktMemberRole]
+				COUNTRY = [CAL.DrachenpaktMemberGetNameWithFlag]
+			}
+		}
+	}
+}

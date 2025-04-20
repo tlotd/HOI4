@@ -1,0 +1,21 @@
+﻿l_english:
+
+ gondorian_guardsmen:0 "Gondorian Guardsmen"
+ gondorian_guardsmen_desc:0 "For the King"
+ gondorian_guardsmen_entity:0 "Gondorian Guardsmen"
+
+ orc_soldier:0 "Orc Soldier"
+ orc_soldier_desc:0 "For the dark lord"
+ orc_soldier_entity:0 "Orc Soldier"
+
+ silvan_elf_soldier:0 "Silvan Elf Soldier"
+ silvan_elf_soldier_desc:0 "For Middle Earth"
+ silvan_elf_soldier_entity:0 "Silvan Elf Soldier"
+
+ stormtrooper:0 "Stormtrooper"
+ stormtrooper_desc:0 "For the Empire"
+ stormtrooper_entity:0 "Stormtrooper"
+
+ theropod:0 "Theropod"
+ theropod_desc:0 "Rawr!"
+ theropod_entity:0 "Theropod"

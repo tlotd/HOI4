@@ -1,0 +1,326 @@
+LEO_path_to_soviet_glory = {
+	LEO_decision_unite_communist = {
+
+		icon = GFX_decision_SOV_secure_the_administration
+		
+		highlight_states = { highlight_state_targets = {
+			state = 784
+			state = 95
+			state = 96
+			state = 5
+			state = 763
+			state = 188
+			state = 189
+			state = 814
+			state = 11
+			state = 815
+			state = 190
+			state = 809
+			state = 808
+			state = 12
+			state = 810
+			state = 811
+			state = 13
+			state = 812
+			state = 191
+			state = 813
+		}}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			owns_state = 784
+			owns_state = 95
+			owns_state = 96
+			owns_state = 5
+			owns_state = 763
+			owns_state = 188
+			owns_state = 189
+			owns_state = 814
+			owns_state = 11
+			owns_state = 815
+			owns_state = 190
+			owns_state = 809
+			owns_state = 808
+			owns_state = 12
+			owns_state = 810
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			hidden_effect = {
+				784 = { add_core_of = LEO }
+				95 = { add_core_of = LEO }
+				96 = { add_core_of = LEO }
+				5 = { add_core_of = LEO }
+				763 = { add_core_of = LEO }
+				188 = { add_core_of = LEO }
+				189 = { add_core_of = LEO }
+				814 = { add_core_of = LEO }
+				11 = { add_core_of = LEO }
+				815 = { add_core_of = LEO }
+				190 = { add_core_of = LEO }
+				809 = { add_core_of = LEO }
+				808 = { add_core_of = LEO }
+				12 = { add_core_of = LEO }
+				810 = { add_core_of = LEO }
+				811 = { add_core_of = LEO }
+				13 = { add_core_of = LEO }
+				812 = { add_core_of = LEO }
+				191 = { add_core_of = LEO }
+				813 = { add_core_of = LEO }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	LEO_decision_communistan_empire = {
+
+		icon = GFX_decision_SOV_the_stalin_constitution
+		
+		highlight_states = { highlight_state_targets = {
+			state = 784
+			state = 95
+			state = 96
+			state = 5
+			state = 763
+			state = 188
+			state = 189
+			state = 814
+			state = 11
+			state = 815
+			state = 190
+			state = 809
+			state = 808
+			state = 12
+			state = 810
+			state = 811
+			state = 13
+			state = 812
+			state = 191
+			state = 813
+			state = 208
+			state = 195
+			state = 244
+			state = 264
+			state = 209
+			state = 263
+			state = 210
+			state = 246
+			state = 247
+			state = 207
+			state = 242
+			state = 219
+			state = 206
+			state = 204
+			state = 241
+			state = 243
+			state = 224
+			state = 205
+			state = 223
+			state = 222
+			state = 94
+			state = 194
+			state = 193
+			state = 225
+			state = 220
+			state = 93
+			state = 91
+			state = 89
+			state = 199
+			state = 201
+			state = 202
+		}}
+
+		available = {
+			is_subject = no
+			has_government = communism
+			owns_state = 784
+			owns_state = 95
+			owns_state = 96
+			owns_state = 5
+			owns_state = 763
+			owns_state = 188
+			owns_state = 189
+			owns_state = 814
+			owns_state = 11
+			owns_state = 815
+			owns_state = 190
+			owns_state = 809
+			owns_state = 808
+			owns_state = 12
+			owns_state = 810
+			owns_state = 811
+			owns_state = 13
+			owns_state = 812
+			owns_state = 191
+			owns_state = 813
+			owns_state = 208
+			owns_state = 195
+			owns_state = 244
+			owns_state = 264
+			owns_state = 209
+			owns_state = 263
+			owns_state = 210
+			owns_state = 246
+			owns_state = 247
+			owns_state = 207
+			owns_state = 242
+			owns_state = 219
+			owns_state = 206
+			owns_state = 204
+			owns_state = 241
+			owns_state = 243
+			owns_state = 224
+			owns_state = 205
+			owns_state = 223
+			owns_state = 222
+			owns_state = 94
+			owns_state = 194
+			owns_state = 193
+			owns_state = 225
+			owns_state = 220
+			owns_state = 93
+			owns_state = 91
+			owns_state = 89
+			owns_state = 199
+			owns_state = 201
+			owns_state = 202
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = LEO_GreatEmpireCommunistan
+			hidden_effect = {
+				784 = { add_core_of = LEO }
+				95 = { add_core_of = LEO }
+				96 = { add_core_of = LEO }
+				5 = { add_core_of = LEO }
+				763 = { add_core_of = LEO }
+				188 = { add_core_of = LEO }
+				189 = { add_core_of = LEO }
+				814 = { add_core_of = LEO }
+				11 = { add_core_of = LEO }
+				815 = { add_core_of = LEO }
+				190 = { add_core_of = LEO }
+				809 = { add_core_of = LEO }
+				808 = { add_core_of = LEO }
+				12 = { add_core_of = LEO }
+				810 = { add_core_of = LEO }
+				811 = { add_core_of = LEO }
+				13 = { add_core_of = LEO }
+				812 = { add_core_of = LEO }
+				191 = { add_core_of = LEO }
+				813 = { add_core_of = LEO }
+				208 = { add_core_of = LEO }
+				195 = { add_core_of = LEO }
+				244 = { add_core_of = LEO }
+				264 = { add_core_of = LEO }
+				209 = { add_core_of = LEO }
+				263 = { add_core_of = LEO }
+				210 = { add_core_of = LEO }
+				246 = { add_core_of = LEO }
+				247 = { add_core_of = LEO }
+				207 = { add_core_of = LEO }
+				242 = { add_core_of = LEO }
+				219 = { add_core_of = LEO }
+				206 = { add_core_of = LEO }
+				204 = { add_core_of = LEO }
+				241 = { add_core_of = LEO }
+				243 = { add_core_of = LEO }
+				224 = { add_core_of = LEO }
+				205 = { add_core_of = LEO }
+				223 = { add_core_of = LEO }
+				222 = { add_core_of = LEO }
+				94 = { add_core_of = LEO }
+				194 = { add_core_of = LEO }
+				193 = { add_core_of = LEO }
+				225 = { add_core_of = LEO }
+				220 = { add_core_of = LEO }
+				93 = { add_core_of = LEO }
+				91 = { add_core_of = LEO }
+				89 = { add_core_of = LEO }
+				199 = { add_core_of = LEO }
+				201 = { add_core_of = LEO }
+				202 = { add_core_of = LEO }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+LEO_path_to_glory = {
+	LEO_decision_unite = {
+
+		icon = GFX_decision_generic_monarchy
+		
+		available = {
+			is_subject = no
+			has_government = monarchism
+			owns_state = 91
+			owns_state = 89
+			owns_state = 80
+			owns_state = 78
+			owns_state = 766
+			owns_state = 79
+			owns_state = 46
+			owns_state = 81
+			owns_state = 77
+			owns_state = 48
+			owns_state = 801
+			owns_state = 211
+			owns_state = 212
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			# hidden_effect = {
+				91 = { add_core_of = LEO }
+				89 = { add_core_of = LEO }
+				80 = { add_core_of = LEO }
+				78 = { add_core_of = LEO }
+				766 = { add_core_of = LEO }
+				79 = { add_core_of = LEO }
+				46 = { add_core_of = LEO }
+				81 = { add_core_of = LEO }
+				77 = { add_core_of = LEO }
+				48 = { add_core_of = LEO }
+				801 = { add_core_of = LEO }
+				211 = { add_core_of = LEO }
+				212 = { add_core_of = LEO }
+			# }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

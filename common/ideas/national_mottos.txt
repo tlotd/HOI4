@@ -1,0 +1,752 @@
+ideas = {
+	national_motto = {
+		use_list_view = yes
+		law = yes
+		gondor_motto = {
+			picture = gondor_motto
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = gondor_motto_requirement
+					has_country_flag = LotrEmpire
+				}
+				has_government = monarchism
+			}
+			visible = {
+				original_tag = LTD
+				OR = {
+					has_country_leader = {
+						character = LTD_aragorn_strider
+						ruling_only = yes
+					}
+					has_country_leader = {
+						character = LTD_aragorn
+						ruling_only = yes
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		transatlantic_motto = {
+			picture = transatlantic_motto
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = transatlantic_motto_requirement
+					has_country_flag = Transatlantic
+				}
+			}
+			visible = {
+				original_tag = LTD
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		roman_empire_motto = {
+			picture = dun_mare_nostrum
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = roman_empire_motto_requirement
+					has_country_flag = RomanEmpire
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = DUN
+					original_tag = NIS
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		hre_monarchism_motto = {
+			picture = hre_monarchism_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = hre_monarchism_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_HRE
+									has_cosmetic_tag = LKR_HRE
+								}
+								has_government = monarchism
+							}
+							has_country_flag = HolyRomanEmpire
+						}
+					}
+					AND = {
+						original_tag = GER
+						has_government = monarchism
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = LKR
+					original_tag = GER
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		fra_monarchism_motto = {
+			picture = fra_monarchism_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = fra_monarchism_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_FRA
+									has_cosmetic_tag = LTD_FRAEmpire
+									has_cosmetic_tag = NIS_FRA
+									has_cosmetic_tag = NIS_FRAEmpire
+								}
+								has_government = monarchism
+							}
+							has_country_flag = FrenchEmpire
+						}
+					}
+					AND = {
+						original_tag = FRA
+						has_government = monarchism
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = NIS
+					original_tag = FRA
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		ger_fascism_motto = {
+			picture = ger_fascism_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ger_fascism_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_GER
+									has_cosmetic_tag = LTD_GEREmpire
+									has_cosmetic_tag = LTD_GERUnified
+									has_cosmetic_tag = LKR_GER 
+									has_cosmetic_tag = LKR_GEREmpire
+									has_cosmetic_tag = LKR_GERUnified
+								}
+								has_government = fascism
+							}
+							has_country_flag = GermanReich
+						}
+					}
+					AND = {
+						original_tag = GER
+						has_government = fascism
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = LKR
+					original_tag = GER
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		ger_communism_motto = {
+			picture = ger_communism_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ger_communism_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_GER
+									has_cosmetic_tag = LTD_GEREmpire
+									has_cosmetic_tag = LTD_GERUnified
+									has_cosmetic_tag = LKR_GER 
+									has_cosmetic_tag = LKR_GEREmpire
+									has_cosmetic_tag = LKR_GERUnified
+								}
+								has_government = communism
+							}
+							has_country_flag = GermanReich
+						}
+					}
+					AND = {
+						original_tag = GER
+						has_government = communism
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = LKR
+					original_tag = GER
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		ger_democracy_motto = {
+			picture = ger_democracy_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ger_democracy_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_GER
+									has_cosmetic_tag = LTD_GEREmpire
+									has_cosmetic_tag = LTD_GERUnified
+									has_cosmetic_tag = LKR_GER 
+									has_cosmetic_tag = LKR_GEREmpire
+									has_cosmetic_tag = LKR_GERUnified
+								}
+								has_government = democratic
+							}
+							has_country_flag = GermanFederalRepublic
+						}
+					}
+					AND = {
+						original_tag = GER
+						has_government = democratic
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = LKR
+					original_tag = GER
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		ger_monarchism_motto = {
+			picture = ger_monarchism_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ger_monarchism_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_GER
+									has_cosmetic_tag = LTD_GEREmpire
+									has_cosmetic_tag = LTD_GERUnified
+									has_cosmetic_tag = LKR_GER 
+									has_cosmetic_tag = LKR_GEREmpire
+									has_cosmetic_tag = LKR_GERUnified
+								}
+								has_government = monarchism
+							}
+							has_country_flag = GermanEmpire
+						}
+					}
+					AND = {
+						original_tag = GER
+						has_government = monarchism
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = LKR
+					original_tag = GER
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		ger_monarchism_alternative_motto = {
+			picture = ger_monarchism_alternative_motto
+			available = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = ger_monarchism_alternative_motto_requirement
+						OR = {
+							AND = {
+								OR = {
+									has_cosmetic_tag = LTD_GER
+									has_cosmetic_tag = LTD_GEREmpire
+									has_cosmetic_tag = LTD_GERUnified
+									has_cosmetic_tag = LKR_GER 
+									has_cosmetic_tag = LKR_GEREmpire
+									has_cosmetic_tag = LKR_GERUnified
+								}
+								has_government = monarchism
+							}
+							has_country_flag = GermanEmpire
+						}
+					}
+					AND = {
+						original_tag = GER
+						has_government = monarchism
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					original_tag = LKR
+					original_tag = GER
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		pre_monarchism_motto = {
+			picture = pre_monarchism_motto
+			available = {
+				OR = {
+					original_tag = PRE
+					custom_trigger_tooltip = {
+						tooltip = pre_motto_requirement
+						AND = {
+							51 = { is_core_of = ROOT }
+							57 = { is_core_of = ROOT }
+							55 = { is_core_of = ROOT }
+							233 = { is_core_of = ROOT }
+							59 = { is_core_of = ROOT }
+							60 = { is_core_of = ROOT }
+							64 = { is_core_of = ROOT }
+							62 = { is_core_of = ROOT }
+							63 = { is_core_of = ROOT }
+							68 = { is_core_of = ROOT }
+							66 = { is_core_of = ROOT }
+							86 = { is_core_of = ROOT }
+							67 = { is_core_of = ROOT }
+							762 = { is_core_of = ROOT }
+							807 = { is_core_of = ROOT }
+							85 = { is_core_of = ROOT }
+							5 = { is_core_of = ROOT }
+							763 = { is_core_of = ROOT }
+							188 = { is_core_of = ROOT }
+						}
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = PRE
+					original_tag = LKR
+					original_tag = LTD
+					AND = {
+						owns_state = 51
+						owns_state = 57
+						owns_state = 55
+						owns_state = 233
+						owns_state = 59
+						owns_state = 60
+						owns_state = 64
+						owns_state = 62
+						owns_state = 63
+						owns_state = 68
+						owns_state = 66
+						owns_state = 86
+						owns_state = 67
+						owns_state = 762
+						owns_state = 807
+						owns_state = 85
+						owns_state = 5
+						owns_state = 763
+						owns_state = 188
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		ss_motto = {
+			picture = ss_motto
+			available = {
+				has_cosmetic_tag = LTD_SSState
+			}
+			visible = {
+				has_cosmetic_tag = LTD_SSState
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			rule = {
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		bay_motto = {
+			picture = fight_for_the_king
+			available = {
+				OR = {
+					original_tag = BAY
+					AND = {
+						52 = { is_core_of = ROOT }
+						53 = { is_core_of = ROOT }
+						54 = { is_core_of = ROOT }
+					}
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = BAY
+					AND = {
+						owns_state = 52
+						owns_state = 53
+						owns_state = 54
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			rule = {
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		wur_motto = {
+			picture = fight_for_the_king
+			available = {
+				OR = {
+					original_tag = WUR
+					50 = { is_core_of = ROOT }
+				}
+			}
+			visible = {
+				OR = {
+					original_tag = WUR
+					owns_state = 50
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			rule = {
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+
+		# User Countries
+
+		ksw_motto = {
+			picture = ksw_motto
+			available = {
+				original_tag = LTD
+			}
+			visible = {
+				OR = {
+					original_tag = LTD
+					AND = {
+						owns_state = 50
+						owns_state = 240
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		lkr_motto = {
+			picture = fight_for_the_king
+			available = {
+				original_tag = LKR
+			}
+			visible = {
+				OR = {
+					original_tag = LKR
+					AND = {
+						owns_state = 58
+						owns_state = 909
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		leo_motto = {
+			picture = ENG_the_war_to_end_all_wars
+			available = {
+				original_tag = LEO
+			}
+			visible = {
+				OR = {
+					original_tag = LEO
+					AND = {
+						owns_state = 784
+						owns_state = 95
+						owns_state = 96
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		dun_motto = {
+			picture = fight_for_the_king
+			available = {
+				original_tag = DUN
+			}
+			visible = {
+				OR = {
+					original_tag = DUN
+					AND = {
+						owns_state = 103
+						owns_state = 163
+						owns_state = 804
+						owns_state = 104
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		nis_motto = {
+			picture = fight_for_the_king
+			available = {
+				original_tag = NIS
+			}
+			visible = {
+				OR = {
+					original_tag = NIS
+					AND = {
+						owns_state = 555
+						owns_state = 537
+						owns_state = 655
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		krm_motto = {
+			picture = fight_for_the_king
+			available = {
+				original_tag = KRM
+			}
+			visible = {
+				OR = {
+					original_tag = KRM
+					AND = {
+						owns_state = 502
+						owns_state = 503
+						owns_state = 944
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		jsn_motto = {
+			picture = fight_for_the_king
+			available = {
+				original_tag = JSN
+			}
+			visible = {
+				OR = {
+					original_tag = JSN
+					AND = {
+						owns_state = 517
+						owns_state = 518
+					}
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+			cost = 100
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+	}
+}

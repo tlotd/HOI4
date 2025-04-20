@@ -1,0 +1,89 @@
+LTD_fascist_terror_balance = {
+	initial_value = -0.01
+	left_side = LTD_party_control_side
+	right_side = LTD_ss_control_side
+	decision_category = LTD_bop_fascist_terror_category
+#### Party Control ####
+	side = {
+		id = LTD_party_control_side	
+		icon = GFX_bop_LTD_party_control_side
+
+		range = {
+			id = LTD_party_control_contested
+			min = -0.5
+			max = -0
+			modifier = {
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = LTD_party_control_secured
+			min = -1
+			max = -0.5
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = LTD_fascist_terror_balance
+					side = LTD_party_control_side
+					gfx = GFX_bop_LTD_party_control_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = LTD_fascist_terror_balance
+					side = LTD_party_control_side
+					gfx = GFX_bop_LTD_party_control_side
+				}
+			}
+		}
+	}
+#### SS Control ####
+	side = {
+		id = LTD_ss_control_side	
+		icon = GFX_bop_LTD_ss_control_side
+
+		range = {
+			id = LTD_ss_control_contested
+			min = 0
+			max = 0.5
+			modifier = {
+			}
+			on_activate = {
+			
+			}
+			on_deactivate = {
+			
+			}
+
+		}
+		range = {
+			id = LTD_ss_control_secured
+			min = 0.5
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = LTD_fascist_terror_balance
+					side = LTD_ss_control_side
+					gfx = GFX_bop_LTD_ss_control_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = LTD_fascist_terror_balance
+					side = LTD_ss_control_side
+					gfx = GFX_bop_LTD_ss_control_side
+				}
+			}
+		}
+	}
+}
+

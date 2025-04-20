@@ -1,0 +1,147 @@
+LTD_legitimacy_balance = {
+	initial_value = 0.0
+	left_side = LTD_annexation_side
+	right_side = LTD_legitimacy_side
+	decision_category = LTD_bop_legitimacy_category
+#### ANNEXATION ####
+	side = {
+		id = LTD_annexation_side	
+		icon = GFX_bop_LTD_annexation_side
+
+		range = {
+			id = LTD_annexation_low_range
+			min = -0.3
+			max = -0
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_annexation_medium_range
+			min = -0.6
+			max = -0.3
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_annexation_high_range
+			min = -0.9
+			max = -0.6
+			modifier = {
+			}
+			on_activate = {
+				GER = {
+					set_autonomy = {
+						target = LTD
+						autonomous_state = autonomy_reichskommissariat
+						end_wars = no
+						end_civil_wars = no
+					}
+				}
+			}
+			on_deactivate = {
+				GER = {
+					end_puppet = LTD
+				}
+			}
+		}
+		range = {
+			id = LTD_annexation_max_range
+			min = -1
+			max = -0.9
+			modifier = {
+			}
+			on_activate = {
+				remove_power_balance = {
+					id = LTD_legitimacy_balance
+				}
+				GER = {
+					annex_country = {
+						target = LTD
+						transfer_troops = no
+					}
+				}
+				set_power_balance_gfx = {
+					id = LTD_legitimacy_balance
+					side = LTD_annexation_side
+					gfx = GFX_bop_LTD_annexation_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = LTD_legitimacy_balance
+					side = LTD_annexation_side
+					gfx = GFX_bop_LTD_annexation_side
+				}
+			}
+		}
+	}
+#### Autonomy ####
+	side = {
+		id = LTD_legitimacy_side	
+		icon = GFX_bop_LTD_legitimacy_side
+
+		range = {
+			id = LTD_legitimacy_low_range
+			min = 0
+			max = 0.3
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_legitimacy_medium_range
+			min = 0.3
+			max = 0.6
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_legitimacy_high_range
+			min = 0.6
+			max = 0.9
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_legitimacy_max_range
+			min = 0.9
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+				set_power_balance_gfx = {
+					id = LTD_legitimacy_balance
+					side = LTD_legitimacy_side
+					gfx = GFX_bop_LTD_legitimacy_improved_side
+				}
+			}
+			on_deactivate = {
+				set_power_balance_gfx = {
+					id = LTD_legitimacy_balance
+					side = LTD_legitimacy_side
+					gfx = GFX_bop_LTD_legitimacy_side
+				}
+			}
+		}
+	}
+}
+

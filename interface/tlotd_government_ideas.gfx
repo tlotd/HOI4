@@ -1,0 +1,153 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_idea_slot_national_motto"
+		textureFile = "gfx/interface/idea_slot_national_motto.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_gondor_motto"
+		texturefile = "gfx/interface/ideas/national_motto/gondor.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_hre_monarchism_motto"
+		texturefile = "gfx/interface/ideas/national_motto/hre_monarchism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_fra_monarchism_motto"
+		texturefile = "gfx/interface/ideas/national_motto/fra_monarchism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ger_fascism_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ger_fascism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ger_communism_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ger_communism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ger_monarchism_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ger_monarchism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ger_monarchism_alternative_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ger_monarchism_alternative.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ger_democracy_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ger_democracy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_pre_monarchism_motto"
+		texturefile = "gfx/interface/ideas/national_motto/pre_monarchism.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_ss_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ss_fascism.dds"
+	}
+
+	### LTD ###
+	SpriteType = {
+		name = "GFX_idea_ksw_motto"
+		texturefile = "gfx/interface/ideas/national_motto/ksw.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_transatlantic_motto"
+		texturefile = "gfx/interface/ideas/national_motto/transatlantic.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_prussian_helmet"
+		texturefile = "gfx/interface/ideas/prussian_helmet.dds"
+	}
+
+	###########
+
+	SpriteType = {
+		name = "GFX_idea_slot_state_of_economy"
+		textureFile = "gfx/interface/idea_slot_state_of_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_slot_literacy_rate"
+		textureFile = "gfx/interface/idea_slot_literacy_rate.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_slot_economic_alliance"
+		textureFile = "gfx/interface/idea_slot_national_character.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_slot_military_alliance"
+		textureFile = "gfx/interface/idea_slot_national_character.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_high_illiteracy_rate"
+		textureFile = "gfx/interface/ideas/high_illiteracy_rate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_low_literacy_rate"
+		textureFile = "gfx/interface/ideas/low_literacy_rate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_high_literacy_rate"
+		textureFile = "gfx/interface/ideas/high_literacy_rate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_excellent_literacy_rate"
+		textureFile = "gfx/interface/ideas/excellent_literacy_rate.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_generic_economic_alliance"
+		textureFile = "gfx/interface/ideas/economic_alliance.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_generic_military_alliance"
+		textureFile = "gfx/interface/ideas/military_alliance.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_economic_boom"
+		textureFile = "gfx/interface/ideas/economic_boom.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_economic_expansion"
+		textureFile = "gfx/interface/ideas/economic_expansion.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_economic_stagnation"
+		textureFile = "gfx/interface/ideas/economic_stagnation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_low_inflation"
+		textureFile = "gfx/interface/ideas/low_inflation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_moderate_inflation"
+		textureFile = "gfx/interface/ideas/moderate_inflation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_heavy_inflation"
+		textureFile = "gfx/interface/ideas/heavy_inflation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_hyperinflation"
+		textureFile = "gfx/interface/ideas/hyperinflation.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_economic_collapse"
+		textureFile = "gfx/interface/ideas/economic_collapse.dds"
+	}
+}

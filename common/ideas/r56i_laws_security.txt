@@ -1,0 +1,122 @@
+#####---------------------------------------------------------------------> Road to '56, Security Laws
+#####---------------------------------------------------------------------> by GreatExperiment
+
+ideas = {
+
+	r56i_laws_category_security = { 
+	
+		law = yes
+		use_list_view = yes
+		
+		# Order Above All
+		r56i_laws_security_order = {
+
+			available = {
+				NOT = {
+					has_government = democratic
+				}
+				custom_trigger_tooltip = {
+					tooltip = tlotd_has_government_tt
+					NOT = {
+						has_country_leader_ideology = ungoverned
+						has_country_leader_ideology = anarchism
+						has_country_leader_ideology = anarchist_communism
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				stability_factor = -0.05
+				resistance_damage_to_garrison = -0.10
+				drift_defence_factor = 0.10
+			}
+
+			cost = 150
+
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+
+		# Balanced Approach
+		r56i_laws_security_balanced = {
+			
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = tlotd_has_government_tt
+					NOT = {
+						has_country_leader_ideology = ungoverned
+						has_country_leader_ideology = anarchism
+						has_country_leader_ideology = anarchist_communism
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+
+			modifier = {
+				stability_factor = 0.05
+				resistance_damage_to_garrison = 0.05
+				drift_defence_factor = 0.05
+			}
+	
+			cost = 150
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		# Individual Rights
+		r56i_laws_security_rights = {
+
+			available = {
+				OR = {
+					has_government = democratic
+					custom_trigger_tooltip = {
+						tooltip = individual_rights_trigger_tt
+						OR = {
+							has_country_leader_ideology = anarchism
+							has_country_leader_ideology = anarchist_communism
+							has_country_leader_ideology = christmas
+						}
+					}
+				}
+				NOT = {					
+					hidden_trigger = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			#Cost = 125
+
+			modifier = {
+				compliance_gain = 0.05
+				stability_factor = 0.05
+				resistance_damage_to_garrison = 0.10
+				drift_defence_factor = -0.10
+			}
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}	
+	}
+}
+
+#####---------------------------------------------------------------------> End

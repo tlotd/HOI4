@@ -1,0 +1,3990 @@
+﻿focus_tree = {
+	id = LKR_larrys_kaiserreich_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = LKR
+		}
+	}
+	
+	shared_focus = DRACHENPAKT_alliance
+
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = LKR_industrial_effort
+	}
+
+	inlay_window = {
+		id = drachenpakt_alliance_inlay_window
+		position = { x = 4150 y = 50 }
+	}
+
+	shortcut = {
+		name = LKR_political_tree_shortcut
+		target = LKR_future_of_our_nation
+		scroll_wheel_factor = 0.75
+	}
+
+	shortcut = {
+		name = LKR_alliance_shortcut
+		target = DRACHENPAKT_alliance
+		scroll_wheel_factor = 1.0
+	}
+
+	focus = {
+		id = LKR_path_to_freedom
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = LKR_demand_self_governance
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = LKR_path_to_freedom }
+		x = 0
+		y = 2
+		relative_position_id = LKR_path_to_freedom
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+			OVERLORD = {
+				end_puppet = ROOT
+			}
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	focus = {
+		id = LKR_demand_core_territories
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = LKR_demand_self_governance }
+		x = 0
+		y = 2
+		relative_position_id = LKR_demand_self_governance
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			transfer_state = 58
+			transfer_state = 909
+			transfer_state = 99
+			transfer_state = 911
+			transfer_state = 37
+		}
+	}
+
+	focus = {
+		id = LKR_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = LKR_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = LKR_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = LKR_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = LKR_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LKR_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = LKR_army_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = LKR_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = LKR_equipment_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = LKR_motorization_effort }
+		x = 0
+		y = 2
+		relative_position_id = LKR_motorization_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = LKR_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = LKR_doctrine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = LKR_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = LKR_equipment_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = LKR_mechanization_effort }
+		x = 0
+		y = 2
+		relative_position_id = LKR_mechanization_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = LKR_equipment_effort_3 }
+		prerequisite = { focus = LKR_doctrine_effort_2 }
+		prerequisite = { focus = LKR_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = LKR_equipment_effort_3
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 5
+		y = 0
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = LKR_aviation_effort }
+		mutually_exclusive = { focus = LKR_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = LKR_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = LKR_aviation_effort }
+		mutually_exclusive = { focus = LKR_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = LKR_aviation_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = LKR_bomber_focus focus = LKR_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = LKR_bomber_focus
+		cost = 10
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_doctrine_cost_reduction = {
+				name =  air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = LKR_aviation_effort_2 }
+		prerequisite = { focus = LKR_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = LKR_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = LKR_aviation_effort_2 }
+		prerequisite = { focus = LKR_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = LKR_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = LKR_aviation_effort_2 }
+		prerequisite = { focus = LKR_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = LKR_aviation_effort_2
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = LKR_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = LKR_naval_effort }
+		mutually_exclusive = { focus = LKR_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = LKR_naval_effort
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = sub_op_bonus
+				cost_reduction = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = LKR_naval_effort }
+		mutually_exclusive = { focus = LKR_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = LKR_naval_effort
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = fleet_in_being_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = LKR_flexible_navy focus = large_navy }
+		x = 0
+		y = 1
+		relative_position_id = LKR_flexible_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = LKR_large_navy focus = flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = LKR_large_navy
+		cost = 10
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = LKR_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = LKR_submarine_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = LKR_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = LKR_cruiser_effort
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_industrial_effort
+		icon = GFX_goal_generic_production
+		x = 13
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LKR_industrial_effort }
+		x = -1
+		y = 1
+		relative_position_id = LKR_industrial_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_production_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LKR_industrial_effort }
+		x = 1
+		y = 1
+		relative_position_id = LKR_industrial_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LKR_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = LKR_construction_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_production_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LKR_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = LKR_production_effort
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_infrastructure_effort
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = LKR_construction_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = LKR_construction_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = LKR_production_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = LKR_production_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_infrastructure_effort_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = LKR_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = LKR_infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = LKR_infrastructure_effort }
+		x = 2
+		y = 1
+		relative_position_id = LKR_infrastructure_effort
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_nuclear_effort
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = LKR_infrastructure_effort_2 }
+		x = -2
+		y = 1
+		relative_position_id = LKR_infrastructure_effort_2
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = LKR_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = LKR_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	focus = {
+		id = LKR_extra_tech_slot_2
+		icon = GFX_focus_research
+		prerequisite = { focus = LKR_extra_tech_slot }
+		available = {
+			num_of_factories > 50
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		x = 0
+		y = 1
+		relative_position_id = LKR_extra_tech_slot
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}	
+
+	focus = {
+		id = LKR_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = LKR_infrastructure_effort_2 }
+		x = 2
+		y = 1
+		relative_position_id = LKR_infrastructure_effort_2
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 4
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_economic_reforms
+		icon = GFX_focus_KRM_devalue_the_peso
+		x = 19
+		y = 0
+		cost = 8.86
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INFLATION }
+		
+		available_if_capitulated = yes
+
+		available = {
+			has_idea = low_inflation
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = low_inflation
+				add_idea = economic_stagnation
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = LKR_fund_universities
+		icon = GFX_focus_generic_literacy_university
+		x = 23
+		y = 0
+		cost = 8.58
+		search_filters = { FOCUS_FILTER_LITERACY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		available = {
+			NOT = {
+				OR = {
+					has_idea = moderate_inflation
+					has_idea = heavy_inflation
+					has_idea = hyperinflation
+					has_idea = economic_collapse
+				}
+			}
+			has_stability > 0.8
+			num_of_factories > 50
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = high_literacy_rate
+				add_idea = excellent_literacy_rate
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_future_of_our_nation
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 26
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = LKR_will_of_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = LKR_future_of_our_nation }
+		mutually_exclusive = { focus = LKR_internationalism_focus }
+		mutually_exclusive = { focus = LKR_liberty_ethos }
+		mutually_exclusive = { focus = LKR_convert_to_faschism }
+		mutually_exclusive = { focus = LKR_divine_path }
+		relative_position_id = LKR_future_of_our_nation
+		available = {
+			monarchism > 0.20
+			is_subject = no
+		}
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = LKR_fight_for_the_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = LKR_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+		relative_position_id = LKR_will_of_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = fight_for_the_king
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_create_trust_in_the_crown
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = LKR_fight_for_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_fight_for_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = enthusiasm_for_the_crown
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_royal_high_command
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = LKR_create_trust_in_the_crown }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = -1
+		y = 1
+		relative_position_id = LKR_create_trust_in_the_crown
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = royal_high_command
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_schleswig_remilitarization
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LKR_will_of_the_king }
+		x = 1
+		y = 2
+		relative_position_id = LKR_will_of_the_king
+
+		available = {
+			is_subject = no
+		}
+		bypass = {
+			909 = { is_demilitarized_zone = no }
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			909 = { set_demilitarized_zone = no }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_jutland_is_ours
+		icon = GFX_focus_generic_attack_denmark
+		prerequisite = { focus = LKR_schleswig_remilitarization focus = LKR_from_a_leader_to_the_leader }
+		x = 1
+		y = 1
+		relative_position_id = LKR_schleswig_remilitarization
+
+		available = {
+			NOT = { is_in_faction_with = DEN }
+		}
+		bypass = {
+			OR = {
+				is_in_faction_with = DEN
+				owns_state = 99
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LKR.1 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_friesland_is_ours
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = { focus = LKR_schleswig_remilitarization }
+		x = -1
+		y = 1
+		relative_position_id = LKR_schleswig_remilitarization
+
+		available = {
+			NOT = { is_in_faction_with = HOL }
+		}
+		bypass = {
+			OR = {
+				is_in_faction_with = HOL
+				owns_state = 36
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LKR.4 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_german_faction
+		icon = GFX_focus_focus_fra_third_empire
+		prerequisite = { focus = LKR_royal_high_command focus = LKR_jutland_is_ours focus = LKR_friesland_is_ours }
+		mutually_exclusive = { focus = LKR_destabilize_german_north }
+		mutually_exclusive = { focus = LKR_revolution_southeast }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_royal_high_command
+
+		available = {
+			NOT = { is_in_faction_with = GER }
+			GER = { has_government = ROOT }
+		}
+		bypass = {
+			is_in_faction_with = GER
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_to_faction = GER
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	focus = {
+		id = LKR_destabilize_german_north
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = LKR_jutland_is_ours focus = LKR_friesland_is_ours }
+		mutually_exclusive = { focus = LKR_german_faction }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_friesland_is_ours
+
+		available = {
+			has_government = monarchism
+			OR = {
+				AND = {
+					date > 1910.1.1
+					GER = { 
+						monarchism > 0.25
+					}
+					NOT = { is_in_faction_with = GER }
+				}
+				AND = {
+					date < 1910.1.1
+					PRE = { 
+						monarchism > 0.25
+					}
+					NOT = { is_in_faction_with = PRE }
+				}
+			}
+
+		}
+		bypass = {
+			date > 1919.1.1
+			OR = {
+				OLD = {
+					owns_state = 233
+					owns_state = 56
+				}
+				is_in_faction_with = OLD
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LKR.2 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_destabilize_british_isles
+		icon = GFX_focus_eng_decolonization
+		prerequisite = { focus = LKR_jutland_is_ours focus = LKR_friesland_is_ours }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 2
+		y = 1
+		relative_position_id = LKR_jutland_is_ours
+
+		available = {
+			has_government = monarchism
+			ENG = { 
+				monarchism > 0.25
+			}
+			NOT = { is_in_faction_with = ENG }
+		}
+		bypass = {
+			OR = {
+				WLS = { 
+					owns_state = 122
+				}
+				owns_state = 122
+				is_in_faction_with = ENG
+				is_in_faction_with = WLS
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			hidden_effect = {
+				WLS = {
+					transfer_state = 122
+					set_popularities = {
+						monarchism = 65
+						fascism = 20
+						communism = 10
+						democratic = 5
+					}
+					set_politics = {
+						ruling_party = monarchism
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_demand_something_in_return
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = LKR_destabilize_british_isles }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_destabilize_british_isles
+
+		available = {
+			has_army_manpower = { size > 79999 }
+			check_variable = { num_equipment_in_armies_k@infantry_equipment > 8 }
+			custom_trigger_tooltip = {
+			 	tooltip = GER_anschluss_eq_trigger_tt
+			 	check_variable = { num_equipment_in_armies_k@infantry_equipment > 8 }
+			}
+			is_subject = no
+			WLS = {
+				is_subject = no
+				owns_state = 122
+			}
+		}
+		bypass = {
+			122 = {
+				owner = {
+					tag = LKR
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			puppet = WLS
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_marry_wales
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = LKR_demand_something_in_return }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = LKR_demand_something_in_return
+
+		available = {
+			is_subject = no
+			has_government = monarchism
+			WLS = {
+				has_government = monarchism
+				is_subject = yes
+				owns_state = 122
+			}
+		}
+		bypass = {
+			122 = {
+				owner = {
+					tag = LKR
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			annex_country = { target = WLS transfer_troops = yes }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_fortify_claims_oldenburg
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = LKR_destabilize_german_north }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_destabilize_german_north
+
+		available = {
+			is_subject = no
+			OLD = { 
+				is_subject = no
+				owns_state = 233
+				owns_state = 56
+				monarchism > 0.5
+			}
+		}
+		bypass = {
+			233 = { is_core_of = LKR }
+			56 = { is_core_of = LKR }
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			233 = { add_core_of = LKR }
+			56 = { add_core_of = LKR }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_oldenburg_treaty
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = LKR_fortify_claims_oldenburg }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_fortify_claims_oldenburg
+
+		available = {
+			is_subject = no
+			OLD = { 
+				is_subject = no
+				owns_state = 233
+				owns_state = 56
+				monarchism > 0.5
+			}
+		}
+		bypass = {
+			233 = {
+				owner = {
+					tag = LKR
+				}
+			}
+			56 = {
+				owner = {
+					tag = LKR
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			puppet = OLD
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_oldenburg_annexation
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = LKR_oldenburg_treaty }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_oldenburg_treaty
+
+		available = {
+			is_subject = no
+			OLD = { 
+				is_subject = yes
+				owns_state = 233
+				owns_state = 56
+			}
+		}
+		bypass = {
+			233 = {
+				owner = {
+					tag = LKR
+				}
+			}
+			56 = {
+				owner = {
+					tag = LKR
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LKR.3 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_form_the_hanseatic_league
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = LKR_oldenburg_annexation }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_oldenburg_annexation
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = LKR_decision_form_hanseatic_league
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_unite_the_north
+		icon = GFX_big_focus_palace
+		prerequisite = { focus = LKR_form_the_hanseatic_league }
+		prerequisite = { focus = LKR_war_plan_white }
+		x = 1
+		y = 1
+		relative_position_id = LKR_form_the_hanseatic_league
+
+		available = {
+			owns_state = 58
+			owns_state = 909
+			owns_state = 99
+			owns_state = 911
+			owns_state = 37
+			owns_state = 233
+			owns_state = 56
+			owns_state = 36
+			owns_state = 7
+			owns_state = 35
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			unlock_decision_tooltip = LKR_decision_unite_the_north
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_legacy_of_the_german_empire
+		icon = GFX_focus_generic_german_empire
+		prerequisite = { focus = LKR_unite_the_north }
+		x = 0
+		y = 1
+		relative_position_id = LKR_unite_the_north
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = LKR_decision_form_german_empire
+		}
+	}
+
+	focus = {
+		id = LKR_holy_roman_empire
+		icon = GFX_focus_generic_holy_roman_empire
+		prerequisite = { focus = LKR_legacy_of_the_german_empire }
+		x = 0
+		y = 1
+		relative_position_id = LKR_legacy_of_the_german_empire
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = LKR_decision_form_holy_roman_empire
+		}
+	}
+
+	focus = {
+		id = LKR_focus_north
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = LKR_jutland_is_ours focus = LKR_from_a_leader_to_the_leader focus = LKR_paramilitarism }
+		x = 0
+		y = 1
+		relative_position_id = LKR_jutland_is_ours
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+		}
+
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_blue
+		icon = GFX_focus_generic_attack_sweden
+		prerequisite = { focus = LKR_focus_north }
+		x = 0
+		y = 1
+		relative_position_id = LKR_focus_north
+
+		available = {
+			NOT = { is_in_faction_with = SWE }
+		}
+		bypass = {
+			owns_state = 138
+			owns_state = 139
+			owns_state = 140
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SWE
+				expire = 0
+				generator = { 138 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_gray
+		icon = GFX_focus_generic_attack_norway
+		prerequisite = { focus = LKR_war_plan_blue }
+		x = 0
+		y = 1
+		relative_position_id = LKR_war_plan_blue
+
+		available = {
+			NOT = { is_in_faction_with = NOR }
+		}
+		bypass = {
+			owns_state = 110
+			owns_state = 142
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = NOR
+				expire = 0
+				generator = { 110 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_white
+		icon = GFX_focus_generic_attack_finland
+		prerequisite = { focus = LKR_war_plan_gray }
+		x = 0
+		y = 1
+		relative_position_id = LKR_war_plan_gray
+
+		available = {
+			NOT = { is_in_faction_with = FIN }
+		}
+		bypass = {
+			owns_state = 111
+			owns_state = 146
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FIN
+				expire = 0
+				generator = { 111 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_black
+		icon = GFX_focus_attack_germany
+		prerequisite = { focus = LKR_jutland_is_ours focus = LKR_friesland_is_ours }
+		x = 4
+		y = 1
+		relative_position_id = LKR_jutland_is_ours
+
+		available = {
+			NOT = { is_in_faction_with = GER }
+		}
+		bypass = {
+			owns_state = 57
+			owns_state = 59
+			owns_state = 61
+			owns_state = 62
+			owns_state = 64
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_core_state
+				target = GER
+				expire = 0
+				generator = { 57 59 61 62 64 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_yellow
+		icon = GFX_focus_SOV_baltic_security
+		prerequisite = { focus = LKR_war_plan_black }
+		x = 0
+		y = 1
+		relative_position_id = LKR_war_plan_black
+
+		available = {
+			NOT = { is_in_faction_with = LIT }
+			NOT = { is_in_faction_with = LAT }
+			NOT = { is_in_faction_with = EST }
+		}
+		bypass = {
+			owns_state = 11
+			owns_state = 808
+			owns_state = 812
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = LIT
+				expire = 0
+				generator = { 11 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LAT
+				expire = 0
+				generator = { 808 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = EST
+				expire = 0
+				generator = { 812 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_pink
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = LKR_war_plan_yellow }
+		x = 0
+		y = 1
+		relative_position_id = LKR_war_plan_yellow
+
+		available = {
+			NOT = { is_in_faction_with = SSS }
+			NOT = { is_in_faction_with = LEO }
+		}
+		bypass = {
+			owns_state = 763
+			owns_state = 784
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SSS
+				expire = 0
+				generator = { 763 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LEO
+				expire = 0
+				generator = { 784 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_war_plan_red
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = LKR_war_plan_pink }
+		x = 0
+		y = 1
+		relative_position_id = LKR_war_plan_pink
+
+		available = {
+			NOT = { is_in_faction_with = SOV }
+		}
+		bypass = {
+			owns_state = 219
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				expire = 0
+				generator = { 219 }
+			}
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_crusaders_of_the_continent
+		icon = GFX_focus_LIT_restore_the_grand_duchy
+		prerequisite = { focus = LKR_unite_the_north }
+		prerequisite = { focus = LKR_war_plan_red }
+		prerequisite = { focus = LKR_marry_wales }
+		x = 4
+		y = 1
+		relative_position_id = LKR_unite_the_north
+
+		available = {
+			owns_state = 112
+			owns_state = 41
+			owns_state = 16
+			owns_state = 6
+			owns_state = 8
+			owns_state = 28
+			owns_state = 50
+			owns_state = 3
+			owns_state = 913
+			owns_state = 4
+			owns_state = 2
+			owns_state = 9
+			owns_state = 10
+			owns_state = 11
+			owns_state = 808
+			owns_state = 812
+			owns_state = 111
+		}
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = {
+				spirit_of_the_crusaders
+			}
+			#BE
+			6 = { add_core_of = LKR }
+			34 = { add_core_of = LKR }
+			#FR
+			29 = { add_core_of = LKR }
+			15 = { add_core_of = LKR }
+			785 = { add_core_of = LKR }
+			16 = { add_core_of = LKR }
+			18 = { add_core_of = LKR }
+			17 = { add_core_of = LKR }
+			14 = { add_core_of = LKR }
+			30 = { add_core_of = LKR }
+			24 = { add_core_of = LKR }
+			27 = { add_core_of = LKR }
+			23 = { add_core_of = LKR }
+			33 = { add_core_of = LKR }
+			19 = { add_core_of = LKR }
+			25 = { add_core_of = LKR }
+			26 = { add_core_of = LKR }
+			20 = { add_core_of = LKR }
+			32 = { add_core_of = LKR }
+			735 = { add_core_of = LKR }
+			806 = { add_core_of = LKR }
+			81 = { add_core_of = LKR }
+			22 = { add_core_of = LKR }
+			21 = { add_core_of = LKR }
+			851 = { add_core_of = LKR }
+			#PT
+			180 = { add_core_of = LKR }
+			112 = { add_core_of = LKR }
+			181 = { add_core_of = LKR }
+			795 = { add_core_of = LKR }
+			179 = { add_core_of = LKR }
+			#SP
+			171 = { add_core_of = LKR }
+			790 = { add_core_of = LKR }
+			174 = { add_core_of = LKR }
+			791 = { add_core_of = LKR }
+			176 = { add_core_of = LKR }
+			792 = { add_core_of = LKR }
+			172 = { add_core_of = LKR }
+			166 = { add_core_of = LKR }
+			794 = { add_core_of = LKR }
+			165 = { add_core_of = LKR }
+			788 = { add_core_of = LKR }
+			170 = { add_core_of = LKR }
+			41 = { add_core_of = LKR }
+			175 = { add_core_of = LKR }
+			789 = { add_core_of = LKR }
+			793 = { add_core_of = LKR }
+			168 = { add_core_of = LKR }
+			167 = { add_core_of = LKR }
+			169 = { add_core_of = LKR }
+			173 = { add_core_of = LKR }
+			118 = { add_core_of = LKR }
+			#kleinvieh
+			177 = { add_core_of = LKR }
+			1 = { add_core_of = LKR }
+			114 = { add_core_of = LKR }
+			845 = { add_core_of = LKR }
+			3 = { add_core_of = LKR }
+			846 = { add_core_of = LKR }
+			913 = { add_core_of = LKR }
+			848 = { add_core_of = LKR }
+			153 = { add_core_of = LKR }
+			152 = { add_core_of = LKR }
+			4 = { add_core_of = LKR }
+			69 = { add_core_of = LKR }
+			9 = { add_core_of = LKR }
+			74 = { add_core_of = LKR }
+			75 = { add_core_of = LKR }
+			72 = { add_core_of = LKR }
+			70 = { add_core_of = LKR }
+			664 = { add_core_of = LKR }
+			71 = { add_core_of = LKR }
+			73 = { add_core_of = LKR }
+			#IT
+			158 = { add_core_of = LKR }
+			159 = { add_core_of = LKR }
+			850 = { add_core_of = LKR }
+			39 = { add_core_of = LKR }
+			160 = { add_core_of = LKR }
+			736 = { add_core_of = LKR }
+			599 = { add_core_of = LKR }
+			161 = { add_core_of = LKR }
+			162 = { add_core_of = LKR }
+			157 = { add_core_of = LKR }
+			2 = { add_core_of = LKR }
+			117 = { add_core_of = LKR }
+			849 = { add_core_of = LKR }
+			156 = { add_core_of = LKR }
+			115 = { add_core_of = LKR }
+			116 = { add_core_of = LKR }
+			#PL
+			87 = { add_core_of = LKR }
+			98 = { add_core_of = LKR }
+			10 = { add_core_of = LKR }
+			90 = { add_core_of = LKR }
+			762 = { add_core_of = LKR }
+			88 = { add_core_of = LKR }
+			97 = { add_core_of = LKR }
+			92 = { add_core_of = LKR }
+			784 = { add_core_of = LKR }
+			96 = { add_core_of = LKR }
+			95 = { add_core_of = LKR }
+			94 = { add_core_of = LKR }
+			93 = { add_core_of = LKR }
+			91 = { add_core_of = LKR }
+			89 = { add_core_of = LKR }
+			#Lit
+			188 = { add_core_of = LKR }
+			189 = { add_core_of = LKR }
+			815 = { add_core_of = LKR }
+			11 = { add_core_of = LKR }
+			814 = { add_core_of = LKR }
+			#Lat
+			190 = { add_core_of = LKR }
+			809 = { add_core_of = LKR }
+			808 = { add_core_of = LKR }
+			12 = { add_core_of = LKR }
+			810 = { add_core_of = LKR }
+			#Est
+			811 = { add_core_of = LKR }
+			13 = { add_core_of = LKR }
+			812 = { add_core_of = LKR }
+			813 = { add_core_of = LKR }
+			191 = { add_core_of = LKR }
+			#Fin
+			111 = { add_core_of = LKR }
+			146 = { add_core_of = LKR }
+			149 = { add_core_of = LKR }
+			150 = { add_core_of = LKR }
+			148 = { add_core_of = LKR }
+			722 = { add_core_of = LKR }
+			147 = { add_core_of = LKR }
+			#LTD
+			8 = { add_core_of = LKR }
+			28 = { add_core_of = LKR }
+			42 = { add_core_of = LKR }
+			240 = { add_core_of = LKR }
+			50 = { add_core_of = LKR }
+			739 = { add_core_of = LKR }
+			54 = { add_core_of = LKR }
+			53 = { add_core_of = LKR }
+			52 = { add_core_of = LKR }
+		}
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = LKR_convert_to_faschism
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = LKR_future_of_our_nation }
+		mutually_exclusive = { focus = LKR_internationalism_focus }
+		mutually_exclusive = { focus = LKR_liberty_ethos }
+		mutually_exclusive = { focus = LKR_will_of_the_king }
+		mutually_exclusive = { focus = LKR_divine_path }
+		relative_position_id = LKR_future_of_our_nation
+		available = {
+			fascism > 0.20
+			is_subject = no
+		}
+		x = 5
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_visit_berlin
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = LKR_convert_to_faschism }
+		relative_position_id = LKR_convert_to_faschism
+		available = {
+			GER = {
+				has_government = fascism
+			}
+		}
+		x = -1
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		cancelable = no
+		select_effect = {
+			hidden_effect = {
+				set_country_leader_portrait = {
+					ideology = monarchism
+					portrait = GFX_lkr_portrait_cardboard_larry_meister
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = "'LaRs MeIeR I.'"
+				}
+				remove_country_leader_trait = the_sacred_king
+				remove_country_leader_trait = ideological_crusader
+			}
+		}
+		completion_reward = {
+			add_ideas = fascist_conversion
+			hidden_effect = {
+				set_country_leader_portrait = {
+					ideology = monarchism
+					portrait = GFX_lkr_portrait_larry_meister
+				}
+				set_country_leader_name = {
+					ideology = monarchism
+					name = "Larry Meister I."
+				}
+				add_country_leader_trait = fascist_sympathies
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_from_a_leader_to_the_leader
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = LKR_visit_berlin }
+		relative_position_id = LKR_visit_berlin
+		available = {
+			fascism > 0.5
+		}
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1938.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_stettin_conference
+		icon = GFX_focus_BUL_prussia_of_the_balkans
+		prerequisite = { focus = LKR_from_a_leader_to_the_leader }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		x = 0
+		y = 1
+		relative_position_id = LKR_from_a_leader_to_the_leader
+
+		available = {
+			is_subject = no
+			has_government = fascism
+			GER = { has_government = fascism }
+		}
+		bypass = {
+			61 = {
+				owner = {
+					tag = LKR
+				}
+			}
+			62 = {
+				owner = {
+					tag = LKR
+				}
+			}
+			63 = {
+				owner = {
+					tag = LKR
+				}
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LKR.31 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = LKR_convert_to_faschism }
+		x = 1
+		y = 1
+		relative_position_id = LKR_convert_to_faschism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+	
+	focus = {
+		id = LKR_internationalism_focus
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = LKR_future_of_our_nation }
+		mutually_exclusive = { focus = LKR_liberty_ethos}
+		mutually_exclusive = { focus = LKR_will_of_the_king }
+		mutually_exclusive = { focus = LKR_convert_to_faschism }
+		mutually_exclusive = { focus = LKR_divine_path }
+		available = {
+			communism > 0.20
+			is_subject = no
+		}
+		x = -9
+		y = 1
+		relative_position_id = LKR_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}			
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}	
+
+	focus = {
+		id = LKR_liberty_ethos
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = LKR_future_of_our_nation }
+		mutually_exclusive = { focus = LKR_internationalism_focus }
+		mutually_exclusive = { focus = LKR_will_of_the_king }
+		mutually_exclusive = { focus = LKR_convert_to_faschism }
+		mutually_exclusive = { focus = LKR_divine_path }
+		available = {
+			democratic > 0.20
+			is_subject = no
+		}
+		x = -5
+		y = 1
+		relative_position_id = LKR_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+
+	focus = {
+		id = LKR_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = LKR_internationalism_focus }
+		x = 0
+		y = 1
+		relative_position_id = LKR_internationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = LKR_neutrality_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = LKR_liberty_ethos }
+		mutually_exclusive = { focus = LKR_interventionism_focus }
+		x = -1
+		y = 1
+		relative_position_id = LKR_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LKR_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = LKR_liberty_ethos }
+		mutually_exclusive = { focus = LKR_neutrality_focus }
+		x = 1
+		y = 1
+		relative_position_id = LKR_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LKR_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LKR_militarism }
+		x = 0
+		y = 1
+		relative_position_id = LKR_militarism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = LKR_neutrality_focus }
+		x = 0
+		y = 1
+		relative_position_id = LKR_neutrality_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = LKR_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = LKR_interventionism_focus }
+		x = 0
+		y = 1
+		relative_position_id = LKR_interventionism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = LKR_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LKR_military_youth }
+		x = 0
+		y = 1
+		relative_position_id = LKR_military_youth
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+
+	focus = {
+		id = LKR_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LKR_political_correctness }
+		x = 0
+		y = 1
+		relative_position_id = LKR_political_correctness
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = LKR_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = LKR_volunteer_corps }
+		x = 0
+		y = 1
+		relative_position_id = LKR_volunteer_corps
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = LKR_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = LKR_foreign_expeditions focus = LKR_deterrence }
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		x = -1
+		y = 6
+		relative_position_id = LKR_foreign_expeditions
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = LKR_indoctrination_focus }
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = LKR_indoctrination_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			add_political_power = 200
+		}
+	}
+
+	focus = {
+		id = LKR_revolution_southeast
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = LKR_political_commissars }
+		mutually_exclusive = { focus = LKR_german_faction }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_political_commissars
+
+		available = {
+			has_government = communism
+			GER = { 
+				communism > 0.25
+			}
+			NOT = { is_in_faction_with = GER }
+		}
+		bypass = {
+			OR = {
+				DDR = { 
+					owns_state = 59
+					owns_state = 61
+					owns_state = 64
+					owns_state = 60
+				}
+				is_in_faction_with = DDR
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			country_event = { id = news_LKR.51 }
+			hidden_effect = {
+				DDR = {
+					transfer_state = 233
+					transfer_state = 59
+					transfer_state = 61
+					transfer_state = 64
+					transfer_state = 60
+				}
+				SAX = {
+					transfer_state = 65
+				}
+				PRE = {
+					transfer_state = 62
+					transfer_state = 63
+					transfer_state = 68
+					transfer_state = 66
+					transfer_state = 67
+				}
+				SAX = {
+					set_popularities = {
+						fascism = 65
+						monarchism = 20
+						communism = 10
+						democratic = 5
+					}
+					set_politics = {
+						ruling_party = fascism
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+				PRE = {
+					set_popularities = {
+						monarchism = 65
+						fascism = 20
+						communism = 10
+						democratic = 5
+					}
+					set_politics = {
+						ruling_party = monarchism
+						last_election = "1936.1.1"
+						election_frequency = 48
+						elections_allowed = no
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_small_price_for_the_revolution
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = LKR_revolution_southeast }
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id = LKR_revolution_southeast
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		completion_reward = {
+			transfer_state = 61
+			puppet = DDR
+		}
+	}
+
+	focus = {
+		id = LKR_end_the_germans
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = LKR_small_price_for_the_revolution }
+		x = 0
+		y = 1
+		relative_position_id = LKR_small_price_for_the_revolution
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			annex_country = { target = DDR transfer_troops = yes }
+			SAX = {
+				transfer_state = 60
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_attack_saxony
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = LKR_end_the_germans }
+		x = -1
+		y = 1
+		relative_position_id = LKR_end_the_germans
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SAX
+				expire = 0
+				generator = { 65 }
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_attack_prussia
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = LKR_end_the_germans }
+		x = 1
+		y = 1
+		relative_position_id = LKR_end_the_germans
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = PRE
+				expire = 0
+				generator = { 63 }
+			}
+		}
+	}
+
+	focus = {
+		id = LKR_troops_in_schleswig
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = LKR_attack_saxony }
+		prerequisite = { focus = LKR_attack_prussia }
+		x = 1
+		y = 1
+		relative_position_id = LKR_attack_saxony
+		cost = 10
+
+		bypass = {
+			909 = { is_demilitarized_zone = no }
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			909 = { set_demilitarized_zone = no }
+		}
+	}
+
+	focus = {
+		id = LKR_red_jutland
+		icon = GFX_focus_generic_attack_denmark
+		prerequisite = { focus = LKR_troops_in_schleswig }
+		x = 0
+		y = 1
+		relative_position_id = LKR_troops_in_schleswig
+
+		available = {
+			NOT = { is_in_faction_with = DEN }
+		}
+		bypass = {
+			OR = {
+				is_in_faction_with = DEN
+				owns_state = 99
+			}
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			country_event = { id = news_LKR.1 }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = LKR_red_jutland focus = LKR_why_we_fight focus = LKR_unite_the_north focus = LKR_reclaim_the_holy_land }
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}		
+		x = -2
+		y = 1
+		relative_position_id = LKR_unite_the_north
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_research_slots > 3
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}
+
+	focus = {
+		id = LKR_divine_path
+		icon = GFX_focus_generic_pope
+		prerequisite = { focus = LKR_future_of_our_nation }
+		mutually_exclusive = { focus = LKR_internationalism_focus }
+		mutually_exclusive = { focus = LKR_liberty_ethos }
+		mutually_exclusive = { focus = LKR_will_of_the_king }
+		mutually_exclusive = { focus = LKR_convert_to_faschism }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 9
+		y = 1
+		relative_position_id = LKR_future_of_our_nation
+
+		available = {
+			theocracy > 0.20
+			is_subject = no
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_strength_through_faith
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = LKR_divine_path }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_divine_path
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = strength_through_faith
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_trust_in_your_belief
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = LKR_strength_through_faith }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_strength_through_faith
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = trust_in_your_belief
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_deus_vult
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = LKR_trust_in_your_belief }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 1
+		relative_position_id = LKR_trust_in_your_belief
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = deus_vult
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = LKR_reclaim_the_holy_land
+		icon = GFX_focus_generic_teutonic
+		prerequisite = { focus = LKR_deus_vult }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 6
+		relative_position_id = LKR_deus_vult
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				expire = 0
+				generator = { 454 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = PAL
+				expire = 0
+				generator = { 454 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = ISR
+				expire = 0
+				generator = { 454 }
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

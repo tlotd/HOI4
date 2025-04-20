@@ -1,0 +1,72 @@
+### search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ALLIANCE }
+
+joint_focus = {
+	id = FORM_KSW_southwestern_idea
+	icon = GFX_focus_generic_KSW
+	x = 30
+	y = 0
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	cost = 10
+
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+		BAD = {
+			add_ideas = spirit_of_the_southwest
+		}
+		WUR = {
+			add_ideas = spirit_of_the_southwest
+		}
+	}
+}
+
+joint_focus = {
+	id = FORM_KSW_approach_the_other
+	icon = GFX_focus_generic_approach_eachother
+	prerequisite = { focus = FORM_KSW_southwestern_idea }
+	relative_position_id = FORM_KSW_southwestern_idea
+	x = 0
+	y = 1
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	cost = 10
+
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+	}
+}
+
+joint_focus = {
+	id = FORM_KSW_unite
+	icon = GFX_focus_BUL_prussia_of_the_balkans
+	prerequisite = { focus = FORM_KSW_approach_the_other }
+	relative_position_id = FORM_KSW_approach_the_other
+	x = 0
+	y = 1
+	search_filters = { FOCUS_FILTER_POLITICAL }
+
+	cost = 10
+
+	available = {
+	}
+
+	ai_will_do = {
+		factor = 0
+	}
+
+	completion_reward_joint_originator = {
+		country_event = { id = news_LTD.202 }
+	}
+}

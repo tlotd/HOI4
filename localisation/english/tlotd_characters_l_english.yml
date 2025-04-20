@@ -1,0 +1,124 @@
+﻿l_english:
+
+ leader_gui_enabled:0 "Enables §HDual Leader View§!."
+ leader_gui_disabled:0 "Disables §HDual Leader View§!."
+
+ LTD_future_content_requirement:0 "Planned for a future Update."
+
+ no_leader:0 "§R[ERROR]§!"
+
+ anarchists:0 "§RAnarchists§!"
+
+ generic_colonial_council:0 "Colonial Council"
+
+ DKR_exiled_kaiser_wilhelm:0 "Exiled Kaiser Wilhelm"
+
+ LTD_wur_monarchist:0 "King of Württemberg"
+
+ generic_league_of_nations:0 "League of Nations"
+ generic_empty_national_parliament:0 "Empty National Parliament"
+
+ generic_national_parliament:0 "National Parliament"
+
+ LTD_theodor_zu_liechtenstein:0 "President Theodor zu Liechtenstein"
+ LTD_ralf_kramer:0 "President Ralf Krämer"
+ LTD_wilhelm_brant:0 "President Wilhelm Brant"
+
+ LTD_rudolf_von_preussen:0 "Kanzler Rudolf von Preussen"
+
+ LTD_angelina_rosenthaler:0 "Angelina Rosenthaler"
+
+ LTD_aragorn_strider:0 "Strider"
+ LTD_aragorn:0 "Aragorn"
+ LTD_aragorn_emperor:0 "Emperor Aragorn"
+ LTD_aragorn_high_king:0 "High King Aragorn"
+ LTD_gandalf:0 "Gandalf the Gray"
+
+ LTD_wilhelm_murr:0 "Wilhelm Murr"
+ LTD_gerhard_eichmann:0 "Gerhard Eichmann"
+ LTD_walter_schlechtnach:0 "Walter Schlechtnach"
+ LTD_egon_hetzer:0 "Egon Hetzer"
+ LTD_alois_pfeifer:0 "Alois Pfeifer"
+ LTD_gottfried_ziegler:0 "Gottfried Ziegler"
+
+ LTD_bernhard_rhein:0 "Bernhard Rhein"
+ LTD_boris_jaeger:0 "Boris Jaeger"
+ LTD_joachim_meister:0 "Joachim Meister"
+
+ LTD_theoden:0 "Théoden"
+ LTD_boromir:0 "Boromir"
+ LTD_faramir:0 "Faramir"
+ LTD_eomer:0 "Éomer"
+ LTD_bard:0 "Bard"
+ LTD_eagles:0 "Eagles"
+ LTD_elrond:0 "Elrond"
+ LTD_legolas:0 "Legolas"
+ LTD_gimli:0 "Gimli"
+ LTD_samwise:0 "Samwise"
+
+ LTD_democratic_revolutionaries:0 "Democratic Revolutionaries"
+ LTD_fascist_revolutionaries:0 "Fascist Revolutionaries"
+ LTD_communist_revolutionaries:0 "Communist Revolutionaries"
+
+ LTD_islam:0 "Islam Leader"
+ military_government_elven:0 "Elven Military Council"
+
+ LTD_sauron:0 "Sauron"
+ LTD_mouth_of_sauron:0 "Mouth of Sauron"
+ LTD_erich_koch:0 "Erich Koch"
+ LTD_claus_von_stauffenberg:0 "Claus von Stauffenberg"
+ LTD_herr_heiler:0 "Herr Heiler"
+ LTD_karl_ruprecht_kroenen:0 "Karl Ruprecht Kroenen"
+ LTD_herr_mann:0 "Herr Mann"
+
+ LTD_jean_allemand:0 "Jean Allemand"
+ LTD_jean_allemand_empereur:0 "Empereur Jean Allemand"
+
+ LTD_rainer_winkler:0 "Rainer Winkler"
+
+ LTD_franz_von_falke:0 "Franz von Falke"
+ LTD_andreas_front:0 "Andreas Front"
+ LTD_mikhael_von_kerch:0 "Mikhael von Kerch"
+ LTD_josef_burgfried:0 "Josef Burgfried"
+ LTD_fridolin_freibier:0 "Fridolin Freibier"
+ LTD_erwin_adler:0 "Erwin Adler"
+ LTD_viktor_von_schmaus:0 "Viktor von Schmaus"
+ LTD_ernst_brenner:0 "Ernst Brenner"
+ LTD_joseph_leopold:0 "Joseph Leopold"
+
+ DUN_thrawn:0 "Thrawn"
+ DUN_comrade_thrawn:0 "Comrade Thrawn"
+ DUN_adolf_chissler:0 "Adolf Chissler"
+ DUN_darth_vader:0 "Darth Vader"
+
+ DUN_witch_king_of_angmar:0 "Witch King of Angmar"
+
+ DUN_king_theoden:0 "King Théoden"
+
+ DUN_bakif:0 "Supreme General Ba’kif"
+ DUN_aralani:0 "Admiral Ar'alani"
+ DUN_eprill:0 "Eprill"
+ DUN_mitthrawnuruodo:0 "Senior Captain Mitth'raw'nuruodo"
+ DUN_ufsamakro:0 "Midcaptain Ufsa‘makro"
+ DUN_mitthrassafis:0 "Syndic Mitth'ras'safis"
+
+ NIS_korosensei:0 "Korosensei"
+ NIS_sensei_wu:0 "Sensei Wu"
+ NIS_king_thranduil:0 "King Thranduil"
+ NIS_saruman_the_white:0 "Saruman the White"
+
+ ARC_inuit_council:0 "Inuit Council"
+ ARC_arctic_comitee:0 "Arctic Comitee"
+ ARC_cristopher_old:0 "Sir C. Old"
+ ARC_santa_claus:0 "Santa Claus"
+ ARC_the_thing:0 "The Thing"
+
+ lotr_witch_king_of_angmar:0 "Witch King of Angmar"
+ lotr_khamul:0 "Khamûl"
+ lotr_uvantha:0 "Uvantha"
+ lotr_hoarmurath:0 "Hoarmurath"
+ lotr_dwar:0 "Dwar"
+ lotr_adunaphel:0 "Adunaphel"
+ lotr_akhorahil:0 "Akhorahil"
+ lotr_ji_indur:0 "Ji Indur"
+ lotr_ren:0 "Ren"

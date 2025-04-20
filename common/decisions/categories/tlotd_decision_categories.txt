@@ -1,0 +1,483 @@
+LTD_debug = {
+	icon = GFX_decision_category_PLACEHOLDER
+	picture = GFX_LTD_path_to_glory
+	priority = 1002
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+	}
+}
+LTD_cosmetic_debug = {
+	icon = GFX_decision_category_PLACEHOLDER
+	picture = GFX_LTD_path_to_glory
+	priority = 1001
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+	}
+}
+
+league_of_nations = {
+	icon = GFX_decision_category_generic_formable_nations
+	picture = GFX_picture_league_of_nations
+	priority = 100
+	
+	allowed = {
+	}
+	visible = {
+		has_country_flag = LON_member
+	}
+}
+
+partition_of_territory = {
+	icon = GFX_decision_category_border_war
+	priority = 99
+	allowed = {
+	}
+	visible = {
+	}
+}
+
+LTD_unstable_state = {
+	icon = generic_propaganda
+	priority = 99
+	
+	allowed = {
+		TAG = LTD
+	}
+
+	visible = {
+		has_completed_focus = LTD_declaration_of_a_new_state
+		NOT = {
+			OR = {
+				has_completed_focus = OWGAWFTV_tlotd
+				has_completed_focus = LTD_scarlet_revolution
+				has_completed_focus = LTD_beacon_of_european_freedom
+				has_completed_focus = LTD_divine_path
+				has_completed_focus = LTD_return_of_the_king
+				has_completed_focus = LTD_ultra_nationalist_coup
+				has_completed_focus = LTD_military_takeover
+			}
+		}
+	}
+}
+
+LTD_reforge_the_sword_that_was_broken = {
+	icon = GFX_decision_category_hol_bernhard
+	picture = GFX_LTD_reforge_the_sword_that_was_broken
+	priority = 98
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_country_leader_with_trait = bearer_of_the_shards_of_narsil
+	}
+}
+
+LTD_cosmetic = {
+	icon = GFX_decision_category_hol_bernhard
+	picture = GFX_LTD_reforge_the_sword_that_was_broken
+	priority = 97
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_country_leader = {
+			character = LTD_aragorn
+			ruling_only = yes
+		}
+	}
+}
+
+LTD_bop_legitimacy_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 9
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+	}
+}
+
+LTD_bop_fascist_terror_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 9
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+	}
+}
+LTD_research_expeditions = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 9
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+	}
+}
+LTD_beacon_of_hope = {
+	icon = GFX_decision_category_generic_democracy
+	picture = GFX_LTD_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = democratic
+	}
+}
+LTD_path_to_glory = {
+	icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+	picture = GFX_LTD_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = monarchism
+	}
+}
+LTD_weltreich = {
+	icon = GFX_decision_category_fascism
+	picture = GFX_LTD_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = fascism
+	}
+}
+LTD_worker_state = {
+	icon = GFX_decision_category_communism
+	picture = GFX_LTD_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = communism
+	}
+}
+LTD_anarchism_knows_no_borders = {
+	icon = GFX_decision_category_anarchism
+	picture = GFX_LTD_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = no_government
+	}
+}
+LTD_decision_category_accession_talks = {
+	icon = GFX_decision_category_generic_democracy
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = democratic
+	}
+}
+LTD_decision_category_federation_talks = {
+	icon = GFX_decision_category_generic_democracy
+	priority = 8
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		has_government = democratic
+	}
+}
+LTD_divine_right = {
+	icon = GFX_decision_category_theocracy
+	picture = GFX_LTD_path_to_glory
+	priority = 7
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		OR = {
+			has_government = theocracy
+			has_government = monarchism
+		}
+	}
+}
+LTD_colonial_ambitions = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 6
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		OR = {
+			has_completed_focus = LTD_colonial_ambitions
+			has_country_flag = enable_debug
+		}
+	}
+}
+LTD_puppet_management = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 6
+	
+	allowed = {
+		TAG = LTD
+	}
+	visible = {
+		OR = {
+			has_completed_focus = LTD_the_paris_accords
+			has_completed_focus = LTD_puppeteer
+			has_country_flag = enable_debug
+		}
+	}
+}
+LKR_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_LKR_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = LKR
+	}
+	visible = {
+	}
+}
+LKR_weltreich = {
+	icon = GFX_decision_category_fascism
+	picture = GFX_LKR_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LKR
+	}
+	visible = {
+	}
+}
+LKR_worker_state = {
+	icon = GFX_decision_category_communism
+	picture = GFX_LTD_path_to_glory
+	priority = 7
+	
+	allowed = {
+		TAG = LKR
+	}
+	visible = {
+	}
+}
+
+DUN_bop_ethnic_tensions_category = {
+	icon = GFX_decision_category_generic_political_actions
+	priority = 9
+	
+	allowed = {
+		TAG = DUN
+	}
+	visible = {
+	}
+}
+DUN_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_DUN_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = DUN
+	}
+	visible = {
+		has_government = monarchism
+	}
+}
+DUN_expansionist_defense = {
+	icon = GFX_decision_category_fascism
+	picture = GFX_DUN_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = DUN
+	}
+	visible = {
+		has_government = fascism
+	}
+}
+DUN_worker_state = {
+	icon = GFX_decision_category_communism
+	picture = GFX_DUN_path_to_glory
+	priority = 7
+	
+	allowed = {
+		TAG = DUN
+	}
+	visible = {
+		has_government = communism
+	}
+}
+LEO_path_to_soviet_glory = {
+	icon = GFX_decision_category_communism
+	picture = GFX_LEO_path_to_soviet_glory
+	priority = 9
+	
+	allowed = {
+		TAG = LEO
+	}
+	visible = {
+	}
+}
+LEO_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_LEO_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = LEO
+	}
+	visible = {
+	}
+}
+NIS_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_NIS_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = NIS
+	}
+	visible = {
+		has_government = monarchism
+	}
+}
+NIS_expansionist_defense = {
+	icon = GFX_decision_category_fascism
+	picture = GFX_NIS_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = NIS
+	}
+	visible = {
+		has_government = fascism
+	}
+}
+KRM_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_KRM_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = KRM
+	}
+	visible = {
+		has_government = monarchism
+	}
+}
+KRM_expand_the_reich = {
+    icon = GFX_decision_category_monarchism
+    picture = GFX_KRM_path_to_glory
+    priority = 8
+
+    allowed = {
+        TAG = KRM
+    }
+    visible = {
+        has_government = fascism
+    }
+}
+JSN_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_JSN_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = JSN
+	}
+	visible = {
+		has_government = monarchism
+	}
+}
+KTG_path_to_glory = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_LKR_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = KTG
+	}
+	visible = {
+	}
+}
+KTG_Viking_Ancestry = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_LKR_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = KTG
+	}
+	visible = {
+	}
+}
+TOR_awake_the_dragons = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_NIS_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = TOR
+	}
+	visible = {
+		has_completed_focus = TOR_awake_the_dragons
+	}
+}
+TOR_occupation = {
+	icon = GFX_decision_category_monarchism
+	picture = GFX_NIS_path_to_glory
+	priority = 9
+	
+	allowed = {
+		TAG = TOR
+	}
+	visible = {
+	}
+}
+TOR_path_to_glory = {
+	icon = GFX_decision_category_eng_appeal_to_imperial_loyalists
+	picture = GFX_LTD_path_to_glory
+	priority = 8
+	
+	allowed = {
+		TAG = TOR
+	}
+	visible = {
+	}
+}
+monarchist_support_on_the_rise = {
+	icon = GFX_decision_category_monarchism
+
+	allowed = {
+	}
+
+	visible = {
+		NOT = { has_government = monarchism }
+		has_idea_with_trait = monarchist_traditionalist
+	}
+}

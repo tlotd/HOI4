@@ -1,0 +1,54 @@
+state={
+	id=58
+	name="STATE_58"
+
+	resources={
+		steel=29 # was: 100
+		aluminium=11 # was: 24
+		oil=3	
+	}
+
+	history={
+		set_variable = { culture = 24 }
+		victory_points = {
+			6389 5 
+		}
+		victory_points = {
+			9347 10 
+		}
+		owner = LKR
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 6
+			air_base = 5
+			6389 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = LKR
+		1871.1.18 = {
+			add_core_of = GER
+		}
+		1939.1.1 = {
+			buildings = {
+				synthetic_refinery = 3
+				anti_air_building = 5
+				dockyard = 7
+				arms_factory = 8
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		3368 6257 6389 9320 9347 11331
+	}
+	manpower=3248150
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=15.000
+}

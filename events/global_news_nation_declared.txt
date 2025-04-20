@@ -1,0 +1,197 @@
+﻿###########################
+# News Events
+###########################
+
+# 0 European Union
+
+# 1 - 10 GER
+
+#100 - 110 LTD
+
+add_namespace = global_news_nation_declared
+
+#European Union
+news_event = {
+	id = global_news_nation_declared.0
+	title = global_news_nation_declared.0.t
+	desc = global_news_nation_declared.0.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "european_union_anthem"
+		}
+	}
+
+	option = {
+		name = global_news_nation_declared.0.a
+	}
+}
+
+#Germany Monarchist
+news_event = {
+	id = global_news_nation_declared.1
+	title = global_news_nation_declared.1.t
+	desc = global_news_nation_declared.1.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "german_empire_anthem"
+		}
+	}
+	
+	option = {
+		name = global_news_nation_declared.1.a
+	}
+}
+
+#Germany Fascist
+news_event = {
+	id = global_news_nation_declared.2
+	title = global_news_nation_declared.2.t
+	desc = global_news_nation_declared.2.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "german_reich_anthem"
+		}
+	}
+	
+	option = {
+		name = global_news_nation_declared.2.a
+	}
+}
+
+#Germany Communist
+news_event = {
+	id = global_news_nation_declared.3
+	title = global_news_nation_declared.3.t
+	desc = global_news_nation_declared.3.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "german_democratic_republic_anthem"
+		}
+	}
+	
+	option = {
+		name = global_news_nation_declared.3.a
+	}
+}
+
+#Germany Democratic
+news_event = {
+	id = global_news_nation_declared.4
+	title = global_news_nation_declared.4.t
+	desc = global_news_nation_declared.4.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "german_federal_republic_anthem"
+		}
+	}
+	
+	option = {
+		name = global_news_nation_declared.4.a
+	}
+}
+
+#Germany Democratic
+news_event = {
+	id = global_news_nation_declared.88
+	title = global_news_nation_declared.88.t
+	desc = global_news_nation_declared.88.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "teufelslied_acoustic"
+		}
+	}
+	
+	option = {
+		name = global_news_nation_declared.4.a
+	}
+}
+
+#LTD LOTR
+news_event = {
+	id = global_news_nation_declared.100
+	title = global_news_nation_declared.100.t
+	desc = global_news_nation_declared.100.d
+	picture = GFX_news_event_gondor
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "lotr_main_theme"
+		}
+	}
+
+	option = {
+		name = global_news_nation_declared.100.a
+	}
+}
+
+#LTD Monarchist
+news_event = {
+	id = global_news_nation_declared.101
+	title = global_news_nation_declared.101.t
+	desc = global_news_nation_declared.101.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_nation_declared.101.a
+	}
+}
+
+#LTD Transatlantic
+news_event = {
+	id = global_news_nation_declared.102
+	title = global_news_nation_declared.102.t
+	desc = global_news_nation_declared.102.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_nation_declared.102.a
+	}
+}

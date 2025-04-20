@@ -1,0 +1,228 @@
+﻿division_template = {
+	name = "Divisione di Fanteria"					# Represents Infanterie Welles 1-4
+	division_names_group = ITA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Divisione Alpina" 
+	division_names_group = ITA_MNT_01
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+	    mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+		mountaineers = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = { 						
+	name = "Fallschirmjäger-Division"				# Represents Fallschirm-jaeger Rgts 1 and 2
+	division_names_group = GER_PAR_01
+
+	regiments = {
+		paratrooper = { x = 0 y = 0 }
+		paratrooper = { x = 0 y = 1 }
+		paratrooper = { x = 0 y = 2 }
+		paratrooper = { x = 1 y = 0 }
+		paratrooper = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Divisione di Fanteria (mot.)" 			# Divisione di Fanteria (mot)
+	division_names_group = GER_MOT_02
+
+	regiments = {
+		motorized = { x = 0 y = 0 }
+	    motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+	    motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+        mot_recon = { x = 0 y = 0 }
+	 	engineer = { x = 0 y = 1 }
+        artillery = { x = 0 y = 2 }			
+	}
+}
+division_template = {
+	name = "Leichte Division"				# Represents Leichte Divisions (10. Div, PzG Kempf)
+	division_names_group = GER_LTARM_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# REVISIT -- L Arm = Pz IIC (variant?) for all
+		motorized = { x = 1 y = 0 }			
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Panzer-Division"				# Represents Panzer Divisions 1-5
+	division_names_group = GER_Arm_01
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		# REVISIT -- L Arm = Pz IIC (variant?) for all
+		light_armor = { x = 0 y = 1 }		
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		motorized = { x = 2 y = 2 }
+	}
+	support = {
+		mot_recon = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Reggimento di Cavalleria" 
+	division_names_group = ITA_CAV_01 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Sicherungs-Division"				# Represents Border Guard Commands, Fortress Groups, etc.
+	division_names_group = GER_GAR_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }				# Lower-quality equipment and training
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 0
+}
+
+units = {
+	division= {	# "1. Divisione di Fanteria"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9582
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	# "2. Divisione di Fanteria"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11564
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	# "3. Divisione di Fanteria"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6631
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+	division= {	# "4. Divisione di Fanteria"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 3657
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+	}
+}
+
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "ALX"
+		}
+		requested_factories = 5
+		progress = 0.1
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "ALX" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "ALX" 
+		}
+		requested_factories = 2
+		progress = 0.3
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = light_tank_equipment_2
+			creator = "ALX" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = motorized_equipment_1
+			creator = "ALX" 
+		}
+		requested_factories = 1
+		progress = 0.4
+		efficiency = 100
+	}	
+}

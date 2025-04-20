@@ -1,0 +1,139 @@
+characters = {
+	GER_wilhelm_ii = { #Empty Wilhelm II so he doesn't become ruler automatically if the neutrals are in power
+		name = GER_wilhelm_ii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ger_wilhelm_ii
+			}	
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			expire="1941.6.4"
+			traits= { the_sacred_king ideological_crusader }
+			id=-1
+		}
+	}
+
+	GER_wilhelm_iii = { #Empty Wilhelm III so he doesn't become ruler automatically if the neutrals are in power
+		name = GER_wilhelm_iii
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ger_wilhelm_iii
+			}	
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			expire="1951.7.20"
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+
+	GER_wilhelm_iv = { #Empty Wilhelm IV so he doesn't become ruler automatically if the neutrals are in power
+		name = GER_wilhelm_iv
+		portraits = {
+			civilian = {
+				large = GFX_portrait_GER_wilhelm_iv
+				small = GFX_portrait_GER_wilhelm_iv_small
+			}	
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			expire="1967.1.1"
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+
+	GER_victoria = { #Empty Vicky3 
+		name = GER_victoria
+		gender = female
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ger_victoria_louise
+			}
+		}
+	}
+	AUS_franz_joseph_i={
+		name="Franz Joseph I."
+		portraits={
+			civilian={
+				large="GFX_aus_portrait_franz_joseph_i"
+			}	
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			expire="1916.11.21"
+			traits= { the_sacred_king ideological_crusader }
+			id=-1
+		}
+	}
+	FRA_napoleon_iii={
+		name="Napoleon III."
+		portraits={
+			civilian={
+				large="GFX_fra_portrait_napoleon_iii"
+			}	
+		}
+		country_leader={
+			ideology=french_monarchism
+			expire="1873.01.09"
+			traits= {}
+			id=-1
+		}
+	}
+	FRA_raymond_poincare={
+		name="Raymond Poincaré"
+		portraits={
+			civilian={
+				large="GFX_fra_portrait_raymond_poincare"
+			}	
+		}
+		country_leader={
+			ideology=conservatism
+			expire="1934.10.15"
+			traits= {}
+			id=-1
+		}
+	}
+	SOV_nicholas_ii={
+		name="Nicholas II."
+		portraits={
+			civilian={
+				large="GFX_sov_portrait_nicholas_ii"
+			}	
+		}
+		country_leader={
+			ideology=constitutional_monarchy
+			expire="1917.03.15"
+			traits= { }
+			id=-1
+		}
+	}
+	USA_henry_iii={
+		name="Henry III."
+		portraits={
+			civilian={
+				large=GFX_usa_portrait_henry_iii
+			}	
+		}
+		country_leader={
+			ideology=constitutional_monarchy
+			traits= { the_sacred_king ideological_crusader }
+			id=-1
+		}
+	}
+	TUR_mehmed_i_hamis={
+		name="Mehmed V"
+		portraits={
+			civilian={
+				large="GFX_tur_portrait_mehmed_i_hamis"
+			}
+		}
+		country_leader={
+			ideology=constitutional_monarchy
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+}

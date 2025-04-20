@@ -1,0 +1,107 @@
+LTD_parliament_balance = {
+	initial_value = 0.0
+	left_side = LTD_progressive_side
+	right_side = LTD_conservative_side
+	decision_category = LTD_bop_parliament_category
+#### progressive ####
+	side = {
+		id = LTD_progressive_side	
+		icon = GFX_bop_LTD_parliament
+
+		range = {
+			id = LTD_centre_left_party
+			min = -0.3
+			max = -0
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_progressive_party
+			min = -0.6
+			max = -0.3
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_left_party
+			min = -0.9
+			max = -0.6
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_communism_party
+			min = -1
+			max = -0.9
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+#### Autonomy ####
+	side = {
+		id = LTD_conservative_side	
+		icon = GFX_bop_LTD_parliament
+
+		range = {
+			id = LTD_centre_right_party
+			min = 0
+			max = 0.3
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_conservative_party
+			min = 0.3
+			max = 0.6
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_right_party
+			min = 0.6
+			max = 0.9
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = LTD_fascism_party
+			min = 0.9
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+}
+

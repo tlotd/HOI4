@@ -1,0 +1,52 @@
+
+state={
+	id=240
+	name="STATE_240"
+	manpower = 127739
+	resources={
+
+	}
+	
+	state_category = rural
+
+	history={
+		set_variable = { culture = 15 }
+		owner = BAY
+		victory_points = { 
+			11531 5 # Saarbrücken
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = SAR
+		add_core_of = BAY
+		1871.1.18 = {
+			owner = LTD
+			add_core_of = LTD
+			add_core_of = GER
+		}
+		1919.1.1 = {
+			set_demilitarized_zone = yes
+			owner = SAR
+		}
+
+		1936.3.7 = {
+			set_demilitarized_zone = no
+			owner = LTD
+			remove_core_of = WDZ
+		}
+
+		1939.1.1 ={
+			buildings = {
+				radar_station = 1
+			}
+		}
+	}
+
+	provinces={
+		11531
+	}
+	
+	local_supplies=7.000
+}

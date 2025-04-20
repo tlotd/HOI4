@@ -1,0 +1,72 @@
+intelligence_agency = {
+
+	picture = GFX_intelligence_agency_logo_ltd
+	names = { LTD_intelligence_agency }
+	
+	default = { tag = LTD }
+	available = { original_tag = LTD }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_lkr
+	names = { LKR_intelligence_agency }
+	
+	default = { tag = LKR }
+	available = { original_tag = LKR }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_dun
+	names = { DUN_intelligence_agency }
+	
+	default = { tag = DUN }
+	available = { original_tag = DUN }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_sov
+	names = { LEO_intelligence_agency }
+	
+	default = { tag = LEO }
+	available = { original_tag = LEO }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { NIS_intelligence_agency }
+	
+	default = { tag = NIS }
+	available = { original_tag = NIS }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { KRM_intelligence_agency }
+	
+	default = { tag = KRM }
+	available = { original_tag = KRM }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { JSN_intelligence_agency }
+	
+	default = { tag = JSN }
+	available = { original_tag = JSN }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { CAL_intelligence_agency }
+	
+	default = { tag = CAL}
+	available = { original_tag = CAL }
+}
+intelligence_agency = {
+	
+	picture = GFX_intelligence_agency_logo_hol
+	names = { TOR_intelligence_agency }
+	
+	default = { tag = TOR }
+	available = { original_tag = TOR }
+}

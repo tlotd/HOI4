@@ -1,0 +1,40 @@
+state={
+	id=739
+	name="STATE_739"
+
+	history={
+		set_variable = { culture = 16 }
+		owner = HES
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			6488 20.0 
+		}
+		add_core_of = HES
+		1871.1.18 = {
+			owner = GER
+			add_core_of = GER
+		}
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+				arms_factory = 4
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		589 3397 3574 6444 6488 11560 
+	}
+	manpower=2617418
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=15.000
+}

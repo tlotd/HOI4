@@ -1,0 +1,86 @@
+characters={
+	LAF_no_leader={
+		name=no_leader
+		portraits={
+			civilian={
+				large="GFX_portrait_no_leader"
+			}
+		}
+		country_leader={
+			ideology=ungoverned
+			traits= { }
+			id=-1
+		}
+	}
+	LAF_colonial_council={
+		name=generic_colonial_council
+		portraits={
+			civilian={
+				large="GFX_portrait_colonial_council"
+			}
+		}
+		country_leader={
+			ideology=colonial_imperialism
+			traits= {
+				lead_by_foreigners
+			}
+			id=-1
+		}
+	}
+	LAS_no_leader={
+		name=no_leader
+		portraits={
+			civilian={
+				large="GFX_portrait_no_leader"
+			}
+		}
+		country_leader={
+			ideology=ungoverned
+			traits= { }
+			id=-1
+		}
+	}
+	LAS_colonial_council={
+		name=generic_colonial_council
+		portraits={
+			civilian={
+				large="GFX_portrait_colonial_council"
+			}
+		}
+		country_leader={
+			ideology=colonial_imperialism
+			traits= {
+				lead_by_foreigners
+			}
+			id=-1
+		}
+	}
+	LAM_no_leader={
+		name=no_leader
+		portraits={
+			civilian={
+				large="GFX_portrait_no_leader"
+			}
+		}
+		country_leader={
+			ideology=ungoverned
+			traits= { }
+			id=-1
+		}
+	}
+	LAM_colonial_council={
+		name=generic_colonial_council
+		portraits={
+			civilian={
+				large="GFX_portrait_colonial_council"
+			}
+		}
+		country_leader={
+			ideology=colonial_imperialism
+			traits= {
+				lead_by_foreigners
+			}
+			id=-1
+		}
+	}
+}

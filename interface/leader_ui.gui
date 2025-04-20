@@ -1,0 +1,137 @@
+guiTypes = {
+	containerWindowType =  {
+	
+		name = "leader_gui"
+		position = { x = 10 y = 44 }
+		size = { width = 170 height = 260 }
+		orientation = upper_left
+		
+		# Add a new iconType (copy-paste) for every PM. Change its name and set the SpriteType to the PM, please give it an entry in the .gfx file
+
+		iconType = {
+			name = "League_Of_Nations" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_portrait_league_of_nations"
+		}
+
+		iconType = {
+			name = "Empty_National_Parliament" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_portrait_empty_national_parliament"
+		}
+
+		iconType = {
+			name = "National_Parliament" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_portrait_national_parliament"
+		}
+
+		iconType = {
+			name = "Lucy_Connor" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_cal_portrait_lucy_connor"
+		}
+
+		iconType = {
+			name = "Korosensei" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_nis_portrait_korosensei"
+		}
+
+		iconType = {
+			name = "Rudolf_von_Preussen" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_ltd_portrait_rudolf_von_preussen"
+		}
+
+		iconType = {
+			name = "Jean_Allemand" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_ltd_portrait_jean_allemand"
+		}
+
+		iconType = {
+			name = "Mouth_of_Sauron" 
+			position = { x = 8 y = 10 }
+			spriteType = "GFX_lotr_portrait_mouth_of_sauron"
+		}
+
+		# Add a new iconType (copy-paste) for every PM. Change its name and set the SpriteType to the PM, please give it an entry in the .gfx file
+		
+		iconType = {
+			name = "pm_frame"
+			quadTextureSprite ="GFX_pol_leader_frame"
+			position = { x = 0 y = 0 }
+			pdx_tooltip = "GUIHEADNAME"
+		}
+
+		buttonType = {
+			name = "leader_button"
+			quadTextureSprite ="GFX_HOS_button"
+			position = { x = 155 y = 230 }
+			pdx_tooltip = "HOS_OR_HOG"
+		}
+		
+		buttonType = {
+			name = "second_leader_button"
+			quadTextureSprite ="GFX_HOS_button_2"
+			position = { x = 155 y = 205 }
+			pdx_tooltip = "HOS_OR_HOG"
+		}
+		
+		instantTextboxType = {
+			name = "pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[GetPrimeMinister]"
+			pdx_tooltip = "GUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+		
+		instantTextboxType = {
+			name = "second_pm_name"
+			position = { x = 8 y = 226 }
+			font = "hoi_18mbs"
+			text = "[GetOtherPrimeMinister]"
+			pdx_tooltip = "GUIHEADNAME"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+		}	
+	}
+}
+guiTypes = {
+	containerWindowType = {
+		name = "for_leader_gui"
+		position = { x = 130 y = 255 }
+		IconType = {
+			name = "for_leader_button"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "GetSecondLEADER"
+		}
+		IconType = {
+			name = "for_second_leader_button"
+			position = { x = 0 y = 28}
+			spriteType = "GFX_HOS_button_2"
+			pdx_tooltip = "GetThirdLEADER"
+		}
+	}
+	
+	containerwindowtype = {
+		name = "mapmode_leader_gui_window"
+		position = { x = 0 y = 0 }
+		size = { width = 72 height = 72 }
+		
+		iconType = {
+			name = "leader_gui_icon"
+			position = { x = 0 y = 0}
+			spriteType = "GFX_HOS_button"
+			pdx_tooltip = "GetSecondLEADER"
+		}
+	}
+}

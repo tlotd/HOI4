@@ -1,0 +1,999 @@
+spriteTypes = {
+
+	frameAnimatedSpriteType = {
+		name = "GFX_portrait_no_leader"
+		texturefile = "gfx/leaders/generic/portrait_no_leader.png"
+		noOfFrames = 54
+		animation_rate_fps = 30
+		looping = yes
+		play_on_show = yes
+	}
+
+	spriteType = {
+		name = "GFX_portrait_empty_national_parliament"
+		texturefile = "gfx/leaders/generic/portrait_empty_national_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_national_parliament"
+		texturefile = "gfx/leaders/generic/portrait_national_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_parliament"
+		texturefile = "gfx/leaders/generic/portrait_parliament.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_colonial_council"
+		texturefile = "gfx/leaders/generic/portrait_colonial_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_league_of_nations"
+		texturefile = "gfx/leaders/generic/portrait_league_of_nations.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_democratic_revolutionaries"
+		texturefile = "gfx/leaders/generic/portrait_democratic_revolutionaries.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_fascist_revolutionaries"
+		texturefile = "gfx/leaders/generic/portrait_fascist_revolutionaries.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_communist_revolutionaries"
+		texturefile = "gfx/leaders/generic/portrait_communist_revolutionaries.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_isla_nublar"
+		texturefile = "gfx/leaders/LTD/portrait_isla_nublar.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_ltd_animated_portrait_isla_nublar"
+		texturefile = "gfx/leaders/LTD/animated_portrait_isla_nublar.png"
+		noOfFrames = 54
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gandalf"
+		texturefile = "gfx/leaders/LTD/portrait_gandalf.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_isla_nublar"
+		texturefile = "gfx/leaders/LTD/portrait_isla_nublar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_rudolf_von_preussen"
+		texturefile = "gfx/leaders/LTD/portrait_rudolf_von_preussen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_claus_von_stauffenberg"
+		texturefile = "gfx/leaders/LTD/portrait_claus_von_stauffenberg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_karl_ruprecht_kroenen"
+		texturefile = "gfx/leaders/LTD/portrait_karl_ruprecht_kroenen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_herr_mann"
+		texturefile = "gfx/leaders/LTD/portrait_herr_mann.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_jean_allemand"
+		texturefile = "gfx/leaders/LTD/portrait_jean_allemand.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_pjodric"
+		texturefile = "gfx/leaders/LTD/portrait_pjodric.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_anarchists"
+		texturefile = "gfx/leaders/LTD/portrait_anarchists.dds"
+	}
+
+#############################################
+
+	spriteType = {
+		name = "GFX_ltd_portrait_wilhelm_murr"
+		texturefile = "gfx/leaders/LTD/portrait_wilhelm_murr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_wilhelm_murr_small"
+		texturefile = "gfx/leaders/LTD/idea_wilhelm_murr.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gerhard_eichmann"
+		texturefile = "gfx/leaders/LTD/portrait_gerhard_eichmann.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gerhard_eichmann_small"
+		texturefile = "gfx/leaders/LTD/idea_gerhard_eichmann.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_walter_schlechtnach"
+		texturefile = "gfx/leaders/LTD/portrait_walter_schlechtnach.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_walter_schlechtnach_small"
+		texturefile = "gfx/leaders/LTD/idea_walter_schlechtnach.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_egon_hetzer"
+		texturefile = "gfx/leaders/LTD/portrait_egon_hetzer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_egon_hetzer_small"
+		texturefile = "gfx/leaders/LTD/idea_egon_hetzer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_alois_pfeifer"
+		texturefile = "gfx/leaders/LTD/portrait_alois_pfeifer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_alois_pfeifer_small"
+		texturefile = "gfx/leaders/LTD/idea_alois_pfeifer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gottfried_ziegler"
+		texturefile = "gfx/leaders/LTD/portrait_gottfried_ziegler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gottfried_ziegler_small"
+		texturefile = "gfx/leaders/LTD/idea_gottfried_ziegler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_franz_von_falke_small"
+		texturefile = "gfx/leaders/LTD/idea_franz_von_falke.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_andreas_front_small"
+		texturefile = "gfx/leaders/LTD/idea_andreas_front.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_mikhael_von_kerch_small"
+		texturefile = "gfx/leaders/LTD/idea_mikhael_von_kerch.dds"
+	}
+
+#############################################
+
+	spriteType = {
+		name = "GFX_ltd_portrait_bernhard_rhein"
+		texturefile = "gfx/leaders/LTD/portrait_bernhard_rhein.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_boris_jaeger"
+		texturefile = "gfx/leaders/LTD/portrait_boris_jaeger.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_joachim_meister"
+		texturefile = "gfx/leaders/LTD/portrait_joachim_meister.dds"
+	}
+
+#############################################
+
+	spriteType = {
+		name = "GFX_ltd_portrait_theoden"
+		texturefile = "gfx/leaders/LTD/portrait_theoden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_theoden_small"
+		texturefile = "gfx/leaders/LTD/idea_theoden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_eomer"
+		texturefile = "gfx/leaders/LTD/portrait_eomer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_eomer_small"
+		texturefile = "gfx/leaders/LTD/idea_eomer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_boromir"
+		texturefile = "gfx/leaders/LTD/portrait_boromir.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_boromir_small"
+		texturefile = "gfx/leaders/LTD/idea_boromir.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_faramir"
+		texturefile = "gfx/leaders/LTD/portrait_faramir.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_faramir_small"
+		texturefile = "gfx/leaders/LTD/idea_faramir.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_bard"
+		texturefile = "gfx/leaders/LTD/portrait_bard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_bard_small"
+		texturefile = "gfx/leaders/LTD/idea_bard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_eagles"
+		texturefile = "gfx/leaders/LTD/portrait_eagles.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_eagles_small"
+		texturefile = "gfx/leaders/LTD/idea_eagles.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_elrond"
+		texturefile = "gfx/leaders/LTD/portrait_elrond.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_elrond_small"
+		texturefile = "gfx/leaders/LTD/idea_elrond.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gimli"
+		texturefile = "gfx/leaders/LTD/portrait_gimli.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_gimli_small"
+		texturefile = "gfx/leaders/LTD/idea_gimli.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_legolas"
+		texturefile = "gfx/leaders/LTD/portrait_legolas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_legolas_small"
+		texturefile = "gfx/leaders/LTD/idea_legolas.dds"
+	}
+
+#	spriteType = {
+#		name = "GFX_ltd_portrait_frodo"
+#		texturefile = "gfx/leaders/LTD/portrait_frodo.dds"
+#	}
+#
+#	spriteType = {
+#		name = "GFX_ltd_portrait_frodo_small"
+#		texturefile = "gfx/leaders/LTD/idea_frodo.dds"
+#	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_samwise"
+		texturefile = "gfx/leaders/LTD/portrait_samwise.dds"
+	}
+
+#####################################
+
+	spriteType = {
+		name = "GFX_ltd_angelina_rosenthaler"
+		texturefile = "gfx/leaders/LTD/portrait_angelina_rosenthaler.dds"
+	}
+
+#####################################
+
+	spriteType = {
+		name = "GFX_ltd_portrait_rainer_winkler_small"
+		texturefile = "gfx/leaders/LTD/idea_rainer_winkler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ltd_portrait_rainer_winkler"
+		texturefile = "gfx/leaders/LTD/portrait_rainer_winkler.dds"
+	}
+
+#####################################
+
+	spriteType = {
+		name = "GFX_ltd_portrait_islam"
+		texturefile = "gfx/leaders/LTD/portrait_islam.dds"
+	}
+
+#####################################
+
+### Chiss
+
+	spriteType = {
+		name = "GFX_dun_portrait_aralani"
+		texturefile = "gfx/leaders/DUN/portrait_aralani.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_aralani_small"
+		texturefile = "gfx/leaders/DUN/idea_aralani.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_bakif"
+		texturefile = "gfx/leaders/DUN/portrait_bakif.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_bakif_small"
+		texturefile = "gfx/leaders/DUN/idea_bakif.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_mitthrassafis"
+		texturefile = "gfx/leaders/DUN/portrait_mitthrassafis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_mitthrassafis_small"
+		texturefile = "gfx/leaders/DUN/idea_mitthrassafis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_mitthrawnuruodo"
+		texturefile = "gfx/leaders/DUN/portrait_mitthrawnuruodo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_mitthrawnuruodo_small"
+		texturefile = "gfx/leaders/DUN/idea_mitthrawnuruodo.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_ufsamakro"
+		texturefile = "gfx/leaders/DUN/portrait_ufsamakro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_ufsamakro_small"
+		texturefile = "gfx/leaders/DUN/idea_ufsamakro.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_eprill_small"
+		texturefile = "gfx/leaders/DUN/idea_eprill.dds"
+	}
+
+######################################################################
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_1"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_2"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_3"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_4"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_5"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_6"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_1"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_2"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_3"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_3.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_4"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_5"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_5.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_6"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_land_7"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_land_7.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_navy_1"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_navy_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_navy_2"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_navy_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_generic_navy_3"
+		texturefile = "gfx/leaders/DUN/portrait_DUN_generic_navy_3.dds"
+	}
+
+######################################################################
+
+	spriteType = {
+		name = "GFX_tor_portrait_generic_1"
+		texturefile = "gfx/leaders/TOR/portrait_TOR_generic_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tor_portrait_generic_land_1"
+		texturefile = "gfx/leaders/TOR/portrait_TOR_generic_1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tor_portrait_generic_navy_1"
+		texturefile = "gfx/leaders/TOR/portrait_TOR_generic_1.dds"
+	}
+
+######################################################################
+
+### Other
+
+	spriteType = {
+		name = "GFX_ltd_portrait_samwise_small"
+		texturefile = "gfx/leaders/LTD/idea_samwise.dds"
+	}
+
+	frameAnimatedSpriteType = {
+		name = "GFX_animated_advisor_reinhard_kaiser"
+		texturefile = "gfx/leaders/generic/animated_idea_political_advisor_reinhard_kaiser.png"
+		noOfFrames = 54
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	}
+
+	spriteType = {
+		name = "GFX_advisor_reinhard_kaiser"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_reinhard_kaiser.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_dustin_mars"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_dustin_mars.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_friederike_ludendorff"
+		texturefile = "gfx/leaders/DUN/idea_political_advisor_friederike_ludendorff.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_alehandro_audi"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_alehandro_audi.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_lucy_connor"
+		texturefile = "gfx/leaders/LTD/idea_political_advisor_lucy_connor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_leonardo_hermanovich"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_leonardo_hermanovich.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_luke_jong"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_luke_jong.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_larry_meister"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_larry_meister.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_nick_grun"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_nick_grun.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_kevin_fichter"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_kevin_fichter.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_jerome_jaxon"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_jerome_jaxon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_advisor_peter_schafer"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_peter_schafer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lkr_portrait_larry_meister"
+		texturefile = "gfx/leaders/LKR/portrait_larry_meister.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lkr_portrait_cardboard_larry_meister"
+		texturefile = "gfx/leaders/LKR/portrait_cardboard_larry_meister.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_thrawn"
+		texturefile = "gfx/leaders/DUN/portrait_thrawn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_comrade_thrawn"
+		texturefile = "gfx/leaders/DUN/portrait_comrade_thrawn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_adolf_chissler"
+		texturefile = "gfx/leaders/DUN/portrait_adolf_chissler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_dun_portrait_darth_vader"
+		texturefile = "gfx/leaders/DUN/portrait_darth_vader.dds"
+	}
+
+	spriteType = {
+		name = "GFX_nis_portrait_korosensei"
+		texturefile = "gfx/leaders/NIS/portrait_korosensei.dds"
+	}
+
+	spriteType = {
+		name = "GFX_nis_portrait_sensei_wu"
+		texturefile = "gfx/leaders/NIS/portrait_sensei_wu.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leo_portrait_sylvester_stalin"
+		texturefile = "gfx/leaders/LEO/portrait_sylvester_stalin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leo_portrait_karl_kommunist"
+		texturefile = "gfx/leaders/LEO/portrait_karl_kommunist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_leo_portrait_voytek"
+		texturefile = "gfx/leaders/LEO/portrait_voytek.dds"
+	}
+
+	spriteType = {
+		name = "GFX_krm_portrait_rafael_puerida"
+		texturefile = "gfx/leaders/KRM/portrait_rafael_puerida.dds"
+	}
+
+	spriteType = {
+		name = "GFX_krm_portrait_herr_heiler"
+		texturefile = "gfx/leaders/KRM/portrait_herr_heiler.dds"
+	}
+
+	spriteType = {
+		name = "GFX_jsn_portrait_david_unaipon"
+		texturefile = "gfx/leaders/JSN/portrait_david_unaipo.dds"
+	}
+
+	spriteType = {
+		name = "LEO_cardinal_godric_kommunistan"
+		texturefile = "gfx/leaders/LEO/portrait_cardinal_godric_kommunistan.dds"
+	}
+
+	spriteType = {
+		name = "LEO_grigori_yefimovich_rasputin"
+		texturefile = "gfx/leaders/LEO/portrait_grigori_yefimovich_rasputin.dds"
+	}
+
+	spriteType = {
+		name = "LEO_the_council"
+		texturefile = "gfx/leaders/LEO/portrait_the_council.dds"
+	}
+
+	spriteType = {
+		name = "LEO_carlos_castillo_armas"
+		texturefile = "gfx/leaders/LEO/portrait_carlos_castillo_armas.dds"
+	}
+
+	spriteType = {
+		name = "GFX_kat_portrait_ragnar_lothbrok"
+		texturefile = "gfx/leaders/KTG/portrait_ragnar_lothbrok.dds"
+	}
+
+	spriteType = {
+		name = "GFX_tor_portrait_glamin"
+		texturefile = "gfx/leaders/TOR/portrait_glamin.dds"
+	}
+
+
+###############################################
+
+	spriteType = {
+		name = "GFX_arc_portrait_inuit_council"
+		texturefile = "gfx/leaders/ARC/portrait_inuit_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_arc_portrait_arctic_comitee"
+		texturefile = "gfx/leaders/ARC/portrait_arctic_comitee.dds"
+	}
+
+	spriteType = {
+		name = "GFX_arc_portrait_cristopher_old"
+		texturefile = "gfx/leaders/ARC/portrait_cristopher_old.dds"
+	}
+
+	spriteType = {
+		name = "GFX_arc_portrait_santa_claus"
+		texturefile = "gfx/leaders/ARC/portrait_santa_claus.dds"
+	}
+
+	spriteType = {
+		name = "GFX_arc_portrait_the_thing"
+		texturefile = "gfx/leaders/ARC/portrait_the_thing.dds"
+	}
+
+###############################################
+
+	spriteType = {
+		name = "GFX_portrait_GER_wilhelm_ii"
+		texturefile = "gfx/leaders/GER/portrait_wilhelm_ii.dds"
+	}
+
+	spriteType = {
+		name = "GFX_portrait_GER_wilhelm_iii"
+		texturefile = "gfx/leaders/GER/portrait_wilhelm_iii.dds"
+	}
+
+	spriteType = {
+		name = "GFX_aus_portrait_franz_joseph_i"
+		texturefile = "gfx/leaders/AUS/portrait_franz_joseph_i.dds"
+	}
+	spriteType = {
+		name = "GFX_fra_portrait_napoleon_iii"
+		texturefile = "gfx/leaders/FRA/portrait_napoleon_iii.dds"
+	}
+	spriteType = {
+		name = "GFX_fra_portrait_raymond_poincare"
+		texturefile = "gfx/leaders/FRA/portrait_raymond_poincare.dds"
+	}
+	spriteType = {
+		name = "GFX_usa_portrait_henry_iii"
+		texturefile = "gfx/leaders/USA/portrait_henry_iii.dds"
+	}
+	spriteType = {
+		name = "GFX_sov_portrait_nicholas_ii"
+		texturefile = "gfx/leaders/SOV/portrait_nicholas_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_tur_portrait_mehmed_i_hamis"
+		texturefile = "gfx/leaders/TUR/portrait_mehmed_i_hamis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_western_european_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_eastern_european_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_commonwealth_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_europe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_asian_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_asia.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_southamerican_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_south_america.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_middle_eastern_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_arab.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_african_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_monarchist_africa.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_chiss_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_chiss.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_traditionalist_furry_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_furry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_western_european_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_eastern_european_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_commonwealth_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_asian_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_southamerican_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_middle_eastern_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_african_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_theocrat.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_chiss_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_chiss.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_confessor_of_god_furry_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_furry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_communist_revolutionary_chiss_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_chiss.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_communist_revolutionary_furry_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_furry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_democratic_reformer_chiss_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_chiss.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_democratic_reformer_furry_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_furry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_fascist_demagogue_chiss_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_chiss.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_fascist_demagogue_furry_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_furry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_head_of_intelligence_chiss_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_chiss.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_head_of_intelligence_furry_2d"
+		texturefile = "gfx/leaders/generic/idea_political_advisor_furry.dds"
+	}
+
+
+
+
+
+	frameAnimatedSpriteType = {
+		name = "GFX_lotr_animated_portrait_aragorn"
+		texturefile = "gfx/leaders/lotr/animated_portrait_aragorn.png"
+		noOfFrames = 54
+		animation_rate_fps = 12
+		looping = yes
+		play_on_show = yes
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_aragorn_strider"
+		texturefile = "gfx/leaders/lotr/portrait_aragorn_strider.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_aragorn"
+		texturefile = "gfx/leaders/lotr/portrait_aragorn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_aragorn_alternative"
+		texturefile = "gfx/leaders/lotr/portrait_aragorn_alternative.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_aragorn_alternative_2"
+		texturefile = "gfx/leaders/lotr/portrait_aragorn_alternative_2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_aragorn_emperor"
+		texturefile = "gfx/leaders/lotr/portrait_aragorn_emperor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_aragorn_emperor_alternative"
+		texturefile = "gfx/leaders/lotr/portrait_aragorn_emperor_alternative.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_sauron"
+		texturefile = "gfx/leaders/lotr/portrait_sauron.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_mouth_of_sauron"
+		texturefile = "gfx/leaders/lotr/portrait_mouth_of_sauron.dds"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_lotr_portrait_king_thranduil"
+		texturefile = "gfx/leaders/lotr/portrait_king_thranduil.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_saruman_the_white"
+		texturefile = "gfx/leaders/lotr/portrait_saruman_the_white.dds"
+	}
+
+
+
+	spriteType = {
+		name = "GFX_lotr_portrait_king_theoden"
+		texturefile = "gfx/leaders/lotr/portrait_king_theoden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_witch_king_of_angmar"
+		texturefile = "gfx/leaders/lotr/portrait_witch_king_of_angmar.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_witch_king_of_angmar"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_khamul"
+		texturefile = "gfx/leaders/lotr/portrait_khamul.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_khamul"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_uvantha"
+		texturefile = "gfx/leaders/lotr/portrait_uvantha.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_uvantha"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_hoarmurath"
+		texturefile = "gfx/leaders/lotr/portrait_hoarmurath.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_hoarmurath"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_dwar"
+		texturefile = "gfx/leaders/lotr/portrait_dwar.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_dwar"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_adunaphel"
+		texturefile = "gfx/leaders/lotr/portrait_adunaphel.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_adunaphel"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_akhorahil"
+		texturefile = "gfx/leaders/lotr/portrait_akhorahil.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_akhorahil"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_indur"
+		texturefile = "gfx/leaders/lotr/portrait_indur.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_indur"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_lotr_portrait_ren"
+		texturefile = "gfx/leaders/lotr/portrait_ren.dds"
+	}
+	spriteType = {
+		name = "GFX_lotr_advisor_portrait_ren"
+		texturefile = "gfx/leaders/lotr/idea_witch_king_of_angmar.dds"
+	}
+}

@@ -1,0 +1,1639 @@
+ideas = {
+	academy_spirit = {
+		royal_academy = {
+			ledger = army
+			available = { has_military_academy = yes }
+			visible = { has_government = monarchism }
+			modifier = {
+				political_power_factor = 0.1
+				mobilization_laws_cost_factor = -0.25
+			}
+			ai_will_do = {
+				base = 1
+
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+
+				modifier = {
+					factor = 2
+					has_government = monarchism
+				}
+			}
+		}
+	}
+	army_spirit = {
+		royal_armed_forces = {
+			ledger = army
+			visible = { has_government = monarchism }
+			modifier = {
+				political_power_factor = 0.1
+				mobilization_laws_cost_factor = -0.25
+			}
+			ai_will_do = {
+				base = 1
+
+				modifier = {
+					factor = 0
+					NOT = { has_dlc = "No Step Back" }
+				}
+
+				modifier = {
+					factor = 2
+					has_government = monarchism
+				}
+			}
+		}
+	}
+
+	division_command_spirit = {
+	
+	}
+
+	country = {
+
+		tlotd_isolationism = {
+			picture = isolationism
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+
+			rule = {
+				can_create_factions = no
+				can_join_factions = no
+				can_not_declare_war = yes
+				can_guarantee_other_ideologies = no
+			}
+		}
+
+		tlotd_mutiny = {
+			
+			allowed = {
+				TAG = LTD
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+			
+			modifier = {
+				stability_factor = -0.1
+				army_morale_factor = -0.1
+				training_time_factor = 0.2
+				army_attack_factor = -0.25
+				experience_gain_army = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		civil_war_debuff = {
+			
+			allowed = {
+				has_civil_war = yes
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+				has_civil_war = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+			
+			modifier = {
+				conscription = -0.05
+				stability_factor = -1
+				army_morale_factor = -0.2
+				training_time_factor = 0.3
+				army_attack_factor = -0.125
+				experience_gain_army = 0.1
+				army_org_factor = -0.2
+			}
+
+			rule = {
+				can_create_factions = no
+				can_join_factions = no
+			}
+		}
+
+		party_loyalty = {
+			picture = established_dictator
+			allowed = { OR = { has_government = fascism has_government = communism } }
+			cancel = { NOT = { OR = { has_government = fascism has_government = communism } } }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { stability_factor = 0.1 }
+		}
+
+		volksempfaenger = {
+			picture = established_dictator
+			allowed = { has_government = fascism }
+			cancel = { NOT = { has_government = fascism } }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { fascism_drift = 0.1 war_support_factor = 0.05 }
+		}
+
+		aryan_supremacy = {
+			picture = established_dictator
+			allowed = { has_government = fascism }
+			cancel = { NOT = { has_government = fascism } }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = { war_support_factor = 0.03 }
+		}
+
+		ss_terror = {
+			picture = ss_terror
+			allowed = { TAG = LTD has_government = fascism }
+			cancel = { NOT = { has_government = fascism } }
+			allowed_civil_war = { always = yes}
+			removal_cost = -1
+			modifier = { stability_factor = -0.1 }
+		}
+
+		german_spirit = {
+			picture = ger
+			
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		french_spirit = {
+			picture = fra
+			
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		european_spirit = {
+			picture = eu
+			
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		transatlantic_spirit = {
+			picture = transatlantic
+			
+			allowed = {
+
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.1
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		anarchist_spirit = {
+			picture = anarchist_spirit
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 0.3
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		constitution = {
+			picture = constitution
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				drift_defence_factor = 0.3
+			}
+		}
+
+		church_tax = {
+			picture = isolationism
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		established_monarchy = {
+			picture = established_monarchy
+			
+			allowed = {
+				has_government = monarchism
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monarchism_drift = 0.01
+				political_power_factor = 0.25
+				stability_weekly_factor = 0.25
+				conscription_factor = 0.2
+				consumer_goods_factor = 0.3
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		industrial_powerhouse = {
+			picture = industrial_powerhouse
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.1
+				industrial_capacity_factory = 0.125
+				production_speed_industrial_complex_factor = 0.125
+				repair_speed_industrial_complex_factor = 0.125 
+				production_speed_arms_factory_factor = 0.125
+				repair_speed_arms_factory_factor = 0.125
+				production_speed_fuel_silo_factor = 0.125
+				production_speed_synthetic_refinery_factor = 0.075
+			}
+		}
+		monarchist_support = {
+			picture = established_monarchy
+			
+			allowed = {
+				NOT = { has_government = monarchism }
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				has_government = monarchism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monarchism_drift = 0.01
+			}
+		}
+		navy_mobility = {
+			picture = navy_mobility
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				naval_coordination = 0.25
+				navy_org_factor = 0.25
+				naval_speed_factor = 0.25
+				naval_retreat_speed = 0.25		
+			}
+		}
+		powerful_navy = {
+			picture = powerful_navy
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				naval_damage_factor = 0.25
+				naval_defense_factor = 0.25
+				navy_max_range_factor = 0.25
+				submarine_attack = 0.25
+				convoy_escort_efficiency = 0.25
+			}
+		}
+		fight_for_the_king = {
+			picture = fight_for_the_king
+			
+			allowed = {
+				has_government = monarchism
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_speed_factor = 0.1
+			}
+		}
+		enthusiasm_for_the_crown = {
+			picture = enthusiasm_for_the_crown
+			
+			allowed = {
+				has_government = monarchism
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		royal_high_command = {
+			picture = royal_high_command
+			
+			allowed = {
+				has_government = monarchism
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = { has_government = monarchism }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.1
+			}
+		}
+		strength_through_faith = {
+			picture = strength_through_faith
+			
+			allowed = {
+				has_government = theocracy
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				offence = 0.05
+			}
+		}
+		trust_in_your_belief = {
+			picture = trust_in_your_belief
+			
+			allowed = {
+				has_government = theocracy
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+		deus_vult = {
+			picture = deus_vult
+			
+			allowed = {
+				has_government = theocracy
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				breakthrough_factor = 0.1
+			}
+		}
+		fascist_conversion = {
+			picture = established_dictator
+			
+			allowed = {
+				NOT = { has_government = fascism }
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				has_government = fascism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.1
+				stability_factor = -0.25
+			}
+		}
+		established_dictatorship = {
+			picture = established_dictator
+			
+			allowed = {
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+				NOT = {
+					OR = {
+						has_government = fascism
+						has_government = communism
+					}
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.25
+				stability_weekly_factor = 0.25
+				conscription_factor = 0.2
+				consumer_goods_factor = 0.3
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		socialist_characteristics = {
+			picture = socialist_characteristics
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.2
+			}
+		}
+
+		krm_south_american_hannibal = {
+			
+			allowed = {
+				TAG = KRM
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = dun_mare_nostrum
+			
+			modifier = {
+				supply_consumption_factor = -0.2
+				out_of_supply_factor = -0.2
+				terrain_penalty_reduction = 0.2
+			}
+
+			targeted_modifier = {
+				tag = BRA
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = ARG
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = CHL
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = BOL
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = PRU
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = COL
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = VEN
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = ECU
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+		}
+
+		krm_south_american_hegemon = {
+			
+			allowed = {
+				TAG = KRM
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = dun_mare_nostrum
+			
+			modifier = {
+				army_attack_factor = 0.1
+				supply_consumption_factor = -0.1
+				out_of_supply_factor = -0.1
+				terrain_penalty_reduction = 0.1
+			}
+		}
+
+		dun_space_faring_civilization = {
+			
+			allowed = {
+				TAG = DUN
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = dun_space_faring_civilization
+			
+			research_bonus = {
+				futuristic  = +0.1
+			}
+		}
+
+		dun_ethnic_tentions = {
+			
+			allowed = {
+				TAG = DUN
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+				power_balance_value = {
+					id = DUN_ethnic_tensions_balance
+					value > 0.0
+				}
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = dun_ethnic_tensions
+			
+			modifier = {
+				stability_factor = -0.3
+				army_morale_factor = -0.1
+				training_time_factor = 0.1
+				army_attack_factor = -0.1
+				army_org_factor = -0.1
+			}
+		}
+
+		dun_mare_nostrum = {
+			
+			allowed = {
+				OR = {
+					TAG = DUN
+					TAG = NIS
+					TAG = LTD
+				}
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = dun_mare_nostrum
+			
+			modifier = {
+				stability_factor = 0.2
+				army_morale_factor = 0.1
+				navy_max_range_factor = 0.25
+			}
+		}
+
+		nis_bound_to_the_rising_sun = {
+			
+			allowed = {
+				TAG = NIS
+				overlord = { tag = JAP }
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+				is_subject = no
+			}
+
+			allowed_civil_war = {
+				overlord = { tag = JAP }
+			}
+
+			picture = nis_bound_to_the_rising_sun
+			
+			modifier = {
+				stability_factor = -0.2
+				army_morale_factor = -0.1
+			}
+		}
+
+		nis_sakura_spirit = {
+			allowed = {
+				OR = {
+					tag = NIS
+					tag = LTD
+				}
+			}
+			
+			removal_cost = -1
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+			}
+
+			picture = nis_sakura_spirit
+			
+			modifier = {
+				army_morale_factor = 0.1
+				recruitable_population_factor 0.01
+			}
+		}
+
+		krm_amazonian_war = {
+			
+			allowed = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			picture = generic_war_preparation
+
+			on_add = {
+				set_rule = { can_join_factions = no }
+			}
+
+			on_remove = { 
+				set_rule = { can_join_factions = yes }
+			}
+			
+			modifier = {
+				conscription_factor = 0.05
+				custom_modifier_tooltip = PRU_no_factions_tt
+			}
+		}
+
+####################################################################################
+
+		equal_fights = {
+			picture = idea_generic_women_in_the_army
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			  	non_core_manpower = 0.03
+				conscription_factor = 0.50
+				monthly_population = 2.0
+				female_random_army_leader_chance = 0.2
+			}
+		}
+		smart_people = {
+			picture = idea_generic_constitutional_guarantee
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		nature_provides = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.20
+			}
+		}
+		heat_resistance = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				acclimatization_hot_climate_gain_factor = 0.1
+				consumer_goods_factor = -0.20
+			}
+		}
+		freeze_resistance = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				consumer_goods_factor = -0.20
+			}
+		}
+		in_tune_with_nature = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				dig_in_speed_factor = 0.2
+				recon_factor = 0.2
+				local_resources_factor = 0.15
+        		acclimatization_cold_climate_gain_factor = 0.3
+	      		acclimatization_hot_climate_gain_factor = 0.3
+				consumer_goods_factor = -0.20
+			}
+		}
+		fast_fighters = {
+			picture = idea_generic_women_in_the_army
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				org_loss_when_moving = -0.1
+				army_speed_factor = 0.1
+			}
+		}
+		claw_and_fang = {
+			picture = idea_generic_women_in_the_army
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.3
+				surrender_limit = 0.3
+			}
+		}
+		border_security = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.25
+				production_speed_anti_air_building_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_bunker_factor = 0.2
+			}
+		}
+		hidden_fangs = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.25
+				dig_in_speed_factor = 0.25
+				surrender_limit = 0.25
+			}
+		}
+		new_government = {
+			picture = idea_generic_constitutional_guarantee
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+				boost_ideology_mission_factor = 0.3
+				cas_damage_reduction = 0.2
+				unit_upkeep_attrition_factor = -0.25
+			}
+		}
+		communist_furries = {
+			picture = idea_generic_constitutional_guarantee
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 2
+				conscription_factor = 0.3
+				non_core_manpower = 0.3
+				compliance_growth = 0.2
+			}
+		}
+		furunism_unleashed = {
+			picture = idea_generic_constitutional_guarantee
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 2
+				conscription_factor = 0.3
+				non_core_manpower = 0.3
+				consumer_goods_factor = -0.5
+				compliance_growth = 0.2
+				global_building_slots_factor = 0.1
+				industrial_capacity_factory = 0.3
+			}
+		}
+		cornered_beast = {
+			picture = FRA_army_of_aggression_focus
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.25
+				recruitable_population_factor = 0.20
+			}
+		}
+		all_hail_the_alpha = {
+			picture = FRA_army_of_aggression_focus
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monarchism_drift = 0.02
+			}
+		}
+		fight_by_instinct = {
+			picture = FRA_army_of_aggression_focus
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				experience_loss_factor = 0.2
+				mobilization_speed = 0.2
+				political_power_factor = 0.2
+			}
+		}
+		mercenary_forces = {
+			picture = FRA_army_of_aggression_focus
+
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_divisions_required = -1.0
+				send_volunteer_size = 24
+				send_volunteers_tension = -0.5
+			}
+		}
+		paw_patrols = {
+			picture = secret_police
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population_factor = 0.25
+				monthly_population = 2.5
+				intelligence_agency_defense = 3
+				root_out_resistance_effectiveness_factor = 0.2
+				drift_defence_factor = 0.5
+			}
+		}
+		prowling_tiger = {
+			picture = secret_police
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				recruitable_population_factor = 0.4
+				monthly_population = 2.5
+				intelligence_agency_defense = 3
+				root_out_resistance_effectiveness_factor = 0.2
+				drift_defence_factor = 0.5
+				land_night_attack = 0.2
+				army_attack_factor = 0.2
+				breakthrough_factor = 0.2
+				army_org_factor = 0.2
+				army_morale_factor = 0.2
+			}
+		}
+		secret_police = {
+			picture = secret_police
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			}
+		}
+		soviet_production = {
+			picture = soviet_production
+			
+			allowed = {
+			}
+
+			available = {
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		fighting_spirit = {
+			
+			allowed = {
+				TAG = LTD
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fighting_spirit
+			
+			modifier = {
+				army_morale_factor = 0.2
+				training_time_factor = -0.2
+				army_attack_factor = 0.25
+				experience_gain_army = 0.1
+				army_org_factor = 0.1
+			}
+		}
+
+		superior_fighting_spirit = {
+			
+			allowed = {
+				TAG = LTD
+			}
+			
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = fighting_spirit
+			
+			modifier = {
+				#hidden_effect = {
+					army_morale_factor = 1.0
+					training_time_factor = -0.3
+					experience_gain_army = 0.1
+					army_org_factor = 1.0
+					offence = 1.0
+					defence = 1.0
+					army_attack_factor = 1.0
+					army_attack_speed_factor = 1.0
+					breakthrough_factor = 1.0
+					army_speed_factor = 0.1
+				#}
+			}
+		}
+
+		otherworldly_influence = {
+			picture = otherworldly_influence
+			
+			allowed = {
+			}
+
+			available = {
+
+			}
+
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				otherworldly_drift = 0.1
+			}
+
+			rule = {
+				can_create_factions = yes
+			}
+		}
+		GER_revive_the_kaiserreich_tlotd = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+
+			picture = ger_revive_the_kaiserreich
+
+			modifier = {
+				monarchism_drift = 0.1
+				drift_defence_factor = 0.1
+				join_faction_tension = -0.2
+				lend_lease_tension = -0.2
+				send_volunteers_tension = -0.2
+			}
+		}
+
+		GER_revive_the_kaiserreich2_tlotd = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = monarchism
+			}
+
+			removal_cost = -1
+
+			picture = ger_revive_the_kaiserreich
+
+			modifier = {
+				monarchism_drift = 0.1
+				democratic_drift = -0.02
+				drift_defence_factor = 0.1
+				join_faction_tension = -0.2
+				lend_lease_tension = -0.2
+				send_volunteers_tension = -0.2
+			}
+		}
+	}
+}

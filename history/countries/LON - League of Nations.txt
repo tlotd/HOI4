@@ -1,0 +1,22 @@
+﻿capital = 713
+
+set_country_flag = future_content_country
+
+set_stability = 0.0 
+set_war_support = 0.0
+
+set_research_slots = 0
+set_convoys = 0
+
+recruit_character = LON_league_of_nations
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 12
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 100
+}

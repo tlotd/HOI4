@@ -1,0 +1,91 @@
+﻿l_english:
+ LTD_legitimacy_balance:0 "Legitimacy of the Government"
+ LTD_annexation_side:0 "Annexation by Germany"
+ LTD_annexation_low_range:0 "Internationally Insignificant"
+ LTD_annexation_medium_range:0 "Remnant of the Treaty of Paris"
+ LTD_annexation_high_range:0 "German Breakawy State"
+ LTD_annexation_max_range:0 "Part of Germany"
+ LTD_legitimacy_side:0 "Proclamation of an Independent Country"
+ LTD_legitimacy_low_range:0 "Low Government Legitimacy"
+ LTD_legitimacy_medium_range:0 "Partial Government Legitimacy"
+ LTD_legitimacy_high_range:0 "Decent Government Legitimacy"
+ LTD_legitimacy_max_range:0 "Legitimate Government"
+
+ LTD_bop_seek_international_ties:0 "Seek International Ties"
+ LTD_bop_invest_in_infrastructure:0 "Invest in Infrastructure"
+ LTD_bop_rally_the_people:0 "Rally the People"
+ LTD_bop_stable_nation:0 "Stable Nation"
+ LTD_bop_stable_economy:0 "Stable Economy"
+ LTD_bop_sinking_into_chaos:0 "Sinking Into Chaos"
+ LTD_bop_legitimacy_debug_positive:0 "|DEBUG| Positive"
+ LTD_bop_legitimacy_debug_negative:0 "|DEBUG| Negative"
+
+ LTD_bop_modifier_seek_international_ties:0 "Established International Ties"
+ LTD_bop_modifier_invest_in_infrastructure:0 "Infrastructure Investment"
+ LTD_bop_modifier_rally_the_people:0 "the People on Our Side"
+ LTD_bop_modifier_stable_economy:0 "a Stable Economy"
+ LTD_bop_modifier_stable_nation:0 "a Stable Nation"
+ LTD_bop_modifier_sinking_into_choas:0 "the Descent Into Chaos"
+ LTD_bop_modifier_debug_positive:0 "|DEBUG| Positive"
+ LTD_bop_modifier_debug_negative:0 "|DEBUG| Negative"
+
+###
+
+ LTD_parliament_balance:0 "Parliament Balance"
+ LTD_progressive_side:0 "Progressive Side"
+ LTD_centre_left_party:0 "Centre Left Party"
+ LTD_progressive_party:0 "Progressive Party"
+ LTD_left_party:0 "Left Party"
+ LTD_conservative_side:0 "Conservative Side"
+ LTD_centre_right_party:0 "Centre Right Party"
+ LTD_conservative_party:0 "Conservative Party"
+ LTD_right_party:0 "Right Party"
+
+###
+
+ LTD_fascist_terror_balance:0 "Fascist Terror Balance"
+ LTD_party_control_side:0 "Party Control"
+ LTD_party_control_contested:0 "Party Control Contested"
+ LTD_party_control_secured:0 "Party Control Secured"
+ LTD_ss_control_side:0 "SS Control"
+ LTD_ss_control_contested:0 "SS Control Contested"
+ LTD_ss_control_secured:0 "SS Control Secured"
+
+ LTD_bop_fascist_terror_debug_positive:0 "|DEBUG| SS Control"
+ LTD_bop_fascist_terror_debug_negative:0 "|DEBUG| Party Control"
+
+ LTD_bop_racial_superiority:0 "Teach Racial Superiority"
+ LTD_bop_the_cleansing:0 "Promote 'The Cleansing'"
+ LTD_bop_kristallnacht:0 "Hold a 'Kristallnacht'"
+ LTD_bop_clamp_down_on_extremist_paramilitary_groups:0 "Clamp Down on Extremist Paramilitary Groups"
+
+ LTD_bop_modifier_racial_superiority:0 "Teching Racial Superiority"
+ LTD_bop_modifier_the_cleansing:0 "Promoting 'The Cleansing'"
+ LTD_bop_modifier_kristallnacht:0 "Momories of the 'Kristallnacht'"
+ LTD_bop_modifier_clamp_down_on_extremist_paramilitary_groups:0 "Clamping Down on Extremist Paramilitary Groups"
+
+### DUN ###
+
+ DUN_fracturing_nation_side:0 "Fractured Ethnostates"
+ DUN_fracturing_nation_low_range:0 "National Tensions"
+ DUN_fracturing_nation_medium_range:0 "Open Revolts"
+ DUN_fracturing_nation_high_range:0 "Armed Partisans"
+ DUN_fracturing_nation_max_range:0 "Widespred Revolutions"
+ DUN_ethnic_tensions_balance:0 "Ethnic Tensions"
+ DUN_united_chiss_side:0 "Unified Nationstate"
+ DUN_united_chiss_low_range:0 "Accepted Co-Existence"
+ DUN_united_chiss_medium_range:0 "Shared Interests"
+ DUN_united_chiss_high_range:0 "Working Towards a Common Goal"
+ DUN_united_chiss_max_range:0 "United and Strong"
+
+ DUN_bop_supress_revolts:0 "Supress Revolts"
+ DUN_bop_rally_the_people:0 "Rally the People"
+ DUN_bop_invest_in_infrastructure:0 "Invest in Infrastructure"
+ DUN_bop_open_talks:0 "Open Talks"
+ DUN_bop_sinking_into_chaos:0 "Sinking Into Chaos"
+
+ DUN_bop_modifier_supress_revolts:0 "Supressing Revolts"
+ DUN_bop_modifier_invest_in_infrastructure:0 "Infrastructure Investment"
+ DUN_bop_modifier_rally_the_people:0 "the People on Our Side"
+ DUN_bop_modifier_open_talks:0 "Talking to the People"
+ DUN_bop_modifier_sinking_into_choas:0 "the Descent Into Chaos"

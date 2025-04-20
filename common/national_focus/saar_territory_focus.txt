@@ -1,0 +1,42 @@
+﻿focus_tree = {
+	id = SAR_saar_territory_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SAR
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = SAR_referendum
+	}
+
+	focus = {
+		id = SAR_referendum
+		icon = GFX_focus_ETH_re-convene_the_parliament
+		search_filters = { FOCUS_FILTER_STABILITY }
+		x = 10
+		y = 3
+
+		available = {
+		}
+
+		bypass = {
+		}
+
+		cost = 3
+
+		completion_reward = {
+			news_event = { hours = 6 id = global_news_SAR.1 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

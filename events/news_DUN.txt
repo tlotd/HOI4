@@ -1,0 +1,525 @@
+﻿###########################
+# Duncan Events
+###########################
+
+#1-30 monarch
+#31-60 fascist
+#61 communist
+
+add_namespace = news_DUN
+
+country_event = { #croatia
+	id = news_DUN.1
+	title = news_DUN.1.t
+	desc = news_DUN.1.d
+	picture = GFX_report_event_generic_peaceful_annexation
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.1.a
+		ai_chance = { factor = 109 }
+		transfer_state = 109
+		transfer_state = 45
+		if = {
+	        limit = {
+            	ALX = {
+            		owns_state = 736
+        		}
+        	}
+			ALX = {
+				transfer_state = 102
+				transfer_state = 853
+			}
+    	}
+		else_if = {
+	        limit = {
+            	AUS = {
+            		owns_state = 736
+        		}
+        	}
+			AUS = {
+				transfer_state = 102
+				transfer_state = 853
+			}
+    	}
+    	else = {
+			ITA = {
+				transfer_state = 102
+				transfer_state = 853
+			}
+		}
+
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_DUN.1 }
+		}
+	}
+}
+country_event = { #yugo civil war
+	id = news_DUN.2
+	title = news_DUN.2.t
+	desc = news_DUN.2.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.2.a
+		ai_chance = { factor = 100 }
+		FRA = {
+			diplomatic_relation = {
+				country = YUG
+				relation = guarantee
+				active = no
+			}
+		}
+		ENG = {
+			diplomatic_relation = {
+				country = YUG
+				relation = guarantee
+				active = no
+			}
+		}
+		ROM = {
+			diplomatic_relation = {
+				country = YUG
+				relation = guarantee
+				active = no
+			}
+		}
+		CZE = {
+			diplomatic_relation = {
+				country = YUG
+				relation = guarantee
+				active = no
+			}
+		}
+		YUG = {
+			start_civil_war = {
+				ruling_party = neutrality
+				ideology = neutrality
+				size = 0.7
+				capital = 106
+				states = {
+					106 802 803
+ 				}
+    			keep_all_characters = yes
+			}
+		}
+		declare_war_on = { target = YUG type = annex_everything }
+		add_war_support = 0.1
+		hidden_effect = {
+			news_event = { hours = 6 id = global_news_DUN.2 }
+		}
+	}
+}
+
+country_event = { #fascist revolution
+	id = news_DUN.31
+	title = news_DUN.31.t
+	desc = news_DUN.31.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+	option = {
+		name = news_DUN.31.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			add_ideas = civil_war_debuff
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1933.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				fascism = 65
+				monarchism = 15
+				neutrality = 10
+				democratic = 5
+				communism = 5
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = monarchism
+				size = 0.2
+				capital = 103
+				states = {
+					103
+ 				}
+    			keep_all_characters = yes
+			}
+			set_cosmetic_tag = DUN_Revolution
+			DUN_fascist_revolutionaries = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = fascist_revolutionaries
+						traits = { revolutionary_unrest }
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = fascism
+				long_name = DUN_fascist_revolutionary_party_long
+				name = DUN_fascist_revolutionary_party
+			}
+			news_event = { hours = 6 id = global_news_DUN.31 }
+		}
+	}
+}
+
+country_event = { #choose fascism
+	id = news_DUN.32
+	title = news_DUN.32.t
+	desc = news_DUN.32.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.32.a
+		drop_cosmetic_tag = yes
+		remove_country_leader_role = {
+			character = DUN_fascist_revolutionaries
+			ideology = fascist_revolutionaries
+		}
+		DUN_adolf_chissler = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = galactic_imperialism
+					traits = { diabolically_brilliant_admiral ideological_crusader }
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = DUN_fascism_party_long
+			name = DUN_fascism_party
+		}
+	}
+}
+
+country_event = { #star wars
+	id = news_DUN.33
+	title = news_DUN.33.t
+	desc = news_DUN.33.d
+	picture = GFX_report_event_darth_vader
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.33.a
+		remove_country_leader_role = {
+			character = DUN_adolf_chissler
+			ideology = galactic_imperialism
+		}
+		DUN_darth_vader = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = galactic_imperialism
+					traits = { feared_by_his_subjects omen_of_death }
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = DUN_imperial_senate_long
+			name = DUN_imperial_senate
+		}
+		if = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			103 = {
+				add_building_construction = {
+					type = landmark_venator_star_destroyer
+					level = 1
+					instant_build = yes
+					province = 3924
+				}
+			}
+		}
+		set_technology = {
+			stormtroopers = 1
+		}
+		load_oob = stormtroopers
+		news_event = { hours = 6 id = global_news_DUN.33 }
+	}
+}
+
+country_event = { #red revolution
+	id = news_DUN.61
+	title = news_DUN.61.t
+	desc = news_DUN.61.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+	option = {
+		name = news_DUN.61.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			add_ideas = civil_war_debuff
+			set_politics = {
+				ruling_party = communism
+				last_election = "1933.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				communism = 65
+				monarchism = 15
+				neutrality = 10
+				democratic = 5
+				fascism = 5
+			}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = monarchism
+				size = 0.2
+				capital = 103
+				states = {
+					103
+ 				}
+    			keep_all_characters = yes
+			}
+			set_cosmetic_tag = DUN_Revolution
+			DUN_communist_revolutionaries = {
+				add_country_leader_role = {
+					country_leader = {
+						ideology = communist_revolutionaries
+						traits = { revolutionary_unrest }
+					}
+					promote_leader = yes
+				}
+			}
+			set_party_name = {
+				ideology = communism
+				long_name = DUN_communist_revolutionary_party_long
+				name = DUN_communist_revolutionary_party
+			}
+			news_event = { hours = 6 id = global_news_DUN.61 }
+		}
+	}
+}
+
+country_event = { #choose communism
+	id = news_DUN.62
+	title = news_DUN.62.t
+	desc = news_DUN.62.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.62.a
+		drop_cosmetic_tag = yes
+		remove_country_leader_role = {
+			character = DUN_communist_revolutionaries
+			ideology = communist_revolutionaries
+		}
+		DUN_comrade_thrawn = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = stalinism
+					traits = { diabolically_brilliant_admiral ideological_crusader }
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = DUN_communism_party_long
+			name = DUN_communism_party
+		}
+	}
+}
+
+country_event = { #italian civil war
+	id = news_DUN.64
+	title = news_DUN.64.t
+	desc = news_DUN.64.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.64.a
+		declare_war_on = { target = ITA type = annex_everything }
+		if = {
+			limit = {
+				ITA = {
+					owns_state = 159
+					owns_state = 158
+				}
+			}
+			ITA = {
+				set_cosmetic_tag = TTS
+				start_civil_war = {
+					ruling_party = communism
+					ideology = fascism
+					size = 0.2
+					capital = 2
+					states = {
+						2 157 162 161 114 158 159
+					}
+					keep_all_characters = yes
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				ITA = {
+					owns_state = 159
+				}
+			}
+			ITA = {
+				set_cosmetic_tag = TTS
+				start_civil_war = {
+					ruling_party = communism
+					ideology = fascism
+					size = 0.2
+					capital = 2
+					states = {
+						2 157 162 161 114 159
+					}
+					keep_all_characters = yes
+				}
+			}
+		}
+		else = {
+			ITA = {
+				set_cosmetic_tag = TTS
+				start_civil_war = {
+					ruling_party = communism
+					ideology = fascism
+					size = 0.2
+					capital = 2
+					states = {
+						2 157 162 161 114
+					}
+					keep_all_characters = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = { #invite
+	id = news_DUN.103
+	title = news_DUN.103.t
+	desc = news_DUN.103.d
+	picture = GFX_report_event_arctic_exploration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.103.a
+		ai_chance = { factor = 50 }
+		875 = {
+			add_core_of = DUN
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		hidden_effect = {
+			set_country_flag = invite_recieved
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	option = {
+		name = news_DUN.103.b
+		ai_chance = { factor = 50 }
+		hidden_effect = {
+		}
+	}
+}
+country_event = {
+	id = news_DUN.911
+	title = news_DUN.911.t
+	desc = news_DUN.911.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN.911.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LTD_subject
+		LTD = {
+			set_country_flag = LTD_subject
+			set_autonomy = {
+				target = DUN
+				autonomy_state = autonomy_ltd_subject
+			}
+		}
+		if = {
+			limit = {
+				LTD = {
+					has_cosmetic_tag = LTD_Transatlantic
+				}
+			}
+			set_cosmetic_tag = DUN_LTD_Transatlantic_subject
+		} else_if = {
+			limit = {
+				LTD = {
+					OR = {
+						has_cosmetic_tag = LTD_GER
+						has_cosmetic_tag = LTD_GEREmpire
+						has_cosmetic_tag = LTD_GERUnified
+					}
+				}
+			}
+			set_cosmetic_tag = DUN_LTD_GER_subject
+		} else = {
+			set_cosmetic_tag = DUN_LTD_subject
+		}
+	}
+	option = {
+		name = news_DUN.911.b
+		ai_chance = { factor = 100 }
+		LTD = {
+			create_wargoal = {
+				type = take_state_focus
+				target = DUN
+				expire = 0
+				generator = { 103 }
+			}
+		}
+		add_war_support = 0.1
+	}
+}

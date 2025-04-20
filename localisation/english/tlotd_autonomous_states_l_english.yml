@@ -1,0 +1,34 @@
+﻿l_english:
+
+ autonomy_mandate:0 "Mandate"
+ RULE_DESC_MANDATE:0 ""
+
+ autonomy_drachenpakt_member:0 "Drachenpakt Member"
+ RULE_DESC_DRACHENPAKT_MEMBER:0 ""
+
+ autonomy_ltd_subject:0 "@LTDProtectorate"
+ RULE_DESC_LTD_SUBJECT:0 ""
+
+ autonomy_crown_jewel_of_the_empire:0 "Crown Jewel of the Empire"
+ autonomy_imperial_ally:0 "Imperial Ally"
+ autonomy_imperial_colony:0 "Imperial Colony"
+
+ autonomy_integrated_satellite:0 "Integrated Satellite"
+
+ autonomy_satellite_state:0 "Satellite State"
+ autonomy_socialist_republic:0 "Socialist Republic"
+
+ autonomy_follower_of_the_faith:0 "Follower of the Faith"
+ autonomy_sanctuary:0 "Sanctuary"
+
+ autonomy_follower_of_the_void:0 "Follower of the Void"
+
+ regional_royalty:0 "Regional Royalty"
+ regional_royalty_desc:0 ""
+
+ autonomy_prussian_posession:0 "Prussian Posession"
+ autonomy_german_kingdom:0 "German Kingdom"
+ autonomy_austro_hungarian_kingdom:0 "Austro-Hungarian Kingdom"
+
+ autonomy_eu_member:0 "EU Member"
+ autonomy_us_state:0 "US State"

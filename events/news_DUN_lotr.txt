@@ -1,0 +1,415 @@
+﻿ ###########################
+# TLOTD Events
+###########################
+
+# 1 - 99 monarchist
+# 100+ fascist
+
+add_namespace = news_DUN_lotr
+
+country_event = { #choose monarchism
+	id = news_DUN_lotr.1
+	title = news_DUN_lotr.1.t
+	desc = news_DUN_lotr.1.d
+	picture = GFX_report_event_barad_dur
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN_lotr.1.a
+		ai_chance = { base = 100 }
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = DUN_LOTR
+		set_country_flag = LotrEmpire
+		remove_country_leader_role = {
+			character = DUN_thrawn
+			ideology = chiss_syndicure
+		}
+		DUN_king_theoden = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = house_of_eorl
+					traits = {  }
+				}
+				promote_leader = yes
+			}
+			add_field_marshal_role = {
+				traits={ offensive_doctrine }
+				skill=4
+				attack_skill=4
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=4
+			}
+		}
+		set_politics = {
+			ruling_party = monarchism
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = monarchism
+			long_name = DUN_rohan_party_long
+			name = DUN_rohan_party
+		}
+		set_province_name = {
+			id = 3924
+			name = VICTORY_POINTS_3924_DUN_edoras
+		}
+		103 = {
+			set_state_name = STATE_103_DUN_edoras
+		}
+	}
+}
+
+country_event = { #mordors call
+	id = news_DUN_lotr.100
+	title = news_DUN_lotr.100.t
+	desc = news_DUN_lotr.100.d
+	picture = GFX_report_event_barad_dur
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN_lotr.100.a
+		ai_chance = { base = 25 }
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = DUN_LOTR
+		remove_country_leader_role = {
+			character = DUN_fascist_revolutionaries
+			ideology = fascist_revolutionaries
+		}
+		remove_country_leader_role = {
+			character = DUN_adolf_chissler
+			ideology = nazism
+		}
+		DUN_witch_king_of_angmar = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = reign_of_sauron
+					traits = { feared_by_his_subjects omen_of_death }
+				}
+				promote_leader = yes
+			}
+			add_field_marshal_role = {
+				traits={ offensive_doctrine }
+				skill=4
+				attack_skill=4
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=4
+			}
+		}
+		DUN_khamul = {
+			add_corps_commander_role = {
+				traits = { desert_fox swamp_fox }
+				skill=4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		DUN_uvantha = {
+			add_corps_commander_role = {
+			traits = { hill_fighter }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+			}
+		}
+		DUN_hoarmurath = {
+			add_corps_commander_role = {
+				traits = { ranger panzer_leader }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 3
+			}
+		}
+		DUN_dwar = {
+			add_corps_commander_role = {
+				traits = { trait_engineer }
+				skill = 3
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		DUN_adunaphel = {
+			add_corps_commander_role = {
+				traits = { winter_specialist }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		DUN_akhorahil = {
+			add_corps_commander_role = {
+				traits = { naval_invader }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+		DUN_ji_indur = {
+			add_corps_commander_role = {
+				traits = { jungle_rat }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 4
+			}
+		}
+		DUN_ren = {
+			add_corps_commander_role = {
+				traits = { bearer_of_artillery }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 2
+			}
+		}
+		retire_character = DUN_bakif
+		retire_character = DUN_ufsamakro
+		retire_character = DUN_aralani
+		retire_character = DUN_mitthrawnuruodo
+		retire_character = DUN_mitthrassafis
+		retire_character = DUN_field_marshal_gen_1
+		retire_character = DUN_general_gen_1
+		retire_character = DUN_general_gen_2
+		retire_character = DUN_general_gen_3
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = DUN_angmar_party_long
+			name = DUN_angmar_party
+		}
+		set_province_name = {
+			id = 3924
+			name = VICTORY_POINTS_3924_DUN_minas_morgul
+		}
+		103 = {
+			set_state_name = STATE_103_DUN_minas_morgul
+		}
+		if = {
+			limit = {
+				LTD = {
+					is_faction_leader = yes
+				}
+			}
+			LTD = {
+				add_to_faction = DUN
+			}
+		}
+		if = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			103 = {
+				add_building_construction = {
+					type = landmark_orthanc
+					level = 1
+					instant_build = yes
+					province = 3924
+				}
+			}
+		}
+		set_technology = {
+			orc_soldiers = 1
+		}
+		load_oob = orcs
+		news_event = { hours = 6 id = global_news_DUN_lotr.100 }
+	}
+	option = {
+		name = news_DUN_lotr.100.b
+		ai_chance = { base = 75 }
+	}
+}
+
+country_event = { #choose fascism
+	id = news_DUN_lotr.101
+	title = news_DUN_lotr.101.t
+	desc = news_DUN_lotr.101.d
+	picture = GFX_report_event_barad_dur
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_DUN_lotr.101.a
+		ai_chance = { base = 100 }
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = DUN_LOTR
+		remove_country_leader_role = {
+			character = DUN_fascist_revolutionaries
+			ideology = fascist_revolutionaries
+		}
+		remove_country_leader_role = {
+			character = DUN_adolf_chissler
+			ideology = nazism
+		}
+		DUN_witch_king_of_angmar = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = reign_of_sauron
+					traits = { feared_by_his_subjects omen_of_death }
+				}
+				promote_leader = yes
+			}
+			add_field_marshal_role = {
+				traits={ offensive_doctrine }
+				skill=4
+				attack_skill=4
+				defense_skill=4
+				planning_skill=3
+				logistics_skill=4
+			}
+		}
+		DUN_khamul = {
+			add_corps_commander_role = {
+				traits = { desert_fox swamp_fox }
+				skill=4
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 2
+				logistics_skill = 3
+			}
+		}
+		DUN_uvantha = {
+			add_corps_commander_role = {
+			traits = { hill_fighter }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 3
+			}
+		}
+		DUN_hoarmurath = {
+			add_corps_commander_role = {
+				traits = { ranger panzer_leader }
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 3
+			}
+		}
+		DUN_dwar = {
+			add_corps_commander_role = {
+				traits = { trait_engineer }
+				skill = 3
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		DUN_adunaphel = {
+			add_corps_commander_role = {
+				traits = { winter_specialist }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
+		DUN_akhorahil = {
+			add_corps_commander_role = {
+				traits = { naval_invader }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+		DUN_ji_indur = {
+			add_corps_commander_role = {
+				traits = { jungle_rat }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 4
+			}
+		}
+		DUN_ren = {
+			add_corps_commander_role = {
+				traits = { bearer_of_artillery }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 4
+				logistics_skill = 2
+			}
+		}
+		retire_character = DUN_bakif
+		retire_character = DUN_ufsamakro
+		retire_character = DUN_aralani
+		retire_character = DUN_mitthrawnuruodo
+		retire_character = DUN_mitthrassafis
+		retire_character = DUN_field_marshal_gen_1
+		retire_character = DUN_general_gen_1
+		retire_character = DUN_general_gen_2
+		retire_character = DUN_general_gen_3
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1936.1.1"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = DUN_angmar_party_long
+			name = DUN_angmar_party
+		}
+		set_province_name = {
+			id = 3924
+			name = VICTORY_POINTS_3924_DUN_minas_morgul
+		}
+		103 = {
+			set_state_name = STATE_103_DUN_minas_morgul
+		}
+		if = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			103 = {
+				add_building_construction = {
+					type = landmark_orthanc
+					level = 1
+					instant_build = yes
+					province = 3924
+				}
+			}
+		}
+		news_event = { hours = 6 id = global_news_DUN_lotr.100 }
+	}
+}

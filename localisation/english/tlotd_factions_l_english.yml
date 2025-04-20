@@ -1,0 +1,26 @@
+﻿l_english:
+
+ FACTION_NAME_EU:0 "European Union"
+ FACTION_NAME_NATO:0 "North Atlantic Treaty Organization"
+ FACTION_NAME_WARSAW_PACT:0 "Warsaw Pact"
+
+ FACTION_NAME_LTD_lotr:0 "Men of the West"
+ FACTION_NAME_LTD_lotr_fascism:0 "Dark Pact"
+ FACTION_NAME_LTD:0 "Drachenpakt"
+ FACTION_NAME_LTD_fascism:0 "Neue Ordnung"
+ FACTION_NAME_LTD_communist:0 "Drachen Bloc"
+
+ drachenpakt_research_name:0 "[drachenpakt_leader.GetFactionName] Research Union"
+ drachenpakt_research_desc:0 ""
+
+ FACTION_NAME_DUN:0 "Hodenkoboldgang"
+ FACTION_NAME_LEO:0 "Iron Blood Alliance"
+ FACTION_NAME_CAL:0 "Transatlantic Alliance"
+
+ FACTION_NAME_ALLIANCE_GENERIC:0 "[ROOT.GetAdjectiveCap] Alliance"
+
+ FACTION_NAME_MONARCHIST_1:0 "Brotherhood of $CONTINENT$"
+ FACTION_NAME_MONARCHIST_2:0 "$CONTINENT_ADJ$ Pact of Steel"
+ FACTION_NAME_MONARCHIST_3:0 "The Empires of $CONTINENT$"
+ FACTION_NAME_MONARCHIST_4:0 "The Central Powers"
+ FACTION_NAME_MONARCHIST_5:0 "$CONTINENT_ADJ$ Confederation"

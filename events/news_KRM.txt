@@ -1,0 +1,142 @@
+﻿###########################
+# Karim Events
+###########################
+
+add_namespace = news_KRM
+
+country_event = { #fascist revolution
+	id = news_KRM.10
+	title = news_KRM.10.t
+	desc = news_KRM.10.d
+	picture = GFX_report_event_tur_upheaval_celebration
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+	option = {
+		name = news_KRM.10.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			add_ideas = civil_war_debuff
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1933.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			set_popularities = {
+				fascism = 65
+				monarchism = 15
+				neutrality = 10
+				democratic = 5
+				communism = 5
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = monarchism
+				size = 0.2
+				capital = 502
+				states = {
+					502
+ 				}
+    			keep_all_characters = yes
+			}
+			
+			#news_event = { hours = 6 id = global_news_KRM.1 }
+		}
+	}
+}
+
+country_event = { #fascist_crisis
+	id = news_KRM.11
+	title = news_KRM.11.t
+	desc = news_KRM.11.d
+	picture = GFX_report_event_peasant_revolt
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_KRM.11.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			SBR = {
+				transfer_state = 501
+				transfer_state = 496
+				transfer_state = 500
+				transfer_state = 943
+				set_popularities = {
+					monarchism = 15
+					fascism = 65
+					communism = 10
+					democratic = 10
+				}
+				set_politics = {
+					ruling_party = fascism
+					last_election = "1936.1.1"
+					election_frequency = 48
+					elections_allowed = no
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = news_KRM.911
+	title = news_KRM.911.t
+	desc = news_KRM.911.d
+	picture = GFX_report_event_peasant_revolt
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_KRM.911.a
+		ai_chance = { factor = 100 }
+		set_country_flag = LTD_subject
+		LTD = {
+			set_country_flag = LTD_subject
+			set_autonomy = {
+				target = KRM
+				autonomy_state = autonomy_ltd_subject
+			}
+		}
+		if = {
+			limit = {
+				LTD = {
+					has_cosmetic_tag = LTD_Transatlantic
+				}
+			}
+			set_cosmetic_tag = KRM_LTD_Transatlantic_subject
+		} else_if = {
+			limit = {
+				LTD = {
+					OR = {
+						has_cosmetic_tag = LTD_GER
+						has_cosmetic_tag = LTD_GEREmpire
+						has_cosmetic_tag = LTD_GERUnified
+					}
+				}
+			}
+			set_cosmetic_tag = KRM_LTD_GER_subject
+		} else = {
+			set_cosmetic_tag = KRM_LTD_subject
+		}
+	}
+	option = {
+		name = news_KRM.911.b
+		ai_chance = { factor = 100 }
+		LTD = {
+			create_wargoal = {
+				type = take_state_focus
+				target = KRM
+				expire = 0
+				generator = { 502 }
+			}
+		}
+		add_war_support = 0.1
+	}
+}

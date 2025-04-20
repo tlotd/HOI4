@@ -1,0 +1,550 @@
+﻿l_english:
+
+#global_news_nation_declared
+
+ global_news_nation_declared.0.t:0 "The European Union was declared!"
+ global_news_nation_declared.0.d:0 ""
+ global_news_nation_declared.0.a:0 "Okay"
+ global_news_nation_declared.1.t:0 "The German Empire was declared!"
+ global_news_nation_declared.1.d:0 ""
+ global_news_nation_declared.1.a:0 "Okay"
+ global_news_nation_declared.2.t:0 "The German Reich was declared!"
+ global_news_nation_declared.2.d:0 ""
+ global_news_nation_declared.2.a:0 "Okay"
+ global_news_nation_declared.3.t:0 "The German Democratic Republic was declared!"
+ global_news_nation_declared.3.d:0 ""
+ global_news_nation_declared.3.a:0 "Okay"
+ global_news_nation_declared.4.t:0 "The Federal Republic of Germany was declared!"
+ global_news_nation_declared.4.d:0 ""
+ global_news_nation_declared.4.a:0 "Okay"
+
+ global_news_nation_declared.88.t:0 "The SS-Ordensstaat was declared!"
+ global_news_nation_declared.88.d:0 ""
+ global_news_nation_declared.88.a:0 "Worrying!"
+
+ global_news_nation_declared.100.t:0 "The Kingdom of Gondor was declared!"
+ global_news_nation_declared.100.d:0 "'I would see the White Tree in flower again in the courts of the kings, and the Silver Crown return, and Minas Tirith in peace: Minas Anor again as of old, full of light, high and fair, beautiful as a queen among other queens: not a mistress of many slaves, nay, not even a kind mistress of willing slaves. War must be, while we defend our lives against a destroyer who would devour all; but I do not love the bright sword for its sharpness, nor the arrow for its swiftness, nor the warrior for his glory. I love only that which they defend: the city of the Men of Númenor; and I would have her loved for her memory, her ancientry, her beauty, and her present wisdom. Not feared, save as men may fear the dignity of a man, old and wise.'"
+ global_news_nation_declared.100.a:0 "The White Tree shall flower again!"
+
+#p_o_t
+ news_p_o_t.1.t:0 "Invitation to the Treaty of Bonn"
+ news_p_o_t.1.d:0 "We have been invited by a fellow neighboring country of [WDZ.GetNameDef]. To discuss their dissolution."
+ news_p_o_t.1.a:0 "Let's get this party started!"
+ news_p_o_t.2.t:0 "The Partition of [WDZ.GetNameDef]"
+ news_p_o_t.2.d:0 "The neighboring countries of [WDZ.GetNameDef] have met in Bonn to discuss their dissolution."
+ news_p_o_t.2.a:0 "An interesting development..."
+ news_p_o_t.3.t:0 "Invitation to the Partition of [SWI.GetNameDef]"
+ news_p_o_t.3.d:0 "We have been invited by a fellow neighboring country of [SWI.GetNameDef]. To discuss their dissolution."
+ news_p_o_t.3.a:0 "Let's get this party started!"
+ news_p_o_t.4.t:0 "The Partition of [SWI.GetNameDef]"
+ news_p_o_t.4.d:0 "The neighboring countries of [SWI.GetNameDef] have met in Vaduz to discuss their dissolution."
+ news_p_o_t.4.a:0 "An interesting development..."
+ news_p_o_t.5.t:0 "Invitation to the Treaty of Zagreb"
+ news_p_o_t.5.d:0 "We have been invited by a fellow neighboring country of [YUG.GetNameDef]. To discuss the partition of their northern half."
+ news_p_o_t.5.a:0 "Let's get this party started!"
+ news_p_o_t.6.t:0 "The Partition of [YUG.GetNameDef]"
+ news_p_o_t.6.d:0 "The neighboring countries of [YUG.GetNameDef] have met in Zagreb to discuss the partition of their northern half."
+ news_p_o_t.6.a:0 "An interesting development..."
+
+#LTD
+
+ tlotd_generic.1008.t:0 "Strange Man Found in Franken"
+ tlotd_generic.1008.d:0 "On their way northwestwards after gaining control of Nuremberg, our troops passed a small village called Altschauerberg, in which they witnissed a local man with the stature of an ogre, clashing with a bounch of outsiders infront of his house. After settleing the dispute and ordering the outsiders to head back home the strange man offered us his barn to assist our war support. Sceptical at first we soon learned that this heavy man learned how to work with meddl and how he could improve armorments on our vehicles."
+ tlotd_generic.1008.a:0 "A Cheers to the Drachenschanze."
+ LTD_drachenschanze_unlocked:0 "The §HDrachenschanz-Werke§! can now be used as a Military Industrial Organization for §HTanks§!."
+
+ cosmetic_LTD.1.t:0 "Cosmetic Menu"
+ cosmetic_LTD.1.d:0 "Choose New Leader Portrait"
+ cosmetic_LTD.1.a:0 "Waving Hair"
+ cosmetic_LTD.1.b:0 "Looking at Sword"
+ cosmetic_LTD.1.c:0 "On Horseback"
+
+ cosmetic_LTD.2.t:0 "Cosmetic Menu"
+ cosmetic_LTD.2.d:0 "Choose New Leader Portrait"
+ cosmetic_LTD.2.a:0 "Waving Hair"
+ cosmetic_LTD.2.b:0 "Looking at Sword"
+ cosmetic_LTD.2.c:0 "On Horseback"
+ cosmetic_LTD.2.e:0 "More Options"
+
+ cosmetic_LTD.3.t:0 "Cosmetic Menu"
+ cosmetic_LTD.3.d:0 "Choose New Leader Portrait"
+ cosmetic_LTD.3.a:0 "Emperor"
+ cosmetic_LTD.3.b:0 "Emperor on Horseback"
+ cosmetic_LTD.3.e:0 "More Options"
+
+ news_LTD.0.t:0 "Proclamation of the Lands of the Dragons!"
+ news_LTD.0.d:0 "The Governemnt of the Free Territory of the Southwest has finally achieved interanational recognition to a degree where we are no longer seen as a relic of the Treaty of Versailles. We have shown resilliance to an imporessive extend, they may have crushed our nation..."
+ news_LTD.0.a:0 "...but they shall never crush our spirt!"
+ news_LTD.1.t:0 "Annexation of [28.GetName]"
+ news_LTD.1.d:0 "Our new puppet is clearly a core part of our nation, and should be treated as such."
+ news_LTD.1.a:0 "Wonderful News!"
+ news_LTD.2.t:0 "Annexation of [8.GetName]"
+ news_LTD.2.d:0 "We do not recognize [8.GetName] as a indipendent entity, therefor we decided to annex it."
+ news_LTD.2.a:0 "Our borders shall grow once more!"
+ news_LTD.3.t:0 "[BAY.GetAdjectiveCap] Independence!"
+ news_LTD.3.d:0 "We were successful in destabilizing the region to a degree where they were able to declared their independence."
+ news_LTD.3.a:0 "Good for them."
+ news_LTD.4.t:0 "[BAY.GetAdjectiveCap] monarch dies without a heir!"
+ news_LTD.4.d:0 "After the death of the [BAY.GetAdjective] princess, we were asked by her advisors to protect the country from sinking into chaos."
+ news_LTD.4.a:0 "A wonderful union!"
+ news_LTD.5.t:0 "Purchased [833.GetName]"
+ news_LTD.5.d:0 "After showing interest in our proposal the [SWI.GetAdjective] actually sold us [833.GetName]."
+ news_LTD.5.a:0 "Wonderful News!"
+ news_LTD.6.t:0 "The Treaty of [845.GetName]"
+ news_LTD.6.d:0 "[FRA.GetNameDefCap], [ITA.GetNameDef] and [LTD.GetNameDef] divided [SWI.GetNameDef] into their rough linguistic reagions."
+ news_LTD.6.a:0 "A Glorious Achievement!"
+ news_LTD.7.t:0 "[AUS.GetNameDefCap] declares Independence"
+ news_LTD.7.d:0 "The [AUS.GetAdjective] monarchists seperated themselfs form their oppressors. And in a coup managed to regain power."
+ news_LTD.7.a:0 "The fascists havent won yet!"
+ news_LTD.8.t:0 "United at last!"
+ news_LTD.8.d:0 "The last country that is missing, [AUS.GetNameDefCap], was finally integrated into our realm!"
+ news_LTD.8.a:0 "Let the south finally unite!"
+ news_LTD.9.t:0 "Bruderkrieg!"
+ news_LTD.9.d:0 "[GER.GetNameDefCap] is a country of traditions, values and culture. The fakers in the north steering it off a cliff wouldn't understand..."
+ news_LTD.9.a:0 "End the Imposter!"
+
+ news_LTD.10.t:0 "The end of [WDZ.GetNameDef]"
+ news_LTD.10.d:0 "Together with our neigboring state we have managed to end the independant governement of [WDZ.GetNameDef]."
+ news_LTD.10.a:0 "Treaty of [16.GetCapitalVictoryPointName] begone!"
+
+ news_LTD.11.t:0 "Imperial Castle completed!"
+ news_LTD.11.d:0 "Today our King will hold a grand opening ceremony to unvail the newly built Imperial Castle that has been constructed in [Root.Capital.GetName]."
+ news_LTD.11.a:0 "What a glorious moment for our kingdom."
+
+ news_LTD.28.t:0 "Request from [LTD.GetNameDef]"
+ news_LTD.28.d:0 "[LTD.GetNameDefCap] ask us to cede our [GER.GetAdjective] lands from 1918 to them in exchange for protection against threads luming in the east."
+ news_LTD.28.a:0 "Their wish shall be granted."
+ news_LTD.28.b:0 "Over our dead bodies!"
+ news_LTD.29.t:0 "Our Request was granted"
+ news_LTD.29.d:0 "A country has accepted our demands."
+ news_LTD.29.a:0 "We are grateful."
+ news_LTD.30.t:0 "Our Request was denied"
+ news_LTD.30.d:0 "A country has rejected our demands."
+ news_LTD.30.a:0 "This means WAR!"
+
+ news_LTD.31.t:0 "The King has Returned to his Country!"
+ news_LTD.31.d:0 "After establishing ourselves on the world stage, the question of how to govern ourselves has come up, we know that a figurehead, a face for the country on the world stage was needed. After a month the people have formally decided for the old king to return from his life as an outcast and rule them oncemore. Now the only question remains on the role the King should play in the politics of our country."
+ news_LTD.31.a:0 "His role is only representative, the power lies with the people!"
+ news_LTD.31.b:0 "The people entrust him with the full reign over the country."
+
+ news_LTD.32.t:0 "The Fascists have marched on Trier!"
+ news_LTD.32.d:0 "The gray Banner hangs of the Porta Nigra, the Paramilitaries have captured the historical downtown."
+ news_LTD.32.a:0 "And we shall march towards [50.GetCapitalVictoryPointName]!"
+
+ news_LTD.33.t:0 "The Right Man?"
+ news_LTD.33.d:0 ""
+ news_LTD.33.a:0 "Hail!"
+ news_LTD.34.t:0 "A Führer emerged"
+ news_LTD.34.d:0 ""
+ news_LTD.34.a:0 "Hail!"
+ news_LTD.35.t:0 "SS-Putsch"
+ news_LTD.35.d:0 "We shall no longer be held back by the weakness of the party!"
+ news_LTD.35.a:0 "Hail Hydra!"
+
+ news_LTD.36.t:0 "The Southwest Referendum!"
+ news_LTD.36.d:0 "Our Free Territory stands at a crossroads, should we unite with our german brothers or should we stay independant?"
+ news_LTD.36.a:0 "Take the path of Nationhood!"
+ news_LTD.36.b:0 "Join our german brothers!"
+
+ news_LTD.41.t:0 "The Weser Conferece!"
+ news_LTD.41.d:0 "[GER.GetLeader] has agreed to our Border propositions."
+ news_LTD.41.a:0 "Hail to our Union."
+
+ news_LTD.51.t:0 "The Fate of [FRA.GetNameDef]"
+ news_LTD.51.d:0 "[FRA.GetNameDefCap] is in ruins, our goal is achieved, what shall we do with it now?"
+ news_LTD.51.a:0 "Annex it all!"
+ news_LTD.51.b:0 "Split it with a puppet."
+ news_LTD.51.c:0 "Split it with [NIS.GetNameDef]."
+
+ news_LTD.70.t:0 "Onkel Pjodric seizes Power"
+ news_LTD.70.d:0 "We shall no longer be held back by the weakness of the party!"
+ news_LTD.70.a:0 "Our Supreme Comrade!"
+ news_LTD.71.t:0 "The Communists have marched on Trier!"
+ news_LTD.71.d:0 "The red Banner hangs of the Porta Nigra, the Paramilitaries have captured the historical downtown."
+ news_LTD.71.a:0 "And we shall march towards [50.GetCapitalVictoryPointName]!"
+ news_LTD.72.t:0 "Bavarian Independence!"
+ news_LTD.72.d:0 "We were successful in destabilizing the region to a degree where they were able to declared their independence."
+ news_LTD.72.a:0 "Good for them."
+ news_LTD.73.t:0 "Workers of the South unite!"
+ news_LTD.73.d:0 "The Bavarian Soviet Republic has accepted our proposal to unite into the Union State."
+ news_LTD.73.a:0 "What a glorious event!"
+ news_LTD.74.t:0 "Czechoslovakia divided!"
+ news_LTD.74.d:0 "The communist forces of the Slovak Socialist Republic has accepted our proposal to unite split czechia."
+ news_LTD.74.a:0 "Now is the time!"
+ news_LTD.75.t:0 "Austrian Soviet Republic declares Independence."
+ news_LTD.75.d:0 "Austria shall never surrender to the fascist snake!"
+ news_LTD.75.a:0 "The fascists havent won yet!"
+
+ news_LTD.90.t:0 "Anarchists take over the Territory"
+ news_LTD.90.d:0 "The new name and flag of our government free Territory has been revealed!"
+ news_LTD.90.a:0 "No gods, no masters!"
+
+ news_LTD.101.t:0 "Proclamation of the first European State"
+ news_LTD.101.d:0 "The new name and flag of our glorous country has been revealed!"
+ news_LTD.101.a:0 "For a brighter Future!"
+
+ news_LTD.102.t:0 "Formation of the European Union"
+ news_LTD.102.d:0 "A new alliance for the countries of the free world shall be formed."
+ news_LTD.102.a:0 "Let the stars shine bright!"
+
+ news_LTD.103.t:0 "European Union opens accession talks"
+ news_LTD.103.d:0 "All free countries on the european plain are now able to join the alliance."
+ news_LTD.103.a:0 "In varietate concordia"
+
+ news_LTD.104.t:0 "European Union opens federation talks"
+ news_LTD.104.d:0 "All free countries on the european plain are now able to unite under the european banner."
+ news_LTD.104.a:0 "In varietate concordia"
+
+ news_LTD.200.t:0 "A first step towards self-determination."
+ news_LTD.200.d:0 "After years of unrest in our nation and countless pleads to the interational community, our request to elect a official leader figure was granted. After careful consideration we have narrowed down the candidates to lead [LTD.GetNameDef] to three people. Theodor zu Liechtenstein, a man of the upper class who studied at the university of [Root.Capital.GetName]. Ralf Krämer, a peoples man, down to earth in his approach to leadership. And at last Wilhelm Brant, an author and a veteran of the Great War. Now it is time to cast our vote, who shall fill the empty place."
+ news_LTD.200.a:0 "Theodor zu Liechtenstein"
+ news_LTD.200.b:0 "Ralf Krämer"
+ news_LTD.200.c:0 "Wilhelm Brant"
+ news_LTD.200.e:0 "Let's search for someone else."
+
+ news_LTD.201.t:0 "A final glance of hope?"
+ news_LTD.201.d:0 "As both of the previous choices didn't felt right we continued in our search for someone to lead our country. In a pub in the outskirts of [Root.Capital.GetName], we were approached by a hooded man from the west. After talking to him for a bit it struck us clear as day, this was the man we were looking for."
+ news_LTD.201.a:0 "The strider it is then."
+
+ news_LTD.202.t:0 "The Duchy of Baden and the Kingdom of Württemberg unite!"
+ news_LTD.202.d:0 "Both Nations proclaimed their unification into the newly formed Kingdom of the southwest."
+ news_LTD.202.a:0 "May we stand united as one."
+
+ news_LTD.203.t:0 "The Transatlantic Dream"
+ news_LTD.203.d:0 "After a long struggle our people have achived greatness. We control both sides of the Atlantic Ocean and have proclaimed the Transatlantic State, solidifying our position as the global hegemon, and bringing the world one step closer towards peace."
+ news_LTD.203.a:0 "Per Aspera Ad Astra!"
+
+
+
+ news_NIS_lotr.0.t:0 "The age of the elves dawns once more!"
+ news_NIS_lotr.0.d:0 "After traveling to a seemingly safe location in Europe we were contacted by a mysterious group of forest inhabitants."
+ news_NIS_lotr.0.a:0 "May they guide us on our way."
+
+ news_LTD_lotr.100.t:0 "The Black Tower rises once more!"
+ news_LTD_lotr.100.d:0 ""
+ news_LTD_lotr.100.a:0 "They cannot escape the eye."
+
+ global_news_LTD_lotr.100.t:0 "The Black Tower rises once more!"
+ global_news_LTD_lotr.100.d:0 "Fire glowed amid the smoke. Mount Doom was burning, and a great reek rising. Then at last his gaze was held: wall upon wall, battlement upon battlement, black, immeasurably strong, mountain of iron, gate of steel, tower of adamant, I saw it:"
+ global_news_LTD_lotr.100.a:0 "Barad-dûr, Fortress of Sauron. All hope is lost."
+
+
+ news_DUN_lotr.100.t:0 "The dark lord calls the Nazgûl."
+ news_DUN_lotr.100.d:0 "Mordor calls fotrh the nine."
+ news_DUN_lotr.100.a:0 "The Witch King stands by his side."
+ news_DUN_lotr.100.b:0 "He can call them, why should that bother us?"
+
+ news_DUN_lotr.1.t:0 "Gondor Calls for Aid!"
+ news_DUN_lotr.1.d:0 "King Théoden from the House of Eorl has assumed leadership of our nation."
+ news_DUN_lotr.1.a:0 "And Rohan will answer!"
+
+ news_DUN_lotr.101.t:0 "The nine have awoken!"
+ news_DUN_lotr.101.d:0 "The Nazgûl have returned."
+ news_DUN_lotr.101.a:0 "The Witch King rises once more."
+
+ global_news_DUN_lotr.100.t:0 "Minas Morgul lights up again."
+ global_news_DUN_lotr.100.d:0 "Reports from the adriatic shores suggest that the fortress of the dead has lit up once more."
+ global_news_DUN_lotr.100.a:0 "He calls forth the nine."
+
+
+ news_NIS_lotr.100.t:0 "The dark lord calls for the white wizard."
+ news_NIS_lotr.100.d:0 "Mordor calls for the construction of Orthanc."
+ news_NIS_lotr.100.a:0 "Isengard shall stand by his side."
+ news_NIS_lotr.100.b:0 "He can call, but why should we answer?"
+
+ global_news_NIS_lotr.100.t:0 "Orthanc grows restless."
+ global_news_NIS_lotr.100.d:0 "Reports from the Mediterranean suggest that the tower of Orthanc has once again been rebuilt"
+ global_news_NIS_lotr.100.a:0 "The White Wizard is unleashed."
+
+
+ global_news_LTD.0.t:0 "[LTD.GetNameDefCap] proclaim State!"
+ global_news_LTD.0.d:0 "After a daring speach the people of [LTD.GetNameDef] have agreed to proclaim their own country. The new found [LTD.GetName] struggle in their power to lead their country."
+ global_news_LTD.0.a:0 "Let's see what the future holds for them."
+
+ global_news_LTD.1.t:0 "[LTD.GetNameDefCap] annexes [28.GetName]"
+ global_news_LTD.1.d:0 "After a lot of border disputes the fought over region of [28.GetName] was officially handed over and annexed from [FRA.GetNameDef] to [LTD.GetNameDef]."
+ global_news_LTD.1.a:0 "The [FRA.GetAdjective] are definetly not gonna like that..."
+ global_news_LTD.2.t:0 "[LTD.GetNameDefCap] annexes [8.GetName]"
+ global_news_LTD.2.d:0 "We fear that this agressive foreign policy may continue in the future."
+ global_news_LTD.2.a:0 "This is worrying indeed."
+ global_news_LTD.3.t:0 "Revolution in southern [GER.GetName]"
+ global_news_LTD.3.d:0 "Bavaria has declared independence from [GER.GetNameDef]."
+ global_news_LTD.3.a:0 "This marks the beginning of the end for the Nazi regime."
+ global_news_LTD.4.t:0 "[BAY.GetAdjectiveCap] monarch dies without a heir!"
+ global_news_LTD.4.d:0 "After the death of the [BAY.GetAdjective] princess yesterday, [LTD.GetNameDefCap] were asked by her advisors to protect the country from sinking into chaos."
+ global_news_LTD.4.a:0 "Better monarchist than fascist!"
+ global_news_LTD.5.t:0 "[LTD.GetNameDefCap] buys Liechtenstein"
+ global_news_LTD.5.d:0 "After showing interest in the deal the Swiss Confederation agreed to sell of Liechtenstein to [LTD.GetNameDef]."
+ global_news_LTD.5.a:0 "You can buy a country?"
+ global_news_LTD.6.t:0 "The Treaty of [845.GetCapitalVictoryPointName]"
+ global_news_LTD.6.d:0 "[FRA.GetNameDefCap], [ITA.GetNameDef] and [LTD.GetNameDef] divided Switzerland into their rough linguistic reagions. This deal could also be a follow up after [LTD.GetNameDef] claimed [28.GetStateName], so the french would be payed back..."
+ global_news_LTD.6.a:0 "Interesting."
+ global_news_LTD.7.t:0 "[AUS.GetNameDefCap] declares Independence"
+ global_news_LTD.7.d:0 "The monarchists of [AUS.GetNameDef] seperated themselfs form their oppressors. And in a coup managed to regain power."
+ global_news_LTD.7.a:0 "A glimpse of hope?"
+ global_news_LTD.8.t:0 "[AUS.GetNameDefCap] joins the [LTD.GetNameDef]"
+ global_news_LTD.8.d:0 "After unending political chaos the [AUS.GetAdjective] parliament was disbanded and the people marched through the villages to join the southern monarchy."
+ global_news_LTD.8.a:0 "Selfdetermination at it's finest."
+ global_news_LTD.9.t:0 "Bruderkrieg"
+ global_news_LTD.9.d:0 "Turmoil in [GER.GetNameDef] as the southern monarchy will no longer tolerate their fascist counterpart in the north. A couple of hours ago they have officially declared war on the German Reich."
+ global_news_LTD.9.a:0 "So this is how it will end."
+
+ global_news_LTD.10.t:0 "[WDZ.GetNameDef] was disbanded!"
+ global_news_LTD.10.d:0 "In a breach of the Treaty of [16.GetCapitalVictoryPointName] [GER.GetNameDef] and [LTD.GetNameDef] have met in Bonn to split the zone between themselves."
+ global_news_LTD.10.a:0 "Worrying."
+
+ global_news_LTD.21.t:0 "Union of the South"
+ global_news_LTD.21.d:0 "The Commune of the Dudes and the Bavarian Soviet Republic have united into the Union State."
+ global_news_LTD.21.a:0 "Another win for the reds."
+
+ global_news_LTD.29.t:0 "The Free Territory of the Southwest joins Germany!"
+ global_news_LTD.29.d:0 "After a referendum the people of the Free Territory of the Southwest have voted to join Germany."
+ global_news_LTD.29.a:0 "Worrying self-determination!"
+
+ global_news_LTD.30.t:0 "Free Territory of the Southwest proclaim State!"
+ global_news_LTD.30.d:0 "After a referendum the people of the Free Territory of the Southwest have voted to proclaim their own country. The new found Lands of the Dragons struggle in their power to lead their country."
+ global_news_LTD.30.a:0 "Their wish shall be granted!"
+
+ global_news_LTD.31.t:0 "The Monarchy was restored in the Southwest!"
+ global_news_LTD.31.d:0 "After a month the people of the former Free Territorry of the Southwest have formally decided for their old king to return from his life as an outcast to rule them oncemore."
+ global_news_LTD.31.a:0 "The Return of the King."
+
+ global_news_LTD.51.t:0 "The [16.GetCapitalVictoryPointName] Accords"
+ global_news_LTD.51.d:0 "France is in ruins, their fate now intirely in the hands of [LTD.GetNameDef]."
+ global_news_LTD.51.a:0 "The End of an Era"
+
+ global_news_LTD.203.t:0 "The Transatlantic Dream"
+ global_news_LTD.203.d:0 "Roughly 6 hours ago a message has reached us from Vancouver. After being captured by the Southwest, the long struggle of their people has finally paid off. They control both sides of the Atlantic Ocean and have proclaimed the Transatlantic State, solidifying their position as the global hegemon, and bringing the world one step closer towards peace."
+ global_news_LTD.203.a:0 "Per Aspera Ad Astra!"
+
+#LKR
+
+ news_LKR.1.t:0 "Jutland is Ours!"
+ news_LKR.1.d:0 "The Danes shall recognize, that we are the true rulers of the mainland and if they don't want to give it up peacefully, we must take it!"
+ news_LKR.1.a:0 "To Arms!"
+ news_LKR.2.t:0 "Oldenburg Independence!"
+ news_LKR.2.d:0 "We were successful in destabilizing the region to a degree where they were able to declared their independence."
+ news_LKR.2.a:0 "Good for them."
+ news_LKR.3.t:0 "Annexation of Oldenburg"
+ news_LKR.3.d:0 "Our new puppet is clearly a core part of our nation, and should be treated as such."
+ news_LKR.3.a:0 "Wonderful News!"
+ news_LKR.4.t:0 "Friesland is Ours!"
+ news_LKR.4.d:0 "The Dutch shall recognize, that we are the true rulers of the north and if they don't want to give it up peacefully, we must take it!"
+ news_LKR.4.a:0 "To Arms!"
+
+ news_LKR.31.t:0 "The Stettin Conferece!"
+ news_LKR.31.d:0 "The Führer has agreed to our Border propositions."
+ news_LKR.31.a:0 "Hail to our union."
+
+ news_LKR.51.t:0 "Civil War in the Reich!"
+ news_LKR.51.d:0 "Withg our help, the comrads to our south have made it!"
+ news_LKR.51.a:0 "Glory to communism!"
+
+ news_LKR.103.t:0 "Invitation to join Arctic Base"
+ news_LKR.103.d:0 "[LTD.GetNameDef] has invited us to be a part of their upcoming plan to establish a permanent base in the arctic due to new findings there. As they need a country with a powerful navy and a well organized logistical system for the transport of materials, equipment and personel."
+ news_LKR.103.a:0 "Together, for science!"
+ news_LKR.103.b:0 "This is a waste of resources."
+
+ news_LKR.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_LKR.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_LKR.911.a:0 "Yes. It would be wise."
+ news_LKR.911.b:0 "I'd rather die than side with them!"
+
+ global_news_LKR.1.t:0 "The Larry Empire justifies on Denmark"
+ global_news_LKR.1.d:0 "The Larry Empire plans to take Jutland, by Force if thay have to."
+ global_news_LKR.1.a:0 "This is worrying."
+ global_news_LKR.2.t:0 "Revolution in northern Germany"
+ global_news_LKR.2.d:0 "The Kingdom of Oldenburg has declared independence from Germany."
+ global_news_LKR.2.a:0 "This marks the beginning of the end for the Nazi regime."
+ global_news_LKR.3.t:0 "The Larry Empire annexes Oldenburg"
+ global_news_LKR.3.d:0 "After a lot of border disputes the fought over region of Oldenburg was officially annexed by the Larry Empire."
+ global_news_LKR.3.a:0 "So much for independence..."
+ global_news_LKR.4.t:0 "The Larry Empire justifies on the Netherlands"
+ global_news_LKR.4.d:0 "The Larry Empire plans to take Friesland, by Force if thay have to."
+ global_news_LKR.4.a:0 "This is worrying."
+
+#DUN
+
+ news_DUN.1.t:0 "Treaty of Sarajevo"
+ news_DUN.1.d:0 "Italien has agreed with our plans for Yugoslavia"
+ news_DUN.1.a:0 "Let's Go!"
+ news_DUN.2.t:0 "Yugoslavian Civil War"
+ news_DUN.2.d:0 "The revolutionaries have started the Civil War."
+ news_DUN.2.a:0 "Now for our part of the pie."
+
+ news_DUN.31.t:0 "Facists rise up in Bosnia"
+ news_DUN.31.d:0 "The revolutionaries have started the Civil War."
+ news_DUN.31.a:0 "And we shall march into the Capital!"
+
+ news_DUN.32.t:0 "Adolf Chissler rises to power"
+ news_DUN.32.d:0 ""
+ news_DUN.32.a:0 "VerFührerisch"
+
+ news_DUN.33.t:0 "The Dark Lord rises!"
+ news_DUN.33.d:0 ""
+ news_DUN.33.a:0 "Darth Vader returns."
+
+ news_DUN.61.t:0 "Communists rise up in Bosnia"
+ news_DUN.61.d:0 "The revolutionaries have started the Civil War."
+ news_DUN.61.a:0 "And we shall march into the Capital!"
+
+ news_DUN.62.t:0 "Red Thrawn seizes Power"
+ news_DUN.62.d:0 "We shall no longer be held back by the weakness of the party!"
+ news_DUN.62.a:0 "Our Supreme Comrade!"
+
+ news_DUN.64.t:0 "Italian-Sicilian Civil War"
+ news_DUN.64.d:0 "The communist Sicilians have risen up against the italians!"
+ news_DUN.64.a:0 "Now is our time to strike!"
+
+ news_DUN.103.t:0 "Invitation to join Arctic Base"
+ news_DUN.103.d:0 "[LTD.GetNameDef] has invited us to be a part of their upcoming plan to establish a permanent base in the arctic due to new findings there. As they need a country with a powerful navy and a well organized logistical system for the transport of materials, equipment and personel."
+ news_DUN.103.a:0 "Together, for science!"
+ news_DUN.103.b:0 "This is a waste of resources."
+
+ news_DUN.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_DUN.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_DUN.911.a:0 "Yes. It would be wise."
+ news_DUN.911.b:0 "I'd rather die than side with them!"
+
+ global_news_DUN.1.t:0 "Trouble in the Balkan"
+ global_news_DUN.1.d:0 "Italy and the Chiss annexed part of Yugoslavia."
+ global_news_DUN.1.a:0 "This is worrying."
+
+ global_news_DUN.31.t:0 "Trouble in the Balkan II - Electric Bugaloo"
+ global_news_DUN.31.d:0 "The communist revolutionaries have started the Civil War."
+ global_news_DUN.31.a:0 "This region cannot be tamed."
+
+ global_news_DUN.33.t:0 "Threat of galactic proportions"
+ global_news_DUN.33.d:0 "The skies over Csaplar, the Capital of the Chiss, turned dark today as a Venator-Class Star Destroyer entered low orbit. We can only speculate on who was abord."
+ global_news_DUN.33.a:0 "What could be the meaning of this?"
+
+ global_news_DUN.61.t:0 "Trouble in the Balkan II - Electric Bugaloo"
+ global_news_DUN.61.d:0 "The facist revolutionaries have started the Civil War."
+ global_news_DUN.61.a:0 "This region cannot be tamed."
+
+ global_news_DUN.2.t:0 "Yugoslavia on Fire!"
+ global_news_DUN.2.d:0 "Yugoslavia has plummited into a civil war."
+ global_news_DUN.2.a:0 "This is worrying."
+
+ #LEO
+
+ news_LEO.1.t:0 "Revolution in Lithuania"
+ news_LEO.1.d:0 "Our efforts were fruitful in staging a civil war in Lithuania."
+ news_LEO.1.a:0 "Now is our chance to strike!"
+ news_LEO.2.t:0 "Communist Union State"
+ news_LEO.2.d:0 "The Soviet State of Shrimpistan has accepted our proposal to unite into the Union State."
+ news_LEO.2.a:0 "What a glorious event!"
+ news_LEO.3.t:0 "The Fate of Latvia"
+ news_LEO.3.d:0 "Latvias people shall no longer remain without glorious communism!"
+ news_LEO.3.a:0 "We shall crush them!"
+ news_LEO.4.t:0 "The Fate of Estonia"
+ news_LEO.4.d:0 "Estonias people shall no longer remain without glorious communism!"
+ news_LEO.4.a:0 "We shall crush them!"
+ news_LEO.5.t:0 "The Fire of the Revolution"
+ news_LEO.5.d:0 "The monarchists have startet a revolt, we answered with guns, so did they, oh no."
+ news_LEO.5.a:0 "We shall crush them!"
+
+ news_LEO.31.t:0 "Moldovan Independence!"
+ news_LEO.31.d:0 "We were successful in destabilizing the region to a degree where they were able to declared their independence."
+ news_LEO.31.a:0 "Good for them."
+
+ news_LEO.32.t:0 "The Fire of the Revolution"
+ news_LEO.32.d:0 "The communists have startet a revolt, we answered with guns, so did they, oh no."
+ news_LEO.32.a:0 "We shall crush them!"
+
+ news_LEO.103.t:0 "Invitation to join Arctic Base"
+ news_LEO.103.d:0 "[LTD.GetNameDef] has invited us to be a part of their upcoming plan to establish a permanent base in the arctic due to new findings there. As they need a country with a powerful navy and a well organized logistical system for the transport of materials, equipment and personel."
+ news_LEO.103.a:0 "Together, for science!"
+ news_LEO.103.b:0 "This is a waste of resources."
+
+ news_LEO.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_LEO.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_LEO.911.a:0 "Yes. It would be wise."
+ news_LEO.911.b:0 "I'd rather die than side with them!"
+
+ global_news_LEO.1.t:0 "Revolution in Lithuania"
+ global_news_LEO.1.d:0 "Lithuania has plummited into a civil war.."
+ global_news_LEO.1.a:0 "This is worrying."
+ global_news_LEO.2.t:0 "Communist Union State"
+ global_news_LEO.2.d:0 "Communistan and the Soviet State of Shrimpistan have united into the Union State."
+ global_news_LEO.2.a:0 "Another win for the reds."
+ global_news_LEO.3.t:0 "State of Latvia questioned by Communistan"
+ global_news_LEO.3.d:0 "Rising tensions between Communistan and Latvia could escalate into an all out war."
+ global_news_LEO.3.a:0 "This is worrying."
+ global_news_LEO.4.t:0 "State of Estonia questioned by Communistan"
+ global_news_LEO.4.d:0 "Rising tensions between Communistan and Estonia could escalate into an all out war."
+ global_news_LEO.4.a:0 "This is worrying."
+
+#NIS
+
+ news_NIS.0.t:0 "Successful Relocation"
+ news_NIS.0.d:0 "After a few diffrences we managed to relocate our entire Kingdom to the European Mainland."
+ news_NIS.0.a:0 "A Glorious Achievement!"
+
+ news_NIS.20.t:0 "Occitanian Revolution"
+ news_NIS.20.d:0 "Two Nations in the North of Italy have seceded."
+ news_NIS.20.a:0 "Freedom to those wo seek it."
+
+ news_NIS.25.t:0 "Catalan Independence!"
+ news_NIS.25.d:0 "Catalonia has used the recent turmoil in spain to declare thair independance."
+ news_NIS.25.a:0 "Freedom to those wo seek it."
+
+ news_NIS.30.t:0 "North Italian Crisis"
+ news_NIS.30.d:0 "Two Nations in the North of Italy have seceded."
+ news_NIS.30.a:0 "Freedom to those wo seek it."
+
+ news_NIS.103.t:0 "Invitation to join Arctic Base"
+ news_NIS.103.d:0 "[LTD.GetNameDef] has invited us to be a part of their upcoming plan to establish a permanent base in the arctic due to new findings there. As they need a country with a powerful navy and a well organized logistical system for the transport of materials, equipment and personel."
+ news_NIS.103.a:0 "Together, for science!"
+ news_NIS.103.b:0 "This is a waste of resources."
+
+ news_NIS.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_NIS.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_NIS.911.a:0 "Yes. It would be wise."
+ news_NIS.911.b:0 "I'd rather die than side with them!"
+
+#KRM
+
+ news_KRM.10.t:0 "Facists rise up in Curitiba"
+ news_KRM.10.d:0 "The revolutionaries have started the Civil War."
+ news_KRM.10.a:0 "And we shall march into the Capital!"
+
+ news_KRM.11.t:0 "Brazilian Facists rise up in Rio"
+ news_KRM.11.d:0 "The governement has fled to Recife."
+ news_KRM.11.a:0 "Cowards!"
+
+ news_KRM.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_KRM.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_KRM.911.a:0 "Yes. It would be wise."
+ news_KRM.911.b:0 "I'd rather die than side with them!"
+
+#JSN
+
+ news_JSN.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_JSN.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_JSN.911.a:0 "Yes. It would be wise."
+ news_JSN.911.b:0 "I'd rather die than side with them!"
+
+#TOR
+
+ news_TOR.103.t:0 "Invitation to join Arctic Base"
+ news_TOR.103.d:0 "[LTD.GetNameDef] has invited us to be a part of their upcoming plan to establish a permanent base in the arctic due to new findings there. As they need a country with a powerful navy and a well organized logistical system for the transport of materials, equipment and personel."
+ news_TOR.103.a:0 "Together, for science!"
+ news_TOR.103.b:0 "This is a waste of resources."
+
+ news_TOR.911.t:0 "[LTD.GetNameDef] has offered to protect us."
+ news_TOR.911.d:0 "Today we have reached a Telegram from [LTD.GetNameDef]. They 'offered' to be our protector if we join their alliance of Nations. The Question is, do we accept?"
+ news_TOR.911.a:0 "Yes. It would be wise."
+ news_TOR.911.b:0 "I'd rather die than side with them!"
+
+#Misc
+
+ global_news_SAR.1.t:0 "The Saar Basin was returned"
+ global_news_SAR.1.d:0 "After a sucessful referendum the Territory of the Saar Basin was reunited with [42.Controller.GetNameDef], much to the dismay of [FRA.GetNameDef]."
+ global_news_SAR.1.a:0 "A win for the people."
+
+ california.101.t:0 "Treaty of Night City"
+ california.101.d:0 "The Aftermath of the Unification War left our country shattered into pieces, which one shall we lead?"
+ california.101.a:0 "Continue as Northern California"
+ california.101.b:0 "Continue as Southern California"
+ california.101.c:0 "Continue as Night City"

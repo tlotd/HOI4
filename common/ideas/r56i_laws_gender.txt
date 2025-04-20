@@ -1,0 +1,166 @@
+#####---------------------------------------------------------------------> Road to '56, Gender Laws
+#####---------------------------------------------------------------------> by GreatExperiment
+
+ideas = {
+
+	r56i_laws_category_gender = { 
+
+		use_list_view = yes
+	
+		law = yes
+		
+		# Traditional Roles
+		r56i_laws_gender_traditional = {
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = tlotd_has_government_tt
+					NOT = {
+						has_country_leader_ideology = ungoverned
+						has_country_leader_ideology = anarchism
+						has_country_leader_ideology = anarchist_communism
+					}
+				}
+				NOT = {
+					has_idea_with_trait = professional_yapper
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				conscription_factor = -0.075
+				hidden_modifier = { #Needs to hide for non DLC plebs
+					female_random_operative_chance = -1
+				}
+			}
+
+			cost = 100
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+				factor = 0
+		 	}
+		}
+		
+		# Enforced Patriarchy
+		r56i_laws_gender_patriarchy = {
+		
+			available = {
+				NOT = {
+					has_government = communism
+				}
+				custom_trigger_tooltip = {
+					tooltip = tlotd_has_government_tt
+					NOT = {
+						has_country_leader_ideology = ungoverned
+						has_country_leader_ideology = anarchism
+						has_country_leader_ideology = anarchist_communism
+					}
+				}
+				NOT = {
+					has_idea_with_trait = professional_yapper
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+				production_factory_efficiency_gain_factor = 0.10
+				conscription_factor = -0.15
+				hidden_modifier = { #Needs to hide for non DLC plebs
+					female_random_operative_chance = -2
+				}
+			}
+
+			cost = 175
+
+			ai_will_do = {
+   				factor = 0
+			}
+		}
+
+		# Limited Rights
+		r56i_laws_gender_limited = {
+
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = tlotd_has_government_tt
+					NOT = {
+						has_country_leader_ideology = ungoverned
+						has_country_leader_ideology = anarchism
+						has_country_leader_ideology = anarchist_communism
+					}
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+
+			modifier = {
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				#production_factory_start_efficiency_factor = -0.05	#can start production at 0 efficiency, nerf stat above further if needed
+				weekly_manpower = 100 #Silly, but better for small nations who need the raw MP
+				conscription_factor = 0.075
+				#female_random_operative_chance = 3
+			}
+
+			cost = 100
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+		
+		# Total Equality
+		r56i_laws_gender_equality = {
+		
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+				hidden_trigger = {
+					NOT = {
+						has_global_flag = NATIONAL_CHARACTERS_BLOCKED
+					}
+				}
+			}
+			
+			modifier = {
+				industrial_capacity_factory = -0.075
+				industrial_capacity_dockyard = -0.075
+				#production_factory_start_efficiency_factor = -0.10	#can start production at 0 efficiency, nerf stat above further if needed
+				conscription_factor = 0.15 #from 0.10, 0.15
+				weekly_manpower = 200 #Silly, but better for small nations who need the raw MP
+				hidden_modifier = { #Needs to hide for non DLC plebs
+					female_random_operative_chance = 0.5
+				}
+			}
+
+			cost = 175
+
+			ai_will_do = {
+   				factor = 0
+			}
+		}
+	}
+}
+
+#####---------------------------------------------------------------------> End

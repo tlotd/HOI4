@@ -1,0 +1,37 @@
+﻿###########################
+# Drachenpakt Global Events
+###########################
+
+add_namespace = global_news_drachenpakt
+
+#Arctic Exploration
+news_event = {
+	id = global_news_drachenpakt.1002
+	title = global_news_drachenpakt.1002.t
+	desc = global_news_drachenpakt.1002.d
+	picture = GFX_news_event_arctic_exploration
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_drachenpakt.1002.a
+	}
+}
+
+#Treaty of Reykjavik
+news_event = {
+	id = global_news_drachenpakt.1003
+	title = global_news_drachenpakt.1003.t
+	desc = global_news_drachenpakt.1003.d
+	picture = GFX_news_event_arctic_exploration
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_drachenpakt.1003.a
+	}
+}

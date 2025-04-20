@@ -1,0 +1,52 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_mio_company_silberstahl_ruestungswerke"
+		texturefile = "gfx/interface/military_industrial_organization/company_silberstahl_ruestungswerke.dds"
+	}
+	SpriteType = {
+		name = "GFX_mio_company_einsatzmanufaktur_edelweiss"
+		texturefile = "gfx/interface/military_industrial_organization/company_einsatzmanufaktur_edelweiss.dds"
+	}
+	SpriteType = {
+		name = "GFX_mio_company_schwerindustriegenossenschaft_dicke_rohre"
+		texturefile = "gfx/interface/military_industrial_organization/company_schwerindustriegenossenschaft_dicke_rohre.dds"
+	}
+	SpriteType = {
+		name = "GFX_mio_company_luftschiffwerke_lilienthal"
+		texturefile = "gfx/interface/military_industrial_organization/company_luftschiffwerke_lilienthal.dds"
+	}
+	SpriteType = {
+		name = "GFX_mio_company_mercedes_benz"
+		texturefile = "gfx/interface/military_industrial_organization/company_mercedes_benz.dds"
+	}
+	SpriteType = {
+		name = "GFX_mio_company_drachenschanzwerke"
+		texturefile = "gfx/interface/military_industrial_organization/company_drachenschanzwerke.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_mio_company_blas_tech_industries"
+		texturefile = "gfx/interface/military_industrial_organization/company_blas_tech_industries.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_mio_company_kuat_drive_yards"
+		texturefile = "gfx/interface/military_industrial_organization/company_kuat_drive_yards.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_mio_company_sakura_arms_conglomerate"
+		texturefile = "gfx/interface/military_industrial_organization/company_sakura_arms_conglomerate.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_mio_company_cartel_arms_syndicate"
+		texturefile = "gfx/interface/military_industrial_organization/company_cartel_arms_syndicate.dds"
+	}
+}

@@ -1,0 +1,37 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = global_news_SAR
+
+#Alsace-Lorraine
+news_event = {
+	id = global_news_SAR.1
+	title = global_news_SAR.1.t
+	desc = global_news_SAR.1.d
+	picture = GFX_news_event_006
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					SAR = {
+						owns_state = 240
+					}
+				}
+				WDZ = {
+					transfer_state = 240
+					add_state_core = 240
+				}
+			}
+		}
+	}
+
+	option = {
+		name = global_news_SAR.1.a
+	}
+}

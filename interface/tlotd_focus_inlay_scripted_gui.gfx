@@ -1,0 +1,22 @@
+spriteTypes = {
+        spriteType = {
+        name = "GFX_empty"
+        textureFile = "gfx/interface/focusview/inlay_window/empty.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_inlay_window_leader_frame"
+        textureFile = "gfx/interface/focusview/inlay_window/leader_frame.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_inlay_window_faction_leader_frame"
+        textureFile = "gfx/interface/focusview/inlay_window/faction_leader_frame.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_inlay_window_faction_leader_lotr_frame"
+        textureFile = "gfx/interface/focusview/inlay_window/faction_leader_lotr_frame.dds"
+    }
+    spriteType = {
+        name = "GFX_focus_inlay_window_faction_leader_lotr_sauron_frame"
+        textureFile = "gfx/interface/focusview/inlay_window/faction_leader_lotr_sauron_frame.dds"
+    }
+}

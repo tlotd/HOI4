@@ -1,0 +1,259 @@
+﻿GON_Inf_01 = {
+	name = "Gondorian Guardsmen Division"
+
+	can_use = { ROOT = { has_tech = gondorian_guard } }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Gondorian Guardsmen Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Gondorian Guardsmen Division" }
+		2 = { "%d. Gondorian Guardsmen Division" }
+		3 = { "%d. Gondorian Guardsmen Division" }
+		4 = { "%d. Gondorian Guardsmen Division" }
+		5 = { "%d. Gondorian Guardsmen Division" }
+		6 = { "%d. Gondorian Guardsmen Division" }
+		7 = { "%d. Gondorian Guardsmen Division" }
+		8 = { "%d. Gondorian Guardsmen Division" }
+		9 = { "%d. Gondorian Guardsmen Division" }
+		10 = { "%d. Gondorian Guardsmen Division" }
+		11 = { "%d. Gondorian Guardsmen Division" }
+		12 = { "%d. Gondorian Guardsmen Division" }
+		13 = { "%d. Gondorian Guardsmen Division" }
+		14 = { "%d. Gondorian Guardsmen Division" }
+		15 = { "%d. Gondorian Guardsmen Division" }
+		16 = { "%d. Gondorian Guardsmen Division" }
+		17 = { "%d. Gondorian Guardsmen Division" }
+		18 = { "%d. Gondorian Guardsmen Division" }
+		19 = { "%d. Gondorian Guardsmen Division" }
+		20 = { "%d. Gondorian Guardsmen Division" }
+		21 = { "%d. Gondorian Guardsmen Division" }
+		22 = { "%d. Gondorian Guardsmen Division" }
+		23 = { "%d. Gondorian Guardsmen Division" }
+		24 = { "%d. Gondorian Guardsmen Division" }
+		25 = { "%d. Gondorian Guardsmen Division" }
+		26 = { "%d. Gondorian Guardsmen Division" }
+		27 = { "%d. Gondorian Guardsmen Division" }
+		28 = { "%d. Gondorian Guardsmen Division" }
+		29 = { "%d. Gondorian Guardsmen Division" }
+		30 = { "%d. Gondorian Guardsmen Division" }
+		31 = { "%d. Gondorian Guardsmen Division" }
+		32 = { "%d. Gondorian Guardsmen Division" }
+		33 = { "%d. Gondorian Guardsmen Division" }
+		34 = { "%d. Gondorian Guardsmen Division" }
+		35 = { "%d. Gondorian Guardsmen Division" }
+		36 = { "%d. Gondorian Guardsmen Division" }
+		37 = { "%d. Gondorian Guardsmen Division" }
+		38 = { "%d. Gondorian Guardsmen Division" }
+		39 = { "%d. Gondorian Guardsmen Division" }
+		40 = { "%d. Gondorian Guardsmen Division" }
+		41 = { "%d. Gondorian Guardsmen Division" }
+		42 = { "%d. Gondorian Guardsmen Division" }
+		43 = { "%d. Gondorian Guardsmen Division" }
+		44 = { "%d. Gondorian Guardsmen Division" }
+		45 = { "%d. Gondorian Guardsmen Division" }
+		46 = { "%d. Gondorian Guardsmen Division" }
+		47 = { "%d. Gondorian Guardsmen Division" }
+		48 = { "%d. Gondorian Guardsmen Division" }
+		49 = { "%d. Gondorian Guardsmen Division" }
+		50 = { "%d. Gondorian Guardsmen Division" }
+	}
+}
+
+ELVEN_Inf_01 = {
+	name = "Silvan Elven Soldier Division"
+
+	can_use = { ROOT = { has_tech = silvan_elf_soldiers } }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Silvan Elven Soldier Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Silvan Elven Soldier Division" }
+		2 = { "%d. Silvan Elven Soldier Division" }
+		3 = { "%d. Silvan Elven Soldier Division" }
+		4 = { "%d. Silvan Elven Soldier Division" }
+		5 = { "%d. Silvan Elven Soldier Division" }
+		6 = { "%d. Silvan Elven Soldier Division" }
+		7 = { "%d. Silvan Elven Soldier Division" }
+		8 = { "%d. Silvan Elven Soldier Division" }
+		9 = { "%d. Silvan Elven Soldier Division" }
+		10 = { "%d. Silvan Elven Soldier Division" }
+		11 = { "%d. Silvan Elven Soldier Division" }
+		12 = { "%d. Silvan Elven Soldier Division" }
+		13 = { "%d. Silvan Elven Soldier Division" }
+		14 = { "%d. Silvan Elven Soldier Division" }
+		15 = { "%d. Silvan Elven Soldier Division" }
+		16 = { "%d. Silvan Elven Soldier Division" }
+		17 = { "%d. Silvan Elven Soldier Division" }
+		18 = { "%d. Silvan Elven Soldier Division" }
+		19 = { "%d. Silvan Elven Soldier Division" }
+		20 = { "%d. Silvan Elven Soldier Division" }
+		21 = { "%d. Silvan Elven Soldier Division" }
+		22 = { "%d. Silvan Elven Soldier Division" }
+		23 = { "%d. Silvan Elven Soldier Division" }
+		24 = { "%d. Silvan Elven Soldier Division" }
+		25 = { "%d. Silvan Elven Soldier Division" }
+		26 = { "%d. Silvan Elven Soldier Division" }
+		27 = { "%d. Silvan Elven Soldier Division" }
+		28 = { "%d. Silvan Elven Soldier Division" }
+		29 = { "%d. Silvan Elven Soldier Division" }
+		30 = { "%d. Silvan Elven Soldier Division" }
+		31 = { "%d. Silvan Elven Soldier Division" }
+		32 = { "%d. Silvan Elven Soldier Division" }
+		33 = { "%d. Silvan Elven Soldier Division" }
+		34 = { "%d. Silvan Elven Soldier Division" }
+		35 = { "%d. Silvan Elven Soldier Division" }
+		36 = { "%d. Silvan Elven Soldier Division" }
+		37 = { "%d. Silvan Elven Soldier Division" }
+		38 = { "%d. Silvan Elven Soldier Division" }
+		39 = { "%d. Silvan Elven Soldier Division" }
+		40 = { "%d. Silvan Elven Soldier Division" }
+		41 = { "%d. Silvan Elven Soldier Division" }
+		42 = { "%d. Silvan Elven Soldier Division" }
+		43 = { "%d. Silvan Elven Soldier Division" }
+		44 = { "%d. Silvan Elven Soldier Division" }
+		45 = { "%d. Silvan Elven Soldier Division" }
+		46 = { "%d. Silvan Elven Soldier Division" }
+		47 = { "%d. Silvan Elven Soldier Division" }
+		48 = { "%d. Silvan Elven Soldier Division" }
+		49 = { "%d. Silvan Elven Soldier Division" }
+		50 = { "%d. Silvan Elven Soldier Division" }
+	}
+}
+
+ORCS_Inf_01 = {
+	name = "Orc Division"
+
+	can_use = { ROOT = { has_tech = orc_soldiers } }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Orc Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Orc Division" }
+		2 = { "%d. Orc Division" }
+		3 = { "%d. Orc Division" }
+		4 = { "%d. Orc Division" }
+		5 = { "%d. Orc Division" }
+		6 = { "%d. Orc Division" }
+		7 = { "%d. Orc Division" }
+		8 = { "%d. Orc Division" }
+		9 = { "%d. Orc Division" }
+		10 = { "%d. Orc Division" }
+		11 = { "%d. Orc Division" }
+		12 = { "%d. Orc Division" }
+		13 = { "%d. Orc Division" }
+		14 = { "%d. Orc Division" }
+		15 = { "%d. Orc Division" }
+		16 = { "%d. Orc Division" }
+		17 = { "%d. Orc Division" }
+		18 = { "%d. Orc Division" }
+		19 = { "%d. Orc Division" }
+		20 = { "%d. Orc Division" }
+		21 = { "%d. Orc Division" }
+		22 = { "%d. Orc Division" }
+		23 = { "%d. Orc Division" }
+		24 = { "%d. Orc Division" }
+		25 = { "%d. Orc Division" }
+		26 = { "%d. Orc Division" }
+		27 = { "%d. Orc Division" }
+		28 = { "%d. Orc Division" }
+		29 = { "%d. Orc Division" }
+		30 = { "%d. Orc Division" }
+		31 = { "%d. Orc Division" }
+		32 = { "%d. Orc Division" }
+		33 = { "%d. Orc Division" }
+		34 = { "%d. Orc Division" }
+		35 = { "%d. Orc Division" }
+		36 = { "%d. Orc Division" }
+		37 = { "%d. Orc Division" }
+		38 = { "%d. Orc Division" }
+		39 = { "%d. Orc Division" }
+		40 = { "%d. Orc Division" }
+		41 = { "%d. Orc Division" }
+		42 = { "%d. Orc Division" }
+		43 = { "%d. Orc Division" }
+		44 = { "%d. Orc Division" }
+		45 = { "%d. Orc Division" }
+		46 = { "%d. Orc Division" }
+		47 = { "%d. Orc Division" }
+		48 = { "%d. Orc Division" }
+		49 = { "%d. Orc Division" }
+		50 = { "%d. Orc Division" }
+	}
+}
+
+Stormtrooper_Inf_01 = {
+	name = "Stormtrooper Division"
+
+	can_use = { ROOT = { has_tech = stormtroopers } }
+
+	division_types = { "infantry" }
+
+	fallback_name = "%d. Stormtrooper Division"
+
+	# Names with numbers (only one number per entry). 
+	# It's okay to have gaps in numbering.
+	ordered = {
+		1 = { "%d. Stormtrooper Division" }
+		2 = { "%d. Stormtrooper Division" }
+		3 = { "%d. Stormtrooper Division" }
+		4 = { "%d. Stormtrooper Division" }
+		5 = { "%d. Stormtrooper Division" }
+		6 = { "%d. Stormtrooper Division" }
+		7 = { "%d. Stormtrooper Division" }
+		8 = { "%d. Stormtrooper Division" }
+		9 = { "%d. Stormtrooper Division" }
+		10 = { "%d. Stormtrooper Division" }
+		11 = { "%d. Stormtrooper Division" }
+		12 = { "%d. Stormtrooper Division" }
+		13 = { "%d. Stormtrooper Division" }
+		14 = { "%d. Stormtrooper Division" }
+		15 = { "%d. Stormtrooper Division" }
+		16 = { "%d. Stormtrooper Division" }
+		17 = { "%d. Stormtrooper Division" }
+		18 = { "%d. Stormtrooper Division" }
+		19 = { "%d. Stormtrooper Division" }
+		20 = { "%d. Stormtrooper Division" }
+		21 = { "%d. Stormtrooper Division" }
+		22 = { "%d. Stormtrooper Division" }
+		23 = { "%d. Stormtrooper Division" }
+		24 = { "%d. Stormtrooper Division" }
+		25 = { "%d. Stormtrooper Division" }
+		26 = { "%d. Stormtrooper Division" }
+		27 = { "%d. Stormtrooper Division" }
+		28 = { "%d. Stormtrooper Division" }
+		29 = { "%d. Stormtrooper Division" }
+		30 = { "%d. Stormtrooper Division" }
+		31 = { "%d. Stormtrooper Division" }
+		32 = { "%d. Stormtrooper Division" }
+		33 = { "%d. Stormtrooper Division" }
+		34 = { "%d. Stormtrooper Division" }
+		35 = { "%d. Stormtrooper Division" }
+		36 = { "%d. Stormtrooper Division" }
+		37 = { "%d. Stormtrooper Division" }
+		38 = { "%d. Stormtrooper Division" }
+		39 = { "%d. Stormtrooper Division" }
+		40 = { "%d. Stormtrooper Division" }
+		41 = { "%d. Stormtrooper Division" }
+		42 = { "%d. Stormtrooper Division" }
+		43 = { "%d. Stormtrooper Division" }
+		44 = { "%d. Stormtrooper Division" }
+		45 = { "%d. Stormtrooper Division" }
+		46 = { "%d. Stormtrooper Division" }
+		47 = { "%d. Stormtrooper Division" }
+		48 = { "%d. Stormtrooper Division" }
+		49 = { "%d. Stormtrooper Division" }
+		50 = { "%d. Stormtrooper Division" }
+	}
+}

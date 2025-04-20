@@ -1,0 +1,19 @@
+modifiers_tlotd_revolutionary_unrest = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_tlotd_revolutionary_unrest
+	state_production_speed_buildings_factor = -0.1
+	state_resources_factor = -0.1
+	local_factories = -0.1
+	recruitable_population_factor = -0.1
+}
+
+modifiers_nis_revolutionary_unrest = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_tlotd_revolutionary_unrest
+	state_production_speed_buildings_factor = -0.1
+	state_resources_factor = -0.1
+	local_factories = -0.1
+	recruitable_population_factor = -0.1
+}

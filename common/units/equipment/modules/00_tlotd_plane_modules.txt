@@ -1,0 +1,70 @@
+equipment_modules = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	### Engines
+
+	mithril_armor_plate_small = {
+		abbreviation = "mas"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_superiority = 1
+			air_defence = 8
+			build_cost_ic = 2
+			weight = 2
+		}
+
+		multiply_stats = {
+			air_range = -0.1
+		}
+		xp_cost = 8
+		dismantle_cost_ic = 1
+		build_cost_resources = {
+			mithril = 1
+		}
+	}
+
+	mithril_armor_plate_medium = {
+		abbreviation = "mam"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_superiority = 2
+			air_defence = 12
+			build_cost_ic = 4
+			weight = 6
+		}
+		multiply_stats = {
+			air_range = -0.1
+		}
+		xp_cost = 8
+		dismantle_cost_ic = 2
+		build_cost_resources = {
+			mithril = 1
+		}
+	}
+
+	mithril_armor_plate_large = {
+		abbreviation = "mal"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			air_superiority = 3
+			air_defence = 16
+			build_cost_ic = 6
+			weight = 9
+		}
+		multiply_stats = {
+			air_range = -0.1
+		}
+		xp_cost = 8
+		dismantle_cost_ic = 3
+		build_cost_resources = {
+			mithril = 1
+		}
+	}
+}

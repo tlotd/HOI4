@@ -1,0 +1,53 @@
+state=
+{
+	id=74
+	name="STATE_74"
+	manpower = 820000
+	
+	state_category = rural
+	
+	
+	history={
+		set_variable = { culture = 32 }
+		victory_points = {
+			3583 5
+		}
+		owner = AUS
+        set_state_name = STATE_74_GER
+        set_province_name = {
+            id = 3583
+            name = VICTORY_POINTS_3583_GER
+        }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		add_core_of = AUS
+		1919.1.1 = {
+			remove_core_of = AUS
+			owner = CZE
+			add_core_of = CZE
+			reset_state_name = yes
+            reset_province_name = 3583
+		}
+		1938.9.30 = {
+			owner = GER
+			controller = GER
+			set_state_name = STATE_74_GER
+			set_province_name = {
+				id = 3583
+				name = VICTORY_POINTS_3583_GER
+			}
+		}
+		1945.5.8 = {
+			owner = CZE
+			reset_state_name = yes
+            reset_province_name = 3583
+		}
+	}
+	provinces= {
+		421 3414 3583 6485
+ 	}
+
+	local_supplies=2.0 
+}

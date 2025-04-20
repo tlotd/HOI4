@@ -1,0 +1,213 @@
+﻿l_english:
+
+ sp_land_theropods:0 "Theropods"
+ sp_land_theropods_desc:0 "Whilst roaming this earth millions of years ago, this apex predator was a force to be reconed with."
+
+###################################
+
+ futuristic_research:0 "Futuristic Research"
+
+ civilian_folder:0 "Civilian"
+ civilian_folder_desc:0 "The Advancement of your Nation as a whole!"
+ CIVILIAN_TITLE_ANCIENT:0 "Ancient"
+ CIVILIAN_TITLE_VEHICLES:0 "VEHICLES"
+ CIVILIAN_TITLE_COMMUNICATION:0 "COMMUNICATION"
+ CIVILIAN_TITLE_FOOD:0 "FOOD & DRINKS"
+
+ special_folder:0 "Special"
+ special_folder_desc:0 "Special Research Unique to certain Countries."
+ SPECIAL_TITLE_SPECIAL:0 "SPECIAL"
+ SPECIAL_TITLE_AMBER:0 "AMBER"
+ SPECIAL_TITLE_FOSSILS:0 "FOSSILS"
+ SPECIAL_TITLE_MITHRIL:0 "MITHRIL"
+ SPECIAL_TITLE_PANZERSCHOKOLADE:0 "PANZERSCHOKI"
+ SPECIAL_TITLE_TIBANNA_GAS:0 "TIBANNA GAS"
+ SPECIAL_TITLE_STAHLINIUM:0 "STAHLINIUM"
+ SPECIAL_TITLE_ANTI_MATTER:0 "ANTI MATTER"
+
+ gondorian_guard:0 "Gondorian Soldiers"
+ gondorian_guard_short:0 "Gondorian Soldiers"
+ gondorian_guard_desc:0 ""
+
+ orc_soldiers:0 "Orc Soldiers"
+ orc_soldiers_short:0 "Orc Soldiers"
+ orc_soldiers_desc:0 ""
+
+ motorized_equipment:0 "Transport"
+ motorized_equipment_short:0 "Transport"
+ motorized_equipment_desc:0 ""
+
+ tech_carriage:0 "Horse Carriage"
+ tech_carriage_short:0 "Horse Carriage"
+ tech_carriage_desc:0 ""
+ carriage_equipment_0:0 "Horse Carriage"
+ carriage_equipment_0_short:0 "Horse Carriage"
+ carriage_equipment_0_desc:0 ""
+
+ tech_motorwagon:0 "Motorwagon"
+ tech_motorwagon_short:0 "Motorwagon"
+ tech_motorwagon_desc:0 ""
+ motorwagon_equipment_0:0 "Motorwagon"
+ motorwagon_equipment_0_short:0 "Motorwagon"
+ motorwagon_equipment_0_desc:0 ""
+
+ tech_motorcar:0 "Motorcar"
+ tech_motorcar_short:0 "Motorcar"
+ tech_motorcar_desc:0 ""
+ motorcar_equipment_0:0 "Motorcar"
+ motorcar_equipment_0_short:0 "Motorcar"
+ motorcar_equipment_0_desc:0 ""
+
+ tech_car:0 "Car"
+ tech_car_short:0 "Car"
+ tech_car_desc:0 ""
+ car_equipment_0:0 "Car"
+ car_equipment_0_short:0 "Car"
+ car_equipment_0_desc:0 ""
+
+ tech_trucks:0 "Transport Trucks"
+ tech_trucks_short:0 "Transport Trucks"
+ tech_trucks_desc:0 "vrom"
+
+ carrier_pidgeons:0 "Carrier Pidgeons"
+ carrier_pidgeons_short:0 "Carrier Pidgeons"
+ carrier_pidgeons_desc:0 ""
+
+ telegraph:0 "Telegraph"
+ telegraph_short:0 "Telegraph"
+ telegraph_desc:0 ""
+ wireless_telegraph:0 "Wireless Telegraph"
+ wireless_telegraph_short:0 "Wireless Telegraph"
+ wireless_telegraph_desc:0 ""
+ tech_food:0 "Food & Drinks"
+ tech_food_short:0 "Food & Drinks"
+ tech_food_desc:0 ""
+ canned_food:0 "Canned Food"
+ canned_food_short:0 "Canned Food"
+ canned_food_desc:0 ""
+ tech_alcohol:0 "Alcohol"
+ tech_alcohol_short:0 "Alcohol"
+ tech_alcohol_desc:0 ""
+ tech_medicine:0 "Medicine"
+ tech_medicine_short:0 "Medicine"
+ tech_medicine_desc:0 ""
+ army_rations:0 "Army Rations"
+ army_rations_short:0 "Army Rations"
+ army_rations_desc:0 ""
+
+ tech_alien_matter:0 "Submod Required!"
+ tech_alien_matter_short:0 "Submod Required!"
+ tech_alien_matter_desc:0 ""
+
+ tech_mithril:0 "Mithril Research"
+ tech_mithril_short:0 "Mithril Research"
+ tech_mithril_desc:0 ""
+
+ tech_fossils:0 "Fossil Research"
+ tech_fossils_short:0 "Fossil Research"
+ tech_fossils_desc:0 ""
+
+ tech_amber:0 "Amber Research"
+ tech_amber_short:0 "Amber Research"
+ tech_amber_desc:0 ""
+
+ mithril_tank_armor:0 "Mithril Tank Armor Plating"
+ mithril_tank_armor_short:0 "Mithril Tank Armor Plating"
+ mithril_tank_armor_desc:0 ""
+
+ mithril_forging:0 "Mithril Forging"
+ mithril_forging_short:0 "Mithril Forging"
+ mithril_forging_desc:0 ""
+
+ mithril_plane_armor:0 "Mithril Plane Armor Plating"
+ mithril_plane_armor_short:0 "Mithril Plane Armor Plating"
+ mithril_plane_armor_desc:0 ""
+
+ mithril_armor_plate_small:0 "Small Mithril Plane Armor Plating"
+ mithril_armor_plate_small_desc:0 ""
+ mithril_armor_plate_medium:0 "Medium Mithril Plane Armor Plating"
+ mithril_armor_plate_medium_desc:0 ""
+ mithril_armor_plate_large:0 "Large Mithril Plane Armor Plating"
+ mithril_armor_plate_large_desc:0 ""
+
+ tech_panzerschokolade:0 "Panzerschokolade Research"
+ tech_panzerschokolade_short:0 "Panzerschokolade Research"
+ tech_panzerschokolade_desc:0 ""
+
+ tech_tibanna_gas:0 "Tibanna Gas Research"
+ tech_tibanna_gas_short:0 "Tibanna Gas Research"
+ tech_tibanna_gas_desc:0 ""
+
+ tech_stahlinium:0 "Stahlinium Research"
+ tech_stahlinium_short:0 "Stahlinium Research"
+ tech_stahlinium_desc:0 ""
+
+ tech_anti_matter:0 "Anti Matter Research"
+ tech_anti_matter_short:0 "Anti Matter Research"
+ tech_anti_matter_desc:0 ""
+
+ theropod_warmachine:0 "Theropod Warmachine"
+ theropod_warmachine_short:0 "Theropod Warmachine"
+ theropod_warmachine_desc:0 "Rawr!"
+ theropod_warmachine_tooltip:0 "Unlocks Special Research Project: §HTheropods§!"
+
+ theropod_equipment:0 "Theropod"
+ theropod_equipment_0:0 "Theropod"
+ theropod_equipment_0_short:0 "Theropod"
+ theropod_equipment_0_desc:0 "Rawr!"
+
+ theropod_armor_plating:0 "Theropod Armor Plating"
+ theropod_armor_plating_short:0 "Theropod Armor Plating"
+ theropod_armor_plating_desc:0 "Rawr!"
+
+###################################
+
+ infantry_at3:0 "Infantry AntiTank III"
+ infantry_at3_desc:0 "For infantry to effectively engage heavier armored units, high-explosive anti-tank weapons need to be made smaller and lighter."
+ infantry_at4:0 "Infantry AntiTank IV"
+ infantry_at4_desc:0 "For infantry to effectively engage heavier armored units, high-explosive anti-tank weapons need to be made smaller and lighter."
+
+ night_vision3:0 "Night Vision III"
+ night_vision3_short:0 "Night Vision III"
+ night_vision3_desc:0 ""
+
+ marines4:0 "Marines IV"
+ marines4_short:0 "Marines IV"
+ marines4_desc:0 ""
+
+ tech_mountaineers4:0 "Mountaineers IV"
+ tech_mountaineers4_short:0 "Mountaineers IV"
+ tech_mountaineers4_desc:0 ""
+
+ paratroopers4:0 "Paratroopers IV"
+ paratroopers4_short:0 "Paratroopers IV"
+ paratroopers4_desc:0 ""
+
+ mechanized_equipment_4:0 "Mechanized IV"
+ mechanized_equipment_4_short:0 "Mechanized IV"
+ mechanized_equipment_4_desc:0 ""
+ mechanized_equipment_5:0 "Mechanized V"
+ mechanized_equipment_5_short:0 "Mechanized V"
+ mechanized_equipment_5_desc:0 ""
+
+ mechanized_equipment_futuristic:0 "Futuristic Mechanized"
+ mechanized_equipment_futuristic_short:0 "Futuristic Mechanized"
+ mechanized_equipment_futuristic_desc:0 ""
+
+ infantry_equipment_4:0 "Weapons IV"
+ infantry_equipment_4_short:0 "Weapons IV"
+ infantry_equipment_4_desc:0 "Personal and crew served weapons for infantry as well as the various other bits of kit a soldier needs. Further modernized to include improved personal Assault Rifles and stronger anti-tank rockets."
+ highly_advanced_infantry_weapons2:0 "Improved Infantry Equipment IV"
+ highly_advanced_infantry_weapons2_desc:0 ""
+
+ infantry_equipment_5:0 "Weapons V"
+ infantry_equipment_5_short:0 "Weapons V"
+ infantry_equipment_5_desc:0 "Personal and crew served weapons for infantry as well as the various other bits of kit a soldier needs. For the entry into a new decade improved to include improved personal Assault Rifles and stronger anti-tank rockets."
+ cold_war_infantry_weapons2:0 "Improved Infantry Equipment V"
+ cold_war_infantry_weapons2_desc:0 ""
+
+ infantry_equipment_tlotd:0 "Infantry Equipment"
+ infantry_equipment_tlotd_short:0 "Infantry Equipment"
+
+ infantry_equipment_futuristic:0 "Futuristic Infantry Equipment"
+ infantry_equipment_futuristic_short:0 "Futuristic Infantry Equipment"

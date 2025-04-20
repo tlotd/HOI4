@@ -1,0 +1,170 @@
+# possible - filters out achivements on game start so we dont have to check everything all the 
+#time
+## happened - checks if achivement happened
+#
+###########################
+## ACHIEVEMENTS
+#############################
+
+unique_id = tlotd_achievements
+
+ltd_a_southern_glory = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = LTD
+	}
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = LTD_SouthernGER_tooltip
+			has_cosmetic_tag = LTD_SouthernGER
+			is_subject = no
+		}
+	}
+}
+
+ltd_g_german_empire_is_back = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		OR = {
+			tag = LTD
+			tag = LKR
+		}
+	}
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = LTD_GEREmpire_tooltip
+			OR = {
+				has_cosmetic_tag = LTD_GEREmpire
+				has_cosmetic_tag = LKR_GEREmpire
+			}
+			has_government = monarchism
+			is_subject = no
+		}
+	}
+}
+
+ltd_g_transatlantic_empire = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = LTD
+	}
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = LTD_Transatlantic_tooltip
+			has_cosmetic_tag = LTD_Transatlantic
+			has_government = monarchism
+			is_subject = no
+		}
+	}
+}
+
+ltd_s_sakura_dragon = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = LTD
+		tag = NIS
+	}
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = ltd_s_sakura_dragon_tooltip
+			has_cosmetic_tag = LTD_NIS
+			has_government = monarchism
+			is_subject = no
+		}
+	}
+}
+
+ltd_z_return_of_the_king = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = LTD
+	}
+	
+	happened = {
+		has_country_leader = {
+			character = LTD_aragorn
+			ruling_only = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = LTD_unite_the_men_of_the_west_requirement
+			any_owned_state = {
+				has_state_flag = lotr_name
+				is_capital = yes
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = LTD_unite_the_empire_requirement
+			any_owned_state = { has_state_flag = capital_improvement_build }
+		}
+		custom_trigger_tooltip = {
+			tooltip = LTD_LOTR_tooltip
+			has_cosmetic_tag = LTD_LOTR
+			has_government = monarchism
+			is_subject = no
+		}
+	}
+}
+
+dun_m_mare_nostrum = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		OR = {
+			tag = DUN
+			tag = NIS
+		}
+	}
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = dun_m_mare_nostrum_tooltip
+			OR = {
+				has_cosmetic_tag = DUN_Rome
+				has_cosmetic_tag = DUN_Byzantine
+				has_cosmetic_tag = NIS_Rome
+				has_cosmetic_tag = NIS_Byzantine
+			}
+			has_idea = dun_mare_nostrum
+			is_subject = no
+		}
+	}
+}
+
+krm_m_south_american_hegemon = {
+
+	possible = {
+		difficulty > 1
+        has_any_custom_difficulty_setting = no
+        game_rules_allow_achievements = yes
+		tag = KRM
+	}
+	
+	happened = {
+		custom_trigger_tooltip = {
+			tooltip = krm_m_south_american_hegemon_tooltip
+			has_country_flag = SouthAmericanEmpire
+			is_subject = no
+		}
+	}
+}

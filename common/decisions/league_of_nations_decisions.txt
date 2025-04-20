@@ -1,0 +1,315 @@
+league_of_nations = {
+	wdz_mandate = {
+		icon = GFX_decision_SOV_place_hq
+		highlight_states = {
+			highlight_state_targets = {
+				state = 42
+				state = 51
+				state = 240
+			}
+		}
+		available = {
+		}
+		visible = {
+			WDZ = {
+				exists = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			goto_state = 51
+		}
+	}
+	ltd_mandate = {
+		icon = GFX_decision_SOV_place_hq
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+		}}
+		available = {
+		}
+		visible = {
+			50 = {
+				has_state_flag = ltd_independence
+			}
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			goto_state = 50
+		}
+	}
+	end_ltd_mandate = {
+		icon = GFX_decision_LTD_claim_state_1
+		fire_only_once = yes
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+		}}
+		available = {
+			LTD = {
+				NOT = {
+					power_balance_value = {
+						id = LTD_legitimacy_balance
+						value < 0
+					}
+				}
+			}
+		}
+		visible = {
+			tag = LTD
+			50 = {
+				has_state_flag = {
+					flag = ltd_independence
+					value = 1
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_manpower > 9
+		}
+		custom_cost_text = decision_cost_PP_10_MP_10
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_manpower = -10
+		}
+		remove_effect = {
+			add_manpower = 10
+			50 = {
+				modify_state_flag = {
+					flag = ltd_independence
+					value = 1
+				}
+			}
+		}
+	}
+	end_ltd_mandate_1 = {
+		icon = GFX_decision_LTD_claim_state_2
+		fire_only_once = yes
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+		}}
+		available = {
+			LTD = {
+				NOT = {
+					power_balance_value = {
+						id = LTD_legitimacy_balance
+						value < 0.3
+					}
+				}
+			}
+		}
+		visible = {
+			tag = LTD
+			50 = {
+				has_state_flag = {
+					flag = ltd_independence
+					value = 2
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_manpower > 9
+		}
+		custom_cost_text = decision_cost_PP_10_MP_10
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_manpower = -10
+		}
+		remove_effect = {
+			add_manpower = 10
+			50 = {
+				modify_state_flag = {
+					flag = ltd_independence
+					value = 1
+				}
+			}
+		}
+	}
+	end_ltd_mandate_2 = {
+		icon = GFX_decision_LTD_claim_state_3
+		fire_only_once = yes
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+		}}
+		available = {
+			LTD = {
+				NOT = {
+					power_balance_value = {
+						id = LTD_legitimacy_balance
+						value < 0.6
+					}
+				}
+			}
+		}
+		visible = {
+			tag = LTD
+			50 = {
+				has_state_flag = {
+					flag = ltd_independence
+					value = 3
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_manpower > 9
+		}
+		custom_cost_text = decision_cost_PP_10_MP_10
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_manpower = -10
+		}
+		remove_effect = {
+			add_manpower = 10
+			50 = {
+				modify_state_flag = {
+					flag = ltd_independence
+					value = 1
+				}
+			}
+		}
+	}
+	end_ltd_mandate_3 = {
+		icon = GFX_decision_LTD_claim_state_4
+		fire_only_once = yes
+		highlight_states = { highlight_state_targets = {
+			state = 50
+			state = 978
+		}}
+		available = {
+			LTD = {
+				NOT = {
+					power_balance_value = {
+						id = LTD_legitimacy_balance
+						value < 0.9
+					}
+				}
+				has_completed_focus = LTD_form_transitional_government
+			}
+		}
+		visible = {
+			tag = LTD
+			50 = {
+				has_state_flag = {
+					flag = ltd_independence
+					value = 4
+				}
+			}
+		}
+		custom_cost_trigger = {
+			has_political_power > 9
+			has_manpower > 9
+		}
+		custom_cost_text = decision_cost_PP_10_MP_10
+		days_remove = 14
+		complete_effect = {
+			add_political_power = -10
+			add_manpower = -10
+		}
+		remove_effect = {
+			add_manpower = 10
+			50 = {
+				clr_state_flag = ltd_independence
+			}
+			country_event = { id = news_LTD.0 }
+		}
+	}
+	dnz_mandate = {
+		icon = GFX_decision_SOV_place_hq
+		highlight_states = { highlight_state_targets = {
+			state = 85
+		}}
+		available = {
+		}
+		visible = {
+			85 = {
+				is_demilitarized_zone = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			goto_state = 85
+		}
+	}
+	909_dmz = {
+		icon = GFX_decision_SOV_place_hq
+		highlight_states = { highlight_state_targets = {
+			state = 909
+		}}
+		available = {
+		}
+		visible = {
+			909 = {
+				is_demilitarized_zone = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			goto_state = 909
+		}
+	}
+	797_dmz = {
+		icon = GFX_decision_SOV_place_hq
+		highlight_states = { highlight_state_targets = {
+			state = 341
+			state = 797
+			state = 340
+		}}
+		available = {
+		}
+		visible = {
+			797 = {
+				is_demilitarized_zone = yes
+			}
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			goto_state = 797
+		}
+	}
+	leave_LON = {
+		icon = GFX_decision_generic_break_treaty
+		available = {
+			NOT = {
+				is_subject_of = LON
+			}
+		}
+		visible = {
+			is_ai = no
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 0
+		}
+		complete_effect = {
+			clr_country_flag = LON_member
+		}
+	}
+}

@@ -1,0 +1,55 @@
+music_station = "aa_tlotd_station"
+music = {
+	song = "lotr_main_theme"
+	chance = {
+		factor = 50
+	}
+}
+music = {
+	song = "lotr_rohirrim_theme"
+	chance = {
+		factor = 50
+	}
+}
+music = {
+	song = "european_union_anthem"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "german_empire_anthem"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "german_reich_anthem"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "german_democratic_republic_anthem"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "german_federal_republic_anthem"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "teufelslied_acoustic"
+	chance = {
+		factor = 0
+	}
+}
+music = {
+	song = "imperial_march"
+	chance = {
+		factor = 0
+	}
+}

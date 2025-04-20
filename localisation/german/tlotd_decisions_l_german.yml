@@ -1,0 +1,68 @@
+﻿l_german:
+
+ anti_monarchist_raids:0 "Anti-Monarchist Raids"
+ anti_monarchist_raids_desc:0 "We must crack down on monarchist elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+ anti_theocratic_raids:0 "Anti-Theocratic Raids"
+ anti_theocratic_raids_desc:0 "We must crack down on theocratic elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+ anti_corporatocratic_raids:0 "Anti-Corporatocratic Raids"
+ anti_corporatocratic_raids_desc:0 "We must crack down on corporatocratic elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+ anti_otherworldly_raids:0 "Anti-Otherworldly Raids"
+ anti_otherworldly_raids_desc:0 "We must crack down on otherworldly elements in our nation for sake of long-term domestic stability. Their influence is too great, and may potentially become a problem to the government."
+
+ ban_monarchist_party:0 "Ban Monarchism"
+ ban_monarchist_party_tt:0 "Change in popularity of Monarchism: §G-[?party_popularity@monarchism|%0]§W."
+ ban_theocratic_party:0 "Ban Theocratic Circles"
+ ban_theocratic_party_tt:0 "Change in popularity of Theocracy: §G-[?party_popularity@theocracy|%0]§W."
+ ban_corporatocratic_party:0 "Ban Megacorps"
+ ban_corporatocratic_party_tt:0 "Change in popularity of Corporatocracy: §G-[?party_popularity@corporatocratic|%0]§W."
+ ban_otherworldly_party:0 "Banish the Voices of the Void"
+ ban_otherworldly_party_tt:0 "Change in popularity of Otherworldly: §G-[?party_popularity@otherworldly|%0]§W."
+
+ institute_press_censorship_monarchist_state:0 "Institute Press Censorship"
+ institute_press_censorship_monarchist_state_desc:0 "These are dangerous times and we can't allow dissenting voices to tear our country apart. Restricting the freedome of the press is necessary to ensure that the truth is heard loud and clear."
+ institute_press_censorship_theocratic_state:0 "Institute Press Censorship"
+ institute_press_censorship_theocratic_state_desc:0 "These are dangerous times and we can't allow dissenting voices to tear our country apart. Restricting the freedome of the press is necessary to ensure that the truth is heard loud and clear."
+
+ monarchist_support_on_the_rise:0 "Monarchist Support on the Rise"
+ monarchist_support_on_the_rise_desc:0 "The sheer incompetence of the current goverment to lead our precous nation has left a sour taste in the mouths of our people. The rumors of a descendent of an old royal bloodline resurfacing grow louder day by day."
+ turn_monarchist:0 "Turn Monarchist"
+
+ followers_of_the_faith_rise_up:0 "Followers of the Faith Rise Up"
+ followers_of_the_faith_rise_up_desc:0 "No longer shall the ones closest to god live under a system that does not follow him. Rise up, brothers of the faith."
+ turn_theocratic:0 "Turn Theocratic"
+
+###########
+
+ LTD_path_to_glory:0 "Path To Glory"
+ LTD_path_to_glory_desc:0 "Unsere wunderbare Nation ist für großes bestimmt, Europa unter einer starken und stabilen Monarchie zu vereinigen."
+ LTD_decision_unite_southern_germans:0 "Vereinigt die Süddeutschen"
+ LTD_decision_unite_southern_germans_desc:0 ""
+ LTD_decision_unite_the_empire:0 "Vereinigt das Kaiserreich"
+ LTD_decision_unite_the_empire_desc:0 ""
+
+ LKR_path_to_glory:0 "Path To Glory"
+ LKR_path_to_glory_desc:0 "Unsere wunderbare Nation ist für großes bestimmt, Europa unter einer starken und stabilen Monarchie zu vereinigen."
+
+ LKR_decision_form_hanseatic_league:0 "Bilde die Hanse"
+ LKR_decision_form_hanseatic_league_desc:0 ""
+ LKR_decision_unite_the_north:0 "Vereine den Norden"
+ LKR_decision_unite_the_north_desc:0 ""
+
+ LKR_decision_form_german_empire:0 "Bildes das Deutsche Kaiserrecih"
+ LKR_decision_form_german_empire_desc:0 ""
+ LKR_decision_form_holy_roman_empire:0 "Bilder das Heilige Römische Reich deutscher Nationen"
+ LKR_decision_form_holy_roman_empire_desc:0 ""
+
+
+ LKR_weltreich:0 "Weltreich"
+ LKR_weltreich_desc:0 "Unsere wunderbare Nation ist für großes bestimmt, Europa unter einem starken und stabilen Reich zu vereinigen."
+
+ LKR_decision_nordseereich:0 "Bilde das Nordseereich"
+ LKR_decision_nordseereich_desc:0 ""
+
+
+ LKR_worker_state:0 "Arbeiterstaat"
+ LKR_worker_state_desc:0 "Unsere wunderbare Nation ist für großes bestimmt, Europa unter einem starken und stabilen Kommunistischen Utop zu vereinigen."
+
+ LKR_decision_larry_peoples_republic:0 "Bilde die Larrysche Volksrepublik"
+ LKR_decision_larry_peoples_republic_desc:0 ""

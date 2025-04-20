@@ -1,0 +1,28 @@
+﻿l_english:
+
+PRODUCTION_MATERIALS_ALIEN_MATTER:0 "Alien Matter"
+alien_matter_desc:0 "Also known as Divinium."
+
+PRODUCTION_MATERIALS_FOSSILS:0 "Fossils"
+fossils_desc:0 "Remains from creatures from a land before our time."
+
+PRODUCTION_MATERIALS_AMBER:0 "Amber"
+amber_desc:0 "Tree resin that was turned into little golden time capsules."
+
+PRODUCTION_MATERIALS_MITHRIL:0 "Mithril"
+mithril_desc:0 "Also known as Silver-Steel."
+
+PRODUCTION_MATERIALS_PANZERSCHOKOLADE:0 "Panzerschokolade"
+panzerschokolade_desc:0 "With laurel and pervitin."
+
+PRODUCTION_MATERIALS_TIBANNA_GAS:0 "Tibanna Gas"
+tibanna_gas_desc:0 "Used as Spaceship Fuel."
+
+PRODUCTION_MATERIALS_STAHLINIUM:0 "Stahlinium"
+stahlinium_desc:0 "Alloy of Iron, Coal and Protactinium."
+
+PRODUCTION_MATERIALS_ANTI_MATTER:0 "Anti Matter"
+anti_matter_desc:0 ""
+
+PRODUCTION_MATERIALS_FLUFF:0 "Fluff"
+fluff_desc:0 ""

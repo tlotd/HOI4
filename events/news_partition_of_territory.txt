@@ -1,0 +1,814 @@
+﻿ ###########################
+# partition_of_territory
+###########################
+
+add_namespace = news_p_o_t
+
+country_event = { #wdz_start
+	id = news_p_o_t.1
+	title = news_p_o_t.1.t
+	desc = news_p_o_t.1.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_p_o_t.1.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = partition_of_territory_begins
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						42 = {
+							NOT = {
+								has_state_flag = treaty_of_bonn
+							}
+						}
+					}
+					activate_mission = treaty_of_bonn
+					51 = {
+						set_state_flag = treaty_of_bonn
+					}
+					42 = {
+						set_state_flag = treaty_of_bonn
+					}
+					240 = {
+						set_state_flag = treaty_of_bonn
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = { #wdz_end
+	id = news_p_o_t.2
+	title = news_p_o_t.2.t
+	desc = news_p_o_t.2.d
+	picture = GFX_news_event_038
+	is_triggered_only = yes
+	major = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_p_o_t.2.a
+		ai_chance = { base = 100 }
+		#LTD
+		if = {
+			limit = {
+				LTD = { is_ai = no }
+			}
+			if = {
+				limit = {
+					42 = {
+						has_state_flag = treaty_of_bonn
+					}
+				}
+				if = {
+					limit = {
+						51 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 51
+					}
+				}
+				if = {
+					limit = {
+						42 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 42
+					}
+				}
+				if = {
+					limit = {
+						240 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 240
+					}
+				}
+				if = {
+					limit = {
+						51 = {
+							has_state_flag = {
+								flag = ger_claim
+								value = 4
+							}
+						}
+					}
+					GER = {
+						transfer_state = 51
+					}
+				}
+				if = {
+					limit = {
+						42 = {
+							has_state_flag = {
+								flag = ger_claim
+								value = 4
+							}
+						}
+					}
+					GER = {
+						transfer_state = 42
+					}
+				}
+				if = {
+					limit = {
+						240 = {
+							has_state_flag = {
+								flag = ger_claim
+								value = 4
+							}
+						}
+					}
+					GER = {
+						transfer_state = 240
+					}
+				}
+				if = {
+					limit = {
+						51 = {
+							owner = {
+								tag = WDZ
+							}
+						}
+					}
+					57 = {
+						OWNER = {
+							transfer_state = 51
+						}
+					}
+				}
+				if = {
+					limit = {
+						42 = {
+							owner = {
+								tag = WDZ
+							}
+						}
+					}
+					912 = {
+						OWNER = {
+							transfer_state = 42
+						}
+					}
+				}
+				if = {
+					limit = {
+						240 = {
+							owner = {
+								tag = WDZ
+							}
+						}
+					}
+					42 = {
+						OWNER = {
+							transfer_state = 240
+						}
+					}
+				}
+				hidden_effect = {
+					51 = {
+						clr_state_flag = treaty_of_bonn
+						clr_state_flag = ltd_claim
+						clr_state_flag = ger_claim
+						remove_core_of = WDZ
+						set_state_flag = treaty_of_bonn_completed
+					}
+					42 = {
+						clr_state_flag = treaty_of_bonn
+						clr_state_flag = ltd_claim
+						clr_state_flag = ger_claim
+						remove_core_of = WDZ
+					}
+					240 = {
+						clr_state_flag = treaty_of_bonn
+						clr_state_flag = ltd_claim
+						clr_state_flag = ger_claim
+						remove_core_of = WDZ
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #swiss_start
+	id = news_p_o_t.3
+	title = news_p_o_t.3.t
+	desc = news_p_o_t.3.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_p_o_t.3.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = partition_of_territory_begins
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						3 = {
+							NOT = {
+								has_state_flag = partition_of_switzerland
+							}
+						}
+					}
+					activate_mission = partition_of_switzerland
+					845 = {
+						set_state_flag = partition_of_switzerland
+					}
+					3 = {
+						set_state_flag = partition_of_switzerland
+					}
+					847 = {
+						set_state_flag = partition_of_switzerland
+					}
+					846 = {
+						set_state_flag = partition_of_switzerland
+					}
+					151 = {
+						set_state_flag = partition_of_switzerland
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = { #swiss_end
+	id = news_p_o_t.4
+	title = news_p_o_t.4.t
+	desc = news_p_o_t.4.d
+	picture = GFX_news_event_038
+	is_triggered_only = yes
+	major = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_p_o_t.4.a
+		ai_chance = { base = 100 }
+		#LTD
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					3 = {
+						has_state_flag = partition_of_switzerland
+					}
+				}
+				if = {
+					limit = {
+						845 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 845
+					}
+				}
+				if = {
+					limit = {
+						3 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 3
+					}
+				}
+				if = {
+					limit = {
+						847 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 847
+					}
+				}
+				if = {
+					limit = {
+						846 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 846
+					}
+				}
+				if = {
+					limit = {
+						151 = {
+							has_state_flag = {
+								flag = ltd_claim
+								value = 4
+							}
+						}
+					}
+					LTD = {
+						transfer_state = 151
+					}
+				}
+				#NIS
+				if = {
+					limit = {
+						845 = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+						}
+					}
+					NIS = {
+						transfer_state = 845
+					}
+				}
+				if = {
+					limit = {
+						3 = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+						}
+					}
+					NIS = {
+						transfer_state = 3
+					}
+				}
+				if = {
+					limit = {
+						847 = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+						}
+					}
+					NIS = {
+						transfer_state = 847
+					}
+				}
+				if = {
+					limit = {
+						846 = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+						}
+					}
+					NIS = {
+						transfer_state = 846
+					}
+				}
+				if = {
+					limit = {
+						151 = {
+							has_state_flag = {
+								flag = nis_claim
+								value = 4
+							}
+						}
+					}
+					NIS = {
+						transfer_state = 151
+					}
+				}
+				if = {
+					limit = {
+						3 = {
+							NOT = {
+								owner = {
+									tag = SWI
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							845 = { owner = { tag = SWI } }
+						}
+						735 = {
+							OWNER = {
+								transfer_state = 845
+							}
+						}
+					}
+					if = {
+						limit = {
+							847 = { owner = { tag = SWI } }
+						}
+						158 = {
+							OWNER = {
+								transfer_state = 847
+							}
+						}
+					}
+					if = {
+						limit = {
+							846 = { owner = { tag = SWI } }
+						}
+						159 = {
+							OWNER = {
+								transfer_state = 846
+							}
+						}
+					}
+					if = {
+						limit = {
+							151 = { 
+								owner = {
+									tag = SWI
+								}
+							}
+						}
+						240 = {
+							OWNER = {
+								transfer_state = 151
+							}
+						}
+					}
+				}
+				hidden_effect = {
+					845 = {
+						clr_state_flag = partition_of_switzerland
+						clr_state_flag = ltd_claim
+						clr_state_flag = nis_claim
+						clr_state_flag = fra_claim
+						clr_state_flag = ita_claim
+					}
+					3 = {
+						clr_state_flag = partition_of_switzerland
+						clr_state_flag = ltd_claim
+						clr_state_flag = nis_claim
+						clr_state_flag = fra_claim
+						clr_state_flag = ita_claim
+						set_state_flag = partition_of_switzerland_completed
+					}
+					847 = {
+						clr_state_flag = partition_of_switzerland
+						clr_state_flag = ltd_claim
+						clr_state_flag = nis_claim
+						clr_state_flag = fra_claim
+						clr_state_flag = ita_claim
+					}
+					846 = {
+						clr_state_flag = partition_of_switzerland
+						clr_state_flag = ltd_claim
+						clr_state_flag = nis_claim
+						clr_state_flag = fra_claim
+						clr_state_flag = ita_claim
+					}
+					151 = {
+						clr_state_flag = partition_of_switzerland
+						clr_state_flag = ltd_claim
+						clr_state_flag = nis_claim
+						clr_state_flag = fra_claim
+						clr_state_flag = ita_claim
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = { #yugo_start
+	id = news_p_o_t.5
+	title = news_p_o_t.5.t
+	desc = news_p_o_t.5.d
+	picture = GFX_report_event_generic_sign_treaty1
+	is_triggered_only = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_p_o_t.5.a
+		ai_chance = { base = 100 }
+		custom_effect_tooltip = partition_of_territory_begins
+		hidden_effect = {
+			if = {
+				limit = {
+					is_ai = no
+				}
+				if = {
+					limit = {
+						109 = {
+							NOT = {
+								has_state_flag = treaty_of_zagreb
+							}
+						}
+					}
+					activate_mission = treaty_of_zagreb
+					102 = {
+						set_state_flag = treaty_of_zagreb
+					}
+					853 = {
+						set_state_flag = treaty_of_zagreb
+					}
+					109 = {
+						set_state_flag = treaty_of_zagreb
+					}
+					45 = {
+						set_state_flag = treaty_of_zagreb
+					}
+					764 = {
+						set_state_flag = treaty_of_zagreb
+					}
+				}
+			}
+		}
+	}
+}
+
+news_event = { #yugo_end
+	id = news_p_o_t.6
+	title = news_p_o_t.6.t
+	desc = news_p_o_t.6.d
+	picture = GFX_news_event_038
+	is_triggered_only = yes
+	major = yes
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_p_o_t.6.a
+		ai_chance = { base = 100 }
+		#LTD
+		if = {
+			limit = {
+				is_ai = no
+			}
+			if = {
+				limit = {
+					109 = {
+						has_state_flag = treaty_of_zagreb
+					}
+				}
+				if = {
+					limit = {
+						102 = {
+							has_state_flag = {
+								flag = dun_claim
+								value = 4
+							}
+						}
+					}
+					DUN = {
+						transfer_state = 102
+					}
+				}
+				if = {
+					limit = {
+						853 = {
+							has_state_flag = {
+								flag = dun_claim
+								value = 4
+							}
+						}
+					}
+					DUN = {
+						transfer_state = 853
+					}
+				}
+				if = {
+					limit = {
+						109 = {
+							has_state_flag = {
+								flag = dun_claim
+								value = 4
+							}
+						}
+					}
+					DUN = {
+						transfer_state = 109
+					}
+				}
+				if = {
+					limit = {
+						45 = {
+							has_state_flag = {
+								flag = dun_claim
+								value = 4
+							}
+						}
+					}
+					DUN = {
+						transfer_state = 45
+					}
+				}
+				if = {
+					limit = {
+						764 = {
+							has_state_flag = {
+								flag = dun_claim
+								value = 4
+							}
+						}
+					}
+					DUN = {
+						transfer_state = 764
+					}
+				}
+				#ITA
+				if = {
+					limit = {
+						102 = {
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+					ITA = {
+						transfer_state = 102
+					}
+				}
+				if = {
+					limit = {
+						853 = {
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+					ITA = {
+						transfer_state = 853
+					}
+				}
+				if = {
+					limit = {
+						109 = {
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+					ITA = {
+						transfer_state = 109
+					}
+				}
+				if = {
+					limit = {
+						45 = {
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+					ITA = {
+						transfer_state = 45
+					}
+				}
+				if = {
+					limit = {
+						764 = {
+							has_state_flag = {
+								flag = ita_claim
+								value = 4
+							}
+						}
+					}
+					ITA = {
+						transfer_state = 764
+					}
+				}
+				if = {
+					limit = {
+						102 = { owner = { tag = YUG } }
+					}
+					736 = {
+						OWNER = {
+							transfer_state = 102
+						}
+					}
+				}
+				if = {
+					limit = {
+						853 = { owner = { tag = YUG } }
+					}
+					736 = {
+						OWNER = {
+							transfer_state = 853
+						}
+					}
+				}
+				if = {
+					limit = {
+						109 = { owner = { tag = YUG } }
+					}
+					104 = {
+						OWNER = {
+							transfer_state = 109
+						}
+					}
+				}
+				if = {
+					limit = {
+						45 = { owner = { tag = YUG } }
+					}
+					159 = {
+						OWNER = {
+							transfer_state = 45
+						}
+					}
+				}
+				if = {
+					limit = {
+						764 = { owner = { tag = YUG } }
+					}
+					82 = {
+						OWNER = {
+							transfer_state = 764
+						}
+					}
+				}
+				hidden_effect = {
+					102 = {
+						clr_state_flag = treaty_of_zagreb
+						clr_state_flag = dun_claim
+						clr_state_flag = ita_claim
+						clr_state_flag = hun_claim
+						clr_state_flag = rom_claim
+					}
+					853 = {
+						clr_state_flag = treaty_of_zagreb
+						clr_state_flag = dun_claim
+						clr_state_flag = ita_claim
+						clr_state_flag = hun_claim
+						clr_state_flag = rom_claim
+					}
+					109 = {
+						clr_state_flag = treaty_of_zagreb
+						clr_state_flag = dun_claim
+						clr_state_flag = ita_claim
+						clr_state_flag = hun_claim
+						clr_state_flag = rom_claim
+						set_state_flag = treaty_of_zagreb_completed
+					}
+					45 = {
+						clr_state_flag = treaty_of_zagreb
+						clr_state_flag = dun_claim
+						clr_state_flag = ita_claim
+						clr_state_flag = hun_claim
+						clr_state_flag = rom_claim
+					}
+					764 = {
+						clr_state_flag = treaty_of_zagreb
+						clr_state_flag = dun_claim
+						clr_state_flag = ita_claim
+						clr_state_flag = hun_claim
+						clr_state_flag = rom_claim
+					}
+				}
+			}
+		}
+	}
+}

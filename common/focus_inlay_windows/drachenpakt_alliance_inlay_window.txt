@@ -1,0 +1,200 @@
+drachenpakt_alliance_inlay_window = {
+
+    window_name = drachenpakt_alliance_ui_window
+
+    visible = {
+        has_completed_focus = DRACHENPAKT_alliance
+    }
+
+    scripted_images = {
+
+        LTD_frame = {
+            GFX_focus_inlay_window_faction_leader_lotr_sauron_frame = { LTD = { is_faction_leader = yes has_country_leader = { character = LTD_sauron ruling_only = yes }}}
+            GFX_focus_inlay_window_faction_leader_lotr_frame = { LTD = { is_faction_leader = yes OR = { has_country_flag = LotrEmpire has_country_leader = { character = LTD_aragorn_strider ruling_only = yes } has_country_leader = { character = LTD_aragorn ruling_only = yes }}}}
+            GFX_focus_inlay_window_faction_leader_frame = { LTD = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { LTD = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        LTD_leader_portrait = {
+            GFX_empty = { LTD = { exists = no }}
+            #Non Aligned
+            GFX_portrait_league_of_nations = { LTD = { has_country_leader = { ruling_only = yes character = LTD_league_of_nations }}}
+            GFX_ltd_theodor_zu_liechtenstein = { LTD = { has_country_leader = { ruling_only = yes character = LTD_theodor_zu_liechtenstein }}}
+            GFX_ltd_ralf_kramer = { LTD = { has_country_leader = { ruling_only = yes character = LTD_ralf_kramer }}}
+            GFX_ltd_wilhelm_brant = { LTD = { has_country_leader = { ruling_only = yes character = LTD_wilhelm_brant }}}
+
+            GFX_lotr_portrait_aragorn_strider = { LTD = { has_country_leader = { ruling_only = yes character = LTD_aragorn_strider }}}
+
+            #Monarchism
+            GFX_ltd_animated_portrait_isla_nublar = { LTD = { has_country_leader = { ruling_only = yes character = LTD_king_isla_nublar }}}
+
+            GFX_lotr_animated_portrait_aragorn = { LTD = { has_country_leader = { ruling_only = yes character = LTD_aragorn }}}
+
+            #Democratic
+            GFX_portrait_democratic_revolutionaries = { LTD = { has_country_leader = { ruling_only = yes character = LTD_democratic_revolutionaries }}}
+            GFX_ltd_angelina_rosenthaler = { LTD = { has_country_leader = { ruling_only = yes character = LTD_angelina_rosenthaler }}}
+
+            #Fascism
+            GFX_portrait_fascist_revolutionaries = { LTD = { has_country_leader = { ruling_only = yes character = LTD_fascist_revolutionaries }}}
+            GFX_ltd_portrait_erich_koch = { LTD = { has_country_leader = { ruling_only = yes character = LTD_erich_koch }}}
+            GFX_ltd_portrait_claus_von_stauffenberg = { LTD = { has_country_leader = { ruling_only = yes character = LTD_claus_von_stauffenberg }}}
+            GFX_ltd_portrait_karl_ruprecht_kroenen = { LTD = { has_country_leader = { ruling_only = yes character = LTD_karl_ruprecht_kroenen }}}
+
+            GFX_lotr_portrait_sauron = { LTD = { has_country_leader = { ruling_only = yes character = LTD_sauron }}}
+
+            #Communism
+            GFX_portrait_communist_revolutionaries = { LTD = { has_country_leader = { ruling_only = yes character = LTD_communist_revolutionaries }}}
+            GFX_ltd_portrait_pjodric = { LTD = { has_country_leader = { ruling_only = yes character = LTD_onkel_pjodric }}}
+            GFX_portrait_anarchists = { LTD = { has_country_leader = { ruling_only = yes character = LTD_anarchists }}}
+
+            #Otherworldly
+            GFX_portrait_yellow_figure = { LTD = { has_country_leader = { ruling_only = yes character = LTD_yellow_figure }}}
+
+            GFX_empty = yes
+        }
+
+        LKR_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { LKR = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { LKR = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        LKR_leader_portrait = {
+            GFX_empty = { LKR = { exists = no }}
+            #Monarchism
+            GFX_lkr_portrait_larry_meister = { LKR = { has_country_leader = { ruling_only = yes character = LKR_larry_meister_leader }}}
+
+            GFX_empty = yes
+        }
+
+        DUN_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { DUN = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { DUN = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        DUN_leader_portrait = {
+            GFX_empty = { DUN = { exists = no }}
+            #Monarchism
+            GFX_dun_portrait_thrawn = { DUN = { has_country_leader = { ruling_only = yes character = DUN_thrawn }}}
+
+            GFX_lotr_portrait_king_theoden = { DUN = { has_country_leader = { ruling_only = yes character = DUN_king_theoden }}}
+
+            #Fascism
+            GFX_portrait_fascist_revolutionaries = { DUN = { has_country_leader = { ruling_only = yes character = DUN_fascist_revolutionaries }}}
+            GFX_dun_portrait_adolf_chissler = { DUN = { has_country_leader = { ruling_only = yes character = DUN_adolf_chissler }}}
+            GFX_dun_portrait_darth_vader = { DUN = { has_country_leader = { ruling_only = yes character = DUN_darth_vader }}}
+
+            GFX_lotr_portrait_witch_king_of_angmar = { DUN = { has_country_leader = { ruling_only = yes character = DUN_witch_king_of_angmar }}}
+
+            #Communism
+            GFX_portrait_communist_revolutionaries = { DUN = { has_country_leader = { ruling_only = yes character = DUN_communist_revolutionaries }}}
+            GFX_dun_portrait_comrade_thrawn = { DUN = { has_country_leader = { ruling_only = yes character = DUN_comrade_thrawn }}}
+
+            #Otherworldly
+            GFX_portrait_yellow_figure = { DUN = { has_country_leader = { ruling_only = yes character = DUN_yellow_figure }}}
+
+            GFX_empty = yes
+        }
+
+        NIS_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { NIS = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { NIS = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        NIS_leader_portrait = {
+            GFX_empty = { NIS = { exists = no }}
+            #Monarchism
+            GFX_nis_portrait_korosensei = { NIS = { has_country_leader = { ruling_only = yes character = NIS_korosensei }}}
+
+            GFX_lotr_portrait_king_thranduil = { DUN = { has_country_leader = { ruling_only = yes character = NIS_king_thranduil }}}
+
+            GFX_lotr_portrait_saruman_the_white = { DUN = { has_country_leader = { ruling_only = yes character = NIS_saruman_the_white }}}
+
+            #Otherworldly
+            GFX_portrait_yellow_figure = { NIS = { has_country_leader = { ruling_only = yes character = NIS_yellow_figure }}}
+
+            GFX_empty = yes
+        }
+
+        LEO_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { LEO = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { LEO = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        LEO_leader_portrait = {
+            GFX_empty = { LEO = { exists = no }}
+            #Communism
+            GFX_leo_portrait_sylvester_stalin = { LEO = { has_country_leader = { ruling_only = yes character = LEO_sylvester_stalin }}}
+
+            #Monarchism
+            GFX_leo_portrait_karl_kommunist = { LEO = { has_country_leader = { ruling_only = yes character = LEO_karl_kommunist }}}
+
+            #Otherworldly
+            GFX_portrait_yellow_figure = { LEO = { has_country_leader = { ruling_only = yes character = LEO_yellow_figure }}}
+
+            GFX_empty = yes
+        }
+
+        TOR_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { TOR = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { TOR = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        TOR_leader_portrait = {
+            GFX_empty = { TOR = { exists = no }}
+            #Glamin
+            GFX_tor_portrait_glamin = { TOR = { OR = { has_country_leader = { ruling_only = yes character = TOR_glamin_leader } has_country_leader = { ruling_only = yes character = TOR_glamin_leader_monarchist }}}}
+
+            GFX_empty = yes
+        }
+
+        KRM_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { KRM = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { KRM = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        KRM_leader_portrait = {
+            GFX_empty = { KRM = { exists = no }}
+            #Monarchism
+            GFX_krm_portrait_rafael_puerida = { KRM = { has_country_leader = { ruling_only = yes character = KRM_rafael_puerida }}}
+
+            GFX_empty = yes
+        }
+
+        JSN_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { JSN = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { JSN = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        JSN_leader_portrait = {
+            GFX_empty = { JSN = { exists = no }}
+            #Monarchism
+            GFX_jsn_portrait_david_unaipon = { JSN = { has_country_leader = { ruling_only = yes character = JSN_david_unaipon }}}
+
+            GFX_empty = yes
+        }
+
+        CAL_frame = {
+            GFX_focus_inlay_window_faction_leader_frame = { CAL = { is_faction_leader = yes }}
+            GFX_focus_inlay_window_leader_frame = { CAL = { exists = yes }}
+            GFX_empty = yes
+        }
+
+        CAL_leader_portrait = {
+            GFX_empty = { CAL = { exists = no }}
+            #democratic
+            GFX_cal_portrait_culbert_olson = { CAL = { has_country_leader = { ruling_only = yes character = CAL_culbert_olson }}}
+            #Monarchism
+            GFX_cal_portrait_lucy_connor = { CAL = { has_country_leader = { ruling_only = yes character = CAL_lucy_connor }}}
+
+            GFX_empty = yes
+        }
+    }
+}

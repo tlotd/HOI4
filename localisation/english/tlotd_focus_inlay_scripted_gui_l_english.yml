@@ -1,0 +1,7 @@
+﻿l_english:
+
+ DRACHENPAKT_MEMBER: "$IN_FACTION$ $COUNTRY|Y$ $ROLE$"
+ DRACHENPAKT_LEADER_ROLE: "is the faction leader."
+ DRACHENPAKT_MEMBER_ROLE: "stands by our side."
+ DRACHENPAKT_MEMBER_ROLE_UNFULFILLED: "has not yet joined."
+ DRACHENPAKT_MEMBER_NONEXISTANT: ""

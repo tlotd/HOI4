@@ -1,0 +1,55 @@
+﻿division_template = {
+	name = "Silvan Elven Soldier Division"
+	division_names_group = ELVEN_Inf_01
+	regiments = {
+		silvan_elf_soldier = { x = 0 y = 0 }
+		silvan_elf_soldier = { x = 0 y = 1 }
+		silvan_elf_soldier = { x = 0 y = 2 }
+   		silvan_elf_soldier = { x = 1 y = 0 }
+		silvan_elf_soldier = { x = 1 y = 1 }
+		silvan_elf_soldier = { x = 1 y = 2 }
+   		silvan_elf_soldier = { x = 2 y = 0 }
+		silvan_elf_soldier = { x = 2 y = 1 }
+		silvan_elf_soldier = { x = 2 y = 2 }
+	}
+	support = {
+	}
+}
+units = {
+	division= {	# "1. Silvan Elven Soldier Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9909
+		division_template = "Silvan Elven Soldier Division"
+		start_experience_factor = 0.3
+	}
+	division= {	# "2. Silvan Elven Soldier Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 3589
+		division_template = "Silvan Elven Soldier Division"
+		start_experience_factor = 0.3
+	}
+	division= {	# "3. Silvan Elven Soldier Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11834
+		division_template = "Silvan Elven Soldier Division"
+		start_experience_factor = 0.3
+	}
+	division= {	# "4. Silvan Elven Soldier Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 778
+		division_template = "Silvan Elven Soldier Division"
+		start_experience_factor = 0.3
+	}
+}

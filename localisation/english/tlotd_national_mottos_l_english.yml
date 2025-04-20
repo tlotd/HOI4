@@ -1,0 +1,71 @@
+﻿l_english:
+
+ gondor_motto:0 "I bid you stand, Men of the West!"
+ gondor_motto_desc:0 "Sons of Gondor! Of Rohan! My brothers! I see in your eyes the same fear that would take the heart of me. A day may come when the courage of Men fails, when we forsake our friends, and break all bonds of fellowship, but it is not this day. An hour of wolves and shattered shields when the Age of Men comes crashing down, but it is not this day! This day we fight! By all that you hold dear on this good earth, I bid you stand, Men of the West!"
+ gondor_motto_requirement:0 "Has formed @GON §YThe Kingdom of Gondor and Anor§!."
+
+ transatlantic_motto:0 "Per Aspera Ad Astra"
+ transatlantic_motto_desc:0 "Through hardships to the stars"
+ transatlantic_motto_requirement:0 "Has formed §Hthe Transatlantic Empire§!."
+
+ fra_monarchism_motto:0 "Liberté, Ordre Public"
+ fra_monarchism_motto_desc:0 "Liberty, Public Order"
+ fra_monarchism_motto_requirement:0 "Has formed §Hthe French Empire§!."
+
+ hre_monarchism_motto:0 "Rursus Romae Imperii et Morum"
+ hre_monarchism_motto_desc:0 "Again the Empire and Morals of Rome"
+ hre_monarchism_motto_requirement:0 "Has formed §Hthe Holy Roman Empire§!."
+
+ ger_fascism_motto:0 "Ein Volk, Ein Reich, Ein Führer"
+ ger_fascism_motto_desc:0 "A People, A Empire, A Leader"
+ ger_fascism_motto_requirement:0 "Has formed §Hthe German Reich§!."
+
+ ger_communism_motto:0 "Proletarier aller Länder, vereinigt Euch!"
+ ger_communism_motto_desc:0 "Proletarier aller Länder, vereinigt Euch!"
+ ger_communism_motto_requirement:0 "Has formed §Hthe German Democratic Republic§!."
+
+ ger_democracy_motto:0 "Einigkeit und Recht und Freiheit"
+ ger_democracy_motto_desc:0 "Unity and Rights and Freedom"
+ ger_democracy_motto_requirement:0 "Has formed §Hthe Federal Republic of Germany§!."
+
+ ger_monarchism_motto:0 "Gott mit Uns"
+ ger_monarchism_motto_desc:0 "God with us"
+ ger_monarchism_motto_requirement:0 "Has formed §Hthe German Empire§!."
+
+ ger_monarchism_alternative_motto:0 "Für Kaiser, Gott und Vaterland"
+ ger_monarchism_alternative_motto_desc:0 "For the Emperor, God and the Fatherland."
+ ger_monarchism_alternative_motto_requirement:0 "Has formed §Hthe German Empire§!."
+
+ pre_monarchism_motto:0 "Suum cuique"
+ pre_monarchism_motto_desc:0 "To each his own"
+ pre_monarchism_motto_requirement:0 "Has all states of @PRE §H[PRE.GetNameDef]§! as core."
+
+ roman_empire_motto:0 "SPQR"
+ roman_empire_motto_desc:0 "The Senate and People of Rome"
+ roman_empire_motto_requirement:0 "Has formed §Hthe Roman Empire§!."
+
+ bay_motto:0 "In Treue fest"
+ bay_motto_desc:0 "Steadfast in loyalty"
+
+ wur_motto:0 "Furchtlos und Treu"
+ wur_motto_desc:0 "Fearless and loyal"
+
+ ss_motto:0 "Meine Ehre heißt Treue"
+ ss_motto_desc:0 "My honor is called loyalty"
+
+# Countries
+
+ ksw_motto:0 "Für Herrscher, Herz und Heimatland"
+ ksw_motto_desc:0 "For Leader, Heart and Homeland"
+ lkr_motto:0 "Blut und Eisen, Tabak und Stahl"
+ lkr_motto_desc:0 "Blood and Iron, tobacco and steel"
+ leo_motto:0 "Morior invictus"
+ leo_motto_desc:0 "Death before defeat"
+ dun_motto:0 "Long Live the Empire"
+ dun_motto_desc:0 ""
+ nis_motto:0 "NIS Motto"
+ nis_motto_desc:0 "NIS Motto"
+ krm_motto:0 "Nacido para conquistar, Creado para gobernar"
+ krm_motto_desc:0 "Born to conquer, Created to rule"
+ jsn_motto:0 "JSN Motto"
+ jsn_motto_desc:0 "JSN Motto"

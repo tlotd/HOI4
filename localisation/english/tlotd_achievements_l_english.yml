@@ -1,0 +1,28 @@
+﻿l_english:
+ tlotd_achievements:0 "« [ TLOTD - Achievements ] »"
+
+### LTD ###
+ ltd_a_southern_glory_NAME:0 "Southern Glory"
+ ltd_a_southern_glory_DESC:0 "As  @LTD the Southwest form either the Kingdom of the Alpes or the Unified Southern Workers."
+ ltd_g_german_empire_is_back_NAME:0 "Return of the German Empire"
+ ltd_g_german_empire_is_back_DESC:0 "As the either  @LTD the Southwest or  @LKR the Larry Empire form  @DKR the German Empire."
+ ltd_g_transatlantic_empire_NAME:0 "The Transatlantic Dream"
+ ltd_g_transatlantic_empire_DESC:0 "As  @LTD the Southwest form either the Transatlantic Empire or the Transatlantic Reich."
+ ltd_s_sakura_dragon_NAME:0 "The Sakura Dragon"
+ ltd_s_sakura_dragon_DESC:0 "As  @LTD the Southwest or  @NIS Morokoro unite the kingdoms under two crowns, forming the Empires of the Sakura Dragon."
+ ltd_s_sakura_dragon_tooltip:0 "§YThe Empires of the Sakura Dragon§W are declared."
+ ltd_z_return_of_the_king_NAME:0 "I bid you stand, Men of the West!"
+ ltd_z_return_of_the_king_DESC:0 "As  @LTD the Southwest with Aragorn as the Leader form  @GON the Kingdom of Gondor."
+
+ LTD_SouthernGER_tooltip:0 "§YThe Kingdom of the Alpes§W is declared."
+ LTD_GEREmpire_tooltip:0 "§YThe German Empire§W is declared."
+ LTD_Transatlantic_tooltip:0 "§YThe Transatlantic Empire§W is declared."
+ LTD_LOTR_tooltip:0 "@GON §YThe Kingdom of Gondor and Anor§W is declared."
+
+ dun_m_mare_nostrum_NAME:0 "Mare Nostrum"
+ dun_m_mare_nostrum_DESC:0 "As either  @DUN the Chiss or  @NIS Morokoro form the Mare Nostrum by occupying every state around the Mediterranean after proclaiming either the Roman or Byzantine Empire."
+ dun_m_mare_nostrum_tooltip:0 "§YMare Nostrum§W is declared."
+
+ krm_m_south_american_hegemon_NAME:0 "South American Hegemon"
+ krm_m_south_american_hegemon_DESC:0 "As   @KRM Puerdia declare yourself the south american hegemon by owning every state south of Panama."
+ krm_m_south_american_hegemon_tooltip:0 "§YSouth American Empire§W is declared."

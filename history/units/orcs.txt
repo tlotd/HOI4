@@ -1,0 +1,17 @@
+﻿division_template = {
+	name = "Orc Infantry"
+	division_names_group = ORCS_Inf_01
+	regiments = {
+		orc_soldier = { x = 0 y = 0 }
+		orc_soldier = { x = 0 y = 1 }
+		orc_soldier = { x = 0 y = 2 }
+   		orc_soldier = { x = 1 y = 0 }
+		orc_soldier = { x = 1 y = 1 }
+		orc_soldier = { x = 1 y = 2 }
+   		orc_soldier = { x = 2 y = 0 }
+		orc_soldier = { x = 2 y = 1 }
+		orc_soldier = { x = 2 y = 2 }
+	}
+	support = {
+	}
+}

@@ -1,0 +1,38 @@
+state=
+{
+	id=102
+	name="STATE_102"
+	manpower = 811050 # was 1144300 before Ljubljana split
+	
+	state_category = large_town
+	
+	history = {
+		set_variable = { culture = 40 }
+		owner = AUS
+		set_state_name = STATE_102_GER
+        set_province_name = {
+            id = 665
+            name = VICTORY_POINTS_655_GER
+        }
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			665 1
+		}
+		add_core_of = AUS
+		add_core_of = SLV
+		1919.1.1 = {
+			remove_core_of = AUS
+			owner = YUG
+			add_core_of = YUG
+			reset_state_name = yes
+            reset_province_name = 665
+		}
+	}
+	provinces={
+		596 665 3631 3654 6672 9596
+	}
+	
+	local_supplies=0.0 
+}

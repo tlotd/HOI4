@@ -1,0 +1,3033 @@
+﻿focus_tree = {
+	id = TOR_toradyr_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TOR
+		}
+	}
+	
+	shared_focus = DRACHENPAKT_alliance
+
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = TOR_boymetall_and_kisseed_martin_expansion
+	}
+
+	focus = {
+		id = TOR_path_to_freedom
+		icon = GFX_focus_generic_treaty
+		x = -2
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_demand_self_governance
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = TOR_path_to_freedom }
+		x = 0
+		y = 2
+		relative_position_id = TOR_path_to_freedom
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = yes
+		}
+		completion_reward = {
+			OVERLORD = {
+				end_puppet = ROOT
+			}
+			drop_cosmetic_tag = yes
+		}
+	}
+
+	focus = {
+		id = TOR_demand_core_territories
+		icon = GFX_focus_ETH_freedom_at_gunpoint
+		prerequisite = { focus = TOR_demand_self_governance }
+		x = 0
+		y = 2
+		relative_position_id = TOR_demand_self_governance
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		
+		available_if_capitulated = yes
+
+		available = {
+			is_subject = no
+		}
+		completion_reward = {
+			transfer_state = 71
+			transfer_state = 88
+			transfer_state = 72
+			transfer_state = 762
+		}
+	}
+
+	focus = {
+		id = TOR_the_fluffy_forces
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 2
+		y = 0
+		cost = 10
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_strong_like_a_horse
+		icon = GFX_focus_generic_horse_studs
+		prerequisite = { focus = TOR_the_fluffy_forces }
+		x = -2
+		y = 1
+		relative_position_id = TOR_the_fluffy_forces
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_quick_like_a_leopard
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = TOR_strong_like_a_horse }
+		x = 0
+		y = 1
+		relative_position_id = TOR_strong_like_a_horse
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = fast_fighters
+		}
+	}
+
+	focus = {
+		id = TOR_tough_like_a_rhino
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = TOR_the_fluffy_forces }
+		x = 0
+		y = 1
+		relative_position_id = TOR_the_fluffy_forces
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_unstoppable_like_a_bull
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = TOR_tough_like_a_rhino }
+		x = 0
+		y = 1
+		relative_position_id = TOR_tough_like_a_rhino
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_fast_like_a_hawk
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = TOR_the_fluffy_forces }
+		x = 2
+		y = 1
+		relative_position_id = TOR_the_fluffy_forces
+		cost = 10
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_building_construction = {
+				type = air_base
+				level = 2
+				instant_build = yes
+			}
+			add_doctrine_cost_reduction = {
+				name = air_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_awake_the_dragons
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = TOR_fast_like_a_hawk }
+		x = 0
+		y = 1
+		relative_position_id = TOR_fast_like_a_hawk
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_good_dragon
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TOR_awake_the_dragons }
+		mutually_exclusive = { focus = TOR_mad_dragon }
+		mutually_exclusive = { focus = TOR_bad_dragon }
+		x = -2
+		y = 1
+		relative_position_id = TOR_awake_the_dragons
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_mad_dragon
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TOR_awake_the_dragons }
+		mutually_exclusive = { focus = TOR_good_dragon }
+		mutually_exclusive = { focus = TOR_bad_dragon }
+		x = 0
+		y = 1
+		relative_position_id = TOR_awake_the_dragons
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_bad_dragon
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TOR_awake_the_dragons }
+		mutually_exclusive = { focus = TOR_good_dragon }
+		mutually_exclusive = { focus = TOR_mad_dragon }
+		x = 2
+		y = 1
+		relative_position_id = TOR_awake_the_dragons
+		cost = 10
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_boymetall_and_kisseed_martin_expansion
+		icon = GFX_goal_generic_production
+		x = 10
+		y = 0
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1
+				OR = { 
+					# we dont want chinese minors to go crazy on slots early since they get eaten
+					tag = GXC 
+					tag = YUN
+					tag = SHX
+					tag = XSM
+					tag = BEL
+					tag = LUX
+					tag = HOL
+					tag = DEN
+
+					# we also dont want tiny nations to go crazy with slots right away
+					num_of_controlled_states < 2
+				}				
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_the_hare_factory
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TOR_boymetall_and_kisseed_martin_expansion }
+		x = -2
+		y = 1
+		relative_position_id = TOR_boymetall_and_kisseed_martin_expansion
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_beaver_buildings_construction_gmbh
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = TOR_the_hare_factory }
+		x = 0
+		y = 1
+		relative_position_id = TOR_the_hare_factory
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_eqaul_rights_equal_fights
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TOR_beaver_buildings_construction_gmbh }
+		x = 0
+		y = 1
+		relative_position_id = TOR_beaver_buildings_construction_gmbh
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {			
+			add_ideas = equal_fights
+		}
+	}
+
+	focus = {
+		id = TOR_furries_in_every_industry
+		icon = GFX_focus_research2
+		prerequisite = { focus = TOR_eqaul_rights_equal_fights }
+		x = 0
+		y = 1
+		relative_position_id = TOR_eqaul_rights_equal_fights
+		cost = 14.3
+
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		
+		available = {
+			num_of_factories > 50
+		}
+
+		completion_reward = {
+			add_ideas = smart_people
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 1
+				category = nuclear
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_hunting_paths
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TOR_boymetall_and_kisseed_martin_expansion }
+		x = 0
+		y = 1
+		relative_position_id = TOR_boymetall_and_kisseed_martin_expansion
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_pathfinder_foxes
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = TOR_hunting_paths }
+		x = 0
+		y = 1
+		relative_position_id = TOR_hunting_paths
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_boots_with_the_fur
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = TOR_pathfinder_foxes }
+		x = 0
+		y = 1
+		relative_position_id = TOR_pathfinder_foxes
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_artillery_aardvarks
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = TOR_boots_with_the_fur }
+		x = 0
+		y = 1
+		relative_position_id = TOR_boots_with_the_fur
+		cost = 10
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_very_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = TOR_artillery_aardvarks }
+		x = 0
+		y = 1
+		relative_position_id = TOR_artillery_aardvarks
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_nature_provides
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TOR_boymetall_and_kisseed_martin_expansion }
+		x = 2
+		y = 1
+		relative_position_id = TOR_boymetall_and_kisseed_martin_expansion
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = nature_provides
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 4
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_resource = {
+					type = aluminium
+					amount = 6
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_natural_weapons
+		icon = GFX_focus_SOV_the_road_of_life
+		prerequisite = { focus = TOR_nature_provides }
+		x = 0
+		y = 1
+		relative_position_id = TOR_nature_provides
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = { remove_idea = nature_provides
+			               add_idea = freeze_resistance }
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 3
+				category = electronics
+				category = nuclear
+				category = rocketry
+			}
+		}
+	}
+
+focus = {
+		id = TOR_evolved_to_survive_and_prosper
+		icon = GFX_focus_research
+		prerequisite = { focus = TOR_natural_weapons }
+		x = 0
+		y = 1
+		relative_position_id = TOR_natural_weapons
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {	remove_idea = freeze_resistance 
+							add_idea = heat_resistance }
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = TOR_in_tune_with_nature
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TOR_evolved_to_survive_and_prosper }
+		x = 0
+		y = 1
+		relative_position_id = TOR_evolved_to_survive_and_prosper
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {			
+			swap_ideas { remove_idea = heat_resistance 
+			              add_idea = in_tune_with_nature }
+		}
+	}
+
+	focus = {
+		id = TOR_a_new_dawn
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 21
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = TOR_we_have_our_paws_full
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = TOR_a_new_dawn }
+		relative_position_id = TOR_a_new_dawn
+
+		available = {
+			NOT = { has_completed_focus = TOR_spread_the_pathowogen }
+		}
+
+		x = -5
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = TOR_status_quo
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TOR_we_have_our_paws_full }
+		relative_position_id = TOR_we_have_our_paws_full
+
+		mutually_exclusive = { focus = TOR_every_meow_heard }
+		mutually_exclusive = { focus = TOR_animals_of_the_world_unite }
+
+		x = -2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			neutrality > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_mark_our_territory
+		icon = GFX_focus_LIT_organize_the_iron_wolf
+		prerequisite = { focus = TOR_status_quo }
+		relative_position_id = TOR_status_quo
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			unlock_decision_tooltip = TOR_occupation
+		}
+	}
+
+	focus = {
+		id = TOR_growl_at_intruders
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TOR_mark_our_territory }
+		relative_position_id = TOR_mark_our_territory
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = TOR_fight_with_claw_and_fang
+		icon = GFX_focus_LIT_new_kind_of_iron_wolf
+		prerequisite = { focus = TOR_growl_at_intruders }
+		relative_position_id = TOR_growl_at_intruders
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = claw_and_fang
+		}
+	}
+
+	focus = {
+		id = TOR_every_meow_heard
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = TOR_we_have_our_paws_full }
+		relative_position_id = TOR_we_have_our_paws_full
+
+		mutually_exclusive = { focus = TOR_status_quo}
+		mutually_exclusive = { focus = TOR_animals_of_the_world_unite }
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			democratic > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_hand_over_the_leash
+		icon = GFX_focus_NOR_restore_public_trust_in_the_storting
+		prerequisite = { focus = TOR_every_meow_heard }
+		relative_position_id = TOR_every_meow_heard
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas { new_government }
+			add_stability = 0.1
+			add_war_support = -0.2
+		}
+	}
+
+	focus = {
+		id = TOR_smash_discrimination
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TOR_hand_over_the_leash }
+		relative_position_id = TOR_hand_over_the_leash
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = ENG_continental_intervention_tt
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						is_capital = yes
+						is_on_continent = europe
+					}
+					NOT = { is_in_faction_with = ROOT }
+					has_added_tension_amount > 0.1
+					num_of_factories > 50
+				}
+				TOR = {
+					create_wargoal = {
+						target = PREV
+						type = topple_government
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_stronger_together
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = TOR_smash_discrimination }
+		relative_position_id = TOR_smash_discrimination
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+				create_faction = TOR_euowopean_fwends
+			every_other_country = {
+				limit = {
+					any_owned_state = {
+						is_capital = yes
+						is_on_continent = europe
+					}
+					has_government = democratic
+				}
+				country_event = news_TOR.104
+			}
+		}
+	}
+	focus = {
+		id = TOR_animals_of_the_world_unite
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = TOR_we_have_our_paws_full }
+		relative_position_id = TOR_we_have_our_paws_full
+
+		mutually_exclusive = { focus = TOR_status_quo}
+		mutually_exclusive = { focus = TOR_every_meow_heard }
+
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			communism > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_the_unions_bare_their_fangs
+		icon = GFX_focus_BRA_jaguar_diplomacy
+		prerequisite = { focus = TOR_animals_of_the_world_unite }
+		relative_position_id = TOR_animals_of_the_world_unite
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = { communist_furries }
+		}
+	}
+
+	focus = {
+		id = TOR_break_our_collars
+		icon = GFX_focus_generic_workers
+		prerequisite = { focus = TOR_the_unions_bare_their_fangs }
+		relative_position_id = TOR_the_unions_bare_their_fangs
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {	remove_idea = communist_furries
+							add_idea = furunism_unleashed }
+		}
+	}
+
+
+
+	focus = {
+		id = TOR_secure_our_borders
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = TOR_a_new_dawn }
+		relative_position_id = TOR_a_new_dawn
+
+		x = -1
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = { border_security }
+		}
+	}
+
+	focus = {
+		id = TOR_doctrine_of_clear_skies
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = TOR_secure_our_borders }
+		relative_position_id = TOR_secure_our_borders
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			71 = {
+				add_building_construction = {
+					type = anti_air_building 
+					level = 1
+					instant_build = yes
+				}
+			}
+			88 = {
+				add_building_construction = {
+					type = anti_air_building 
+					level = 1
+					instant_build = yes
+				}
+			}
+			72 = {
+				add_building_construction = {
+					type = anti_air_building 
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 1000
+				producer = TOR
+			}
+			air_experience = 10
+		}
+	}
+
+	focus = {
+		id = TOR_unser_lebensraum
+		icon = GFX_focus_generic_annex_country_2
+		prerequisite = { focus = TOR_doctrine_of_clear_skies }
+		relative_position_id = TOR_doctrine_of_clear_skies
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			transfer_state = 762
+			transfer_state = 90
+		}
+	}
+
+	focus = {
+		id = TOR_a_fang_behind_every_blade_of_grass
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = TOR_unser_lebensraum }
+		relative_position_id = TOR_unser_lebensraum
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = { hidden_fangs }
+		}
+	}
+
+	focus = {
+		id = TOR_the_cornered_beast_unleashed
+		icon = GFX_focus_eng_imperial_federation
+		prerequisite = { focus = TOR_a_fang_behind_every_blade_of_grass }
+		relative_position_id = TOR_a_fang_behind_every_blade_of_grass
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = {	remove_idea = border_security 
+							add_idea = cornered_beast }
+		}
+	}
+
+	focus = {
+		id = TOR_spread_the_pathowogen
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TOR_a_new_dawn }
+		relative_position_id = TOR_a_new_dawn
+
+		available = {
+			NOT = { has_completed_focus = TOR_we_have_our_paws_full }
+		}
+
+		x = 3
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = TOR_united_in_gay
+		icon = GFX_focus_generic_pope
+		prerequisite = { focus = TOR_spread_the_pathowogen }
+		relative_position_id = TOR_spread_the_pathowogen
+
+		mutually_exclusive = { focus = TOR_all_hail_the_alpha }
+		mutually_exclusive = { focus = TOR_organize_the_blackfurs }
+
+		x = -2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			theocracy > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = theocracy
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_unconrolled_instincts
+		icon = GFX_focus_generic_catholic_dominion
+		prerequisite = { focus = TOR_united_in_gay }
+		relative_position_id = TOR_united_in_gay
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_soaring_high_as_the_falcons
+		icon = GFX_focus_ICE_hrafninn_flygur
+		prerequisite = { focus = TOR_unconrolled_instincts }
+		relative_position_id = TOR_unconrolled_instincts
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_revel_in_degeneracy
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
+		prerequisite = { focus = TOR_soaring_high_as_the_falcons }
+		relative_position_id = TOR_soaring_high_as_the_falcons
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_all_hail_the_alpha
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = TOR_spread_the_pathowogen }
+		relative_position_id = TOR_spread_the_pathowogen
+
+		mutually_exclusive = { focus = TOR_united_in_gay }
+		mutually_exclusive = { focus = TOR_organize_the_blackfurs }
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			monarchism > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = monarchism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			add_ideas = { all_hail_the_alpha }
+		}
+	}
+
+	focus = {
+		id = TOR_reinstate_the_council_of_longmanes
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = TOR_all_hail_the_alpha }
+		relative_position_id = TOR_all_hail_the_alpha
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = { fight_by_instinct }
+		}
+	}
+
+	focus = {
+		id = TOR_let_the_dogs_out
+		icon = GFX_focus_ETH_scavenging_tactics
+		prerequisite = { focus = TOR_reinstate_the_council_of_longmanes }
+		relative_position_id = TOR_reinstate_the_council_of_longmanes
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_ideas = { mercenary_forces }
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TOR_organize_the_blackfurs
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = TOR_spread_the_pathowogen }
+		relative_position_id = TOR_spread_the_pathowogen
+
+		mutually_exclusive = { focus = TOR_united_in_gay }
+		mutually_exclusive = { focus = TOR_all_hail_the_alpha }
+
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			fascism > 0.20
+			is_subject = no
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				last_election = "1936.1.1"
+				election_frequency = 48
+				elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_rally_the_paw_patrols
+		icon = GFX_focus_ETH_continuous_strengthen_the_black_lions
+		prerequisite = { focus = TOR_organize_the_blackfurs }
+		relative_position_id = TOR_organize_the_blackfurs
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = { 
+			add_ideas = { paw_patrols }
+		}
+	}
+
+	focus = {
+		id = TOR_the_tiger_is_on_the_prowl
+		icon = GFX_focus_SWE_en_svensk_tiger
+		prerequisite = { focus = TOR_rally_the_paw_patrols }
+		relative_position_id = TOR_rally_the_paw_patrols
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			swap_ideas = { 	remove_idea = paw_patrols
+							add_idea = prowling_tiger } 
+		}
+	}
+	
+	focus = {
+		id = TOR_the_hunt_begins
+		icon = GFX_focus_FIN_the_lone_wolf
+		prerequisite = { focus = TOR_let_the_dogs_out focus = TOR_the_tiger_is_on_the_prowl focus = TOR_break_our_collars }
+		relative_position_id = TOR_let_the_dogs_out
+
+		x = -4
+		y = 2
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_manpower = 200000
+		}
+	}
+
+	focus = {
+		id = TOR_make_fwends
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_a_new_dawn }
+		relative_position_id = TOR_a_new_dawn
+
+		x = 7
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_seek_hugs_and_headpats
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_make_fwends }
+		relative_position_id = TOR_make_fwends
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_friends_with_benefits
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_seek_hugs_and_headpats }
+		relative_position_id = TOR_seek_hugs_and_headpats
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_nuzzle_the_scientists
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_friends_with_benefits }
+		relative_position_id = TOR_friends_with_benefits
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_one_of_us
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_nuzzle_the_scientists }
+		relative_position_id = TOR_nuzzle_the_scientists
+
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_hugs_for_the_mustache_man
+		icon = GFX_focus_attack_germany
+		x = 32
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	
+		available = {
+			OR = {
+			#	has_completed_focus = TOR_the_hunt_begins_communism
+				has_completed_focus = TOR_revel_in_degeneracy
+				has_completed_focus = TOR_the_hunt_begins
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = GER
+				expire = 0
+				generator = { 941 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_slurp_up_the_pasta
+		icon = GFX_focus_attack_italy
+		prerequisite = { focus = TOR_hugs_for_the_mustache_man }
+		relative_position_id = TOR_hugs_for_the_mustache_man
+		x = -2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ITA
+				expire = 0
+				generator = { 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_jodel_he_he
+		icon = GFX_focus_generic_attack_austria
+		prerequisite = { focus = TOR_hugs_for_the_mustache_man }
+		relative_position_id = TOR_hugs_for_the_mustache_man
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = AUS
+				expire = 0
+				generator = { 4 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_war_on_the_weebs
+		icon = GFX_focus_attack_japan
+		prerequisite = { focus = TOR_hugs_for_the_mustache_man }
+		relative_position_id = TOR_hugs_for_the_mustache_man
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = JAP
+				expire = 0
+				generator = { 282 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_visit_papa_stalin_at_the_farm
+		icon = GFX_focus_attack_soviet
+		relative_position_id = TOR_hugs_for_the_mustache_man
+		x = 0
+		y = 2
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	
+		available = {
+			OR = {
+				has_completed_focus = TOR_the_hunt_begins_communism
+				has_completed_focus = TOR_revel_in_degeneracy
+				has_completed_focus = TOR_the_hunt_begins
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = SOV
+				expire = 0
+				generator = { 219 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_kiss_the_tiger_goodnight
+		icon = GFX_focus_attack_china
+		prerequisite = { focus = TOR_visit_papa_stalin_at_the_farm }
+		relative_position_id = TOR_visit_papa_stalin_at_the_farm
+		x = -2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = CHI
+				expire = 0
+				generator = { 613 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_all_animals_are_equal
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_visit_papa_stalin_at_the_farm }
+		relative_position_id = TOR_visit_papa_stalin_at_the_farm
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_hmmm_snow
+		icon = GFX_focus_LAT_threat_on_our_border
+		prerequisite = { focus = TOR_visit_papa_stalin_at_the_farm }
+		relative_position_id = TOR_visit_papa_stalin_at_the_farm
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = LIT
+				expire = 0
+				generator = { 11 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = LAT
+				expire = 0
+				generator = { 808 }
+			}
+			create_wargoal = {
+				type = take_state_focus
+				target = EST
+				expire = 0
+				generator = { 812 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_smooch_poland
+		icon = GFX_goal_generic_territory_or_war
+		relative_position_id = TOR_visit_papa_stalin_at_the_farm
+		x = 0
+		y = 2
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	
+		available = {
+			OR = {
+			#	has_completed_focus = TOR_the_hunt_begins_communism
+				has_completed_focus = TOR_revel_in_degeneracy
+				has_completed_focus = TOR_the_hunt_begins
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = POL
+				expire = 0
+				generator = { 10 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_expand
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = TOR_smooch_poland }
+		relative_position_id = TOR_smooch_poland
+		x = -2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = HUN
+				expire = 0
+				generator = { 43 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_grow_in_size
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = TOR_smooch_poland }
+		relative_position_id = TOR_smooch_poland
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ROM
+				expire = 0
+				generator = { 46 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_get_bigger
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = TOR_smooch_poland }
+		relative_position_id = TOR_smooch_poland
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = CZE
+				expire = 0
+				generator = { 9 }
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_dethrone_the_pretender
+		icon = GFX_focus_attack_britain
+		relative_position_id = TOR_smooch_poland
+		x = 0
+		y = 2
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	
+		available = {
+			OR = {
+			#	has_completed_focus = TOR_the_hunt_begins_communism
+				has_completed_focus = TOR_revel_in_degeneracy
+				has_completed_focus = TOR_the_hunt_begins
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = ENG
+				expire = 0
+				generator = { 126 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_the_french_kiss
+		icon = GFX_focus_attack_france
+		prerequisite = { focus = TOR_dethrone_the_pretender }
+		relative_position_id = TOR_dethrone_the_pretender
+		x = -2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = FRA
+				expire = 0
+				generator = { 16 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_true_top_dog
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = TOR_dethrone_the_pretender }
+		relative_position_id = TOR_dethrone_the_pretender
+		x = 0
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = TOR_hmmm_waffles
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = TOR_dethrone_the_pretender }
+		relative_position_id = TOR_dethrone_the_pretender
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = take_state_focus
+				target = BEL
+				expire = 0
+				generator = { 6 }
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_future_of_our_nation
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 50
+		y = 0
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = TOR_will_of_the_king
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = TOR_future_of_our_nation }
+		mutually_exclusive = { focus = TOR_internationalism_focus }
+		mutually_exclusive = { focus = TOR_liberty_ethos }
+		mutually_exclusive = { focus = TOR_nationalism_focus }
+		relative_position_id = TOR_future_of_our_nation
+		available = {
+			monarchism > 0.20
+			is_subject = no
+		}
+		x = 2
+		y = 1
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = TOR_fight_for_the_king
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = TOR_will_of_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 2
+		relative_position_id = TOR_will_of_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = fight_for_the_king
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = TOR_create_trust_in_the_crown
+		icon = GFX_focus_generic_royal_wedding
+		prerequisite = { focus = TOR_fight_for_the_king }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 2
+		relative_position_id = TOR_fight_for_the_king
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = enthusiasm_for_the_crown
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = TOR_royal_high_command
+		icon = GFX_focus_eng_god_save_the_king
+		prerequisite = { focus = TOR_create_trust_in_the_crown }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		x = 0
+		y = 2
+		relative_position_id = TOR_create_trust_in_the_crown
+
+		available = {
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = royal_high_command
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+
+	focus = {
+		id = TOR_nationalism_focus
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = TOR_future_of_our_nation }
+		mutually_exclusive = { focus = TOR_internationalism_focus }
+		mutually_exclusive = { focus = TOR_liberty_ethos }
+		mutually_exclusive = { focus = TOR_will_of_the_king }
+		available = {
+			fascism > 0.20
+			is_subject = no
+		}
+		x = 6
+		y = 1
+		relative_position_id = TOR_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = fascism }
+				}
+			}
+			modifier = {
+				factor = 10
+				has_idea = SOV_russian_political_influence
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	
+	focus = {
+		id = TOR_internationalism_focus
+		icon = GFX_goal_support_communism
+		prerequisite = { focus = TOR_future_of_our_nation }
+		mutually_exclusive = { focus = TOR_liberty_ethos }
+		mutually_exclusive = { focus = TOR_will_of_the_king }
+		mutually_exclusive = { focus = TOR_nationalism_focus }
+		available = {
+			communism > 0.20
+			is_subject = no
+		}
+		x = -6
+		y = 1
+		relative_position_id = TOR_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 2
+				any_neighbor_country = {
+					is_major = yes
+					has_government = communism
+				}
+			}			
+			modifier = {
+				factor = 0
+				AND = {
+					is_historical_focus_on = yes
+					NOT = { has_government = communism }
+				}
+			}
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+		}
+	}	
+
+	focus = {
+		id = TOR_liberty_ethos
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = TOR_future_of_our_nation }
+		mutually_exclusive = { focus = TOR_internationalism_focus }
+		mutually_exclusive = { focus = TOR_will_of_the_king }
+		mutually_exclusive = { focus = TOR_nationalism_focus }
+		available = {
+			democratic > 0.20
+			is_subject = no
+		}
+		x = -2
+		y = 1
+		relative_position_id = TOR_future_of_our_nation
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		ai_will_do = {
+			factor = 95
+			modifier = {
+				factor = 0.1
+				any_neighbor_country = {
+					is_major = yes
+					OR = {
+						has_government = communism
+						has_government = fascism
+					}
+				}
+				NOT = {
+					any_neighbor_country = {
+						is_major = yes
+						has_government = democratic
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+		}
+	}
+
+	focus = {
+		id = TOR_militarism
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TOR_nationalism_focus }
+		x = 0
+		y = 2
+		relative_position_id = TOR_nationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}			
+			add_ideas = militarism_focus
+			army_experience = 20
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = TOR_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = TOR_internationalism_focus }
+		x = 0
+		y = 2
+		relative_position_id = TOR_internationalism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+
+	focus = {
+		id = TOR_neutrality_focus
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = TOR_liberty_ethos }
+		mutually_exclusive = { focus = TOR_interventionism_focus }
+		x = -1
+		y = 1
+		relative_position_id = TOR_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				tag = AUS
+			}
+			modifier = {
+				factor = 0
+				tag = SAU
+				is_in_faction_with = SOV
+				SOV = { has_government = communism }
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = TOR_interventionism_focus
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = TOR_liberty_ethos }
+		mutually_exclusive = { focus = TOR_neutrality_focus }
+		x = 1
+		y = 1
+		relative_position_id = TOR_liberty_ethos
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_idea = neutrality_idea
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = TOR_military_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TOR_militarism }
+		x = 0
+		y = 2
+		relative_position_id = TOR_militarism
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_deterrence
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = TOR_neutrality_focus }
+		x = 0
+		y = 1
+		relative_position_id = TOR_neutrality_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = TOR_volunteer_corps
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = TOR_interventionism_focus }
+		x = 0
+		y = 1
+		relative_position_id = TOR_interventionism_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = TOR_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = TOR_military_youth }
+		x = 0
+		y = 2
+		relative_position_id = TOR_military_youth
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+
+	focus = {
+		id = TOR_indoctrination_focus
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TOR_political_correctness }
+		x = 0
+		y = 2
+		relative_position_id = TOR_political_correctness
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = TOR_foreign_expeditions
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = TOR_volunteer_corps }
+		x = -1
+		y = 2
+		relative_position_id = TOR_volunteer_corps
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = TOR_why_we_fight
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = TOR_foreign_expeditions focus = TOR_deterrence }
+		available = { 
+			OR = { 
+				threat > 0.75 
+				has_defensive_war = yes 
+			}
+		}
+
+		continue_if_invalid = yes
+		
+		x = -1
+		y = 2
+		relative_position_id = TOR_foreign_expeditions
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = why_we_fight_focus
+			custom_effect_tooltip = why_we_fight_effect
+			hidden_effect = {
+				if = {
+					limit = { NOT = { has_idea = neutrality_idea } }
+					set_rule = { can_create_factions = yes }
+				}			
+			}
+		}
+	}
+
+	focus = {
+		id = TOR_political_commissars
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = TOR_indoctrination_focus }
+		available = {
+		}
+		x = 0
+		y = 2
+		relative_position_id = TOR_indoctrination_focus
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL  }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			if = {
+				limit = { has_government = fascism }
+				add_popularity = {
+					ideology = fascism
+					popularity = 0.2
+				}
+			}
+			if = {
+				limit = { has_government = communism }
+				add_popularity = {
+					ideology = communism
+					popularity = 0.2
+				}
+			}
+			add_political_power = 200
+		}
+	}
+	
+	focus = {
+		id = TOR_technology_sharing
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = TOR_political_commissars focus = TOR_why_we_fight focus = TOR_royal_high_command focus = TOR_paramilitarism }
+		available = {
+			has_war = yes
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 50
+				}
+			}
+		}		
+		x = 3
+		y = 1
+		relative_position_id = TOR_why_we_fight
+		cost = 10
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots < 4
+				}
+				add_research_slot = 1
+			}
+			if = {
+				limit = {
+					original_research_slots > 3
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 1.0
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 1.0
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 1.0
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}
+}

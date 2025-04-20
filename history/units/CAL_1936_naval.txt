@@ -1,0 +1,144 @@
+﻿
+units= {
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Californian Navy"			
+		naval_base = 9671  # San Francisco
+		task_force = {				
+			name = "Navy"
+			location = 9671  # San Francisco
+			ship = { name = "California" definition = heavy_cruiser  equipment = { heavy_cruiser_1 = { amount = 1 owner = CAL version_name = "California Class" } } }	
+			ship = { name = "Eagle" pride_of_the_fleet = yes definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CAL version_name = "California Class" } } }
+			ship = { name = "San Francisco" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = CAL } } } 		
+			ship = { name = "Los Angeles" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = CAL } } }		
+			ship = { name = "Sacramento" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = CAL version_name = "Sacramento Class" } } }			
+			ship = { name = "San Diego" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = CAL version_name = "Sacramento Class" } } }	
+			ship = { name = "San Jose" definition = light_cruiser equipment = { light_cruiser_2 = { amount = 1 owner = CAL version_name = "Sacramento Class" } } }			
+			ship = { name = "Bakersfield" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = CAL } } }
+			# 1. Torpedobootflottille
+			ship = { name = "Jaguar" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAL } } }
+			ship = { name = "Lepard" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAL } } }
+			ship = { name = "Tiger" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAL } } }
+			ship = { name = "Cheetah" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = CAL } } }
+		}
+	}
+			
+	fleet = {
+		name = "Submarine Fleet"			
+		naval_base = 9814  # LA
+		task_force = {
+			name = "Deep Sea Divers"
+			location = 9814  # LA
+			# 1. Unterseebootsflottille
+			ship = { name = "S-7" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			ship = { name = "S-8" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			ship = { name = "S-9" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			ship = { name = "S-10" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			# 4. Unterseebootsflottille
+			ship = { name = "S-11" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			ship = { name = "S-12" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			ship = { name = "S-13" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+			ship = { name = "S-17" definition = submarine equipment = { submarine_2 = { amount = 1 owner = CAL } } }
+		}
+	}
+}
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+instant_effect = {
+
+	### Ships Under Contruction ###
+	# SS: Type IIA (x2) ("S-25" "S-26"), Type IIB (x6) ("S-14" "S-16" "S-18" "S-15" "S-20" "S-19")
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "CAL" 
+		}
+		requested_factories = 1
+		progress = 0.75
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "CAL" 
+		}
+		requested_factories = 1
+		progress = 0.65
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "CAL" 
+		}
+		requested_factories = 1
+		progress = 0.55
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = submarine_2
+			creator = "CAL" 
+		}
+		requested_factories = 1
+		progress = 0.45
+		amount = 2
+	}
+	# DD: 1934 class (x4) ("Z1" "Z2" "Z3" "Z4")
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "CAL"
+		}
+		requested_factories = 1
+		progress = 0.75
+		amount = 2
+	}
+	add_equipment_production = {
+		equipment = {
+			type = destroyer_2
+			creator = "CAL"
+		}
+		requested_factories = 1
+		progress = 0.65
+		amount = 2
+	}
+	# CA: "Freedom"
+	add_equipment_production = {
+		equipment = {
+			type = heavy_cruiser_1
+			creator = "CAL"
+			version_name = "California Class"
+		}
+		requested_factories = 1
+		progress = 0.95
+		amount = 1
+	}
+	# Scharnhorst
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "CAL"
+		}
+		requested_factories = 1
+		progress = 0.25
+		amount = 1
+	}
+	# Gneisenau
+	add_equipment_production = {
+		equipment = {
+			type = battleship_2
+			creator = "CAL"
+		}
+		requested_factories = 1
+		progress = 0.1
+		amount = 1
+	}
+}
+
+#####################

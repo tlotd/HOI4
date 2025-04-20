@@ -1,0 +1,23 @@
+state={
+	id=852
+	name="STATE_852"
+
+	history = {
+		set_variable = { culture = 42 }
+		owner = VAT
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = VAT
+	}
+
+	provinces = {
+		6692
+	}
+	manpower = 764
+	buildings_max_level_factor = 1.000
+	state_category = city
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,375 @@
+#####################
+
+###  ##  #  # # #  ## 
+ #  #  # ## # # # #   
+ #  #### # ## ##   #  
+ #  #  # #  # # #   # 
+ #  #  # #  # # # ## 
+
+ #################### 
+
+LTD_porsche_organization = {
+	include = generic_heavy_tank_organization
+	icon = GFX_idea_porsche
+	
+	allowed = {	
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+
+    available = {
+		FROM = {
+			controls_province = 9517
+		}
+	}
+}
+
+LTD_drachenschanzwerke_organization = {
+	#include = generic_tank_organization
+	icon = GFX_mio_company_drachenschantwerke
+
+	allowed = {	
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+
+    available = {
+		FROM = {
+			controls_province = 9572
+		}
+	}
+
+    visible = {
+		FROM = {
+			has_country_flag = drachenschanze_found
+		}
+	}
+
+	equipment_type = { armor }
+	research_categories = { mio_cat_tech_all_armor_and_modules }
+
+	tree_header_text = {
+		text = mio_header_tank_construction
+		x = 3
+	}
+
+	tree_header_text = {
+		text = Specialization
+		x = 7
+	}
+
+	initial_trait = {
+		name = generic_mio_initial_trait_standardized_production
+		
+		equipment_bonus = {
+			armor_value = -0.05
+			defense =-0.05
+			build_cost_ic = -0.03
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_simplified_suspension
+		name = generic_mio_trait_simplified_suspension
+		icon = GFX_generic_mio_trait_icon_reliability
+
+		position = { x=1 y=0 }
+		
+		equipment_bonus = {
+			defense = 0.05
+		}
+	}
+	
+	trait = {
+		token = generic_mio_trait_crew_ergonomics
+		name = generic_mio_trait_crew_ergonomics
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		position = { x=4 y=0 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+	}
+	
+	trait = {
+		token = generic_mio_trait_improved_tracks
+		name = generic_mio_trait_improved_tracks
+		icon = GFX_generic_mio_trait_icon_maximum_speed
+
+		
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		any_parent = { generic_mio_trait_simplified_suspension }
+
+		equipment_bonus = {
+			armor_value = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_command_upgrades
+		name = generic_mio_trait_command_upgrades
+		icon = GFX_generic_mio_trait_icon_breakthrough
+		
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_crew_ergonomics
+		
+		any_parent = { generic_mio_trait_crew_ergonomics }
+
+		equipment_bonus = {
+			ap_attack = 0.05
+		}
+	}
+	
+	trait = {
+		token = generic_mio_trait_standardized_components
+		name = generic_mio_trait_standardized_components
+		icon = GFX_generic_mio_department_icon_tank_general_line_efficiency
+		
+		position = { x=2 y=1 }
+		relative_position_id = generic_mio_trait_simplified_suspension
+		
+		all_parents = { generic_mio_trait_simplified_suspension generic_mio_trait_crew_ergonomics }
+
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_improved_tooling
+		name = generic_mio_trait_improved_tooling
+		icon = GFX_generic_mio_department_icon_tank_general_technology
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_standardized_components
+		
+		all_parents = { generic_mio_trait_improved_tracks generic_mio_trait_standardized_components generic_mio_trait_command_upgrades }
+
+		production_bonus = {
+			production_efficiency_cap_factor = 0.1
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_mass_production
+		name = generic_mio_trait_mass_production
+		icon = GFX_generic_mio_department_icon_tank_general_production
+		
+		position = { x=-1 y=1 }
+		relative_position_id = generic_mio_trait_improved_tooling
+		
+		any_parent = { generic_mio_trait_improved_tooling }
+		
+		mutually_exclusive = { generic_mio_trait_quality_improvements }
+		
+		production_bonus = {
+			production_cost_factor = -0.05
+		}
+
+		equipment_bonus = {
+			reliability_factor = -0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_quality_improvements
+		name = generic_mio_trait_quality_improvements
+		icon = GFX_generic_mio_department_icon_tank_general_armor
+		
+		position = { x=1 y=1 }
+		relative_position_id = generic_mio_trait_improved_tooling
+		
+		any_parent = { generic_mio_trait_improved_tooling }
+		
+		mutually_exclusive = { generic_mio_trait_mass_production}
+		
+		production_bonus = {
+			production_cost_factor = 0.05
+		}
+
+		equipment_bonus = {
+			armor_value = 0.05
+			defense = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_defensive_equipment
+		name = generic_mio_trait_defensive_equipment
+		icon = GFX_generic_mio_trait_icon_soft_attack
+
+		position = { x=2 y=0 }
+		relative_position_id = generic_mio_trait_crew_ergonomics
+		
+		equipment_bonus = {
+			ap_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_long_barreled_guns
+		name = generic_mio_trait_long_barreled_guns
+		icon = GFX_generic_mio_trait_icon_ap_attack
+
+		position = { x=0 y=2 }
+		relative_position_id = generic_mio_trait_defensive_equipment
+		
+		any_parent = { generic_mio_trait_defensive_equipment }
+
+		equipment_bonus = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_anti_tank_specialization
+		name = generic_mio_trait_infantry_support_tanks
+		icon = GFX_generic_mio_trait_icon_soft_attack
+		
+		position = { x=-1 y=2 }
+		relative_position_id = generic_mio_trait_long_barreled_guns
+		
+		any_parent = { generic_mio_trait_long_barreled_guns }
+		
+		mutually_exclusive = { generic_mio_trait_infantry_support_tanks }
+		
+		equipment_bonus = {
+			soft_attack = 0.05
+		}
+	}
+
+	trait = {
+		token = generic_mio_trait_infantry_support_tanks
+		name = generic_mio_trait_anti_tank_specialization
+		icon = GFX_generic_mio_trait_icon_hard_attack
+		
+		position = { x=1 y=2 }
+		relative_position_id = generic_mio_trait_long_barreled_guns
+		
+		any_parent = { generic_mio_trait_long_barreled_guns }
+		
+		mutually_exclusive = { generic_mio_trait_anti_tank_specialization }
+		
+		equipment_bonus = {
+			hard_attack = 0.05
+		}
+	}
+}
+
+#####################
+
+ ## #  # ### ###   ## 
+#   #  #  #  #  # #   
+ #  ####  #  ###   #  
+  # #  #  #  #      # 
+##  #  # ### #    ##  
+ 
+#####################
+
+
+
+###########################
+
+###  #    ##  #  # ###  ## 
+#  # #   #  # ## # #   #   
+###  #   #### # ## ##   #  
+#    #   #  # #  # #     # 
+#    ### #  # #  # ### ##  
+
+###########################
+
+LTD_luftschiffwerke_lilienthal_organization = {
+	include = generic_general_aircraft_organization
+	icon = GFX_mio_company_luftschiffwerke_lilienthal
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+
+    available = {
+		FROM = {
+			controls_province = 6934
+		}
+	}
+}
+
+################################### 
+
+#   #  ##  ### ### ###  ### ### #   
+## ## #  #  #  #   #  #  #  #   #   
+# # # ####  #  ##  ###   #  ##  #   
+#   # #  #  #  #   #  #  #  #   #   
+#   # #  #  #  ### #  # ### ### ### 
+
+
+###################################
+
+LTD_silberstahl_ruestungswerke_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_mio_company_silberstahl_ruestungswerke
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+	
+    available = {
+		FROM = {
+			controls_province = 3530
+		}
+	}
+}
+
+LTD_einsatzmanufaktur_edelweiss_organization = {
+	include = generic_support_equipment_organization
+	icon = GFX_mio_company_einsatzmanufaktur_edelweiss
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+	
+    available = {
+		FROM = {
+			controls_province = 9655
+		}
+	}
+}
+
+LTD_schwerindustriegenossenschaft_dicke_rohre_organization = {
+	include = generic_artillery_organization
+	icon = GFX_mio_company_schwerindustriegenossenschaft_dicke_rohre
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+	
+    available = {
+		FROM = {
+			controls_province = 11640
+		}
+	}
+}
+
+LTD_mercedes_benz_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_mio_company_mercedes_benz
+	
+	allowed = {
+		has_dlc = "Arms Against Tyranny"
+        tag = LTD
+	}
+	
+    available = {
+		FROM = {
+			controls_province = 9517
+		}
+	}
+}

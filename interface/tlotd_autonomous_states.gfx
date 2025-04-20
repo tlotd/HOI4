@@ -1,0 +1,83 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_autonomy_mandate_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_mandate_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_autonomy_drachenpakt_member_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_drachenpakt_member_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_autonomy_ltd_subject_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_ltd_subject_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_autonomy_crown_jewel_of_the_empire_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_crown_jewel_of_the_empire_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_autonomy_imperial_ally_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_imperial_ally_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_autonomy_imperial_colony_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_imperial_colony_icon.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_autonomy_satellite_state_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_satellite_state_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_autonomy_socialist_republic_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_socialist_republic_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_autonomy_follower_of_the_faith_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_follower_of_the_faith_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_autonomy_sanctuary_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_sanctuary_icon.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_autonomy_follower_of_the_void_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_follower_of_the_void_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_autonomy_prussian_posession_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_prussian_posession_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_autonomy_german_kingdom_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_german_kingdom_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_autonomy_austro_hungarian_kingdom_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_austro_hungarian_kingdom_icon.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_autonomy_eu_member_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_eu_member_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_autonomy_us_state_icon"
+		texturefile = "gfx/interface/autonomy/autonomy_us_state_icon.dds"
+	}
+}

@@ -1,0 +1,38 @@
+﻿units = {
+	division= {	# "1. Student-Assasin-Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9909
+		division_template = "Student-Assasin-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	# "2. Student-Assasin-Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 3589
+		division_template = "Student-Assasin-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	# "3. Student-Assasin-Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11834
+		division_template = "Student-Assasin-Division"
+		start_experience_factor = 0.3
+	}
+	division= {	# "4. Student-Assasin-Division"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 778
+		division_template = "Student-Assasin-Division"
+		start_experience_factor = 0.3
+	}
+}

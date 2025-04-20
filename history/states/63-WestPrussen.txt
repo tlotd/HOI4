@@ -1,0 +1,61 @@
+
+state={
+	id=63
+	name="STATE_63"
+	manpower = 1124417
+	resources={
+		steel=7 #was 8  #was 16 was: 23 # was: 36
+		aluminium=6 # was: 8 was: 12
+	}
+	
+	state_category = town
+
+	history={
+		set_variable = { culture = 34 }
+		owner = PRE
+		victory_points = {
+			6282 5
+		}
+		victory_points = {
+			11372 3
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11372 = {
+				naval_base = 1
+			}
+			6282 = {
+				naval_base = 4
+
+			}
+			air_base = 3
+		}
+		add_core_of = KSH
+		add_core_of = PRE
+		1871.1.18 = {
+			owner = GER
+			add_core_of = GER
+		}
+		1945.5.8 = {
+			owner = POL
+			add_core_of = POL
+			remove_core_of = GER
+			set_state_name = STATE_63_POL
+			set_province_name = {
+				id = 6282
+				name = VICTORY_POINTS_6282_POL
+			}
+			set_province_name = {
+				id = 11372
+				name = VICTORY_POINTS_11372_POL
+			}
+		}
+	}
+
+	provinces={
+		6282 6309 6334 6390 9252 9277 9306 9334 9361 11260 11288 11316 11343 11372 
+	}
+
+	local_supplies=7.0 
+}

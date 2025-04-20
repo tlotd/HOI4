@@ -1,0 +1,91 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = global_news_DUN
+
+#Treaty of Sarajevo
+news_event = {
+	id = global_news_DUN.1
+	title = global_news_DUN.1.t
+	desc = global_news_DUN.1.d
+	picture = GFX_news_event_generic_sign_treaty3
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_DUN.1.a
+	}
+}
+
+#Yugo Civil War
+news_event = {
+	id = global_news_DUN.2
+	title = global_news_DUN.2.t
+	desc = global_news_DUN.2.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_DUN.2.a
+	}
+}
+
+#Communist Civil War
+news_event = {
+	id = global_news_DUN.31
+	title = global_news_DUN.31.t
+	desc = global_news_DUN.31.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = global_news_DUN.31.a
+	}
+}
+
+#Darth Vader
+news_event = {
+	id = global_news_DUN.33
+	title = global_news_DUN.33.t
+	desc = global_news_DUN.33.d
+	picture = GFX_news_event_darth_vader
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			play_song = "imperial_march"
+		}
+	}
+
+	option = {
+		name = global_news_DUN.33.a
+	}
+}
+
+#Fascist Civil War
+news_event = {
+	id = global_news_DUN.61
+	title = global_news_DUN.61.t
+	desc = global_news_DUN.61.d
+	picture = GFX_news_event_038
+	
+	major = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = global_news_DUN.61.a
+	}
+}

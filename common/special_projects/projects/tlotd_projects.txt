@@ -1,0 +1,56 @@
+sp_land_theropods = {
+	specialization = specialization_land
+	icon = GFX_sp_land_theropods
+	narrative = {
+		name = sp_land_theropods
+		desc = sp_land_theropods_desc
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+	
+	available = {
+		FROM = {
+			has_tech = theropod_warmachine
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+	
+	prototype_time = 269
+
+	complexity = 10
+	
+	resource_cost = {
+		resources = { fossils = 1 amber = 1 }
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_resource_scarcity
+	}
+
+	project_output = {
+		enable_equipments = {
+			theropod_equipment_0
+		}
+
+		enable_subunits = {
+			theropod
+		}
+	}
+}

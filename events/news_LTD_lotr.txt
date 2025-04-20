@@ -1,0 +1,77 @@
+﻿ ###########################
+# TLOTD Events
+###########################
+
+# 1 - 99 monarchist
+# 100+ fascist
+
+add_namespace = news_LTD_lotr
+
+country_event = { #choose fascism
+	id = news_LTD_lotr.100
+	title = news_LTD_lotr.100.t
+	desc = news_LTD_lotr.100.d
+	picture = GFX_report_event_barad_dur
+
+	is_triggered_only = yes
+
+ 	immediate = {
+ 	}
+
+	option = {
+		name = news_LTD_lotr.100.a
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = LTD_LOTR
+		set_country_flag = LotrEmpire
+		remove_country_leader_role = {
+			character = LTD_fascist_revolutionaries
+			ideology = fascist_revolutionaries
+		}
+		remove_country_leader_role = {
+			character = LTD_claus_von_stauffenberg
+			ideology = nazism
+		}
+		LTD_sauron = {
+			add_country_leader_role = {
+				country_leader = {
+					ideology = reign_of_sauron
+					traits = { all_seeing_eye omen_of_death }
+				}
+				promote_leader = yes
+			}
+		}
+		set_party_name = {
+			ideology = fascism
+			long_name = LTD_sauron_party_long
+			name = LTD_sauron_party
+		}
+		set_province_name = {
+			id = 9517
+			name = VICTORY_POINTS_9517_LTD_lotr_fascism
+		}
+		create_faction = FACTION_NAME_LTD_lotr_fascism
+		if = {
+			limit = {
+				has_dlc = "Gotterdammerung"
+			}
+			50 = {
+				remove_building = {
+					type = landmark_stuttgart_palace
+					level = 1
+					province = 9517
+				}
+				add_building_construction = {
+					type = landmark_baradur
+					level = 1
+					instant_build = yes
+					province = 9517
+				}
+			}
+		}
+		set_technology = {
+			orc_soldiers = 1
+		}
+		load_oob = orcs
+		news_event = { hours = 6 id = global_news_LTD_lotr.100 }
+	}
+}

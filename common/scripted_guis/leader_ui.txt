@@ -1,0 +1,287 @@
+scripted_gui = {
+
+	view_pm = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "leader_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			pm_frame_visible = {
+				OR = {
+					has_country_flag = HOG_view
+					has_country_flag = HOG_second_veiw
+				}
+			}
+			leader_button_visible = {
+				uses_leader_gui = yes
+			}
+			second_leader_button_visible = {
+				uses_double_leader_gui = yes
+			}
+			
+			### LANDS OF THE DRAGON Chancellors ###
+
+			League_Of_Nations_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					is_subject_of = LON
+				}
+			}
+
+			Empty_National_Parliament_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					NOT = {
+						OR = {
+							is_subject_of = LON
+							AND = {
+								owns_state = 378
+								has_country_flag = Transatlantic
+								378 = {
+									has_state_flag = submod_coc
+								}
+							}
+							has_country_flag = German
+							has_country_flag = GermanEmpire
+							has_country_flag = GermanUnified
+							has_country_flag = FrancoGermanEmpire
+							has_country_leader = {
+								character = LTD_sauron
+								ruling_only = yes
+							}
+						}
+					}
+					OR = {
+						# When empty, crisis?
+					}
+				}
+			}
+			National_Parliament_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					NOT = {
+						OR = {
+							is_subject_of = LON
+							AND = {
+								owns_state = 378
+								has_country_flag = Transatlantic
+								378 = {
+									has_state_flag = submod_coc
+								}
+							}
+							has_country_flag = German
+							has_country_flag = GermanEmpire
+							has_country_flag = GermanUnified
+							has_country_flag = FrancoGermanEmpire
+							has_country_leader = {
+								character = LTD_sauron
+								ruling_only = yes
+							}
+						}
+					}
+				}
+			}
+			Korosensei_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					has_country_flag = SakuraEmpire
+				}
+			}
+			Lucy_Connor_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					owns_state = 378
+					has_country_flag = Transatlantic
+					378 = {
+						has_state_flag = submod_coc
+					}
+				}
+			}
+			Rudolf_von_Preussen_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					NOT = {
+						OR = {
+							has_country_flag = FrancoGermanEmpire
+							is_subject_of = LON
+							AND = {
+								owns_state = 378
+								has_country_flag = Transatlantic
+								378 = {
+									has_state_flag = submod_coc
+								}
+							}
+						}
+					}
+					OR = {
+						has_country_flag = German
+						has_country_flag = GermanEmpire
+						has_country_flag = GermanUnified
+					}
+				}
+			}
+			Jean_Allemand_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					NOT = {
+						OR = {
+							is_subject_of = LON
+							AND = {
+								owns_state = 378
+								has_country_flag = Transatlantic
+								378 = {
+									has_state_flag = submod_coc
+								}
+							}
+						}
+					}
+					has_country_flag = FrancoGermanEmpire
+				}
+			}
+			Mouth_of_Sauron_visible = {
+				AND = {
+					has_country_flag = HOG_view
+					tag = LTD
+					has_country_leader = {
+						character = LTD_sauron
+						ruling_only = yes
+					}
+				}
+			}
+
+			pm_name_visible = {
+				has_country_flag = HOG_view
+			}
+			second_pm_name_visible = {
+				has_country_flag = HOG_second_veiw
+			}
+		}
+		
+		properties = {
+			League_Of_Nations = {
+				image = "[GetLeagueOfNationsPortrait]"
+			}
+			Empty_National_Parliament = {
+				image = "[GetEmptyNationalParliamentPortrait]"
+			}
+			National_Parliament = {
+				image = "[GetNationalParliamentPortrait]"
+			}
+			Korosensei = {
+				image = "[GetKorosenseiPortrait]"
+			}
+			Lucy_Connor = {
+				image = "[GetLucyConnorPortrait]"
+			}
+			Rudolf_von_Preussen_visible = {
+				image = "[GetRudolfVonPreussenPortrait]"
+			}
+			Jean_Allemand = {
+				image = "[GetJeanAllemandPortrait]"
+			}
+			Mouth_of_Sauron = {
+				image = "[GetMouthOfSauronPortrait]"
+			}
+		}
+		
+		visible = {
+			uses_leader_gui = yes
+		}
+		
+		effects = {
+
+			leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = HOG_view
+					}
+					clr_country_flag = HOG_view
+					else = {
+						set_country_flag = HOG_view
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = HOG_second_veiw
+					}
+					clr_country_flag = HOG_second_veiw
+				}
+			}
+			
+			second_leader_button_click = {
+				if = {
+					limit = {
+						has_country_flag = HOG_second_veiw
+					}
+					clr_country_flag = HOG_second_veiw
+					else = {
+						set_country_flag = HOG_second_veiw
+					}
+				}
+				if = {
+					limit = {
+						has_country_flag = HOG_view
+					}
+					clr_country_flag = HOG_view
+				}
+			}
+		}
+	}
+}
+
+scripted_gui = {
+	
+	FOR_view_pm = {
+		context_type = selected_country_context
+		parent_window_token = selected_country_view_diplomacy
+		window_name = "for_leader_gui"
+
+		ai_check = {
+			always = no
+		}
+
+		triggers = {
+			for_leader_button_visible = {
+				uses_leader_gui = yes
+			}
+			for_second_leader_button_visible = {
+				uses_double_leader_gui = yes
+			}
+		}
+		
+		effects = {
+		
+		}
+			
+	}
+	
+	mapmode_leader_gui = {
+		window_name = "mapmode_leader_gui_window"
+		context_type = country_mapicon
+		mapmode = leader_gui_map_mode
+		
+		visible = { 
+			always = yes
+		}
+		
+		mapicon_targets = {
+			target_array = global.countries
+			target_trigger = {
+				FROM = {
+					uses_leader_gui = yes
+				}
+			}
+		}
+	}
+}

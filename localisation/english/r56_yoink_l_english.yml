@@ -1,0 +1,39 @@
+﻿l_english:
+
+ etgi_ideas:0 "National Character"
+
+ tlotd_has_government_tt:0 "Has a Government."
+ has_government_anarchism_tt:0 "Current country leader has ideology §HAnarchism§! or §HAnarchist Communism§!."
+
+ r56i_laws_category_security:0 "Law Enforcement"
+ r56i_laws_leadership:0 "The State's Mandate"
+ r56i_laws_category_gender:0 "Legal Status of Women"
+ r56i_laws_social:0 "Social Order"
+ r56i_laws_war:0 "Justification for War"
+
+ r56i_laws_security_order:0 "Order Above All"
+ r56i_laws_security_balanced:0 "Balanced Approach"
+ r56i_laws_security_rights:0 "Individual Rights"
+ individual_rights_trigger_tt:0 "Current country leader has ideology §HAnarchism§!, §HAnarchist Communism§! or §HChristmas§!."
+
+ r56i_laws_leadership_cult:0 "Personality Cult"
+ r56i_laws_leadership_divine:0 "Divine Inspiration"
+ r56i_laws_leadership_secular:0 "Secular Institutions"
+ r56i_laws_leadership_people:0 "Will of the People"
+ r56i_laws_leadership_communal_decision_making:0 "Communal Decision Making"
+
+ r56i_laws_gender_traditional:0 "Traditional Roles"
+ r56i_laws_gender_patriarchy:0 "Enforced Patriarchy"
+ r56i_laws_gender_limited:0 "Limited Rights"
+ r56i_laws_gender_equality:0 "Total Equality"
+
+ r56i_laws_social_hierarchy:0 "Hierarchy"
+ r56i_laws_social_normal:0 "Cultural Norms"
+ r56i_laws_social_unity:0 "The Greater Good"
+ r56i_laws_social_revolutionary:0 "Revolutionary Minds"
+ r56i_laws_social_diversity:0 "Melting Pot"
+
+ r56i_laws_war_brinkmanship:0 "Brinkmanship"
+ r56i_laws_war_ideological:0 "Ideological Struggle"
+ r56i_laws_war_diplomacy:0 "Global Order"
+ r56i_laws_war_historical:0 "Lessons of History"

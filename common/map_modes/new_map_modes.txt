@@ -1,0 +1,732 @@
+scripted_map_modes = {
+	culture_map_mode = {
+		top = {
+			type = state
+			color = {
+				FROM = {
+					set_temp_variable = { alpha = 1.0 }
+					set_temp_variable = { thickness = 10.0 }
+					if = {
+						limit = {
+							check_variable = { culture = 7 }
+						}
+						set_temp_variable = { red = 0.2 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 8 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 9 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.5 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 10 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 11 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 12 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 13 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 14 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 15 }
+						}
+						set_temp_variable = { red = 0.2 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.5 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 16 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 17 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 18 }
+						}
+						set_temp_variable = { red = 0.1 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 19 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 20 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 21 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 22 }
+						}
+						set_temp_variable = { red = 0.1 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 23 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.8 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 24 }
+						}
+						set_temp_variable = { red = 0.2 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 25 }
+						}
+						set_temp_variable = { red = 0.2 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 26 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 27 }
+						}
+						set_temp_variable = { red = 0.2 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 28 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 29 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 30 }
+						}
+						set_temp_variable = { red = 0.8 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 31 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 32 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 33 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 34 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 35 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.1 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 36 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 37 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 38 }
+						}
+						set_temp_variable = { red = 0.8 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 39 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.1 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 40 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 41 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.1 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 42 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 43 }
+						}
+						set_temp_variable = { red = 0.8 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 44 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 45 }
+						}
+						set_temp_variable = { red = 0.1 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 46 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 47 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.5 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 48 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 49 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 50 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 51 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 52 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 53 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 54 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 55 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 56 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 57 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 58 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 59 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 60 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.5 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 61 }
+						}
+						set_temp_variable = { red = 0.8 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 62 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 63 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.1 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 64 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 65 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 66 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.7 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 67 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 68 }
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 69 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.6 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 70 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 71 }
+						}
+						set_temp_variable = { red = 0.5 }
+						set_temp_variable = { green = 0.1 }
+						set_temp_variable = { blue = 0.1 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 72 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 73 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 74 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.2 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 75 }
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.8 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 76 }
+						}
+						set_temp_variable = { red = 0.3 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.4 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 77 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 78 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.45 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 79 }
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.45 }
+						set_temp_variable = { blue = 0.3 }
+					} else_if = {
+						limit = {
+							check_variable = { culture = 201 }
+						}
+						set_temp_variable = { red = 0.8 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.4 }
+					} else = {
+						set_temp_variable = { red = 0.502 }
+						set_temp_variable = { green = 0.502 }
+						set_temp_variable = { blue = 0.502 }
+					}
+				}
+			}
+			thickness = no
+		}
+		bottom = {
+			type = none
+			color = {
+				set_temp_variable = { alpha = 0.4 }
+				set_temp_variable = { thickness = 10.0 }
+			}
+			thickness = yes
+		}
+
+		far_text = none
+		near_text = none
+
+		update_daily = yes
+	}
+	content_map_mode = {
+		top = {
+			type = country
+
+			color = {
+				FROM = {
+					set_temp_variable = { alpha = 1.0 }
+					set_temp_variable = { thickness = 10.0 }
+					if = {
+						limit = {
+							has_country_flag = full_content_country
+						}
+						set_temp_variable = { red = 0 }
+						set_temp_variable = { green = 0.624 }
+						set_temp_variable = { blue = 0.012 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = partial_content_country
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.82 }
+						set_temp_variable = { blue = 0.6 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = discontinued_content_country 
+						}
+						set_temp_variable = { red = 1 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.2 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = future_content_country
+						}
+						set_temp_variable = { red = 0.318 }
+						set_temp_variable = { green = 0.561 }
+						set_temp_variable = { blue = 0.863 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = tlotd_owgawftv_more_content_country
+						}
+						set_temp_variable = { red = 0.502 }
+						set_temp_variable = { green = 0.470 }
+						set_temp_variable = { blue = 0.827 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = tlotd_owgawftv_only_content_country
+						}
+						set_temp_variable = { red = 0.502 }
+						set_temp_variable = { green = 0.470 }
+						set_temp_variable = { blue = 0.827 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = tlotd_expanded_more_content_country
+						}
+						set_temp_variable = { red = 1 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = tlotd_expanded_only_content_country
+						}
+						set_temp_variable = { red = 1 }
+						set_temp_variable = { green = 0.3 }
+						set_temp_variable = { blue = 0.3 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = tlotd_coc_more_content_country
+						}
+						set_temp_variable = { red = 1 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.3 }
+					}
+					else_if = {
+						limit = {
+							has_country_flag = tlotd_coc_only_content_country
+						}
+						set_temp_variable = { red = 1 }
+						set_temp_variable = { green = 0.5 }
+						set_temp_variable = { blue = 0.3 }
+					}
+					else = {
+						set_temp_variable = { red = 0.502 }
+						set_temp_variable = { green = 0.502 }
+						set_temp_variable = { blue = 0.502 }
+					}
+
+				}
+
+			}
+			thickness = no
+		}
+
+		bottom = {
+			type = none
+
+			color = {
+				set_temp_variable = { alpha = 0.4 }
+				set_temp_variable = { thickness = 10.0 }
+			}
+
+			thickness = yes
+		}
+
+		far_text = none
+		near_text = none
+
+		update_daily = yes
+	}
+	literacy_map_mode = {
+		top = {
+			type = country
+
+			color = {
+				FROM = {
+					set_temp_variable = { alpha = 1.0 }
+					set_temp_variable = { thickness = 10.0 }
+					if = {
+						limit = {
+							has_idea = excellent_literacy_rate
+						}
+						set_temp_variable = { red = 0.2 }
+						set_temp_variable = { green = 0.7 }
+						set_temp_variable = { blue = 0.2 }
+					}
+					else_if = {
+						limit = {
+							has_idea = high_literacy_rate
+						}
+						set_temp_variable = { red = 0.4 }
+						set_temp_variable = { green = 0.6 }
+						set_temp_variable = { blue = 0.2 }
+					}
+					else_if = {
+						limit = {
+							has_idea = low_literacy_rate
+						}
+						set_temp_variable = { red = 0.6 }
+						set_temp_variable = { green = 0.4 }
+						set_temp_variable = { blue = 0.2 }
+					}
+					else_if = {
+						limit = {
+							has_idea = high_illiteracy_rate
+						}
+						set_temp_variable = { red = 0.7 }
+						set_temp_variable = { green = 0.2 }
+						set_temp_variable = { blue = 0.2 }
+					}
+					else = {
+						set_temp_variable = { red = 0.502 }
+						set_temp_variable = { green = 0.502 }
+						set_temp_variable = { blue = 0.502 }
+					}
+				}
+			}
+			thickness = no
+		}
+
+		bottom = {
+			type = none
+
+			color = {
+				set_temp_variable = { alpha = 0.4 }
+				set_temp_variable = { thickness = 10.0 }
+			}
+
+			thickness = yes
+		}
+
+		far_text = none
+		near_text = none
+
+		update_daily = yes
+	}
+}

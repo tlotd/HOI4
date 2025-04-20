@@ -1,0 +1,16 @@
+#on_actions = {
+#    on_daily_LTD = {
+#		effect = {
+#            if = {
+#                limit = {
+#					ROOT = {
+#						original_tag = LTD
+#                        surrender_progress > 0.8
+#                        has_civil_war = no
+#					}
+#                }
+#                country_event = { id = news_LTD.300 }
+#            }
+#        }
+#    }
+#}

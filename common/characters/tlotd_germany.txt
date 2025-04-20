@@ -1,0 +1,43 @@
+characters={
+	GER_wilhelm_ii={
+		name=GER_wilhelm_ii
+		portraits={
+			civilian={
+				large="GFX_portrait_GER_wilhelm_ii"
+			}	
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			traits= { the_sacred_king ideological_crusader }
+			id=-1
+		}
+	}
+
+	GER_wilhelm_iii={
+		name=GER_wilhelm_iii
+		portraits={
+			civilian={
+				large="GFX_portrait_GER_wilhelm_iii"
+			}	
+		}
+		country_leader={
+			ideology=germanic_monarchism
+			traits= { }
+			id=-1
+		}
+	}
+
+	GER_yellow_figure={
+		name="Yellow Figure"
+		portraits={
+			civilian={
+				large="GFX_portrait_yellow_figure"
+			}
+		}
+		country_leader={
+			ideology=nazi_otherworldly
+			traits= { ideological_crusader }
+			id=-1
+		}
+	}
+}

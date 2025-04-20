@@ -1,0 +1,43 @@
+﻿focus_tree = {
+	id = VAT_vatican_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VAT
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	initial_show_position = {
+		focus = VAT_pray
+	}
+
+	focus = {
+		id = VAT_pray
+		icon = GFX_focus_generic_pope
+		search_filters = { FOCUS_FILTER_STABILITY }
+		x = 10
+		y = 3
+
+		available = {
+			theocracy > 0.90
+		}
+
+		bypass = {
+		}
+
+		cost = 95.2
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}

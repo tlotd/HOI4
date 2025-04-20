@@ -1,0 +1,203 @@
+tlotd_germany_fractured = {
+	name = "RULE_TLOTD_GERMANY_FRACTURED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	option = {
+		name = fully
+		text = "RULE_TLOTD_GERMANY_FRACTURED_FULLY"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_FULLY_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = tlotd_canon
+		text = "RULE_TLOTD_GERMANY_FRACTURED_TLOTD_CANON"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_TLOTD_CANON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ltd_lkr_wdz
+		text = "RULE_TLOTD_GERMANY_FRACTURED_LTD_LKR_WDZ"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_LTD_LKR_WDZ_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ltd_lkr
+		text = "RULE_TLOTD_GERMANY_FRACTURED_LTD_LKR"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_LTD_LKR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ltd_wdz
+		text = "RULE_TLOTD_GERMANY_FRACTURED_LTD_WDZ"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_LTD_WDZ_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = lkr_wdz
+		text = "RULE_TLOTD_GERMANY_FRACTURED_LKR_WDZ"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_LKR_WDZ_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = ltd
+		text = "RULE_TLOTD_GERMANY_FRACTURED_LTD"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_LTD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = lkr
+		text = "RULE_TLOTD_GERMANY_FRACTURED_LKR"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_LKR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = wdz
+		text = "RULE_TLOTD_GERMANY_FRACTURED_WDZ"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_WDZ_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = no
+		text = "RULE_TLOTD_GERMANY_FRACTURED_NO"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_NO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = empire
+		text = "RULE_TLOTD_GERMANY_FRACTURED_EMPIRE"
+		desc = "RULE_TLOTD_GERMANY_FRACTURED_EMPIRE_DESC"
+		allow_achievements = yes
+	}
+}
+
+tlotd_north_america_fractured = {
+	name = "RULE_TLOTD_NORTH_AMERICA_FRACTURED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	option = {
+		name = yes
+		text = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_YES"
+		desc = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_YES_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = tlotd_canon
+		text = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_TLOTD_CANON"
+		desc = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_TLOTD_CANON_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = cal
+		text = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_CAL"
+		desc = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_CAL_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = tex
+		text = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_TEX"
+		desc = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_TEX_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = no
+		text = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_NO"
+		desc = "RULE_TLOTD_NORTH_AMERICA_FRACTURED_NO_DESC"
+		allow_achievements = yes
+	}
+}
+
+tlotd_czechoslovakia_fractured = {
+	name = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	option = {
+		name = cze_tor
+		text = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED_CZE_TOR"
+		desc = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED_CZE_TOR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = cze_slo
+		text = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED_CZE_SLO"
+		desc = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED_CZE_SLO_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = no
+		text = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED_NO"
+		desc = "RULE_TLOTD_CZECHOSLOVAKIA_FRACTURED_NO_DESC"
+		allow_achievements = yes
+	}
+}
+
+tlotd_eastern_europe_fractured = {
+	name = "RULE_TLOTD_EASTERN_EUROPE_FRACTURED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	default = {
+		name = leo
+		text = "RULE_TLOTD_EASTERN_EUROPE_FRACTURED_LEO"
+		desc = "RULE_TLOTD_EASTERN_EUROPE_FRACTURED_LEO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = no
+		text = "RULE_TLOTD_EASTERN_EUROPE_FRACTURED_NO"
+		desc = "RULE_TLOTD_EASTERN_EUROPE_FRACTURED_NO_DESC"
+		allow_achievements = yes
+	}
+}
+
+tlotd_australia_fractured = {
+	name = "RULE_TLOTD_AUSTRALIA_FRACTURED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	default = {
+		name = yes
+		text = "RULE_TLOTD_AUSTRALIA_FRACTURED_YES"
+		desc = "RULE_TLOTD_AUSTRALIA_FRACTURED_YES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = no
+		text = "RULE_TLOTD_AUSTRALIA_FRACTURED_NO"
+		desc = "RULE_TLOTD_AUSTRALIA_FRACTURED_NO_DESC"
+		allow_achievements = yes
+	}
+}
+
+tlotd_sweden_fractured = {
+	name = "RULE_TLOTD_SWEDEN_FRACTURED"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	option = {
+		name = kat
+		text = "RULE_TLOTD_SWEDEN_FRACTURED_KTG"
+		desc = "RULE_TLOTD_SWEDEN_FRACTURED_KTG_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = no
+		text = "RULE_TLOTD_SWEDEN_FRACTURED_NO"
+		desc = "RULE_TLOTD_SWEDEN_FRACTURED_NO_DESC"
+		allow_achievements = yes
+	}
+}
+
+tlotd_legacy_content = {
+	name = "RULE_TLOTD_LEGACY_CONTENT"
+	group = "RULE_GROUP_GAMEPLAY"
+	icon = "GFX_FOCUS_FILTER_ALLIANCE"
+	option = {
+		name = no
+		text = "RULE_OPTION_LEGACY_CONTENT_DISABLE"
+		desc = "RULE_DISABLE_LEGACY_CONTENT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = yes
+		text = "RULE_OPTION_LEGACY_CONTENT_ENABLE"
+		desc = "RULE_ENABLE_LEGACY_CONTENT_DESC"
+		allow_achievements = yes
+	}
+}

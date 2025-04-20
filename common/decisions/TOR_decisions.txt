@@ -1,0 +1,328 @@
+TOR_awake_the_dragons = {
+	TOR_good_dragon = {
+		allowed = {
+			tag = TOR
+		}
+		visible = {
+			has_completed_focus = TOR_awake_the_dragons
+		}
+		available = {
+			has_completed_focus = TOR_good_dragon
+		}
+		icon = decision_generic_monarchy
+		cost = 20
+		complete_effect = {
+			complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		every_owned_state = { add_core_of = TOR } 
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+	TOR_bad_dragon = {
+		allowed = {
+			tag = TOR
+		}
+		visible = {
+			has_completed_focus = TOR_awake_the_dragons
+		}
+		available = {
+			has_completed_focus = TOR_bad_dragon
+		}
+		icon = decision_generic_monarchy
+		cost = 20
+		complete_effect = {
+			add_political_power = 500
+			add_equipment_to_stockpile { nuke = 50 }
+		}
+	}
+	TOR_mad_dragon = {
+		allowed = {
+			tag = TOR
+		}
+		visible = {
+			has_completed_focus = TOR_awake_the_dragons
+		}
+		available = {
+			has_completed_focus = TOR_bad_dragon
+		}
+		targets = { ALS ALX APA ARC AUS BAY CAL DUN EXC GER GUR HEL HES KJT LIE LKR LTD LEO MEK NCA NCT NIS OLD PRE SAX SCA SCP SOV SSS TEX TUR USD VAT VTC CZE DEN DDR FIN FRA HUN ITA JAP USA SWE ROM CHI }
+		targets_dynamic = yes
+		icon = decision_generic_monarchy
+		cost = 20
+		complete_effect = {
+			create_wargoal = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+}
+TOR_path_to_glory = {
+	TOR_decision_unite_fluffy_kingdom = {
+
+		icon = GFX_decision_generic_monarchy
+		
+		available = {
+			is_subject = no
+			has_government = monarchism
+			owns_state = 762
+			owns_state = 90
+			owns_state = 73
+			owns_state = 70
+			owns_state = 74
+			owns_state = 75
+			owns_state = 664
+			owns_state = 67
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = TOR_FluffyKingdom
+			hidden_effect = {
+				762 = { add_core_of = TOR }
+				90 = { add_core_of = TOR }
+				73 = { add_core_of = TOR }
+				70 = { add_core_of = TOR }
+				74 = { add_core_of = TOR }
+				75 = { add_core_of = TOR }
+				664 = { add_core_of = TOR }
+				67 = { add_core_of = TOR }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	TOR_decision_unite_fluffy_empire = {
+
+		icon = GFX_decision_generic_pickelhaube
+		
+		available = {
+			is_subject = no
+			has_government = monarchism
+			owns_state = 762
+			owns_state = 90
+			owns_state = 73
+			owns_state = 70
+			owns_state = 74
+			owns_state = 75
+			owns_state = 664
+			owns_state = 67
+			owns_state = 80
+			owns_state = 89
+			owns_state = 91
+			owns_state = 92
+			owns_state = 93
+			owns_state = 43
+			owns_state = 154
+			owns_state = 155
+			owns_state = 76
+			owns_state = 83
+			owns_state = 84
+			owns_state = 79
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = TOR_FluffyEmpire
+			hidden_effect = {
+				762 = { add_core_of = TOR }
+				90 = { add_core_of = TOR }
+				73 = { add_core_of = TOR }
+				70 = { add_core_of = TOR }
+				74 = { add_core_of = TOR }
+				75 = { add_core_of = TOR }
+				664 = { add_core_of = TOR }
+				67 = { add_core_of = TOR }
+				80 = { add_core_of = TOR }
+				89 = { add_core_of = TOR }
+				91 = { add_core_of = TOR }
+				92 = { add_core_of = TOR }
+				93 = { add_core_of = TOR }
+				43 = { add_core_of = TOR }
+				154 = { add_core_of = TOR }
+				155 = { add_core_of = TOR }
+				76 = { add_core_of = TOR }
+				83 = { add_core_of = TOR }
+				84 = { add_core_of = TOR }
+				79 = { add_core_of = TOR }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	TOR_decision_form_austria_hungary = {
+
+		icon = GFX_decision_generic_nationalism
+		
+		available = {
+			#has_completed_focus = TOR_unite_austria_hungary
+			has_government = monarchism
+			is_subject = no
+			owns_state = 848
+			owns_state = 153
+			owns_state = 39
+			owns_state = 132
+			owns_state = 4
+			owns_state = 69
+			owns_state = 9
+			owns_state = 74
+			owns_state = 75
+			owns_state = 70
+			owns_state = 72
+			owns_state = 88
+			owns_state = 71
+			owns_state = 91
+			owns_state = 89
+			owns_state = 73
+			owns_state = 80
+			owns_state = 76
+			owns_state = 84
+			owns_state = 83
+			owns_state = 82
+			owns_state = 736
+			owns_state = 102
+			owns_state = 853
+			owns_state = 109
+			owns_state = 45
+			owns_state = 764
+			owns_state = 104
+			owns_state = 804
+			owns_state = 103
+			owns_state = 163
+		}
+		
+		fire_only_once = yes
+
+		visible = {
+			ROOT = {
+				is_ai = no
+			}		
+		}		
+
+		cost = 100
+
+		complete_effect = {
+			set_cosmetic_tag = TOR_AustriaHungary
+			hidden_effect = {
+				103 = { add_core_of = DUN }
+				848 = { add_core_of = DUN }
+				153 = { add_core_of = DUN }
+				39 = { add_core_of = DUN }
+				132 = { add_core_of = DUN }
+				4 = { add_core_of = DUN }
+				69 = { add_core_of = DUN }
+				9 = { add_core_of = DUN }
+				74 = { add_core_of = DUN }
+				75 = { add_core_of = DUN }
+				70 = { add_core_of = DUN }
+				72 = { add_core_of = DUN }
+				88 = { add_core_of = DUN }
+				71 = { add_core_of = DUN }
+				91 = { add_core_of = DUN }
+				89 = { add_core_of = DUN }
+				73 = { add_core_of = DUN }
+				80 = { add_core_of = DUN }
+				76 = { add_core_of = DUN }
+				84 = { add_core_of = DUN }
+				83 = { add_core_of = DUN }
+				82 = { add_core_of = DUN }
+				736 = { add_core_of = DUN }
+				102 = { add_core_of = DUN }
+				853 = { add_core_of = DUN }
+				109 = { add_core_of = DUN }
+				45 = { add_core_of = DUN }
+				764 = { add_core_of = DUN }
+				104 = { add_core_of = DUN }
+				804 = { add_core_of = DUN }
+				103 = { add_core_of = DUN }
+				163 = { add_core_of = DUN }
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+	}
+}
+
+TOR_occupation = {
+	TOR_occupation = {
+		allowed = {
+			tag = TOR
+		}
+		visible = {
+			}
+		available = {
+			has_completed_focus = TOR_mark_our_territory
+			}
+		days_remove = 100
+		modifier = {
+            training_time_factor = 0.1
+        }
+		remove_effect = {
+				random_owned_controlled_state = { add_core_of = TOR }
+				on_map_mode = map_and_decisions_view
+  				icon = my_icon  		
+        		FROM = {
+            	add_core_of = TOR
+        		}
+    	}
+	}
+}

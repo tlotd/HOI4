@@ -1,0 +1,72 @@
+state={
+	id=50
+	name="STATE_50"
+	resources={
+		steel=14
+		aluminium=4
+	}
+
+	state_category = metropolis
+	history={
+		set_variable = { culture = 11 }
+		owner = WUR
+		add_core_of = WUR
+		victory_points = {
+			9517 20
+		}
+		victory_points = {
+			11499 10
+		}
+		victory_points = {
+			519 1
+		}
+		victory_points = {
+			694 1
+		}
+		victory_points = {
+			6555 1
+		}
+		victory_points = {
+			9545 1
+		}
+		victory_points = {
+			9655 1
+		}
+		victory_points = {
+			11486 1
+		}
+
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 7
+			arms_factory = 4
+			air_base = 4
+			9517 = {
+                landmark_stuttgart_palace = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+            }
+		}
+		1871.1.18 = {
+			owner = LTD
+			add_core_of = LTD
+			add_core_of = GER
+		}
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 4
+				industrial_complex = 9
+			}
+		}
+	}
+
+	provinces={
+		519 694 3690 6555 9517 9545 9655 11486 11499  
+	}
+	manpower=3286854
+	buildings_max_level_factor=1.0
+	local_supplies=15.0
+}

@@ -1,0 +1,78 @@
+﻿l_german:
+
+ no_leader:0 "§R[FEHLER]§!"
+
+ LTD_aragorn_strider:0 "Isla_Nublar"
+ LTD_aragorn:0 "Isla_Nublar"
+ LTD_aragorn_emperor:0 "Kaiser Isla_Nublar"
+ LTD_aragorn_high_king:0 "Hohe König Isla_Nublar"
+ LTD_sauron:0 "Sauron"
+ LKR_larry_meister_leader:0 "Larry Meister I."
+ LKR_cardboard_larry_meister_leader:0 "'LaRrY MeIsTeR I.'"
+
+ LTD_isla_nublar:0 "Isla_Nublar"
+ LKR_isla_nublar:0 "Isla_Nublar"
+ LEO_isla_nublar:0 "Isla_Nublar"
+ NIS_isla_nublar:0 "Isla_Nublar"
+ DUN_isla_nublar:0 "Isla_Nublar"
+ TOR_isla_nublar:0 "Isla_Nublar"
+
+ LTD_lucy_connor:0 "Lucy J. Conner"
+
+ ALX_alehandro_audi_leader:0 "Alehandro M. Audi"
+
+ LTD_alehandro_audi:0 "Alehandro M. Audi"
+ LKR_alehandro_audi:0 "Alehandro M. Audi"
+ LEO_alehandro_audi:0 "Alehandro M. Audi"
+ NIS_alehandro_audi:0 "Alehandro M. Audi"
+ DUN_alehandro_audi:0 "Alehandro M. Audi"
+ TOR_alehandro_audi:0 "Alehandro M. Audi"
+
+ LTD_leonardo_hermanovich:0 "Leonardo Hermanovich"
+ LKR_leonardo_hermanovich:0 "Leonardo Hermanovich"
+ LEO_leonardo_hermanovich:0 "Leonardo Hermanovich"
+ NIS_leonardo_hermanovich:0 "Leonardo Hermanovich"
+ DUN_leonardo_hermanovich:0 "Leonardo Hermanovich"
+ TOR_leonardo_hermanovich:0 "Leonardo Hermanovich"
+
+ LTD_luke_jong:0 "Luke Jong"
+ LKR_luke_jong:0 "Luke Jong"
+ LEO_luke_jong:0 "Luke Jong"
+ NIS_luke_jong:0 "Luke Jong"
+ DUN_luke_jong:0 "Luke Jong"
+ TOR_luke_jong:0 "Luke Jong"
+
+ LTD_larry_meister:0 "Larry Meister"
+ LKR_larry_meister:0 "Larry Meister"
+ LEO_larry_meister:0 "Larry Meister"
+ NIS_larry_meister:0 "Larry Meister"
+ DUN_larry_meister:0 "Larry Meister"
+ TOR_larry_meister:0 "Larry Meister"
+
+ LTD_nick_grun:0 "Nick Grün"
+ LKR_nick_grun:0 "Nick Grün"
+ LEO_nick_grun:0 "Nick Grün"
+ NIS_nick_grun:0 "Nick Grün"
+ DUN_nick_grun:0 "Nick Grün"
+ TOR_nick_grun:0 "Nick Grün"
+
+ LTD_glamin:0 "Glamin"
+ LKR_glamin:0 "Glamin"
+ LEO_glamin:0 "Glamin"
+ NIS_glamin:0 "Glamin"
+ DUN_glamin:0 "Glamin"
+ TOR_glamin:0 "Glamin"
+
+ VTC_singularity:0 "§R[UNBEKANNT]§!"
+ USD_mind_flayer:0 "Mind Flayer"
+ HEL_hells_gate:0 "§R[UNBEKANNT]§!"
+
+ SCP_05_council:0 "[REDIGIERT]"
+ APA_leader:0 "[REDIGIERT]"
+
+# LTD_:0 ""
+# LKR_:0 ""
+# LEO_:0 ""
+# NIS_:0 ""
+# DUN_:0 ""
+# TOR_:0 ""
